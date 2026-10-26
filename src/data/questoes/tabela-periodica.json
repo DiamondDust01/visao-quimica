@@ -1,0 +1,271 @@
+{
+  "area": "tabela-periodica",
+  "questoes": [
+    {
+      "id": "tab-historia-q1", "temaId": "tab-historia", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Na tabela periódica atual, os elementos estão organizados em ordem crescente de:",
+      "alternativas": [{ "id": "a", "texto": "Massa atômica" }, { "id": "b", "texto": "Número atômico" }, { "id": "c", "texto": "Número de nêutrons" }, { "id": "d", "texto": "Data de descoberta" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Mendeleev organizou os elementos pela massa atômica, com alguns ajustes.", "Moseley mostrou que a ordem correta é a do número atômico (número de prótons).", "A tabela atual segue o número atômico."],
+      "dica": "Qual número identifica cada elemento?",
+      "errosComuns": [{ "descricao": "A massa atômica foi o critério de Mendeleev; a tabela atual usa o número atômico.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-historia-q2", "temaId": "tab-historia", "etapa": "ef-9", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Mendeleev deixou espaços vazios na sua tabela periódica. Por quê?",
+      "alternativas": [{ "id": "a", "texto": "Previu elementos ainda não descobertos e estimou suas propriedades." }, { "id": "b", "texto": "Não sabia o nome de alguns elementos conhecidos." }, { "id": "c", "texto": "Reservou os espaços para os gases nobres." }, { "id": "d", "texto": "Queria deixar a tabela simétrica." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Mendeleev agrupou elementos com propriedades semelhantes.", "Quando a sequência não encaixava, deixou lacunas para elementos desconhecidos.", "Elementos como o gálio e o germânio foram descobertos depois, com propriedades próximas das previstas."],
+      "dica": "As lacunas eram uma previsão.",
+      "errosComuns": [{ "descricao": "Os gases nobres nem eram conhecidos quando Mendeleev publicou a tabela.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-historia-q3", "temaId": "tab-historia", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A lei periódica, na forma atual, diz que:",
+      "alternativas": [{ "id": "a", "texto": "As propriedades dos elementos variam periodicamente em função do número atômico." }, { "id": "b", "texto": "As propriedades dos elementos variam periodicamente em função da massa atômica." }, { "id": "c", "texto": "Todos os elementos de um período têm as mesmas propriedades." }, { "id": "d", "texto": "A massa dos elementos aumenta de forma periódica." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ao ordenar os elementos por número atômico, propriedades parecidas reaparecem em intervalos regulares.", "É essa repetição que define períodos e grupos."],
+      "dica": "Qual grandeza ordena a tabela atual?",
+      "errosComuns": [{ "descricao": "Essa era a formulação de Mendeleev; a atual usa o número atômico.", "resposta": "b" }, { "descricao": "Quem tem propriedades parecidas são os elementos de um mesmo grupo, não de um período.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-periodos-grupos-q1", "temaId": "tab-periodos-grupos", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Elementos de um mesmo grupo (coluna) da tabela periódica têm:",
+      "alternativas": [{ "id": "a", "texto": "Propriedades químicas semelhantes" }, { "id": "b", "texto": "A mesma massa atômica" }, { "id": "c", "texto": "O mesmo número de prótons" }, { "id": "d", "texto": "O mesmo número de camadas eletrônicas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Elementos do mesmo grupo têm o mesmo número de elétrons de valência.", "Por isso reagem de modo parecido: suas propriedades químicas são semelhantes.", "O mesmo número de camadas é característica dos elementos de um mesmo período (linha)."],
+      "dica": "Coluna = família.",
+      "errosComuns": [{ "descricao": "Mesmo número de camadas é característica de um período (linha), não de um grupo.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-periodos-grupos-q2", "temaId": "tab-periodos-grupos", "etapa": "em-1", "dificuldade": 1, "tipo": "tabela-periodica",
+      "enunciado": "Indique o elemento que está no 3º período e no grupo 17.",
+      "gabarito": { "simbolos": ["Cl"] },
+      "resolucaoPassoAPasso": ["O grupo 17 é o dos halogênios: F, Cl, Br, I, At.", "O do 3º período é o cloro (Cl)."],
+      "dica": "O grupo 17 é o dos halogênios.",
+      "errosComuns": [{ "descricao": "O flúor é do grupo 17, mas está no 2º período.", "resposta": "F" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-periodos-grupos-q3", "temaId": "tab-periodos-grupos", "etapa": "ef-9", "dificuldade": 1, "tipo": "tabela-periodica",
+      "enunciado": "Indique o gás nobre do 2º período.",
+      "gabarito": { "simbolos": ["Ne"] },
+      "resolucaoPassoAPasso": ["Os gases nobres ficam no grupo 18, a última coluna.", "No 2º período, o gás nobre é o neônio (Ne)."],
+      "dica": "Gases nobres ficam na última coluna.",
+      "errosComuns": [{ "descricao": "O hélio é o gás nobre do 1º período.", "resposta": "He" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-localizacao-configuracao-q1", "temaId": "tab-localizacao-configuracao", "etapa": "em-1", "dificuldade": 2, "tipo": "tabela-periodica",
+      "enunciado": "Indique o elemento cuja distribuição eletrônica é 1s² 2s² 2p⁶ 3s² 3p³.",
+      "gabarito": { "simbolos": ["P"] },
+      "resolucaoPassoAPasso": ["Some os elétrons: 2 + 2 + 6 + 2 + 3 = 15. Átomo neutro: Z = 15.", "Camada de valência 3s² 3p³: 3º período, grupo 15.", "É o fósforo (P)."],
+      "dica": "Some os expoentes para achar o número atômico.",
+      "errosComuns": [{ "descricao": "O nitrogênio tem a mesma valência (s² p³), mas na camada 2.", "resposta": "N" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-localizacao-configuracao-q2", "temaId": "tab-localizacao-configuracao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um elemento tem camada de valência 4s² 4p⁵. Onde ele fica na tabela?",
+      "alternativas": [{ "id": "a", "texto": "4º período, grupo 17" }, { "id": "b", "texto": "5º período, grupo 15" }, { "id": "c", "texto": "4º período, grupo 5" }, { "id": "d", "texto": "7º período, grupo 4" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O período é o número da camada de valência: 4.", "São 2 + 5 = 7 elétrons de valência num elemento do bloco p: grupo 17 (10 + 7).", "É o bromo."],
+      "dica": "No bloco p, grupo = 10 + número de elétrons de valência.",
+      "errosComuns": [{ "descricao": "Usou o expoente do p como número do grupo; no bloco p o grupo é 10 + elétrons de valência.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-localizacao-configuracao-q3", "temaId": "tab-localizacao-configuracao", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Um elemento tem configuração [Ar] 4s² 3d⁵. Em que bloco, período e grupo ele está?",
+      "alternativas": [{ "id": "a", "texto": "Bloco d, 4º período, grupo 7" }, { "id": "b", "texto": "Bloco s, 4º período, grupo 2" }, { "id": "c", "texto": "Bloco d, 3º período, grupo 5" }, { "id": "d", "texto": "Bloco p, 4º período, grupo 15" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O último subnível preenchido é o d: bloco d (metal de transição).", "A camada mais externa é a 4: 4º período.", "Grupo = elétrons em 4s + 3d = 2 + 5 = 7. É o manganês."],
+      "dica": "Nos metais de transição, some os elétrons do s mais externo e do d.",
+      "errosComuns": [{ "descricao": "O 3d é preenchido no 4º período, não no 3º.", "resposta": "c" }, { "descricao": "O bloco é definido pelo último subnível preenchido, que é o d.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-metais-ametais-q1", "temaId": "tab-metais-ametais", "etapa": "ef-9", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Classifique cada elemento.",
+      "itens": [{ "id": "fe", "texto": "Ferro (Fe)" }, { "id": "s", "texto": "Enxofre (S)" }, { "id": "he", "texto": "Hélio (He)" }, { "id": "na", "texto": "Sódio (Na)" }],
+      "opcoes": [{ "id": "m", "texto": "Metal" }, { "id": "a", "texto": "Ametal" }, { "id": "g", "texto": "Gás nobre" }],
+      "gabarito": { "fe": "m", "s": "a", "he": "g", "na": "m" },
+      "resolucaoPassoAPasso": ["Metais ficam à esquerda e no centro da tabela: ferro e sódio.", "Ametais ficam à direita: enxofre.", "Gases nobres ficam na última coluna: hélio."],
+      "dica": "Use a posição na tabela.",
+      "errosComuns": [{ "descricao": "O sódio é um metal (alcalino), mesmo sendo mole e muito reativo." }],
+      "revisado": false
+    },
+    {
+      "id": "tab-metais-ametais-q2", "temaId": "tab-metais-ametais", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual propriedade é típica dos metais?",
+      "alternativas": [{ "id": "a", "texto": "Conduzem bem calor e eletricidade" }, { "id": "b", "texto": "São quebradiços no estado sólido" }, { "id": "c", "texto": "A maioria é gasosa à temperatura ambiente" }, { "id": "d", "texto": "São opacos e isolantes" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Metais têm elétrons livres para se mover, o que os torna bons condutores.", "Também são maleáveis, dúcteis e têm brilho metálico; quase todos são sólidos à temperatura ambiente (o mercúrio é líquido)."],
+      "dica": "Do que são feitos os fios elétricos?",
+      "errosComuns": [{ "descricao": "Ser quebradiço é típico de ametais sólidos, como o enxofre.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-metais-ametais-q3", "temaId": "tab-metais-ametais", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O hidrogênio aparece na coluna 1, mas não é considerado um metal alcalino. Por quê?",
+      "alternativas": [{ "id": "a", "texto": "É um gás formado por moléculas \\ce{H2} e tem propriedades de ametal." }, { "id": "b", "texto": "Porque tem 2 elétrons de valência." }, { "id": "c", "texto": "Porque é um gás nobre." }, { "id": "d", "texto": "Porque é radioativo." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O hidrogênio tem 1 elétron de valência, por isso costuma aparecer na coluna 1.", "Suas propriedades, porém, são as de um ametal: gás de moléculas diatômicas, que faz ligações covalentes."],
+      "dica": "Pense nas propriedades, não só na posição.",
+      "errosComuns": [{ "descricao": "O hidrogênio tem só 1 elétron.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-familias-representativas-q1", "temaId": "tab-familias-representativas", "etapa": "em-1", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada elemento à sua família.",
+      "itens": [{ "id": "li", "texto": "Lítio (Li)" }, { "id": "ca", "texto": "Cálcio (Ca)" }, { "id": "cl", "texto": "Cloro (Cl)" }, { "id": "o", "texto": "Oxigênio (O)" }],
+      "opcoes": [{ "id": "alc", "texto": "Metais alcalinos (grupo 1)" }, { "id": "alt", "texto": "Metais alcalinoterrosos (grupo 2)" }, { "id": "hal", "texto": "Halogênios (grupo 17)" }, { "id": "cal", "texto": "Calcogênios (grupo 16)" }, { "id": "gn", "texto": "Gases nobres (grupo 18)" }],
+      "gabarito": { "li": "alc", "ca": "alt", "cl": "hal", "o": "cal" },
+      "resolucaoPassoAPasso": ["Li: grupo 1, alcalino. Ca: grupo 2, alcalinoterroso.", "O: grupo 16, calcogênio. Cl: grupo 17, halogênio."],
+      "dica": "Localize cada um na tabela e veja a coluna.",
+      "errosComuns": [{ "descricao": "Trocar calcogênios (grupo 16) e halogênios (grupo 17)." }],
+      "revisado": false
+    },
+    {
+      "id": "tab-familias-representativas-q2", "temaId": "tab-familias-representativas", "etapa": "em-1", "dificuldade": 2, "tipo": "tabela-periodica",
+      "enunciado": "Indique o halogênio que é líquido à temperatura ambiente.",
+      "gabarito": { "simbolos": ["Br"] },
+      "resolucaoPassoAPasso": ["Nos halogênios, o estado físico muda ao descer o grupo: flúor e cloro são gases, bromo é líquido e iodo é sólido.", "O líquido é o bromo (Br)."],
+      "dica": "Descendo o grupo, as moléculas ficam maiores e as forças entre elas aumentam.",
+      "errosComuns": [{ "descricao": "O iodo é sólido à temperatura ambiente (forma cristais escuros).", "resposta": "I" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-familias-representativas-q3", "temaId": "tab-familias-representativas", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Os metais alcalinos tendem a formar íons de carga:",
+      "alternativas": [{ "id": "a", "texto": "1+" }, { "id": "b", "texto": "2+" }, { "id": "c", "texto": "1−" }, { "id": "d", "texto": "2−" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os metais alcalinos têm 1 elétron de valência.", "Perdendo esse elétron, ficam com a configuração de um gás nobre e carga 1+."],
+      "dica": "Quantos elétrons de valência tem um elemento do grupo 1?",
+      "errosComuns": [{ "descricao": "Carga 2+ é típica dos alcalinoterrosos (grupo 2).", "resposta": "b" }, { "descricao": "Metais perdem elétrons e formam cátions, não ânions.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-metais-transicao-q1", "temaId": "tab-metais-transicao", "etapa": "em-1", "dificuldade": 2, "tipo": "tabela-periodica",
+      "enunciado": "Indique o metal de transição do 4º período e grupo 11, muito usado em fios elétricos.",
+      "gabarito": { "simbolos": ["Cu"] },
+      "resolucaoPassoAPasso": ["O grupo 11 tem cobre, prata e ouro.", "No 4º período está o cobre (Cu), ótimo condutor e mais barato que a prata."],
+      "dica": "O grupo 11 tem metais usados em moedas e joias.",
+      "errosComuns": [{ "descricao": "A prata também é do grupo 11, mas está no 5º período.", "resposta": "Ag" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-metais-transicao-q2", "temaId": "tab-metais-transicao", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que muitos compostos de metais de transição são coloridos?",
+      "alternativas": [{ "id": "a", "texto": "Porque elétrons em orbitais d parcialmente preenchidos absorvem parte da luz visível." }, { "id": "b", "texto": "Porque são radioativos." }, { "id": "c", "texto": "Porque têm núcleos muito grandes." }, { "id": "d", "texto": "Porque refletem toda a luz que recebem." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Nos compostos, os orbitais d do metal ficam com energias um pouco diferentes.", "Um elétron pode absorver luz visível para passar de um orbital d para outro.", "Enxergamos a cor complementar da luz absorvida."],
+      "dica": "Cor aparece quando parte da luz visível é absorvida.",
+      "errosComuns": [{ "descricao": "Um objeto que reflete toda a luz parece branco, não colorido.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-metais-transicao-q3", "temaId": "tab-metais-transicao", "etapa": "tecnico", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Os lantanídeos e os actinídeos, que costumam aparecer em duas linhas abaixo da tabela, pertencem a qual bloco?",
+      "alternativas": [{ "id": "a", "texto": "f" }, { "id": "b", "texto": "d" }, { "id": "c", "texto": "p" }, { "id": "d", "texto": "s" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Nesses elementos, os elétrons mais energéticos ocupam subníveis f (4f nos lantanídeos e 5f nos actinídeos).", "Por isso são chamados de elementos de transição interna, do bloco f."],
+      "dica": "Eles preenchem o subnível com capacidade para 14 elétrons.",
+      "errosComuns": [{ "descricao": "O bloco d é o dos metais de transição externa.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-raio-atomico-q1", "temaId": "tab-raio-atomico", "etapa": "em-1", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene os metais alcalinos pelo raio atômico.",
+      "criterio": "Do menor para o maior raio atômico.",
+      "itens": [{ "id": "k", "texto": "Potássio (K)" }, { "id": "li", "texto": "Lítio (Li)" }, { "id": "rb", "texto": "Rubídio (Rb)" }, { "id": "na", "texto": "Sódio (Na)" }],
+      "gabarito": ["li", "na", "k", "rb"],
+      "resolucaoPassoAPasso": ["Descendo um grupo, cada elemento tem uma camada eletrônica a mais.", "Mais camadas significam átomo maior: Li < Na < K < Rb."],
+      "dica": "Quem tem mais camadas eletrônicas?",
+      "errosComuns": [{ "descricao": "Inverter a tendência: no grupo, o raio aumenta de cima para baixo." }],
+      "revisado": false
+    },
+    {
+      "id": "tab-raio-atomico-q2", "temaId": "tab-raio-atomico", "etapa": "em-1", "dificuldade": 2, "tipo": "tabela-periodica",
+      "enunciado": "Entre os elementos do 3º período (do sódio ao argônio), indique o que tem maior raio atômico.",
+      "gabarito": { "simbolos": ["Na"] },
+      "resolucaoPassoAPasso": ["No mesmo período, todos têm 3 camadas.", "Da esquerda para a direita, a carga nuclear aumenta e puxa mais os elétrons, e o raio diminui.", "O maior raio fica no início do período: sódio (Na)."],
+      "dica": "Com o mesmo número de camadas, o que muda é a atração do núcleo.",
+      "errosComuns": [{ "descricao": "O argônio tem mais prótons atraindo as mesmas 3 camadas: é o menor do período.", "resposta": "Ar" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-raio-atomico-q3", "temaId": "tab-raio-atomico", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Comparando o átomo de sódio (Na) com o íon \\ce{Na+}:",
+      "alternativas": [{ "id": "a", "texto": "O \\ce{Na+} é menor, porque perdeu a camada 3 e os 11 prótons atraem só 10 elétrons." }, { "id": "b", "texto": "O \\ce{Na+} é maior, porque ficou positivo." }, { "id": "c", "texto": "Os dois têm o mesmo tamanho, porque o núcleo é o mesmo." }, { "id": "d", "texto": "O \\ce{Na+} é maior, porque ganhou um elétron." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na: 1s² 2s² 2p⁶ 3s¹ (3 camadas). \\ce{Na+}: 1s² 2s² 2p⁶ (2 camadas).", "Com uma camada a menos e a mesma carga nuclear atraindo menos elétrons, o cátion é bem menor que o átomo."],
+      "dica": "Quantas camadas sobram depois de perder o elétron?",
+      "errosComuns": [{ "descricao": "Cátions são sempre menores que os átomos de origem.", "resposta": "b" }, { "descricao": "Cátion se forma pela perda de elétrons, não pelo ganho.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-energia-ionizacao-q1", "temaId": "tab-energia-ionizacao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Energia de ionização é:",
+      "alternativas": [{ "id": "a", "texto": "A energia mínima para retirar um elétron de um átomo isolado, no estado gasoso." }, { "id": "b", "texto": "A energia liberada quando um átomo gasoso recebe um elétron." }, { "id": "c", "texto": "A energia necessária para fundir um sólido." }, { "id": "d", "texto": "A energia de uma ligação química." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ionizar é retirar um elétron, formando um cátion.", "A energia de ionização mede o quanto custa essa retirada no átomo isolado (gasoso)."],
+      "dica": "Ionizar = formar íon positivo.",
+      "errosComuns": [{ "descricao": "Essa é a definição de afinidade eletrônica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-energia-ionizacao-q2", "temaId": "tab-energia-ionizacao", "etapa": "em-1", "dificuldade": 2, "tipo": "tabela-periodica",
+      "enunciado": "Entre lítio, sódio, potássio, rubídio e césio, indique o que tem a menor primeira energia de ionização.",
+      "gabarito": { "simbolos": ["Cs"] },
+      "resolucaoPassoAPasso": ["Descendo o grupo, o elétron de valência fica mais longe do núcleo.", "Mais longe, ele é atraído com menos força e é mais fácil de retirar.", "Dos citados, o césio (Cs) é o maior: menor energia de ionização."],
+      "dica": "Quanto mais longe do núcleo, mais fácil retirar o elétron.",
+      "errosComuns": [{ "descricao": "O lítio é o menor do grupo e tem a maior energia de ionização entre eles.", "resposta": "Li" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-energia-ionizacao-q3", "temaId": "tab-energia-ionizacao", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "As energias de ionização sucessivas do magnésio são, em kJ/mol: 1ª = 738, 2ª = 1451 e 3ª = 7733. O grande salto na 3ª energia indica que:",
+      "alternativas": [{ "id": "a", "texto": "O magnésio tem 2 elétrons de valência; o 3º elétron sairia de uma camada interna." }, { "id": "b", "texto": "O magnésio tem 3 elétrons de valência." }, { "id": "c", "texto": "O magnésio forma íons 3+ com facilidade." }, { "id": "d", "texto": "O 3º elétron está mais longe do núcleo." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os dois primeiros elétrons saem da camada de valência (3s²), com energia moderada.", "O 3º teria de sair da camada 2, completa e mais próxima do núcleo: custa muito mais.", "Por isso o magnésio forma \\ce{Mg^{2+}}."],
+      "dica": "Onde está o salto: entre a 2ª e a 3ª energia.",
+      "errosComuns": [{ "descricao": "O salto mostra justamente que o 3º elétron é muito difícil de retirar.", "resposta": "c" }, { "descricao": "O 3º elétron está mais perto do núcleo, numa camada interna.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-eletronegatividade-q1", "temaId": "tab-eletronegatividade", "etapa": "em-1", "dificuldade": 1, "tipo": "tabela-periodica",
+      "enunciado": "Indique o elemento mais eletronegativo da tabela periódica.",
+      "gabarito": { "simbolos": ["F"] },
+      "resolucaoPassoAPasso": ["A eletronegatividade aumenta para a direita no período e para cima no grupo (sem contar os gases nobres).", "O flúor (F), no alto à direita, é o mais eletronegativo."],
+      "dica": "Fica no canto superior direito, fora o grupo 18.",
+      "errosComuns": [{ "descricao": "O oxigênio é o segundo mais eletronegativo, logo atrás do flúor.", "resposta": "O" }],
+      "revisado": false
+    },
+    {
+      "id": "tab-eletronegatividade-q2", "temaId": "tab-eletronegatividade", "etapa": "em-1", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene os elementos pela eletronegatividade.",
+      "criterio": "Da menor para a maior eletronegatividade.",
+      "itens": [{ "id": "o", "texto": "Oxigênio (O)" }, { "id": "na", "texto": "Sódio (Na)" }, { "id": "n", "texto": "Nitrogênio (N)" }, { "id": "c", "texto": "Carbono (C)" }],
+      "gabarito": ["na", "c", "n", "o"],
+      "resolucaoPassoAPasso": ["O sódio é um metal alcalino: baixa eletronegatividade.", "C, N e O estão no 2º período, nessa ordem da esquerda para a direita: a eletronegatividade cresce.", "Ordem: Na < C < N < O."],
+      "dica": "Três deles estão no mesmo período.",
+      "errosComuns": [{ "descricao": "Inverter N e O: o oxigênio fica à direita do nitrogênio e é mais eletronegativo." }],
+      "revisado": false
+    },
+    {
+      "id": "tab-eletronegatividade-q3", "temaId": "tab-eletronegatividade", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Em geral, a eletronegatividade:",
+      "alternativas": [{ "id": "a", "texto": "Aumenta da esquerda para a direita nos períodos e de baixo para cima nos grupos." }, { "id": "b", "texto": "Aumenta da direita para a esquerda nos períodos e de cima para baixo nos grupos." }, { "id": "c", "texto": "É igual para todos os elementos de um período." }, { "id": "d", "texto": "Só depende da massa atômica." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Átomos menores e com maior carga nuclear atraem mais os elétrons de uma ligação.", "Isso acontece à direita nos períodos e no alto dos grupos."],
+      "dica": "Segue o caminho oposto ao do raio atômico.",
+      "errosComuns": [{ "descricao": "Esse é o sentido em que cresce o raio atômico e o caráter metálico.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

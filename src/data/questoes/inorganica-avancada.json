@@ -1,0 +1,55 @@
+{
+  "area": "inorganica-avancada",
+  "questoes": [
+    {
+      "id": "inav-complexos-q1", "temaId": "inav-complexos", "etapa": "superior", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Qual é o número de coordenação do cobalto no íon complexo \\ce{[Co(NH3)6]^{3+}}?",
+      "gabarito": { "valor": 6, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "6",
+      "resolucaoPassoAPasso": ["O número de coordenação é o número de átomos doadores ligados ao íon central.", "Cada \\ce{NH3} se liga pelo nitrogênio: 6 ligantes monodentados, 6 ligações."],
+      "dica": "Conte as ligações entre o metal e os ligantes.",
+      "errosComuns": [{ "descricao": "Usou a carga do complexo (3+) como número de coordenação.", "resposta": { "valor": 3 } }],
+      "revisado": false
+    },
+    {
+      "id": "inav-isomeria-complexos-q1", "temaId": "inav-isomeria-complexos", "etapa": "superior", "dificuldade": 5, "tipo": "multipla-escolha",
+      "enunciado": "O complexo quadrado planar \\ce{[Pt(NH3)2Cl2]} existe em duas formas, uma das quais é usada como fármaco anticâncer (a cisplatina). Que tipo de isomeria elas apresentam?",
+      "alternativas": [{ "id": "a", "texto": "Geométrica (cis e trans)" }, { "id": "b", "texto": "Óptica" }, { "id": "c", "texto": "De ligação" }, { "id": "d", "texto": "De ionização" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No quadrado planar, os dois Cl podem ficar lado a lado (cis) ou opostos (trans).", "As duas formas têm propriedades diferentes; só a forma cis tem a atividade usada em tratamentos."],
+      "dica": "Os ligantes iguais podem estar vizinhos ou opostos.",
+      "errosComuns": [{ "descricao": "Complexos quadrados planos como este não são quirais.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inav-campo-cristalino-q1", "temaId": "inav-campo-cristalino", "etapa": "olimpiadas-quimica", "dificuldade": 5, "tipo": "multipla-escolha",
+      "enunciado": "Num campo cristalino octaédrico, os cinco orbitais d do metal se dividem em:",
+      "alternativas": [{ "id": "a", "texto": "Três orbitais de menor energia (t₂g) e dois de maior energia (eg)" }, { "id": "b", "texto": "Dois de menor energia e três de maior energia" }, { "id": "c", "texto": "Cinco orbitais de energias todas diferentes" }, { "id": "d", "texto": "Os cinco continuam com a mesma energia" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os ligantes se aproximam ao longo dos eixos x, y e z.", "Os orbitais que apontam para os eixos (eg) são mais repelidos e sobem de energia.", "Os que ficam entre os eixos (t₂g) ficam com menor energia."],
+      "dica": "Quais orbitais apontam diretamente para os ligantes?",
+      "errosComuns": [{ "descricao": "Esse é o desdobramento do campo tetraédrico, invertido em relação ao octaédrico.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inav-cor-magnetismo-q1", "temaId": "inav-cor-magnetismo", "etapa": "superior", "dificuldade": 5, "tipo": "multipla-escolha",
+      "enunciado": "Uma solução de um complexo absorve principalmente luz laranja. Qual cor ela aparenta ter?",
+      "alternativas": [{ "id": "a", "texto": "Azul" }, { "id": "b", "texto": "Laranja" }, { "id": "c", "texto": "Vermelha" }, { "id": "d", "texto": "Amarela" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A cor que enxergamos é a complementar da luz absorvida.", "No círculo de cores, o complementar do laranja é o azul."],
+      "dica": "Enxergamos a luz que não foi absorvida.",
+      "errosComuns": [{ "descricao": "A cor absorvida não é a cor vista; vemos a complementar.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inav-reticulos-q1", "temaId": "inav-reticulos", "etapa": "superior", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Numa célula unitária cúbica de corpo centrado, há um átomo em cada um dos 8 vértices (cada um compartilhado por 8 células) e um no centro. Quantos átomos pertencem, ao todo, a uma célula unitária?",
+      "gabarito": { "valor": 2, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "8 * (1/8) + 1",
+      "resolucaoPassoAPasso": ["Vértices: 8 × 1/8 = 1 átomo.", "Centro: 1 átomo inteiro.", "Total: 2 átomos por célula."],
+      "dica": "Cada vértice é dividido entre 8 células.",
+      "errosComuns": [{ "descricao": "Contou os vértices inteiros, sem considerar o compartilhamento.", "resposta": { "valor": 9 } }],
+      "revisado": false
+    }
+  ]
+}

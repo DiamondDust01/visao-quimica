@@ -1,0 +1,186 @@
+{
+  "area": "cinetica",
+  "questoes": [
+    {
+      "id": "cin-velocidade-media-q1", "temaId": "cin-velocidade-media", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "A concentração de um reagente cai de 0,80 mol/L para 0,20 mol/L em 30 s. Qual é a velocidade média de consumo desse reagente?",
+      "gabarito": { "valor": 0.02, "unidade": "mol/(L·s)" },
+      "verificacao": "(0.80 - 0.20) / 30",
+      "resolucaoPassoAPasso": ["Velocidade média = |variação da concentração| ÷ intervalo de tempo.", "(0,80 − 0,20) ÷ 30 = 0,60 ÷ 30 = 0,02 mol/(L·s)."],
+      "dica": "Divida quanto a concentração mudou pelo tempo.",
+      "errosComuns": [{ "descricao": "Multiplicou pela duração em vez de dividir.", "resposta": { "valor": 18, "unidade": "mol/(L·s)" } }],
+      "revisado": false
+    },
+    {
+      "id": "cin-velocidade-media-q2", "temaId": "cin-velocidade-media", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na reação \\ce{2NO2 -> 2NO + O2}, o \\ce{NO2} é consumido a 0,04 mol/(L·s). Qual é a velocidade de formação do \\ce{O2}?",
+      "gabarito": { "valor": 0.02, "unidade": "mol/(L·s)" },
+      "verificacao": "0.04 / 2",
+      "resolucaoPassoAPasso": ["As velocidades seguem os coeficientes: para cada 2 \\ce{NO2} consumidos, forma-se 1 \\ce{O2}.", "v(\\ce{O2}) = 0,04 ÷ 2 = 0,02 mol/(L·s)."],
+      "dica": "Use a proporção entre os coeficientes.",
+      "errosComuns": [{ "descricao": "Multiplicou pela razão dos coeficientes em vez de dividir.", "resposta": { "valor": 0.08, "unidade": "mol/(L·s)" } }],
+      "revisado": false
+    },
+    {
+      "id": "cin-velocidade-media-q3", "temaId": "cin-velocidade-media", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na maioria das reações, a velocidade medida em intervalos sucessivos de tempo:",
+      "alternativas": [{ "id": "a", "texto": "Diminui, porque a concentração dos reagentes vai diminuindo" }, { "id": "b", "texto": "Aumenta, porque os produtos aceleram a reação" }, { "id": "c", "texto": "Permanece sempre constante" }, { "id": "d", "texto": "Só depende da quantidade de produto" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A velocidade depende da frequência de colisões entre reagentes.", "Com menos reagente ao longo do tempo, há menos colisões, e a velocidade cai."],
+      "dica": "O que acontece com a quantidade de reagente ao longo da reação?",
+      "errosComuns": [{ "descricao": "Na maioria das reações, os produtos não aceleram o processo.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-teoria-colisoes-q1", "temaId": "cin-teoria-colisoes", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Pela teoria das colisões, para que uma colisão entre moléculas de reagentes seja efetiva, ela precisa ter:",
+      "alternativas": [{ "id": "a", "texto": "Energia igual ou maior que a energia de ativação e orientação favorável" }, { "id": "b", "texto": "Apenas energia suficiente" }, { "id": "c", "texto": "Apenas orientação favorável" }, { "id": "d", "texto": "Nada: qualquer colisão forma produtos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A colisão precisa de energia para romper ligações (no mínimo a energia de ativação).", "As moléculas também precisam se chocar na posição certa, para as novas ligações se formarem."],
+      "dica": "São duas condições ao mesmo tempo.",
+      "errosComuns": [{ "descricao": "Energia sozinha não basta: a orientação também precisa ser adequada.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-teoria-colisoes-q2", "temaId": "cin-teoria-colisoes", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O complexo ativado é:",
+      "alternativas": [{ "id": "a", "texto": "Uma estrutura instável e de alta energia, entre reagentes e produtos" }, { "id": "b", "texto": "O produto final da reação" }, { "id": "c", "texto": "Um catalisador" }, { "id": "d", "texto": "O reagente em excesso" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Durante a colisão efetiva, ligações antigas se rompem enquanto as novas se formam.", "Essa estrutura de transição, no ponto mais alto do diagrama de energia, é o complexo ativado."],
+      "dica": "Fica no pico do diagrama de energia.",
+      "errosComuns": [{ "descricao": "O complexo ativado é passageiro; não é o produto.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-teoria-colisoes-q3", "temaId": "cin-teoria-colisoes", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Nas mesmas condições, uma reação com energia de ativação maior tende a ser:",
+      "alternativas": [{ "id": "a", "texto": "Mais lenta" }, { "id": "b", "texto": "Mais rápida" }, { "id": "c", "texto": "Mais exotérmica" }, { "id": "d", "texto": "Igual, pois a energia de ativação não influi" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Quanto maior a energia de ativação, menor a fração de colisões com energia suficiente.", "Menos colisões efetivas: reação mais lenta."],
+      "dica": "Uma barreira mais alta é mais difícil de vencer.",
+      "errosComuns": [{ "descricao": "A energia de ativação não define se a reação é mais ou menos exotérmica.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-fatores-velocidade-q1", "temaId": "cin-fatores-velocidade", "etapa": "em-2", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada situação ao fator que altera a velocidade da reação.",
+      "itens": [{ "id": "geladeira", "texto": "Carne na geladeira demora mais a estragar" }, { "id": "comprimido", "texto": "Comprimido efervescente triturado reage mais rápido" }, { "id": "oxigenio", "texto": "Palha de aço queima mais rápido em oxigênio puro do que no ar" }, { "id": "conversor", "texto": "O conversor catalítico do carro acelera a transformação de gases poluentes" }],
+      "opcoes": [{ "id": "temp", "texto": "Temperatura" }, { "id": "sup", "texto": "Superfície de contato" }, { "id": "conc", "texto": "Concentração" }, { "id": "cat", "texto": "Catalisador" }],
+      "gabarito": { "geladeira": "temp", "comprimido": "sup", "oxigenio": "conc", "conversor": "cat" },
+      "resolucaoPassoAPasso": ["Geladeira: temperatura baixa desacelera as reações de decomposição.", "Comprimido triturado: mais superfície exposta.", "Oxigênio puro: maior concentração do reagente que no ar.", "Conversor: contém catalisadores."],
+      "dica": "Em cada caso, o que foi mudado?",
+      "errosComuns": [{ "descricao": "Confundir concentração (oxigênio puro) com superfície de contato (comprimido triturado)." }],
+      "revisado": false
+    },
+    {
+      "id": "cin-fatores-velocidade-q2", "temaId": "cin-fatores-velocidade", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que os alimentos cozinham mais rápido na panela de pressão?",
+      "alternativas": [{ "id": "a", "texto": "Porque a água ferve a uma temperatura mais alta, e as transformações nos alimentos ficam mais rápidas." }, { "id": "b", "texto": "Porque a pressão esmaga os alimentos." }, { "id": "c", "texto": "Porque a panela funciona como catalisador." }, { "id": "d", "texto": "Porque a água ferve a uma temperatura mais baixa." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Com pressão maior, a água só ferve acima de 100 °C.", "Temperatura mais alta acelera as reações do cozimento."],
+      "dica": "O que a pressão faz com a temperatura de ebulição?",
+      "errosComuns": [{ "descricao": "A pressão maior eleva, e não abaixa, a temperatura de ebulição.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-fatores-velocidade-q3", "temaId": "cin-fatores-velocidade", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Aumentar a temperatura acelera as reações principalmente porque:",
+      "alternativas": [{ "id": "a", "texto": "Aumenta a fração de colisões com energia igual ou maior que a de ativação" }, { "id": "b", "texto": "Diminui a energia de ativação" }, { "id": "c", "texto": "Aumenta o ΔH da reação" }, { "id": "d", "texto": "Aumenta o número de moléculas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Com mais temperatura, as moléculas ficam mais agitadas.", "Uma parte maior das colisões passa a ter energia suficiente para reagir.", "A energia de ativação continua a mesma."],
+      "dica": "A barreira muda, ou muda a energia de quem tenta passar por ela?",
+      "errosComuns": [{ "descricao": "Quem diminui a energia de ativação é o catalisador, não a temperatura.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-catalise-q1", "temaId": "cin-catalise", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Um catalisador:",
+      "alternativas": [{ "id": "a", "texto": "Diminui a energia de ativação e não é consumido na reação" }, { "id": "b", "texto": "Aumenta o ΔH da reação" }, { "id": "c", "texto": "É consumido e precisa ser reposto a cada reação" }, { "id": "d", "texto": "Aumenta a quantidade de produto no equilíbrio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O catalisador oferece um caminho com energia de ativação menor.", "Ele participa da reação, mas é regenerado ao final.", "Não altera o ΔH nem a posição do equilíbrio; só faz o equilíbrio ser atingido mais rápido."],
+      "dica": "Ele muda o caminho, não o ponto de partida nem o de chegada.",
+      "errosComuns": [{ "descricao": "O catalisador acelera igualmente as reações direta e inversa: não desloca o equilíbrio.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-catalise-q2", "temaId": "cin-catalise", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num diagrama de energia que compara a mesma reação com e sem catalisador, o caminho catalisado apresenta:",
+      "alternativas": [{ "id": "a", "texto": "Um pico mais baixo, com reagentes e produtos nas mesmas energias" }, { "id": "b", "texto": "Produtos com energia mais baixa" }, { "id": "c", "texto": "Reagentes com energia mais alta" }, { "id": "d", "texto": "Um pico mais alto" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O catalisador diminui a energia de ativação: o pico fica mais baixo.", "Reagentes e produtos são os mesmos, então o ΔH não muda."],
+      "dica": "O ΔH muda com o catalisador?",
+      "errosComuns": [{ "descricao": "Os produtos são os mesmos: o ΔH não muda.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-catalise-q3", "temaId": "cin-catalise", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "As enzimas são:",
+      "alternativas": [{ "id": "a", "texto": "Catalisadores biológicos, em geral proteínas" }, { "id": "b", "texto": "Reagentes consumidos na digestão" }, { "id": "c", "texto": "Gorduras que armazenam energia" }, { "id": "d", "texto": "Produtos das reações celulares" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Enzimas aceleram reações nos seres vivos sem serem consumidas.", "A maioria é formada por proteínas, com um sítio ativo específico para o substrato."],
+      "dica": "Elas aceleram reações sem serem gastas.",
+      "errosComuns": [{ "descricao": "Enzimas não são consumidas: são regeneradas, como todo catalisador.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-lei-velocidade-q1", "temaId": "cin-lei-velocidade", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Uma reação tem lei de velocidade v = k[A]²[B]. Qual é a ordem global da reação?",
+      "alternativas": [{ "id": "a", "texto": "3" }, { "id": "b", "texto": "2" }, { "id": "c", "texto": "1" }, { "id": "d", "texto": "4" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A ordem global é a soma dos expoentes da lei de velocidade.", "2 (em A) + 1 (em B) = 3."],
+      "dica": "Some os expoentes.",
+      "errosComuns": [{ "descricao": "Considerou só a ordem em relação a A.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-lei-velocidade-q2", "temaId": "cin-lei-velocidade", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Em experimentos com a concentração de B constante, quando a concentração de A dobra, a velocidade da reação fica 4 vezes maior. Qual é a ordem da reação em relação a A?",
+      "gabarito": { "valor": 2, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "log(4) / log(2)",
+      "resolucaoPassoAPasso": ["Se v = k[A]ⁿ, dobrar [A] multiplica v por 2ⁿ.", "2ⁿ = 4, então n = 2."],
+      "dica": "Por quanto a velocidade é multiplicada quando [A] dobra?",
+      "errosComuns": [{ "descricao": "Usou o fator de aumento da velocidade (4) como se fosse a ordem.", "resposta": { "valor": 4 } }],
+      "revisado": false
+    },
+    {
+      "id": "cin-lei-velocidade-q3", "temaId": "cin-lei-velocidade", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Para a lei v = k[A][B], com k = 0,5 L/(mol·s), [A] = 0,2 mol/L e [B] = 0,4 mol/L, qual é a velocidade?",
+      "gabarito": { "valor": 0.04, "unidade": "mol/(L·s)" },
+      "verificacao": "0.5 * 0.2 * 0.4",
+      "resolucaoPassoAPasso": ["Substitua os valores: v = 0,5 × 0,2 × 0,4.", "v = 0,04 mol/(L·s)."],
+      "dica": "Multiplique k pelas duas concentrações.",
+      "errosComuns": [{ "descricao": "Esqueceu de multiplicar pela concentração de B.", "resposta": { "valor": 0.1, "unidade": "mol/(L·s)" } }],
+      "revisado": false
+    },
+    {
+      "id": "cin-mecanismos-q1", "temaId": "cin-mecanismos", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Numa reação que ocorre em várias etapas, a velocidade global é determinada pela:",
+      "alternativas": [{ "id": "a", "texto": "Etapa mais lenta" }, { "id": "b", "texto": "Etapa mais rápida" }, { "id": "c", "texto": "Primeira etapa, sempre" }, { "id": "d", "texto": "Última etapa, sempre" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As etapas funcionam como uma linha de produção.", "A etapa mais lenta limita a velocidade de tudo: é a etapa determinante."],
+      "dica": "Pense num gargalo.",
+      "errosComuns": [{ "descricao": "A etapa lenta pode ser qualquer uma, não necessariamente a primeira.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-mecanismos-q2", "temaId": "cin-mecanismos", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Mecanismo proposto: etapa 1 (lenta) \\ce{NO2 + NO2 -> NO3 + NO}; etapa 2 (rápida) \\ce{NO3 + CO -> NO2 + CO2}. Qual é a lei de velocidade?",
+      "alternativas": [{ "id": "a", "texto": "v = k[NO₂]²" }, { "id": "b", "texto": "v = k[NO₂][CO]" }, { "id": "c", "texto": "v = k[NO₃][CO]" }, { "id": "d", "texto": "v = k[CO]" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A lei de velocidade vem da etapa lenta.", "Na etapa 1, reagem duas moléculas de \\ce{NO2}: v = k[NO₂]².", "O CO só entra na etapa rápida e não aparece na lei."],
+      "dica": "Olhe só a etapa lenta.",
+      "errosComuns": [{ "descricao": "Escreveu a lei a partir da equação global; ela deve vir da etapa lenta.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "cin-mecanismos-q3", "temaId": "cin-mecanismos", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "No mecanismo da questão anterior, qual é o papel do \\ce{NO3}?",
+      "alternativas": [{ "id": "a", "texto": "Intermediário: formado numa etapa e consumido na seguinte" }, { "id": "b", "texto": "Catalisador" }, { "id": "c", "texto": "Produto final" }, { "id": "d", "texto": "Reagente inicial" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O \\ce{NO3} aparece como produto na etapa 1 e como reagente na etapa 2.", "Ele não aparece na equação global: é um intermediário.", "Um catalisador faria o contrário: entraria no início e seria regenerado no fim."],
+      "dica": "Em que etapa ele aparece e em qual some?",
+      "errosComuns": [{ "descricao": "O catalisador entra primeiro e é regenerado depois; o \\ce{NO3} é formado e depois consumido.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

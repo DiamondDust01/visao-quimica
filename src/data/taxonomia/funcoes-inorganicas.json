@@ -1,0 +1,138 @@
+{
+  "id": "funcoes-inorganicas",
+  "nome": "Funções inorgânicas",
+  "descricao": "Ácidos, bases, sais e óxidos: como reconhecer, nomear e prever o comportamento de cada um.",
+  "area": "funcoes-inorganicas",
+  "prerequisitos": ["lig-ionica", "lig-covalente"],
+  "etapasRecomendadas": ["em-1", "em-2", "enem", "olimpiadas-quimica", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["ácidos", "bases", "sais", "óxidos"],
+  "temas": [
+    {
+      "id": "inorg-acidos-bases",
+      "nome": "Ácidos e bases",
+      "descricao": "O comportamento de ácidos e bases em água, segundo Arrhenius.",
+      "area": "funcoes-inorganicas",
+      "prerequisitos": ["lig-ionica", "lig-covalente"],
+      "etapasRecomendadas": ["em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["Arrhenius", "ácidos", "bases", "indicadores"],
+      "subtemas": [
+        {
+          "id": "inorg-dissociacao-ionizacao",
+          "nome": "Dissociação, ionização e condutividade",
+          "descricao": "Diferença entre dissociar íons já existentes e formar íons em água, e por que soluções iônicas conduzem corrente.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["lig-ionica", "lig-covalente"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["dissociação", "ionização", "eletrólito", "condutividade"]
+        },
+        {
+          "id": "inorg-acidos",
+          "nome": "Ácidos",
+          "descricao": "Definição de Arrhenius, classificação, nomenclatura de hidrácidos e oxiácidos e força dos ácidos.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-dissociacao-ionizacao"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ácido", "hidrácido", "oxiácido", "H+", "força ácida"]
+        },
+        {
+          "id": "inorg-bases",
+          "nome": "Bases",
+          "descricao": "Definição de Arrhenius, nomenclatura dos hidróxidos, solubilidade e força das bases.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-dissociacao-ionizacao"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["base", "hidróxido", "OH-", "força básica"]
+        },
+        {
+          "id": "inorg-indicadores",
+          "nome": "Indicadores ácido-base",
+          "descricao": "Como indicadores mudam de cor com a acidez, inclusive indicadores naturais como o extrato de repolho roxo.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-acidos", "inorg-bases"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["indicador", "fenolftaleína", "repolho roxo", "tornassol"]
+        }
+      ]
+    },
+    {
+      "id": "inorg-sais-oxidos",
+      "nome": "Sais e óxidos",
+      "descricao": "Reações de neutralização, os sais que elas formam e os óxidos.",
+      "area": "funcoes-inorganicas",
+      "prerequisitos": ["inorg-acidos", "inorg-bases"],
+      "etapasRecomendadas": ["em-1", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["neutralização", "sais", "óxidos"],
+      "subtemas": [
+        {
+          "id": "inorg-neutralizacao",
+          "nome": "Neutralização",
+          "descricao": "Reação entre ácido e base formando sal e água, total ou parcial.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-acidos", "inorg-bases"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["neutralização", "sal", "água", "salificação"]
+        },
+        {
+          "id": "inorg-sais",
+          "nome": "Sais",
+          "descricao": "Formação, nomenclatura e classificação dos sais (normais, ácidos, básicos) e sais do cotidiano.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-neutralizacao"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["sal", "nomenclatura", "ânion", "cátion", "-eto -ito -ato"]
+        },
+        {
+          "id": "inorg-oxidos",
+          "nome": "Óxidos",
+          "descricao": "Óxidos ácidos, básicos, neutros e anfóteros, sua nomenclatura e reações com água, ácidos e bases.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-acidos", "inorg-bases"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["óxido ácido", "óxido básico", "anfótero", "anidrido"]
+        }
+      ]
+    },
+    {
+      "id": "inorg-teorias",
+      "nome": "Teorias ácido-base",
+      "descricao": "Definições mais amplas de ácido e base, além da água.",
+      "area": "funcoes-inorganicas",
+      "prerequisitos": ["lig-covalente", "inorg-acidos", "inorg-bases"],
+      "etapasRecomendadas": ["em-2", "enem", "olimpiadas-quimica", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["Brønsted-Lowry", "Lewis", "par conjugado"],
+      "subtemas": [
+        {
+          "id": "inorg-bronsted-lowry",
+          "nome": "Teoria de Brønsted-Lowry",
+          "descricao": "Ácido como doador e base como receptor de próton, pares conjugados e substâncias anfipróticas.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["inorg-acidos", "inorg-bases"],
+          "etapasRecomendadas": ["em-2", "enem", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["Brønsted", "Lowry", "par conjugado", "próton", "anfiprótico"]
+        },
+        {
+          "id": "inorg-lewis",
+          "nome": "Teoria de Lewis",
+          "descricao": "Ácido como receptor e base como doadora de par de elétrons, incluindo reações sem próton.",
+          "area": "funcoes-inorganicas",
+          "prerequisitos": ["lig-covalente", "inorg-bronsted-lowry"],
+          "etapasRecomendadas": ["em-2", "olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["ácido de Lewis", "base de Lewis", "par de elétrons", "aduto"]
+        }
+      ]
+    }
+  ]
+}

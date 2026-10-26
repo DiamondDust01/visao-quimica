@@ -1,0 +1,148 @@
+{
+  "id": "estrutura-atomica",
+  "nome": "Estrutura atômica",
+  "descricao": "Como os modelos do átomo evoluíram, do que ele é feito e como os elétrons se organizam.",
+  "area": "estrutura-atomica",
+  "prerequisitos": ["fund-substancias-puras"],
+  "etapasRecomendadas": ["ef-9", "em-1", "enem", "olimpiadas-quimica", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["átomo", "modelos atômicos", "elétrons"],
+  "temas": [
+    {
+      "id": "atom-modelos",
+      "nome": "Modelos atômicos",
+      "descricao": "As ideias sobre o átomo, de Dalton ao modelo quântico, e as evidências por trás de cada uma.",
+      "area": "estrutura-atomica",
+      "prerequisitos": ["fund-substancias-puras"],
+      "etapasRecomendadas": ["ef-9", "em-1", "enem", "olimpiadas-quimica", "superior"],
+      "dificuldade": 1,
+      "palavrasChave": ["Dalton", "Thomson", "Rutherford", "Bohr"],
+      "subtemas": [
+        {
+          "id": "atom-modelos-classicos",
+          "nome": "Dalton, Thomson e Rutherford",
+          "descricao": "O que cada modelo propôs, qual experimento o motivou e o que ele não conseguia explicar.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["fund-substancias-puras"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["Dalton", "Thomson", "Rutherford", "núcleo", "folha de ouro"]
+        },
+        {
+          "id": "atom-modelo-bohr",
+          "nome": "Modelo de Bohr",
+          "descricao": "Níveis de energia, saltos eletrônicos e a emissão de luz em cores específicas (espectros de linhas).",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-modelos-classicos"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["Bohr", "níveis de energia", "espectro", "salto quântico"]
+        },
+        {
+          "id": "atom-modelo-quantico",
+          "nome": "Noções do modelo quântico",
+          "descricao": "Orbital como região de maior probabilidade de encontrar o elétron e os limites do modelo de órbitas.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-modelo-bohr"],
+          "etapasRecomendadas": ["em-1", "olimpiadas-quimica", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["orbital", "dualidade", "incerteza", "Schrödinger"]
+        }
+      ]
+    },
+    {
+      "id": "atom-particulas",
+      "nome": "Partículas e identidade dos átomos",
+      "descricao": "Prótons, nêutrons e elétrons, e como eles definem elementos, isótopos e íons.",
+      "area": "estrutura-atomica",
+      "prerequisitos": ["atom-modelos-classicos"],
+      "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["próton", "nêutron", "isótopo", "íon"],
+      "subtemas": [
+        {
+          "id": "atom-particulas-subatomicas",
+          "nome": "Prótons, nêutrons e elétrons",
+          "descricao": "Carga e localização de cada partícula, número atômico (Z) e número de massa (A).",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-modelos-classicos"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["número atômico", "número de massa", "próton", "nêutron", "elétron"]
+        },
+        {
+          "id": "atom-isotopos",
+          "nome": "Isótopos, isóbaros e isótonos",
+          "descricao": "Átomos com mesmo Z, mesmo A ou mesmo número de nêutrons, e exemplos de isótopos usados no dia a dia.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-particulas-subatomicas"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["isótopos", "isóbaros", "isótonos", "semelhanças atômicas"]
+        },
+        {
+          "id": "atom-ions",
+          "nome": "Íons",
+          "descricao": "Formação de cátions e ânions pela perda ou ganho de elétrons e espécies isoeletrônicas.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-particulas-subatomicas"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["cátion", "ânion", "isoeletrônicos", "carga"]
+        },
+        {
+          "id": "atom-massa-atomica",
+          "nome": "Massa atômica",
+          "descricao": "Unidade de massa atômica e cálculo da massa atômica de um elemento como média ponderada dos seus isótopos.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-isotopos"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["massa atômica", "média ponderada", "abundância isotópica", "unidade de massa atômica"]
+        }
+      ]
+    },
+    {
+      "id": "atom-eletrosfera",
+      "nome": "Eletrosfera",
+      "descricao": "A organização dos elétrons em níveis, subníveis e orbitais.",
+      "area": "estrutura-atomica",
+      "prerequisitos": ["atom-modelo-quantico", "atom-particulas-subatomicas"],
+      "etapasRecomendadas": ["em-1", "enem", "olimpiadas-quimica", "superior"],
+      "dificuldade": 2,
+      "palavrasChave": ["distribuição eletrônica", "subníveis", "números quânticos"],
+      "subtemas": [
+        {
+          "id": "atom-distribuicao-eletronica",
+          "nome": "Distribuição eletrônica",
+          "descricao": "Preenchimento dos subníveis pela ordem crescente de energia (diagrama de Linus Pauling) em átomos e íons.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-particulas-subatomicas"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["diagrama de energia", "subníveis", "s p d f", "Linus Pauling"]
+        },
+        {
+          "id": "atom-camada-valencia",
+          "nome": "Camada de valência",
+          "descricao": "Identificação da camada mais externa e do número de elétrons de valência a partir da distribuição.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-distribuicao-eletronica"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["camada de valência", "elétrons de valência", "subnível mais energético"]
+        },
+        {
+          "id": "atom-numeros-quanticos",
+          "nome": "Números quânticos",
+          "descricao": "Principal, secundário, magnético e de spin; princípio de exclusão de Pauli e regra de Hund.",
+          "area": "estrutura-atomica",
+          "prerequisitos": ["atom-modelo-quantico", "atom-distribuicao-eletronica"],
+          "etapasRecomendadas": ["em-1", "olimpiadas-quimica", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["números quânticos", "spin", "Pauli", "Hund", "orbital"]
+        }
+      ]
+    }
+  ]
+}

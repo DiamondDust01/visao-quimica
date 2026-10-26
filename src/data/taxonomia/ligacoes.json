@@ -1,0 +1,148 @@
+{
+  "id": "ligacoes",
+  "nome": "Ligações químicas e interações",
+  "descricao": "Como os átomos se unem, a forma das moléculas e as forças entre elas.",
+  "area": "ligacoes",
+  "prerequisitos": ["atom-ions", "atom-numeros-quanticos", "tab-metais-ametais", "tab-eletronegatividade"],
+  "etapasRecomendadas": ["ef-9", "em-1", "em-3", "enem", "olimpiadas-quimica", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["ligações", "geometria molecular", "polaridade", "forças intermoleculares"],
+  "temas": [
+    {
+      "id": "lig-tipos",
+      "nome": "Tipos de ligação",
+      "descricao": "Ligações iônica, covalente e metálica e as propriedades que resultam de cada uma.",
+      "area": "ligacoes",
+      "prerequisitos": ["atom-ions", "tab-metais-ametais"],
+      "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["iônica", "covalente", "metálica"],
+      "subtemas": [
+        {
+          "id": "lig-regra-octeto",
+          "nome": "Regra do octeto",
+          "descricao": "Por que os átomos tendem a ficar com oito elétrons na camada de valência e onde a regra falha.",
+          "area": "ligacoes",
+          "prerequisitos": ["atom-ions", "tab-metais-ametais"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["octeto", "estabilidade", "gases nobres", "valência"]
+        },
+        {
+          "id": "lig-ionica",
+          "nome": "Ligação iônica",
+          "descricao": "Transferência de elétrons entre metal e ametal e montagem da fórmula do composto iônico.",
+          "area": "ligacoes",
+          "prerequisitos": ["atom-ions", "lig-regra-octeto"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ligação iônica", "fórmula iônica", "retículo cristalino", "transferência de elétrons"]
+        },
+        {
+          "id": "lig-covalente",
+          "nome": "Ligação covalente",
+          "descricao": "Compartilhamento de pares de elétrons, ligações simples, duplas e triplas e fórmulas de Lewis.",
+          "area": "ligacoes",
+          "prerequisitos": ["lig-regra-octeto"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ligação covalente", "Lewis", "par eletrônico", "fórmula estrutural"]
+        },
+        {
+          "id": "lig-metalica",
+          "nome": "Ligação metálica",
+          "descricao": "Modelo do mar de elétrons, propriedades dos metais e ligas metálicas.",
+          "area": "ligacoes",
+          "prerequisitos": ["lig-regra-octeto"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ligação metálica", "mar de elétrons", "ligas", "condutividade"]
+        },
+        {
+          "id": "lig-propriedades-compostos",
+          "nome": "Propriedades dos compostos",
+          "descricao": "Comparar ponto de fusão, condutividade e solubilidade de compostos iônicos, moleculares e metálicos.",
+          "area": "ligacoes",
+          "prerequisitos": ["lig-ionica", "lig-covalente", "lig-metalica"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["condutividade", "ponto de fusão", "compostos iônicos", "compostos moleculares"]
+        }
+      ]
+    },
+    {
+      "id": "lig-geometria",
+      "nome": "Geometria e polaridade",
+      "descricao": "A forma das moléculas e a distribuição de cargas nelas.",
+      "area": "ligacoes",
+      "prerequisitos": ["atom-numeros-quanticos", "tab-eletronegatividade", "lig-covalente"],
+      "etapasRecomendadas": ["em-1", "em-3", "enem", "olimpiadas-quimica", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["VSEPR", "polaridade", "hibridização"],
+      "subtemas": [
+        {
+          "id": "lig-vsepr",
+          "nome": "Geometria molecular (VSEPR)",
+          "descricao": "Previsão da forma da molécula pela repulsão dos pares de elétrons ao redor do átomo central.",
+          "area": "ligacoes",
+          "prerequisitos": ["lig-covalente"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["VSEPR", "linear", "angular", "trigonal", "tetraédrica", "piramidal"]
+        },
+        {
+          "id": "lig-polaridade",
+          "nome": "Polaridade",
+          "descricao": "Polaridade das ligações pela diferença de eletronegatividade e polaridade da molécula pela geometria.",
+          "area": "ligacoes",
+          "prerequisitos": ["tab-eletronegatividade", "lig-vsepr"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["polar", "apolar", "momento dipolar", "eletronegatividade"]
+        },
+        {
+          "id": "lig-hibridizacao",
+          "nome": "Hibridização de orbitais",
+          "descricao": "Orbitais híbridos sp, sp² e sp³ e sua relação com a geometria e com ligações sigma e pi.",
+          "area": "ligacoes",
+          "prerequisitos": ["atom-numeros-quanticos", "lig-vsepr"],
+          "etapasRecomendadas": ["em-3", "olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["hibridização", "sp3", "sp2", "sp", "sigma", "pi"]
+        }
+      ]
+    },
+    {
+      "id": "lig-interacoes",
+      "nome": "Interações intermoleculares",
+      "descricao": "As forças entre moléculas e como elas explicam propriedades físicas.",
+      "area": "ligacoes",
+      "prerequisitos": ["lig-polaridade"],
+      "etapasRecomendadas": ["em-1", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["forças intermoleculares", "ligação de hidrogênio", "solubilidade"],
+      "subtemas": [
+        {
+          "id": "lig-forcas-intermoleculares",
+          "nome": "Forças intermoleculares",
+          "descricao": "Dipolo induzido, dipolo permanente e ligação de hidrogênio: quando ocorre cada uma e qual é mais intensa.",
+          "area": "ligacoes",
+          "prerequisitos": ["lig-polaridade"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["ligação de hidrogênio", "dipolo-dipolo", "dispersão de London", "Van der Waals"]
+        },
+        {
+          "id": "lig-solubilidade-ebulicao",
+          "nome": "Solubilidade e ponto de ebulição",
+          "descricao": "Usar as interações para prever solubilidade (semelhante dissolve semelhante) e comparar pontos de ebulição.",
+          "area": "ligacoes",
+          "prerequisitos": ["lig-forcas-intermoleculares"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["solubilidade", "ponto de ebulição", "semelhante dissolve semelhante", "volatilidade"]
+        }
+      ]
+    }
+  ]
+}

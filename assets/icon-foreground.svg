@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Primeiro plano do ícone adaptável do Android: o desenho fica dentro da zona segura (66% central). -->
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(512 512) scale(0.62) translate(-512 -512)">
+    <polygon points="512,212 772,362 772,662 512,812 252,662 252,362" fill="none" stroke="url(#ring)" stroke-width="44" stroke-linejoin="round"/>
+    <path d="M332 512 C 400 412, 624 412, 692 512 C 624 612, 400 612, 332 512 Z" fill="#ecfeff" />
+    <circle cx="512" cy="512" r="70" fill="#0f766e"/>
+    <circle cx="512" cy="512" r="30" fill="#042f2e"/>
+    <circle cx="490" cy="490" r="14" fill="#ecfeff"/>
+  </g>
+</svg>

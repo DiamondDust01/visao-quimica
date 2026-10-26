@@ -1,0 +1,269 @@
+{
+  "area": "funcoes-inorganicas",
+  "questoes": [
+    {
+      "id": "inorg-dissociacao-ionizacao-q1", "temaId": "inorg-dissociacao-ionizacao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Ao dissolver sal de cozinha (\\ce{NaCl}) em água, ocorre:",
+      "alternativas": [{ "id": "a", "texto": "Dissociação iônica: separação de íons que já existiam no sólido" }, { "id": "b", "texto": "Ionização: formação de íons que não existiam antes" }, { "id": "c", "texto": "Formação de moléculas de \\ce{NaCl} dissolvidas" }, { "id": "d", "texto": "Uma reação com liberação de gás" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O \\ce{NaCl} sólido já é formado por íons \\ce{Na+} e \\ce{Cl-}.", "A água apenas separa esses íons, que ficam rodeados por moléculas de água.", "Separar íons que já existiam é dissociação iônica."],
+      "dica": "O sal sólido já é feito de íons?",
+      "errosComuns": [{ "descricao": "Ionização é a formação de íons a partir de moléculas, como acontece com o HCl.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-dissociacao-ionizacao-q2", "temaId": "inorg-dissociacao-ionizacao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O cloreto de hidrogênio gasoso é formado por moléculas, mas em água forma íons \\ce{H3O+} e \\ce{Cl-}. Esse processo é chamado de:",
+      "alternativas": [{ "id": "a", "texto": "Ionização" }, { "id": "b", "texto": "Dissociação iônica" }, { "id": "c", "texto": "Fusão" }, { "id": "d", "texto": "Eletrólise" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O HCl é molecular: não há íons antes do contato com a água.", "A reação com a água quebra a ligação H–Cl e forma íons.", "Formar íons a partir de moléculas é ionização."],
+      "dica": "Os íons já existiam antes?",
+      "errosComuns": [{ "descricao": "Dissociação só separa íons que já existiam, como no NaCl.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-dissociacao-ionizacao-q3", "temaId": "inorg-dissociacao-ionizacao", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Quatro soluções aquosas têm a mesma concentração. Qual delas conduz menos corrente elétrica?",
+      "alternativas": [{ "id": "a", "texto": "Sacarose (açúcar)" }, { "id": "b", "texto": "Cloreto de sódio" }, { "id": "c", "texto": "Ácido clorídrico" }, { "id": "d", "texto": "Hidróxido de potássio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Conduz quem tem íons livres em solução.", "NaCl e KOH se dissociam, e o HCl se ioniza: todos formam íons.", "A sacarose se dissolve como moléculas inteiras, sem formar íons."],
+      "dica": "Qual delas não forma íons em água?",
+      "errosComuns": [{ "descricao": "O HCl é molecular, mas se ioniza totalmente em água e conduz bem.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-acidos-q1", "temaId": "inorg-acidos", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Escreva o nome do ácido \\ce{H2SO4}, usado em baterias de automóveis.",
+      "gabarito": { "formula": "H2SO4", "nomes": ["ácido sulfúrico"] },
+      "resolucaoPassoAPasso": ["O enxofre forma dois oxiácidos comuns: \\ce{H2SO4} e \\ce{H2SO3}.", "O que tem mais oxigênio recebe o sufixo -ico; o que tem menos, -oso.", "\\ce{H2SO4}: ácido sulfúrico."],
+      "dica": "Mais oxigênio: sufixo -ico.",
+      "errosComuns": [{ "descricao": "Ácido sulfuroso é o \\ce{H2SO3}, com um oxigênio a menos.", "resposta": "ácido sulfuroso" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-acidos-q2", "temaId": "inorg-acidos", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "Escreva a fórmula do ácido nítrico.",
+      "gabarito": { "formula": "HNO3", "nomes": ["ácido nítrico"] },
+      "resolucaoPassoAPasso": ["O nitrogênio forma o ácido nítrico (\\ce{HNO3}) e o ácido nitroso (\\ce{HNO2}).", "Sufixo -ico: o de mais oxigênio, \\ce{HNO3}."],
+      "dica": "O ânion correspondente é o nitrato, \\ce{NO3-}.",
+      "errosComuns": [{ "descricao": "\\ce{HNO2} é o ácido nitroso.", "resposta": "HNO2" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-acidos-q3", "temaId": "inorg-acidos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes ácidos é forte, ou seja, se ioniza quase totalmente em água?",
+      "alternativas": [{ "id": "a", "texto": "Ácido clorídrico (HCl)" }, { "id": "b", "texto": "Ácido cianídrico (HCN)" }, { "id": "c", "texto": "Ácido carbônico (\\ce{H2CO3})" }, { "id": "d", "texto": "Ácido acético (\\ce{CH3COOH})" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Entre os hidrácidos, HCl, HBr e HI são fortes.", "HCN, ácido carbônico e ácido acético são fracos: só uma pequena parte das moléculas se ioniza."],
+      "dica": "Lembre os hidrácidos fortes: HCl, HBr e HI.",
+      "errosComuns": [{ "descricao": "O ácido acético, do vinagre, é fraco.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-bases-q1", "temaId": "inorg-bases", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Escreva o nome da base \\ce{Ca(OH)2}, presente na cal hidratada.",
+      "gabarito": { "formula": "Ca(OH)2", "nomes": ["hidróxido de cálcio"] },
+      "resolucaoPassoAPasso": ["Bases de Arrhenius são hidróxidos: o nome é 'hidróxido de' + nome do metal.", "\\ce{Ca(OH)2}: hidróxido de cálcio."],
+      "dica": "O grupo \\ce{OH-} se chama hidróxido.",
+      "errosComuns": [{ "descricao": "Óxido de cálcio é o \\ce{CaO}, a cal virgem.", "resposta": "óxido de cálcio" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-bases-q2", "temaId": "inorg-bases", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "O alumínio forma o íon \\ce{Al^{3+}}. Escreva a fórmula do hidróxido de alumínio.",
+      "gabarito": { "formula": "Al(OH)3", "nomes": ["hidróxido de alumínio"] },
+      "resolucaoPassoAPasso": ["Um \\ce{Al^{3+}} precisa de três \\ce{OH-} para ficar neutro.", "Fórmula: \\ce{Al(OH)3}."],
+      "dica": "Quantos \\ce{OH-} equilibram a carga 3+?",
+      "errosComuns": [{ "descricao": "Uniu um \\ce{OH-} só: a carga total ficaria +2.", "resposta": "AlOH" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-bases-q3", "temaId": "inorg-bases", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas bases é forte e bastante solúvel em água?",
+      "alternativas": [{ "id": "a", "texto": "Hidróxido de sódio (NaOH)" }, { "id": "b", "texto": "Hidróxido de magnésio (\\ce{Mg(OH)2})" }, { "id": "c", "texto": "Hidróxido de alumínio (\\ce{Al(OH)3})" }, { "id": "d", "texto": "Hidróxido de ferro(III) (\\ce{Fe(OH)3})" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os hidróxidos de metais alcalinos (grupo 1) são solúveis e fortes.", "Os de magnésio, alumínio e ferro são pouco solúveis."],
+      "dica": "Procure o hidróxido de um metal do grupo 1.",
+      "errosComuns": [{ "descricao": "O hidróxido de magnésio (leite de magnésia) é pouco solúvel em água.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-indicadores-q1", "temaId": "inorg-indicadores", "etapa": "em-1", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "A fenolftaleína é incolor em meio ácido e neutro. Em que meio ela fica rosa?",
+      "alternativas": [{ "id": "a", "texto": "Básico" }, { "id": "b", "texto": "Ácido" }, { "id": "c", "texto": "Neutro" }, { "id": "d", "texto": "Em qualquer meio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A fenolftaleína muda de incolor para rosa por volta de pH 8 a 10.", "Ou seja, fica rosa em meio básico."],
+      "dica": "O enunciado já diz onde ela fica incolor.",
+      "errosComuns": [{ "descricao": "Em meio ácido a fenolftaleína fica incolor.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-indicadores-q2", "temaId": "inorg-indicadores", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O extrato de repolho roxo fica avermelhado com vinagre e esverdeado com uma solução de bicarbonato de sódio. Uma solução desconhecida deixou o extrato verde. Ela é provavelmente:",
+      "alternativas": [{ "id": "a", "texto": "Básica" }, { "id": "b", "texto": "Ácida" }, { "id": "c", "texto": "Neutra" }, { "id": "d", "texto": "Não é possível saber" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O vinagre é ácido e deixa o extrato avermelhado.", "O bicarbonato forma uma solução levemente básica e deixa o extrato verde.", "A solução desconhecida teve o mesmo comportamento do bicarbonato: é básica."],
+      "dica": "Compare com as duas referências dadas.",
+      "errosComuns": [{ "descricao": "A cor verde coincide com a da solução de bicarbonato, que é básica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-indicadores-q3", "temaId": "inorg-indicadores", "etapa": "em-1", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Classifique estes produtos domésticos quanto ao caráter de suas soluções.",
+      "itens": [{ "id": "vinagre", "texto": "Vinagre" }, { "id": "limao", "texto": "Suco de limão" }, { "id": "sanitaria", "texto": "Água sanitária" }, { "id": "magnesia", "texto": "Leite de magnésia" }, { "id": "agua", "texto": "Água pura" }],
+      "opcoes": [{ "id": "ac", "texto": "Ácido" }, { "id": "ba", "texto": "Básico" }, { "id": "ne", "texto": "Neutro" }],
+      "gabarito": { "vinagre": "ac", "limao": "ac", "sanitaria": "ba", "magnesia": "ba", "agua": "ne" },
+      "resolucaoPassoAPasso": ["Vinagre (ácido acético) e limão (ácido cítrico) são ácidos.", "Água sanitária e leite de magnésia são básicos.", "Água pura é neutra (pH 7 a 25 °C).", "Segurança: nunca misture água sanitária com vinagre, amoníaco ou outros produtos de limpeza; a mistura pode liberar gases tóxicos."],
+      "dica": "Produtos azedos costumam ser ácidos.",
+      "errosComuns": [{ "descricao": "Achar que a água sanitária é ácida: ela é básica." }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-neutralizacao-q1", "temaId": "inorg-neutralizacao", "etapa": "em-1", "dificuldade": 2, "tipo": "balanceamento",
+      "enunciado": "Balanceie a neutralização total do ácido sulfúrico com hidróxido de sódio.",
+      "equacao": { "reagentes": ["H2SO4", "NaOH"], "produtos": ["Na2SO4", "H2O"] },
+      "gabarito": [1, 2, 1, 2],
+      "resolucaoPassoAPasso": ["O \\ce{H2SO4} tem 2 H ionizáveis: precisa de 2 \\ce{OH-}, ou seja, 2 NaOH.", "Os 2 \\ce{H+} e os 2 \\ce{OH-} formam 2 \\ce{H2O}.", "Sobram 2 \\ce{Na+} e 1 \\ce{SO4^{2-}}: 1 \\ce{Na2SO4}.", "Equação: \\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}."],
+      "dica": "Cada \\ce{H+} do ácido reage com um \\ce{OH-} da base.",
+      "errosComuns": [{ "descricao": "Deixou todos os coeficientes iguais a 1: sódio e hidrogênio não se conservam.", "resposta": [1, 1, 1, 1] }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-neutralizacao-q2", "temaId": "inorg-neutralizacao", "etapa": "em-1", "dificuldade": 3, "tipo": "balanceamento",
+      "enunciado": "Balanceie a neutralização do ácido fosfórico com hidróxido de cálcio, formando fosfato de cálcio e água.",
+      "equacao": { "reagentes": ["H3PO4", "Ca(OH)2"], "produtos": ["Ca3(PO4)2", "H2O"] },
+      "gabarito": [2, 3, 1, 6],
+      "resolucaoPassoAPasso": ["O \\ce{Ca3(PO4)2} tem 3 Ca e 2 P: comece com 2 \\ce{H3PO4} e 3 \\ce{Ca(OH)2}.", "Hidrogênios ionizáveis: 2 × 3 = 6 \\ce{H+}; hidroxilas: 3 × 2 = 6 \\ce{OH-}.", "Eles formam 6 \\ce{H2O}.", "Equação: \\ce{2H3PO4 + 3Ca(OH)2 -> Ca3(PO4)2 + 6H2O}."],
+      "dica": "Comece pelo sal: quantos Ca e quantos P ele tem?",
+      "errosComuns": [{ "descricao": "Ajustou cálcio e fósforo, mas não a água: faltam hidrogênios e oxigênios nos produtos.", "resposta": [2, 3, 1, 3] }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-neutralizacao-q3", "temaId": "inorg-neutralizacao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num laboratório escolar, uma pequena quantidade de ácido diluído caiu na bancada. Qual é a conduta mais adequada, além de usar luvas e óculos?",
+      "alternativas": [{ "id": "a", "texto": "Cobrir com bicarbonato de sódio, esperar a reação terminar e limpar com bastante água" }, { "id": "b", "texto": "Jogar hidróxido de sódio concentrado por cima" }, { "id": "c", "texto": "Despejar água sanitária sobre o ácido" }, { "id": "d", "texto": "Adicionar vinagre para diluir" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O bicarbonato é uma base fraca: neutraliza o ácido de forma controlada, liberando \\ce{CO2}.", "Uma base forte concentrada reage com violência e também é corrosiva.", "Água sanitária em contato com ácidos pode liberar gás tóxico.", "Sempre avise o professor ou o responsável pelo laboratório."],
+      "dica": "Prefira uma base fraca, de reação controlada.",
+      "errosComuns": [{ "descricao": "Base forte concentrada reage de forma violenta e também é corrosiva.", "resposta": "b" }, { "descricao": "Água sanitária com ácido pode liberar gás tóxico.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-sais-q1", "temaId": "inorg-sais", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Escreva o nome do sal \\ce{Na2SO4}.",
+      "gabarito": { "formula": "Na2SO4", "nomes": ["sulfato de sódio"] },
+      "resolucaoPassoAPasso": ["O ânion \\ce{SO4^{2-}} vem do ácido sulfúrico (-ico), e o sufixo -ico vira -ato.", "Nome: sulfato de sódio."],
+      "dica": "Ácido -ídrico → sal -eto; -ico → -ato; -oso → -ito.",
+      "errosComuns": [{ "descricao": "Sulfito é o \\ce{SO3^{2-}}, do ácido sulfuroso.", "resposta": "sulfito de sódio" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-sais-q2", "temaId": "inorg-sais", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "Escreva a fórmula do nitrato de potássio, usado em fertilizantes.",
+      "gabarito": { "formula": "KNO3", "nomes": ["nitrato de potássio"] },
+      "resolucaoPassoAPasso": ["Nitrato: \\ce{NO3-}. Potássio: \\ce{K+}.", "As cargas se anulam com um de cada: \\ce{KNO3}."],
+      "dica": "Nitrato vem do ácido nítrico.",
+      "errosComuns": [{ "descricao": "\\ce{KNO2} é o nitrito de potássio.", "resposta": "KNO2" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-sais-q3", "temaId": "inorg-sais", "etapa": "em-1", "dificuldade": 3, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "Escreva a fórmula do carbonato de cálcio, principal componente do calcário e das cascas de ovo.",
+      "gabarito": { "formula": "CaCO3", "nomes": ["carbonato de cálcio"] },
+      "resolucaoPassoAPasso": ["Carbonato: \\ce{CO3^{2-}}. Cálcio: \\ce{Ca^{2+}}.", "Cargas +2 e −2 se anulam com um de cada: \\ce{CaCO3}."],
+      "dica": "Compare as cargas do cátion e do ânion.",
+      "errosComuns": [{ "descricao": "Com dois carbonatos, a carga total ficaria −2.", "resposta": "Ca(CO3)2" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-oxidos-q1", "temaId": "inorg-oxidos", "etapa": "em-1", "dificuldade": 1, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Escreva o nome do óxido \\ce{CO2}.",
+      "gabarito": { "formula": "CO2", "nomes": ["dióxido de carbono", "gás carbônico", "anidrido carbônico"] },
+      "resolucaoPassoAPasso": ["Óxidos moleculares usam prefixos para o número de átomos: mono, di, tri...", "\\ce{CO2}: dióxido de carbono, também chamado de gás carbônico."],
+      "dica": "Quantos oxigênios há na fórmula?",
+      "errosComuns": [{ "descricao": "Monóxido de carbono é o CO, gás tóxico formado na combustão incompleta.", "resposta": "monóxido de carbono" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-oxidos-q2", "temaId": "inorg-oxidos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A cal virgem, \\ce{CaO}, reage com água formando \\ce{Ca(OH)2}. Ela é um óxido:",
+      "alternativas": [{ "id": "a", "texto": "Básico" }, { "id": "b", "texto": "Ácido" }, { "id": "c", "texto": "Neutro" }, { "id": "d", "texto": "Anfótero" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Óxidos de metais alcalinos e alcalinoterrosos reagem com água formando bases.", "\\ce{CaO + H2O -> Ca(OH)2}: forma uma base, então é um óxido básico."],
+      "dica": "O que se forma quando ele reage com água?",
+      "errosComuns": [{ "descricao": "Óxidos ácidos formam ácidos com a água, como o \\ce{CO2}.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-oxidos-q3", "temaId": "inorg-oxidos", "etapa": "em-1", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Classifique cada óxido.",
+      "itens": [{ "id": "so2", "texto": "\\ce{SO2}" }, { "id": "na2o", "texto": "\\ce{Na2O}" }, { "id": "co", "texto": "CO" }, { "id": "al2o3", "texto": "\\ce{Al2O3}" }],
+      "opcoes": [{ "id": "ac", "texto": "Ácido" }, { "id": "ba", "texto": "Básico" }, { "id": "ne", "texto": "Neutro" }, { "id": "an", "texto": "Anfótero" }],
+      "gabarito": { "so2": "ac", "na2o": "ba", "co": "ne", "al2o3": "an" },
+      "resolucaoPassoAPasso": ["\\ce{SO2}: óxido de ametal que forma ácido com água (ácido).", "\\ce{Na2O}: óxido de metal alcalino que forma base (básico).", "CO: não reage com água, ácidos nem bases (neutro).", "\\ce{Al2O3}: reage com ácidos e com bases (anfótero)."],
+      "dica": "Óxidos neutros não reagem com água, ácidos nem bases.",
+      "errosComuns": [{ "descricao": "Achar que todo óxido de ametal é ácido: o CO é neutro." }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-bronsted-lowry-q1", "temaId": "inorg-bronsted-lowry", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na reação \\ce{NH3 + H2O <=> NH4+ + OH-}, a água atua como:",
+      "alternativas": [{ "id": "a", "texto": "Ácido de Brønsted-Lowry, porque doa um próton" }, { "id": "b", "texto": "Base de Brønsted-Lowry, porque recebe um próton" }, { "id": "c", "texto": "Base de Arrhenius" }, { "id": "d", "texto": "Sal" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A água perde um \\ce{H+} e vira \\ce{OH-}.", "Quem doa próton é ácido de Brønsted-Lowry.", "A amônia recebe o próton e vira \\ce{NH4+}: é a base."],
+      "dica": "Veja o que acontece com a água: ela ganha ou perde H?",
+      "errosComuns": [{ "descricao": "Quem recebe o próton é a amônia; a água o doa.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-bronsted-lowry-q2", "temaId": "inorg-bronsted-lowry", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a base conjugada do íon hidrogenossulfato, \\ce{HSO4-}?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{SO4^{2-}}" }, { "id": "b", "texto": "\\ce{H2SO4}" }, { "id": "c", "texto": "\\ce{HSO3-}" }, { "id": "d", "texto": "\\ce{H+}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A base conjugada é o que sobra quando o ácido doa um próton.", "\\ce{HSO4- -> H+ + SO4^{2-}}: a base conjugada é \\ce{SO4^{2-}}."],
+      "dica": "Retire um \\ce{H+} e ajuste a carga.",
+      "errosComuns": [{ "descricao": "\\ce{H2SO4} é o ácido conjugado (com um próton a mais).", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-bronsted-lowry-q3", "temaId": "inorg-bronsted-lowry", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas espécies é anfiprótica, ou seja, pode tanto doar quanto receber um próton?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{HCO3-}" }, { "id": "b", "texto": "\\ce{Cl-}" }, { "id": "c", "texto": "\\ce{Na+}" }, { "id": "d", "texto": "\\ce{CO3^{2-}}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["\\ce{HCO3-} pode doar um \\ce{H+} (virando \\ce{CO3^{2-}}) ou receber um (virando \\ce{H2CO3}).", "\\ce{CO3^{2-}} só recebe próton; \\ce{Cl-} é base muito fraca; \\ce{Na+} não troca próton."],
+      "dica": "Precisa ter um H para doar e capacidade de receber outro.",
+      "errosComuns": [{ "descricao": "O \\ce{CO3^{2-}} não tem hidrogênio para doar.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-lewis-q1", "temaId": "inorg-lewis", "etapa": "em-2", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Na reação \\ce{BF3 + NH3 -> F3B-NH3}, o \\ce{BF3} atua como:",
+      "alternativas": [{ "id": "a", "texto": "Ácido de Lewis, porque recebe um par de elétrons" }, { "id": "b", "texto": "Base de Lewis, porque doa um par de elétrons" }, { "id": "c", "texto": "Ácido de Arrhenius" }, { "id": "d", "texto": "Sal" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O boro tem octeto incompleto e um orbital vazio.", "A amônia doa o par não ligante do nitrogênio ao boro.", "Quem recebe par de elétrons é ácido de Lewis: o \\ce{BF3}."],
+      "dica": "Quem tem orbital vazio para receber elétrons?",
+      "errosComuns": [{ "descricao": "Quem doa o par é a amônia, a base de Lewis.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-lewis-q2", "temaId": "inorg-lewis", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que a amônia, \\ce{NH3}, é uma base de Lewis?",
+      "alternativas": [{ "id": "a", "texto": "Porque tem um par de elétrons não ligante que pode doar" }, { "id": "b", "texto": "Porque tem três hidrogênios" }, { "id": "c", "texto": "Porque é uma molécula apolar" }, { "id": "d", "texto": "Porque tem carga positiva" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na teoria de Lewis, base é quem doa um par de elétrons.", "O nitrogênio da amônia tem um par não ligante disponível."],
+      "dica": "Base de Lewis = doadora de par de elétrons.",
+      "errosComuns": [{ "descricao": "Ter hidrogênios não faz de uma espécie uma base; é o par não ligante que importa.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "inorg-lewis-q3", "temaId": "inorg-lewis", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Na formação do íon complexo \\ce{[Cu(NH3)4]^{2+}}, o íon \\ce{Cu^{2+}} atua como:",
+      "alternativas": [{ "id": "a", "texto": "Ácido de Lewis" }, { "id": "b", "texto": "Base de Lewis" }, { "id": "c", "texto": "Base de Brønsted-Lowry" }, { "id": "d", "texto": "Agente redutor" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada amônia doa um par de elétrons ao cobre.", "O \\ce{Cu^{2+}} recebe quatro pares: é ácido de Lewis.", "Não há transferência de prótons nem de elétrons isolados."],
+      "dica": "Quem recebe os pares de elétrons das amônias?",
+      "errosComuns": [{ "descricao": "Quem doa os pares são as moléculas de amônia (bases de Lewis).", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

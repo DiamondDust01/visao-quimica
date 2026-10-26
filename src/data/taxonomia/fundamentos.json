@@ -1,0 +1,190 @@
+{
+  "id": "fundamentos",
+  "nome": "Fundamentos",
+  "descricao": "A matéria, suas propriedades, misturas e as medidas usadas em Química.",
+  "area": "fundamentos",
+  "prerequisitos": [],
+  "etapasRecomendadas": ["ef-6", "ef-8", "ef-9", "em-1", "enem", "tecnico", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["matéria", "energia", "misturas", "medidas"],
+  "temas": [
+    {
+      "id": "fund-materia-energia",
+      "nome": "Matéria e energia",
+      "descricao": "O que é matéria, como ela se apresenta e como troca energia.",
+      "area": "fundamentos",
+      "prerequisitos": [],
+      "etapasRecomendadas": ["ef-6", "ef-8", "ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["matéria", "estados físicos", "energia"],
+      "subtemas": [
+        {
+          "id": "fund-materia-conceitos",
+          "nome": "Matéria, corpo e objeto",
+          "descricao": "Diferença entre matéria, corpo e objeto, e a ideia de que a matéria tem massa e ocupa espaço.",
+          "area": "fundamentos",
+          "prerequisitos": [],
+          "etapasRecomendadas": ["ef-6", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["matéria", "massa", "volume", "corpo", "objeto"]
+        },
+        {
+          "id": "fund-estados-fisicos",
+          "nome": "Estados físicos e mudanças de estado",
+          "descricao": "Sólido, líquido e gasoso; fusão, solidificação, vaporização, condensação e sublimação, explicados pelo arranjo das partículas.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-materia-conceitos"],
+          "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["sólido", "líquido", "gasoso", "fusão", "vaporização", "sublimação"]
+        },
+        {
+          "id": "fund-energia-transformacoes",
+          "nome": "Transformações físicas e químicas",
+          "descricao": "Como distinguir uma transformação física de uma química e reconhecer a energia envolvida em cada uma.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-estados-fisicos"],
+          "etapasRecomendadas": ["ef-6", "ef-8", "ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["fenômeno físico", "fenômeno químico", "energia", "transformação"]
+        }
+      ]
+    },
+    {
+      "id": "fund-propriedades",
+      "nome": "Propriedades da matéria",
+      "descricao": "Propriedades que todos os materiais têm e as que identificam cada substância.",
+      "area": "fundamentos",
+      "prerequisitos": ["fund-materia-conceitos", "fund-estados-fisicos", "fund-unidades"],
+      "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["propriedades", "densidade", "ponto de fusão"],
+      "subtemas": [
+        {
+          "id": "fund-propriedades-gerais",
+          "nome": "Propriedades gerais e específicas",
+          "descricao": "Propriedades comuns a toda matéria (massa, volume, inércia) e propriedades que identificam um material (cor, dureza, densidade).",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-materia-conceitos"],
+          "etapasRecomendadas": ["ef-6", "em-1"],
+          "dificuldade": 1,
+          "palavrasChave": ["propriedades gerais", "propriedades específicas", "organolépticas", "dureza"]
+        },
+        {
+          "id": "fund-densidade",
+          "nome": "Densidade",
+          "descricao": "Relação entre massa e volume, cálculo de densidade e previsão de quem afunda ou flutua.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-propriedades-gerais", "fund-unidades"],
+          "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["densidade", "massa", "volume", "g/cm³", "flutuação"]
+        },
+        {
+          "id": "fund-pontos-fusao-ebulicao",
+          "nome": "Pontos de fusão e ebulição",
+          "descricao": "Leitura de curvas de aquecimento e uso das temperaturas de fusão e ebulição para identificar substâncias e misturas.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-estados-fisicos"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ponto de fusão", "ponto de ebulição", "curva de aquecimento", "patamar"]
+        }
+      ]
+    },
+    {
+      "id": "fund-misturas",
+      "nome": "Substâncias, misturas e separação",
+      "descricao": "Como reconhecer substâncias e misturas e como separar seus componentes.",
+      "area": "fundamentos",
+      "prerequisitos": ["fund-materia-conceitos", "fund-estados-fisicos"],
+      "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["substância", "mistura", "separação"],
+      "subtemas": [
+        {
+          "id": "fund-substancias-puras",
+          "nome": "Substâncias simples e compostas",
+          "descricao": "Substância pura, simples ou composta, e a ideia de elemento químico; alotropia como caso especial.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-materia-conceitos"],
+          "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["substância simples", "substância composta", "elemento", "alotropia"]
+        },
+        {
+          "id": "fund-misturas-tipos",
+          "nome": "Misturas homogêneas e heterogêneas",
+          "descricao": "Classificação de misturas pelo número de fases e exemplos do cotidiano.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-substancias-puras"],
+          "etapasRecomendadas": ["ef-6", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["mistura homogênea", "mistura heterogênea", "fases", "sistema"]
+        },
+        {
+          "id": "fund-separacao-heterogeneas",
+          "nome": "Separação de misturas heterogêneas",
+          "descricao": "Filtração, decantação, centrifugação, peneiração, separação magnética e outros métodos, com o critério de escolha de cada um.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-misturas-tipos"],
+          "etapasRecomendadas": ["ef-6", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["filtração", "decantação", "centrifugação", "peneiração", "imantação"]
+        },
+        {
+          "id": "fund-separacao-homogeneas",
+          "nome": "Separação de misturas homogêneas",
+          "descricao": "Evaporação, destilação simples e fracionada, e a relação desses métodos com as temperaturas de ebulição.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-estados-fisicos", "fund-misturas-tipos"],
+          "etapasRecomendadas": ["ef-6", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["destilação simples", "destilação fracionada", "evaporação", "cristalização"]
+        }
+      ]
+    },
+    {
+      "id": "fund-medidas",
+      "nome": "Medidas e grandezas",
+      "descricao": "Unidades, conversões e a forma correta de escrever resultados numéricos.",
+      "area": "fundamentos",
+      "prerequisitos": [],
+      "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem", "tecnico", "superior"],
+      "dificuldade": 1,
+      "palavrasChave": ["unidades", "notação científica", "algarismos significativos"],
+      "subtemas": [
+        {
+          "id": "fund-unidades",
+          "nome": "Unidades e grandezas",
+          "descricao": "Grandezas do Sistema Internacional, prefixos (mili, centi, quilo) e conversões de massa, volume e temperatura.",
+          "area": "fundamentos",
+          "prerequisitos": [],
+          "etapasRecomendadas": ["ef-6", "em-1", "enem", "tecnico"],
+          "dificuldade": 1,
+          "palavrasChave": ["SI", "conversão", "prefixos", "kelvin", "litro"]
+        },
+        {
+          "id": "fund-notacao-cientifica",
+          "nome": "Notação científica",
+          "descricao": "Escrita de números muito grandes ou pequenos em potências de 10 e operações com eles.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-unidades"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem", "tecnico"],
+          "dificuldade": 2,
+          "palavrasChave": ["potência de 10", "notação científica", "ordem de grandeza"]
+        },
+        {
+          "id": "fund-algarismos-significativos",
+          "nome": "Algarismos significativos",
+          "descricao": "Quantos algarismos um resultado pode ter, regras de arredondamento e propagação em contas.",
+          "area": "fundamentos",
+          "prerequisitos": ["fund-notacao-cientifica"],
+          "etapasRecomendadas": ["em-1", "tecnico", "superior"],
+          "dificuldade": 2,
+          "palavrasChave": ["algarismos significativos", "arredondamento", "precisão"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "area": "radioatividade",
+  "questoes": [
+    {
+      "id": "rad-emissoes-q1", "temaId": "rad-emissoes", "etapa": "ef-9", "dificuldade": 1, "tipo": "ordenacao",
+      "enunciado": "Ordene as radiações pelo poder de penetração na matéria.",
+      "criterio": "Da menos penetrante para a mais penetrante.",
+      "itens": [{ "id": "gama", "texto": "Gama (γ)" }, { "id": "alfa", "texto": "Alfa (α)" }, { "id": "beta", "texto": "Beta (β)" }],
+      "gabarito": ["alfa", "beta", "gama"],
+      "resolucaoPassoAPasso": ["Alfa: partícula grande, barrada por uma folha de papel.", "Beta: elétron rápido, barrado por uma placa fina de metal.", "Gama: onda eletromagnética, exige chumbo ou concreto espesso."],
+      "dica": "Quanto maior e mais carregada a partícula, mais fácil de barrar.",
+      "errosComuns": [{ "descricao": "Achar que a alfa, por ser a mais 'pesada', é a mais penetrante: é o contrário." }],
+      "revisado": false
+    },
+    {
+      "id": "rad-emissoes-q2", "temaId": "rad-emissoes", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Quando um núcleo emite uma partícula alfa, seu número atômico e seu número de massa:",
+      "alternativas": [{ "id": "a", "texto": "Diminuem 2 e 4 unidades, respectivamente" }, { "id": "b", "texto": "Aumentam 1 e não mudam" }, { "id": "c", "texto": "Não mudam" }, { "id": "d", "texto": "Diminuem 4 e 2 unidades, respectivamente" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A partícula alfa tem 2 prótons e 2 nêutrons (como um núcleo de hélio).", "O núcleo perde 2 prótons (Z diminui 2) e 4 partículas no total (A diminui 4)."],
+      "dica": "A partícula alfa é um núcleo de hélio-4.",
+      "errosComuns": [{ "descricao": "Aumentar Z em 1 sem mudar A é o efeito da emissão beta.", "resposta": "b" }, { "descricao": "Trocou os valores: Z diminui 2 e A diminui 4.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-emissoes-q3", "temaId": "rad-emissoes", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A radiação gama:",
+      "alternativas": [{ "id": "a", "texto": "É uma onda eletromagnética, sem carga e sem massa" }, { "id": "b", "texto": "É formada por elétrons" }, { "id": "c", "texto": "É formada por núcleos de hélio" }, { "id": "d", "texto": "É a menos penetrante das três" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Gama é radiação eletromagnética de altíssima energia.", "Não tem carga nem massa, por isso não muda Z nem A do núcleo, e atravessa muita matéria."],
+      "dica": "É parente da luz, só que com muito mais energia.",
+      "errosComuns": [{ "descricao": "Elétrons rápidos são a radiação beta.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-equacoes-nucleares-q1", "temaId": "rad-equacoes-nucleares", "etapa": "em-2", "dificuldade": 3, "tipo": "tabela-periodica",
+      "enunciado": "O urânio-238 (Z = 92) emite uma partícula alfa. Indique o elemento formado.",
+      "gabarito": { "simbolos": ["Th"] },
+      "resolucaoPassoAPasso": ["Emissão alfa: Z diminui 2 e A diminui 4.", "Z = 92 − 2 = 90, A = 238 − 4 = 234.", "O elemento de Z = 90 é o tório (Th)."],
+      "dica": "Calcule o novo número atômico.",
+      "errosComuns": [{ "descricao": "O protactínio (Z = 91) resultaria de uma emissão beta do tório, não de uma alfa do urânio.", "resposta": "Pa" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-equacoes-nucleares-q2", "temaId": "rad-equacoes-nucleares", "etapa": "em-2", "dificuldade": 3, "tipo": "tabela-periodica",
+      "enunciado": "O carbono-14 (Z = 6) sofre emissão beta. Indique o elemento formado.",
+      "gabarito": { "simbolos": ["N"] },
+      "resolucaoPassoAPasso": ["Na emissão beta, um nêutron vira próton e sai um elétron.", "Z aumenta 1 e A não muda: Z = 7, A = 14.", "Z = 7 é o nitrogênio."],
+      "dica": "Na emissão beta, Z aumenta 1.",
+      "errosComuns": [{ "descricao": "Diminuiu o número atômico; na emissão beta ele aumenta.", "resposta": "B" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-equacoes-nucleares-q3", "temaId": "rad-equacoes-nucleares", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Um núcleo de número de massa 232 sofre uma série de decaimentos e termina com número de massa 208. Sabendo que só a emissão alfa altera o número de massa, quantas partículas alfa foram emitidas?",
+      "gabarito": { "valor": 6, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "(232 - 208) / 4",
+      "resolucaoPassoAPasso": ["Cada alfa reduz o número de massa em 4; beta e gama não o alteram.", "Variação: 232 − 208 = 24.", "Partículas alfa: 24 ÷ 4 = 6."],
+      "dica": "Divida a variação do número de massa por 4.",
+      "errosComuns": [{ "descricao": "Dividiu por 2, como se cada alfa reduzisse A em 2.", "resposta": { "valor": 12 } }],
+      "revisado": false
+    },
+    {
+      "id": "rad-meia-vida-q1", "temaId": "rad-meia-vida", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um isótopo tem meia-vida de 8 dias. De uma amostra de 80 g, quanto ainda resta desse isótopo depois de 24 dias?",
+      "gabarito": { "valor": 10, "unidade": "g" },
+      "verificacao": "80 * 0.5^(24/8)",
+      "resolucaoPassoAPasso": ["24 dias = 3 meias-vidas.", "80 → 40 → 20 → 10 g."],
+      "dica": "Quantas meias-vidas cabem em 24 dias?",
+      "errosComuns": [{ "descricao": "Dividiu 80 por 3 em vez de reduzir à metade três vezes.", "resposta": { "valor": 26.7, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "rad-meia-vida-q2", "temaId": "rad-meia-vida", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "O carbono-14 tem meia-vida de cerca de 5730 anos. Um fóssil tem 25% do carbono-14 de um ser vivo atual. Qual é a idade aproximada do fóssil?",
+      "gabarito": { "valor": 11460, "unidade": "ano", "tolerancia": { "relativa": 0.02 } },
+      "verificacao": "5730 * 2",
+      "resolucaoPassoAPasso": ["100% → 50% → 25%: passaram 2 meias-vidas.", "Idade: 2 × 5730 = 11 460 anos."],
+      "dica": "Quantas vezes 100% foi reduzido à metade até 25%?",
+      "errosComuns": [{ "descricao": "Contou só uma meia-vida.", "resposta": { "valor": 5730, "unidade": "ano" } }],
+      "revisado": false
+    },
+    {
+      "id": "rad-meia-vida-q3", "temaId": "rad-meia-vida", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Sobre a meia-vida de um isótopo radioativo, é correto afirmar que:",
+      "alternativas": [{ "id": "a", "texto": "É o tempo para metade dos núcleos da amostra decair, qualquer que seja a quantidade inicial" }, { "id": "b", "texto": "É o tempo para toda a amostra decair" }, { "id": "c", "texto": "Diminui quando a amostra é aquecida" }, { "id": "d", "texto": "Depende da massa da amostra" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A meia-vida é característica de cada isótopo.", "Não depende da quantidade, da temperatura nem da pressão: é um processo nuclear."],
+      "dica": "É uma propriedade do núcleo.",
+      "errosComuns": [{ "descricao": "Em teoria, a amostra nunca acaba: a cada meia-vida, resta metade.", "resposta": "b" }, { "descricao": "Processos nucleares praticamente não dependem da temperatura.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-fissao-fusao-q1", "temaId": "rad-fissao-fusao", "etapa": "em-2", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Associe cada processo à sua descrição.",
+      "itens": [{ "id": "fissao", "texto": "Fissão nuclear" }, { "id": "fusao", "texto": "Fusão nuclear" }],
+      "opcoes": [{ "id": "o1", "texto": "Um núcleo pesado se divide em núcleos menores, liberando energia" }, { "id": "o2", "texto": "Núcleos leves se unem formando um núcleo maior, liberando energia" }, { "id": "o3", "texto": "Um elétron salta entre níveis de energia" }],
+      "gabarito": { "fissao": "o1", "fusao": "o2" },
+      "resolucaoPassoAPasso": ["Fissão: divisão de núcleos pesados, como o urânio-235, usada em usinas nucleares.", "Fusão: união de núcleos leves, como os de hidrogênio, que ocorre nas estrelas."],
+      "dica": "Fissão = dividir; fusão = juntar.",
+      "errosComuns": [{ "descricao": "Inverter os dois processos." }],
+      "revisado": false
+    },
+    {
+      "id": "rad-fissao-fusao-q2", "temaId": "rad-fissao-fusao", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Numa usina nuclear, por que a fissão do urânio pode se manter como reação em cadeia?",
+      "alternativas": [{ "id": "a", "texto": "Porque cada fissão libera nêutrons que provocam novas fissões, num ritmo controlado pelas barras de controle" }, { "id": "b", "texto": "Porque o urânio queima com o oxigênio" }, { "id": "c", "texto": "Porque a usina usa fusão de hidrogênio" }, { "id": "d", "texto": "Porque o urânio é aquecido por carvão" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Um nêutron atinge um núcleo de urânio-235, que se divide e libera 2 ou 3 nêutrons.", "Esses nêutrons podem provocar novas fissões.", "As barras de controle absorvem parte dos nêutrons para manter o ritmo estável."],
+      "dica": "O que a fissão libera, além de energia?",
+      "errosComuns": [{ "descricao": "A energia nuclear não vem de combustão química.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-fissao-fusao-q3", "temaId": "rad-fissao-fusao", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a fonte de energia do Sol?",
+      "alternativas": [{ "id": "a", "texto": "Fusão nuclear de núcleos de hidrogênio, formando hélio" }, { "id": "b", "texto": "Fissão de urânio" }, { "id": "c", "texto": "Combustão de carvão" }, { "id": "d", "texto": "Reações de oxirredução" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No núcleo do Sol, a temperatura e a pressão são enormes.", "Nessas condições, núcleos de hidrogênio se fundem formando hélio e liberando muita energia."],
+      "dica": "Núcleos leves se juntando.",
+      "errosComuns": [{ "descricao": "A fissão de urânio é usada em usinas na Terra, não é a fonte do Sol.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-aplicacoes-riscos-q1", "temaId": "rad-aplicacoes-riscos", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas é uma aplicação da radioatividade na medicina?",
+      "alternativas": [{ "id": "a", "texto": "Radioterapia para tratar alguns tipos de câncer" }, { "id": "b", "texto": "Produção de vacinas por fermentação" }, { "id": "c", "texto": "Medir a pressão arterial" }, { "id": "d", "texto": "Fazer curativos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na radioterapia, a radiação é dirigida às células doentes para destruí-las.", "Radioisótopos também são usados em exames de imagem (medicina nuclear)."],
+      "dica": "Radiação pode destruir células.",
+      "errosComuns": [{ "descricao": "Medir a pressão arterial não envolve radiação.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-aplicacoes-riscos-q2", "temaId": "rad-aplicacoes-riscos", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Alguns alimentos são irradiados com radiação gama para conservação. Esses alimentos ficam radioativos?",
+      "alternativas": [{ "id": "a", "texto": "Não: a radiação gama elimina micro-organismos, mas não torna o alimento radioativo" }, { "id": "b", "texto": "Sim, para sempre" }, { "id": "c", "texto": "Sim, por alguns dias" }, { "id": "d", "texto": "Só se forem cozidos depois" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A irradiação usa radiação gama, que atravessa o alimento.", "Ela danifica o material genético de micro-organismos, mas não altera os núcleos dos átomos do alimento.", "Por isso o alimento não fica radioativo."],
+      "dica": "Ser exposto à radiação é diferente de ficar contaminado com material radioativo.",
+      "errosComuns": [{ "descricao": "Confundir irradiação (exposição) com contaminação (contato com material radioativo).", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "rad-aplicacoes-riscos-q3", "temaId": "rad-aplicacoes-riscos", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Em 1987, em Goiânia, uma cápsula de césio-137 de um aparelho de radioterapia abandonado foi aberta, causando um grave acidente radiológico. Qual lição de segurança esse caso deixa?",
+      "alternativas": [{ "id": "a", "texto": "Fontes radioativas exigem controle, sinalização e descarte por órgãos competentes; nunca devem ser abertas ou manuseadas" }, { "id": "b", "texto": "O césio-137 é inofensivo fora da cápsula" }, { "id": "c", "texto": "Materiais radioativos podem ir para o ferro-velho" }, { "id": "d", "texto": "Basta lavar as mãos depois de tocar em material radioativo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O pó brilhante de cloreto de césio-137 espalhou contaminação entre pessoas e locais.", "O acidente mostrou a importância da fiscalização e do descarte correto de fontes radioativas.", "Ao encontrar um objeto com o símbolo de radiação, não toque e avise as autoridades."],
+      "dica": "Pense em controle, sinalização e descarte.",
+      "errosComuns": [{ "descricao": "O césio-137 fora da blindagem foi justamente a causa da contaminação.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

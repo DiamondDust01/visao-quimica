@@ -1,0 +1,284 @@
+{
+  "id": "organica",
+  "nome": "Química orgânica",
+  "descricao": "Os compostos de carbono: estrutura, funções, nomes, isomeria, reações e polímeros.",
+  "area": "organica",
+  "prerequisitos": ["lig-covalente", "lig-forcas-intermoleculares", "eletro-nox"],
+  "etapasRecomendadas": ["em-3", "enem", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["carbono", "funções orgânicas", "nomenclatura", "isomeria", "polímeros"],
+  "temas": [
+    {
+      "id": "org-carbono",
+      "nome": "Carbono e cadeias",
+      "descricao": "Por que o carbono forma tantos compostos e como representar suas cadeias.",
+      "area": "organica",
+      "prerequisitos": ["lig-covalente"],
+      "etapasRecomendadas": ["em-3", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["carbono", "cadeia carbônica", "fórmula de linha"],
+      "subtemas": [
+        {
+          "id": "org-carbono-propriedades",
+          "nome": "O átomo de carbono",
+          "descricao": "Tetravalência, formação de cadeias e classificação dos carbonos (primário, secundário, terciário, quaternário).",
+          "area": "organica",
+          "prerequisitos": ["lig-covalente"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["tetravalência", "carbono primário", "carbono secundário", "encadeamento"]
+        },
+        {
+          "id": "org-cadeias",
+          "nome": "Classificação de cadeias",
+          "descricao": "Cadeias abertas ou fechadas, normais ou ramificadas, saturadas ou insaturadas, homogêneas ou heterogêneas, aromáticas.",
+          "area": "organica",
+          "prerequisitos": ["org-carbono-propriedades"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["cadeia aberta", "ramificada", "insaturada", "heteroátomo", "aromática"]
+        },
+        {
+          "id": "org-representacao",
+          "nome": "Representação de estruturas",
+          "descricao": "Fórmulas estrutural plana, condensada, molecular e de linha (bastão), e a conversão entre elas.",
+          "area": "organica",
+          "prerequisitos": ["org-carbono-propriedades"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["fórmula de linha", "bastão", "fórmula condensada", "fórmula molecular"]
+        }
+      ]
+    },
+    {
+      "id": "org-funcoes",
+      "nome": "Funções orgânicas",
+      "descricao": "Os grupos funcionais e as propriedades que eles dão às moléculas.",
+      "area": "organica",
+      "prerequisitos": ["lig-forcas-intermoleculares", "org-cadeias"],
+      "etapasRecomendadas": ["em-3", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["grupo funcional", "hidrocarbonetos", "álcool", "ácido carboxílico"],
+      "subtemas": [
+        {
+          "id": "org-hidrocarbonetos",
+          "nome": "Hidrocarbonetos",
+          "descricao": "Alcanos, alcenos, alcinos, alcadienos, ciclanos e aromáticos e suas fórmulas gerais.",
+          "area": "organica",
+          "prerequisitos": ["org-cadeias"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["alcano", "alceno", "alcino", "aromático", "fórmula geral"]
+        },
+        {
+          "id": "org-oxigenadas",
+          "nome": "Funções oxigenadas",
+          "descricao": "Álcool, fenol, éter, aldeído, cetona, ácido carboxílico e éster: como reconhecer o grupo funcional.",
+          "area": "organica",
+          "prerequisitos": ["org-hidrocarbonetos"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["álcool", "fenol", "aldeído", "cetona", "ácido carboxílico", "éster", "éter"]
+        },
+        {
+          "id": "org-nitrogenadas-halogenadas",
+          "nome": "Funções nitrogenadas e haletos",
+          "descricao": "Aminas, amidas, nitrilas, nitrocompostos e haletos orgânicos.",
+          "area": "organica",
+          "prerequisitos": ["org-hidrocarbonetos"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["amina", "amida", "nitrila", "haleto orgânico"]
+        },
+        {
+          "id": "org-propriedades-fisicas",
+          "nome": "Propriedades físicas dos compostos orgânicos",
+          "descricao": "Ponto de ebulição, solubilidade em água e acidez relativa a partir da estrutura e das interações.",
+          "area": "organica",
+          "prerequisitos": ["lig-forcas-intermoleculares", "org-oxigenadas"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["ponto de ebulição", "solubilidade", "acidez", "cadeia longa"]
+        }
+      ]
+    },
+    {
+      "id": "org-nomenclatura",
+      "nome": "Nomenclatura IUPAC",
+      "descricao": "Como dar e interpretar nomes oficiais de compostos orgânicos.",
+      "area": "organica",
+      "prerequisitos": ["org-hidrocarbonetos", "org-oxigenadas"],
+      "etapasRecomendadas": ["em-3", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["IUPAC", "prefixo", "infixo", "sufixo"],
+      "subtemas": [
+        {
+          "id": "org-nomenclatura-hidrocarbonetos",
+          "nome": "Nomenclatura de hidrocarbonetos",
+          "descricao": "Prefixo, infixo e sufixo, escolha da cadeia principal, numeração e nomes de ramificações.",
+          "area": "organica",
+          "prerequisitos": ["org-hidrocarbonetos"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["nomenclatura", "cadeia principal", "ramificação", "metil", "etil"]
+        },
+        {
+          "id": "org-nomenclatura-funcoes",
+          "nome": "Nomenclatura das demais funções",
+          "descricao": "Sufixos e regras de numeração para álcoois, aldeídos, cetonas, ácidos, ésteres, aminas e outras funções.",
+          "area": "organica",
+          "prerequisitos": ["org-oxigenadas", "org-nomenclatura-hidrocarbonetos"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["-ol", "-al", "-ona", "ácido -oico", "-oato de", "amina"]
+        }
+      ]
+    },
+    {
+      "id": "org-isomeria",
+      "nome": "Isomeria",
+      "descricao": "Compostos com a mesma fórmula molecular e estruturas diferentes.",
+      "area": "organica",
+      "prerequisitos": ["org-nomenclatura-funcoes"],
+      "etapasRecomendadas": ["em-3", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["isomeria plana", "cis-trans", "quiralidade"],
+      "subtemas": [
+        {
+          "id": "org-isomeria-plana",
+          "nome": "Isomeria plana",
+          "descricao": "Isomeria de cadeia, de posição, de função, de compensação (metameria) e tautomeria.",
+          "area": "organica",
+          "prerequisitos": ["org-nomenclatura-funcoes"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["isomeria de cadeia", "de posição", "de função", "metameria", "tautomeria"]
+        },
+        {
+          "id": "org-isomeria-geometrica",
+          "nome": "Isomeria geométrica",
+          "descricao": "Condições para a isomeria cis-trans em ligações duplas e anéis, e a notação E/Z.",
+          "area": "organica",
+          "prerequisitos": ["org-isomeria-plana"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["cis", "trans", "E/Z", "rotação restrita"]
+        },
+        {
+          "id": "org-isomeria-optica",
+          "nome": "Isomeria óptica",
+          "descricao": "Carbono assimétrico, enantiômeros, mistura racêmica e desvio da luz polarizada.",
+          "area": "organica",
+          "prerequisitos": ["org-isomeria-plana"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 4,
+          "palavrasChave": ["carbono quiral", "enantiômero", "racêmico", "luz polarizada"]
+        }
+      ]
+    },
+    {
+      "id": "org-reacoes",
+      "nome": "Reações orgânicas",
+      "descricao": "As principais transformações dos compostos orgânicos.",
+      "area": "organica",
+      "prerequisitos": ["eletro-nox", "org-hidrocarbonetos", "org-oxigenadas"],
+      "etapasRecomendadas": ["em-3", "enem", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["substituição", "adição", "eliminação", "esterificação"],
+      "subtemas": [
+        {
+          "id": "org-substituicao",
+          "nome": "Reações de substituição",
+          "descricao": "Substituição em alcanos e em aromáticos (halogenação, nitração) e a orientação dos substituintes.",
+          "area": "organica",
+          "prerequisitos": ["org-hidrocarbonetos"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["substituição", "halogenação", "nitração", "orto", "para", "meta"]
+        },
+        {
+          "id": "org-adicao",
+          "nome": "Reações de adição",
+          "descricao": "Hidrogenação, halogenação e hidratação de alcenos e alcinos, e a regra de Markovnikov.",
+          "area": "organica",
+          "prerequisitos": ["org-hidrocarbonetos"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["adição", "hidrogenação", "Markovnikov", "insaturação"]
+        },
+        {
+          "id": "org-eliminacao",
+          "nome": "Reações de eliminação",
+          "descricao": "Desidratação de álcoois e eliminação em haletos, e a competição entre eliminação e substituição.",
+          "area": "organica",
+          "prerequisitos": ["org-oxigenadas", "org-adicao"],
+          "etapasRecomendadas": ["em-3", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["eliminação", "desidratação", "Zaitsev", "haleto"]
+        },
+        {
+          "id": "org-oxidacao",
+          "nome": "Oxidação e combustão",
+          "descricao": "Oxidação de álcoois a aldeídos, cetonas e ácidos, ozonólise e combustão completa e incompleta.",
+          "area": "organica",
+          "prerequisitos": ["eletro-nox", "org-oxigenadas"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["oxidação", "álcool primário", "ozonólise", "combustão"]
+        },
+        {
+          "id": "org-esterificacao-saponificacao",
+          "nome": "Esterificação e saponificação",
+          "descricao": "Formação de ésteres a partir de ácido e álcool, hidrólise de ésteres e produção de sabão.",
+          "area": "organica",
+          "prerequisitos": ["org-oxigenadas"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["esterificação", "hidrólise", "saponificação", "sabão"]
+        }
+      ]
+    },
+    {
+      "id": "org-polimeros",
+      "nome": "Polímeros",
+      "descricao": "Macromoléculas sintéticas e o destino dos plásticos.",
+      "area": "organica",
+      "prerequisitos": ["org-adicao", "org-esterificacao-saponificacao"],
+      "etapasRecomendadas": ["em-3", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["polímero", "monômero", "plástico", "reciclagem"],
+      "subtemas": [
+        {
+          "id": "org-polimeros-adicao",
+          "nome": "Polímeros de adição",
+          "descricao": "Polietileno, PVC, poliestireno e outros polímeros formados pela adição de monômeros insaturados.",
+          "area": "organica",
+          "prerequisitos": ["org-adicao"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["polietileno", "PVC", "poliestireno", "monômero", "adição"]
+        },
+        {
+          "id": "org-polimeros-condensacao",
+          "nome": "Polímeros de condensação",
+          "descricao": "Poliésteres e poliamidas formados com eliminação de moléculas pequenas.",
+          "area": "organica",
+          "prerequisitos": ["org-esterificacao-saponificacao"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["condensação", "poliéster", "poliamida", "náilon", "PET"]
+        },
+        {
+          "id": "org-polimeros-reciclagem",
+          "nome": "Plásticos e reciclagem",
+          "descricao": "Termoplásticos e termofixos, símbolos de reciclagem, biodegradação e impacto ambiental.",
+          "area": "organica",
+          "prerequisitos": ["org-polimeros-adicao"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["reciclagem", "termoplástico", "termofixo", "biodegradável", "microplástico"]
+        }
+      ]
+    }
+  ]
+}

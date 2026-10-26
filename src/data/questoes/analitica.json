@@ -1,0 +1,96 @@
+{
+  "area": "analitica",
+  "questoes": [
+    {
+      "id": "anal-identificacao-ions-q1", "temaId": "anal-identificacao-ions", "etapa": "em-1", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "No teste de chama, cada metal dá uma cor característica. Associe cada metal à cor observada.",
+      "itens": [{ "id": "na", "texto": "Sódio" }, { "id": "k", "texto": "Potássio" }, { "id": "cu", "texto": "Cobre" }, { "id": "sr", "texto": "Estrôncio" }],
+      "opcoes": [{ "id": "amarela", "texto": "Amarela intensa" }, { "id": "violeta", "texto": "Violeta (lilás)" }, { "id": "verde", "texto": "Verde-azulada" }, { "id": "vermelha", "texto": "Vermelha" }],
+      "gabarito": { "na": "amarela", "k": "violeta", "cu": "verde", "sr": "vermelha" },
+      "resolucaoPassoAPasso": ["Sódio: amarelo intenso, como nas lâmpadas de vapor de sódio.", "Potássio: violeta claro. Cobre: verde-azulado. Estrôncio: vermelho, usado em fogos de artifício.", "Segurança: o teste é demonstrado pelo professor, com a amostra na ponta de um fio de níquel-cromo ou platina e longe de materiais inflamáveis."],
+      "dica": "Pense nas cores dos fogos de artifício e da luz de alguns postes.",
+      "errosComuns": [{ "descricao": "Trocar potássio e sódio: a chama amarela do sódio pode mascarar a violeta do potássio." }],
+      "revisado": false
+    },
+    {
+      "id": "anal-identificacao-ions-q2", "temaId": "anal-identificacao-ions", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Ao adicionar solução de nitrato de prata a uma amostra de água, forma-se um precipitado branco que escurece com a luz. Isso indica a presença de:",
+      "alternativas": [{ "id": "a", "texto": "Íons cloreto (\\ce{Cl-})" }, { "id": "b", "texto": "Íons sódio (\\ce{Na+})" }, { "id": "c", "texto": "Íons nitrato (\\ce{NO3-})" }, { "id": "d", "texto": "Açúcar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["\\ce{Ag+ + Cl- -> AgCl(s)}, um sólido branco pouco solúvel.", "O AgCl escurece com a luz porque se decompõe e forma prata metálica."],
+      "dica": "Que íon forma sal pouco solúvel com a prata?",
+      "errosComuns": [{ "descricao": "O nitrato já faz parte do reagente e forma sais solúveis.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "anal-identificacao-ions-q3", "temaId": "anal-identificacao-ions", "etapa": "tecnico", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que a cor da chama é característica de cada metal?",
+      "alternativas": [{ "id": "a", "texto": "Porque os elétrons excitados, ao voltar, emitem luz com energias próprias dos níveis de cada elemento" }, { "id": "b", "texto": "Porque cada metal tem uma cor própria no estado sólido" }, { "id": "c", "texto": "Porque o fogo reage de forma diferente com cada cor" }, { "id": "d", "texto": "Porque os núcleos se partem na chama" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O calor da chama excita os elétrons dos átomos do metal.", "Ao retornar a níveis mais baixos, eles emitem fótons com energias que dependem dos níveis daquele elemento.", "É o mesmo princípio dos espectros de linhas do modelo de Bohr."],
+      "dica": "Lembre o modelo de Bohr.",
+      "errosComuns": [{ "descricao": "A cor da chama não tem relação com transformações no núcleo.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "anal-marcha-analitica-q1", "temaId": "anal-marcha-analitica", "etapa": "tecnico", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Na marcha analítica clássica de cátions, como os cátions são separados em grupos?",
+      "alternativas": [{ "id": "a", "texto": "Por precipitação seletiva, com reagentes que formam sais pouco solúveis com cada grupo" }, { "id": "b", "texto": "Pela cor de cada solução" }, { "id": "c", "texto": "Pela massa atômica de cada cátion" }, { "id": "d", "texto": "Por destilação fracionada" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Adiciona-se um reagente que precipita só um grupo de cátions (por exemplo, cloreto para \\ce{Ag+}, \\ce{Pb^{2+}} e \\ce{Hg2^{2+}}).", "O precipitado é separado e a solução segue para o próximo reagente.", "A escolha dos reagentes se baseia nos produtos de solubilidade (Kps)."],
+      "dica": "Pense em Kps.",
+      "errosComuns": [{ "descricao": "Destilação separa líquidos voláteis, não cátions em solução.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "anal-erros-q1", "temaId": "anal-erros", "etapa": "tecnico", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Um técnico mediu um volume três vezes e obteve 10,52 mL, 10,51 mL e 10,53 mL. O valor de referência é 10,20 mL. Os resultados são:",
+      "alternativas": [{ "id": "a", "texto": "Precisos, mas pouco exatos" }, { "id": "b", "texto": "Exatos e precisos" }, { "id": "c", "texto": "Exatos, mas pouco precisos" }, { "id": "d", "texto": "Nem exatos nem precisos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Precisão: as medidas estão muito próximas entre si (variação de 0,02 mL).", "Exatidão: a média (10,52 mL) está longe do valor de referência (10,20 mL).", "Isso sugere um erro sistemático, como vidraria descalibrada."],
+      "dica": "Precisão compara as medidas entre si; exatidão compara com o valor verdadeiro.",
+      "errosComuns": [{ "descricao": "As medidas são próximas entre si, mas estão longe do valor de referência.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "anal-gravimetria-q1", "temaId": "anal-gravimetria", "etapa": "tecnico", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "O sulfato de uma amostra foi totalmente precipitado como sulfato de bário, e obtiveram-se 2,33 g de \\ce{BaSO4} (233 g/mol) após secagem. Quantos mols de sulfato havia na amostra?",
+      "gabarito": { "valor": 0.01, "unidade": "mol" },
+      "verificacao": "2.33 / 233",
+      "resolucaoPassoAPasso": ["Cada \\ce{BaSO4} contém um íon sulfato: n(\\ce{SO4^{2-}}) = n(\\ce{BaSO4}).", "n = 2,33 g ÷ 233 g/mol = 0,010 mol."],
+      "dica": "Proporção 1 : 1 entre o precipitado e o sulfato.",
+      "errosComuns": [{ "descricao": "Multiplicou a massa pela massa molar em vez de dividir.", "resposta": { "valor": 542.9, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "anal-volumetria-q1", "temaId": "anal-volumetria", "etapa": "tecnico", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Para padronizar uma solução de NaOH, usa-se um padrão primário. Qual característica um padrão primário deve ter?",
+      "alternativas": [{ "id": "a", "texto": "Alta pureza, estabilidade, não absorver água do ar e massa molar conhecida" }, { "id": "b", "texto": "Ser um gás à temperatura ambiente" }, { "id": "c", "texto": "Absorver bastante umidade do ar" }, { "id": "d", "texto": "Ser colorido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O padrão primário é pesado com exatidão para preparar uma referência confiável.", "Por isso precisa ser puro, estável e não higroscópico.", "O próprio NaOH absorve umidade e \\ce{CO2} do ar e, por isso, precisa ser padronizado."],
+      "dica": "A massa pesada precisa corresponder exatamente à substância.",
+      "errosComuns": [{ "descricao": "Absorver umidade altera a massa pesada: é o oposto do que se quer.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "anal-espectrofotometria-q1", "temaId": "anal-espectrofotometria", "etapa": "tecnico", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Pela lei de Beer, A = ε × b × c. Uma solução tem absorbância 0,60 numa cubeta de 1,0 cm, e a absortividade molar é 1,2 × 10⁴ L/(mol·cm). Qual é a concentração?",
+      "gabarito": { "valor": 5e-5, "unidade": "mol/L" },
+      "verificacao": "0.60 / (1.2e4 * 1.0)",
+      "resolucaoPassoAPasso": ["c = A ÷ (ε × b).", "c = 0,60 ÷ (1,2 × 10⁴ × 1,0) = 5,0 × 10⁻⁵ mol/L."],
+      "dica": "Isole c na lei de Beer.",
+      "errosComuns": [{ "descricao": "Multiplicou a absorbância pela absortividade em vez de dividir.", "resposta": { "valor": 7200, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "anal-espectroscopia-q1", "temaId": "anal-espectroscopia", "etapa": "olimpiadas-quimica", "dificuldade": 5, "tipo": "multipla-escolha",
+      "enunciado": "No espectro de infravermelho de um composto orgânico aparece uma banda forte e estreita perto de 1715 cm⁻¹. Ela indica a presença de:",
+      "alternativas": [{ "id": "a", "texto": "Grupo carbonila (C=O)" }, { "id": "b", "texto": "Grupo hidroxila (O–H) de álcool" }, { "id": "c", "texto": "Ligação C–H de alcano" }, { "id": "d", "texto": "Ligação tripla C≡N" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada tipo de ligação absorve numa faixa típica de número de onda.", "Carbonilas de cetonas e ácidos absorvem forte perto de 1700–1750 cm⁻¹.", "O–H de álcool dá banda larga perto de 3200–3600 cm⁻¹; C≡N, perto de 2250 cm⁻¹."],
+      "dica": "É a banda mais conhecida da região de 1700 cm⁻¹.",
+      "errosComuns": [{ "descricao": "O O–H de álcool aparece como banda larga perto de 3300 cm⁻¹.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

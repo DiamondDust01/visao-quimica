@@ -1,0 +1,128 @@
+{
+  "id": "equilibrio",
+  "nome": "Equilíbrio químico",
+  "descricao": "Reações reversíveis, constantes de equilíbrio, pH e solubilidade de sais pouco solúveis.",
+  "area": "equilibrio",
+  "prerequisitos": ["fund-notacao-cientifica", "inorg-acidos", "inorg-sais", "inorg-bronsted-lowry", "gas-pressoes-parciais", "sol-solubilidade", "sol-concentracao-molar", "cin-velocidade-media"],
+  "etapasRecomendadas": ["em-2", "enem", "superior"],
+  "dificuldade": 2,
+  "palavrasChave": ["equilíbrio", "Le Chatelier", "pH", "Kps"],
+  "temas": [
+    {
+      "id": "eq-conceitos",
+      "nome": "Equilíbrio e constantes",
+      "descricao": "O estado de equilíbrio e como ele responde a perturbações.",
+      "area": "equilibrio",
+      "prerequisitos": ["gas-pressoes-parciais", "sol-concentracao-molar", "cin-velocidade-media"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["Kc", "Kp", "Le Chatelier"],
+      "subtemas": [
+        {
+          "id": "eq-equilibrio-dinamico",
+          "nome": "Equilíbrio dinâmico",
+          "descricao": "Reações reversíveis e o equilíbrio como igualdade de velocidades, não de concentrações.",
+          "area": "equilibrio",
+          "prerequisitos": ["cin-velocidade-media"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["reversível", "equilíbrio dinâmico", "velocidade direta", "velocidade inversa"]
+        },
+        {
+          "id": "eq-kc-kp",
+          "nome": "Constantes Kc e Kp",
+          "descricao": "Expressão da constante de equilíbrio em concentrações e em pressões parciais, e o que seu valor indica.",
+          "area": "equilibrio",
+          "prerequisitos": ["gas-pressoes-parciais", "sol-concentracao-molar", "eq-equilibrio-dinamico"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["Kc", "Kp", "constante de equilíbrio", "quociente de reação"]
+        },
+        {
+          "id": "eq-le-chatelier",
+          "nome": "Princípio de Le Chatelier",
+          "descricao": "Deslocamento do equilíbrio por mudança de concentração, pressão e temperatura.",
+          "area": "equilibrio",
+          "prerequisitos": ["eq-equilibrio-dinamico"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["Le Chatelier", "deslocamento", "perturbação", "temperatura"]
+        }
+      ]
+    },
+    {
+      "id": "eq-ionico",
+      "nome": "Equilíbrio iônico",
+      "descricao": "Acidez e basicidade em solução aquosa.",
+      "area": "equilibrio",
+      "prerequisitos": ["fund-notacao-cientifica", "inorg-acidos", "inorg-sais", "inorg-bronsted-lowry", "eq-kc-kp"],
+      "etapasRecomendadas": ["em-2", "enem", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["pH", "Ka", "hidrólise", "tampão"],
+      "subtemas": [
+        {
+          "id": "eq-ph-poh",
+          "nome": "pH e pOH",
+          "descricao": "Autoionização da água, Kw e cálculo de pH e pOH de soluções de ácidos e bases fortes.",
+          "area": "equilibrio",
+          "prerequisitos": ["fund-notacao-cientifica", "inorg-acidos", "eq-kc-kp"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["pH", "pOH", "Kw", "logaritmo", "escala de pH"]
+        },
+        {
+          "id": "eq-ka-kb",
+          "nome": "Constantes de ionização",
+          "descricao": "Ka e Kb, grau de ionização e lei da diluição de Ostwald para ácidos e bases fracos.",
+          "area": "equilibrio",
+          "prerequisitos": ["inorg-bronsted-lowry", "eq-ph-poh"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["Ka", "Kb", "grau de ionização", "Ostwald"]
+        },
+        {
+          "id": "eq-hidrolise",
+          "nome": "Hidrólise salina",
+          "descricao": "Por que soluções de alguns sais são ácidas ou básicas.",
+          "area": "equilibrio",
+          "prerequisitos": ["inorg-sais", "eq-ka-kb"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["hidrólise", "sal ácido", "sal básico", "caráter da solução"]
+        },
+        {
+          "id": "eq-tampao",
+          "nome": "Soluções-tampão",
+          "descricao": "Como um par ácido fraco e base conjugada resiste a variações de pH, com exemplos do sangue.",
+          "area": "equilibrio",
+          "prerequisitos": ["eq-hidrolise"],
+          "etapasRecomendadas": ["em-2", "enem", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["tampão", "Henderson-Hasselbalch", "pH do sangue", "par conjugado"]
+        }
+      ]
+    },
+    {
+      "id": "eq-heterogeneo",
+      "nome": "Equilíbrio de solubilidade",
+      "descricao": "Sais pouco solúveis em equilíbrio com seus íons.",
+      "area": "equilibrio",
+      "prerequisitos": ["sol-solubilidade", "eq-kc-kp"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 4,
+      "palavrasChave": ["Kps", "precipitação"],
+      "subtemas": [
+        {
+          "id": "eq-kps",
+          "nome": "Produto de solubilidade",
+          "descricao": "Kps, cálculo de solubilidade, previsão de precipitação e efeito do íon comum.",
+          "area": "equilibrio",
+          "prerequisitos": ["sol-solubilidade", "eq-kc-kp"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 4,
+          "palavrasChave": ["Kps", "precipitação", "íon comum", "solubilidade molar"]
+        }
+      ]
+    }
+  ]
+}

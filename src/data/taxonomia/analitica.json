@@ -1,0 +1,118 @@
+{
+  "id": "analitica",
+  "nome": "Química analítica",
+  "descricao": "Descobrir o que há numa amostra e em que quantidade.",
+  "area": "analitica",
+  "prerequisitos": ["fund-algarismos-significativos", "atom-modelo-bohr", "inorg-sais", "reac-calculo-estequiometrico", "sol-concentracao-molar", "sol-titulacao", "eq-kps", "org-oxigenadas"],
+  "etapasRecomendadas": ["em-1", "tecnico", "olimpiadas-quimica", "superior"],
+  "dificuldade": 2,
+  "palavrasChave": ["análise qualitativa", "análise quantitativa", "espectroscopia"],
+  "temas": [
+    {
+      "id": "anal-qualitativa",
+      "nome": "Análise qualitativa",
+      "descricao": "Identificar quais espécies estão presentes.",
+      "area": "analitica",
+      "prerequisitos": ["atom-modelo-bohr", "inorg-sais", "eq-kps"],
+      "etapasRecomendadas": ["em-1", "tecnico", "superior"],
+      "dificuldade": 2,
+      "palavrasChave": ["identificação de íons", "teste de chama"],
+      "subtemas": [
+        {
+          "id": "anal-identificacao-ions",
+          "nome": "Identificação de íons e teste de chama",
+          "descricao": "Reações características de identificação e as cores de chama de alguns metais.",
+          "area": "analitica",
+          "prerequisitos": ["atom-modelo-bohr", "inorg-sais"],
+          "etapasRecomendadas": ["em-1", "tecnico", "superior"],
+          "dificuldade": 2,
+          "palavrasChave": ["teste de chama", "identificação", "reação característica", "precipitado"]
+        },
+        {
+          "id": "anal-marcha-analitica",
+          "nome": "Marcha analítica de cátions",
+          "descricao": "Separação sistemática de cátions em grupos por precipitação seletiva.",
+          "area": "analitica",
+          "prerequisitos": ["eq-kps", "anal-identificacao-ions"],
+          "etapasRecomendadas": ["tecnico", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["marcha analítica", "grupos de cátions", "precipitação seletiva"]
+        }
+      ]
+    },
+    {
+      "id": "anal-quantitativa",
+      "nome": "Análise quantitativa",
+      "descricao": "Medir quanto de uma espécie há na amostra.",
+      "area": "analitica",
+      "prerequisitos": ["fund-algarismos-significativos", "reac-calculo-estequiometrico", "sol-titulacao", "eq-kps"],
+      "etapasRecomendadas": ["tecnico", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["gravimetria", "volumetria", "erros"],
+      "subtemas": [
+        {
+          "id": "anal-erros",
+          "nome": "Erros, exatidão e precisão",
+          "descricao": "Erros sistemáticos e aleatórios, média, desvio-padrão e expressão do resultado.",
+          "area": "analitica",
+          "prerequisitos": ["fund-algarismos-significativos"],
+          "etapasRecomendadas": ["tecnico", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["exatidão", "precisão", "desvio-padrão", "erro sistemático"]
+        },
+        {
+          "id": "anal-gravimetria",
+          "nome": "Gravimetria",
+          "descricao": "Determinação pela massa de um precipitado de composição conhecida.",
+          "area": "analitica",
+          "prerequisitos": ["reac-calculo-estequiometrico", "eq-kps"],
+          "etapasRecomendadas": ["tecnico", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["gravimetria", "precipitado", "calcinação", "fator gravimétrico"]
+        },
+        {
+          "id": "anal-volumetria",
+          "nome": "Volumetria",
+          "descricao": "Titulações de neutralização, precipitação, complexação e oxirredução; padronização de soluções.",
+          "area": "analitica",
+          "prerequisitos": ["sol-titulacao"],
+          "etapasRecomendadas": ["tecnico", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["volumetria", "padronização", "padrão primário", "permanganometria"]
+        }
+      ]
+    },
+    {
+      "id": "anal-instrumental",
+      "nome": "Noções de análise instrumental",
+      "descricao": "Medidas feitas com a interação entre matéria e radiação.",
+      "area": "analitica",
+      "prerequisitos": ["atom-modelo-bohr", "sol-concentracao-molar", "org-oxigenadas"],
+      "etapasRecomendadas": ["tecnico", "olimpiadas-quimica", "superior"],
+      "dificuldade": 4,
+      "palavrasChave": ["espectrofotometria", "Lei de Beer", "espectroscopia"],
+      "subtemas": [
+        {
+          "id": "anal-espectrofotometria",
+          "nome": "Espectrofotometria e Lei de Beer",
+          "descricao": "Absorção de luz, absorbância, curva de calibração e cálculo de concentração.",
+          "area": "analitica",
+          "prerequisitos": ["atom-modelo-bohr", "sol-concentracao-molar"],
+          "etapasRecomendadas": ["tecnico", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["absorbância", "Lei de Beer", "curva de calibração", "UV-Vis"]
+        },
+        {
+          "id": "anal-espectroscopia",
+          "nome": "Noções de IV, RMN e espectrometria de massas",
+          "descricao": "O que cada técnica informa sobre a estrutura de uma molécula orgânica.",
+          "area": "analitica",
+          "prerequisitos": ["org-oxigenadas", "anal-espectrofotometria"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["infravermelho", "RMN", "espectrometria de massas", "elucidação estrutural"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "gases",
+  "nome": "Gases",
+  "descricao": "O comportamento dos gases e as relações entre pressão, volume, temperatura e quantidade de matéria.",
+  "area": "gases",
+  "prerequisitos": ["fund-estados-fisicos", "fund-unidades", "reac-mol-avogadro", "reac-calculo-estequiometrico"],
+  "etapasRecomendadas": ["em-2", "enem", "olimpiadas-quimica"],
+  "dificuldade": 2,
+  "palavrasChave": ["gases", "pressão", "Clapeyron"],
+  "temas": [
+    {
+      "id": "gas-comportamento",
+      "nome": "Comportamento dos gases",
+      "descricao": "Variáveis de estado e as leis que relacionam essas variáveis.",
+      "area": "gases",
+      "prerequisitos": ["fund-estados-fisicos", "fund-unidades", "reac-mol-avogadro"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["variáveis de estado", "leis dos gases", "gás ideal"],
+      "subtemas": [
+        {
+          "id": "gas-variaveis-estado",
+          "nome": "Variáveis de estado e teoria cinética",
+          "descricao": "Pressão, volume e temperatura de um gás e a explicação pelo movimento das partículas.",
+          "area": "gases",
+          "prerequisitos": ["fund-estados-fisicos", "fund-unidades"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["pressão", "temperatura absoluta", "teoria cinética", "kelvin"]
+        },
+        {
+          "id": "gas-transformacoes",
+          "nome": "Transformações gasosas",
+          "descricao": "Transformações isotérmica, isobárica e isocórica e a equação geral dos gases.",
+          "area": "gases",
+          "prerequisitos": ["gas-variaveis-estado"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["Boyle", "Charles", "Gay-Lussac", "isotérmica", "isobárica", "isocórica"]
+        },
+        {
+          "id": "gas-clapeyron",
+          "nome": "Equação de Clapeyron",
+          "descricao": "A equação PV = nRT, a escolha da constante R e cálculos com gás ideal.",
+          "area": "gases",
+          "prerequisitos": ["reac-mol-avogadro", "gas-transformacoes"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["Clapeyron", "PV = nRT", "constante dos gases", "gás ideal"]
+        }
+      ]
+    },
+    {
+      "id": "gas-misturas",
+      "nome": "Misturas e cálculos com gases",
+      "descricao": "Volume molar, misturas gasosas e estequiometria envolvendo gases.",
+      "area": "gases",
+      "prerequisitos": ["reac-mol-avogadro", "reac-calculo-estequiometrico", "gas-transformacoes", "gas-clapeyron"],
+      "etapasRecomendadas": ["em-2", "enem", "olimpiadas-quimica"],
+      "dificuldade": 2,
+      "palavrasChave": ["volume molar", "pressão parcial", "difusão"],
+      "subtemas": [
+        {
+          "id": "gas-volume-molar",
+          "nome": "Hipótese de Avogadro e volume molar",
+          "descricao": "Volumes iguais de gases nas mesmas condições têm o mesmo número de partículas; volume molar nas CNTP e CATP.",
+          "area": "gases",
+          "prerequisitos": ["reac-mol-avogadro", "gas-transformacoes"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["volume molar", "Avogadro", "CNTP", "22,4 L"]
+        },
+        {
+          "id": "gas-pressoes-parciais",
+          "nome": "Pressões parciais e frações molares",
+          "descricao": "Lei de Dalton das pressões parciais e composição de misturas gasosas.",
+          "area": "gases",
+          "prerequisitos": ["gas-clapeyron"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["pressão parcial", "Dalton", "fração molar", "mistura gasosa"]
+        },
+        {
+          "id": "gas-densidade-difusao",
+          "nome": "Densidade dos gases e difusão",
+          "descricao": "Densidade de um gás a partir da massa molar e velocidade de difusão e efusão (lei de Graham).",
+          "area": "gases",
+          "prerequisitos": ["gas-clapeyron"],
+          "etapasRecomendadas": ["em-2", "olimpiadas-quimica"],
+          "dificuldade": 3,
+          "palavrasChave": ["densidade gasosa", "Graham", "efusão", "difusão"]
+        },
+        {
+          "id": "gas-estequiometria",
+          "nome": "Estequiometria com gases",
+          "descricao": "Cálculos estequiométricos em que reagentes ou produtos são gases medidos em volume.",
+          "area": "gases",
+          "prerequisitos": ["reac-calculo-estequiometrico", "gas-volume-molar"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["estequiometria", "volume de gás", "proporção volumétrica"]
+        }
+      ]
+    }
+  ]
+}

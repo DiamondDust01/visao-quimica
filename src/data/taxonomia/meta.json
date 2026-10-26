@@ -1,0 +1,26 @@
+{
+  "versao": "1.0.0",
+  "atualizadoEm": "2026-10-25",
+  "ordemAreas": [
+    "fundamentos",
+    "estrutura-atomica",
+    "tabela-periodica",
+    "ligacoes",
+    "funcoes-inorganicas",
+    "reacoes-estequiometria",
+    "gases",
+    "solucoes",
+    "termoquimica",
+    "cinetica",
+    "equilibrio",
+    "eletroquimica",
+    "organica",
+    "bioquimica",
+    "radioatividade",
+    "ambiental",
+    "analitica",
+    "fisico-quimica",
+    "inorganica-avancada",
+    "laboratorio"
+  ]
+}

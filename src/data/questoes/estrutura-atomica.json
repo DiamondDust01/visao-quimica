@@ -1,0 +1,308 @@
+{
+  "area": "estrutura-atomica",
+  "questoes": [
+    {
+      "id": "atom-modelos-classicos-q1", "temaId": "atom-modelos-classicos", "etapa": "ef-9", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada cientista à ideia central do seu modelo atômico.",
+      "itens": [{ "id": "dalton", "texto": "Dalton" }, { "id": "thomson", "texto": "Thomson" }, { "id": "rutherford", "texto": "Rutherford" }],
+      "opcoes": [{ "id": "o1", "texto": "Esfera maciça e indivisível" }, { "id": "o2", "texto": "Esfera de carga positiva com elétrons espalhados nela" }, { "id": "o3", "texto": "Núcleo pequeno e denso, com elétrons girando ao redor" }, { "id": "o4", "texto": "Elétrons em níveis de energia fixos" }],
+      "gabarito": { "dalton": "o1", "thomson": "o2", "rutherford": "o3" },
+      "resolucaoPassoAPasso": ["Dalton (início do século XIX): o átomo é uma esfera maciça e indivisível.", "Thomson (1897): descobriu o elétron e propôs uma esfera positiva com elétrons incrustados.", "Rutherford (1911): o átomo tem um núcleo pequeno e denso; os elétrons ficam ao redor.", "Níveis de energia fixos são a contribuição de Bohr."],
+      "dica": "Uma das opções pertence a um quarto cientista.",
+      "errosComuns": [{ "descricao": "Atribuir a Rutherford os níveis de energia, que foram propostos por Bohr." }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelos-classicos-q2", "temaId": "atom-modelos-classicos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "No experimento de Rutherford, partículas alfa foram lançadas contra uma lâmina muito fina de ouro, e a maioria atravessou sem sofrer desvio. Essa observação indica que:",
+      "alternativas": [{ "id": "a", "texto": "O átomo é maciço." }, { "id": "b", "texto": "O átomo é formado, em grande parte, por espaço vazio." }, { "id": "c", "texto": "Os elétrons têm carga positiva." }, { "id": "d", "texto": "O núcleo tem carga negativa." }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Se quase todas as partículas passam direto, quase não há obstáculo no caminho.", "Logo, a maior parte do átomo é espaço vazio.", "As poucas partículas muito desviadas indicam um núcleo pequeno, denso e positivo."],
+      "dica": "O que significa a maioria das partículas não encontrar obstáculo?",
+      "errosComuns": [{ "descricao": "Um átomo maciço desviaria ou barraria a maioria das partículas.", "resposta": "a" }, { "descricao": "As partículas alfa são positivas e foram repelidas pelo núcleo: ele é positivo.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelos-classicos-q3", "temaId": "atom-modelos-classicos", "etapa": "em-1", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene os modelos atômicos na ordem em que foram propostos.",
+      "criterio": "Do mais antigo para o mais recente.",
+      "itens": [{ "id": "bohr", "texto": "Bohr" }, { "id": "thomson", "texto": "Thomson" }, { "id": "dalton", "texto": "Dalton" }, { "id": "rutherford", "texto": "Rutherford" }],
+      "gabarito": ["dalton", "thomson", "rutherford", "bohr"],
+      "resolucaoPassoAPasso": ["Dalton: início do século XIX.", "Thomson: 1897, após a descoberta do elétron.", "Rutherford: 1911, com o experimento da lâmina de ouro.", "Bohr: 1913, aperfeiçoando o modelo de Rutherford com níveis de energia."],
+      "dica": "Cada modelo corrige um problema do anterior.",
+      "errosComuns": [{ "descricao": "Colocar Bohr antes de Rutherford: Bohr partiu do núcleo descoberto por Rutherford." }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelo-bohr-q1", "temaId": "atom-modelo-bohr", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "As cores dos fogos de artifício vêm de sais de diferentes metais. Pelo modelo de Bohr, a luz colorida surge porque:",
+      "alternativas": [{ "id": "a", "texto": "Elétrons absorvem energia, saltam para níveis mais afastados e, ao voltar, emitem luz de cor característica." }, { "id": "b", "texto": "Os núcleos dos átomos se partem e liberam luz." }, { "id": "c", "texto": "Os elétrons são destruídos pelo calor." }, { "id": "d", "texto": "Os prótons saltam de um núcleo para outro." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O calor fornece energia aos elétrons, que passam para níveis mais externos.", "Ao voltar para níveis mais internos, eles liberam essa energia como luz.", "Cada metal tem níveis de energia próprios, por isso emite cores próprias."],
+      "dica": "Pense em quem se move entre níveis de energia no modelo de Bohr.",
+      "errosComuns": [{ "descricao": "A luz não vem de transformações no núcleo, e sim de saltos dos elétrons.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelo-bohr-q2", "temaId": "atom-modelo-bohr", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Segundo o modelo de Bohr, quando um elétron passa de um nível mais externo para um nível mais interno, ele:",
+      "alternativas": [{ "id": "a", "texto": "Absorve energia" }, { "id": "b", "texto": "Emite energia, na forma de luz" }, { "id": "c", "texto": "Não troca energia" }, { "id": "d", "texto": "Perde sua carga elétrica" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Níveis mais internos têm menor energia.", "Ir de um nível de maior energia para um de menor energia significa liberar a diferença.", "Essa energia sai como um fóton (luz)."],
+      "dica": "Qual nível tem mais energia: o mais interno ou o mais externo?",
+      "errosComuns": [{ "descricao": "Absorver energia faz o elétron ir para fora, não para dentro.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelo-bohr-q3", "temaId": "atom-modelo-bohr", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que cada elemento químico apresenta um espectro de linhas próprio, como uma impressão digital?",
+      "alternativas": [{ "id": "a", "texto": "Porque os níveis de energia de cada elemento têm valores diferentes, e as diferenças de energia entre eles correspondem a cores únicas." }, { "id": "b", "texto": "Porque cada elemento tem uma cor própria no estado sólido." }, { "id": "c", "texto": "Porque o número de nêutrons define a cor emitida." }, { "id": "d", "texto": "Porque a luz é refletida pelo núcleo." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada linha do espectro corresponde a um salto entre dois níveis.", "A energia do fóton é igual à diferença de energia entre os níveis.", "Como os níveis dependem do número de prótons e de elétrons, cada elemento tem um conjunto próprio de linhas."],
+      "dica": "Cada linha é a energia de um salto entre níveis.",
+      "errosComuns": [{ "descricao": "Os nêutrons praticamente não alteram os níveis eletrônicos: isótopos têm espectros quase iguais.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelo-quantico-q1", "temaId": "atom-modelo-quantico", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "No modelo atômico atual, o que é um orbital?",
+      "alternativas": [{ "id": "a", "texto": "A trajetória circular que o elétron percorre" }, { "id": "b", "texto": "A região do espaço onde é maior a probabilidade de encontrar o elétron" }, { "id": "c", "texto": "Uma partícula do núcleo" }, { "id": "d", "texto": "Uma órbita elíptica fixa" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["O modelo quântico abandona a ideia de trajetórias definidas.", "Só é possível falar da probabilidade de encontrar o elétron em cada região.", "O orbital é a região em que essa probabilidade é alta."],
+      "dica": "O modelo atual fala em probabilidade, não em trajetória.",
+      "errosComuns": [{ "descricao": "Trajetórias circulares fixas são do modelo de Bohr, não do modelo atual.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelo-quantico-q2", "temaId": "atom-modelo-quantico", "etapa": "olimpiadas-quimica", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O princípio da incerteza de Heisenberg afirma que:",
+      "alternativas": [{ "id": "a", "texto": "Não é possível conhecer, ao mesmo tempo e com precisão ilimitada, a posição e a quantidade de movimento de um elétron." }, { "id": "b", "texto": "Os elétrons ficam parados em posições fixas." }, { "id": "c", "texto": "A energia do elétron pode ter qualquer valor." }, { "id": "d", "texto": "Dois elétrons podem ter os mesmos quatro números quânticos." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Quanto mais precisa a medida da posição, menos precisa a da quantidade de movimento, e vice-versa.", "Por isso o modelo atual descreve o elétron por probabilidades (orbitais).", "A alternativa d contradiz o princípio de exclusão de Pauli, outro princípio."],
+      "dica": "Pense em duas grandezas que não podem ser medidas juntas com precisão total.",
+      "errosComuns": [{ "descricao": "Essa frase contradiz o princípio de exclusão de Pauli, que é outro princípio.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-modelo-quantico-q3", "temaId": "atom-modelo-quantico", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual observação experimental mostra que o elétron também se comporta como onda?",
+      "alternativas": [{ "id": "a", "texto": "A difração de um feixe de elétrons ao passar por um cristal" }, { "id": "b", "texto": "A atração de elétrons por uma placa positiva" }, { "id": "c", "texto": "O fato de o elétron ter massa" }, { "id": "d", "texto": "A condução de corrente elétrica nos metais" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Difração e interferência são comportamentos típicos de ondas.", "Feixes de elétrons formam padrões de difração em cristais, como a luz faz.", "Ser atraído por cargas e ter massa são comportamentos de partícula."],
+      "dica": "Que fenômeno é típico de ondas?",
+      "errosComuns": [{ "descricao": "Ser atraído por uma placa positiva mostra que o elétron tem carga, um comportamento de partícula.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-particulas-subatomicas-q1", "temaId": "atom-particulas-subatomicas", "etapa": "ef-9", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Um átomo tem 17 prótons e 18 nêutrons. Qual é o seu número de massa?",
+      "gabarito": { "valor": 35, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "17 + 18",
+      "resolucaoPassoAPasso": ["O número de massa (A) é a soma de prótons e nêutrons, as partículas do núcleo.", "A = 17 + 18 = 35."],
+      "dica": "O número de massa conta as partículas do núcleo.",
+      "errosComuns": [{ "descricao": "Subtraiu em vez de somar.", "resposta": { "valor": 1 } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-particulas-subatomicas-q2", "temaId": "atom-particulas-subatomicas", "etapa": "em-1", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Quantos nêutrons tem o átomo de ferro-56 (número atômico 26)?",
+      "gabarito": { "valor": 30, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "56 - 26",
+      "resolucaoPassoAPasso": ["Ferro-56 significa número de massa A = 56.", "Nêutrons = A − Z = 56 − 26 = 30."],
+      "dica": "Nêutrons = número de massa − número atômico.",
+      "errosComuns": [{ "descricao": "Somou A e Z em vez de subtrair.", "resposta": { "valor": 82 } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-particulas-subatomicas-q3", "temaId": "atom-particulas-subatomicas", "etapa": "ef-9", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada partícula à sua carga e localização no átomo.",
+      "itens": [{ "id": "p", "texto": "Próton" }, { "id": "n", "texto": "Nêutron" }, { "id": "e", "texto": "Elétron" }],
+      "opcoes": [{ "id": "o1", "texto": "Carga positiva, no núcleo" }, { "id": "o2", "texto": "Sem carga, no núcleo" }, { "id": "o3", "texto": "Carga negativa, na eletrosfera" }, { "id": "o4", "texto": "Carga positiva, na eletrosfera" }],
+      "gabarito": { "p": "o1", "n": "o2", "e": "o3" },
+      "resolucaoPassoAPasso": ["Prótons e nêutrons formam o núcleo; os prótons são positivos e os nêutrons não têm carga.", "Os elétrons, negativos, ficam na eletrosfera."],
+      "dica": "Só uma das partículas fica fora do núcleo.",
+      "errosComuns": [{ "descricao": "Colocar prótons na eletrosfera: eles ficam no núcleo." }],
+      "revisado": false
+    },
+    {
+      "id": "atom-isotopos-q1", "temaId": "atom-isotopos", "etapa": "em-1", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Prótio, deutério e trítio têm 1 próton cada e números de massa 1, 2 e 3. Eles são:",
+      "alternativas": [{ "id": "a", "texto": "Isótopos" }, { "id": "b", "texto": "Isóbaros" }, { "id": "c", "texto": "Isótonos" }, { "id": "d", "texto": "Alótropos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Mesmo número de prótons (Z) significa mesmo elemento.", "Átomos do mesmo elemento com números de massa diferentes são isótopos."],
+      "dica": "IsóTOPOS: mesmo lugar (topos) na tabela, ou seja, mesmo Z.",
+      "errosComuns": [{ "descricao": "Alótropos são substâncias simples diferentes do mesmo elemento, não átomos.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-isotopos-q2", "temaId": "atom-isotopos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Potássio-40 (número atômico 19) e cálcio-40 (número atômico 20) são:",
+      "alternativas": [{ "id": "a", "texto": "Isótopos" }, { "id": "b", "texto": "Isóbaros" }, { "id": "c", "texto": "Isótonos" }, { "id": "d", "texto": "Isoeletrônicos" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Os dois têm número de massa 40 e números atômicos diferentes.", "Mesmo número de massa e elementos diferentes: isóbaros."],
+      "dica": "Compare Z e A dos dois átomos.",
+      "errosComuns": [{ "descricao": "Isótopos têm o mesmo Z, e aqui os números atômicos são diferentes.", "resposta": "a" }, { "descricao": "Isótonos têm o mesmo número de nêutrons: aqui são 21 e 20.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-isotopos-q3", "temaId": "atom-isotopos", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "O átomo X tem número atômico 20 e número de massa 42. O átomo Y é isótono de X e tem número atômico 21. Qual é o número de massa de Y?",
+      "gabarito": { "valor": 43, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "21 + (42 - 20)",
+      "resolucaoPassoAPasso": ["Isótonos têm o mesmo número de nêutrons.", "Nêutrons de X: 42 − 20 = 22.", "Y tem 21 prótons e 22 nêutrons: A = 21 + 22 = 43."],
+      "dica": "Comece calculando os nêutrons de X.",
+      "errosComuns": [{ "descricao": "Manteve o mesmo número de massa, como se fossem isóbaros.", "resposta": { "valor": 42 } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-ions-q1", "temaId": "atom-ions", "etapa": "ef-9", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Um átomo de magnésio (número atômico 12) perde 2 elétrons e forma o íon \\ce{Mg^{2+}}. Quantos elétrons tem esse íon?",
+      "gabarito": { "valor": 10, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "12 - 2",
+      "resolucaoPassoAPasso": ["O átomo neutro tem tantos elétrons quanto prótons: 12.", "A carga 2+ indica que perdeu 2 elétrons: 12 − 2 = 10."],
+      "dica": "Carga positiva significa que faltam elétrons.",
+      "errosComuns": [{ "descricao": "Somou os elétrons: carga positiva significa perda, não ganho.", "resposta": { "valor": 14 } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-ions-q2", "temaId": "atom-ions", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O íon sulfeto, \\ce{S^{2-}}, vem do enxofre (número atômico 16). Ele tem:",
+      "alternativas": [{ "id": "a", "texto": "16 prótons e 18 elétrons" }, { "id": "b", "texto": "18 prótons e 16 elétrons" }, { "id": "c", "texto": "16 prótons e 14 elétrons" }, { "id": "d", "texto": "14 prótons e 16 elétrons" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Formar íon não muda o número de prótons: continuam 16.", "Carga 2− significa 2 elétrons a mais: 16 + 2 = 18 elétrons."],
+      "dica": "O número de prótons muda quando se forma um íon?",
+      "errosComuns": [{ "descricao": "Tirou elétrons: carga negativa significa elétrons a mais.", "resposta": "c" }, { "descricao": "Mudou o número de prótons; na formação de íons só os elétrons mudam.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-ions-q3", "temaId": "atom-ions", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas espécies é isoeletrônica do neônio (10 elétrons)? Números atômicos: Na = 11, K = 19, Cl = 17, Mg = 12.",
+      "alternativas": [{ "id": "a", "texto": "\\ce{Na+}" }, { "id": "b", "texto": "\\ce{K+}" }, { "id": "c", "texto": "\\ce{Cl-}" }, { "id": "d", "texto": "\\ce{Mg}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Conte os elétrons de cada espécie.", "\\ce{Na+}: 11 − 1 = 10 elétrons, igual ao neônio.", "\\ce{K+}: 18; \\ce{Cl-}: 18; \\ce{Mg}: 12."],
+      "dica": "Isoeletrônicos têm o mesmo número de elétrons.",
+      "errosComuns": [{ "descricao": "\\ce{Cl-} tem 18 elétrons: é isoeletrônico do argônio, não do neônio.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-massa-atomica-q1", "temaId": "atom-massa-atomica", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "O cloro natural tem 75% de cloro-35 (massa 35,0 u) e 25% de cloro-37 (massa 37,0 u). Calcule a massa atômica do cloro.",
+      "gabarito": { "valor": 35.5, "unidade": "u", "tolerancia": { "relativa": 0.005 } },
+      "verificacao": "0.75 * 35 + 0.25 * 37",
+      "resolucaoPassoAPasso": ["A massa atômica é a média das massas dos isótopos, ponderada pela abundância.", "0,75 × 35,0 + 0,25 × 37,0 = 26,25 + 9,25 = 35,5 u."],
+      "dica": "Cada isótopo pesa na média conforme sua porcentagem.",
+      "errosComuns": [{ "descricao": "Fez a média simples, ignorando as abundâncias.", "resposta": { "valor": 36, "unidade": "u" } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-massa-atomica-q2", "temaId": "atom-massa-atomica", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O que significa dizer que a massa atômica do magnésio é 24,3 u?",
+      "alternativas": [{ "id": "a", "texto": "Em média, um átomo de magnésio tem massa 24,3 vezes maior que 1/12 da massa do carbono-12." }, { "id": "b", "texto": "O átomo de magnésio tem 24,3 prótons." }, { "id": "c", "texto": "O átomo de magnésio tem 24,3 nêutrons." }, { "id": "d", "texto": "Um mol de magnésio tem massa de 24,3 kg." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A unidade de massa atômica (u) é 1/12 da massa do carbono-12.", "Dizer 24,3 u significa que a massa média é 24,3 dessas unidades.", "O valor não é inteiro porque é uma média dos isótopos naturais."],
+      "dica": "Qual é a referência da unidade u?",
+      "errosComuns": [{ "descricao": "Um mol de magnésio tem 24,3 g, não 24,3 kg.", "resposta": "d" }, { "descricao": "Número de partículas é sempre inteiro; 24,3 é uma média de massas.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-massa-atomica-q3", "temaId": "atom-massa-atomica", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Um elemento tem dois isótopos: um com massa 10,0 u e abundância de 20% e outro com massa 11,0 u e abundância de 80%. Qual é a massa atômica do elemento?",
+      "gabarito": { "valor": 10.8, "unidade": "u", "tolerancia": { "relativa": 0.005 } },
+      "verificacao": "0.2 * 10 + 0.8 * 11",
+      "resolucaoPassoAPasso": ["Média ponderada: 0,20 × 10,0 + 0,80 × 11,0.", "= 2,0 + 8,8 = 10,8 u."],
+      "dica": "O resultado deve ficar mais perto do isótopo mais abundante.",
+      "errosComuns": [{ "descricao": "Fez a média simples, sem considerar as abundâncias.", "resposta": { "valor": 10.5, "unidade": "u" } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-distribuicao-eletronica-q1", "temaId": "atom-distribuicao-eletronica", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a distribuição eletrônica em subníveis do sódio (número atômico 11)?",
+      "alternativas": [{ "id": "a", "texto": "1s² 2s² 2p⁶ 3s¹" }, { "id": "b", "texto": "1s² 2s² 2p⁷" }, { "id": "c", "texto": "1s² 2s² 2p⁶ 3p¹" }, { "id": "d", "texto": "1s² 2s⁸ 3s¹" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Preencha na ordem de energia: 1s, 2s, 2p, 3s...", "Capacidades: s comporta 2 elétrons e p comporta 6.", "1s² 2s² 2p⁶ usa 10 elétrons; o 11º vai para 3s: 3s¹."],
+      "dica": "Cada subnível tem um limite: s = 2, p = 6, d = 10, f = 14.",
+      "errosComuns": [{ "descricao": "O subnível p comporta no máximo 6 elétrons.", "resposta": "b" }, { "descricao": "O 3s tem menos energia que o 3p e é preenchido antes.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-distribuicao-eletronica-q2", "temaId": "atom-distribuicao-eletronica", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na distribuição eletrônica do ferro (número atômico 26) pelo diagrama de energia, qual é o subnível mais energético?",
+      "alternativas": [{ "id": "a", "texto": "4s²" }, { "id": "b", "texto": "3d⁶" }, { "id": "c", "texto": "4p⁶" }, { "id": "d", "texto": "3p⁶" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Ordem de preenchimento: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ (total 26).", "O último subnível preenchido é o mais energético: 3d⁶."],
+      "dica": "Siga as diagonais do diagrama até completar 26 elétrons.",
+      "errosComuns": [{ "descricao": "O 4s é o da camada mais externa, mas é preenchido antes do 3d; o mais energético é o último preenchido.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-distribuicao-eletronica-q3", "temaId": "atom-distribuicao-eletronica", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O ferro (número atômico 26) tem distribuição [Ar] 4s² 3d⁶. Qual é a distribuição do íon \\ce{Fe^{2+}}?",
+      "alternativas": [{ "id": "a", "texto": "[Ar] 3d⁶" }, { "id": "b", "texto": "[Ar] 4s² 3d⁴" }, { "id": "c", "texto": "[Ar] 4s² 3d⁶" }, { "id": "d", "texto": "[Ar] 4s¹ 3d⁵" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Para formar cátions, os elétrons saem primeiro da camada mais externa (camada 4).", "Saem os dois elétrons do 4s.", "Resultado: [Ar] 3d⁶."],
+      "dica": "Os elétrons saem da camada mais afastada do núcleo.",
+      "errosComuns": [{ "descricao": "Os elétrons não saem do subnível mais energético (3d), e sim da camada mais externa (4s).", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-camada-valencia-q1", "temaId": "atom-camada-valencia", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Quantos elétrons há na camada de valência do enxofre (número atômico 16)?",
+      "gabarito": { "valor": 6, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "2 + 4",
+      "resolucaoPassoAPasso": ["Distribuição: 1s² 2s² 2p⁶ 3s² 3p⁴.", "A camada mais externa é a 3: 3s² 3p⁴.", "Elétrons de valência: 2 + 4 = 6."],
+      "dica": "Some todos os elétrons da última camada, não só do último subnível.",
+      "errosComuns": [{ "descricao": "Contou só o subnível 3p e esqueceu o 3s.", "resposta": { "valor": 4 } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-camada-valencia-q2", "temaId": "atom-camada-valencia", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes elementos tem 2 elétrons na camada de valência? Números atômicos: Ca = 20, Al = 13, Cl = 17, Ne = 10.",
+      "alternativas": [{ "id": "a", "texto": "Cálcio" }, { "id": "b", "texto": "Alumínio" }, { "id": "c", "texto": "Cloro" }, { "id": "d", "texto": "Neônio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ca: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² → camada 4 com 2 elétrons.", "Al: 3s² 3p¹ → 3; Cl: 3s² 3p⁵ → 7; Ne: 2s² 2p⁶ → 8."],
+      "dica": "Faça a distribuição e olhe só para a última camada.",
+      "errosComuns": [{ "descricao": "O alumínio tem 3 elétrons de valência (3s² 3p¹).", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-camada-valencia-q3", "temaId": "atom-camada-valencia", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O bromo tem número atômico 35. Qual é a sua camada de valência?",
+      "alternativas": [{ "id": "a", "texto": "4s² 4p⁵, com 7 elétrons" }, { "id": "b", "texto": "3d¹⁰ 4p⁵, com 15 elétrons" }, { "id": "c", "texto": "4p⁵, com 5 elétrons" }, { "id": "d", "texto": "3d¹⁰, com 10 elétrons" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Distribuição: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵.", "A camada mais externa é a 4: 4s² 4p⁵.", "O 3d pertence à camada 3, que não é a de valência. Total: 7 elétrons."],
+      "dica": "A camada de valência é a de maior número (n), não o último subnível preenchido.",
+      "errosComuns": [{ "descricao": "O 4s também pertence à camada 4 e entra na conta.", "resposta": "c" }, { "descricao": "O 3d é da camada 3, não da camada de valência.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-numeros-quanticos-q1", "temaId": "atom-numeros-quanticos", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O número quântico secundário (azimutal) l = 2 corresponde a qual subnível?",
+      "alternativas": [{ "id": "a", "texto": "s" }, { "id": "b", "texto": "p" }, { "id": "c", "texto": "d" }, { "id": "d", "texto": "f" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["A correspondência é: l = 0 → s; l = 1 → p; l = 2 → d; l = 3 → f.", "Logo, l = 2 é o subnível d."],
+      "dica": "Comece a contar do zero: s, p, d, f.",
+      "errosComuns": [{ "descricao": "Começou a contar do 1; o subnível s tem l = 0.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "atom-numeros-quanticos-q2", "temaId": "atom-numeros-quanticos", "etapa": "olimpiadas-quimica", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Quantos orbitais existem num subnível com número quântico secundário l = 3?",
+      "gabarito": { "valor": 7, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "2 * 3 + 1",
+      "resolucaoPassoAPasso": ["O número quântico magnético m vai de −l a +l.", "Para l = 3: m = −3, −2, −1, 0, +1, +2, +3.", "São 2l + 1 = 7 orbitais (o subnível f)."],
+      "dica": "Conte os valores possíveis de m.",
+      "errosComuns": [{ "descricao": "Usou 2l e esqueceu o valor m = 0.", "resposta": { "valor": 6 } }],
+      "revisado": false
+    },
+    {
+      "id": "atom-numeros-quanticos-q3", "temaId": "atom-numeros-quanticos", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes conjuntos de números quânticos (n, l, m) é impossível?",
+      "alternativas": [{ "id": "a", "texto": "(2, 1, 0)" }, { "id": "b", "texto": "(3, 2, −2)" }, { "id": "c", "texto": "(2, 2, 1)" }, { "id": "d", "texto": "(1, 0, 0)" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Regras: l vai de 0 até n − 1; m vai de −l até +l.", "Em (2, 2, 1), l = 2 não é permitido para n = 2 (o máximo é l = 1).", "Os outros conjuntos obedecem às regras."],
+      "dica": "Qual é o maior l permitido para cada n?",
+      "errosComuns": [{ "descricao": "Para l = 2, m pode ir de −2 a +2; o conjunto (3, 2, −2) é possível.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

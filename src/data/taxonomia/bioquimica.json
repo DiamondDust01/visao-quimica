@@ -1,0 +1,98 @@
+{
+  "id": "bioquimica",
+  "nome": "Bioquímica",
+  "descricao": "As moléculas dos seres vivos e as reações que elas realizam.",
+  "area": "bioquimica",
+  "prerequisitos": ["lig-forcas-intermoleculares", "cin-catalise", "org-oxigenadas", "org-nitrogenadas-halogenadas", "org-esterificacao-saponificacao"],
+  "etapasRecomendadas": ["em-3", "enem", "superior"],
+  "dificuldade": 2,
+  "palavrasChave": ["biomoléculas", "proteínas", "enzimas", "ácidos nucleicos"],
+  "temas": [
+    {
+      "id": "bio-energia",
+      "nome": "Carboidratos e lipídios",
+      "descricao": "As principais moléculas de reserva e fornecimento de energia.",
+      "area": "bioquimica",
+      "prerequisitos": ["org-oxigenadas", "org-esterificacao-saponificacao"],
+      "etapasRecomendadas": ["em-3", "enem", "superior"],
+      "dificuldade": 2,
+      "palavrasChave": ["carboidratos", "lipídios"],
+      "subtemas": [
+        {
+          "id": "bio-carboidratos",
+          "nome": "Carboidratos",
+          "descricao": "Monossacarídeos, dissacarídeos e polissacarídeos, ligação glicosídica e funções no organismo.",
+          "area": "bioquimica",
+          "prerequisitos": ["org-oxigenadas"],
+          "etapasRecomendadas": ["em-3", "enem", "superior"],
+          "dificuldade": 2,
+          "palavrasChave": ["glicose", "sacarose", "amido", "celulose", "glicosídica"]
+        },
+        {
+          "id": "bio-lipidios",
+          "nome": "Lipídios",
+          "descricao": "Ácidos graxos, triglicerídeos, gorduras saturadas e insaturadas e a relação com sabões.",
+          "area": "bioquimica",
+          "prerequisitos": ["org-esterificacao-saponificacao"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["ácido graxo", "triglicerídeo", "gordura trans", "óleo", "fosfolipídio"]
+        }
+      ]
+    },
+    {
+      "id": "bio-proteinas",
+      "nome": "Proteínas e enzimas",
+      "descricao": "Das unidades de aminoácidos às proteínas que aceleram reações.",
+      "area": "bioquimica",
+      "prerequisitos": ["cin-catalise", "org-oxigenadas", "org-nitrogenadas-halogenadas"],
+      "etapasRecomendadas": ["em-3", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["aminoácidos", "proteínas", "enzimas"],
+      "subtemas": [
+        {
+          "id": "bio-aminoacidos-proteinas",
+          "nome": "Aminoácidos e proteínas",
+          "descricao": "Estrutura dos aminoácidos, ligação peptídica e níveis de estrutura das proteínas.",
+          "area": "bioquimica",
+          "prerequisitos": ["org-oxigenadas", "org-nitrogenadas-halogenadas"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["aminoácido", "ligação peptídica", "estrutura primária", "desnaturação"]
+        },
+        {
+          "id": "bio-enzimas",
+          "nome": "Enzimas",
+          "descricao": "Enzimas como catalisadores biológicos, especificidade e efeito de temperatura e pH.",
+          "area": "bioquimica",
+          "prerequisitos": ["cin-catalise", "bio-aminoacidos-proteinas"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["enzima", "substrato", "sítio ativo", "desnaturação", "catalisador biológico"]
+        }
+      ]
+    },
+    {
+      "id": "bio-informacao",
+      "nome": "Ácidos nucleicos",
+      "descricao": "As moléculas que guardam e transmitem informação genética.",
+      "area": "bioquimica",
+      "prerequisitos": ["lig-forcas-intermoleculares", "org-nitrogenadas-halogenadas", "bio-carboidratos"],
+      "etapasRecomendadas": ["em-3", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["DNA", "RNA", "nucleotídeo"],
+      "subtemas": [
+        {
+          "id": "bio-acidos-nucleicos",
+          "nome": "DNA e RNA",
+          "descricao": "Nucleotídeos, bases nitrogenadas, pareamento por ligações de hidrogênio e diferenças entre DNA e RNA.",
+          "area": "bioquimica",
+          "prerequisitos": ["lig-forcas-intermoleculares", "org-nitrogenadas-halogenadas", "bio-carboidratos"],
+          "etapasRecomendadas": ["em-3", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["DNA", "RNA", "nucleotídeo", "bases nitrogenadas", "dupla hélice"]
+        }
+      ]
+    }
+  ]
+}

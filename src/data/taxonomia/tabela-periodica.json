@@ -1,0 +1,138 @@
+{
+  "id": "tabela-periodica",
+  "nome": "Tabela periódica",
+  "descricao": "Como a tabela está organizada e como as propriedades dos elementos variam ao longo dela.",
+  "area": "tabela-periodica",
+  "prerequisitos": ["atom-particulas-subatomicas", "atom-ions", "atom-camada-valencia"],
+  "etapasRecomendadas": ["ef-9", "em-1", "enem", "tecnico", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["tabela periódica", "famílias", "propriedades periódicas"],
+  "temas": [
+    {
+      "id": "tab-organizacao",
+      "nome": "Organização da tabela",
+      "descricao": "A lógica de períodos, grupos e blocos.",
+      "area": "tabela-periodica",
+      "prerequisitos": ["atom-particulas-subatomicas", "atom-camada-valencia"],
+      "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["períodos", "grupos", "blocos"],
+      "subtemas": [
+        {
+          "id": "tab-historia",
+          "nome": "Histórico e lei periódica",
+          "descricao": "Como a tabela foi construída, da organização por massa à organização por número atômico.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["atom-particulas-subatomicas"],
+          "etapasRecomendadas": ["ef-9", "em-1"],
+          "dificuldade": 1,
+          "palavrasChave": ["Mendeleev", "Moseley", "lei periódica"]
+        },
+        {
+          "id": "tab-periodos-grupos",
+          "nome": "Períodos, grupos e blocos",
+          "descricao": "Leitura da tabela: o que linhas e colunas indicam e onde ficam os blocos s, p, d e f.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["atom-particulas-subatomicas"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["período", "grupo", "família", "bloco"]
+        },
+        {
+          "id": "tab-localizacao-configuracao",
+          "nome": "Localização pela configuração eletrônica",
+          "descricao": "Descobrir período e grupo de um elemento a partir da sua distribuição eletrônica, e o caminho inverso.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["atom-camada-valencia", "tab-periodos-grupos"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["configuração eletrônica", "período", "grupo", "elétrons de valência"]
+        }
+      ]
+    },
+    {
+      "id": "tab-familias",
+      "nome": "Famílias e classificação",
+      "descricao": "Os grandes grupos de elementos e suas características.",
+      "area": "tabela-periodica",
+      "prerequisitos": ["tab-periodos-grupos"],
+      "etapasRecomendadas": ["ef-9", "em-1", "enem", "tecnico", "superior"],
+      "dificuldade": 1,
+      "palavrasChave": ["metais", "ametais", "gases nobres"],
+      "subtemas": [
+        {
+          "id": "tab-metais-ametais",
+          "nome": "Metais, ametais e gases nobres",
+          "descricao": "Características gerais de cada classe e a posição especial do hidrogênio.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["tab-periodos-grupos"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["metais", "ametais", "gases nobres", "hidrogênio"]
+        },
+        {
+          "id": "tab-familias-representativas",
+          "nome": "Famílias representativas",
+          "descricao": "Metais alcalinos, alcalinoterrosos, família do boro, do carbono, do nitrogênio, calcogênios e halogênios.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["tab-metais-ametais"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["alcalinos", "alcalinoterrosos", "calcogênios", "halogênios"]
+        },
+        {
+          "id": "tab-metais-transicao",
+          "nome": "Metais de transição",
+          "descricao": "Elementos dos blocos d e f, seus usos e por que muitos formam compostos coloridos.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["tab-periodos-grupos"],
+          "etapasRecomendadas": ["em-1", "tecnico", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["transição", "lantanídeos", "actinídeos", "bloco d"]
+        }
+      ]
+    },
+    {
+      "id": "tab-propriedades",
+      "nome": "Propriedades periódicas",
+      "descricao": "Como tamanho, energia de ionização e eletronegatividade variam na tabela.",
+      "area": "tabela-periodica",
+      "prerequisitos": ["atom-ions", "tab-localizacao-configuracao"],
+      "etapasRecomendadas": ["em-1", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["raio atômico", "energia de ionização", "eletronegatividade"],
+      "subtemas": [
+        {
+          "id": "tab-raio-atomico",
+          "nome": "Raio atômico e iônico",
+          "descricao": "Por que o raio cresce para baixo no grupo e diminui ao longo do período, e o tamanho de cátions e ânions.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["atom-ions", "tab-localizacao-configuracao"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["raio atômico", "raio iônico", "carga nuclear efetiva"]
+        },
+        {
+          "id": "tab-energia-ionizacao",
+          "nome": "Energia de ionização e afinidade eletrônica",
+          "descricao": "Energia para retirar ou receber um elétron e sua variação na tabela.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["tab-raio-atomico"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["energia de ionização", "afinidade eletrônica", "potencial de ionização"]
+        },
+        {
+          "id": "tab-eletronegatividade",
+          "nome": "Eletronegatividade e caráter metálico",
+          "descricao": "Tendência de atrair elétrons numa ligação e a relação com o caráter metálico.",
+          "area": "tabela-periodica",
+          "prerequisitos": ["tab-raio-atomico"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["eletronegatividade", "eletropositividade", "caráter metálico", "Pauling"]
+        }
+      ]
+    }
+  ]
+}

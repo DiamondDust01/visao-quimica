@@ -1,0 +1,75 @@
+{
+  "area": "fisico-quimica",
+  "questoes": [
+    {
+      "id": "fq-primeira-lei-q1", "temaId": "fq-primeira-lei", "etapa": "superior", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Pela primeira lei, ΔU = q + w (convenção: q e w positivos quando entram no sistema). Um gás recebe 500 J de calor e realiza 200 J de trabalho sobre a vizinhança. Qual é a variação de energia interna?",
+      "gabarito": { "valor": 300, "unidade": "J" },
+      "verificacao": "500 + (-200)",
+      "resolucaoPassoAPasso": ["Calor recebido: q = +500 J.", "Trabalho realizado pelo sistema sai dele: w = −200 J.", "ΔU = 500 − 200 = +300 J."],
+      "dica": "Trabalho feito pelo sistema tem sinal negativo nessa convenção.",
+      "errosComuns": [{ "descricao": "Somou o trabalho como se tivesse entrado no sistema.", "resposta": { "valor": 700, "unidade": "J" } }],
+      "revisado": false
+    },
+    {
+      "id": "fq-segunda-terceira-lei-q1", "temaId": "fq-segunda-terceira-lei", "etapa": "superior", "dificuldade": 5, "tipo": "multipla-escolha",
+      "enunciado": "Segundo a terceira lei da termodinâmica, a entropia de um cristal perfeito:",
+      "alternativas": [{ "id": "a", "texto": "Tende a zero quando a temperatura tende a 0 K" }, { "id": "b", "texto": "É máxima a 0 K" }, { "id": "c", "texto": "Não depende da temperatura" }, { "id": "d", "texto": "É sempre negativa" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No zero absoluto, um cristal perfeito tem um único arranjo microscópico possível.", "Pela relação de Boltzmann, S = k ln W, com W = 1: S = 0.", "Isso permite definir entropias absolutas das substâncias."],
+      "dica": "Quantos arranjos possíveis tem um cristal perfeito a 0 K?",
+      "errosComuns": [{ "descricao": "A 0 K a desordem é mínima, não máxima.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "fq-equilibrio-termodinamico-q1", "temaId": "fq-equilibrio-termodinamico", "etapa": "superior", "dificuldade": 5, "tipo": "numerica",
+      "enunciado": "Pela relação ΔG° = −RT ln K, calcule K para uma reação com ΔG° = −5,71 kJ/mol a 298 K. Use R = 8,314 J/(mol·K).",
+      "gabarito": { "valor": 10, "unidade": null, "tolerancia": { "relativa": 0.02 } },
+      "verificacao": "exp(5710 / (8.314 * 298))",
+      "resolucaoPassoAPasso": ["ln K = −ΔG° ÷ RT = 5710 ÷ (8,314 × 298) ≈ 2,30.", "K = e^2,30 ≈ 10."],
+      "dica": "Converta kJ para J antes de usar R.",
+      "errosComuns": [{ "descricao": "Esqueceu de converter kJ para J; o expoente fica quase zero e K ≈ 1.", "resposta": { "valor": 1.0023 } }],
+      "revisado": false
+    },
+    {
+      "id": "fq-nernst-q1", "temaId": "fq-nernst", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Pela equação de Nernst a 25 °C, E = E° − (0,0592/n) log Q. Uma pilha tem E° = 1,10 V, n = 2 e Q = 100. Qual é o potencial E?",
+      "gabarito": { "valor": 1.0408, "unidade": "V", "tolerancia": { "relativa": 0.005 } },
+      "verificacao": "1.10 - (0.0592 / 2) * log10(100)",
+      "resolucaoPassoAPasso": ["log Q = log 100 = 2.", "(0,0592 ÷ 2) × 2 = 0,0592 V.", "E = 1,10 − 0,0592 ≈ 1,04 V."],
+      "dica": "Calcule log Q primeiro.",
+      "errosComuns": [{ "descricao": "Somou o termo de correção em vez de subtrair.", "resposta": { "valor": 1.1592, "unidade": "V" } }],
+      "revisado": false
+    },
+    {
+      "id": "fq-cinetica-integrada-q1", "temaId": "fq-cinetica-integrada", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Uma reação de primeira ordem tem constante k = 0,0693 min⁻¹. Qual é a sua meia-vida? (Para primeira ordem, t½ = ln 2 ÷ k.)",
+      "gabarito": { "valor": 10, "unidade": "min", "tolerancia": { "relativa": 0.01 } },
+      "verificacao": "ln(2) / 0.0693",
+      "resolucaoPassoAPasso": ["ln 2 ≈ 0,693.", "t½ = 0,693 ÷ 0,0693 = 10 min.", "Na primeira ordem, a meia-vida não depende da concentração inicial."],
+      "dica": "Use t½ = 0,693 ÷ k.",
+      "errosComuns": [{ "descricao": "Multiplicou ln 2 por k em vez de dividir.", "resposta": { "valor": 0.048, "unidade": "min" } }],
+      "revisado": false
+    },
+    {
+      "id": "fq-gases-reais-q1", "temaId": "fq-gases-reais", "etapa": "superior", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Em que condições um gás real se afasta mais do comportamento de gás ideal?",
+      "alternativas": [{ "id": "a", "texto": "Em pressões altas e temperaturas baixas" }, { "id": "b", "texto": "Em pressões baixas e temperaturas altas" }, { "id": "c", "texto": "Em qualquer condição, igualmente" }, { "id": "d", "texto": "Só no vácuo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O modelo ideal despreza o volume das moléculas e as atrações entre elas.", "Com pressão alta, as moléculas ficam próximas e seu volume pesa; com temperatura baixa, as atrações ficam importantes.", "Por isso a equação de van der Waals inclui correções para esses dois efeitos."],
+      "dica": "Quando as moléculas ficam próximas e lentas.",
+      "errosComuns": [{ "descricao": "Pressão baixa e temperatura alta são justamente as condições em que o gás se aproxima do ideal.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "fq-quantica-nocoes-q1", "temaId": "fq-quantica-nocoes", "etapa": "superior", "dificuldade": 5, "tipo": "numerica",
+      "enunciado": "Para uma partícula numa caixa unidimensional, Eₙ = n²h² ÷ (8mL²). Quantas vezes a energia do nível n = 3 é maior que a do nível n = 1?",
+      "gabarito": { "valor": 9, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "3^2 / 1^2",
+      "resolucaoPassoAPasso": ["A energia é proporcional a n².", "E₃ ÷ E₁ = 3² ÷ 1² = 9."],
+      "dica": "Tudo é constante, menos n².",
+      "errosComuns": [{ "descricao": "Usou n em vez de n².", "resposta": { "valor": 3 } }],
+      "revisado": false
+    }
+  ]
+}

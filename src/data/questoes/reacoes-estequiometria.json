@@ -1,0 +1,307 @@
+{
+  "area": "reacoes-estequiometria",
+  "questoes": [
+    {
+      "id": "reac-evidencias-q1", "temaId": "reac-evidencias", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Ao misturar vinagre e bicarbonato de sódio, aparecem muitas bolhas. O que isso indica?",
+      "alternativas": [{ "id": "a", "texto": "Formação de um gás, uma evidência de reação química" }, { "id": "b", "texto": "Evaporação do vinagre" }, { "id": "c", "texto": "Apenas a dissolução do bicarbonato" }, { "id": "d", "texto": "Fusão do bicarbonato" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O ácido do vinagre reage com o bicarbonato e forma gás carbônico.", "A liberação de um gás que não estava lá antes é sinal de transformação química."],
+      "dica": "De onde vêm as bolhas?",
+      "errosComuns": [{ "descricao": "Dissolver não produz gás; as bolhas são um produto novo.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-evidencias-q2", "temaId": "reac-evidencias", "etapa": "ef-9", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Indique quais observações são evidências de reação química.",
+      "itens": [{ "id": "camarao", "texto": "O camarão muda de cor ao ser cozido" }, { "id": "precipitado", "texto": "Forma-se um sólido ao misturar duas soluções" }, { "id": "fervura", "texto": "A água ferve na panela" }, { "id": "sal", "texto": "O sal some ao ser mexido na água" }],
+      "opcoes": [{ "id": "sim", "texto": "Indica reação química" }, { "id": "nao", "texto": "Não indica reação química" }],
+      "gabarito": { "camarao": "sim", "precipitado": "sim", "fervura": "nao", "sal": "nao" },
+      "resolucaoPassoAPasso": ["Mudança de cor por formação de novas substâncias e formação de precipitado indicam reação.", "Ferver e dissolver não formam substâncias novas: são transformações físicas."],
+      "dica": "Pergunte se surgiu uma substância nova.",
+      "errosComuns": [{ "descricao": "Achar que o sal 'sumiu' por reação: ele só está dissolvido e reaparece se a água evaporar." }],
+      "revisado": false
+    },
+    {
+      "id": "reac-evidencias-q3", "temaId": "reac-evidencias", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na queima de uma vela, qual conjunto de observações mostra que ocorre reação química?",
+      "alternativas": [{ "id": "a", "texto": "Liberação de calor e luz, e formação de gás carbônico e vapor de água" }, { "id": "b", "texto": "Apenas o derretimento da parafina" }, { "id": "c", "texto": "Apenas a solidificação da parafina que escorre" }, { "id": "d", "texto": "A diminuição do tamanho da vela, só por evaporação" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A parafina derretida e solidificada passa por transformações físicas.", "Na chama, a parafina reage com o oxigênio: há combustão, com formação de \\ce{CO2} e \\ce{H2O} e liberação de energia."],
+      "dica": "Na vela acontecem transformações físicas e químicas ao mesmo tempo.",
+      "errosComuns": [{ "descricao": "O derretimento da parafina é físico; a reação acontece na chama.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-leis-ponderais-q1", "temaId": "reac-leis-ponderais", "etapa": "ef-9", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Num recipiente fechado, 12 g de carbono reagem completamente com 32 g de oxigênio, formando gás carbônico. Qual é a massa de gás carbônico formada?",
+      "gabarito": { "valor": 44, "unidade": "g" },
+      "verificacao": "12 + 32",
+      "resolucaoPassoAPasso": ["Lei de Lavoisier: em sistema fechado, a massa dos produtos é igual à dos reagentes.", "12 g + 32 g = 44 g de gás carbônico."],
+      "dica": "Num sistema fechado, nada se perde.",
+      "errosComuns": [{ "descricao": "Subtraiu as massas em vez de somar.", "resposta": { "valor": 20, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-leis-ponderais-q2", "temaId": "reac-leis-ponderais", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Na formação da água, 2 g de hidrogênio reagem com 16 g de oxigênio. Quantos gramas de oxigênio reagem com 10 g de hidrogênio?",
+      "gabarito": { "valor": 80, "unidade": "g" },
+      "verificacao": "16 * 10 / 2",
+      "resolucaoPassoAPasso": ["Lei de Proust: a proporção entre as massas é sempre a mesma (2 : 16, ou 1 : 8).", "10 g de hidrogênio é 5 vezes 2 g; o oxigênio também é multiplicado por 5: 16 × 5 = 80 g."],
+      "dica": "Monte a proporção: 2 g está para 16 g assim como 10 g está para x.",
+      "errosComuns": [{ "descricao": "Somou as massas em vez de manter a proporção.", "resposta": { "valor": 26, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-leis-ponderais-q3", "temaId": "reac-leis-ponderais", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Ao queimar palha de aço (ferro) sobre uma balança, em recipiente aberto, a massa do sólido aumenta. Isso contradiz a lei de Lavoisier?",
+      "alternativas": [{ "id": "a", "texto": "Não: o ferro se combina com o oxigênio do ar; num sistema fechado a massa total se conservaria." }, { "id": "b", "texto": "Sim: a massa aumentou, então a lei não vale." }, { "id": "c", "texto": "Sim: o fogo cria matéria." }, { "id": "d", "texto": "Não: a balança está com defeito." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O ferro reage com o oxigênio do ar e forma óxido de ferro.", "A massa do oxigênio incorporado não estava sendo pesada no começo.", "Contando ferro e oxigênio, a massa total se conserva."],
+      "dica": "O sistema está aberto: algo entrou nele?",
+      "errosComuns": [{ "descricao": "A lei vale; o que mudou foi a entrada de oxigênio do ar no sistema aberto.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-balanceamento-q1", "temaId": "reac-balanceamento", "etapa": "ef-9", "dificuldade": 2, "tipo": "balanceamento",
+      "enunciado": "Balanceie a síntese da amônia.",
+      "equacao": { "reagentes": ["N2", "H2"], "produtos": ["NH3"] },
+      "gabarito": [1, 3, 2],
+      "resolucaoPassoAPasso": ["Nitrogênio: 2 à esquerda, então 2 \\ce{NH3} à direita.", "Hidrogênio: 2 × 3 = 6 à direita, então 3 \\ce{H2} à esquerda.", "Equação: \\ce{N2 + 3H2 -> 2NH3}."],
+      "dica": "Comece pelo nitrogênio.",
+      "errosComuns": [{ "descricao": "Ajustou só o nitrogênio; o hidrogênio ficou com 2 à esquerda e 6 à direita.", "resposta": [1, 1, 2] }],
+      "revisado": false
+    },
+    {
+      "id": "reac-balanceamento-q2", "temaId": "reac-balanceamento", "etapa": "em-1", "dificuldade": 2, "tipo": "balanceamento",
+      "enunciado": "Balanceie a combustão completa do metano.",
+      "equacao": { "reagentes": ["CH4", "O2"], "produtos": ["CO2", "H2O"] },
+      "gabarito": [1, 2, 1, 2],
+      "resolucaoPassoAPasso": ["Carbono: 1 de cada lado.", "Hidrogênio: 4 à esquerda, então 2 \\ce{H2O}.", "Oxigênio à direita: 2 (do \\ce{CO2}) + 2 (das águas) = 4, então 2 \\ce{O2}.", "Equação: \\ce{CH4 + 2O2 -> CO2 + 2H2O}."],
+      "dica": "Deixe o oxigênio por último: ele aparece em dois produtos.",
+      "errosComuns": [{ "descricao": "Ajustou a água, mas não o oxigênio: há 4 átomos de O nos produtos.", "resposta": [1, 1, 1, 2] }],
+      "revisado": false
+    },
+    {
+      "id": "reac-balanceamento-q3", "temaId": "reac-balanceamento", "etapa": "em-1", "dificuldade": 3, "tipo": "balanceamento",
+      "enunciado": "Balanceie a combustão completa do propano, um dos gases do GLP.",
+      "equacao": { "reagentes": ["C3H8", "O2"], "produtos": ["CO2", "H2O"] },
+      "gabarito": [1, 5, 3, 4],
+      "resolucaoPassoAPasso": ["Carbono: 3, então 3 \\ce{CO2}.", "Hidrogênio: 8, então 4 \\ce{H2O}.", "Oxigênio à direita: 3 × 2 + 4 × 1 = 10 átomos, então 5 \\ce{O2}.", "Equação: \\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}."],
+      "dica": "Ordem prática: C, depois H, depois O.",
+      "errosComuns": [{ "descricao": "Usou o número de átomos de oxigênio (10) como coeficiente do \\ce{O2}; cada molécula tem 2 átomos.", "resposta": [1, 10, 3, 4] }],
+      "revisado": false
+    },
+    {
+      "id": "reac-tipos-q1", "temaId": "reac-tipos", "etapa": "em-1", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Classifique cada reação.",
+      "itens": [{ "id": "r1", "texto": "\\ce{2H2 + O2 -> 2H2O}" }, { "id": "r2", "texto": "\\ce{CaCO3 -> CaO + CO2}" }, { "id": "r3", "texto": "\\ce{Zn + 2HCl -> ZnCl2 + H2}" }, { "id": "r4", "texto": "\\ce{AgNO3 + NaCl -> AgCl + NaNO3}" }],
+      "opcoes": [{ "id": "sin", "texto": "Síntese" }, { "id": "dec", "texto": "Decomposição" }, { "id": "sim", "texto": "Simples troca" }, { "id": "dup", "texto": "Dupla troca" }],
+      "gabarito": { "r1": "sin", "r2": "dec", "r3": "sim", "r4": "dup" },
+      "resolucaoPassoAPasso": ["Síntese: duas ou mais substâncias formam uma só.", "Decomposição: uma substância origina duas ou mais.", "Simples troca: uma substância simples desloca um elemento de uma composta (o zinco desloca o hidrogênio).", "Dupla troca: dois compostos trocam seus íons."],
+      "dica": "Conte quantas substâncias há de cada lado e se há substância simples.",
+      "errosComuns": [{ "descricao": "Confundir simples troca com dupla troca: na simples troca participa uma substância simples." }],
+      "revisado": false
+    },
+    {
+      "id": "reac-tipos-q2", "temaId": "reac-tipos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um prego de ferro mergulhado em solução de sulfato de cobre fica coberto de cobre: \\ce{Fe + CuSO4 -> FeSO4 + Cu}. Por que essa reação acontece?",
+      "alternativas": [{ "id": "a", "texto": "Porque o ferro é mais reativo que o cobre e o desloca do composto" }, { "id": "b", "texto": "Porque o cobre é mais reativo que o ferro" }, { "id": "c", "texto": "Porque se forma um gás" }, { "id": "d", "texto": "Porque é uma reação de decomposição" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Numa simples troca, o metal livre só desloca outro metal se for mais reativo que ele.", "O ferro é mais reativo que o cobre: perde elétrons e passa para a solução, e o cobre se deposita."],
+      "dica": "Na fila de reatividade, quem desloca quem?",
+      "errosComuns": [{ "descricao": "Se o cobre fosse mais reativo, a reação não aconteceria nesse sentido.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-tipos-q3", "temaId": "reac-tipos", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Ao misturar soluções de nitrato de prata e cloreto de sódio, a dupla troca acontece. Qual é a força que move essa reação?",
+      "alternativas": [{ "id": "a", "texto": "A formação do cloreto de prata, sólido pouco solúvel que precipita" }, { "id": "b", "texto": "A formação de um gás" }, { "id": "c", "texto": "A formação de um ácido forte" }, { "id": "d", "texto": "A decomposição do nitrato de sódio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Uma dupla troca ocorre quando forma um produto que sai da solução: precipitado, gás ou eletrólito fraco.", "O \\ce{AgCl} é muito pouco solúvel e precipita como sólido branco."],
+      "dica": "O que aparece no fundo do tubo?",
+      "errosComuns": [{ "descricao": "Nesta reação não se forma gás; forma-se um sólido.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-mol-avogadro-q1", "temaId": "reac-mol-avogadro", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Quantas moléculas há em 2,0 mol de água? Use a constante de Avogadro 6,0 × 10²³ por mol e dê só o número.",
+      "gabarito": { "valor": 1.2e24, "unidade": null, "tolerancia": { "relativa": 0.02 } },
+      "verificacao": "2 * 6e23",
+      "resolucaoPassoAPasso": ["1 mol tem 6,0 × 10²³ entidades.", "2,0 mol × 6,0 × 10²³ = 1,2 × 10²⁴ moléculas."],
+      "dica": "Multiplique a quantidade em mol pela constante de Avogadro.",
+      "errosComuns": [{ "descricao": "Dividiu pela constante de Avogadro em vez de multiplicar.", "resposta": { "valor": 3.3e-24 } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-mol-avogadro-q2", "temaId": "reac-mol-avogadro", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Quantos mols de ferro correspondem a 3,0 × 10²⁴ átomos de ferro? Use 6,0 × 10²³ por mol.",
+      "gabarito": { "valor": 5, "unidade": "mol" },
+      "verificacao": "3e24 / 6e23",
+      "resolucaoPassoAPasso": ["n = número de átomos ÷ constante de Avogadro.", "n = 3,0 × 10²⁴ ÷ 6,0 × 10²³ = 5,0 mol."],
+      "dica": "Quantos 'pacotes' de 6,0 × 10²³ cabem nesse número?",
+      "errosComuns": [{ "descricao": "Multiplicou em vez de dividir.", "resposta": { "valor": 1.8e48, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-mol-avogadro-q3", "temaId": "reac-mol-avogadro", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um mol de gás carbônico, \\ce{CO2}, contém (use 6,0 × 10²³ por mol):",
+      "alternativas": [{ "id": "a", "texto": "6,0 × 10²³ moléculas e 1,2 × 10²⁴ átomos de oxigênio" }, { "id": "b", "texto": "6,0 × 10²³ átomos no total" }, { "id": "c", "texto": "3 mol de moléculas" }, { "id": "d", "texto": "44 moléculas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["1 mol de \\ce{CO2} são 6,0 × 10²³ moléculas.", "Cada molécula tem 2 átomos de O: 2 × 6,0 × 10²³ = 1,2 × 10²⁴ átomos de oxigênio.", "No total, são 3 mol de átomos (1,8 × 10²⁴ átomos)."],
+      "dica": "Separe moléculas de átomos.",
+      "errosComuns": [{ "descricao": "6,0 × 10²³ é o número de moléculas; os átomos são três vezes mais.", "resposta": "b" }, { "descricao": "44 é a massa molar em g/mol, não um número de moléculas.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-massa-molar-q1", "temaId": "reac-massa-molar", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Calcule a massa molar do ácido sulfúrico, \\ce{H2SO4}. Massas atômicas: H = 1, S = 32, O = 16.",
+      "gabarito": { "valor": 98, "unidade": "g/mol" },
+      "verificacao": "2*1 + 32 + 4*16",
+      "resolucaoPassoAPasso": ["Multiplique a massa de cada elemento pelo seu índice: H: 2 × 1 = 2; S: 1 × 32 = 32; O: 4 × 16 = 64.", "Some: 2 + 32 + 64 = 98 g/mol."],
+      "dica": "Cada índice multiplica a massa do elemento.",
+      "errosComuns": [{ "descricao": "Somou as massas sem multiplicar pelos índices.", "resposta": { "valor": 49, "unidade": "g/mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-massa-molar-q2", "temaId": "reac-massa-molar", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Calcule a massa molar do hidróxido de cálcio, \\ce{Ca(OH)2}. Massas atômicas: Ca = 40, O = 16, H = 1.",
+      "gabarito": { "valor": 74, "unidade": "g/mol" },
+      "verificacao": "40 + 2*(16 + 1)",
+      "resolucaoPassoAPasso": ["O índice 2 fora do parêntese multiplica tudo o que está dentro: 2 O e 2 H.", "40 + 2 × (16 + 1) = 40 + 34 = 74 g/mol."],
+      "dica": "O índice fora do parêntese vale para todo o grupo.",
+      "errosComuns": [{ "descricao": "Ignorou o índice 2 fora do parêntese.", "resposta": { "valor": 57, "unidade": "g/mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-massa-molar-q3", "temaId": "reac-massa-molar", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Quantos mols de glicose, \\ce{C6H12O6}, há em 90 g de glicose? Massas atômicas: C = 12, H = 1, O = 16.",
+      "gabarito": { "valor": 0.5, "unidade": "mol" },
+      "verificacao": "90 / (6*12 + 12*1 + 6*16)",
+      "resolucaoPassoAPasso": ["Massa molar: 6 × 12 + 12 × 1 + 6 × 16 = 72 + 12 + 96 = 180 g/mol.", "n = m ÷ M = 90 g ÷ 180 g/mol = 0,5 mol."],
+      "dica": "Primeiro calcule a massa molar.",
+      "errosComuns": [{ "descricao": "Dividiu a massa molar pela massa (conta invertida).", "resposta": { "valor": 2, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-formulas-q1", "temaId": "reac-formulas", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a fórmula mínima da glicose, \\ce{C6H12O6}?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{CH2O}" }, { "id": "b", "texto": "\\ce{C6H12O6}" }, { "id": "c", "texto": "\\ce{C2H4O2}" }, { "id": "d", "texto": "\\ce{CHO}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A fórmula mínima mostra a menor proporção inteira entre os átomos.", "Divida os índices 6, 12 e 6 pelo maior divisor comum, 6: 1, 2 e 1.", "Fórmula mínima: \\ce{CH2O}."],
+      "dica": "Divida todos os índices pelo maior divisor comum.",
+      "errosComuns": [{ "descricao": "Essa é a fórmula molecular; a mínima é a menor proporção.", "resposta": "b" }, { "descricao": "Dividiu por 3, mas a proporção ainda pode ser simplificada.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-formulas-q2", "temaId": "reac-formulas", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Qual é a porcentagem em massa de carbono no gás carbônico, \\ce{CO2}? Massas atômicas: C = 12, O = 16.",
+      "gabarito": { "valor": 27.27, "unidade": "%", "tolerancia": { "relativa": 0.01 } },
+      "verificacao": "12 / (12 + 2*16) * 100",
+      "resolucaoPassoAPasso": ["Massa molar: 12 + 2 × 16 = 44 g/mol.", "Carbono: 12 ÷ 44 × 100 ≈ 27,3%."],
+      "dica": "Porcentagem = massa do elemento ÷ massa molar × 100.",
+      "errosComuns": [{ "descricao": "Contou átomos (1 de 3) em vez de massas.", "resposta": { "valor": 33.3, "unidade": "%" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-formulas-q3", "temaId": "reac-formulas", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Um composto tem 40,0% de carbono, 6,7% de hidrogênio e 53,3% de oxigênio em massa, e sua massa molar é 60 g/mol. Qual é a fórmula molecular? (C = 12, H = 1, O = 16)",
+      "alternativas": [{ "id": "a", "texto": "\\ce{C2H4O2}" }, { "id": "b", "texto": "\\ce{CH2O}" }, { "id": "c", "texto": "\\ce{C3H6O3}" }, { "id": "d", "texto": "\\ce{C2H6O}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Em 100 g: C = 40,0 ÷ 12 ≈ 3,33 mol; H = 6,7 ÷ 1 = 6,7 mol; O = 53,3 ÷ 16 ≈ 3,33 mol.", "Dividindo pelo menor (3,33): 1 : 2 : 1. Fórmula mínima \\ce{CH2O} (30 g/mol).", "60 ÷ 30 = 2: fórmula molecular \\ce{C2H4O2}."],
+      "dica": "Ache a fórmula mínima e compare a massa dela com 60 g/mol.",
+      "errosComuns": [{ "descricao": "\\ce{CH2O} é a fórmula mínima; a massa molar dada é o dobro dela.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-calculo-estequiometrico-q1", "temaId": "reac-calculo-estequiometrico", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Na reação \\ce{2H2 + O2 -> 2H2O}, quantos mols de água se formam a partir de 3 mol de \\ce{O2}, com hidrogênio suficiente?",
+      "gabarito": { "valor": 6, "unidade": "mol" },
+      "verificacao": "3 * 2",
+      "resolucaoPassoAPasso": ["Proporção: 1 mol de \\ce{O2} forma 2 mol de \\ce{H2O}.", "3 mol de \\ce{O2} formam 3 × 2 = 6 mol de água."],
+      "dica": "Use os coeficientes da equação balanceada.",
+      "errosComuns": [{ "descricao": "Usou proporção 1 : 1 entre \\ce{O2} e água.", "resposta": { "valor": 3, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-calculo-estequiometrico-q2", "temaId": "reac-calculo-estequiometrico", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na síntese \\ce{N2 + 3H2 -> 2NH3}, qual massa de amônia se forma a partir de 56 g de \\ce{N2}, com hidrogênio em excesso? (N = 14, H = 1)",
+      "gabarito": { "valor": 68, "unidade": "g" },
+      "verificacao": "56 / 28 * 2 * 17",
+      "resolucaoPassoAPasso": ["\\ce{N2}: 28 g/mol; 56 g ÷ 28 g/mol = 2 mol.", "Proporção 1 : 2: formam-se 4 mol de \\ce{NH3}.", "\\ce{NH3}: 17 g/mol; 4 mol × 17 g/mol = 68 g."],
+      "dica": "Massa → mol → proporção → mol → massa.",
+      "errosComuns": [{ "descricao": "Esqueceu o coeficiente 2 da amônia.", "resposta": { "valor": 34, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-calculo-estequiometrico-q3", "temaId": "reac-calculo-estequiometrico", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "O carbonato de cálcio se decompõe por aquecimento: \\ce{CaCO3 -> CaO + CO2}. Qual massa de \\ce{CaO} se forma a partir de 200 g de \\ce{CaCO3}? (Ca = 40, C = 12, O = 16)",
+      "gabarito": { "valor": 112, "unidade": "g" },
+      "verificacao": "200 / (40 + 12 + 3*16) * (40 + 16)",
+      "resolucaoPassoAPasso": ["\\ce{CaCO3}: 100 g/mol; 200 g = 2 mol.", "Proporção 1 : 1: formam-se 2 mol de \\ce{CaO}.", "\\ce{CaO}: 56 g/mol; 2 × 56 = 112 g."],
+      "dica": "A proporção entre \\ce{CaCO3} e \\ce{CaO} é 1 : 1.",
+      "errosComuns": [{ "descricao": "Calculou a massa de \\ce{CO2}, não a de \\ce{CaO}.", "resposta": { "valor": 88, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-reagente-limitante-q1", "temaId": "reac-reagente-limitante", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na reação \\ce{2H2 + O2 -> 2H2O}, misturam-se 4 mol de \\ce{H2} e 3 mol de \\ce{O2}. Qual é o reagente limitante?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{H2}" }, { "id": "b", "texto": "\\ce{O2}" }, { "id": "c", "texto": "Nenhum: os dois acabam juntos" }, { "id": "d", "texto": "A água" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["4 mol de \\ce{H2} precisam de 4 ÷ 2 = 2 mol de \\ce{O2}.", "Há 3 mol de \\ce{O2}: sobra 1 mol.", "O \\ce{H2} acaba primeiro: é o limitante."],
+      "dica": "Calcule quanto de \\ce{O2} os 4 mol de \\ce{H2} consomem.",
+      "errosComuns": [{ "descricao": "Há mais \\ce{O2} (3 mol) do que o necessário (2 mol): ele está em excesso.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "reac-reagente-limitante-q2", "temaId": "reac-reagente-limitante", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na mesma reação, \\ce{2H2 + O2 -> 2H2O}, com 4 mol de \\ce{H2} e 3 mol de \\ce{O2}, quantos mols de \\ce{O2} sobram ao final?",
+      "gabarito": { "valor": 1, "unidade": "mol" },
+      "verificacao": "3 - 4/2",
+      "resolucaoPassoAPasso": ["O \\ce{H2} é o limitante e consome 4 ÷ 2 = 2 mol de \\ce{O2}.", "Sobram 3 − 2 = 1 mol de \\ce{O2}."],
+      "dica": "Excesso = quantidade inicial − quantidade consumida.",
+      "errosComuns": [{ "descricao": "Supôs que todo o oxigênio reagiu.", "resposta": { "valor": 0, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-reagente-limitante-q3", "temaId": "reac-reagente-limitante", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na reação \\ce{Zn + 2HCl -> ZnCl2 + H2}, colocam-se 13 g de zinco (65 g/mol) e 0,30 mol de HCl. Quantos mols de \\ce{H2} se formam?",
+      "gabarito": { "valor": 0.15, "unidade": "mol" },
+      "verificacao": "0.30 / 2",
+      "resolucaoPassoAPasso": ["Zinco: 13 ÷ 65 = 0,20 mol, que precisaria de 0,40 mol de HCl.", "Só há 0,30 mol de HCl: ele é o limitante.", "Proporção HCl : \\ce{H2} = 2 : 1, então 0,30 ÷ 2 = 0,15 mol de \\ce{H2}."],
+      "dica": "Descubra o limitante antes de calcular o produto.",
+      "errosComuns": [{ "descricao": "Usou o zinco como limitante, mas falta HCl para reagir com todo ele.", "resposta": { "valor": 0.2, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-rendimento-pureza-q1", "temaId": "reac-rendimento-pureza", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Uma reação deveria produzir 50 g de produto, mas foram obtidos 40 g. Qual foi o rendimento?",
+      "gabarito": { "valor": 80, "unidade": "%" },
+      "verificacao": "40 / 50 * 100",
+      "resolucaoPassoAPasso": ["Rendimento = quantidade obtida ÷ quantidade teórica × 100.", "40 ÷ 50 × 100 = 80%."],
+      "dica": "Compare o obtido com o esperado.",
+      "errosComuns": [{ "descricao": "Inverteu a divisão: rendimento não passa de 100%.", "resposta": { "valor": 125, "unidade": "%" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-rendimento-pureza-q2", "temaId": "reac-rendimento-pureza", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Uma amostra de 500 g de calcário tem 80% de carbonato de cálcio em massa. Qual é a massa de carbonato de cálcio na amostra?",
+      "gabarito": { "valor": 400, "unidade": "g" },
+      "verificacao": "500 * 0.80",
+      "resolucaoPassoAPasso": ["Massa pura = massa da amostra × pureza.", "500 g × 0,80 = 400 g de \\ce{CaCO3}."],
+      "dica": "80% de 500.",
+      "errosComuns": [{ "descricao": "Calculou a massa das impurezas (20%).", "resposta": { "valor": 100, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "reac-rendimento-pureza-q3", "temaId": "reac-rendimento-pureza", "etapa": "em-1", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na decomposição \\ce{CaCO3 -> CaO + CO2}, aquecem-se 100 g de \\ce{CaCO3} puro (100 g/mol). O rendimento é de 90%. Qual massa de \\ce{CaO} (56 g/mol) é obtida?",
+      "gabarito": { "valor": 50.4, "unidade": "g" },
+      "verificacao": "100 / 100 * 56 * 0.90",
+      "resolucaoPassoAPasso": ["100 g de \\ce{CaCO3} = 1 mol, que daria 1 mol de \\ce{CaO} = 56 g (teórico).", "Com 90% de rendimento: 56 × 0,90 = 50,4 g."],
+      "dica": "Calcule o teórico e aplique o rendimento.",
+      "errosComuns": [{ "descricao": "Esqueceu de aplicar o rendimento de 90%.", "resposta": { "valor": 56, "unidade": "g" } }],
+      "revisado": false
+    }
+  ]
+}

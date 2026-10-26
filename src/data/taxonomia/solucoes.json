@@ -1,0 +1,160 @@
+{
+  "id": "solucoes",
+  "nome": "Soluções",
+  "descricao": "Solubilidade, formas de expressar concentração, preparo de soluções e propriedades coligativas.",
+  "area": "solucoes",
+  "prerequisitos": ["fund-densidade", "fund-misturas-tipos", "lig-solubilidade-ebulicao", "inorg-neutralizacao", "reac-massa-molar", "reac-calculo-estequiometrico"],
+  "etapasRecomendadas": ["em-2", "enem", "tecnico"],
+  "dificuldade": 2,
+  "palavrasChave": ["soluções", "concentração", "diluição", "coligativas"],
+  "temas": [
+    {
+      "id": "sol-conceitos",
+      "nome": "Solubilidade",
+      "descricao": "Quanto de uma substância se dissolve e como isso muda com a temperatura.",
+      "area": "solucoes",
+      "prerequisitos": ["fund-misturas-tipos", "lig-solubilidade-ebulicao"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["solubilidade", "saturação"],
+      "subtemas": [
+        {
+          "id": "sol-solubilidade",
+          "nome": "Solubilidade e curvas de solubilidade",
+          "descricao": "Coeficiente de solubilidade, soluções insaturadas, saturadas e supersaturadas e leitura de curvas.",
+          "area": "solucoes",
+          "prerequisitos": ["fund-misturas-tipos", "lig-solubilidade-ebulicao"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["coeficiente de solubilidade", "saturada", "supersaturada", "curva de solubilidade"]
+        }
+      ]
+    },
+    {
+      "id": "sol-concentracao",
+      "nome": "Concentração",
+      "descricao": "As diferentes maneiras de dizer quanto soluto há numa solução.",
+      "area": "solucoes",
+      "prerequisitos": ["fund-densidade", "reac-massa-molar", "sol-solubilidade"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["concentração", "mol/L", "ppm"],
+      "subtemas": [
+        {
+          "id": "sol-concentracao-comum",
+          "nome": "Concentração comum",
+          "descricao": "Concentração em massa por volume (g/L) e a diferença entre concentração e densidade da solução.",
+          "area": "solucoes",
+          "prerequisitos": ["fund-densidade", "sol-solubilidade"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["concentração comum", "g/L", "densidade da solução"]
+        },
+        {
+          "id": "sol-concentracao-molar",
+          "nome": "Concentração em quantidade de matéria",
+          "descricao": "Concentração em mol/L, conversões com a concentração comum e concentração dos íons em solução.",
+          "area": "solucoes",
+          "prerequisitos": ["reac-massa-molar", "sol-concentracao-comum"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["mol/L", "molaridade", "concentração de íons"]
+        },
+        {
+          "id": "sol-titulo-ppm",
+          "nome": "Título, porcentagem e ppm",
+          "descricao": "Título em massa e em volume, porcentagem e partes por milhão, comuns em rótulos e em análises ambientais.",
+          "area": "solucoes",
+          "prerequisitos": ["sol-concentracao-comum"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["título", "porcentagem", "ppm", "fração em massa"]
+        }
+      ]
+    },
+    {
+      "id": "sol-operacoes",
+      "nome": "Diluição, mistura e titulação",
+      "descricao": "Preparar, misturar e analisar soluções.",
+      "area": "solucoes",
+      "prerequisitos": ["inorg-neutralizacao", "reac-calculo-estequiometrico", "sol-concentracao-molar"],
+      "etapasRecomendadas": ["em-2", "enem", "tecnico"],
+      "dificuldade": 2,
+      "palavrasChave": ["diluição", "mistura de soluções", "titulação"],
+      "subtemas": [
+        {
+          "id": "sol-diluicao",
+          "nome": "Diluição",
+          "descricao": "Acrescentar solvente mantendo a quantidade de soluto: a relação C₁V₁ = C₂V₂.",
+          "area": "solucoes",
+          "prerequisitos": ["sol-concentracao-molar"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["diluição", "C1V1 = C2V2", "solução estoque"]
+        },
+        {
+          "id": "sol-mistura-solucoes",
+          "nome": "Mistura de soluções",
+          "descricao": "Mistura de soluções do mesmo soluto e de solutos que reagem entre si.",
+          "area": "solucoes",
+          "prerequisitos": ["inorg-neutralizacao", "sol-diluicao"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["mistura de soluções", "concentração final", "reação em solução"]
+        },
+        {
+          "id": "sol-titulacao",
+          "nome": "Titulação ácido-base",
+          "descricao": "Determinar a concentração de uma solução reagindo-a com outra de concentração conhecida até o ponto de equivalência.",
+          "area": "solucoes",
+          "prerequisitos": ["reac-calculo-estequiometrico", "sol-mistura-solucoes"],
+          "etapasRecomendadas": ["em-2", "enem", "tecnico"],
+          "dificuldade": 3,
+          "palavrasChave": ["titulação", "ponto de equivalência", "bureta", "titulante", "indicador"]
+        }
+      ]
+    },
+    {
+      "id": "sol-coligativas",
+      "nome": "Propriedades coligativas",
+      "descricao": "Efeitos que dependem só do número de partículas dissolvidas.",
+      "area": "solucoes",
+      "prerequisitos": ["sol-concentracao-molar"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["coligativas", "pressão de vapor", "osmose"],
+      "subtemas": [
+        {
+          "id": "sol-pressao-vapor",
+          "nome": "Pressão de vapor e tonoscopia",
+          "descricao": "Pressão de vapor de líquidos puros e o abaixamento causado por um soluto não volátil.",
+          "area": "solucoes",
+          "prerequisitos": ["sol-concentracao-molar"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["pressão de vapor", "tonoscopia", "volatilidade"]
+        },
+        {
+          "id": "sol-ebulioscopia-crioscopia",
+          "nome": "Ebulioscopia e crioscopia",
+          "descricao": "Aumento da temperatura de ebulição e diminuição da temperatura de congelamento pela adição de soluto.",
+          "area": "solucoes",
+          "prerequisitos": ["sol-pressao-vapor"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["ebulioscopia", "crioscopia", "fator de van't Hoff", "anticongelante"]
+        },
+        {
+          "id": "sol-osmose",
+          "nome": "Osmose e pressão osmótica",
+          "descricao": "Passagem de solvente por membrana semipermeável, pressão osmótica e exemplos biológicos.",
+          "area": "solucoes",
+          "prerequisitos": ["sol-pressao-vapor"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["osmose", "pressão osmótica", "membrana semipermeável", "isotônico"]
+        }
+      ]
+    }
+  ]
+}

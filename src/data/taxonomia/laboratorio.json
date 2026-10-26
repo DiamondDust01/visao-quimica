@@ -1,0 +1,86 @@
+{
+  "id": "laboratorio",
+  "nome": "Segurança e prática de laboratório",
+  "descricao": "Equipamentos, medidas, normas de segurança e descarte responsável.",
+  "area": "laboratorio",
+  "prerequisitos": ["fund-unidades"],
+  "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "tecnico"],
+  "dificuldade": 1,
+  "palavrasChave": ["laboratório", "segurança", "vidrarias", "GHS"],
+  "temas": [
+    {
+      "id": "lab-equipamentos",
+      "nome": "Equipamentos e medidas",
+      "descricao": "Para que serve cada vidraria e como medir corretamente.",
+      "area": "laboratorio",
+      "prerequisitos": ["fund-unidades"],
+      "etapasRecomendadas": ["ef-6", "em-1", "tecnico"],
+      "dificuldade": 1,
+      "palavrasChave": ["vidrarias", "medidas", "menisco"],
+      "subtemas": [
+        {
+          "id": "lab-vidrarias",
+          "nome": "Vidrarias e equipamentos",
+          "descricao": "Béquer, erlenmeyer, proveta, pipeta, bureta, balão volumétrico, funil e outros: uso adequado de cada um.",
+          "area": "laboratorio",
+          "prerequisitos": [],
+          "etapasRecomendadas": ["ef-6", "em-1", "tecnico"],
+          "dificuldade": 1,
+          "palavrasChave": ["béquer", "erlenmeyer", "proveta", "pipeta", "bureta", "balão volumétrico"]
+        },
+        {
+          "id": "lab-medidas",
+          "nome": "Medidas de massa e volume",
+          "descricao": "Uso da balança, leitura do menisco e diferença entre vidraria graduada e volumétrica.",
+          "area": "laboratorio",
+          "prerequisitos": ["fund-unidades", "lab-vidrarias"],
+          "etapasRecomendadas": ["ef-6", "em-1", "tecnico"],
+          "dificuldade": 1,
+          "palavrasChave": ["menisco", "balança", "graduada", "volumétrica", "tara"]
+        }
+      ]
+    },
+    {
+      "id": "lab-seguranca",
+      "nome": "Segurança",
+      "descricao": "Proteção individual e coletiva, rótulos e resíduos.",
+      "area": "laboratorio",
+      "prerequisitos": [],
+      "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "tecnico"],
+      "dificuldade": 1,
+      "palavrasChave": ["EPI", "GHS", "resíduos"],
+      "subtemas": [
+        {
+          "id": "lab-epis-normas",
+          "nome": "EPIs e normas de segurança",
+          "descricao": "Jaleco, óculos, luvas e capela; regras básicas de conduta e o que fazer em pequenos acidentes.",
+          "area": "laboratorio",
+          "prerequisitos": [],
+          "etapasRecomendadas": ["ef-6", "em-1", "tecnico"],
+          "dificuldade": 1,
+          "palavrasChave": ["EPI", "EPC", "jaleco", "óculos de proteção", "capela"]
+        },
+        {
+          "id": "lab-rotulagem-ghs",
+          "nome": "Rotulagem e pictogramas GHS",
+          "descricao": "Os pictogramas do Sistema Globalmente Harmonizado, palavras de advertência e leitura de fichas de segurança.",
+          "area": "laboratorio",
+          "prerequisitos": ["lab-epis-normas"],
+          "etapasRecomendadas": ["ef-9", "em-1", "tecnico"],
+          "dificuldade": 2,
+          "palavrasChave": ["GHS", "pictograma", "FDS", "rotulagem", "inflamável", "corrosivo"]
+        },
+        {
+          "id": "lab-residuos",
+          "nome": "Descarte de resíduos",
+          "descricao": "Separação, armazenamento e destinação de resíduos químicos, e o que nunca vai para a pia.",
+          "area": "laboratorio",
+          "prerequisitos": ["lab-rotulagem-ghs"],
+          "etapasRecomendadas": ["em-1", "tecnico"],
+          "dificuldade": 2,
+          "palavrasChave": ["resíduos", "descarte", "segregação", "incompatibilidade"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "area": "gases",
+  "questoes": [
+    {
+      "id": "gas-variaveis-estado-q1", "temaId": "gas-variaveis-estado", "etapa": "em-2", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Converta a pressão de 2 atm para milímetros de mercúrio (1 atm = 760 mmHg).",
+      "gabarito": { "valor": 1520, "unidade": "mmHg", "exigirUnidade": true },
+      "verificacao": "2 * 760",
+      "resolucaoPassoAPasso": ["1 atm = 760 mmHg.", "2 atm × 760 = 1520 mmHg."],
+      "dica": "Multiplique por 760.",
+      "errosComuns": [{ "descricao": "Dividiu por 760 em vez de multiplicar.", "resposta": { "valor": 0.00263, "unidade": "mmHg" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-variaveis-estado-q2", "temaId": "gas-variaveis-estado", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Segundo a teoria cinética dos gases, ao aquecer um gás num recipiente fechado e rígido, a pressão aumenta porque:",
+      "alternativas": [{ "id": "a", "texto": "As partículas se movem mais rápido e colidem com mais frequência e força com as paredes" }, { "id": "b", "texto": "As partículas aumentam de tamanho" }, { "id": "c", "texto": "O número de partículas aumenta" }, { "id": "d", "texto": "As partículas se atraem mais" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A temperatura mede a agitação média das partículas.", "Mais agitação: mais choques e choques mais fortes contra as paredes.", "A pressão é o efeito desses choques, então ela aumenta."],
+      "dica": "O que a temperatura mede no nível das partículas?",
+      "errosComuns": [{ "descricao": "As partículas não crescem; o que muda é a velocidade delas.", "resposta": "b" }, { "descricao": "O recipiente é fechado: o número de partículas não muda.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "gas-variaveis-estado-q3", "temaId": "gas-variaveis-estado", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que, nos cálculos com gases, a temperatura deve ser usada em kelvin?",
+      "alternativas": [{ "id": "a", "texto": "Porque as leis dos gases são proporcionais à temperatura absoluta; em graus Celsius haveria zero e valores negativos sem sentido físico." }, { "id": "b", "texto": "Porque o kelvin é mais preciso que o grau Celsius." }, { "id": "c", "texto": "Porque os gases não existem abaixo de 0 °C." }, { "id": "d", "texto": "Por convenção, sem razão física." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na lei de Charles, o volume é proporcional à temperatura absoluta.", "Em °C, a 0 °C o volume seria zero e, abaixo disso, negativo, o que não faz sentido.", "Na escala Kelvin, o zero corresponde à ausência de agitação térmica."],
+      "dica": "O que aconteceria numa divisão por 0 °C?",
+      "errosComuns": [{ "descricao": "Gases existem abaixo de 0 °C; a questão é a escala usada nas proporções.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "gas-transformacoes-q1", "temaId": "gas-transformacoes", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um gás a 2 atm ocupa 6 L. Mantendo a temperatura constante, a pressão passa a 3 atm. Qual é o novo volume?",
+      "gabarito": { "valor": 4, "unidade": "L" },
+      "verificacao": "2 * 6 / 3",
+      "resolucaoPassoAPasso": ["Temperatura constante: lei de Boyle, P₁V₁ = P₂V₂.", "2 × 6 = 3 × V₂, então V₂ = 4 L."],
+      "dica": "Pressão e volume são inversamente proporcionais.",
+      "errosComuns": [{ "descricao": "Usou proporção direta: se a pressão sobe, o volume diminui.", "resposta": { "valor": 9, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-transformacoes-q2", "temaId": "gas-transformacoes", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um gás a 27 °C ocupa 10 L. Ele é aquecido até 327 °C, a pressão constante. Qual é o novo volume? (Use T(K) = T(°C) + 273.)",
+      "gabarito": { "valor": 20, "unidade": "L" },
+      "verificacao": "10 * (327 + 273) / (27 + 273)",
+      "resolucaoPassoAPasso": ["Pressão constante: V₁/T₁ = V₂/T₂, com T em kelvin.", "T₁ = 300 K e T₂ = 600 K.", "V₂ = 10 × 600 ÷ 300 = 20 L."],
+      "dica": "Converta as temperaturas para kelvin antes da conta.",
+      "errosComuns": [{ "descricao": "Usou as temperaturas em °C.", "resposta": { "valor": 121.1, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-transformacoes-q3", "temaId": "gas-transformacoes", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um pneu está a 2,0 atm e 300 K. Depois de uma viagem, o ar dentro dele chega a 330 K, e o volume praticamente não muda. Qual é a nova pressão?",
+      "gabarito": { "valor": 2.2, "unidade": "atm" },
+      "verificacao": "2.0 * 330 / 300",
+      "resolucaoPassoAPasso": ["Volume constante: P₁/T₁ = P₂/T₂.", "P₂ = 2,0 × 330 ÷ 300 = 2,2 atm."],
+      "dica": "A volume constante, pressão e temperatura absoluta são diretamente proporcionais.",
+      "errosComuns": [{ "descricao": "Inverteu a proporção: aquecendo, a pressão aumenta.", "resposta": { "valor": 1.82, "unidade": "atm" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-clapeyron-q1", "temaId": "gas-clapeyron", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Qual é o volume ocupado por 2 mol de um gás ideal a 1 atm e 273 K? Use R = 0,082 atm·L/(mol·K).",
+      "gabarito": { "valor": 44.77, "unidade": "L", "tolerancia": { "relativa": 0.01 } },
+      "verificacao": "2 * 0.082 * 273 / 1",
+      "resolucaoPassoAPasso": ["PV = nRT, então V = nRT ÷ P.", "V = 2 × 0,082 × 273 ÷ 1 ≈ 44,8 L."],
+      "dica": "Isole V na equação de Clapeyron.",
+      "errosComuns": [{ "descricao": "Usou o volume de 1 mol e esqueceu que são 2 mol.", "resposta": { "valor": 22.4, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-clapeyron-q2", "temaId": "gas-clapeyron", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Quantos mols de gás há num recipiente de 8,2 L a 3 atm e 27 °C? Use R = 0,082 atm·L/(mol·K) e T(K) = T(°C) + 273.",
+      "gabarito": { "valor": 1, "unidade": "mol" },
+      "verificacao": "3 * 8.2 / (0.082 * (27 + 273))",
+      "resolucaoPassoAPasso": ["T = 27 + 273 = 300 K.", "n = PV ÷ RT = 3 × 8,2 ÷ (0,082 × 300) = 24,6 ÷ 24,6 = 1 mol."],
+      "dica": "Converta a temperatura antes de usar a equação.",
+      "errosComuns": [{ "descricao": "Usou a temperatura em °C (27) na equação.", "resposta": { "valor": 11.1, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-clapeyron-q3", "temaId": "gas-clapeyron", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Qual é a pressão de 0,5 mol de gás num recipiente de 4,1 L a 127 °C? Use R = 0,082 atm·L/(mol·K).",
+      "gabarito": { "valor": 4, "unidade": "atm" },
+      "verificacao": "0.5 * 0.082 * (127 + 273) / 4.1",
+      "resolucaoPassoAPasso": ["T = 127 + 273 = 400 K.", "P = nRT ÷ V = 0,5 × 0,082 × 400 ÷ 4,1 = 16,4 ÷ 4,1 = 4 atm."],
+      "dica": "P = nRT ÷ V, com T em kelvin.",
+      "errosComuns": [{ "descricao": "Usou a temperatura em °C.", "resposta": { "valor": 1.27, "unidade": "atm" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-volume-molar-q1", "temaId": "gas-volume-molar", "etapa": "em-2", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Qual é o volume ocupado por 3 mol de gás nas CNTP? Use 22,4 L/mol.",
+      "gabarito": { "valor": 67.2, "unidade": "L" },
+      "verificacao": "3 * 22.4",
+      "resolucaoPassoAPasso": ["Nas CNTP, 1 mol de gás ocupa 22,4 L.", "3 mol × 22,4 L/mol = 67,2 L."],
+      "dica": "Volume = quantidade em mol × volume molar.",
+      "errosComuns": [{ "descricao": "Dividiu o volume molar pela quantidade em vez de multiplicar.", "resposta": { "valor": 7.47, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-volume-molar-q2", "temaId": "gas-volume-molar", "etapa": "em-2", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Quantos mols de gás há em 11,2 L nas CNTP? Use 22,4 L/mol.",
+      "gabarito": { "valor": 0.5, "unidade": "mol" },
+      "verificacao": "11.2 / 22.4",
+      "resolucaoPassoAPasso": ["n = V ÷ volume molar.", "n = 11,2 ÷ 22,4 = 0,5 mol."],
+      "dica": "Quantas vezes 22,4 L cabe em 11,2 L?",
+      "errosComuns": [{ "descricao": "Multiplicou em vez de dividir.", "resposta": { "valor": 250.9, "unidade": "mol" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-volume-molar-q3", "temaId": "gas-volume-molar", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Dois balões de mesmo volume, à mesma temperatura e pressão, contêm um gás hidrogênio (\\ce{H2}) e o outro gás carbônico (\\ce{CO2}). Os dois têm:",
+      "alternativas": [{ "id": "a", "texto": "O mesmo número de moléculas" }, { "id": "b", "texto": "A mesma massa de gás" }, { "id": "c", "texto": "A mesma densidade" }, { "id": "d", "texto": "O mesmo número de átomos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Hipótese de Avogadro: volumes iguais de gases, nas mesmas T e P, têm o mesmo número de moléculas.", "As massas diferem, porque cada molécula de \\ce{CO2} é bem mais pesada que uma de \\ce{H2}.", "O número de átomos também difere: \\ce{CO2} tem 3 átomos por molécula, \\ce{H2} tem 2."],
+      "dica": "Lembre a hipótese de Avogadro.",
+      "errosComuns": [{ "descricao": "As moléculas de \\ce{CO2} são mais pesadas: a massa é diferente.", "resposta": "b" }, { "descricao": "O número de moléculas é igual, mas o de átomos por molécula não.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "gas-pressoes-parciais-q1", "temaId": "gas-pressoes-parciais", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Uma mistura tem 2 mol de \\ce{N2} e 3 mol de \\ce{O2}, com pressão total de 10 atm. Qual é a pressão parcial do \\ce{O2}?",
+      "gabarito": { "valor": 6, "unidade": "atm" },
+      "verificacao": "3 / (2 + 3) * 10",
+      "resolucaoPassoAPasso": ["Fração molar do \\ce{O2}: 3 ÷ 5 = 0,6.", "Pressão parcial = fração molar × pressão total = 0,6 × 10 = 6 atm."],
+      "dica": "Comece pela fração molar do oxigênio.",
+      "errosComuns": [{ "descricao": "Calculou a pressão parcial do \\ce{N2}.", "resposta": { "valor": 4, "unidade": "atm" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-pressoes-parciais-q2", "temaId": "gas-pressoes-parciais", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "O ar seco tem cerca de 21% de \\ce{O2} em quantidade de matéria. Qual é a pressão parcial do oxigênio ao nível do mar, onde a pressão total é 1 atm?",
+      "gabarito": { "valor": 0.21, "unidade": "atm" },
+      "verificacao": "0.21 * 1",
+      "resolucaoPassoAPasso": ["Fração molar do \\ce{O2}: 0,21.", "Pressão parcial: 0,21 × 1 atm = 0,21 atm."],
+      "dica": "21% em quantidade de matéria é fração molar 0,21.",
+      "errosComuns": [{ "descricao": "Usou a porcentagem sem dividir por 100.", "resposta": { "valor": 21, "unidade": "atm" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-pressoes-parciais-q3", "temaId": "gas-pressoes-parciais", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Num recipiente, as pressões parciais são 0,8 atm de \\ce{N2} e 0,2 atm de \\ce{O2}. Qual é a fração molar do \\ce{O2}?",
+      "alternativas": [{ "id": "a", "texto": "0,2" }, { "id": "b", "texto": "0,25" }, { "id": "c", "texto": "0,8" }, { "id": "d", "texto": "0,5" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Pressão total: 0,8 + 0,2 = 1,0 atm.", "Fração molar = pressão parcial ÷ pressão total = 0,2 ÷ 1,0 = 0,2."],
+      "dica": "Divida pela pressão total, não pela do outro gás.",
+      "errosComuns": [{ "descricao": "Dividiu pela pressão parcial do \\ce{N2} em vez da total.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "gas-densidade-difusao-q1", "temaId": "gas-densidade-difusao", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Qual é a densidade do gás carbônico (44 g/mol) a 1 atm e 273 K? Use R = 0,082 atm·L/(mol·K).",
+      "gabarito": { "valor": 1.97, "unidade": "g/L", "tolerancia": { "relativa": 0.02 } },
+      "verificacao": "1 * 44 / (0.082 * 273)",
+      "resolucaoPassoAPasso": ["De PV = nRT e n = m/M: d = m/V = PM ÷ RT.", "d = 1 × 44 ÷ (0,082 × 273) ≈ 1,97 g/L."],
+      "dica": "Densidade de gás: d = PM ÷ RT.",
+      "errosComuns": [{ "descricao": "Inverteu a fórmula (RT ÷ PM).", "resposta": { "valor": 0.509, "unidade": "g/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-densidade-difusao-q2", "temaId": "gas-densidade-difusao", "etapa": "olimpiadas-quimica", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Nas mesmas condições, qual destes gases se difunde mais rapidamente? Massas molares: \\ce{H2} = 2, He = 4, \\ce{CH4} = 16 e \\ce{CO2} = 44 g/mol.",
+      "alternativas": [{ "id": "a", "texto": "\\ce{H2}" }, { "id": "b", "texto": "He" }, { "id": "c", "texto": "\\ce{CH4}" }, { "id": "d", "texto": "\\ce{CO2}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Lei de Graham: a velocidade de difusão é inversamente proporcional à raiz quadrada da massa molar.", "O gás mais leve, \\ce{H2}, é o mais rápido."],
+      "dica": "Mais leve, mais rápido.",
+      "errosComuns": [{ "descricao": "O \\ce{CO2} é o mais pesado da lista e o mais lento.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "gas-densidade-difusao-q3", "temaId": "gas-densidade-difusao", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Quantas vezes o hélio (4 g/mol) efunde mais rápido que o metano (16 g/mol), nas mesmas condições?",
+      "gabarito": { "valor": 2, "unidade": null },
+      "verificacao": "sqrt(16 / 4)",
+      "resolucaoPassoAPasso": ["Lei de Graham: v(He) ÷ v(CH₄) = √(M(CH₄) ÷ M(He)).", "√(16 ÷ 4) = √4 = 2."],
+      "dica": "A razão das velocidades é a raiz da razão inversa das massas molares.",
+      "errosComuns": [{ "descricao": "Esqueceu a raiz quadrada.", "resposta": { "valor": 4 } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-estequiometria-q1", "temaId": "gas-estequiometria", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Na reação \\ce{Zn + 2HCl -> ZnCl2 + H2}, qual volume de \\ce{H2}, nas CNTP, se forma a partir de 0,5 mol de zinco, com ácido em excesso? Use 22,4 L/mol.",
+      "gabarito": { "valor": 11.2, "unidade": "L" },
+      "verificacao": "0.5 * 22.4",
+      "resolucaoPassoAPasso": ["Proporção Zn : \\ce{H2} = 1 : 1, então formam-se 0,5 mol de \\ce{H2}.", "V = 0,5 × 22,4 = 11,2 L."],
+      "dica": "Olhe a proporção entre Zn e \\ce{H2}.",
+      "errosComuns": [{ "descricao": "Usou o volume de 1 mol, sem considerar a quantidade de zinco.", "resposta": { "valor": 22.4, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-estequiometria-q2", "temaId": "gas-estequiometria", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na decomposição \\ce{CaCO3 -> CaO + CO2}, qual volume de \\ce{CO2}, nas CNTP, se forma a partir de 25 g de \\ce{CaCO3} (100 g/mol)? Use 22,4 L/mol.",
+      "gabarito": { "valor": 5.6, "unidade": "L" },
+      "verificacao": "25 / 100 * 22.4",
+      "resolucaoPassoAPasso": ["25 g ÷ 100 g/mol = 0,25 mol de \\ce{CaCO3}.", "Proporção 1 : 1: 0,25 mol de \\ce{CO2}.", "V = 0,25 × 22,4 = 5,6 L."],
+      "dica": "Massa → mol → volume.",
+      "errosComuns": [{ "descricao": "Deu a quantidade em mol como se fosse o volume.", "resposta": { "valor": 0.25, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "gas-estequiometria-q3", "temaId": "gas-estequiometria", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na reação \\ce{N2 + 3H2 -> 2NH3}, com todos os gases nas mesmas temperatura e pressão, qual volume de \\ce{H2} reage com 10 L de \\ce{N2}?",
+      "gabarito": { "valor": 30, "unidade": "L" },
+      "verificacao": "10 * 3",
+      "resolucaoPassoAPasso": ["Nas mesmas T e P, a proporção entre volumes é a mesma dos coeficientes.", "\\ce{N2} : \\ce{H2} = 1 : 3, então 10 L de \\ce{N2} reagem com 30 L de \\ce{H2}."],
+      "dica": "Para gases nas mesmas condições, volumes seguem os coeficientes.",
+      "errosComuns": [{ "descricao": "Usou proporção 1 : 1.", "resposta": { "valor": 10, "unidade": "L" } }],
+      "revisado": false
+    }
+  ]
+}

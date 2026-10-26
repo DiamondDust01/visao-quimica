@@ -1,0 +1,309 @@
+{
+  "area": "ligacoes",
+  "questoes": [
+    {
+      "id": "lig-regra-octeto-q1", "temaId": "lig-regra-octeto", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Segundo a regra do octeto, os átomos tendem a:",
+      "alternativas": [{ "id": "a", "texto": "Ficar com 8 elétrons na camada de valência, como os gases nobres" }, { "id": "b", "texto": "Ficar com 8 prótons no núcleo" }, { "id": "c", "texto": "Ter 8 camadas eletrônicas" }, { "id": "d", "texto": "Perder todos os seus elétrons" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os gases nobres, com 8 elétrons na última camada (o hélio tem 2), são muito estáveis.", "Os outros átomos ganham, perdem ou compartilham elétrons até chegar a essa configuração."],
+      "dica": "Pense nos gases nobres, que quase não reagem.",
+      "errosComuns": [{ "descricao": "Nas ligações químicas mudam os elétrons; o núcleo não se altera.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-regra-octeto-q2", "temaId": "lig-regra-octeto", "etapa": "ef-9", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O oxigênio tem 6 elétrons na camada de valência. Para completar o octeto, ele tende a:",
+      "alternativas": [{ "id": "a", "texto": "Ganhar 2 elétrons ou compartilhar 2 pares de elétrons" }, { "id": "b", "texto": "Perder 6 elétrons" }, { "id": "c", "texto": "Ganhar 6 elétrons" }, { "id": "d", "texto": "Não fazer ligações" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Faltam 2 elétrons para o oxigênio chegar a 8.", "Ele pode receber 2 elétrons (formando \\ce{O^{2-}}) ou compartilhar 2 pares, como na água."],
+      "dica": "Quantos elétrons faltam para 8?",
+      "errosComuns": [{ "descricao": "Perder 6 elétrons exigiria muita energia; é mais fácil ganhar 2.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-regra-octeto-q3", "temaId": "lig-regra-octeto", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas moléculas é uma exceção à regra do octeto?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{BF3}" }, { "id": "b", "texto": "\\ce{CH4}" }, { "id": "c", "texto": "\\ce{H2O}" }, { "id": "d", "texto": "\\ce{NH3}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O boro tem 3 elétrons de valência e faz 3 ligações com o flúor.", "Ele fica com só 6 elétrons ao redor: octeto incompleto.", "Em \\ce{CH4}, \\ce{H2O} e \\ce{NH3}, o átomo central tem 8 elétrons; o hidrogênio fica com 2, como o hélio."],
+      "dica": "Conte os elétrons ao redor do átomo central.",
+      "errosComuns": [{ "descricao": "No \\ce{CH4} o carbono tem 8 elétrons; o hidrogênio segue a regra do dueto (2 elétrons).", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-ionica-q1", "temaId": "lig-ionica", "etapa": "ef-9", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "O cálcio forma o íon \\ce{Ca^{2+}} e o cloro forma o íon \\ce{Cl-}. Escreva a fórmula do cloreto de cálcio.",
+      "gabarito": { "formula": "CaCl2", "nomes": ["cloreto de cálcio"] },
+      "resolucaoPassoAPasso": ["O composto é neutro: a carga total dos íons deve dar zero.", "Um \\ce{Ca^{2+}} (+2) precisa de dois \\ce{Cl-} (−1 cada).", "Fórmula: \\ce{CaCl2}."],
+      "dica": "Quantos \\ce{Cl-} equilibram a carga de um \\ce{Ca^{2+}}?",
+      "errosComuns": [{ "descricao": "Uniu um íon de cada: a carga total ficaria +1.", "resposta": "CaCl" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-ionica-q2", "temaId": "lig-ionica", "etapa": "em-1", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "O alumínio forma \\ce{Al^{3+}} e o oxigênio forma \\ce{O^{2-}}. Escreva a fórmula do óxido de alumínio.",
+      "gabarito": { "formula": "Al2O3", "nomes": ["óxido de alumínio"] },
+      "resolucaoPassoAPasso": ["As cargas precisam se anular: o menor múltiplo comum de 3 e 2 é 6.", "Dois \\ce{Al^{3+}} dão +6; três \\ce{O^{2-}} dão −6.", "Fórmula: \\ce{Al2O3}."],
+      "dica": "Cruze as cargas: a carga de um íon vira o índice do outro.",
+      "errosComuns": [{ "descricao": "Uniu um íon de cada: as cargas (+3 e −2) não se anulam.", "resposta": "AlO" }, { "descricao": "Trocou os índices: \\ce{Al3O2} teria carga +5.", "resposta": "Al3O2" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-ionica-q3", "temaId": "lig-ionica", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "A ligação iônica ocorre, em geral, entre:",
+      "alternativas": [{ "id": "a", "texto": "Um metal e um ametal, com transferência de elétrons" }, { "id": "b", "texto": "Dois ametais, com compartilhamento de elétrons" }, { "id": "c", "texto": "Dois metais, com mar de elétrons" }, { "id": "d", "texto": "Dois gases nobres" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Metais perdem elétrons com facilidade e ametais os recebem.", "Formam-se cátions e ânions, que se atraem: ligação iônica."],
+      "dica": "Quem tende a perder e quem tende a ganhar elétrons?",
+      "errosComuns": [{ "descricao": "Compartilhamento entre ametais é a ligação covalente.", "resposta": "b" }, { "descricao": "Entre metais ocorre a ligação metálica.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-covalente-q1", "temaId": "lig-covalente", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Na molécula de gás cloro, \\ce{Cl2}, os dois átomos se unem por:",
+      "alternativas": [{ "id": "a", "texto": "Compartilhamento de um par de elétrons" }, { "id": "b", "texto": "Transferência de um elétron de um átomo para o outro" }, { "id": "c", "texto": "Um mar de elétrons livres" }, { "id": "d", "texto": "Atração entre íons de cargas opostas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os dois átomos são iguais e têm 7 elétrons de valência; a nenhum interessa perder elétrons.", "Cada um compartilha um elétron, e o par compartilhado completa o octeto dos dois: ligação covalente simples."],
+      "dica": "Dois átomos iguais: nenhum consegue tirar o elétron do outro.",
+      "errosComuns": [{ "descricao": "Transferência de elétrons forma íons, o que é a ligação iônica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-covalente-q2", "temaId": "lig-covalente", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Na molécula de nitrogênio, \\ce{N2}, quantos pares de elétrons são compartilhados entre os dois átomos?",
+      "gabarito": { "valor": 3, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "8 - 5",
+      "resolucaoPassoAPasso": ["Cada nitrogênio tem 5 elétrons de valência e precisa de 3 para chegar a 8.", "Os dois átomos compartilham 3 pares: ligação tripla (N≡N)."],
+      "dica": "Quantos elétrons faltam a cada nitrogênio?",
+      "errosComuns": [{ "descricao": "Uma ligação simples deixaria cada nitrogênio com só 6 elétrons.", "resposta": { "valor": 1 } }],
+      "revisado": false
+    },
+    {
+      "id": "lig-covalente-q3", "temaId": "lig-covalente", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "No gás carbônico (O=C=O), quantas ligações covalentes o carbono faz no total?",
+      "alternativas": [{ "id": "a", "texto": "2" }, { "id": "b", "texto": "4" }, { "id": "c", "texto": "6" }, { "id": "d", "texto": "8" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["O carbono faz uma ligação dupla com cada oxigênio.", "Duas ligações duplas equivalem a 4 ligações (4 pares compartilhados).", "Isso completa o octeto do carbono, que é tetravalente."],
+      "dica": "Cada traço da fórmula estrutural é uma ligação.",
+      "errosComuns": [{ "descricao": "Contou os átomos ligados ao carbono, não as ligações.", "resposta": "a" }, { "descricao": "Contou os elétrons compartilhados em vez das ligações.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-metalica-q1", "temaId": "lig-metalica", "etapa": "em-1", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Pelo modelo do mar de elétrons, um metal é formado por:",
+      "alternativas": [{ "id": "a", "texto": "Cátions mergulhados em elétrons livres, que se movem por todo o metal" }, { "id": "b", "texto": "Moléculas unidas por ligações covalentes" }, { "id": "c", "texto": "Ânions e cátions alternados" }, { "id": "d", "texto": "Átomos neutros isolados, sem interação" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os metais perdem facilmente os elétrons de valência.", "Esses elétrons ficam livres e se movem entre os cátions, mantendo-os unidos."],
+      "dica": "De onde vem o nome mar de elétrons?",
+      "errosComuns": [{ "descricao": "Cátions e ânions alternados descrevem um composto iônico.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-metalica-q2", "temaId": "lig-metalica", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que os metais conduzem corrente elétrica mesmo no estado sólido?",
+      "alternativas": [{ "id": "a", "texto": "Porque têm elétrons livres que podem se mover" }, { "id": "b", "texto": "Porque têm íons livres em solução" }, { "id": "c", "texto": "Porque os prótons se movem pelo metal" }, { "id": "d", "texto": "Porque são formados por moléculas polares" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Corrente elétrica é movimento de cargas.", "Nos metais, os elétrons livres se deslocam quando há uma diferença de potencial."],
+      "dica": "Corrente elétrica precisa de cargas que possam se mover.",
+      "errosComuns": [{ "descricao": "Íons livres explicam a condução em soluções e sais fundidos, não nos metais sólidos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-metalica-q3", "temaId": "lig-metalica", "etapa": "em-1", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Associe cada liga metálica aos seus principais componentes.",
+      "itens": [{ "id": "bronze", "texto": "Bronze" }, { "id": "latao", "texto": "Latão" }, { "id": "aco", "texto": "Aço" }],
+      "opcoes": [{ "id": "cusn", "texto": "Cobre e estanho" }, { "id": "cuzn", "texto": "Cobre e zinco" }, { "id": "fec", "texto": "Ferro e carbono" }, { "id": "alfe", "texto": "Alumínio e ferro" }],
+      "gabarito": { "bronze": "cusn", "latao": "cuzn", "aco": "fec" },
+      "resolucaoPassoAPasso": ["Bronze: cobre com estanho.", "Latão: cobre com zinco.", "Aço: ferro com pequena quantidade de carbono."],
+      "dica": "Bronze e latão têm cobre; o aço tem ferro.",
+      "errosComuns": [{ "descricao": "Trocar bronze e latão: o latão é o que tem zinco." }],
+      "revisado": false
+    },
+    {
+      "id": "lig-propriedades-compostos-q1", "temaId": "lig-propriedades-compostos", "etapa": "em-1", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Classifique cada substância pelo tipo de ligação ou estrutura.",
+      "itens": [{ "id": "nacl", "texto": "Sal de cozinha (\\ce{NaCl})" }, { "id": "agua", "texto": "Água (\\ce{H2O})" }, { "id": "ferro", "texto": "Ferro (\\ce{Fe})" }, { "id": "diamante", "texto": "Diamante (\\ce{C})" }],
+      "opcoes": [{ "id": "ion", "texto": "Composto iônico" }, { "id": "mol", "texto": "Substância molecular" }, { "id": "met", "texto": "Substância metálica" }, { "id": "rede", "texto": "Sólido covalente (rede)" }],
+      "gabarito": { "nacl": "ion", "agua": "mol", "ferro": "met", "diamante": "rede" },
+      "resolucaoPassoAPasso": ["\\ce{NaCl}: metal e ametal, íons. Água: moléculas com ligações covalentes.", "Ferro: ligação metálica.", "Diamante: cada carbono ligado covalentemente a outros quatro, numa rede gigante, sem moléculas separadas."],
+      "dica": "O diamante não é formado por moléculas pequenas.",
+      "errosComuns": [{ "descricao": "Classificar o diamante como molecular: ele é uma rede covalente contínua." }],
+      "revisado": false
+    },
+    {
+      "id": "lig-propriedades-compostos-q2", "temaId": "lig-propriedades-compostos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um sólido funde a 801 °C, não conduz corrente no estado sólido, mas conduz quando fundido ou dissolvido em água. Ele é provavelmente:",
+      "alternativas": [{ "id": "a", "texto": "Um composto iônico" }, { "id": "b", "texto": "Uma substância molecular" }, { "id": "c", "texto": "Um metal" }, { "id": "d", "texto": "Um sólido covalente em rede" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ponto de fusão alto indica atrações fortes.", "Conduzir só quando fundido ou dissolvido indica íons que ficam livres nessas condições.", "É o comportamento típico de um composto iônico."],
+      "dica": "Quando os íons ficam livres para se mover?",
+      "errosComuns": [{ "descricao": "Metais conduzem também no estado sólido.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-propriedades-compostos-q3", "temaId": "lig-propriedades-compostos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que o sal de cozinha sólido não conduz corrente elétrica, mas a água com sal dissolvido conduz?",
+      "alternativas": [{ "id": "a", "texto": "No sólido, os íons ficam presos no retículo; dissolvidos, ficam livres para se mover." }, { "id": "b", "texto": "A água sozinha é ótima condutora." }, { "id": "c", "texto": "O sal sólido tem elétrons livres, que a água bloqueia." }, { "id": "d", "texto": "Ao dissolver, o sal vira um metal." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Conduzir exige cargas em movimento.", "No retículo cristalino, os íons só vibram em suas posições.", "Na água, os íons se separam e passam a se mover."],
+      "dica": "Onde os íons conseguem se movimentar?",
+      "errosComuns": [{ "descricao": "A água pura conduz muito pouco; quem conduz são os íons dissolvidos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-vsepr-q1", "temaId": "lig-vsepr", "etapa": "em-1", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Associe cada molécula à sua geometria.",
+      "itens": [{ "id": "co2", "texto": "\\ce{CO2}" }, { "id": "h2o", "texto": "\\ce{H2O}" }, { "id": "nh3", "texto": "\\ce{NH3}" }, { "id": "ch4", "texto": "\\ce{CH4}" }, { "id": "bf3", "texto": "\\ce{BF3}" }],
+      "opcoes": [{ "id": "lin", "texto": "Linear" }, { "id": "ang", "texto": "Angular" }, { "id": "pir", "texto": "Piramidal" }, { "id": "tet", "texto": "Tetraédrica" }, { "id": "tri", "texto": "Trigonal plana" }],
+      "gabarito": { "co2": "lin", "h2o": "ang", "nh3": "pir", "ch4": "tet", "bf3": "tri" },
+      "resolucaoPassoAPasso": ["Conte as regiões de elétrons ao redor do átomo central (ligações e pares não ligantes).", "\\ce{CO2}: 2 regiões, linear. \\ce{BF3}: 3 regiões sem par livre, trigonal plana. \\ce{CH4}: 4 regiões sem par livre, tetraédrica.", "\\ce{NH3}: 4 regiões com 1 par livre, piramidal. \\ce{H2O}: 4 regiões com 2 pares livres, angular."],
+      "dica": "Pares não ligantes no átomo central também ocupam espaço.",
+      "errosComuns": [{ "descricao": "Achar a água linear por ter só dois hidrogênios: os pares livres do oxigênio dobram a molécula." }],
+      "revisado": false
+    },
+    {
+      "id": "lig-vsepr-q2", "temaId": "lig-vsepr", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que a molécula de água é angular, e não linear?",
+      "alternativas": [{ "id": "a", "texto": "Porque o oxigênio tem dois pares de elétrons não ligantes que repelem as ligações." }, { "id": "b", "texto": "Porque os átomos de hidrogênio são muito grandes." }, { "id": "c", "texto": "Porque as ligações O–H são iônicas." }, { "id": "d", "texto": "Porque há uma ligação dupla entre O e H." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O oxigênio tem 4 regiões de elétrons: 2 ligações e 2 pares não ligantes.", "As 4 regiões se afastam ao máximo (arranjo tetraédrico).", "Vendo só os átomos, a molécula fica angular, com cerca de 104,5°."],
+      "dica": "Conte os pares de elétrons do oxigênio que não fazem ligação.",
+      "errosComuns": [{ "descricao": "As ligações O–H são covalentes polares, não iônicas.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-vsepr-q3", "temaId": "lig-vsepr", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a geometria do trióxido de enxofre, \\ce{SO3}, em que o enxofre central não tem pares de elétrons não ligantes?",
+      "alternativas": [{ "id": "a", "texto": "Trigonal plana" }, { "id": "b", "texto": "Piramidal" }, { "id": "c", "texto": "Tetraédrica" }, { "id": "d", "texto": "Angular" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O enxofre está ligado a 3 oxigênios e não tem par livre: 3 regiões de elétrons.", "Três regiões se afastam ao máximo num plano, a 120°: trigonal plana."],
+      "dica": "Três regiões sem par livre.",
+      "errosComuns": [{ "descricao": "A geometria piramidal exige um par não ligante no átomo central, como no \\ce{NH3}.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-polaridade-q1", "temaId": "lig-polaridade", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas moléculas é apolar, mesmo tendo ligações polares?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{CO2}" }, { "id": "b", "texto": "\\ce{H2O}" }, { "id": "c", "texto": "\\ce{NH3}" }, { "id": "d", "texto": "\\ce{HCl}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As ligações C=O são polares, porque o oxigênio é mais eletronegativo.", "Como o \\ce{CO2} é linear, os dois polos se cancelam e a molécula é apolar.", "Na água e na amônia, a geometria não cancela os polos."],
+      "dica": "A geometria pode fazer as polaridades se cancelarem.",
+      "errosComuns": [{ "descricao": "A água é angular: os polos não se cancelam e ela é polar.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-polaridade-q2", "temaId": "lig-polaridade", "etapa": "em-1", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Classifique cada molécula como polar ou apolar.",
+      "itens": [{ "id": "h2", "texto": "\\ce{H2}" }, { "id": "hcl", "texto": "\\ce{HCl}" }, { "id": "ch4", "texto": "\\ce{CH4}" }, { "id": "h2o", "texto": "\\ce{H2O}" }],
+      "opcoes": [{ "id": "p", "texto": "Polar" }, { "id": "a", "texto": "Apolar" }],
+      "gabarito": { "h2": "a", "hcl": "p", "ch4": "a", "h2o": "p" },
+      "resolucaoPassoAPasso": ["\\ce{H2}: átomos iguais, ligação apolar.", "\\ce{HCl}: o cloro é mais eletronegativo, molécula polar.", "\\ce{CH4}: tetraédrica e simétrica, apolar.", "\\ce{H2O}: angular, polar."],
+      "dica": "Veja a diferença de eletronegatividade e a simetria da molécula.",
+      "errosComuns": [{ "descricao": "Achar que o metano é polar: as ligações C–H são pouco polares e a molécula é simétrica." }],
+      "revisado": false
+    },
+    {
+      "id": "lig-polaridade-q3", "temaId": "lig-polaridade", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na ligação entre hidrogênio e cloro (H–Cl), a carga parcial negativa (δ−) fica:",
+      "alternativas": [{ "id": "a", "texto": "No cloro, que é mais eletronegativo" }, { "id": "b", "texto": "No hidrogênio" }, { "id": "c", "texto": "Dividida igualmente entre os dois" }, { "id": "d", "texto": "Em nenhum dos dois: a ligação é apolar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O átomo mais eletronegativo atrai mais o par compartilhado.", "O cloro é bem mais eletronegativo que o hidrogênio: fica com δ−, e o hidrogênio com δ+."],
+      "dica": "Quem puxa mais o par de elétrons?",
+      "errosComuns": [{ "descricao": "Divisão igual só ocorre entre átomos de mesma eletronegatividade.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-hibridizacao-q1", "temaId": "lig-hibridizacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a hibridização do carbono no metano, \\ce{CH4}?",
+      "alternativas": [{ "id": "a", "texto": "sp³" }, { "id": "b", "texto": "sp²" }, { "id": "c", "texto": "sp" }, { "id": "d", "texto": "Não há hibridização" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O carbono faz 4 ligações simples, iguais, apontando para os vértices de um tetraedro.", "Para isso, combina 1 orbital s e 3 orbitais p em 4 orbitais híbridos sp³."],
+      "dica": "Quatro ligações simples iguais.",
+      "errosComuns": [{ "descricao": "sp² aparece em carbonos com uma ligação dupla.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-hibridizacao-q2", "temaId": "lig-hibridizacao", "etapa": "em-3", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "No eteno (\\ce{H2C=CH2}), qual é a hibridização de cada carbono?",
+      "alternativas": [{ "id": "a", "texto": "sp²" }, { "id": "b", "texto": "sp³" }, { "id": "c", "texto": "sp" }, { "id": "d", "texto": "sp³d" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada carbono faz 3 ligações sigma (2 com H e 1 com C) e 1 ligação pi.", "As 3 sigma usam orbitais híbridos sp²; o orbital p que sobra forma a ligação pi.", "Geometria trigonal plana em torno de cada carbono."],
+      "dica": "Conte as ligações sigma de cada carbono.",
+      "errosComuns": [{ "descricao": "sp³ é para carbonos só com ligações simples.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-hibridizacao-q3", "temaId": "lig-hibridizacao", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Quantas ligações sigma (σ) e pi (π) há na molécula de etino (H–C≡C–H)?",
+      "alternativas": [{ "id": "a", "texto": "3 σ e 2 π" }, { "id": "b", "texto": "5 σ e 0 π" }, { "id": "c", "texto": "2 σ e 3 π" }, { "id": "d", "texto": "4 σ e 1 π" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Toda ligação simples é sigma: as duas C–H somam 2 σ.", "A ligação tripla tem 1 σ e 2 π.", "Total: 3 σ e 2 π."],
+      "dica": "Numa ligação múltipla, só uma das ligações é sigma.",
+      "errosComuns": [{ "descricao": "Contou a tripla como três ligações pi; uma delas é sigma.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-forcas-intermoleculares-q1", "temaId": "lig-forcas-intermoleculares", "etapa": "em-1", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Associe cada substância à interação intermolecular mais importante entre suas moléculas.",
+      "itens": [{ "id": "ch4", "texto": "\\ce{CH4}" }, { "id": "hcl", "texto": "\\ce{HCl}" }, { "id": "h2o", "texto": "\\ce{H2O}" }, { "id": "nh3", "texto": "\\ce{NH3}" }],
+      "opcoes": [{ "id": "di", "texto": "Dipolo induzido (forças de dispersão)" }, { "id": "dd", "texto": "Dipolo permanente (dipolo-dipolo)" }, { "id": "lh", "texto": "Ligação de hidrogênio" }],
+      "gabarito": { "ch4": "di", "hcl": "dd", "h2o": "lh", "nh3": "lh" },
+      "resolucaoPassoAPasso": ["\\ce{CH4} é apolar: só dispersão.", "\\ce{HCl} é polar, mas o H está ligado ao Cl, que não é F, O nem N: dipolo-dipolo.", "Em \\ce{H2O} e \\ce{NH3}, o H está ligado a O e N: ligação de hidrogênio."],
+      "dica": "Ligação de hidrogênio exige H ligado a F, O ou N.",
+      "errosComuns": [{ "descricao": "Achar que o HCl faz ligação de hidrogênio: o cloro não está entre F, O e N." }],
+      "revisado": false
+    },
+    {
+      "id": "lig-forcas-intermoleculares-q2", "temaId": "lig-forcas-intermoleculares", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A ligação de hidrogênio acontece entre moléculas em que o hidrogênio está ligado a:",
+      "alternativas": [{ "id": "a", "texto": "Flúor, oxigênio ou nitrogênio" }, { "id": "b", "texto": "Carbono" }, { "id": "c", "texto": "Qualquer metal" }, { "id": "d", "texto": "Gases nobres" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["F, O e N são muito eletronegativos e pequenos.", "Eles deixam o H com carga parcial positiva intensa, que é atraída pelo par de elétrons de outra molécula."],
+      "dica": "Precisa ser um átomo pequeno e muito eletronegativo.",
+      "errosComuns": [{ "descricao": "A ligação C–H é pouco polar e não forma ligações de hidrogênio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-forcas-intermoleculares-q3", "temaId": "lig-forcas-intermoleculares", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que o gelo flutua na água líquida?",
+      "alternativas": [{ "id": "a", "texto": "No gelo, as ligações de hidrogênio organizam as moléculas num arranjo aberto, menos denso que o líquido." }, { "id": "b", "texto": "Porque todo gelo tem bolhas de ar presas." }, { "id": "c", "texto": "Porque as moléculas de água no gelo ficam mais leves." }, { "id": "d", "texto": "Porque o gelo é formado por outra substância." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No sólido, cada molécula faz ligações de hidrogênio em direções fixas.", "Isso forma uma estrutura com espaços vazios, que ocupa mais volume que o líquido.", "Mesma massa, mais volume: densidade menor, e o gelo flutua."],
+      "dica": "Densidade = massa ÷ volume. O que muda ao congelar?",
+      "errosComuns": [{ "descricao": "A massa das moléculas não muda; o que muda é o espaço entre elas.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-solubilidade-ebulicao-q1", "temaId": "lig-solubilidade-ebulicao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas substâncias deve ser a mais solúvel em água?",
+      "alternativas": [{ "id": "a", "texto": "Etanol, que faz ligações de hidrogênio" }, { "id": "b", "texto": "Óleo de cozinha" }, { "id": "c", "texto": "Gasolina" }, { "id": "d", "texto": "Iodo (\\ce{I2})" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Semelhante dissolve semelhante: substâncias polares se dissolvem em solventes polares.", "O etanol tem o grupo –OH e faz ligações de hidrogênio com a água.", "Óleo, gasolina e iodo são apolares."],
+      "dica": "Água é polar e faz ligações de hidrogênio.",
+      "errosComuns": [{ "descricao": "O iodo é apolar e se dissolve pouco em água.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "lig-solubilidade-ebulicao-q2", "temaId": "lig-solubilidade-ebulicao", "etapa": "em-1", "dificuldade": 3, "tipo": "ordenacao",
+      "enunciado": "Ordene as substâncias pela temperatura de ebulição.",
+      "criterio": "Da menor para a maior temperatura de ebulição.",
+      "itens": [{ "id": "h2o", "texto": "\\ce{H2O}" }, { "id": "ch4", "texto": "\\ce{CH4}" }, { "id": "nh3", "texto": "\\ce{NH3}" }, { "id": "h2s", "texto": "\\ce{H2S}" }],
+      "gabarito": ["ch4", "h2s", "nh3", "h2o"],
+      "resolucaoPassoAPasso": ["\\ce{CH4}: apolar, só dispersão: a menor (cerca de −162 °C).", "\\ce{H2S}: polar, dipolo-dipolo (cerca de −60 °C).", "\\ce{NH3}: ligações de hidrogênio (cerca de −33 °C).", "\\ce{H2O}: ligações de hidrogênio mais numerosas e intensas (100 °C)."],
+      "dica": "Classifique primeiro o tipo de interação de cada uma.",
+      "errosComuns": [{ "descricao": "Ordenar pela massa molar: aqui o tipo de interação pesa mais que a massa." }],
+      "revisado": false
+    },
+    {
+      "id": "lig-solubilidade-ebulicao-q3", "temaId": "lig-solubilidade-ebulicao", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A água (18 g/mol) ferve a 100 °C, e o sulfeto de hidrogênio, \\ce{H2S} (34 g/mol), ferve a cerca de −60 °C. O que explica essa diferença?",
+      "alternativas": [{ "id": "a", "texto": "As ligações de hidrogênio entre as moléculas de água" }, { "id": "b", "texto": "A maior massa molar do \\ce{H2S}" }, { "id": "c", "texto": "As ligações covalentes O–H serem iônicas" }, { "id": "d", "texto": "O \\ce{H2S} ser apolar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Pela massa, esperaríamos o \\ce{H2S} fervendo a temperatura mais alta.", "Mas a água forma ligações de hidrogênio, bem mais fortes que as interações dipolo-dipolo do \\ce{H2S}.", "É preciso mais energia para separar as moléculas de água."],
+      "dica": "Compare o tipo de interação, não só a massa.",
+      "errosComuns": [{ "descricao": "Massa molar maior aumentaria a ebulição se as interações fossem do mesmo tipo; aqui não são.", "resposta": "b" }, { "descricao": "O \\ce{H2S} é angular e polar.", "resposta": "d" }],
+      "revisado": false
+    }
+  ]
+}
