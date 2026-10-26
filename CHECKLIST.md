@@ -48,7 +48,7 @@ Opções: `--sem-regras` pula o teste das regras do Firestore (precisa de Java),
 | 7 | App Android em emulador | emulador impossível (virtualização desligada no BIOS); arquivos do APK testados em modo celular: `npm run test:android`, 16 verificações |
 | 8 | Documentação | feito: README, CHANGELOG (0.2.0), CHECKLIST, REVISAO_QUESTOES, roteiro de slides |
 | 9 | Instaladores | APK 0.2.0 e Windows 0.2.0 gerados; portátil testado; Setup bloqueado pelo Windows (sem assinatura) |
-| 10 | Branches no GitHub | pendente |
+| 10 | Branches no GitHub | feito: `main`, `app-pc` (LFS conferido no GitHub) e `app-mobile` enviadas |
 
 ### Eficiência nesta rodada
 
@@ -63,3 +63,14 @@ Opções: `--sem-regras` pula o teste das regras do Firestore (precisa de Java),
 - Arquivos temporários de teste e pacotes da versão anterior removidos de `release/`.
 - Sincronização da conta: espera 2,5 s para juntar respostas seguidas num envio só e não reenvia
   o que não mudou.
+
+### Fechamento da rodada
+
+- Última `npm run verificar -- --completo`: 10 etapas sem falha, 94 s somados (o build entra uma
+  vez; com a entrada sem mudança, a verificação seguinte levou 32 s).
+- Testes: 127 de unidade, 15 de regras, 18 no teste de fumaça, 16 no teste Android e 22 no teste
+  com o Firebase emulado.
+- Pendências que dependem de você: assinar os executáveis (o Windows bloqueou o instalador sem
+  assinatura), ligar a virtualização no BIOS para um emulador Android de verdade, configurar um
+  projeto Firebase para a conta e as salas funcionarem fora do modo de demonstração, trocar o
+  `applicationId` provisório e a revisão das questões por um professor.
