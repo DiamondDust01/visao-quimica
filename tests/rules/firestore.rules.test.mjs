@@ -3,7 +3,7 @@
 import test, { after, before, beforeEach } from 'node:test';
 import fs from 'node:fs';
 import { assertFails, assertSucceeds, initializeTestEnvironment } from '@firebase/rules-unit-testing';
-import { deleteDoc, doc, getDoc, getDocs, collection, setDoc, updateDoc } from 'firebase/firestore';
+import { deleteDoc, doc, getDoc, getDocs, collection, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore';
 
 const APP = 'visao-quimica';
 const CODE = 'ABC234';
@@ -114,4 +114,31 @@ test('sinalização WebRTC: só os dois aparelhos do par, dentro da sala', async
 test('nada fora de artifacts/{appId} é acessível', async () => {
   await assertFails(setDoc(doc(as('aluno-a'), 'qualquer', 'coisa'), { a: 1 }));
   await assertFails(getDoc(doc(as('aluno-a'), 'artifacts', APP, 'outra', 'coisa')));
+});
+
+// Contas: endereço = hash de 64 caracteres hexadecimais; conteúdo cifrado com campos fixos.
+const ACCOUNT_ID = 'a'.repeat(64);
+const account = (db, id = ACCOUNT_ID) => doc(db, 'artifacts', APP, 'contas', id);
+const sealed = (extra = {}) => ({ versao: 1, iv: 'AAAAAAAAAAAAAAAA', dados: 'Y2lmcmFkbw==', atualizadoEm: serverTimestamp(), ...extra });
+
+test('conta: quem tem o endereço grava, lê, atualiza e exclui', async () => {
+  await assertSucceeds(setDoc(account(as('aparelho-1')), sealed()));
+  await assertSucceeds(getDoc(account(as('aparelho-2'))));
+  await assertSucceeds(setDoc(account(as('aparelho-2')), sealed({ dados: 'b3V0cm8=' })));
+  await assertSucceeds(deleteDoc(account(as('aparelho-1'))));
+});
+
+test('conta: sem login, listando ou com endereço fora do formato, nada passa', async () => {
+  await assertFails(setDoc(account(env.unauthenticatedContext().firestore()), sealed()));
+  await assertFails(getDocs(collection(as('aparelho-1'), 'artifacts', APP, 'contas')));
+  await assertFails(setDoc(account(as('aparelho-1'), 'curto'), sealed()));
+  await assertFails(setDoc(account(as('aparelho-1'), 'A'.repeat(64)), sealed()));
+});
+
+test('conta: só os campos cifrados, com tamanho limitado e data do servidor', async () => {
+  await assertFails(setDoc(account(as('aparelho-1')), sealed({ email: 'x@y.z' })));
+  await assertFails(setDoc(account(as('aparelho-1')), sealed({ versao: 2 })));
+  await assertFails(setDoc(account(as('aparelho-1')), sealed({ dados: 'x'.repeat(500001) })));
+  await assertFails(setDoc(account(as('aparelho-1')), sealed({ atualizadoEm: new Date('2020-01-01') })));
+  await assertFails(setDoc(account(as('aparelho-1')), sealed({ iv: 123 })));
 });

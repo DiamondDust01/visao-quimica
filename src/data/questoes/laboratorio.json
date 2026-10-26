@@ -27,7 +27,7 @@
       "enunciado": "Por que vidrarias volumétricas, como pipetas e balões volumétricos, não devem ser aquecidas na estufa nem na chama?",
       "alternativas": [{ "id": "a", "texto": "Porque o aquecimento pode alterar o volume calibrado do vidro" }, { "id": "b", "texto": "Porque elas derretem a 50 °C" }, { "id": "c", "texto": "Porque ficam coloridas" }, { "id": "d", "texto": "Porque perdem a graduação impressa" }],
       "gabarito": "a",
-      "resolucaoPassoAPasso": ["O vidro se dilata e pode não voltar exatamente ao volume original.", "A vidraria perde a calibração e passa a medir errado.", "Por isso ela é seca à temperatura ambiente ou rinsada com o próprio líquido a medir."],
+      "resolucaoPassoAPasso": ["O vidro se dilata e pode não voltar exatamente ao volume original.", "A vidraria perde a calibração e passa a medir errado.", "Por isso ela seca à temperatura ambiente ou é enxaguada com um pouco do próprio líquido a medir (ambientação)."],
       "dica": "O que o calor faz com o vidro?",
       "errosComuns": [{ "descricao": "O vidro de laboratório não derrete a temperaturas tão baixas.", "resposta": "b" }],
       "revisado": false
