@@ -20,3 +20,4 @@ android/*.iml
 
 # Roteiro pessoal para os slides (fora do git)
 APRESENTACAO_SLIDES.md
+.cache

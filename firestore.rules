@@ -6,6 +6,8 @@ rules_version = '2';
 // - Salas: só o host (quem criou) escreve o documento da sala; cada participante escreve
 //   só o próprio registro, com campos fixos e sem texto livre.
 // - Sinalização WebRTC: só os dois aparelhos de cada par, e só se estiverem na sala.
+// - Contas: documento cifrado no aparelho, num endereço que é o hash do código de acesso.
+//   Lê ou grava quem conhece o endereço (ou seja, quem tem o código); listar é proibido.
 // Tudo o que não está listado aqui é negado.
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -16,6 +18,23 @@ service cloud.firestore {
     match /artifacts/{appId} {
       match /users/{uid} {
         allow read, write: if signedIn() && request.auth.uid == uid;
+      }
+
+      match /contas/{contaId} {
+        function validAccountId() {
+          return contaId.matches('^[0-9a-f]{64}$');
+        }
+        function validAccount() {
+          let data = request.resource.data;
+          return data.keys().hasOnly(['versao', 'iv', 'dados', 'atualizadoEm'])
+            && data.versao == 1
+            && data.iv is string && data.iv.size() > 0 && data.iv.size() <= 32
+            && data.dados is string && data.dados.size() > 0 && data.dados.size() <= 500000
+            && data.atualizadoEm == request.time;
+        }
+        allow get, delete: if signedIn() && validAccountId();
+        allow list: if false;
+        allow create, update: if signedIn() && validAccountId() && validAccount();
       }
 
       match /salas/{code} {
