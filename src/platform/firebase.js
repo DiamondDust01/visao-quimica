@@ -33,22 +33,40 @@ if (app && import.meta.env.DEV && import.meta.env.VITE_FIREBASE_EMULATORS === '1
 }
 
 // Login anônimo: as regras do Firestore exigem usuário autenticado, mas o app não pede dados pessoais.
+const RETRY_DELAYS_MS = [3000, 10000, 30000, 60000];
+
 export function useAnonymousAuth() {
   const [state, setState] = useState({ user: null, loading: firebaseEnabled, error: '' });
 
   useEffect(() => {
     if (!auth) return undefined;
+    let timer = null;
+    let attempt = 0;
+    // Sem rede, o login falha: tenta de novo com espera crescente e assim que a rede voltar.
+    const signIn = () => {
+      clearTimeout(timer);
+      signInAnonymously(auth).catch((error) => {
+        console.warn('Login anônimo falhou; nova tentativa em seguida.', error?.code || error);
+        setState({ user: null, loading: false, error: 'Não foi possível conectar ao servidor. O app segue funcionando offline.' });
+        timer = setTimeout(signIn, RETRY_DELAYS_MS[Math.min(attempt, RETRY_DELAYS_MS.length - 1)]);
+        attempt += 1;
+      });
+    };
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
+        clearTimeout(timer);
         setState({ user, loading: false, error: '' });
         return;
       }
-      signInAnonymously(auth).catch((error) => {
-        console.error('Falha no login anônimo:', error);
-        setState({ user: null, loading: false, error: 'Não foi possível conectar ao servidor. O app segue funcionando offline.' });
-      });
+      signIn();
     });
-    return unsubscribe;
+    const onOnline = () => { if (!auth.currentUser) signIn(); };
+    window.addEventListener('online', onOnline);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('online', onOnline);
+      unsubscribe();
+    };
   }, []);
 
   return state;

@@ -18,7 +18,7 @@
       "gabarito": "a",
       "resolucaoPassoAPasso": ["Mendeleev agrupou elementos com propriedades semelhantes.", "Quando a sequência não encaixava, deixou lacunas para elementos desconhecidos.", "Elementos como o gálio e o germânio foram descobertos depois, com propriedades próximas das previstas."],
       "dica": "As lacunas eram uma previsão.",
-      "errosComuns": [{ "descricao": "Os gases nobres nem eram conhecidos quando Mendeleev publicou a tabela.", "resposta": "c" }],
+      "errosComuns": [{ "descricao": "Nenhum gás nobre tinha sido isolado quando Mendeleev publicou a tabela, em 1869.", "resposta": "c" }],
       "revisado": false
     },
     {
@@ -195,7 +195,7 @@
       "gabarito": { "simbolos": ["Na"] },
       "resolucaoPassoAPasso": ["No mesmo período, todos têm 3 camadas.", "Da esquerda para a direita, a carga nuclear aumenta e puxa mais os elétrons, e o raio diminui.", "O maior raio fica no início do período: sódio (Na)."],
       "dica": "Com o mesmo número de camadas, o que muda é a atração do núcleo.",
-      "errosComuns": [{ "descricao": "O argônio tem mais prótons atraindo as mesmas 3 camadas: é o menor do período.", "resposta": "Ar" }],
+      "errosComuns": [{ "descricao": "O argônio fica no fim do período: tem mais prótons atraindo as mesmas 3 camadas, e seu raio é bem menor que o do sódio.", "resposta": "Ar" }],
       "revisado": false
     },
     {

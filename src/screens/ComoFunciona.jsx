@@ -61,7 +61,10 @@ export default function ComoFunciona({ firebaseEnabled }) {
         <ul className="mt-2 space-y-2 text-sm text-slate-300">
           <li>Visão Química, versão {packageJson.version}.</li>
           <li>O Laboratório do Mentor segue regras fixas escritas para o app. Ele não usa IA generativa, e nada do que você digita sai deste aparelho.</li>
-          <li>{firebaseEnabled ? 'O login nas salas é anônimo: nenhum nome ou e-mail é pedido.' : 'Seu progresso, seus pontos e seu perfil ficam só neste aparelho.'}</li>
+          <li>{firebaseEnabled ? 'O login é anônimo: nenhum nome ou e-mail é pedido.' : 'Seu progresso, seus pontos e seu perfil ficam neste aparelho.'}</li>
+          <li>{firebaseEnabled
+            ? 'Conta opcional, em Perfil: você recebe um código de acesso, sem e-mail nem senha. O progresso é cifrado no aparelho antes de ir para a nuvem, e o servidor não consegue lê-lo. Quem perde o código perde o acesso.'
+            : 'Para levar o progresso a outro aparelho, use o backup em arquivo, em Perfil.'}</li>
           <li>Massas atômicas da IUPAC (CIAAW). Todo o conteúdo funciona offline, inclusive no Android e no Windows.</li>
           <li>As questões são originais e ainda passam por revisão de professores de Química.</li>
         </ul>

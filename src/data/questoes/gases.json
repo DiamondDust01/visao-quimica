@@ -26,7 +26,7 @@
       "enunciado": "Por que, nos cálculos com gases, a temperatura deve ser usada em kelvin?",
       "alternativas": [{ "id": "a", "texto": "Porque as leis dos gases são proporcionais à temperatura absoluta; em graus Celsius haveria zero e valores negativos sem sentido físico." }, { "id": "b", "texto": "Porque o kelvin é mais preciso que o grau Celsius." }, { "id": "c", "texto": "Porque os gases não existem abaixo de 0 °C." }, { "id": "d", "texto": "Por convenção, sem razão física." }],
       "gabarito": "a",
-      "resolucaoPassoAPasso": ["Na lei de Charles, o volume é proporcional à temperatura absoluta.", "Em °C, a 0 °C o volume seria zero e, abaixo disso, negativo, o que não faz sentido.", "Na escala Kelvin, o zero corresponde à ausência de agitação térmica."],
+      "resolucaoPassoAPasso": ["Na lei de Charles, o volume é proporcional à temperatura absoluta.", "Em °C, a 0 °C o volume seria zero e, abaixo disso, negativo, o que não faz sentido.", "Na escala Kelvin, o zero é o zero absoluto, a menor temperatura possível, e não há valores negativos."],
       "dica": "O que aconteceria numa divisão por 0 °C?",
       "errosComuns": [{ "descricao": "Gases existem abaixo de 0 °C; a questão é a escala usada nas proporções.", "resposta": "c" }],
       "revisado": false
@@ -96,7 +96,7 @@
       "enunciado": "Qual é o volume ocupado por 3 mol de gás nas CNTP? Use 22,4 L/mol.",
       "gabarito": { "valor": 67.2, "unidade": "L" },
       "verificacao": "3 * 22.4",
-      "resolucaoPassoAPasso": ["Nas CNTP, 1 mol de gás ocupa 22,4 L.", "3 mol × 22,4 L/mol = 67,2 L."],
+      "resolucaoPassoAPasso": ["Nas CNTP, 1 mol de gás ocupa 22,4 L.", "3 mol × 22,4 L/mol = 67,2 L.", "CNTP: 0 °C e 1 atm. A IUPAC hoje adota 1 bar como pressão padrão, com volume molar de cerca de 22,7 L/mol; aqui a questão pede 22,4 L/mol."],
       "dica": "Volume = quantidade em mol × volume molar.",
       "errosComuns": [{ "descricao": "Dividiu o volume molar pela quantidade em vez de multiplicar.", "resposta": { "valor": 7.47, "unidade": "L" } }],
       "revisado": false

@@ -46,5 +46,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 3000,
+    // Pastas geradas que não fazem parte do app: vigiá-las só gasta recursos, e o emulador do
+    // Firestore trava o .jar em .cache (o que derrubava o servidor).
+    watch: { ignored: ['**/.cache/**', '**/release/**', '**/android/**', '**/dist/**'] },
   },
 });
