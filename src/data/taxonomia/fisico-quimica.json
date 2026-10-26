@@ -1,0 +1,118 @@
+{
+  "id": "fisico-quimica",
+  "nome": "Físico-química",
+  "descricao": "Termodinâmica, cinética e estrutura em nível superior.",
+  "area": "fisico-quimica",
+  "prerequisitos": ["atom-numeros-quanticos", "gas-clapeyron", "termo-entalpia-diagramas", "termo-gibbs", "cin-lei-velocidade", "eq-kc-kp", "eletro-potenciais"],
+  "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+  "dificuldade": 4,
+  "palavrasChave": ["termodinâmica", "cinética", "química quântica"],
+  "temas": [
+    {
+      "id": "fq-termodinamica",
+      "nome": "Termodinâmica química",
+      "descricao": "As leis da termodinâmica aplicadas a sistemas químicos.",
+      "area": "fisico-quimica",
+      "prerequisitos": ["termo-entalpia-diagramas", "termo-gibbs", "eq-kc-kp", "eletro-potenciais"],
+      "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+      "dificuldade": 4,
+      "palavrasChave": ["primeira lei", "segunda lei", "energia livre"],
+      "subtemas": [
+        {
+          "id": "fq-primeira-lei",
+          "nome": "Primeira lei da termodinâmica",
+          "descricao": "Energia interna, calor e trabalho; relação entre ΔU e ΔH e capacidades caloríficas.",
+          "area": "fisico-quimica",
+          "prerequisitos": ["termo-entalpia-diagramas"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["energia interna", "trabalho", "ΔU", "capacidade calorífica"]
+        },
+        {
+          "id": "fq-segunda-terceira-lei",
+          "nome": "Segunda e terceira leis",
+          "descricao": "Entropia em processos reversíveis e irreversíveis, entropia absoluta e interpretação estatística.",
+          "area": "fisico-quimica",
+          "prerequisitos": ["termo-gibbs", "fq-primeira-lei"],
+          "etapasRecomendadas": ["superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["segunda lei", "terceira lei", "Boltzmann", "processo reversível"]
+        },
+        {
+          "id": "fq-equilibrio-termodinamico",
+          "nome": "Energia livre e equilíbrio",
+          "descricao": "A relação ΔG° = −RT ln K e a dependência de K com a temperatura (van 't Hoff).",
+          "area": "fisico-quimica",
+          "prerequisitos": ["termo-gibbs", "eq-kc-kp"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["ΔG°", "ln K", "van 't Hoff", "potencial químico"]
+        },
+        {
+          "id": "fq-nernst",
+          "nome": "Equação de Nernst",
+          "descricao": "Potencial de pilhas fora das condições-padrão e a relação entre ΔG e potencial.",
+          "area": "fisico-quimica",
+          "prerequisitos": ["eletro-potenciais", "fq-equilibrio-termodinamico"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["Nernst", "potencial", "pilha de concentração", "ΔG = −nFE"]
+        }
+      ]
+    },
+    {
+      "id": "fq-cinetica-gases",
+      "nome": "Cinética avançada e gases reais",
+      "descricao": "Tratamento quantitativo de velocidades e desvios do gás ideal.",
+      "area": "fisico-quimica",
+      "prerequisitos": ["gas-clapeyron", "cin-lei-velocidade"],
+      "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+      "dificuldade": 4,
+      "palavrasChave": ["leis integradas", "Arrhenius", "van der Waals"],
+      "subtemas": [
+        {
+          "id": "fq-cinetica-integrada",
+          "nome": "Leis integradas e equação de Arrhenius",
+          "descricao": "Concentração em função do tempo para ordens zero, um e dois, meia-vida e dependência da constante com a temperatura.",
+          "area": "fisico-quimica",
+          "prerequisitos": ["cin-lei-velocidade"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["lei integrada", "Arrhenius", "meia-vida", "fator pré-exponencial"]
+        },
+        {
+          "id": "fq-gases-reais",
+          "nome": "Gases reais",
+          "descricao": "Fator de compressibilidade, equação de van der Waals e condições em que o gás ideal falha.",
+          "area": "fisico-quimica",
+          "prerequisitos": ["gas-clapeyron"],
+          "etapasRecomendadas": ["superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["gás real", "van der Waals", "compressibilidade", "liquefação"]
+        }
+      ]
+    },
+    {
+      "id": "fq-quantica",
+      "nome": "Noções de química quântica",
+      "descricao": "As bases quânticas da estrutura atômica e molecular.",
+      "area": "fisico-quimica",
+      "prerequisitos": ["atom-numeros-quanticos"],
+      "etapasRecomendadas": ["superior"],
+      "dificuldade": 5,
+      "palavrasChave": ["equação de Schrödinger", "orbitais"],
+      "subtemas": [
+        {
+          "id": "fq-quantica-nocoes",
+          "nome": "Partícula na caixa e orbitais",
+          "descricao": "Quantização da energia em modelos simples, funções de onda e a origem dos orbitais atômicos.",
+          "area": "fisico-quimica",
+          "prerequisitos": ["atom-numeros-quanticos"],
+          "etapasRecomendadas": ["superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["Schrödinger", "função de onda", "partícula na caixa", "quantização"]
+        }
+      ]
+    }
+  ]
+}

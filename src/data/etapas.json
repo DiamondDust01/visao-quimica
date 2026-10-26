@@ -1,0 +1,18 @@
+{
+  "versao": "1.0.0",
+  "observacao": "A BNCC do Ensino Médio organiza a Química por competências, não por série. A divisão em 1ª, 2ª e 3ª série segue a distribuição mais comum nas escolas e serve só para sugerir uma ordem.",
+  "etapas": [
+    { "id": "ef-6", "nome": "6º ano", "grupo": "Ensino Fundamental II", "descricao": "Ciências do 6º ano: materiais, misturas e transformações.", "nivel": 1, "linguagem": "simples", "desafio": ["ef-7"] },
+    { "id": "ef-7", "nome": "7º ano", "grupo": "Ensino Fundamental II", "descricao": "Ciências do 7º ano: atmosfera, combustão e combustíveis.", "nivel": 2, "linguagem": "simples", "desafio": ["ef-8", "ef-9"] },
+    { "id": "ef-8", "nome": "8º ano", "grupo": "Ensino Fundamental II", "descricao": "Ciências do 8º ano: energia e suas transformações.", "nivel": 3, "linguagem": "simples", "desafio": ["ef-9"] },
+    { "id": "ef-9", "nome": "9º ano", "grupo": "Ensino Fundamental II", "descricao": "Ciências do 9º ano: estrutura da matéria, modelos atômicos e transformações químicas.", "nivel": 4, "linguagem": "simples", "desafio": ["em-1"] },
+    { "id": "em-1", "nome": "1ª série", "grupo": "Ensino Médio", "descricao": "Matéria, átomo, tabela periódica, ligações, funções inorgânicas e estequiometria.", "nivel": 5, "linguagem": "intermediaria", "desafio": ["em-2"] },
+    { "id": "em-2", "nome": "2ª série", "grupo": "Ensino Médio", "descricao": "Gases, soluções, termoquímica, cinética, equilíbrio, eletroquímica e radioatividade.", "nivel": 6, "linguagem": "intermediaria", "desafio": ["em-3"] },
+    { "id": "em-3", "nome": "3ª série", "grupo": "Ensino Médio", "descricao": "Química orgânica, bioquímica, polímeros e química ambiental.", "nivel": 7, "linguagem": "intermediaria", "desafio": ["superior"] },
+    { "id": "enem", "nome": "ENEM e vestibulares", "grupo": "Preparação para ENEM e vestibulares", "descricao": "Revisão de todo o Ensino Médio, com foco nos temas mais cobrados.", "nivel": 8, "linguagem": "intermediaria", "desafio": ["olimpiadas-quimica"] },
+    { "id": "tecnico", "nome": "Ensino Técnico", "grupo": "Ensino Técnico", "descricao": "Técnico em Química: medidas, análise, laboratório e segurança.", "nivel": 8, "linguagem": "tecnica", "desafio": ["superior"] },
+    { "id": "olimpiadas-quimica", "nome": "Olimpíadas de Química", "grupo": "Olimpíadas de Química", "descricao": "Aprofundamento além do Ensino Médio, para competições de Química.", "nivel": 9, "linguagem": "tecnica", "desafio": ["superior"] },
+    { "id": "superior", "nome": "Ensino Superior", "grupo": "Ensino Superior", "descricao": "Química Geral, Orgânica, Inorgânica, Analítica, Físico-Química e Bioquímica.", "nivel": 10, "linguagem": "tecnica", "desafio": [] },
+    { "id": "livre", "nome": "Estudo livre", "grupo": "Estudo livre", "descricao": "Sem recomendação: você escolhe os temas.", "nivel": 0, "linguagem": "intermediaria", "desafio": [], "semRecomendacao": true }
+  ]
+}

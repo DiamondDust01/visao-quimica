@@ -1,0 +1,148 @@
+{
+  "id": "reacoes-estequiometria",
+  "nome": "Reações e estequiometria",
+  "descricao": "Como representar reações, contar partículas com o mol e calcular quantidades de reagentes e produtos.",
+  "area": "reacoes-estequiometria",
+  "prerequisitos": ["fund-energia-transformacoes", "fund-notacao-cientifica", "atom-massa-atomica", "inorg-sais"],
+  "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+  "dificuldade": 1,
+  "palavrasChave": ["reações", "balanceamento", "mol", "estequiometria"],
+  "temas": [
+    {
+      "id": "reac-reacoes",
+      "nome": "Reações químicas",
+      "descricao": "Reconhecer, classificar e balancear reações.",
+      "area": "reacoes-estequiometria",
+      "prerequisitos": ["fund-energia-transformacoes", "inorg-sais"],
+      "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["reação", "equação química", "balanceamento"],
+      "subtemas": [
+        {
+          "id": "reac-evidencias",
+          "nome": "Evidências de reação",
+          "descricao": "Sinais de que houve transformação química: mudança de cor, liberação de gás, formação de sólido, variação de temperatura.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["fund-energia-transformacoes"],
+          "etapasRecomendadas": ["ef-6", "ef-9", "em-1", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["evidências", "reagentes", "produtos", "precipitado", "efervescência"]
+        },
+        {
+          "id": "reac-leis-ponderais",
+          "nome": "Leis de Lavoisier e de Proust",
+          "descricao": "Conservação da massa em sistema fechado e proporção constante entre as massas que reagem.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-evidencias"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["Lavoisier", "Proust", "conservação da massa", "proporções definidas"]
+        },
+        {
+          "id": "reac-balanceamento",
+          "nome": "Balanceamento por tentativa",
+          "descricao": "Ajustar coeficientes para que cada elemento apareça na mesma quantidade nos dois lados da equação.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-leis-ponderais"],
+          "etapasRecomendadas": ["ef-9", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["balanceamento", "coeficientes", "conservação dos átomos", "equação química"]
+        },
+        {
+          "id": "reac-tipos",
+          "nome": "Tipos de reação",
+          "descricao": "Síntese, decomposição, simples troca e dupla troca, com as condições para que ocorram.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["inorg-sais", "reac-evidencias"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["síntese", "decomposição", "simples troca", "dupla troca", "reatividade"]
+        }
+      ]
+    },
+    {
+      "id": "reac-mol",
+      "nome": "Mol e quantidades",
+      "descricao": "A unidade que liga o mundo das partículas ao mundo das massas que medimos.",
+      "area": "reacoes-estequiometria",
+      "prerequisitos": ["fund-notacao-cientifica", "atom-massa-atomica"],
+      "etapasRecomendadas": ["em-1", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["mol", "Avogadro", "massa molar"],
+      "subtemas": [
+        {
+          "id": "reac-mol-avogadro",
+          "nome": "Mol e constante de Avogadro",
+          "descricao": "O mol como quantidade de matéria e a conversão entre mol e número de partículas.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["fund-notacao-cientifica", "atom-massa-atomica"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["mol", "Avogadro", "quantidade de matéria", "6,02 × 10²³"]
+        },
+        {
+          "id": "reac-massa-molar",
+          "nome": "Massa molar",
+          "descricao": "Cálculo da massa molar a partir da fórmula e conversão entre massa e quantidade de matéria.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-mol-avogadro"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["massa molar", "g/mol", "massa molecular", "fórmula"]
+        },
+        {
+          "id": "reac-formulas",
+          "nome": "Fórmulas mínima e molecular",
+          "descricao": "Composição percentual, fórmula mínima e fórmula molecular a partir de dados experimentais.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-massa-molar"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["fórmula mínima", "fórmula molecular", "composição centesimal", "percentual"]
+        }
+      ]
+    },
+    {
+      "id": "reac-estequiometria",
+      "nome": "Cálculo estequiométrico",
+      "descricao": "Proporções entre reagentes e produtos e situações reais de reação.",
+      "area": "reacoes-estequiometria",
+      "prerequisitos": ["reac-balanceamento", "reac-massa-molar"],
+      "etapasRecomendadas": ["em-1", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["estequiometria", "reagente limitante", "rendimento"],
+      "subtemas": [
+        {
+          "id": "reac-calculo-estequiometrico",
+          "nome": "Relações estequiométricas",
+          "descricao": "Usar a equação balanceada para relacionar mol, massa e número de partículas de reagentes e produtos.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-balanceamento", "reac-massa-molar"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["estequiometria", "proporção", "regra de três", "coeficientes"]
+        },
+        {
+          "id": "reac-reagente-limitante",
+          "nome": "Reagente limitante e em excesso",
+          "descricao": "Identificar qual reagente acaba primeiro e quanto sobra do outro.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-calculo-estequiometrico"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["reagente limitante", "excesso", "proporção estequiométrica"]
+        },
+        {
+          "id": "reac-rendimento-pureza",
+          "nome": "Rendimento e pureza",
+          "descricao": "Cálculos com reagentes impuros e com reações que não produzem a quantidade teórica.",
+          "area": "reacoes-estequiometria",
+          "prerequisitos": ["reac-calculo-estequiometrico"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["rendimento", "pureza", "teórico", "porcentagem"]
+        }
+      ]
+    }
+  ]
+}

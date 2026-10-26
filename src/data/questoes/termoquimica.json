@@ -1,0 +1,216 @@
+{
+  "area": "termoquimica",
+  "questoes": [
+    {
+      "id": "termo-processos-q1", "temaId": "termo-processos", "etapa": "ef-8", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Classifique cada processo como exotérmico (libera calor) ou endotérmico (absorve calor).",
+      "itens": [{ "id": "carvao", "texto": "Queima de carvão na churrasqueira" }, { "id": "gelo", "texto": "Derretimento do gelo" }, { "id": "foto", "texto": "Fotossíntese" }, { "id": "orvalho", "texto": "Formação do orvalho (vapor condensando)" }],
+      "opcoes": [{ "id": "exo", "texto": "Exotérmico" }, { "id": "endo", "texto": "Endotérmico" }],
+      "gabarito": { "carvao": "exo", "gelo": "endo", "foto": "endo", "orvalho": "exo" },
+      "resolucaoPassoAPasso": ["A queima libera calor: exotérmica.", "Derreter gelo exige calor: endotérmico.", "A fotossíntese absorve energia da luz: endotérmica.", "Condensar o vapor libera o calor que foi usado para vaporizar: exotérmico."],
+      "dica": "Pergunte se o processo precisa receber energia ou se a libera.",
+      "errosComuns": [{ "descricao": "Achar que condensação absorve calor: ela libera a energia da vaporização." }],
+      "revisado": false
+    },
+    {
+      "id": "termo-processos-q2", "temaId": "termo-processos", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Bolsas de gelo instantâneo esfriam quando um sal se dissolve na água dentro delas. Esse processo de dissolução é:",
+      "alternativas": [{ "id": "a", "texto": "Endotérmico" }, { "id": "b", "texto": "Exotérmico" }, { "id": "c", "texto": "Nem um nem outro" }, { "id": "d", "texto": "Uma combustão" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A bolsa esfria porque a dissolução retira calor do ambiente e da pele.", "Processos que absorvem calor são endotérmicos."],
+      "dica": "Se esfria, o processo está tirando ou dando calor?",
+      "errosComuns": [{ "descricao": "Um processo exotérmico aqueceria a bolsa.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-processos-q3", "temaId": "termo-processos", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que o suor ajuda a resfriar o corpo?",
+      "alternativas": [{ "id": "a", "texto": "Porque a evaporação do suor é endotérmica e retira calor da pele" }, { "id": "b", "texto": "Porque o suor é mais frio que o corpo quando sai" }, { "id": "c", "texto": "Porque a evaporação é exotérmica" }, { "id": "d", "texto": "Porque o suor reage com o ar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Para evaporar, a água do suor precisa de energia.", "Essa energia é retirada da pele, que esfria."],
+      "dica": "Vaporizar exige energia: de onde ela vem?",
+      "errosComuns": [{ "descricao": "Evaporar exige energia: é endotérmico.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-entalpia-diagramas-q1", "temaId": "termo-entalpia-diagramas", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Numa reação exotérmica, a variação de entalpia (ΔH) é:",
+      "alternativas": [{ "id": "a", "texto": "Negativa" }, { "id": "b", "texto": "Positiva" }, { "id": "c", "texto": "Zero" }, { "id": "d", "texto": "Positiva ou negativa, conforme a temperatura" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["ΔH = H(produtos) − H(reagentes).", "Na reação exotérmica, os produtos têm menos entalpia que os reagentes, porque energia foi liberada.", "Logo, ΔH < 0."],
+      "dica": "ΔH = final − inicial.",
+      "errosComuns": [{ "descricao": "ΔH positivo indica reação endotérmica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-entalpia-diagramas-q2", "temaId": "termo-entalpia-diagramas", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Num diagrama de energia, os reagentes estão em 250 kJ e os produtos em 100 kJ. Qual é o ΔH da reação?",
+      "gabarito": { "valor": -150, "unidade": "kJ" },
+      "verificacao": "100 - 250",
+      "resolucaoPassoAPasso": ["ΔH = H(produtos) − H(reagentes).", "ΔH = 100 − 250 = −150 kJ (reação exotérmica)."],
+      "dica": "Produtos menos reagentes.",
+      "errosComuns": [{ "descricao": "Subtraiu na ordem inversa (reagentes − produtos).", "resposta": { "valor": 150, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-entalpia-diagramas-q3", "temaId": "termo-entalpia-diagramas", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Num diagrama, os reagentes estão em 50 kJ, o complexo ativado em 120 kJ e os produtos em 80 kJ. Quais são o ΔH e a energia de ativação (Ea) da reação direta?",
+      "alternativas": [{ "id": "a", "texto": "ΔH = +30 kJ e Ea = 70 kJ" }, { "id": "b", "texto": "ΔH = −30 kJ e Ea = 70 kJ" }, { "id": "c", "texto": "ΔH = +30 kJ e Ea = 120 kJ" }, { "id": "d", "texto": "ΔH = +70 kJ e Ea = 30 kJ" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["ΔH = 80 − 50 = +30 kJ (endotérmica).", "Ea = complexo ativado − reagentes = 120 − 50 = 70 kJ."],
+      "dica": "A energia de ativação é medida a partir dos reagentes.",
+      "errosComuns": [{ "descricao": "Os produtos estão acima dos reagentes: ΔH é positivo.", "resposta": "b" }, { "descricao": "120 kJ é a energia do complexo ativado; a Ea é a diferença em relação aos reagentes.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-equacoes-termoquimicas-q1", "temaId": "termo-equacoes-termoquimicas", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Na combustão do metano, \\ce{CH4 + 2O2 -> CO2 + 2H2O}, ΔH = −890 kJ por mol de metano. Quanta energia é liberada na queima de 32 g de metano (16 g/mol)?",
+      "gabarito": { "valor": 1780, "unidade": "kJ" },
+      "verificacao": "32 / 16 * 890",
+      "resolucaoPassoAPasso": ["32 g ÷ 16 g/mol = 2 mol de metano.", "Cada mol libera 890 kJ: 2 × 890 = 1780 kJ."],
+      "dica": "Quantos mols de metano há em 32 g?",
+      "errosComuns": [{ "descricao": "Usou o ΔH de 1 mol sem considerar a quantidade queimada.", "resposta": { "valor": 890, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-equacoes-termoquimicas-q2", "temaId": "termo-equacoes-termoquimicas", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Para \\ce{2H2 + O2 -> 2H2O}, ΔH = −572 kJ. Qual é o ΔH para \\ce{H2O -> H2 + 1/2O2}?",
+      "alternativas": [{ "id": "a", "texto": "+286 kJ" }, { "id": "b", "texto": "−286 kJ" }, { "id": "c", "texto": "+572 kJ" }, { "id": "d", "texto": "−572 kJ" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Inverter a equação troca o sinal do ΔH: +572 kJ para 2 mol de água.", "Dividir os coeficientes por 2 divide o ΔH por 2: +286 kJ."],
+      "dica": "Inverteu? Troque o sinal. Dividiu? Divida o ΔH.",
+      "errosComuns": [{ "descricao": "Dividiu por 2, mas esqueceu de trocar o sinal ao inverter a equação.", "resposta": "b" }, { "descricao": "Inverteu o sinal, mas não dividiu por 2.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-equacoes-termoquimicas-q3", "temaId": "termo-equacoes-termoquimicas", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A entalpia padrão de formação é, por definição, zero para:",
+      "alternativas": [{ "id": "a", "texto": "\\ce{O2(g)}" }, { "id": "b", "texto": "\\ce{O3(g)}" }, { "id": "c", "texto": "\\ce{H2O(l)}" }, { "id": "d", "texto": "\\ce{CO2(g)}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Substâncias simples na forma mais estável, no estado padrão, têm entalpia de formação zero.", "Para o oxigênio, a forma mais estável é \\ce{O2(g)}.", "\\ce{O3} é outra forma alotrópica, menos estável."],
+      "dica": "Precisa ser substância simples, na forma mais estável.",
+      "errosComuns": [{ "descricao": "O ozônio é substância simples, mas não é a forma mais estável do oxigênio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-lei-hess-q1", "temaId": "termo-lei-hess", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Dadas: (1) \\ce{C(grafite) + O2 -> CO2}, ΔH = −394 kJ; (2) \\ce{CO + 1/2O2 -> CO2}, ΔH = −283 kJ. Calcule o ΔH de \\ce{C(grafite) + 1/2O2 -> CO}.",
+      "gabarito": { "valor": -111, "unidade": "kJ" },
+      "verificacao": "-394 - (-283)",
+      "resolucaoPassoAPasso": ["Mantenha a equação (1), que tem C nos reagentes.", "Inverta a (2), para CO ficar nos produtos: \\ce{CO2 -> CO + 1/2O2}, ΔH = +283 kJ.", "Somando: \\ce{C + 1/2O2 -> CO}, ΔH = −394 + 283 = −111 kJ."],
+      "dica": "Arrume as equações para que, somadas, deem a equação pedida.",
+      "errosComuns": [{ "descricao": "Somou as duas equações sem inverter a segunda.", "resposta": { "valor": -677, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-lei-hess-q2", "temaId": "termo-lei-hess", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A Lei de Hess afirma que:",
+      "alternativas": [{ "id": "a", "texto": "O ΔH de uma reação depende só dos estados inicial e final, e não do caminho percorrido." }, { "id": "b", "texto": "Toda reação libera calor." }, { "id": "c", "texto": "O ΔH depende do número de etapas da reação." }, { "id": "d", "texto": "A energia de ativação é sempre igual ao ΔH." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A entalpia é uma função de estado.", "Por isso o ΔH total é o mesmo, seja a reação feita numa etapa ou em várias.", "Isso permite somar equações conhecidas para obter ΔH desconhecidos."],
+      "dica": "Pense numa subida: a diferença de altura não depende do caminho.",
+      "errosComuns": [{ "descricao": "O ΔH é o mesmo qualquer que seja o número de etapas.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-lei-hess-q3", "temaId": "termo-lei-hess", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Dadas: (1) \\ce{S + O2 -> SO2}, ΔH = −297 kJ; (2) \\ce{2SO2 + O2 -> 2SO3}, ΔH = −198 kJ. Calcule o ΔH de \\ce{S + 3/2O2 -> SO3}.",
+      "gabarito": { "valor": -396, "unidade": "kJ" },
+      "verificacao": "-297 + (-198 / 2)",
+      "resolucaoPassoAPasso": ["Mantenha a (1): forma 1 \\ce{SO2}.", "Divida a (2) por 2: \\ce{SO2 + 1/2O2 -> SO3}, ΔH = −99 kJ.", "Some: ΔH = −297 + (−99) = −396 kJ."],
+      "dica": "Você precisa de 1 \\ce{SO3}, não de 2.",
+      "errosComuns": [{ "descricao": "Somou sem dividir a segunda equação por 2.", "resposta": { "valor": -495, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-energia-ligacao-q1", "temaId": "termo-energia-ligacao", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Calcule o ΔH de \\ce{H2 + Cl2 -> 2HCl}. Energias de ligação (kJ/mol): H–H = 436; Cl–Cl = 243; H–Cl = 432.",
+      "gabarito": { "valor": -185, "unidade": "kJ" },
+      "verificacao": "436 + 243 - 2 * 432",
+      "resolucaoPassoAPasso": ["Ligações rompidas (absorvem energia): 436 + 243 = 679 kJ.", "Ligações formadas (liberam energia): 2 × 432 = 864 kJ.", "ΔH = 679 − 864 = −185 kJ."],
+      "dica": "ΔH = energia das ligações rompidas − energia das ligações formadas.",
+      "errosComuns": [{ "descricao": "Inverteu a ordem da subtração e obteve o sinal trocado.", "resposta": { "valor": 185, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-energia-ligacao-q2", "temaId": "termo-energia-ligacao", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Romper uma ligação química é um processo:",
+      "alternativas": [{ "id": "a", "texto": "Endotérmico" }, { "id": "b", "texto": "Exotérmico" }, { "id": "c", "texto": "Sem troca de energia" }, { "id": "d", "texto": "Endotérmico ou exotérmico, conforme a ligação" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os átomos ligados estão numa situação de menor energia.", "Para separá-los, é preciso fornecer energia: sempre endotérmico.", "Formar ligações, ao contrário, libera energia."],
+      "dica": "É preciso fornecer ou retirar energia para separar dois átomos ligados?",
+      "errosComuns": [{ "descricao": "Quem libera energia é a formação de ligações.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-energia-ligacao-q3", "temaId": "termo-energia-ligacao", "etapa": "em-2", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Estime o ΔH de \\ce{CH4 + 2O2 -> CO2 + 2H2O} (água gasosa). Energias de ligação (kJ/mol): C–H = 413; O=O = 498; C=O = 799; O–H = 463.",
+      "gabarito": { "valor": -802, "unidade": "kJ" },
+      "verificacao": "(4*413 + 2*498) - (2*799 + 4*463)",
+      "resolucaoPassoAPasso": ["Rompidas: 4 C–H + 2 O=O = 4 × 413 + 2 × 498 = 2648 kJ.", "Formadas: 2 C=O + 4 O–H = 2 × 799 + 4 × 463 = 3450 kJ.", "ΔH = 2648 − 3450 = −802 kJ."],
+      "dica": "Conte as ligações de cada tipo, multiplicando pelos coeficientes.",
+      "errosComuns": [{ "descricao": "Inverteu a ordem da subtração.", "resposta": { "valor": 802, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-entropia-q1", "temaId": "termo-entropia", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Em qual processo a entropia do sistema aumenta?",
+      "alternativas": [{ "id": "a", "texto": "Gelo derretendo" }, { "id": "b", "texto": "Vapor de água condensando" }, { "id": "c", "texto": "Água congelando" }, { "id": "d", "texto": "Um gás sendo comprimido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A entropia aumenta quando a matéria e a energia ficam mais dispersas.", "No líquido, as moléculas têm mais liberdade que no sólido: a entropia aumenta ao derreter.", "Condensar, congelar e comprimir diminuem a dispersão."],
+      "dica": "Em qual caso as moléculas ganham liberdade de movimento?",
+      "errosComuns": [{ "descricao": "Na condensação as moléculas ficam mais organizadas: a entropia diminui.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-entropia-q2", "temaId": "termo-entropia", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Para a reação \\ce{2H2(g) + O2(g) -> 2H2O(l)}, a variação de entropia do sistema (ΔS) é:",
+      "alternativas": [{ "id": "a", "texto": "Negativa, porque 3 mol de gases viram 2 mol de líquido" }, { "id": "b", "texto": "Positiva, porque se forma uma substância nova" }, { "id": "c", "texto": "Zero" }, { "id": "d", "texto": "Positiva, porque a reação libera calor" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Gases têm entropia muito maior que líquidos.", "A reação parte de 3 mol de gás e termina em 2 mol de líquido.", "A dispersão diminui: ΔS < 0."],
+      "dica": "Compare a quantidade de gás antes e depois.",
+      "errosComuns": [{ "descricao": "Liberar calor afeta o entorno; a entropia do sistema diminui porque os gases viram líquido.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-entropia-q3", "temaId": "termo-entropia", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Segundo a segunda lei da termodinâmica, num processo espontâneo:",
+      "alternativas": [{ "id": "a", "texto": "A entropia do universo (sistema + vizinhança) aumenta." }, { "id": "b", "texto": "A entropia do sistema sempre aumenta." }, { "id": "c", "texto": "A energia do universo diminui." }, { "id": "d", "texto": "O ΔH é sempre negativo." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O critério geral de espontaneidade é ΔS(universo) > 0.", "A entropia do sistema pode diminuir, como no congelamento da água abaixo de 0 °C, desde que a da vizinhança aumente mais."],
+      "dica": "O critério envolve sistema e vizinhança.",
+      "errosComuns": [{ "descricao": "A entropia do sistema pode diminuir num processo espontâneo; o que sempre aumenta é a do universo.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-gibbs-q1", "temaId": "termo-gibbs", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Uma reação tem ΔH = −100 kJ e ΔS = −0,2 kJ/K. Calcule ΔG a 300 K, usando ΔG = ΔH − TΔS.",
+      "gabarito": { "valor": -40, "unidade": "kJ" },
+      "verificacao": "-100 - 300 * (-0.2)",
+      "resolucaoPassoAPasso": ["TΔS = 300 × (−0,2) = −60 kJ.", "ΔG = −100 − (−60) = −40 kJ.", "ΔG < 0: espontânea a 300 K."],
+      "dica": "Cuidado com o sinal: menos vezes menos.",
+      "errosComuns": [{ "descricao": "Errou o sinal ao subtrair TΔS, que é negativo.", "resposta": { "valor": -160, "unidade": "kJ" } }],
+      "revisado": false
+    },
+    {
+      "id": "termo-gibbs-q2", "temaId": "termo-gibbs", "etapa": "em-2", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Uma reação tem ΔH > 0 e ΔS > 0. Ela é espontânea:",
+      "alternativas": [{ "id": "a", "texto": "Em temperaturas altas" }, { "id": "b", "texto": "Em qualquer temperatura" }, { "id": "c", "texto": "Em nenhuma temperatura" }, { "id": "d", "texto": "Só em temperaturas baixas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["ΔG = ΔH − TΔS. Com ΔH positivo, o termo −TΔS (negativo) precisa superá-lo.", "Isso acontece quando T é grande o suficiente."],
+      "dica": "Qual termo da equação cresce com a temperatura?",
+      "errosComuns": [{ "descricao": "Em temperaturas baixas, ΔH positivo domina e ΔG fica positivo.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "termo-gibbs-q3", "temaId": "termo-gibbs", "etapa": "olimpiadas-quimica", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "A decomposição do \\ce{CaCO3} tem ΔH = +178 kJ e ΔS = +0,16 kJ/K. Acima de qual temperatura ela passa a ser espontânea? (Considere ΔH e ΔS constantes.)",
+      "gabarito": { "valor": 1112.5, "unidade": "K", "tolerancia": { "relativa": 0.01 } },
+      "verificacao": "178 / 0.16",
+      "resolucaoPassoAPasso": ["No limite, ΔG = 0: ΔH = TΔS.", "T = ΔH ÷ ΔS = 178 ÷ 0,16 ≈ 1112 K.", "Acima dessa temperatura, ΔG fica negativo."],
+      "dica": "Iguale ΔG a zero.",
+      "errosComuns": [{ "descricao": "Dividiu ΔS por ΔH (conta invertida).", "resposta": { "valor": 0.000899, "unidade": "K" } }],
+      "revisado": false
+    }
+  ]
+}

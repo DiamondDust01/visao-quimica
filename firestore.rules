@@ -1,0 +1,85 @@
+rules_version = '2';
+
+// Regras do Visão Química. Revise antes de publicar no seu projeto.
+// - Login obrigatório em tudo (o app usa login anônimo).
+// - Cada usuário lê e escreve só os próprios dados em users/{uid}.
+// - Salas: só o host (quem criou) escreve o documento da sala; cada participante escreve
+//   só o próprio registro, com campos fixos e sem texto livre.
+// - Sinalização WebRTC: só os dois aparelhos de cada par, e só se estiverem na sala.
+// Tudo o que não está listado aqui é negado.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    match /artifacts/{appId} {
+      match /users/{uid} {
+        allow read, write: if signedIn() && request.auth.uid == uid;
+      }
+
+      match /salas/{code} {
+        function roomPath() {
+          return /databases/$(database)/documents/artifacts/$(appId)/salas/$(code);
+        }
+        function isHost() {
+          return signedIn() && get(roomPath()).data.hostUid == request.auth.uid;
+        }
+        function isParticipant() {
+          return signedIn()
+            && exists(/databases/$(database)/documents/artifacts/$(appId)/salas/$(code)/participantes/$(request.auth.uid));
+        }
+
+        allow read: if signedIn();
+        allow create: if signedIn()
+          && code.matches('^[A-Z0-9]{6}$')
+          && request.resource.data.hostUid == request.auth.uid
+          && request.resource.data.codigo == code;
+        // Ninguém troca o dono nem o código da sala.
+        allow update: if signedIn()
+          && resource.data.hostUid == request.auth.uid
+          && request.resource.data.hostUid == resource.data.hostUid
+          && request.resource.data.codigo == resource.data.codigo;
+        allow delete: if signedIn() && resource.data.hostUid == request.auth.uid;
+
+        // Registro de cada aparelho: apelido sorteado, pontuação e respostas.
+        // Os participantes leem os registros uns dos outros (ranking e pareamento P2P).
+        match /participantes/{uid} {
+          function validParticipant() {
+            let data = request.resource.data;
+            return data.keys().hasOnly(['apelido', 'entrouEm', 'atualizadoEm', 'pontuacao', 'respostas', 'concluido', 'sessaoP2P'])
+              && data.get('apelido', '') is string
+              && data.get('apelido', '').size() <= 40
+              && data.get('pontuacao', 0) is number
+              // No máximo 20 questões de dificuldade 5 (50 pontos cada).
+              && data.get('pontuacao', 0) >= 0
+              && data.get('pontuacao', 0) <= 1000
+              && data.get('concluido', false) is bool
+              && data.get('respostas', {}) is map
+              && data.get('sessaoP2P', '') is string
+              && data.get('sessaoP2P', '').size() <= 64;
+          }
+
+          // Documento: o próprio aparelho, outros participantes e o host.
+          // Lista: só quem já está na sala e o host (quem ainda vai entrar vê só a contagem,
+          // que o host mantém no documento da sala).
+          allow get: if signedIn() && (request.auth.uid == uid || isParticipant() || isHost());
+          allow list: if signedIn() && (isParticipant() || isHost());
+          allow create, update: if signedIn()
+            && request.auth.uid == uid
+            && exists(roomPath())
+            && validParticipant();
+          allow delete: if signedIn() && (request.auth.uid == uid || isHost());
+        }
+
+        // Sinalização WebRTC entre dois aparelhos: o ID do par é "uidA__uidB".
+        match /sinais/{pairId} {
+          function inPair() {
+            return request.auth.uid in pairId.split('__');
+          }
+          allow read, write: if signedIn() && inPair() && (isParticipant() || isHost());
+        }
+      }
+    }
+  }
+}

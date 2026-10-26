@@ -1,0 +1,402 @@
+{
+  "area": "fundamentos",
+  "questoes": [
+    {
+      "id": "fund-materia-conceitos-q1", "temaId": "fund-materia-conceitos", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes é um exemplo de matéria?",
+      "alternativas": [{ "id": "a", "texto": "A luz de uma lanterna" }, { "id": "b", "texto": "O som de um apito" }, { "id": "c", "texto": "O ar dentro de um balão de festa" }, { "id": "d", "texto": "O calor que vem do Sol" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Matéria é tudo o que tem massa e ocupa lugar no espaço.", "O ar enche o balão: ele ocupa espaço e tem massa, mesmo sendo invisível.", "Luz, som e calor são formas de energia, não de matéria."],
+      "dica": "Pense no que ocupa espaço: o que faz o balão ficar cheio?",
+      "errosComuns": [{ "descricao": "Luz é energia. Ela ilumina, mas não é matéria.", "resposta": "a" }, { "descricao": "Calor é energia que passa de um corpo para outro, não matéria.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-materia-conceitos-q2", "temaId": "fund-materia-conceitos", "etapa": "ef-6", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada exemplo ao conceito correto.",
+      "itens": [{ "id": "i1", "texto": "Madeira" }, { "id": "i2", "texto": "Um tronco de árvore cortado" }, { "id": "i3", "texto": "Uma cadeira de madeira" }],
+      "opcoes": [{ "id": "o1", "texto": "Matéria" }, { "id": "o2", "texto": "Corpo" }, { "id": "o3", "texto": "Objeto" }],
+      "gabarito": { "i1": "o1", "i2": "o2", "i3": "o3" },
+      "resolucaoPassoAPasso": ["Matéria é o material em si: a madeira.", "Corpo é uma porção limitada de matéria: o tronco cortado.", "Objeto é um corpo que recebeu forma para ter um uso: a cadeira."],
+      "dica": "Do mais geral para o mais específico: material, pedaço, pedaço com uso.",
+      "errosComuns": [{ "descricao": "Confundir corpo (porção de matéria) com objeto (corpo moldado para uma função)." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-materia-conceitos-q3", "temaId": "fund-materia-conceitos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Uma seringa sem agulha tem a ponta tampada com o dedo. Ao empurrar o êmbolo, ele para antes de chegar ao fim. O que essa observação mostra sobre o ar?",
+      "alternativas": [{ "id": "a", "texto": "O ar não é matéria." }, { "id": "b", "texto": "O ar ocupa lugar no espaço." }, { "id": "c", "texto": "O ar não tem massa." }, { "id": "d", "texto": "O ar é uma forma de energia." }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["O ar preso na seringa impede que o êmbolo avance até o fim.", "Isso mostra que o ar ocupa espaço (impenetrabilidade): dois corpos não ocupam o mesmo lugar ao mesmo tempo.", "A experiência não mede massa; ela só mostra que o ar ocupa volume."],
+      "dica": "Por que o êmbolo não consegue ir até o fim?",
+      "errosComuns": [{ "descricao": "O ar tem massa, ainda que pequena; esta experiência apenas não a mede.", "resposta": "c" }, { "descricao": "Se o ar resiste ao êmbolo, ele é matéria, não ausência dela.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-estados-fisicos-q1", "temaId": "fund-estados-fisicos", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Roupas molhadas secam no varal porque a água passa do estado líquido para o gasoso. Essa mudança de estado se chama:",
+      "alternativas": [{ "id": "a", "texto": "Fusão" }, { "id": "b", "texto": "Vaporização (evaporação)" }, { "id": "c", "texto": "Condensação" }, { "id": "d", "texto": "Solidificação" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["A água sai do estado líquido e vai para o ar como vapor.", "A passagem de líquido para gasoso é a vaporização; quando é lenta e acontece só na superfície, chama-se evaporação."],
+      "dica": "De que estado para qual estado a água passou?",
+      "errosComuns": [{ "descricao": "Condensação é o caminho inverso: de gás para líquido, como as gotas num copo gelado.", "resposta": "c" }, { "descricao": "Fusão é a passagem de sólido para líquido.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-estados-fisicos-q2", "temaId": "fund-estados-fisicos", "etapa": "ef-9", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene as amostras de água conforme o grau de agitação das moléculas.",
+      "criterio": "Do maior para o menor grau de agitação.",
+      "itens": [{ "id": "liquida", "texto": "Água líquida" }, { "id": "gelo", "texto": "Gelo" }, { "id": "vapor", "texto": "Vapor de água" }],
+      "gabarito": ["vapor", "liquida", "gelo"],
+      "resolucaoPassoAPasso": ["No gasoso, as moléculas ficam muito afastadas e se movem livremente: maior agitação.", "No líquido, elas ficam próximas, mas deslizam umas sobre as outras.", "No sólido, ficam em posições quase fixas, só vibrando: menor agitação."],
+      "dica": "Em qual estado as moléculas estão mais livres para se mover?",
+      "errosComuns": [{ "descricao": "Achar que no gelo as moléculas ficam totalmente paradas: elas vibram, só que menos." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-estados-fisicos-q3", "temaId": "fund-estados-fisicos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Bolinhas de naftalina guardadas num armário diminuem de tamanho com o tempo, sem deixar nenhum líquido. Esse fenômeno é a:",
+      "alternativas": [{ "id": "a", "texto": "Fusão" }, { "id": "b", "texto": "Sublimação" }, { "id": "c", "texto": "Condensação" }, { "id": "d", "texto": "Ebulição" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Não aparece líquido: o sólido vira gás diretamente.", "A passagem direta de sólido para gás é a sublimação."],
+      "dica": "Se não sobrou líquido, por qual estado a naftalina não passou?",
+      "errosComuns": [{ "descricao": "Na fusão o sólido vira líquido, e não há líquido no armário.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-energia-transformacoes-q1", "temaId": "fund-energia-transformacoes", "etapa": "ef-6", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Classifique cada transformação como física ou química.",
+      "itens": [{ "id": "i1", "texto": "Gelo derretendo" }, { "id": "i2", "texto": "Papel queimando" }, { "id": "i3", "texto": "Prego enferrujando" }, { "id": "i4", "texto": "Açúcar dissolvendo na água" }],
+      "opcoes": [{ "id": "fis", "texto": "Transformação física" }, { "id": "quim", "texto": "Transformação química" }],
+      "gabarito": { "i1": "fis", "i2": "quim", "i3": "quim", "i4": "fis" },
+      "resolucaoPassoAPasso": ["Na transformação química formam-se substâncias novas; na física, não.", "Gelo derretido continua sendo água, e o açúcar dissolvido continua sendo açúcar: físicas.", "A queima do papel forma cinzas e gases, e a ferrugem é uma substância nova: químicas."],
+      "dica": "Pergunte: depois da transformação, ainda é a mesma substância?",
+      "errosComuns": [{ "descricao": "Achar que dissolver é reação química: o açúcar continua lá, só espalhado entre as moléculas de água." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-energia-transformacoes-q2", "temaId": "fund-energia-transformacoes", "etapa": "ef-8", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Em qual situação há uma transformação química que libera energia na forma de calor e luz?",
+      "alternativas": [{ "id": "a", "texto": "O filamento de uma lâmpada incandescente acesa" }, { "id": "b", "texto": "A queima do gás no fogão" }, { "id": "c", "texto": "Um ferro de passar esquentando" }, { "id": "d", "texto": "A água fervendo numa panela" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Na queima (combustão), o gás reage com o oxigênio do ar e forma gás carbônico e água: é transformação química.", "Essa reação libera energia como calor e luz (a chama).", "O filamento e o ferro esquentam pela corrente elétrica, e a água fervendo só muda de estado: transformações físicas."],
+      "dica": "Em qual caso aparecem substâncias novas?",
+      "errosComuns": [{ "descricao": "O filamento brilha por estar muito quente, mas não reage: é transformação física.", "resposta": "a" }, { "descricao": "Ferver é só mudança de estado da água.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-energia-transformacoes-q3", "temaId": "fund-energia-transformacoes", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual das observações abaixo pode acontecer sem que ocorra reação química?",
+      "alternativas": [{ "id": "a", "texto": "Liberação de um gás com cheiro diferente do das substâncias iniciais" }, { "id": "b", "texto": "Mudança de estado físico" }, { "id": "c", "texto": "Formação de um sólido novo ao misturar duas soluções" }, { "id": "d", "texto": "Escurecimento de uma maçã cortada, por formação de novos compostos" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Mudar de estado (derreter, ferver, condensar) não forma substância nova.", "As outras alternativas descrevem substâncias novas surgindo: gás diferente, sólido novo (precipitado), novos compostos."],
+      "dica": "Qual alternativa não fala em substância nova?",
+      "errosComuns": [{ "descricao": "Um sólido que aparece ao misturar duas soluções é um precipitado, sinal de reação.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-propriedades-gerais-q1", "temaId": "fund-propriedades-gerais", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual propriedade é específica, ou seja, ajuda a identificar de que material algo é feito?",
+      "alternativas": [{ "id": "a", "texto": "Massa" }, { "id": "b", "texto": "Volume" }, { "id": "c", "texto": "Densidade" }, { "id": "d", "texto": "Ocupar lugar no espaço" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Massa e volume dependem do tamanho da amostra: um balde e um copo de água têm massas diferentes.", "A densidade (massa dividida pelo volume) é a mesma para qualquer porção do mesmo material, nas mesmas condições.", "Por isso a densidade identifica o material."],
+      "dica": "Qual propriedade não muda se você pegar mais ou menos do material?",
+      "errosComuns": [{ "descricao": "A massa muda com a quantidade de material; não identifica o material.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-propriedades-gerais-q2", "temaId": "fund-propriedades-gerais", "etapa": "ef-6", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Classifique cada propriedade como geral (todo material tem) ou específica (identifica o material).",
+      "itens": [{ "id": "i1", "texto": "Massa" }, { "id": "i2", "texto": "Temperatura de fusão" }, { "id": "i3", "texto": "Volume" }, { "id": "i4", "texto": "Dureza" }],
+      "opcoes": [{ "id": "g", "texto": "Geral" }, { "id": "e", "texto": "Específica" }],
+      "gabarito": { "i1": "g", "i2": "e", "i3": "g", "i4": "e" },
+      "resolucaoPassoAPasso": ["Toda matéria tem massa e volume: são propriedades gerais.", "Cada material funde numa temperatura própria e tem uma dureza própria: são específicas."],
+      "dica": "Uma propriedade geral não ajuda a diferenciar ferro de madeira.",
+      "errosComuns": [{ "descricao": "Pensar que a temperatura de fusão é igual para todos os sólidos." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-propriedades-gerais-q3", "temaId": "fund-propriedades-gerais", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num laboratório, é preciso diferenciar dois pós brancos, sal de cozinha (cloreto de sódio) e açúcar, sem prová-los. Qual teste é o mais adequado?",
+      "alternativas": [{ "id": "a", "texto": "Comparar a cor dos pós" }, { "id": "b", "texto": "Medir a massa de uma colher de cada pó" }, { "id": "c", "texto": "Dissolver cada pó em água e testar se a solução conduz corrente elétrica" }, { "id": "d", "texto": "Medir o volume ocupado por cada pó" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Em laboratório nunca se prova uma substância.", "O sal dissolvido em água forma íons livres, e a solução conduz corrente elétrica.", "O açúcar dissolve sem formar íons, e a solução praticamente não conduz.", "Cor, massa e volume de uma porção qualquer não diferenciam os dois."],
+      "dica": "Um dos dois pós forma íons em água.",
+      "errosComuns": [{ "descricao": "Os dois são brancos: a cor não os diferencia.", "resposta": "a" }, { "descricao": "Massa e volume dependem da quantidade que se pega.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-densidade-q1", "temaId": "fund-densidade", "etapa": "ef-6", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um bloco de metal tem massa de 54 g e volume de 20 cm³. Qual é a densidade do bloco?",
+      "gabarito": { "valor": 2.7, "unidade": "g/mL", "tolerancia": { "relativa": 0.02 } },
+      "verificacao": "54 / 20",
+      "resolucaoPassoAPasso": ["Densidade = massa ÷ volume.", "d = 54 g ÷ 20 cm³ = 2,7 g/cm³ (o mesmo que 2,7 g/mL)."],
+      "dica": "Divida a massa pelo volume.",
+      "errosComuns": [{ "descricao": "Dividiu o volume pela massa (a conta invertida).", "resposta": { "valor": 0.37, "unidade": "g/mL" } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-densidade-q2", "temaId": "fund-densidade", "etapa": "ef-9", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num copo com água (densidade 1,0 g/cm³) são colocados uma rolha de cortiça (0,24 g/cm³), um prego de ferro (7,9 g/cm³) e um cubo de gelo (0,92 g/cm³). Quais deles flutuam?",
+      "alternativas": [{ "id": "a", "texto": "Só a rolha" }, { "id": "b", "texto": "A rolha e o gelo" }, { "id": "c", "texto": "Só o prego" }, { "id": "d", "texto": "Os três" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Flutua na água o que tem densidade menor que a dela (1,0 g/cm³).", "Rolha (0,24) e gelo (0,92) são menos densos: flutuam.", "O prego (7,9) é mais denso: afunda."],
+      "dica": "Compare cada densidade com a da água.",
+      "errosComuns": [{ "descricao": "Esquecer que o gelo, com 0,92 g/cm³, também é menos denso que a água.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-densidade-q3", "temaId": "fund-densidade", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "O álcool etílico tem densidade de 0,79 g/mL. Qual é a massa de 250 mL de álcool?",
+      "gabarito": { "valor": 197.5, "unidade": "g", "tolerancia": { "relativa": 0.01 } },
+      "verificacao": "250 * 0.79",
+      "resolucaoPassoAPasso": ["Da definição d = m ÷ V, temos m = d × V.", "m = 0,79 g/mL × 250 mL = 197,5 g."],
+      "dica": "Isole a massa na fórmula da densidade.",
+      "errosComuns": [{ "descricao": "Dividiu o volume pela densidade em vez de multiplicar.", "resposta": { "valor": 316.5, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-pontos-fusao-ebulicao-q1", "temaId": "fund-pontos-fusao-ebulicao", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Ao nível do mar, a água pura ferve a 100 °C. Enquanto ainda há água líquida na panela fervendo, a temperatura da água:",
+      "alternativas": [{ "id": "a", "texto": "Continua subindo" }, { "id": "b", "texto": "Permanece constante em 100 °C" }, { "id": "c", "texto": "Diminui aos poucos" }, { "id": "d", "texto": "Sobe e desce sem parar" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Durante a mudança de estado de uma substância pura, a energia recebida é usada para separar as moléculas, não para aquecer.", "Por isso a temperatura fica constante (patamar) até toda a água virar vapor."],
+      "dica": "Para onde vai a energia do fogo durante a fervura?",
+      "errosComuns": [{ "descricao": "Achar que mais fogo sempre aumenta a temperatura: durante a fervura ele só acelera a vaporização.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-pontos-fusao-ebulicao-q2", "temaId": "fund-pontos-fusao-ebulicao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Uma amostra sólida é aquecida e sua temperatura é registrada. Ela funde entre 79 °C e 83 °C e ferve entre 210 °C e 230 °C. A amostra é, provavelmente:",
+      "alternativas": [{ "id": "a", "texto": "Uma substância pura" }, { "id": "b", "texto": "Uma mistura comum" }, { "id": "c", "texto": "Uma mistura eutética" }, { "id": "d", "texto": "Uma mistura azeotrópica" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Substância pura funde e ferve a temperaturas constantes.", "Mistura eutética tem fusão constante; mistura azeotrópica tem ebulição constante.", "Aqui as duas mudanças ocorrem em faixas de temperatura: é uma mistura comum."],
+      "dica": "Veja se a fusão e a ebulição ocorrem a uma temperatura só ou numa faixa.",
+      "errosComuns": [{ "descricao": "Na mistura eutética a fusão ocorre a temperatura constante, o que não acontece aqui.", "resposta": "c" }, { "descricao": "Substância pura teria patamares bem definidos nas duas mudanças.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-pontos-fusao-ebulicao-q3", "temaId": "fund-pontos-fusao-ebulicao", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Considere três substâncias: X (fusão −95 °C, ebulição 56 °C), Y (fusão 801 °C, ebulição 1413 °C) e Z (fusão 0 °C, ebulição 100 °C). A 25 °C, seus estados físicos são:",
+      "alternativas": [{ "id": "a", "texto": "X líquido, Y sólido, Z líquido" }, { "id": "b", "texto": "X gasoso, Y sólido, Z líquido" }, { "id": "c", "texto": "X sólido, Y sólido, Z líquido" }, { "id": "d", "texto": "X líquido, Y líquido, Z líquido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Abaixo da temperatura de fusão: sólido. Entre fusão e ebulição: líquido. Acima da ebulição: gasoso.", "X: 25 °C está entre −95 °C e 56 °C → líquido.", "Y: 25 °C está abaixo de 801 °C → sólido.", "Z: 25 °C está entre 0 °C e 100 °C → líquido."],
+      "dica": "Para cada substância, veja em qual intervalo fica 25 °C.",
+      "errosComuns": [{ "descricao": "X só seria gasoso acima de 56 °C.", "resposta": "b" }, { "descricao": "Y só funde a 801 °C; a 25 °C ainda é sólido.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-substancias-puras-q1", "temaId": "fund-substancias-puras", "etapa": "ef-6", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Classifique cada substância como simples (um só elemento) ou composta (mais de um elemento).",
+      "itens": [{ "id": "i1", "texto": "\\ce{O2} (gás oxigênio)" }, { "id": "i2", "texto": "\\ce{H2O} (água)" }, { "id": "i3", "texto": "\\ce{CO2} (gás carbônico)" }, { "id": "i4", "texto": "\\ce{O3} (ozônio)" }, { "id": "i5", "texto": "\\ce{Fe} (ferro)" }],
+      "opcoes": [{ "id": "s", "texto": "Substância simples" }, { "id": "c", "texto": "Substância composta" }],
+      "gabarito": { "i1": "s", "i2": "c", "i3": "c", "i4": "s", "i5": "s" },
+      "resolucaoPassoAPasso": ["Conte quantos elementos diferentes aparecem na fórmula.", "\\ce{O2}, \\ce{O3} e \\ce{Fe} têm um só elemento: simples.", "\\ce{H2O} (H e O) e \\ce{CO2} (C e O) têm dois elementos: compostas."],
+      "dica": "Olhe os símbolos diferentes, não o número de átomos.",
+      "errosComuns": [{ "descricao": "Achar que \\ce{O3} é composta por ter três átomos: o que conta é haver um só elemento." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-substancias-puras-q2", "temaId": "fund-substancias-puras", "etapa": "ef-9", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O gás oxigênio (\\ce{O2}) e o ozônio (\\ce{O3}) são formados só pelo elemento oxigênio, mas têm propriedades diferentes. Esse fenômeno se chama:",
+      "alternativas": [{ "id": "a", "texto": "Isotopia" }, { "id": "b", "texto": "Alotropia" }, { "id": "c", "texto": "Isomeria" }, { "id": "d", "texto": "Dissolução" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Alotropia é quando um mesmo elemento forma substâncias simples diferentes.", "\\ce{O2} e \\ce{O3} diferem no número de átomos por molécula; grafite e diamante (carbono) são outro exemplo."],
+      "dica": "Mesmo elemento, substâncias simples diferentes.",
+      "errosComuns": [{ "descricao": "Isótopos são átomos do mesmo elemento com números de nêutrons diferentes; aqui muda a molécula, não o átomo.", "resposta": "a" }, { "descricao": "Isomeria envolve compostos com a mesma fórmula molecular e estruturas diferentes.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-substancias-puras-q3", "temaId": "fund-substancias-puras", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Quantos elementos químicos diferentes e quantos átomos ao todo há em uma molécula de glicose, \\ce{C6H12O6}?",
+      "alternativas": [{ "id": "a", "texto": "3 elementos e 24 átomos" }, { "id": "b", "texto": "3 elementos e 3 átomos" }, { "id": "c", "texto": "24 elementos e 3 átomos" }, { "id": "d", "texto": "6 elementos e 24 átomos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Elementos diferentes: C, H e O → 3.", "Átomos: 6 + 12 + 6 = 24."],
+      "dica": "Elementos são os símbolos; átomos são a soma dos índices.",
+      "errosComuns": [{ "descricao": "Contou os símbolos como se fossem os átomos.", "resposta": "b" }, { "descricao": "Usou o primeiro índice como número de elementos.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-misturas-tipos-q1", "temaId": "fund-misturas-tipos", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas é uma mistura homogênea?",
+      "alternativas": [{ "id": "a", "texto": "Água e óleo" }, { "id": "b", "texto": "Água e areia" }, { "id": "c", "texto": "Água com sal totalmente dissolvido" }, { "id": "d", "texto": "Granito" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Mistura homogênea tem aspecto uniforme: uma só fase.", "O sal dissolvido não pode ser visto nem separado a olho: uma fase.", "Nas outras, dá para ver partes diferentes."],
+      "dica": "Em qual mistura não dá para distinguir os componentes?",
+      "errosComuns": [{ "descricao": "No granito dá para ver grãos de cores diferentes: é heterogêneo.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-misturas-tipos-q2", "temaId": "fund-misturas-tipos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um recipiente contém água com sal totalmente dissolvido, cubos de gelo e uma camada de óleo. Quantas fases tem esse sistema?",
+      "alternativas": [{ "id": "a", "texto": "2" }, { "id": "b", "texto": "3" }, { "id": "c", "texto": "4" }, { "id": "d", "texto": "5" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Água com sal dissolvido é uma fase só.", "O gelo é outra fase, e o óleo, outra.", "Total: 3 fases."],
+      "dica": "O sal dissolvido forma uma fase separada?",
+      "errosComuns": [{ "descricao": "Contou o sal dissolvido como fase à parte; dissolvido, ele faz parte da fase aquosa.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-misturas-tipos-q3", "temaId": "fund-misturas-tipos", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "O ar atmosférico, sem poeira, é:",
+      "alternativas": [{ "id": "a", "texto": "Uma substância pura" }, { "id": "b", "texto": "Uma mistura homogênea" }, { "id": "c", "texto": "Uma mistura heterogênea" }, { "id": "d", "texto": "Um elemento químico" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["O ar contém vários gases: nitrogênio, oxigênio, argônio, gás carbônico e outros. Portanto, é mistura.", "Os gases se misturam por completo e formam uma fase só: mistura homogênea."],
+      "dica": "Quantos gases diferentes existem no ar?",
+      "errosComuns": [{ "descricao": "O ar não é uma substância só: é formado por vários gases.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-separacao-heterogeneas-q1", "temaId": "fund-separacao-heterogeneas", "etapa": "ef-6", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada mistura ao método mais adequado para separá-la.",
+      "itens": [{ "id": "i1", "texto": "Areia e água" }, { "id": "i2", "texto": "Limalha de ferro e areia" }, { "id": "i3", "texto": "Água e óleo" }, { "id": "i4", "texto": "Feijão e pedrinhas" }],
+      "opcoes": [{ "id": "filt", "texto": "Filtração" }, { "id": "ima", "texto": "Separação magnética (com ímã)" }, { "id": "funil", "texto": "Funil de separação (decantação)" }, { "id": "cat", "texto": "Catação" }],
+      "gabarito": { "i1": "filt", "i2": "ima", "i3": "funil", "i4": "cat" },
+      "resolucaoPassoAPasso": ["Areia não passa pelo filtro, e a água passa: filtração.", "O ferro é atraído pelo ímã, e a areia não: separação magnética.", "Óleo e água não se misturam e formam camadas: funil de separação.", "Pedrinhas grandes podem ser retiradas com a mão: catação."],
+      "dica": "Pense na propriedade que diferencia os dois componentes.",
+      "errosComuns": [{ "descricao": "Tentar filtrar água e óleo: os dois líquidos passam pelo filtro de papel." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-separacao-heterogeneas-q2", "temaId": "fund-separacao-heterogeneas", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Em laboratórios de análises clínicas, para separar rapidamente as células do plasma numa amostra de sangue, usa-se:",
+      "alternativas": [{ "id": "a", "texto": "Filtração" }, { "id": "b", "texto": "Centrifugação" }, { "id": "c", "texto": "Destilação" }, { "id": "d", "texto": "Peneiração" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["As células são mais densas que o plasma e sedimentariam sozinhas, mas devagar.", "A centrífuga gira o tubo em alta velocidade e acelera essa separação por densidade."],
+      "dica": "É uma decantação acelerada.",
+      "errosComuns": [{ "descricao": "A destilação separa líquidos por temperatura de ebulição e danificaria a amostra.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-separacao-heterogeneas-q3", "temaId": "fund-separacao-heterogeneas", "etapa": "ef-6", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes métodos NÃO serve para separar areia e água?",
+      "alternativas": [{ "id": "a", "texto": "Filtração" }, { "id": "b", "texto": "Esperar a areia assentar e despejar a água com cuidado" }, { "id": "c", "texto": "Separação magnética" }, { "id": "d", "texto": "Peneira de malha bem fina" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Filtração, decantação e peneira fina retêm a areia ou a deixam no fundo.", "A areia comum não é atraída por ímã, então a separação magnética não funciona."],
+      "dica": "Qual método depende de o material ser atraído por ímã?",
+      "errosComuns": [{ "descricao": "Esperar a areia assentar e retirar a água é uma decantação, e funciona.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-separacao-homogeneas-q1", "temaId": "fund-separacao-homogeneas", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Nas salinas, o sal de cozinha é obtido da água do mar principalmente por:",
+      "alternativas": [{ "id": "a", "texto": "Filtração" }, { "id": "b", "texto": "Evaporação da água" }, { "id": "c", "texto": "Decantação" }, { "id": "d", "texto": "Catação" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["O sal está dissolvido na água do mar: mistura homogênea.", "Com o sol e o vento, a água evapora e o sal fica no fundo dos tanques."],
+      "dica": "O sal está dissolvido; o que precisa sair da mistura?",
+      "errosComuns": [{ "descricao": "O sal dissolvido atravessa o filtro junto com a água.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-separacao-homogeneas-q2", "temaId": "fund-separacao-homogeneas", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Para separar uma mistura de água (ebulição a 100 °C) e etanol (ebulição a 78 °C), o método mais indicado é a:",
+      "alternativas": [{ "id": "a", "texto": "Destilação simples" }, { "id": "b", "texto": "Destilação fracionada" }, { "id": "c", "texto": "Filtração" }, { "id": "d", "texto": "Decantação" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["São dois líquidos miscíveis: mistura homogênea.", "Como os pontos de ebulição são próximos, usa-se a coluna de fracionamento, que separa melhor os vapores.", "A destilação simples é usada para separar um sólido dissolvido de um líquido."],
+      "dica": "Dois líquidos com temperaturas de ebulição próximas.",
+      "errosComuns": [{ "descricao": "A destilação simples não separa bem dois líquidos com pontos de ebulição próximos.", "resposta": "a" }, { "descricao": "Água e etanol se misturam totalmente: não há camadas para decantar.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-separacao-homogeneas-q3", "temaId": "fund-separacao-homogeneas", "etapa": "em-1", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Na destilação fracionada do petróleo, as frações saem em momentos diferentes da coluna. Ordene as frações abaixo.",
+      "criterio": "Da que tem menor faixa de temperatura de ebulição para a de maior.",
+      "itens": [{ "id": "querosene", "texto": "Querosene" }, { "id": "glp", "texto": "Gás liquefeito de petróleo (GLP)" }, { "id": "diesel", "texto": "Óleo diesel" }, { "id": "gasolina", "texto": "Gasolina" }],
+      "gabarito": ["glp", "gasolina", "querosene", "diesel"],
+      "resolucaoPassoAPasso": ["Moléculas menores têm interações mais fracas e fervem a temperaturas mais baixas.", "O GLP tem as menores moléculas (3 a 4 carbonos), seguido da gasolina, do querosene e do diesel."],
+      "dica": "Quanto menor a molécula, mais cedo ela sai da coluna.",
+      "errosComuns": [{ "descricao": "Trocar querosene e diesel: o diesel tem moléculas maiores e ferve a temperaturas mais altas." }],
+      "revisado": false
+    },
+    {
+      "id": "fund-unidades-q1", "temaId": "fund-unidades", "etapa": "ef-6", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Converta 2,5 kg em gramas.",
+      "gabarito": { "valor": 2500, "unidade": "g", "exigirUnidade": true },
+      "verificacao": "2.5 * 1000",
+      "resolucaoPassoAPasso": ["1 kg = 1000 g.", "2,5 kg × 1000 = 2500 g."],
+      "dica": "O prefixo quilo significa mil.",
+      "errosComuns": [{ "descricao": "Dividiu por 1000 em vez de multiplicar.", "resposta": { "valor": 0.0025, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-unidades-q2", "temaId": "fund-unidades", "etapa": "em-1", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Uma solução tem volume de 350 mL. Quanto é esse volume em litros?",
+      "gabarito": { "valor": 0.35, "unidade": "L", "exigirUnidade": true },
+      "verificacao": "350 / 1000",
+      "resolucaoPassoAPasso": ["1 L = 1000 mL.", "350 mL ÷ 1000 = 0,35 L."],
+      "dica": "De mililitro para litro, a unidade fica maior, então o número fica menor.",
+      "errosComuns": [{ "descricao": "Multiplicou por 1000 em vez de dividir.", "resposta": { "valor": 350000, "unidade": "L" } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-unidades-q3", "temaId": "fund-unidades", "etapa": "ef-6", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "A temperatura de uma sala é 27 °C. Quanto é essa temperatura em kelvins? (Use T(K) = T(°C) + 273.)",
+      "gabarito": { "valor": 300, "unidade": "K", "tolerancia": { "absoluta": 0.5 }, "exigirUnidade": true },
+      "verificacao": "27 + 273",
+      "resolucaoPassoAPasso": ["Para passar de graus Celsius para kelvins, soma-se 273.", "27 + 273 = 300 K."],
+      "dica": "A escala Kelvin não tem valores negativos: some, não subtraia.",
+      "errosComuns": [{ "descricao": "Subtraiu 273 em vez de somar.", "resposta": { "valor": -246, "unidade": "K" } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-notacao-cientifica-q1", "temaId": "fund-notacao-cientifica", "etapa": "ef-9", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Como se escreve 0,00045 em notação científica?",
+      "alternativas": [{ "id": "a", "texto": "4,5 × 10⁻⁴" }, { "id": "b", "texto": "4,5 × 10⁴" }, { "id": "c", "texto": "45 × 10⁻⁵" }, { "id": "d", "texto": "4,5 × 10⁻³" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na notação científica, o número antes da potência fica entre 1 e 10: 4,5.", "Para ir de 0,00045 a 4,5, a vírgula anda 4 casas para a direita.", "Logo, 0,00045 = 4,5 × 10⁻⁴ (expoente negativo porque o número é menor que 1)."],
+      "dica": "Conte quantas casas a vírgula anda até ficar depois do 4.",
+      "errosComuns": [{ "descricao": "45 × 10⁻⁵ vale o mesmo número, mas o coeficiente precisa ficar entre 1 e 10.", "resposta": "c" }, { "descricao": "Usou expoente positivo para um número menor que 1.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-notacao-cientifica-q2", "temaId": "fund-notacao-cientifica", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Calcule (3,0 × 10⁵) × (2,0 × 10⁻³).",
+      "gabarito": { "valor": 600, "unidade": null },
+      "verificacao": "3e5 * 2e-3",
+      "resolucaoPassoAPasso": ["Multiplique os coeficientes: 3,0 × 2,0 = 6,0.", "Na multiplicação, some os expoentes: 5 + (−3) = 2.", "Resultado: 6,0 × 10² = 600."],
+      "dica": "Coeficientes se multiplicam; expoentes se somam.",
+      "errosComuns": [{ "descricao": "Multiplicou os expoentes em vez de somá-los.", "resposta": { "valor": 6e-15 } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-notacao-cientifica-q3", "temaId": "fund-notacao-cientifica", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Calcule (8,0 × 10⁶) ÷ (2,0 × 10²).",
+      "gabarito": { "valor": 40000, "unidade": null },
+      "verificacao": "8e6 / 2e2",
+      "resolucaoPassoAPasso": ["Divida os coeficientes: 8,0 ÷ 2,0 = 4,0.", "Na divisão, subtraia os expoentes: 6 − 2 = 4.", "Resultado: 4,0 × 10⁴ = 40 000."],
+      "dica": "Na divisão de potências de mesma base, os expoentes se subtraem.",
+      "errosComuns": [{ "descricao": "Somou os expoentes, como se fosse multiplicação.", "resposta": { "valor": 4e8 } }],
+      "revisado": false
+    },
+    {
+      "id": "fund-algarismos-significativos-q1", "temaId": "fund-algarismos-significativos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Quantos algarismos significativos tem o número 0,00340?",
+      "alternativas": [{ "id": "a", "texto": "2" }, { "id": "b", "texto": "3" }, { "id": "c", "texto": "5" }, { "id": "d", "texto": "6" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Zeros à esquerda só marcam a posição da vírgula: não são significativos.", "Contam o 3, o 4 e o zero final, que foi medido (fica depois da vírgula, à direita de algarismo não nulo).", "Total: 3 algarismos significativos (3,40 × 10⁻³)."],
+      "dica": "Escreva o número em notação científica e conte os algarismos do coeficiente.",
+      "errosComuns": [{ "descricao": "Contou os zeros à esquerda, que não são significativos.", "resposta": "c" }, { "descricao": "Ignorou o zero final, que indica a precisão da medida.", "resposta": "a" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-algarismos-significativos-q2", "temaId": "fund-algarismos-significativos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Uma massa de 12,6 g é somada a outra de 0,27 g. Respeitando a precisão das medidas, o resultado deve ser escrito como:",
+      "alternativas": [{ "id": "a", "texto": "12,87 g" }, { "id": "b", "texto": "12,9 g" }, { "id": "c", "texto": "13 g" }, { "id": "d", "texto": "12,8 g" }],
+      "gabarito": "b",
+      "resolucaoPassoAPasso": ["Em somas e subtrações, o resultado fica com o mesmo número de casas decimais da parcela menos precisa.", "12,6 tem uma casa decimal; 0,27 tem duas. O resultado deve ter uma.", "12,6 + 0,27 = 12,87, que arredondado fica 12,9 g."],
+      "dica": "Qual das medidas tem menos casas decimais?",
+      "errosComuns": [{ "descricao": "Manteve casas decimais que a medida 12,6 g não tem.", "resposta": "a" }, { "descricao": "Truncou em vez de arredondar: 12,87 arredonda para 12,9.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "fund-algarismos-significativos-q3", "temaId": "fund-algarismos-significativos", "etapa": "em-1", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual é o resultado de 4,56 × 1,4 com o número correto de algarismos significativos?",
+      "alternativas": [{ "id": "a", "texto": "6,384" }, { "id": "b", "texto": "6,38" }, { "id": "c", "texto": "6,4" }, { "id": "d", "texto": "6" }],
+      "gabarito": "c",
+      "resolucaoPassoAPasso": ["Em multiplicações e divisões, o resultado tem tantos algarismos significativos quanto o fator que tem menos.", "4,56 tem 3; 1,4 tem 2. O resultado deve ter 2.", "4,56 × 1,4 = 6,384, que com 2 algarismos significativos fica 6,4."],
+      "dica": "Na multiplicação, conte algarismos significativos, não casas decimais.",
+      "errosComuns": [{ "descricao": "Manteve todos os algarismos da calculadora.", "resposta": "a" }, { "descricao": "Usou o número de algarismos de 4,56, o fator mais preciso.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

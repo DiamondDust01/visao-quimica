@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "./themeLight.css";
+
+/* Cores que não vêm da paleta do Tailwind. O tema claro redefine estas variáveis
+   e src/themeLight.css inverte a paleta. Nenhuma fonte é baixada da internet:
+   o app precisa funcionar offline no Android e no Windows. */
+:root {
+  color-scheme: dark;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', Consolas, 'Roboto Mono', 'Liberation Mono', monospace;
+  --app-bg: #03100f;
+  --app-bg-end: #04111a;
+  --app-text: #e2e8f0;
+  --app-glow: rgba(45, 212, 191, 0.10);
+  --backdrop-glow-a: rgba(45, 212, 191, 0.16);
+  --backdrop-glow-b: rgba(167, 139, 250, 0.12);
+  --backdrop-hex: rgba(45, 212, 191, 0.12);
+  --backdrop-symbol-a: #5eead4;
+  --backdrop-symbol-b: #a78bfa;
+  --backdrop-symbols-opacity: 0.28;
+  --scroll-thumb: #1f2937;
+  --selection: rgba(45, 212, 191, 0.35);
+}
+
+:root[data-theme="light"] {
+  --app-bg: #f2f8f7;
+  --app-bg-end: #e9eff8;
+  --app-text: #1e293b;
+  --app-glow: rgba(13, 148, 136, 0.08);
+  --backdrop-glow-a: rgba(13, 148, 136, 0.12);
+  --backdrop-glow-b: rgba(124, 58, 237, 0.08);
+  --backdrop-hex: rgba(13, 148, 136, 0.14);
+  --backdrop-symbol-a: #0f766e;
+  --backdrop-symbol-b: #6d28d9;
+  --backdrop-symbols-opacity: 0.30;
+  --scroll-thumb: #cbd5e1;
+  --selection: rgba(13, 148, 136, 0.22);
+}
+
+:root {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+  background: var(--app-bg);
+  color: var(--app-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, var(--app-glow), transparent 20%),
+    var(--app-bg);
+  color: var(--app-text);
+}
+
+html.android-app {
+  font-size: 14px;
+}
+
+/* No celular, os símbolos do fundo somem para não competir com o texto. */
+html.android-app .backdrop-symbols {
+  display: none;
+}
+
+/* Regras de elemento ficam na camada base: assim as classes do Tailwind (camada utilities)
+   sempre as sobrescrevem. Fora de uma camada, `div { min-width: 0 }` anulava, por exemplo,
+   `min-w-[44rem]` da tabela periódica. */
+@layer base {
+  textarea {
+    font: inherit;
+  }
+
+  main,
+  header,
+  section,
+  article,
+  div {
+    min-width: 0;
+  }
+}
+
+/* Fórmulas do KaTeX dentro do texto: tamanho próximo ao do texto ao redor e quebra de linha
+   permitida em telas estreitas. */
+.chem .katex {
+  font-size: 1.08em;
+  white-space: normal;
+}
+
+.chem .katex .base {
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 999px;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

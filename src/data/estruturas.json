@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "versao": "2026-10-26",
+    "descricao": "Exemplos da galeria de estruturas em Ferramentas. A fórmula de cada um é conferida contra o SMILES por npm run validate:content.",
+    "observacao": "Estruturas desenhadas sem indicar a orientação espacial (estereoquímica)."
+  },
+  "estruturas": [
+    { "id": "agua", "nome": "Água", "smiles": "O", "formula": "H2O", "descricao": "Molécula angular; o oxigênio tem dois pares de elétrons não ligantes." },
+    { "id": "metano", "nome": "Metano", "smiles": "C", "formula": "CH4", "descricao": "O alcano mais simples, principal componente do gás natural." },
+    { "id": "eteno", "nome": "Eteno (etileno)", "smiles": "C=C", "formula": "C2H4", "descricao": "Alceno mais simples; monômero do polietileno e hormônio que amadurece frutas." },
+    { "id": "etanol", "nome": "Etanol", "smiles": "CCO", "formula": "C2H6O", "descricao": "Álcool com hidroxila (–OH) em carbono saturado; combustível e solvente." },
+    { "id": "acido-acetico", "nome": "Ácido acético (ácido etanoico)", "smiles": "CC(=O)O", "formula": "C2H4O2", "descricao": "Ácido carboxílico (–COOH) presente no vinagre." },
+    { "id": "acetona", "nome": "Acetona (propanona)", "smiles": "CC(C)=O", "formula": "C3H6O", "descricao": "Cetona: carbonila (C=O) entre dois carbonos. Usada como solvente." },
+    { "id": "acetato-de-etila", "nome": "Acetato de etila (etanoato de etila)", "smiles": "CC(=O)OCC", "formula": "C4H8O2", "descricao": "Éster formado por ácido acético e etanol; solvente com cheiro frutado." },
+    { "id": "benzeno", "nome": "Benzeno", "smiles": "c1ccccc1", "formula": "C6H6", "descricao": "Anel aromático de seis carbonos com elétrons deslocalizados." },
+    { "id": "fenol", "nome": "Fenol", "smiles": "Oc1ccccc1", "formula": "C6H6O", "descricao": "Hidroxila ligada diretamente ao anel aromático: por isso não é um álcool." },
+    { "id": "ureia", "nome": "Ureia", "smiles": "NC(N)=O", "formula": "CH4N2O", "descricao": "Amida eliminada na urina; também usada como fertilizante." },
+    { "id": "acido-latico", "nome": "Ácido lático", "smiles": "CC(O)C(=O)O", "formula": "C3H6O3", "descricao": "Tem um carbono quiral (o do meio), ligado a quatro grupos diferentes." },
+    { "id": "glicose", "nome": "Glicose (forma cíclica)", "smiles": "OCC1OC(O)C(O)C(O)C1O", "formula": "C6H12O6", "descricao": "Açúcar mais comum; em água, fica quase toda na forma de anel de seis átomos." },
+    { "id": "acido-acetilsalicilico", "nome": "Ácido acetilsalicílico", "smiles": "CC(=O)Oc1ccccc1C(=O)O", "formula": "C9H8O4", "descricao": "Tem as funções éster e ácido carboxílico ligadas a um anel aromático." },
+    { "id": "cafeina", "nome": "Cafeína", "smiles": "Cn1cnc2c1c(=O)n(C)c(=O)n2C", "formula": "C8H10N4O2", "descricao": "Composto nitrogenado com dois anéis fundidos, presente no café e no chá." }
+  ]
+}

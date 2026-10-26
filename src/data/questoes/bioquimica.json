@@ -1,0 +1,157 @@
+{
+  "area": "bioquimica",
+  "questoes": [
+    {
+      "id": "bio-carboidratos-q1", "temaId": "bio-carboidratos", "etapa": "em-3", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Classifique cada carboidrato.",
+      "itens": [{ "id": "glicose", "texto": "Glicose" }, { "id": "sacarose", "texto": "Sacarose (açúcar de mesa)" }, { "id": "amido", "texto": "Amido" }, { "id": "celulose", "texto": "Celulose" }],
+      "opcoes": [{ "id": "mono", "texto": "Monossacarídeo" }, { "id": "di", "texto": "Dissacarídeo" }, { "id": "poli", "texto": "Polissacarídeo" }],
+      "gabarito": { "glicose": "mono", "sacarose": "di", "amido": "poli", "celulose": "poli" },
+      "resolucaoPassoAPasso": ["Glicose: unidade simples, monossacarídeo.", "Sacarose: glicose + frutose unidas, dissacarídeo.", "Amido e celulose: cadeias longas de glicose, polissacarídeos."],
+      "dica": "Conte quantas unidades de açúcar simples há em cada um.",
+      "errosComuns": [{ "descricao": "A sacarose é formada por duas unidades; não é monossacarídeo." }],
+      "revisado": false
+    },
+    {
+      "id": "bio-carboidratos-q2", "temaId": "bio-carboidratos", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Amido e celulose são formados por unidades de glicose. Por que nós digerimos o amido, mas não a celulose?",
+      "alternativas": [{ "id": "a", "texto": "Porque as ligações entre as glicoses são de tipos diferentes, e não temos enzima para quebrar as da celulose" }, { "id": "b", "texto": "Porque a celulose não contém glicose" }, { "id": "c", "texto": "Porque o amido é uma proteína" }, { "id": "d", "texto": "Porque a celulose é um lipídio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os dois polímeros diferem no tipo de ligação glicosídica.", "Temos enzimas (amilases) para o amido, mas não para a celulose.", "Ruminantes digerem celulose graças a micro-organismos do seu sistema digestório."],
+      "dica": "As unidades são iguais; o que muda é a forma como se ligam.",
+      "errosComuns": [{ "descricao": "A celulose também é formada por glicose.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-carboidratos-q3", "temaId": "bio-carboidratos", "etapa": "superior", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A glicose, \\ce{C6H12O6}, em cadeia aberta, tem um grupo aldeído e vários grupos hidroxila. Por isso é classificada como:",
+      "alternativas": [{ "id": "a", "texto": "Aldose (poli-hidroxialdeído)" }, { "id": "b", "texto": "Cetose (poli-hidroxicetona)" }, { "id": "c", "texto": "Ácido graxo" }, { "id": "d", "texto": "Aminoácido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Carboidratos são poli-hidroxialdeídos ou poli-hidroxicetonas.", "A glicose tem grupo aldeído: é uma aldose. A frutose, com grupo cetona, é uma cetose."],
+      "dica": "Qual grupo carbonila ela tem?",
+      "errosComuns": [{ "descricao": "Cetose é o caso da frutose, que tem grupo cetona.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-lipidios-q1", "temaId": "bio-lipidios", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um triglicerídeo é formado por:",
+      "alternativas": [{ "id": "a", "texto": "Uma molécula de glicerol ligada a três ácidos graxos por ligações éster" }, { "id": "b", "texto": "Três moléculas de glicose" }, { "id": "c", "texto": "Aminoácidos ligados por ligações peptídicas" }, { "id": "d", "texto": "Nucleotídeos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O glicerol tem três grupos –OH.", "Cada um reage com um ácido graxo formando uma ligação éster: daí o nome triglicerídeo."],
+      "dica": "Tri = três ácidos graxos.",
+      "errosComuns": [{ "descricao": "Ligações peptídicas formam proteínas.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-lipidios-q2", "temaId": "bio-lipidios", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que, em geral, óleos vegetais são líquidos e gorduras animais são sólidas à temperatura ambiente?",
+      "alternativas": [{ "id": "a", "texto": "Os óleos têm mais ligações duplas cis, que dobram as cadeias e dificultam o empacotamento" }, { "id": "b", "texto": "Os óleos não têm ácidos graxos" }, { "id": "c", "texto": "As gorduras têm mais ligações duplas" }, { "id": "d", "texto": "Os óleos são proteínas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cadeias saturadas são retas e se encaixam bem: interações mais fortes, sólido.", "Duplas cis criam 'dobras' nas cadeias, que se empacotam mal: interações mais fracas, líquido."],
+      "dica": "Pense em como as cadeias se encaixam.",
+      "errosComuns": [{ "descricao": "É o contrário: as gorduras animais são mais saturadas.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-lipidios-q3", "temaId": "bio-lipidios", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que os fosfolipídios formam as membranas das células?",
+      "alternativas": [{ "id": "a", "texto": "Têm uma 'cabeça' polar e 'caudas' apolares, e se organizam em bicamada na água" }, { "id": "b", "texto": "São totalmente polares e se dissolvem na água" }, { "id": "c", "texto": "São açúcares rígidos" }, { "id": "d", "texto": "São metais" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As cabeças polares ficam voltadas para a água, dentro e fora da célula.", "As caudas apolares ficam escondidas no meio da bicamada."],
+      "dica": "Assim como o sabão, têm uma parte polar e outra apolar.",
+      "errosComuns": [{ "descricao": "Se fossem totalmente polares, se dissolveriam e não formariam uma barreira.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-aminoacidos-proteinas-q1", "temaId": "bio-aminoacidos-proteinas", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Quais grupos funcionais todo aminoácido possui?",
+      "alternativas": [{ "id": "a", "texto": "Amina e ácido carboxílico" }, { "id": "b", "texto": "Aldeído e cetona" }, { "id": "c", "texto": "Éster e éter" }, { "id": "d", "texto": "Só hidroxilas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O nome já indica: amino (grupo amina) + ácido (grupo carboxílico).", "Os dois ficam ligados ao mesmo carbono, junto com um grupo lateral que varia."],
+      "dica": "Amino + ácido.",
+      "errosComuns": [{ "descricao": "Aldeído e cetona são grupos típicos dos carboidratos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-aminoacidos-proteinas-q2", "temaId": "bio-aminoacidos-proteinas", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A ligação peptídica, que une os aminoácidos numa proteína, se forma entre:",
+      "alternativas": [{ "id": "a", "texto": "O grupo carboxílico de um aminoácido e o grupo amina de outro, com saída de água" }, { "id": "b", "texto": "Dois grupos amina" }, { "id": "c", "texto": "Dois grupos carboxílicos" }, { "id": "d", "texto": "Um açúcar e um fosfato" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["–COOH de um aminoácido reage com –NH₂ de outro.", "Sai uma molécula de água e forma-se uma ligação amida, chamada de ligação peptídica."],
+      "dica": "É uma ligação amida.",
+      "errosComuns": [{ "descricao": "Açúcar e fosfato formam o esqueleto dos ácidos nucleicos.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-aminoacidos-proteinas-q3", "temaId": "bio-aminoacidos-proteinas", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Ao cozinhar um ovo, a clara fica branca e firme. O que acontece com as proteínas?",
+      "alternativas": [{ "id": "a", "texto": "Desnaturação: o calor desfaz a forma espacial das proteínas, sem romper as ligações peptídicas" }, { "id": "b", "texto": "As proteínas viram açúcar" }, { "id": "c", "texto": "As proteínas evaporam" }, { "id": "d", "texto": "Os aminoácidos se separam totalmente" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A forma das proteínas é mantida por interações fracas, como ligações de hidrogênio.", "O calor rompe essas interações e a proteína se desenrola e se agrega.", "A sequência de aminoácidos (estrutura primária) continua a mesma."],
+      "dica": "O que muda é a forma, não a sequência.",
+      "errosComuns": [{ "descricao": "A desnaturação não separa os aminoácidos; a sequência continua intacta.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-enzimas-q1", "temaId": "bio-enzimas", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que cada enzima atua, em geral, sobre um substrato específico?",
+      "alternativas": [{ "id": "a", "texto": "Porque o sítio ativo tem forma e grupos químicos complementares ao substrato" }, { "id": "b", "texto": "Porque as enzimas são consumidas na reação" }, { "id": "c", "texto": "Porque toda enzima é igual" }, { "id": "d", "texto": "Porque as enzimas só funcionam no estômago" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O sítio ativo é uma região da enzima com forma e cargas específicas.", "Só o substrato que se encaixa bem ali é transformado (modelo chave-fechadura ou encaixe induzido)."],
+      "dica": "Pense em chave e fechadura.",
+      "errosComuns": [{ "descricao": "Enzimas são catalisadores e não são consumidas.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-enzimas-q2", "temaId": "bio-enzimas", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A atividade de uma enzima humana costuma ser máxima por volta de 37 °C e cai muito acima de 45 °C. Por quê?",
+      "alternativas": [{ "id": "a", "texto": "Em temperaturas altas a enzima se desnatura e o sítio ativo perde a forma" }, { "id": "b", "texto": "Porque a reação vira endotérmica" }, { "id": "c", "texto": "Porque o substrato evapora" }, { "id": "d", "texto": "Porque a enzima se multiplica" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Até certo ponto, aquecer acelera a reação.", "Acima da temperatura ótima, a enzima (uma proteína) se desnatura.", "Sem a forma correta do sítio ativo, ela deixa de funcionar."],
+      "dica": "Enzimas são proteínas.",
+      "errosComuns": [{ "descricao": "O ΔH da reação não muda com a temperatura dessa forma; o problema é a desnaturação.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-enzimas-q3", "temaId": "bio-enzimas", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A pepsina, enzima do estômago, funciona melhor em pH próximo de 2. Se ela for colocada em meio neutro (pH 7):",
+      "alternativas": [{ "id": "a", "texto": "Sua atividade cai muito, porque o pH altera as cargas e a forma da enzima" }, { "id": "b", "texto": "Fica mais rápida" }, { "id": "c", "texto": "Vira outra enzima" }, { "id": "d", "texto": "Não há efeito: o pH não influi em enzimas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada enzima tem um pH ótimo.", "Mudanças de pH alteram as cargas dos grupos da proteína e podem deformar o sítio ativo.", "Longe do pH ótimo, a atividade cai."],
+      "dica": "Cada enzima tem seu pH ideal.",
+      "errosComuns": [{ "descricao": "O pH influi muito na atividade enzimática.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-acidos-nucleicos-q1", "temaId": "bio-acidos-nucleicos", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um nucleotídeo é formado por:",
+      "alternativas": [{ "id": "a", "texto": "Um açúcar (pentose), um grupo fosfato e uma base nitrogenada" }, { "id": "b", "texto": "Glicerol e três ácidos graxos" }, { "id": "c", "texto": "Dois aminoácidos" }, { "id": "d", "texto": "Glicose e frutose" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O nucleotídeo é a unidade dos ácidos nucleicos (DNA e RNA).", "Tem uma pentose (desoxirribose no DNA e ribose no RNA), um fosfato e uma base nitrogenada."],
+      "dica": "São três partes.",
+      "errosComuns": [{ "descricao": "Glicerol e ácidos graxos formam triglicerídeos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "bio-acidos-nucleicos-q2", "temaId": "bio-acidos-nucleicos", "etapa": "em-3", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "No DNA, associe cada base à base com a qual ela forma par.",
+      "itens": [{ "id": "a", "texto": "Adenina (A)" }, { "id": "g", "texto": "Guanina (G)" }],
+      "opcoes": [{ "id": "t", "texto": "Timina (T)" }, { "id": "c", "texto": "Citosina (C)" }, { "id": "u", "texto": "Uracila (U)" }],
+      "gabarito": { "a": "t", "g": "c" },
+      "resolucaoPassoAPasso": ["No DNA, A pareia com T (duas ligações de hidrogênio) e G pareia com C (três).", "A uracila substitui a timina no RNA."],
+      "dica": "A uracila só aparece no RNA.",
+      "errosComuns": [{ "descricao": "Parear A com U no DNA: a uracila é base do RNA." }],
+      "revisado": false
+    },
+    {
+      "id": "bio-acidos-nucleicos-q3", "temaId": "bio-acidos-nucleicos", "etapa": "superior", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Que interação mantém as duas fitas do DNA unidas na dupla hélice?",
+      "alternativas": [{ "id": "a", "texto": "Ligações de hidrogênio entre as bases pareadas" }, { "id": "b", "texto": "Ligações iônicas entre os fosfatos" }, { "id": "c", "texto": "Ligações metálicas" }, { "id": "d", "texto": "Ligações peptídicas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As bases de uma fita fazem ligações de hidrogênio com as da outra (A–T e G–C).", "Por serem interações fracas, as fitas podem se separar na replicação e na transcrição."],
+      "dica": "É uma interação forte o bastante para manter, e fraca o bastante para separar.",
+      "errosComuns": [{ "descricao": "Ligações peptídicas unem aminoácidos, não as fitas do DNA.", "resposta": "d" }],
+      "revisado": false
+    }
+  ]
+}

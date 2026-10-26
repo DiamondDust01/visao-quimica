@@ -1,0 +1,279 @@
+{
+  "area": "ambiental",
+  "questoes": [
+    {
+      "id": "amb-atmosfera-q1", "temaId": "amb-atmosfera", "etapa": "ef-7", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual é o gás mais abundante no ar seco?",
+      "alternativas": [{ "id": "a", "texto": "Nitrogênio" }, { "id": "b", "texto": "Oxigênio" }, { "id": "c", "texto": "Gás carbônico" }, { "id": "d", "texto": "Argônio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O ar seco tem cerca de 78% de nitrogênio, 21% de oxigênio, quase 1% de argônio e cerca de 0,04% de gás carbônico."],
+      "dica": "Não é o gás que respiramos para viver.",
+      "errosComuns": [{ "descricao": "O oxigênio é cerca de 21% do ar; o nitrogênio, cerca de 78%.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-atmosfera-q2", "temaId": "amb-atmosfera", "etapa": "ef-7", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Por que a camada de ozônio é importante para a vida na Terra?",
+      "alternativas": [{ "id": "a", "texto": "Porque absorve grande parte da radiação ultravioleta do Sol" }, { "id": "b", "texto": "Porque produz o oxigênio que respiramos" }, { "id": "c", "texto": "Porque provoca o efeito estufa" }, { "id": "d", "texto": "Porque forma as nuvens de chuva" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O ozônio da estratosfera absorve boa parte da radiação ultravioleta.", "Em excesso, essa radiação causa queimaduras, câncer de pele e danos a plantas e animais."],
+      "dica": "Pense no protetor solar.",
+      "errosComuns": [{ "descricao": "A camada de ozônio e o efeito estufa são fenômenos diferentes.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-atmosfera-q3", "temaId": "amb-atmosfera", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Quais substâncias foram as principais responsáveis pela destruição da camada de ozônio e passaram a ser controladas pelo Protocolo de Montreal?",
+      "alternativas": [{ "id": "a", "texto": "Clorofluorcarbonos (CFCs)" }, { "id": "b", "texto": "Gás carbônico" }, { "id": "c", "texto": "Nitrogênio" }, { "id": "d", "texto": "Vapor de água" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os CFCs eram usados em geladeiras, aerossóis e espumas.", "Na estratosfera, a radiação UV libera átomos de cloro que destroem muitas moléculas de ozônio.", "Com o Protocolo de Montreal, seu uso foi eliminado e a camada está se recuperando."],
+      "dica": "Têm cloro e flúor.",
+      "errosComuns": [{ "descricao": "O gás carbônico está ligado ao efeito estufa, não à destruição do ozônio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-ciclo-carbono-q1", "temaId": "amb-ciclo-carbono", "etapa": "ef-7", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Indique se cada processo retira ou devolve gás carbônico à atmosfera.",
+      "itens": [{ "id": "foto", "texto": "Fotossíntese" }, { "id": "resp", "texto": "Respiração dos seres vivos" }, { "id": "queima", "texto": "Queima de combustíveis" }, { "id": "decomp", "texto": "Decomposição da matéria orgânica" }],
+      "opcoes": [{ "id": "retira", "texto": "Retira CO₂ do ar" }, { "id": "devolve", "texto": "Devolve CO₂ ao ar" }],
+      "gabarito": { "foto": "retira", "resp": "devolve", "queima": "devolve", "decomp": "devolve" },
+      "resolucaoPassoAPasso": ["A fotossíntese usa \\ce{CO2} para produzir glicose.", "Respiração, combustão e decomposição liberam \\ce{CO2}."],
+      "dica": "Só um desses processos produz açúcar a partir do CO₂.",
+      "errosComuns": [{ "descricao": "Achar que as plantas só retiram CO₂: elas também respiram e liberam CO₂." }],
+      "revisado": false
+    },
+    {
+      "id": "amb-ciclo-carbono-q2", "temaId": "amb-ciclo-carbono", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Sobre o efeito estufa, é correto afirmar:",
+      "alternativas": [{ "id": "a", "texto": "É um fenômeno natural que mantém a Terra aquecida, mas vem sendo intensificado pelo aumento de gases como CO₂ e CH₄" }, { "id": "b", "texto": "É o mesmo que o buraco na camada de ozônio" }, { "id": "c", "texto": "É causado só por vulcões" }, { "id": "d", "texto": "Esfria o planeta" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Gases como \\ce{CO2}, \\ce{CH4} e vapor de água retêm parte do calor emitido pela Terra.", "Sem eles, o planeta seria muito frio.", "A queima de combustíveis fósseis e o desmatamento aumentam esses gases e intensificam o aquecimento."],
+      "dica": "O efeito em si é natural; o problema é a intensificação.",
+      "errosComuns": [{ "descricao": "Efeito estufa e camada de ozônio são fenômenos diferentes.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-ciclo-carbono-q3", "temaId": "amb-ciclo-carbono", "etapa": "em-3", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes gases contribui para o efeito estufa?",
+      "alternativas": [{ "id": "a", "texto": "Metano (\\ce{CH4})" }, { "id": "b", "texto": "Nitrogênio (\\ce{N2})" }, { "id": "c", "texto": "Oxigênio (\\ce{O2})" }, { "id": "d", "texto": "Argônio (Ar)" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Gases de efeito estufa absorvem radiação infravermelha.", "Metano, \\ce{CO2}, óxido nitroso e vapor de água fazem isso; \\ce{N2}, \\ce{O2} e Ar praticamente não."],
+      "dica": "É liberado por aterros, arrozais e pela digestão do gado.",
+      "errosComuns": [{ "descricao": "O nitrogênio é o principal gás do ar, mas não retém calor como os gases de efeito estufa.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-ciclo-nitrogenio-q1", "temaId": "amb-ciclo-nitrogenio", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A fixação biológica do nitrogênio, que transforma o \\ce{N2} do ar em compostos aproveitáveis, é feita principalmente por:",
+      "alternativas": [{ "id": "a", "texto": "Bactérias, muitas delas associadas às raízes de leguminosas" }, { "id": "b", "texto": "Folhas das árvores" }, { "id": "c", "texto": "Peixes" }, { "id": "d", "texto": "Fungos que fazem fotossíntese" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A ligação tripla do \\ce{N2} é muito difícil de romper.", "Algumas bactérias, como as que vivem nas raízes de feijão e soja, convertem \\ce{N2} em amônia.", "Por isso as leguminosas enriquecem o solo."],
+      "dica": "São micro-organismos.",
+      "errosComuns": [{ "descricao": "Fungos não fazem fotossíntese, e plantas sozinhas não fixam \\ce{N2}.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-ciclo-nitrogenio-q2", "temaId": "amb-ciclo-nitrogenio", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O ar tem cerca de 78% de nitrogênio. Por que, mesmo assim, a agricultura usa adubos nitrogenados?",
+      "alternativas": [{ "id": "a", "texto": "Porque as plantas não aproveitam o \\ce{N2} do ar; precisam de nitrato ou amônio" }, { "id": "b", "texto": "Porque as plantas não precisam de nitrogênio" }, { "id": "c", "texto": "Porque o adubo substitui a água" }, { "id": "d", "texto": "Porque o nitrogênio do ar é tóxico para as plantas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O \\ce{N2} é muito estável, e as plantas não conseguem quebrá-lo.", "Elas absorvem nitrogênio na forma de íons nitrato (\\ce{NO3-}) ou amônio (\\ce{NH4+}).", "O adubo fornece essas formas diretamente."],
+      "dica": "A forma química importa.",
+      "errosComuns": [{ "descricao": "O nitrogênio é essencial: entra em proteínas e ácidos nucleicos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-ciclo-nitrogenio-q3", "temaId": "amb-ciclo-nitrogenio", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O excesso de fertilizantes nitrogenados que escoa das lavouras para rios e lagos pode causar:",
+      "alternativas": [{ "id": "a", "texto": "Eutrofização" }, { "id": "b", "texto": "Chuva ácida" }, { "id": "c", "texto": "Destruição da camada de ozônio" }, { "id": "d", "texto": "Aumento do oxigênio na água" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os nutrientes em excesso fazem as algas proliferarem.", "Quando morrem, sua decomposição consome o oxigênio da água.", "Peixes e outros organismos morrem por falta de oxigênio."],
+      "dica": "Nutrientes demais na água.",
+      "errosComuns": [{ "descricao": "A eutrofização diminui, e não aumenta, o oxigênio dissolvido.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-chuva-acida-q1", "temaId": "amb-chuva-acida", "etapa": "em-1", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Quais gases são os principais causadores da chuva ácida?",
+      "alternativas": [{ "id": "a", "texto": "Óxidos de enxofre (\\ce{SO2}, \\ce{SO3}) e de nitrogênio (\\ce{NO}, \\ce{NO2})" }, { "id": "b", "texto": "Oxigênio e nitrogênio do ar" }, { "id": "c", "texto": "Hélio e neônio" }, { "id": "d", "texto": "Metano" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A queima de combustíveis com enxofre libera \\ce{SO2}; motores em alta temperatura formam óxidos de nitrogênio.", "Na atmosfera, esses óxidos ácidos reagem com a água e formam ácidos sulfúrico e nítrico."],
+      "dica": "São óxidos ácidos.",
+      "errosComuns": [{ "descricao": "O metano é gás de efeito estufa, não forma ácidos com a água da chuva.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-chuva-acida-q2", "temaId": "amb-chuva-acida", "etapa": "em-1", "dificuldade": 2, "tipo": "balanceamento",
+      "enunciado": "Na atmosfera, o dióxido de enxofre se oxida a trióxido de enxofre. Balanceie a equação.",
+      "equacao": { "reagentes": ["SO2", "O2"], "produtos": ["SO3"] },
+      "gabarito": [2, 1, 2],
+      "resolucaoPassoAPasso": ["Enxofre: o mesmo coeficiente para \\ce{SO2} e \\ce{SO3}.", "Oxigênio: com 2 \\ce{SO2} e 2 \\ce{SO3}, há 4 + 2 = 6 à esquerda e 6 à direita.", "Equação: \\ce{2SO2 + O2 -> 2SO3}."],
+      "dica": "Cada \\ce{SO3} tem um oxigênio a mais que o \\ce{SO2}.",
+      "errosComuns": [{ "descricao": "Com tudo igual a 1, há 4 oxigênios à esquerda e 3 à direita.", "resposta": [1, 1, 1] }],
+      "revisado": false
+    },
+    {
+      "id": "amb-chuva-acida-q3", "temaId": "amb-chuva-acida", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que a chuva ácida desgasta monumentos e estátuas de mármore (carbonato de cálcio)?",
+      "alternativas": [{ "id": "a", "texto": "Porque os ácidos reagem com o carbonato de cálcio, formando sais solúveis e gás carbônico" }, { "id": "b", "texto": "Porque a chuva ácida é mais pesada" }, { "id": "c", "texto": "Porque o mármore é um metal" }, { "id": "d", "texto": "Porque a chuva ácida congela dentro do mármore" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Carbonatos reagem com ácidos: \\ce{CaCO3 + H2SO4 -> CaSO4 + H2O + CO2}.", "Os produtos são levados pela água e a superfície se desgasta."],
+      "dica": "O que acontece quando se pinga vinagre em casca de ovo (também carbonato de cálcio)?",
+      "errosComuns": [{ "descricao": "O mármore não é metal; é um carbonato.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-poluicao-agua-solo-q1", "temaId": "amb-poluicao-agua-solo", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Peixes grandes e predadores costumam ter concentrações de mercúrio maiores que a água do rio onde vivem. Isso acontece por:",
+      "alternativas": [{ "id": "a", "texto": "Bioacumulação: o mercúrio se acumula nos organismos e se concentra ao longo da cadeia alimentar" }, { "id": "b", "texto": "Evaporação do mercúrio" }, { "id": "c", "texto": "Fotossíntese" }, { "id": "d", "texto": "Eutrofização" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O mercúrio é pouco eliminado pelos organismos e se acumula nos tecidos.", "Cada predador come muitas presas contaminadas e concentra ainda mais o metal.", "Por isso o consumo frequente de peixes predadores de áreas contaminadas é desaconselhado."],
+      "dica": "Pense na cadeia alimentar.",
+      "errosComuns": [{ "descricao": "A eutrofização é causada por excesso de nutrientes, não por metais pesados.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-poluicao-agua-solo-q2", "temaId": "amb-poluicao-agua-solo", "etapa": "em-3", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene as etapas da eutrofização de um lago.",
+      "criterio": "Da primeira para a última etapa.",
+      "itens": [{ "id": "morte", "texto": "Morte de peixes por falta de oxigênio" }, { "id": "nutrientes", "texto": "Chegada de nutrientes em excesso (esgoto, fertilizantes)" }, { "id": "decomp", "texto": "Decomposição das algas mortas, consumindo oxigênio" }, { "id": "algas", "texto": "Proliferação de algas" }],
+      "gabarito": ["nutrientes", "algas", "decomp", "morte"],
+      "resolucaoPassoAPasso": ["Nutrientes em excesso → crescimento acelerado de algas.", "As algas morrem e são decompostas por bactérias que consomem oxigênio.", "Sem oxigênio dissolvido, peixes e outros organismos morrem."],
+      "dica": "Tudo começa com os nutrientes.",
+      "errosComuns": [{ "descricao": "Achar que as algas matam os peixes diretamente: o que falta é o oxigênio consumido na decomposição." }],
+      "revisado": false
+    },
+    {
+      "id": "amb-poluicao-agua-solo-q3", "temaId": "amb-poluicao-agua-solo", "etapa": "em-3", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Uma amostra de 2 L de água contém 0,05 mg de chumbo. Qual é a concentração de chumbo em mg/L? (Para comparação, um limite usual para água potável é 0,01 mg/L.)",
+      "gabarito": { "valor": 0.025, "unidade": "mg/L" },
+      "verificacao": "0.05 / 2",
+      "resolucaoPassoAPasso": ["C = massa ÷ volume = 0,05 mg ÷ 2 L = 0,025 mg/L.", "Esse valor é 2,5 vezes o limite de 0,01 mg/L: a água não deve ser consumida."],
+      "dica": "Divida a massa pelo volume.",
+      "errosComuns": [{ "descricao": "Multiplicou pelo volume em vez de dividir.", "resposta": { "valor": 0.1, "unidade": "mg/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "amb-tratamento-agua-q1", "temaId": "amb-tratamento-agua", "etapa": "ef-6", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene as etapas do tratamento de água numa estação de tratamento (ETA).",
+      "criterio": "Da primeira para a última etapa.",
+      "itens": [{ "id": "filtracao", "texto": "Filtração" }, { "id": "floculacao", "texto": "Coagulação e floculação" }, { "id": "desinfeccao", "texto": "Desinfecção (cloração)" }, { "id": "decantacao", "texto": "Decantação" }],
+      "gabarito": ["floculacao", "decantacao", "filtracao", "desinfeccao"],
+      "resolucaoPassoAPasso": ["Primeiro, produtos químicos juntam as impurezas em flocos.", "Os flocos pesados se depositam no fundo (decantação).", "A água passa por filtros de areia e cascalho.", "Por fim, o cloro elimina micro-organismos."],
+      "dica": "Primeiro juntar a sujeira, depois separar, por último desinfetar.",
+      "errosComuns": [{ "descricao": "Clorar antes de remover as impurezas: a desinfecção é a etapa final." }],
+      "revisado": false
+    },
+    {
+      "id": "amb-tratamento-agua-q2", "temaId": "amb-tratamento-agua", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na floculação, adiciona-se sulfato de alumínio e cal à água. Para quê?",
+      "alternativas": [{ "id": "a", "texto": "Para formar flocos de hidróxido de alumínio que agregam as partículas de sujeira" }, { "id": "b", "texto": "Para matar os micro-organismos" }, { "id": "c", "texto": "Para adoçar a água" }, { "id": "d", "texto": "Para retirar o sal da água" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O sulfato de alumínio reage em meio básico e forma \\ce{Al(OH)3}, um sólido gelatinoso.", "Esses flocos 'grudam' as partículas pequenas, que ficam pesadas e decantam."],
+      "dica": "Flocos = aglomerados.",
+      "errosComuns": [{ "descricao": "A desinfecção é feita depois, com cloro.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-tratamento-agua-q3", "temaId": "amb-tratamento-agua", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Por que se adiciona cloro à água tratada?",
+      "alternativas": [{ "id": "a", "texto": "Para eliminar micro-organismos que causam doenças" }, { "id": "b", "texto": "Para deixar a água mais gelada" }, { "id": "c", "texto": "Para mudar a cor da água" }, { "id": "d", "texto": "Para retirar a areia" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O cloro é um desinfetante: elimina bactérias e outros micro-organismos.", "Uma pequena quantidade permanece na água para protegê-la no caminho até as casas."],
+      "dica": "É a etapa de desinfecção.",
+      "errosComuns": [{ "descricao": "A areia é retirada na decantação e na filtração.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-combustao-q1", "temaId": "amb-combustao", "etapa": "ef-7", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "O 'triângulo do fogo' representa os três elementos necessários para uma combustão. Quais são?",
+      "alternativas": [{ "id": "a", "texto": "Combustível, comburente (oxigênio) e calor" }, { "id": "b", "texto": "Água, terra e ar" }, { "id": "c", "texto": "Nitrogênio, gás carbônico e luz" }, { "id": "d", "texto": "Combustível, água e gelo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["É preciso um material que queime (combustível), o oxigênio (comburente) e uma fonte de calor para iniciar.", "Retirar qualquer um dos três apaga o fogo: é o princípio dos extintores."],
+      "dica": "Para apagar um fogo, basta retirar um deles.",
+      "errosComuns": [{ "descricao": "O nitrogênio não alimenta a combustão; o comburente é o oxigênio.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-combustao-q2", "temaId": "amb-combustao", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A combustão incompleta pode produzir monóxido de carbono (CO). Por que esse gás é perigoso em ambientes fechados?",
+      "alternativas": [{ "id": "a", "texto": "Porque se liga à hemoglobina do sangue e impede o transporte de oxigênio" }, { "id": "b", "texto": "Porque tem cheiro forte e irrita os olhos" }, { "id": "c", "texto": "Porque é um gás nobre" }, { "id": "d", "texto": "Porque congela os pulmões" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O CO se liga à hemoglobina com muito mais força que o oxigênio.", "O sangue passa a transportar menos oxigênio, o que pode levar à intoxicação grave.", "Ele é incolor e inodoro: por isso aquecedores a gás e churrasqueiras nunca devem ser usados em locais fechados e sem ventilação."],
+      "dica": "Ele 'ocupa o lugar' do oxigênio no sangue.",
+      "errosComuns": [{ "descricao": "O CO é incolor e sem cheiro, o que o torna ainda mais perigoso.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-combustao-q3", "temaId": "amb-combustao", "etapa": "em-1", "dificuldade": 3, "tipo": "balanceamento",
+      "enunciado": "Balanceie a combustão incompleta do propano, em que se forma monóxido de carbono.",
+      "equacao": { "reagentes": ["C3H8", "O2"], "produtos": ["CO", "H2O"] },
+      "gabarito": [2, 7, 6, 8],
+      "resolucaoPassoAPasso": ["Com 1 \\ce{C3H8}: 3 CO e 4 \\ce{H2O}, que somam 3 + 4 = 7 átomos de O, o que daria 7/2 \\ce{O2}.", "Multiplicando tudo por 2 para eliminar a fração: 2 \\ce{C3H8}, 7 \\ce{O2}, 6 CO e 8 \\ce{H2O}."],
+      "dica": "Se aparecer fração no \\ce{O2}, multiplique toda a equação.",
+      "errosComuns": [{ "descricao": "Usou os coeficientes da combustão completa, que forma \\ce{CO2}.", "resposta": [1, 5, 3, 4] }],
+      "revisado": false
+    },
+    {
+      "id": "amb-combustiveis-q1", "temaId": "amb-combustiveis", "etapa": "ef-7", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Classifique cada combustível como de fonte renovável ou não renovável.",
+      "itens": [{ "id": "etanol", "texto": "Etanol de cana-de-açúcar" }, { "id": "gasolina", "texto": "Gasolina" }, { "id": "biodiesel", "texto": "Biodiesel" }, { "id": "gas", "texto": "Gás natural" }],
+      "opcoes": [{ "id": "ren", "texto": "Renovável" }, { "id": "nren", "texto": "Não renovável" }],
+      "gabarito": { "etanol": "ren", "gasolina": "nren", "biodiesel": "ren", "gas": "nren" },
+      "resolucaoPassoAPasso": ["Etanol e biodiesel vêm de plantas, que podem ser cultivadas de novo.", "Gasolina e gás natural vêm do petróleo e de jazidas que levam milhões de anos para se formar."],
+      "dica": "Vem de planta que se cultiva ou de jazida que se esgota?",
+      "errosComuns": [{ "descricao": "Achar que o gás natural é renovável: ele é combustível fóssil." }],
+      "revisado": false
+    },
+    {
+      "id": "amb-combustiveis-q2", "temaId": "amb-combustiveis", "etapa": "ef-8", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que o etanol de cana-de-açúcar é considerado um combustível renovável?",
+      "alternativas": [{ "id": "a", "texto": "Porque a cana pode ser replantada e, ao crescer, absorve gás carbônico na fotossíntese" }, { "id": "b", "texto": "Porque sua queima não libera gás carbônico" }, { "id": "c", "texto": "Porque é extraído do petróleo" }, { "id": "d", "texto": "Porque não precisa de oxigênio para queimar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A cana é uma planta: pode ser cultivada a cada safra.", "O \\ce{CO2} liberado na queima do etanol é, em grande parte, reabsorvido pela próxima plantação."],
+      "dica": "De onde vem a matéria-prima?",
+      "errosComuns": [{ "descricao": "A queima do etanol também libera \\ce{CO2}; o ponto é que a cana o reabsorve ao crescer.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-combustiveis-q3", "temaId": "amb-combustiveis", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O biodiesel é obtido pela reação de óleos vegetais (ou gorduras) com:",
+      "alternativas": [{ "id": "a", "texto": "Um álcool, como metanol ou etanol, numa transesterificação" }, { "id": "b", "texto": "Água pura" }, { "id": "c", "texto": "Gás oxigênio" }, { "id": "d", "texto": "Areia" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os triglicerídeos do óleo reagem com um álcool, com catalisador.", "Formam-se ésteres de ácidos graxos (o biodiesel) e glicerol como subproduto."],
+      "dica": "Troca-se o álcool do éster: trans-esterificação.",
+      "errosComuns": [{ "descricao": "Reagir com oxigênio seria a combustão do óleo, não a produção de biodiesel.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-quimica-verde-q1", "temaId": "amb-quimica-verde", "etapa": "em-3", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes é um princípio da química verde?",
+      "alternativas": [{ "id": "a", "texto": "Prevenir a geração de resíduos em vez de tratá-los depois" }, { "id": "b", "texto": "Usar sempre o maior excesso possível de reagentes" }, { "id": "c", "texto": "Preferir solventes tóxicos por serem mais baratos" }, { "id": "d", "texto": "Descartar resíduos diretamente na pia" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O primeiro princípio da química verde é a prevenção: é melhor não gerar o resíduo do que tratá-lo depois.", "Outros princípios: economia atômica, solventes mais seguros, fontes renováveis e eficiência energética."],
+      "dica": "Prevenir é melhor que remediar.",
+      "errosComuns": [{ "descricao": "Excesso de reagentes gera mais resíduo, o contrário da química verde.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "amb-quimica-verde-q2", "temaId": "amb-quimica-verde", "etapa": "em-3", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Na reação A + B → C + D, só C é o produto desejado. A soma das massas molares dos reagentes é 100 g/mol e a massa molar de C é 60 g/mol. Qual é a economia atômica, em porcentagem?",
+      "gabarito": { "valor": 60, "unidade": "%" },
+      "verificacao": "60 / 100 * 100",
+      "resolucaoPassoAPasso": ["Economia atômica = massa molar do produto desejado ÷ soma das massas molares dos reagentes × 100.", "60 ÷ 100 × 100 = 60%.", "Os outros 40% viram subproduto D."],
+      "dica": "Que fração da massa dos reagentes acaba no produto desejado?",
+      "errosComuns": [{ "descricao": "Calculou a fração desperdiçada (o subproduto).", "resposta": { "valor": 40, "unidade": "%" } }],
+      "revisado": false
+    },
+    {
+      "id": "amb-quimica-verde-q3", "temaId": "amb-quimica-verde", "etapa": "tecnico", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num laboratório técnico, qual atitude segue os princípios da química verde?",
+      "alternativas": [{ "id": "a", "texto": "Escolher, quando possível, solventes menos tóxicos (como água) e reaproveitar solventes recuperados" }, { "id": "b", "texto": "Preparar sempre o dobro da solução necessária" }, { "id": "c", "texto": "Misturar todos os resíduos num único frasco" }, { "id": "d", "texto": "Aquecer reações mais do que o necessário para acelerar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Solventes mais seguros e reaproveitados reduzem riscos e resíduos.", "Preparar só o necessário, separar resíduos e evitar gasto de energia também são práticas verdes."],
+      "dica": "Menos risco, menos resíduo, menos energia.",
+      "errosComuns": [{ "descricao": "Misturar resíduos dificulta o tratamento e pode causar reações perigosas.", "resposta": "c" }],
+      "revisado": false
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "radioatividade",
+  "nome": "Radioatividade e química nuclear",
+  "descricao": "Núcleos instáveis, as radiações que emitem e o uso da energia nuclear.",
+  "area": "radioatividade",
+  "prerequisitos": ["atom-particulas-subatomicas", "atom-isotopos"],
+  "etapasRecomendadas": ["ef-9", "em-2", "enem"],
+  "dificuldade": 2,
+  "palavrasChave": ["radioatividade", "meia-vida", "fissão", "fusão"],
+  "temas": [
+    {
+      "id": "rad-decaimento",
+      "nome": "Decaimento radioativo",
+      "descricao": "Emissões, equações nucleares e o ritmo do decaimento.",
+      "area": "radioatividade",
+      "prerequisitos": ["atom-particulas-subatomicas", "atom-isotopos"],
+      "etapasRecomendadas": ["ef-9", "em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["alfa", "beta", "gama", "meia-vida"],
+      "subtemas": [
+        {
+          "id": "rad-emissoes",
+          "nome": "Emissões alfa, beta e gama",
+          "descricao": "Natureza, carga, poder de penetração e efeito no núcleo de cada tipo de emissão.",
+          "area": "radioatividade",
+          "prerequisitos": ["atom-particulas-subatomicas"],
+          "etapasRecomendadas": ["ef-9", "em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["alfa", "beta", "gama", "poder de penetração"]
+        },
+        {
+          "id": "rad-equacoes-nucleares",
+          "nome": "Equações nucleares",
+          "descricao": "Conservação de número de massa e número atômico em reações nucleares e séries de decaimento.",
+          "area": "radioatividade",
+          "prerequisitos": ["atom-isotopos", "rad-emissoes"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["equação nuclear", "série radioativa", "transmutação", "Soddy"]
+        },
+        {
+          "id": "rad-meia-vida",
+          "nome": "Meia-vida",
+          "descricao": "Tempo para metade dos núcleos decair, curvas de decaimento e datação por carbono-14.",
+          "area": "radioatividade",
+          "prerequisitos": ["rad-emissoes"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["meia-vida", "período de semidesintegração", "carbono-14", "datação"]
+        }
+      ]
+    },
+    {
+      "id": "rad-energia-nuclear",
+      "nome": "Energia nuclear e aplicações",
+      "descricao": "Fissão, fusão e os usos e riscos da radiação.",
+      "area": "radioatividade",
+      "prerequisitos": ["rad-emissoes", "rad-equacoes-nucleares"],
+      "etapasRecomendadas": ["ef-9", "em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["fissão", "fusão", "medicina nuclear"],
+      "subtemas": [
+        {
+          "id": "rad-fissao-fusao",
+          "nome": "Fissão e fusão nuclear",
+          "descricao": "Reação em cadeia, funcionamento geral de usinas nucleares e a fusão que ocorre nas estrelas.",
+          "area": "radioatividade",
+          "prerequisitos": ["rad-equacoes-nucleares"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["fissão", "fusão", "reação em cadeia", "usina nuclear"]
+        },
+        {
+          "id": "rad-aplicacoes-riscos",
+          "nome": "Aplicações e riscos da radiação",
+          "descricao": "Usos na medicina, na indústria e na conservação de alimentos, cuidados de proteção e acidentes radiológicos.",
+          "area": "radioatividade",
+          "prerequisitos": ["rad-emissoes"],
+          "etapasRecomendadas": ["ef-9", "em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["radioterapia", "irradiação de alimentos", "proteção radiológica", "Césio-137"]
+        }
+      ]
+    }
+  ]
+}

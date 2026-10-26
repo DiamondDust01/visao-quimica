@@ -1,0 +1,86 @@
+{
+  "id": "inorganica-avancada",
+  "nome": "Química inorgânica avançada",
+  "descricao": "Compostos de coordenação e sólidos inorgânicos.",
+  "area": "inorganica-avancada",
+  "prerequisitos": ["atom-numeros-quanticos", "tab-metais-transicao", "lig-ionica", "inorg-lewis"],
+  "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+  "dificuldade": 4,
+  "palavrasChave": ["complexos", "campo cristalino", "sólidos"],
+  "temas": [
+    {
+      "id": "inav-coordenacao",
+      "nome": "Compostos de coordenação",
+      "descricao": "Metais rodeados por ligantes: estrutura, nomes e propriedades.",
+      "area": "inorganica-avancada",
+      "prerequisitos": ["atom-numeros-quanticos", "tab-metais-transicao", "inorg-lewis"],
+      "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+      "dificuldade": 4,
+      "palavrasChave": ["complexo", "ligante", "campo cristalino"],
+      "subtemas": [
+        {
+          "id": "inav-complexos",
+          "nome": "Ligantes e nomenclatura de complexos",
+          "descricao": "Íon central, ligantes, número de coordenação, ligantes polidentados e regras de nomenclatura.",
+          "area": "inorganica-avancada",
+          "prerequisitos": ["tab-metais-transicao", "inorg-lewis"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["complexo", "ligante", "número de coordenação", "quelato"]
+        },
+        {
+          "id": "inav-isomeria-complexos",
+          "nome": "Isomeria em complexos",
+          "descricao": "Isomeria geométrica e óptica em complexos quadrados planos e octaédricos, e isomeria de ligação.",
+          "area": "inorganica-avancada",
+          "prerequisitos": ["inav-complexos"],
+          "etapasRecomendadas": ["superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["isomeria", "octaédrico", "quadrado planar", "fac/mer"]
+        },
+        {
+          "id": "inav-campo-cristalino",
+          "nome": "Teoria do campo cristalino",
+          "descricao": "Desdobramento dos orbitais d, campo forte e fraco e série espectroquímica.",
+          "area": "inorganica-avancada",
+          "prerequisitos": ["atom-numeros-quanticos", "inav-complexos"],
+          "etapasRecomendadas": ["olimpiadas-quimica", "superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["campo cristalino", "orbitais d", "série espectroquímica", "alto spin"]
+        },
+        {
+          "id": "inav-cor-magnetismo",
+          "nome": "Cor e magnetismo de complexos",
+          "descricao": "Por que complexos têm cor e como o número de elétrons desemparelhados define o magnetismo.",
+          "area": "inorganica-avancada",
+          "prerequisitos": ["inav-campo-cristalino"],
+          "etapasRecomendadas": ["superior"],
+          "dificuldade": 5,
+          "palavrasChave": ["cor complementar", "paramagnetismo", "diamagnetismo", "elétrons desemparelhados"]
+        }
+      ]
+    },
+    {
+      "id": "inav-solidos",
+      "nome": "Sólidos inorgânicos",
+      "descricao": "Como íons e átomos se arrumam em cristais.",
+      "area": "inorganica-avancada",
+      "prerequisitos": ["lig-ionica"],
+      "etapasRecomendadas": ["superior"],
+      "dificuldade": 4,
+      "palavrasChave": ["retículo cristalino", "célula unitária"],
+      "subtemas": [
+        {
+          "id": "inav-reticulos",
+          "nome": "Retículos cristalinos",
+          "descricao": "Células unitárias, empacotamento, número de coordenação em sólidos iônicos e energia de rede.",
+          "area": "inorganica-avancada",
+          "prerequisitos": ["lig-ionica"],
+          "etapasRecomendadas": ["superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["célula unitária", "empacotamento", "energia reticular", "Born-Haber"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Visão Química</string>
+    <string name="title_activity_main">Visão Química</string>
+    <string name="package_name">com.exemplo.quimicaquest</string>
+    <string name="custom_url_scheme">com.exemplo.quimicaquest</string>
+</resources>

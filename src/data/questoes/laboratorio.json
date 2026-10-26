@@ -1,0 +1,158 @@
+{
+  "area": "laboratorio",
+  "questoes": [
+    {
+      "id": "lab-vidrarias-q1", "temaId": "lab-vidrarias", "etapa": "ef-6", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada vidraria ao seu uso principal.",
+      "itens": [{ "id": "becker", "texto": "Béquer" }, { "id": "proveta", "texto": "Proveta" }, { "id": "balao", "texto": "Balão volumétrico" }, { "id": "bureta", "texto": "Bureta" }],
+      "opcoes": [{ "id": "o1", "texto": "Dissolver, misturar e aquecer (volume aproximado)" }, { "id": "o2", "texto": "Medir volumes com precisão razoável" }, { "id": "o3", "texto": "Preparar soluções com volume exato" }, { "id": "o4", "texto": "Adicionar volumes precisos em titulações" }],
+      "gabarito": { "becker": "o1", "proveta": "o2", "balao": "o3", "bureta": "o4" },
+      "resolucaoPassoAPasso": ["Béquer: recipiente de uso geral; a graduação é só aproximada.", "Proveta: mede volumes com precisão razoável.", "Balão volumétrico: tem um traço de aferição para um volume exato.", "Bureta: tubo graduado com torneira, usado em titulações."],
+      "dica": "Algumas vidrarias medem; outras só contêm.",
+      "errosComuns": [{ "descricao": "Usar o béquer para medir volumes precisos: a escala dele é aproximada." }],
+      "revisado": false
+    },
+    {
+      "id": "lab-vidrarias-q2", "temaId": "lab-vidrarias", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que o erlenmeyer é preferido ao béquer para agitar soluções numa titulação?",
+      "alternativas": [{ "id": "a", "texto": "Porque o gargalo estreito evita que o líquido espirre durante a agitação" }, { "id": "b", "texto": "Porque mede volumes com precisão" }, { "id": "c", "texto": "Porque não pode ser aquecido" }, { "id": "d", "texto": "Porque é feito de plástico" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O erlenmeyer tem base larga e boca estreita.", "Assim, dá para girar o frasco e misturar sem derramar ou espirrar."],
+      "dica": "Pense no formato do frasco.",
+      "errosComuns": [{ "descricao": "A graduação do erlenmeyer também é aproximada.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-vidrarias-q3", "temaId": "lab-vidrarias", "etapa": "tecnico", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que vidrarias volumétricas, como pipetas e balões volumétricos, não devem ser aquecidas na estufa nem na chama?",
+      "alternativas": [{ "id": "a", "texto": "Porque o aquecimento pode alterar o volume calibrado do vidro" }, { "id": "b", "texto": "Porque elas derretem a 50 °C" }, { "id": "c", "texto": "Porque ficam coloridas" }, { "id": "d", "texto": "Porque perdem a graduação impressa" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O vidro se dilata e pode não voltar exatamente ao volume original.", "A vidraria perde a calibração e passa a medir errado.", "Por isso ela é seca à temperatura ambiente ou rinsada com o próprio líquido a medir."],
+      "dica": "O que o calor faz com o vidro?",
+      "errosComuns": [{ "descricao": "O vidro de laboratório não derrete a temperaturas tão baixas.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-medidas-q1", "temaId": "lab-medidas", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Ao ler o volume de água numa proveta, como deve ser feita a leitura?",
+      "alternativas": [{ "id": "a", "texto": "Com os olhos na altura do líquido, pela parte de baixo da curva (menisco)" }, { "id": "b", "texto": "Olhando de cima para baixo" }, { "id": "c", "texto": "Pela borda mais alta do líquido, onde ele toca o vidro" }, { "id": "d", "texto": "Com a proveta inclinada" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A água forma uma curva côncava (menisco) na superfície.", "Lê-se o ponto mais baixo da curva, com os olhos na mesma altura, para evitar o erro de paralaxe."],
+      "dica": "Olhos na altura do líquido.",
+      "errosComuns": [{ "descricao": "Olhar de cima causa erro de paralaxe.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-medidas-q2", "temaId": "lab-medidas", "etapa": "em-1", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um béquer vazio pesa 52,30 g na balança. Com a amostra dentro, o conjunto pesa 64,85 g. Qual é a massa da amostra?",
+      "gabarito": { "valor": 12.55, "unidade": "g", "tolerancia": { "absoluta": 0.005 } },
+      "verificacao": "64.85 - 52.30",
+      "resolucaoPassoAPasso": ["Massa da amostra = massa do conjunto − massa do recipiente (tara).", "64,85 − 52,30 = 12,55 g.", "Na prática, a função 'tara' da balança zera o peso do béquer."],
+      "dica": "Desconte o recipiente.",
+      "errosComuns": [{ "descricao": "Somou as massas em vez de descontar o béquer.", "resposta": { "valor": 117.15, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "lab-medidas-q3", "temaId": "lab-medidas", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Para preparar exatamente 250,0 mL de uma solução, qual vidraria é a mais adequada?",
+      "alternativas": [{ "id": "a", "texto": "Balão volumétrico de 250 mL" }, { "id": "b", "texto": "Béquer de 250 mL" }, { "id": "c", "texto": "Erlenmeyer de 250 mL" }, { "id": "d", "texto": "Tubo de ensaio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O balão volumétrico tem um traço de aferição que marca um volume exato.", "Dissolve-se o soluto e completa-se com água até o traço."],
+      "dica": "Precisa de um volume exato, não aproximado.",
+      "errosComuns": [{ "descricao": "A graduação do béquer é aproximada.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-epis-normas-q1", "temaId": "lab-epis-normas", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes itens é um equipamento de proteção individual (EPI) usado no laboratório?",
+      "alternativas": [{ "id": "a", "texto": "Óculos de proteção" }, { "id": "b", "texto": "Capela de exaustão" }, { "id": "c", "texto": "Chuveiro de emergência" }, { "id": "d", "texto": "Extintor de incêndio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["EPI é usado pela própria pessoa: óculos, jaleco, luvas.", "Capela, chuveiro e extintor protegem o grupo todo: são equipamentos de proteção coletiva (EPC)."],
+      "dica": "Individual = vestido ou usado pela pessoa.",
+      "errosComuns": [{ "descricao": "A capela protege todos que estão no laboratório: é um EPC.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-epis-normas-q2", "temaId": "lab-epis-normas", "etapa": "ef-6", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual destas atitudes é correta no laboratório?",
+      "alternativas": [{ "id": "a", "texto": "Prender o cabelo comprido e usar calçado fechado" }, { "id": "b", "texto": "Comer e beber durante os experimentos" }, { "id": "c", "texto": "Cheirar os frascos diretamente" }, { "id": "d", "texto": "Provar substâncias para identificá-las" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cabelo solto pode encostar em chamas e reagentes; calçado aberto deixa os pés expostos.", "Nunca se come, bebe, prova ou cheira diretamente substâncias no laboratório."],
+      "dica": "Pense no que pode encostar em chamas e reagentes.",
+      "errosComuns": [{ "descricao": "Nunca se prova uma substância no laboratório.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-epis-normas-q3", "temaId": "lab-epis-normas", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um colega respingou uma pequena quantidade de solução no olho. Qual é a primeira atitude correta?",
+      "alternativas": [{ "id": "a", "texto": "Lavar imediatamente o olho com bastante água corrente (lava-olhos) por vários minutos e chamar o professor" }, { "id": "b", "texto": "Esfregar o olho com a mão" }, { "id": "c", "texto": "Pingar outra substância para neutralizar" }, { "id": "d", "texto": "Esperar para ver se melhora sozinho" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A diluição rápida com muita água é a medida mais importante.", "Não se tenta neutralizar no olho, porque a reação pode piorar a lesão.", "Depois da lavagem, o responsável encaminha para atendimento médico."],
+      "dica": "Água em abundância, imediatamente.",
+      "errosComuns": [{ "descricao": "Tentar neutralizar no olho pode causar uma lesão ainda maior.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-rotulagem-ghs-q1", "temaId": "lab-rotulagem-ghs", "etapa": "ef-9", "dificuldade": 1, "tipo": "associacao",
+      "enunciado": "Associe cada pictograma do GHS ao perigo que ele indica.",
+      "itens": [{ "id": "chama", "texto": "Chama" }, { "id": "corrosao", "texto": "Mãos e superfície sendo corroídas por gotas" }, { "id": "caveira", "texto": "Caveira com ossos cruzados" }, { "id": "peixe", "texto": "Árvore e peixe mortos" }],
+      "opcoes": [{ "id": "infl", "texto": "Inflamável" }, { "id": "corr", "texto": "Corrosivo" }, { "id": "tox", "texto": "Toxicidade aguda" }, { "id": "amb", "texto": "Perigoso ao meio ambiente" }],
+      "gabarito": { "chama": "infl", "corrosao": "corr", "caveira": "tox", "peixe": "amb" },
+      "resolucaoPassoAPasso": ["O GHS usa pictogramas padronizados no mundo todo, em losangos de borda vermelha.", "Chama: inflamável. Gotas corroendo: corrosivo. Caveira: tóxico. Árvore e peixe: perigoso ao ambiente aquático."],
+      "dica": "Cada desenho representa o efeito do perigo.",
+      "errosComuns": [{ "descricao": "Confundir corrosivo com tóxico: o pictograma de corrosão mostra gotas danificando a mão e a superfície." }],
+      "revisado": false
+    },
+    {
+      "id": "lab-rotulagem-ghs-q2", "temaId": "lab-rotulagem-ghs", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Antes de usar um reagente pela primeira vez, onde o técnico encontra informações sobre perigos, primeiros socorros e descarte?",
+      "alternativas": [{ "id": "a", "texto": "Na Ficha de Dados de Segurança (FDS) do produto" }, { "id": "b", "texto": "No preço do produto" }, { "id": "c", "texto": "Na cor do frasco" }, { "id": "d", "texto": "No cheiro do produto" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A FDS reúne identificação, perigos, primeiros socorros, combate a incêndio, armazenamento, EPIs e descarte.", "O rótulo traz um resumo; a FDS traz os detalhes."],
+      "dica": "É um documento de segurança do fabricante.",
+      "errosComuns": [{ "descricao": "Nunca se cheira um reagente para identificá-lo.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-rotulagem-ghs-q3", "temaId": "lab-rotulagem-ghs", "etapa": "tecnico", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "No rótulo GHS, o que indicam as palavras de advertência 'Perigo' e 'Atenção'?",
+      "alternativas": [{ "id": "a", "texto": "O grau de gravidade: 'Perigo' para os riscos mais graves e 'Atenção' para os menos graves" }, { "id": "b", "texto": "São sinônimos" }, { "id": "c", "texto": "'Atenção' é mais grave que 'Perigo'" }, { "id": "d", "texto": "Indicam só a data de validade" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O GHS usa duas palavras de advertência para indicar a gravidade.", "'Perigo' é para as categorias mais severas; 'Atenção', para as menos severas."],
+      "dica": "Uma é mais forte que a outra.",
+      "errosComuns": [{ "descricao": "A hierarquia é a inversa: 'Perigo' é a mais grave.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-residuos-q1", "temaId": "lab-residuos", "etapa": "em-1", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual é o destino correto para uma solução que contém metais pesados ao final de uma aula prática?",
+      "alternativas": [{ "id": "a", "texto": "Um frasco de resíduos identificado, para tratamento e descarte por empresa especializada" }, { "id": "b", "texto": "A pia, com bastante água" }, { "id": "c", "texto": "O lixo comum" }, { "id": "d", "texto": "O ralo do chão" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Metais pesados não são removidos no tratamento comum de esgoto e contaminam o ambiente.", "Os resíduos devem ser separados, rotulados e encaminhados para tratamento adequado."],
+      "dica": "Diluir não elimina o metal.",
+      "errosComuns": [{ "descricao": "Diluir na pia não elimina o metal pesado; ele chega aos rios.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-residuos-q2", "temaId": "lab-residuos", "etapa": "em-1", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que não se devem misturar diferentes resíduos químicos num mesmo frasco?",
+      "alternativas": [{ "id": "a", "texto": "Porque substâncias incompatíveis podem reagir, liberando calor ou gases perigosos, e a mistura dificulta o tratamento" }, { "id": "b", "texto": "Porque os frascos são caros" }, { "id": "c", "texto": "Porque os resíduos mudam de cor" }, { "id": "d", "texto": "Não há problema em misturar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ácidos com bases, oxidantes com orgânicos e outros pares incompatíveis podem reagir de forma perigosa.", "Além disso, misturas complexas são mais difíceis e caras de tratar."],
+      "dica": "Pense em reações inesperadas dentro do frasco.",
+      "errosComuns": [{ "descricao": "Misturar resíduos incompatíveis pode causar reações perigosas.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "lab-residuos-q3", "temaId": "lab-residuos", "etapa": "tecnico", "dificuldade": 2, "tipo": "ordenacao",
+      "enunciado": "Ordene as etapas de um bom gerenciamento de resíduos no laboratório.",
+      "criterio": "Da primeira para a última etapa.",
+      "itens": [{ "id": "destino", "texto": "Encaminhar para tratamento ou destinação adequada" }, { "id": "reduzir", "texto": "Planejar o experimento para gerar menos resíduo" }, { "id": "rotular", "texto": "Rotular e armazenar em local apropriado" }, { "id": "segregar", "texto": "Separar os resíduos por tipo e compatibilidade" }],
+      "gabarito": ["reduzir", "segregar", "rotular", "destino"],
+      "resolucaoPassoAPasso": ["A prioridade é gerar menos resíduo, ainda no planejamento.", "O que for gerado deve ser separado por compatibilidade.", "Em seguida, rotulado e armazenado com segurança.", "Por fim, encaminhado para tratamento adequado."],
+      "dica": "Prevenir vem antes de tratar.",
+      "errosComuns": [{ "descricao": "Deixar a redução para o fim: ela é a primeira etapa, ainda no planejamento." }],
+      "revisado": false
+    }
+  ]
+}

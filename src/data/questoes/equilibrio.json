@@ -1,0 +1,247 @@
+{
+  "area": "equilibrio",
+  "questoes": [
+    {
+      "id": "eq-equilibrio-dinamico-q1", "temaId": "eq-equilibrio-dinamico", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "No estado de equilíbrio químico:",
+      "alternativas": [{ "id": "a", "texto": "As velocidades das reações direta e inversa são iguais" }, { "id": "b", "texto": "As concentrações de reagentes e produtos são iguais" }, { "id": "c", "texto": "A reação parou" }, { "id": "d", "texto": "Só há produtos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No equilíbrio, as reações direta e inversa continuam acontecendo.", "Como as velocidades são iguais, as concentrações ficam constantes, mas não necessariamente iguais entre si."],
+      "dica": "Equilíbrio é dinâmico.",
+      "errosComuns": [{ "descricao": "As concentrações ficam constantes, não iguais.", "resposta": "b" }, { "descricao": "As reações continuam, só que em velocidades iguais.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-equilibrio-dinamico-q2", "temaId": "eq-equilibrio-dinamico", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num frasco fechado ocorre \\ce{N2O4 <=> 2NO2}; o \\ce{NO2} é castanho e o \\ce{N2O4} é incolor. Depois de um tempo, a cor para de mudar. Isso significa que:",
+      "alternativas": [{ "id": "a", "texto": "As duas reações continuam ocorrendo, com velocidades iguais" }, { "id": "b", "texto": "As reações pararam de acontecer" }, { "id": "c", "texto": "Todo o \\ce{N2O4} virou \\ce{NO2}" }, { "id": "d", "texto": "O frasco ficou sem gás" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A cor constante indica concentração de \\ce{NO2} constante.", "Isso ocorre porque o \\ce{NO2} é formado e consumido na mesma velocidade: equilíbrio dinâmico."],
+      "dica": "Cor constante não significa reação parada.",
+      "errosComuns": [{ "descricao": "Em nível molecular, as reações continuam.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-equilibrio-dinamico-q3", "temaId": "eq-equilibrio-dinamico", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num gráfico de concentração em função do tempo, como se reconhece que o equilíbrio foi atingido?",
+      "alternativas": [{ "id": "a", "texto": "As concentrações de todas as espécies passam a ficar constantes" }, { "id": "b", "texto": "As curvas de reagentes e produtos se cruzam" }, { "id": "c", "texto": "A concentração dos produtos chega a zero" }, { "id": "d", "texto": "As concentrações ficam todas iguais" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A partir do equilíbrio, as curvas ficam horizontais.", "O cruzamento das curvas não tem significado especial."],
+      "dica": "Procure as linhas horizontais.",
+      "errosComuns": [{ "descricao": "O cruzamento só indica concentrações iguais naquele instante, não equilíbrio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-kc-kp-q1", "temaId": "eq-kc-kp", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a expressão de Kc para \\ce{N2(g) + 3H2(g) <=> 2NH3(g)}?",
+      "alternativas": [{ "id": "a", "texto": "[NH₃]² ÷ ([N₂][H₂]³)" }, { "id": "b", "texto": "[N₂][H₂]³ ÷ [NH₃]²" }, { "id": "c", "texto": "2[NH₃] ÷ ([N₂] × 3[H₂])" }, { "id": "d", "texto": "[NH₃] ÷ ([N₂][H₂])" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Kc = produtos ÷ reagentes, cada concentração elevada ao seu coeficiente.", "Kc = [NH₃]² ÷ ([N₂][H₂]³)."],
+      "dica": "Os coeficientes viram expoentes.",
+      "errosComuns": [{ "descricao": "Inverteu: os produtos ficam no numerador.", "resposta": "b" }, { "descricao": "Os coeficientes são expoentes, não multiplicadores.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-kc-kp-q2", "temaId": "eq-kc-kp", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Para \\ce{H2(g) + I2(g) <=> 2HI(g)}, no equilíbrio, [H₂] = 0,1 mol/L, [I₂] = 0,1 mol/L e [HI] = 0,8 mol/L. Calcule Kc.",
+      "gabarito": { "valor": 64, "unidade": null },
+      "verificacao": "0.8^2 / (0.1 * 0.1)",
+      "resolucaoPassoAPasso": ["Kc = [HI]² ÷ ([H₂][I₂]).", "Kc = 0,64 ÷ 0,01 = 64."],
+      "dica": "Não esqueça o expoente do HI.",
+      "errosComuns": [{ "descricao": "Esqueceu de elevar [HI] ao quadrado.", "resposta": { "valor": 80 } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-kc-kp-q3", "temaId": "eq-kc-kp", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Uma reação tem constante de equilíbrio K = 10¹⁰. Isso indica que:",
+      "alternativas": [{ "id": "a", "texto": "No equilíbrio, há muito mais produtos que reagentes" }, { "id": "b", "texto": "No equilíbrio, predominam os reagentes" }, { "id": "c", "texto": "A reação é muito rápida" }, { "id": "d", "texto": "A reação é endotérmica" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["K é a razão produtos/reagentes no equilíbrio.", "Um valor enorme indica que os produtos predominam.", "K não informa a velocidade da reação."],
+      "dica": "K grande: numerador grande.",
+      "errosComuns": [{ "descricao": "K informa a extensão da reação, não a velocidade.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-le-chatelier-q1", "temaId": "eq-le-chatelier", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Para \\ce{N2(g) + 3H2(g) <=> 2NH3(g)}, o que acontece ao aumentar a pressão do sistema?",
+      "alternativas": [{ "id": "a", "texto": "O equilíbrio se desloca para os produtos, lado com menos mols de gás" }, { "id": "b", "texto": "O equilíbrio se desloca para os reagentes" }, { "id": "c", "texto": "O equilíbrio não se altera" }, { "id": "d", "texto": "A constante de equilíbrio aumenta" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Reagentes: 1 + 3 = 4 mol de gás; produtos: 2 mol.", "Aumentar a pressão favorece o lado com menos mols de gás: os produtos."],
+      "dica": "Conte os mols de gás de cada lado.",
+      "errosComuns": [{ "descricao": "O lado dos reagentes tem mais mols de gás; a pressão favorece o lado com menos.", "resposta": "b" }, { "descricao": "Só a temperatura altera o valor de K.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-le-chatelier-q2", "temaId": "eq-le-chatelier", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Para \\ce{N2(g) + 3H2(g) <=> 2NH3(g)}, com ΔH < 0 no sentido direto, o que acontece ao aumentar a temperatura?",
+      "alternativas": [{ "id": "a", "texto": "O equilíbrio se desloca para os reagentes, sentido endotérmico" }, { "id": "b", "texto": "O equilíbrio se desloca para os produtos" }, { "id": "c", "texto": "Nada muda" }, { "id": "d", "texto": "A reação para" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O sentido direto é exotérmico; o inverso é endotérmico.", "Aquecer favorece o sentido que absorve calor: o inverso, para os reagentes.", "A constante de equilíbrio diminui."],
+      "dica": "Aquecer favorece o sentido endotérmico.",
+      "errosComuns": [{ "descricao": "O sentido direto libera calor; aquecer favorece o inverso.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-le-chatelier-q3", "temaId": "eq-le-chatelier", "etapa": "em-2", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Para \\ce{N2(g) + 3H2(g) <=> 2NH3(g)}, ΔH < 0, associe cada perturbação ao efeito no equilíbrio.",
+      "itens": [{ "id": "n2", "texto": "Adicionar \\ce{N2}" }, { "id": "nh3", "texto": "Retirar \\ce{NH3}" }, { "id": "aquecer", "texto": "Aquecer o sistema" }, { "id": "cat", "texto": "Adicionar um catalisador" }],
+      "opcoes": [{ "id": "prod", "texto": "Desloca para os produtos" }, { "id": "reag", "texto": "Desloca para os reagentes" }, { "id": "nada", "texto": "Não desloca" }],
+      "gabarito": { "n2": "prod", "nh3": "prod", "aquecer": "reag", "cat": "nada" },
+      "resolucaoPassoAPasso": ["Adicionar reagente ou retirar produto: o sistema forma mais produto.", "Aquecer favorece o sentido endotérmico, o inverso.", "O catalisador acelera os dois sentidos igualmente: não desloca."],
+      "dica": "O sistema reage para diminuir a perturbação.",
+      "errosComuns": [{ "descricao": "Achar que o catalisador desloca o equilíbrio: ele só faz o equilíbrio ser atingido mais rápido." }],
+      "revisado": false
+    },
+    {
+      "id": "eq-ph-poh-q1", "temaId": "eq-ph-poh", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Qual é o pH de uma solução de HCl 0,01 mol/L? Considere ionização total.",
+      "gabarito": { "valor": 2, "unidade": null, "tolerancia": { "absoluta": 0.05 } },
+      "verificacao": "-log10(0.01)",
+      "resolucaoPassoAPasso": ["Ácido forte: [H⁺] = 0,01 = 10⁻² mol/L.", "pH = −log[H⁺] = 2."],
+      "dica": "Escreva [H⁺] como potência de 10.",
+      "errosComuns": [{ "descricao": "Usou a própria concentração como pH.", "resposta": { "valor": 0.01 } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-ph-poh-q2", "temaId": "eq-ph-poh", "etapa": "em-2", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Uma solução tem pH 3 a 25 °C. Qual é o pOH?",
+      "gabarito": { "valor": 11, "unidade": null, "tolerancia": { "absoluta": 0.05 } },
+      "verificacao": "14 - 3",
+      "resolucaoPassoAPasso": ["A 25 °C, pH + pOH = 14.", "pOH = 14 − 3 = 11."],
+      "dica": "pH + pOH = 14 a 25 °C.",
+      "errosComuns": [{ "descricao": "Repetiu o pH como pOH.", "resposta": { "valor": 3 } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-ph-poh-q3", "temaId": "eq-ph-poh", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Qual é o pH de uma solução de NaOH 0,001 mol/L a 25 °C? Considere dissociação total.",
+      "gabarito": { "valor": 11, "unidade": null, "tolerancia": { "absoluta": 0.05 } },
+      "verificacao": "14 + log10(0.001)",
+      "resolucaoPassoAPasso": ["Base forte: [OH⁻] = 10⁻³ mol/L, então pOH = 3.", "pH = 14 − 3 = 11."],
+      "dica": "Com base, calcule primeiro o pOH.",
+      "errosComuns": [{ "descricao": "Parou no pOH e deu 3 como pH.", "resposta": { "valor": 3 } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-ka-kb-q1", "temaId": "eq-ka-kb", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Constantes de ionização a 25 °C: ácido acético, Ka = 1,8 × 10⁻⁵; ácido fluorídrico, Ka = 6,8 × 10⁻⁴; ácido cianídrico, Ka = 6,2 × 10⁻¹⁰. Qual é o ácido mais forte?",
+      "alternativas": [{ "id": "a", "texto": "Ácido fluorídrico" }, { "id": "b", "texto": "Ácido acético" }, { "id": "c", "texto": "Ácido cianídrico" }, { "id": "d", "texto": "Os três têm a mesma força" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Quanto maior o Ka, mais o ácido se ioniza: mais forte.", "6,8 × 10⁻⁴ é o maior valor: ácido fluorídrico."],
+      "dica": "Compare os expoentes: −4 é maior que −5 e que −10.",
+      "errosComuns": [{ "descricao": "Expoente mais negativo significa Ka menor: o ácido cianídrico é o mais fraco.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-ka-kb-q2", "temaId": "eq-ka-kb", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Um ácido fraco HA, em solução 0,1 mol/L, tem grau de ionização de 1%. Qual é a concentração de H⁺?",
+      "gabarito": { "valor": 0.001, "unidade": "mol/L" },
+      "verificacao": "0.1 * 0.01",
+      "resolucaoPassoAPasso": ["[H⁺] = grau de ionização × concentração do ácido.", "[H⁺] = 0,01 × 0,1 = 0,001 mol/L."],
+      "dica": "Só 1% das moléculas se ionizou.",
+      "errosComuns": [{ "descricao": "Considerou ionização total, como num ácido forte.", "resposta": { "valor": 0.1, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-ka-kb-q3", "temaId": "eq-ka-kb", "etapa": "em-2", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Pela lei de Ostwald para ácidos fracos, Ka ≈ α² × M. Um ácido com Ka = 1,0 × 10⁻⁵ está em solução 0,1 mol/L. Qual é o grau de ionização α, em porcentagem?",
+      "gabarito": { "valor": 1, "unidade": "%" },
+      "verificacao": "sqrt(1e-5 / 0.1) * 100",
+      "resolucaoPassoAPasso": ["α² = Ka ÷ M = 10⁻⁵ ÷ 10⁻¹ = 10⁻⁴.", "α = √10⁻⁴ = 10⁻² = 0,01 = 1%."],
+      "dica": "Isole α² e tire a raiz.",
+      "errosComuns": [{ "descricao": "Esqueceu de tirar a raiz quadrada.", "resposta": { "valor": 0.01, "unidade": "%" } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-hidrolise-q1", "temaId": "eq-hidrolise", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Uma solução aquosa de acetato de sódio, sal de ácido fraco com base forte, é:",
+      "alternativas": [{ "id": "a", "texto": "Básica" }, { "id": "b", "texto": "Ácida" }, { "id": "c", "texto": "Neutra" }, { "id": "d", "texto": "Não é possível prever" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O ânion acetato é base conjugada de um ácido fraco: reage com a água formando \\ce{OH-}.", "O \\ce{Na+} vem de base forte e não interfere.", "Resultado: solução básica."],
+      "dica": "Prevalece o caráter do mais forte entre o ácido e a base de origem.",
+      "errosComuns": [{ "descricao": "O ânion de ácido fraco gera \\ce{OH-} na água; a solução fica básica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-hidrolise-q2", "temaId": "eq-hidrolise", "etapa": "em-2", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Classifique o caráter da solução aquosa de cada sal.",
+      "itens": [{ "id": "nacl", "texto": "NaCl" }, { "id": "nh4cl", "texto": "\\ce{NH4Cl}" }, { "id": "na2co3", "texto": "\\ce{Na2CO3}" }, { "id": "kno3", "texto": "\\ce{KNO3}" }],
+      "opcoes": [{ "id": "acida", "texto": "Ácida" }, { "id": "basica", "texto": "Básica" }, { "id": "neutra", "texto": "Neutra" }],
+      "gabarito": { "nacl": "neutra", "nh4cl": "acida", "na2co3": "basica", "kno3": "neutra" },
+      "resolucaoPassoAPasso": ["NaCl e \\ce{KNO3}: ácido forte com base forte, solução neutra.", "\\ce{NH4Cl}: ácido forte (HCl) com base fraca (\\ce{NH3}), solução ácida.", "\\ce{Na2CO3}: ácido fraco (\\ce{H2CO3}) com base forte (NaOH), solução básica."],
+      "dica": "Descubra o ácido e a base que formariam cada sal.",
+      "errosComuns": [{ "descricao": "Achar que todo sal forma solução neutra." }],
+      "revisado": false
+    },
+    {
+      "id": "eq-hidrolise-q3", "temaId": "eq-hidrolise", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que uma solução de cloreto de amônio, \\ce{NH4Cl}, é ácida?",
+      "alternativas": [{ "id": "a", "texto": "Porque o \\ce{NH4+}, ácido conjugado de uma base fraca, doa próton à água e forma \\ce{H3O+}" }, { "id": "b", "texto": "Porque o \\ce{Cl-} reage com a água formando HCl" }, { "id": "c", "texto": "Porque o sal libera \\ce{OH-}" }, { "id": "d", "texto": "Porque todo sal é ácido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["\\ce{NH4+ + H2O <=> NH3 + H3O+}.", "O \\ce{Cl-} é base conjugada de ácido forte e não reage com a água.", "A formação de \\ce{H3O+} deixa a solução ácida."],
+      "dica": "Qual dos íons vem de uma espécie fraca?",
+      "errosComuns": [{ "descricao": "O \\ce{Cl-} vem de ácido forte e praticamente não sofre hidrólise.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-tampao-q1", "temaId": "eq-tampao", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Uma solução-tampão é formada, em geral, por:",
+      "alternativas": [{ "id": "a", "texto": "Um ácido fraco e sua base conjugada (ou uma base fraca e seu ácido conjugado)" }, { "id": "b", "texto": "Um ácido forte e uma base forte" }, { "id": "c", "texto": "Apenas água pura" }, { "id": "d", "texto": "Um sal neutro dissolvido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O ácido fraco neutraliza bases adicionadas.", "A base conjugada neutraliza ácidos adicionados.", "Assim, o pH varia pouco."],
+      "dica": "Precisa ter alguém para reagir com ácido e alguém para reagir com base.",
+      "errosComuns": [{ "descricao": "Ácido forte com base forte se neutralizam e não formam tampão.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-tampao-q2", "temaId": "eq-tampao", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O pH do sangue fica perto de 7,4 principalmente graças ao par:",
+      "alternativas": [{ "id": "a", "texto": "Ácido carbônico e bicarbonato (\\ce{H2CO3} / \\ce{HCO3-})" }, { "id": "b", "texto": "Ácido clorídrico e cloreto (HCl / \\ce{Cl-})" }, { "id": "c", "texto": "Hidróxido de sódio e sódio" }, { "id": "d", "texto": "Ácido sulfúrico e sulfato" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O \\ce{CO2} do metabolismo forma \\ce{H2CO3}, um ácido fraco.", "Junto com o bicarbonato, sua base conjugada, ele forma o principal tampão do sangue."],
+      "dica": "Tem relação com o \\ce{CO2} que respiramos.",
+      "errosComuns": [{ "descricao": "HCl é ácido forte e não forma tampão com o \\ce{Cl-}.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-tampao-q3", "temaId": "eq-tampao", "etapa": "superior", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Pela equação de Henderson-Hasselbalch, pH = pKa + log([A⁻]/[HA]). Um tampão tem pKa = 4,74, [A⁻] = 0,2 mol/L e [HA] = 0,1 mol/L. Qual é o pH?",
+      "gabarito": { "valor": 5.04, "unidade": null, "tolerancia": { "absoluta": 0.02 } },
+      "verificacao": "4.74 + log10(0.2 / 0.1)",
+      "resolucaoPassoAPasso": ["[A⁻]/[HA] = 0,2 ÷ 0,1 = 2.", "log 2 ≈ 0,30.", "pH = 4,74 + 0,30 = 5,04."],
+      "dica": "Base conjugada no numerador.",
+      "errosComuns": [{ "descricao": "Inverteu a razão (ácido no numerador).", "resposta": { "valor": 4.44 } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-kps-q1", "temaId": "eq-kps", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a expressão do produto de solubilidade do fluoreto de cálcio, \\ce{CaF2}?",
+      "alternativas": [{ "id": "a", "texto": "Kps = [Ca²⁺][F⁻]²" }, { "id": "b", "texto": "Kps = [Ca²⁺][F⁻]" }, { "id": "c", "texto": "Kps = [Ca²⁺] × 2[F⁻]" }, { "id": "d", "texto": "Kps = [CaF₂]" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["\\ce{CaF2(s) <=> Ca^{2+} + 2F-}.", "O sólido não entra na expressão; o coeficiente 2 vira expoente.", "Kps = [Ca²⁺][F⁻]²."],
+      "dica": "Sólidos não entram na expressão; coeficientes viram expoentes.",
+      "errosComuns": [{ "descricao": "O coeficiente 2 do fluoreto deve virar expoente.", "resposta": "b" }, { "descricao": "Sólidos puros não aparecem na expressão da constante.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "eq-kps-q2", "temaId": "eq-kps", "etapa": "em-2", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "O cloreto de prata tem Kps = 1,8 × 10⁻¹⁰ a 25 °C. Qual é a sua solubilidade em água, em mol/L?",
+      "gabarito": { "valor": 1.34e-5, "unidade": "mol/L", "tolerancia": { "relativa": 0.02 } },
+      "verificacao": "sqrt(1.8e-10)",
+      "resolucaoPassoAPasso": ["\\ce{AgCl(s) <=> Ag+ + Cl-}: se a solubilidade é s, [Ag⁺] = [Cl⁻] = s.", "Kps = s² = 1,8 × 10⁻¹⁰.", "s = √(1,8 × 10⁻¹⁰) ≈ 1,34 × 10⁻⁵ mol/L."],
+      "dica": "Escreva Kps em função de s.",
+      "errosComuns": [{ "descricao": "Usou o próprio Kps como solubilidade.", "resposta": { "valor": 1.8e-10, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "eq-kps-q3", "temaId": "eq-kps", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O que acontece com a solubilidade do AgCl ao adicionar NaCl a uma solução saturada de AgCl?",
+      "alternativas": [{ "id": "a", "texto": "Diminui, pelo efeito do íon comum" }, { "id": "b", "texto": "Aumenta" }, { "id": "c", "texto": "Não se altera" }, { "id": "d", "texto": "O AgCl deixa de existir" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O NaCl aumenta a concentração de \\ce{Cl-}, íon comum ao equilíbrio do AgCl.", "Pelo princípio de Le Chatelier, o equilíbrio se desloca no sentido do sólido.", "Mais AgCl precipita: a solubilidade diminui."],
+      "dica": "Pense em Le Chatelier com o \\ce{Cl-} extra.",
+      "errosComuns": [{ "descricao": "Adicionar o íon comum desloca o equilíbrio para o sólido.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

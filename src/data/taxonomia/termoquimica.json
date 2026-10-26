@@ -1,0 +1,118 @@
+{
+  "id": "termoquimica",
+  "nome": "Termoquímica",
+  "descricao": "A energia que entra e sai nas reações e o que decide se uma reação é espontânea.",
+  "area": "termoquimica",
+  "prerequisitos": ["lig-covalente", "reac-evidencias", "reac-calculo-estequiometrico"],
+  "etapasRecomendadas": ["ef-8", "ef-9", "em-2", "enem", "olimpiadas-quimica", "superior"],
+  "dificuldade": 1,
+  "palavrasChave": ["entalpia", "Lei de Hess", "energia de ligação", "entropia"],
+  "temas": [
+    {
+      "id": "termo-entalpia",
+      "nome": "Entalpia",
+      "descricao": "Processos que liberam ou absorvem calor e como representá-los.",
+      "area": "termoquimica",
+      "prerequisitos": ["reac-evidencias", "reac-calculo-estequiometrico"],
+      "etapasRecomendadas": ["ef-8", "ef-9", "em-2", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["endotérmico", "exotérmico", "entalpia"],
+      "subtemas": [
+        {
+          "id": "termo-processos",
+          "nome": "Processos endotérmicos e exotérmicos",
+          "descricao": "Reconhecer processos que liberam ou absorvem energia, como combustão, fotossíntese e dissolução.",
+          "area": "termoquimica",
+          "prerequisitos": ["reac-evidencias"],
+          "etapasRecomendadas": ["ef-8", "ef-9", "em-2", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["endotérmico", "exotérmico", "calor", "energia"]
+        },
+        {
+          "id": "termo-entalpia-diagramas",
+          "nome": "Variação de entalpia e diagramas",
+          "descricao": "O significado de ΔH, seu sinal e a leitura de diagramas de energia.",
+          "area": "termoquimica",
+          "prerequisitos": ["termo-processos"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ΔH", "entalpia", "diagrama de energia", "kJ/mol"]
+        },
+        {
+          "id": "termo-equacoes-termoquimicas",
+          "nome": "Equações termoquímicas",
+          "descricao": "Equações com ΔH, entalpias padrão de formação e de combustão e cálculos de calor envolvido.",
+          "area": "termoquimica",
+          "prerequisitos": ["reac-calculo-estequiometrico", "termo-entalpia-diagramas"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["equação termoquímica", "entalpia de formação", "entalpia de combustão", "estado padrão"]
+        }
+      ]
+    },
+    {
+      "id": "termo-calculo",
+      "nome": "Cálculo de ΔH",
+      "descricao": "Maneiras indiretas de obter a variação de entalpia.",
+      "area": "termoquimica",
+      "prerequisitos": ["lig-covalente", "termo-entalpia-diagramas", "termo-equacoes-termoquimicas"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["Lei de Hess", "energia de ligação"],
+      "subtemas": [
+        {
+          "id": "termo-lei-hess",
+          "nome": "Lei de Hess",
+          "descricao": "Somar equações conhecidas para obter o ΔH de uma reação difícil de medir.",
+          "area": "termoquimica",
+          "prerequisitos": ["termo-equacoes-termoquimicas"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["Lei de Hess", "soma de equações", "inverter equação"]
+        },
+        {
+          "id": "termo-energia-ligacao",
+          "nome": "Energia de ligação",
+          "descricao": "Estimar o ΔH pela energia gasta para romper e liberada para formar ligações.",
+          "area": "termoquimica",
+          "prerequisitos": ["lig-covalente", "termo-entalpia-diagramas"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["energia de ligação", "ruptura", "formação de ligações"]
+        }
+      ]
+    },
+    {
+      "id": "termo-espontaneidade",
+      "nome": "Espontaneidade",
+      "descricao": "Entropia e energia livre como critérios de espontaneidade.",
+      "area": "termoquimica",
+      "prerequisitos": ["termo-entalpia-diagramas"],
+      "etapasRecomendadas": ["em-2", "olimpiadas-quimica", "superior"],
+      "dificuldade": 4,
+      "palavrasChave": ["entropia", "Gibbs", "espontaneidade"],
+      "subtemas": [
+        {
+          "id": "termo-entropia",
+          "nome": "Entropia",
+          "descricao": "Entropia como medida da dispersão de energia e da matéria, e como prever o sinal de ΔS.",
+          "area": "termoquimica",
+          "prerequisitos": ["termo-entalpia-diagramas"],
+          "etapasRecomendadas": ["em-2", "olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["entropia", "ΔS", "dispersão", "desordem"]
+        },
+        {
+          "id": "termo-gibbs",
+          "nome": "Energia livre de Gibbs",
+          "descricao": "A relação ΔG = ΔH − TΔS e a análise de espontaneidade em função da temperatura.",
+          "area": "termoquimica",
+          "prerequisitos": ["termo-entropia"],
+          "etapasRecomendadas": ["em-2", "olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["Gibbs", "ΔG", "espontaneidade", "temperatura"]
+        }
+      ]
+    }
+  ]
+}

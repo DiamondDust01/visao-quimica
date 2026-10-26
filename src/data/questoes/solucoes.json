@@ -1,0 +1,306 @@
+{
+  "area": "solucoes",
+  "questoes": [
+    {
+      "id": "sol-solubilidade-q1", "temaId": "sol-solubilidade", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "O coeficiente de solubilidade de um sal a 20 °C é 36 g por 100 g de água. Qual é a massa máxima desse sal que se dissolve em 250 g de água a 20 °C?",
+      "gabarito": { "valor": 90, "unidade": "g" },
+      "verificacao": "36 * 250 / 100",
+      "resolucaoPassoAPasso": ["36 g dissolvem em 100 g de água.", "250 g de água é 2,5 vezes mais: 36 × 2,5 = 90 g."],
+      "dica": "Monte a proporção com 100 g de água.",
+      "errosComuns": [{ "descricao": "Usou o coeficiente sem ajustar para 250 g de água.", "resposta": { "valor": 36, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-solubilidade-q2", "temaId": "sol-solubilidade", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A 20 °C, o coeficiente de solubilidade de um sal é 36 g por 100 g de água. Por resfriamento lento e cuidadoso, obteve-se uma solução com 40 g desse sal em 100 g de água a 20 °C, sem nenhum sólido no fundo. Essa solução é:",
+      "alternativas": [{ "id": "a", "texto": "Supersaturada e instável" }, { "id": "b", "texto": "Saturada e estável" }, { "id": "c", "texto": "Insaturada" }, { "id": "d", "texto": "Saturada com corpo de fundo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Há mais soluto dissolvido (40 g) do que o limite a 20 °C (36 g).", "Isso caracteriza uma solução supersaturada, instável: uma agitação ou um cristal pode provocar a precipitação do excesso."],
+      "dica": "Compare 40 g com o limite de 36 g.",
+      "errosComuns": [{ "descricao": "Uma solução saturada tem exatamente o limite (36 g), não mais.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-solubilidade-q3", "temaId": "sol-solubilidade", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A solubilidade da maioria dos sólidos em água aumenta com a temperatura. E a solubilidade dos gases, como o oxigênio?",
+      "alternativas": [{ "id": "a", "texto": "Diminui: por isso águas aquecidas têm menos oxigênio dissolvido para os peixes." }, { "id": "b", "texto": "Aumenta, como a dos sólidos." }, { "id": "c", "texto": "Não depende da temperatura." }, { "id": "d", "texto": "Só depende da cor da água." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Aquecendo a água, as moléculas de gás ganham energia e escapam mais facilmente.", "Por isso a solubilidade dos gases diminui com a temperatura.", "É uma das razões do impacto da poluição térmica nos rios."],
+      "dica": "Pense num refrigerante quente e num gelado: qual perde o gás mais rápido?",
+      "errosComuns": [{ "descricao": "Gases se comportam ao contrário da maioria dos sólidos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-concentracao-comum-q1", "temaId": "sol-concentracao-comum", "etapa": "em-2", "dificuldade": 1, "tipo": "numerica",
+      "enunciado": "Dissolvem-se 20 g de açúcar em água suficiente para formar 500 mL de solução. Qual é a concentração em g/L?",
+      "gabarito": { "valor": 40, "unidade": "g/L" },
+      "verificacao": "20 / 0.5",
+      "resolucaoPassoAPasso": ["Concentração comum = massa de soluto ÷ volume da solução em litros.", "500 mL = 0,5 L; C = 20 ÷ 0,5 = 40 g/L."],
+      "dica": "Passe o volume para litros.",
+      "errosComuns": [{ "descricao": "Usou o volume em mL sem converter para litros.", "resposta": { "valor": 0.04, "unidade": "g/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-concentracao-comum-q2", "temaId": "sol-concentracao-comum", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "O soro fisiológico tem 9 g/L de cloreto de sódio. Qual é a massa de cloreto de sódio em 250 mL de soro?",
+      "gabarito": { "valor": 2.25, "unidade": "g" },
+      "verificacao": "9 * 0.250",
+      "resolucaoPassoAPasso": ["m = C × V, com V em litros.", "m = 9 g/L × 0,250 L = 2,25 g."],
+      "dica": "250 mL é um quarto de litro.",
+      "errosComuns": [{ "descricao": "Multiplicou pelo volume em mL.", "resposta": { "valor": 2250, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-concentracao-comum-q3", "temaId": "sol-concentracao-comum", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Uma solução tem densidade 1,2 g/mL e concentração de soluto de 200 g/L. Qual afirmação está correta?",
+      "alternativas": [{ "id": "a", "texto": "Cada litro de solução tem massa total de 1200 g, dos quais 200 g são de soluto." }, { "id": "b", "texto": "Cada litro de solução tem 1,2 g de soluto." }, { "id": "c", "texto": "Densidade e concentração são a mesma coisa." }, { "id": "d", "texto": "Há 200 g de solvente em cada litro de solução." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Densidade da solução: massa de toda a solução ÷ volume. 1,2 g/mL = 1200 g em 1 L.", "Concentração: só a massa de soluto por litro: 200 g.", "O solvente é o restante: 1200 − 200 = 1000 g."],
+      "dica": "A densidade considera a massa de toda a solução.",
+      "errosComuns": [{ "descricao": "Densidade inclui soluto e solvente; concentração só o soluto.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-concentracao-molar-q1", "temaId": "sol-concentracao-molar", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Dissolvem-se 0,5 mol de NaOH em água até completar 250 mL de solução. Qual é a concentração em mol/L?",
+      "gabarito": { "valor": 2, "unidade": "mol/L" },
+      "verificacao": "0.5 / 0.250",
+      "resolucaoPassoAPasso": ["Concentração em quantidade de matéria = n ÷ V(L).", "0,5 mol ÷ 0,250 L = 2 mol/L."],
+      "dica": "Converta 250 mL para litros.",
+      "errosComuns": [{ "descricao": "Usou o volume em mL.", "resposta": { "valor": 0.002, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-concentracao-molar-q2", "temaId": "sol-concentracao-molar", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Qual massa de NaCl (58,5 g/mol) é necessária para preparar 2 L de solução 0,1 mol/L?",
+      "gabarito": { "valor": 11.7, "unidade": "g" },
+      "verificacao": "0.1 * 2 * 58.5",
+      "resolucaoPassoAPasso": ["n = C × V = 0,1 × 2 = 0,2 mol.", "m = n × M = 0,2 × 58,5 = 11,7 g."],
+      "dica": "Calcule primeiro quantos mols são necessários.",
+      "errosComuns": [{ "descricao": "Calculou para 1 litro e esqueceu que são 2 L.", "resposta": { "valor": 5.85, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-concentracao-molar-q3", "temaId": "sol-concentracao-molar", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Uma solução de cloreto de cálcio, \\ce{CaCl2}, tem concentração 0,2 mol/L. Considerando dissociação total, qual é a concentração de íons \\ce{Cl-}?",
+      "gabarito": { "valor": 0.4, "unidade": "mol/L" },
+      "verificacao": "0.2 * 2",
+      "resolucaoPassoAPasso": ["\\ce{CaCl2 -> Ca^{2+} + 2Cl-}.", "Cada mol de \\ce{CaCl2} libera 2 mol de \\ce{Cl-}: 0,2 × 2 = 0,4 mol/L."],
+      "dica": "Escreva a equação de dissociação.",
+      "errosComuns": [{ "descricao": "Esqueceu que cada fórmula libera dois íons cloreto.", "resposta": { "valor": 0.2, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-titulo-ppm-q1", "temaId": "sol-titulo-ppm", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Dissolvem-se 20 g de sal em 180 g de água. Qual é o título em massa da solução, em porcentagem?",
+      "gabarito": { "valor": 10, "unidade": "%" },
+      "verificacao": "20 / (20 + 180) * 100",
+      "resolucaoPassoAPasso": ["Massa da solução: 20 + 180 = 200 g.", "Título = massa de soluto ÷ massa da solução = 20 ÷ 200 = 0,10 = 10%."],
+      "dica": "Divida pela massa da solução, não só pela do solvente.",
+      "errosComuns": [{ "descricao": "Dividiu pela massa de água em vez da massa da solução.", "resposta": { "valor": 11.1, "unidade": "%" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-titulo-ppm-q2", "temaId": "sol-titulo-ppm", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Uma amostra de água tem 0,002 g de chumbo em cada 1000 g de água. Qual é a concentração de chumbo em ppm (partes por milhão, em massa)?",
+      "gabarito": { "valor": 2, "unidade": "ppm" },
+      "verificacao": "0.002 / 1000 * 1e6",
+      "resolucaoPassoAPasso": ["ppm = massa de soluto ÷ massa total × 10⁶.", "0,002 ÷ 1000 × 10⁶ = 2 ppm.", "Equivale a 2 mg de chumbo por kg de água."],
+      "dica": "ppm é quantas partes de soluto há em um milhão de partes da amostra.",
+      "errosComuns": [{ "descricao": "Parou na fração e não converteu para partes por milhão.", "resposta": { "valor": 0.000002, "unidade": "ppm" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-titulo-ppm-q3", "temaId": "sol-titulo-ppm", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Um rótulo diz 'álcool 70% (em volume)'. Isso significa:",
+      "alternativas": [{ "id": "a", "texto": "70 mL de etanol em cada 100 mL de solução" }, { "id": "b", "texto": "70 g de etanol em cada 100 g de solução" }, { "id": "c", "texto": "70 mL de água em cada 100 mL de solução" }, { "id": "d", "texto": "70 mL de etanol misturados com 100 mL de água" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Porcentagem em volume: volume de soluto em 100 volumes de solução.", "70% em volume: 70 mL de etanol em cada 100 mL de solução."],
+      "dica": "O total de referência é a solução, não o solvente.",
+      "errosComuns": [{ "descricao": "O rótulo informa porcentagem em volume, não em massa.", "resposta": "b" }, { "descricao": "Os 100 mL de referência são da solução final, não de água.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-diluicao-q1", "temaId": "sol-diluicao", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "100 mL de uma solução 2 mol/L são diluídos com água até 500 mL. Qual é a nova concentração?",
+      "gabarito": { "valor": 0.4, "unidade": "mol/L" },
+      "verificacao": "2 * 100 / 500",
+      "resolucaoPassoAPasso": ["Na diluição, a quantidade de soluto não muda: C₁V₁ = C₂V₂.", "2 × 100 = C₂ × 500, então C₂ = 0,4 mol/L."],
+      "dica": "A quantidade de soluto antes e depois é a mesma.",
+      "errosComuns": [{ "descricao": "Inverteu a proporção: diluir diminui a concentração.", "resposta": { "valor": 10, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-diluicao-q2", "temaId": "sol-diluicao", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Quanta água deve ser adicionada a 200 mL de uma solução 1,0 mol/L para obter uma solução 0,25 mol/L?",
+      "gabarito": { "valor": 600, "unidade": "mL" },
+      "verificacao": "200 * 1.0 / 0.25 - 200",
+      "resolucaoPassoAPasso": ["C₁V₁ = C₂V₂: 1,0 × 200 = 0,25 × V₂, então V₂ = 800 mL.", "Já há 200 mL; a água a adicionar é 800 − 200 = 600 mL."],
+      "dica": "Calcule o volume final e desconte o volume inicial.",
+      "errosComuns": [{ "descricao": "Deu o volume final, não o volume de água adicionada.", "resposta": { "valor": 800, "unidade": "mL" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-diluicao-q3", "temaId": "sol-diluicao", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Num laboratório, um técnico precisa diluir ácido sulfúrico concentrado. Qual é o procedimento seguro?",
+      "alternativas": [{ "id": "a", "texto": "Adicionar o ácido aos poucos sobre a água, mexendo, com EPI e na capela" }, { "id": "b", "texto": "Despejar a água de uma vez sobre o ácido" }, { "id": "c", "texto": "Misturar em qualquer ordem, desde que rapidamente" }, { "id": "d", "texto": "Aquecer o ácido antes de adicionar a água" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A diluição do ácido sulfúrico libera muito calor.", "Se a água cair sobre o ácido, pode ferver na hora e espirrar ácido.", "Adicionando o ácido devagar sobre bastante água, o calor se espalha com segurança."],
+      "dica": "Regra de laboratório: ácido na água, nunca água no ácido.",
+      "errosComuns": [{ "descricao": "Água sobre ácido concentrado pode ferver de repente e espirrar ácido.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-mistura-solucoes-q1", "temaId": "sol-mistura-solucoes", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Misturam-se 200 mL de NaCl 0,1 mol/L com 300 mL de NaCl 0,6 mol/L. Qual é a concentração final?",
+      "gabarito": { "valor": 0.4, "unidade": "mol/L" },
+      "verificacao": "(0.200 * 0.1 + 0.300 * 0.6) / 0.500",
+      "resolucaoPassoAPasso": ["Quantidade de soluto: 0,2 × 0,1 + 0,3 × 0,6 = 0,02 + 0,18 = 0,20 mol.", "Volume final: 0,5 L.", "C = 0,20 ÷ 0,5 = 0,4 mol/L."],
+      "dica": "Some as quantidades de soluto e os volumes.",
+      "errosComuns": [{ "descricao": "Fez a média simples das concentrações, ignorando os volumes.", "resposta": { "valor": 0.35, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-mistura-solucoes-q2", "temaId": "sol-mistura-solucoes", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Misturam-se 50 mL de HCl 0,2 mol/L com 50 mL de NaOH 0,1 mol/L. Qual é a concentração de HCl que sobra na solução final?",
+      "gabarito": { "valor": 0.05, "unidade": "mol/L" },
+      "verificacao": "(0.050 * 0.2 - 0.050 * 0.1) / 0.100",
+      "resolucaoPassoAPasso": ["HCl: 0,05 × 0,2 = 0,010 mol. NaOH: 0,05 × 0,1 = 0,005 mol.", "Reagem 1 : 1: sobram 0,005 mol de HCl.", "Volume final: 100 mL = 0,1 L; C = 0,005 ÷ 0,1 = 0,05 mol/L."],
+      "dica": "Depois da reação, divida pelo volume total.",
+      "errosComuns": [{ "descricao": "Dividiu pelo volume de uma só das soluções.", "resposta": { "valor": 0.1, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-mistura-solucoes-q3", "temaId": "sol-mistura-solucoes", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Misturam-se volumes iguais de HCl 0,1 mol/L e NaOH 0,1 mol/L. A solução resultante é:",
+      "alternativas": [{ "id": "a", "texto": "Neutra, contendo NaCl dissolvido" }, { "id": "b", "texto": "Ácida" }, { "id": "c", "texto": "Básica" }, { "id": "d", "texto": "Uma mistura heterogênea" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Volumes e concentrações iguais: mesmas quantidades em mol de HCl e NaOH.", "Eles reagem 1 : 1 sem sobras, formando NaCl e água.", "NaCl vem de ácido e base fortes: a solução é neutra."],
+      "dica": "Compare as quantidades em mol de ácido e de base.",
+      "errosComuns": [{ "descricao": "Não sobra ácido: as quantidades são iguais.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-titulacao-q1", "temaId": "sol-titulacao", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "25 mL de uma solução de HCl foram titulados com NaOH 0,1 mol/L, e o ponto de equivalência foi atingido com 20 mL da base. Qual é a concentração do HCl?",
+      "gabarito": { "valor": 0.08, "unidade": "mol/L" },
+      "verificacao": "0.1 * 20 / 25",
+      "resolucaoPassoAPasso": ["No ponto de equivalência, n(HCl) = n(NaOH), pois a proporção é 1 : 1.", "n(NaOH) = 0,1 × 0,020 = 0,002 mol.", "C(HCl) = 0,002 ÷ 0,025 = 0,08 mol/L."],
+      "dica": "No ponto de equivalência, as quantidades em mol se igualam (proporção 1 : 1).",
+      "errosComuns": [{ "descricao": "Inverteu os volumes na conta.", "resposta": { "valor": 0.125, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-titulacao-q2", "temaId": "sol-titulacao", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "20 mL de ácido sulfúrico foram titulados com 40 mL de NaOH 0,5 mol/L até o ponto de equivalência. Qual é a concentração do ácido? (\\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O})",
+      "gabarito": { "valor": 0.5, "unidade": "mol/L" },
+      "verificacao": "0.5 * 0.040 / 2 / 0.020",
+      "resolucaoPassoAPasso": ["n(NaOH) = 0,5 × 0,040 = 0,020 mol.", "Proporção 1 : 2: n(\\ce{H2SO4}) = 0,020 ÷ 2 = 0,010 mol.", "C = 0,010 ÷ 0,020 = 0,5 mol/L."],
+      "dica": "Cada \\ce{H2SO4} consome dois NaOH.",
+      "errosComuns": [{ "descricao": "Usou proporção 1 : 1, esquecendo que o ácido tem dois H ionizáveis.", "resposta": { "valor": 1, "unidade": "mol/L" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-titulacao-q3", "temaId": "sol-titulacao", "etapa": "tecnico", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Numa titulação, para que serve a bureta?",
+      "alternativas": [{ "id": "a", "texto": "Para adicionar o titulante em volumes precisos e conhecidos" }, { "id": "b", "texto": "Para aquecer a solução" }, { "id": "c", "texto": "Para armazenar soluções por longos períodos" }, { "id": "d", "texto": "Para medir massas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A bureta é um tubo graduado com torneira.", "Permite gotejar o titulante e ler com precisão o volume gasto até o ponto de equivalência."],
+      "dica": "Ela tem torneira e graduação fina.",
+      "errosComuns": [{ "descricao": "Vidrarias de medida não devem ser aquecidas.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-pressao-vapor-q1", "temaId": "sol-pressao-vapor", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Ao dissolver um soluto não volátil, como o açúcar, em água, a pressão de vapor da água:",
+      "alternativas": [{ "id": "a", "texto": "Diminui" }, { "id": "b", "texto": "Aumenta" }, { "id": "c", "texto": "Não muda" }, { "id": "d", "texto": "Fica igual à pressão atmosférica" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As partículas de soluto ocupam parte da superfície e interagem com o solvente.", "Menos moléculas de água escapam para o vapor: a pressão de vapor diminui (tonoscopia)."],
+      "dica": "O soluto dificulta ou facilita a saída das moléculas de água?",
+      "errosComuns": [{ "descricao": "O soluto não volátil dificulta a evaporação; não a facilita.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-pressao-vapor-q2", "temaId": "sol-pressao-vapor", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A 25 °C, as pressões de vapor são: éter etílico 0,70 atm, etanol 0,08 atm e água 0,03 atm. Qual é o líquido mais volátil?",
+      "alternativas": [{ "id": "a", "texto": "Éter etílico" }, { "id": "b", "texto": "Etanol" }, { "id": "c", "texto": "Água" }, { "id": "d", "texto": "Todos são igualmente voláteis" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Maior pressão de vapor, mais moléculas passam para o vapor: maior volatilidade.", "O éter tem a maior pressão de vapor (0,70 atm)."],
+      "dica": "Volatilidade acompanha a pressão de vapor.",
+      "errosComuns": [{ "descricao": "A água tem a menor pressão de vapor: é a menos volátil.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-pressao-vapor-q3", "temaId": "sol-pressao-vapor", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Três soluções aquosas têm a mesma concentração, 0,1 mol/L: sacarose, NaCl e \\ce{CaCl2}. Qual tem a menor pressão de vapor?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{CaCl2}" }, { "id": "b", "texto": "NaCl" }, { "id": "c", "texto": "Sacarose" }, { "id": "d", "texto": "As três são iguais" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Efeitos coligativos dependem do número de partículas dissolvidas.", "Sacarose: 1 partícula por fórmula; NaCl: 2 íons; \\ce{CaCl2}: 3 íons.", "Mais partículas, menor pressão de vapor: \\ce{CaCl2}."],
+      "dica": "Conte quantas partículas cada fórmula libera em água.",
+      "errosComuns": [{ "descricao": "A sacarose não se dissocia: é a que menos abaixa a pressão de vapor.", "resposta": "c" }, { "descricao": "Concentrações iguais não significam números iguais de partículas.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-ebulioscopia-crioscopia-q1", "temaId": "sol-ebulioscopia-crioscopia", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Em países frios, joga-se sal nas estradas cobertas de gelo. Por quê?",
+      "alternativas": [{ "id": "a", "texto": "O sal abaixa a temperatura de congelamento da água, e o gelo derrete." }, { "id": "b", "texto": "O sal aquece o asfalto." }, { "id": "c", "texto": "O sal reage com o gelo produzindo calor." }, { "id": "d", "texto": "O sal aumenta a temperatura de congelamento." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Partículas dissolvidas dificultam a organização da água em cristais de gelo.", "A água salgada só congela abaixo de 0 °C (crioscopia).", "Assim, o gelo derrete mesmo um pouco abaixo de 0 °C."],
+      "dica": "É uma propriedade coligativa.",
+      "errosComuns": [{ "descricao": "O efeito é o contrário: o soluto abaixa a temperatura de congelamento.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-ebulioscopia-crioscopia-q2", "temaId": "sol-ebulioscopia-crioscopia", "etapa": "em-2", "dificuldade": 3, "tipo": "ordenacao",
+      "enunciado": "Ordene os líquidos pela temperatura de congelamento. As soluções têm a mesma quantidade de soluto por massa de água (0,1 mol/kg).",
+      "criterio": "Da maior para a menor temperatura de congelamento.",
+      "itens": [{ "id": "cacl2", "texto": "Solução de \\ce{CaCl2}" }, { "id": "agua", "texto": "Água pura" }, { "id": "nacl", "texto": "Solução de NaCl" }, { "id": "glicose", "texto": "Solução de glicose" }],
+      "gabarito": ["agua", "glicose", "nacl", "cacl2"],
+      "resolucaoPassoAPasso": ["A água pura congela a 0 °C.", "Quanto mais partículas dissolvidas, mais baixa a temperatura de congelamento.", "Glicose: 1 partícula; NaCl: 2; \\ce{CaCl2}: 3."],
+      "dica": "Conte as partículas que cada soluto libera.",
+      "errosComuns": [{ "descricao": "Ordenar como se todos os solutos liberassem o mesmo número de partículas." }],
+      "revisado": false
+    },
+    {
+      "id": "sol-ebulioscopia-crioscopia-q3", "temaId": "sol-ebulioscopia-crioscopia", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "A elevação da temperatura de ebulição é ΔT = Ke × W, em que Ke da água é 0,52 °C·kg/mol e W é a molalidade. Qual é a temperatura de ebulição de uma solução de glicose com W = 0,5 mol/kg, ao nível do mar?",
+      "gabarito": { "valor": 100.26, "unidade": "°C", "tolerancia": { "absoluta": 0.02 } },
+      "verificacao": "100 + 0.52 * 0.5",
+      "resolucaoPassoAPasso": ["A glicose não se dissocia, então o número de partículas é o da própria molalidade.", "ΔT = 0,52 × 0,5 = 0,26 °C.", "Temperatura de ebulição: 100 + 0,26 = 100,26 °C."],
+      "dica": "Calcule a elevação e some aos 100 °C.",
+      "errosComuns": [{ "descricao": "Somou Ke sem multiplicar pela molalidade.", "resposta": { "valor": 100.52, "unidade": "°C" } }],
+      "revisado": false
+    },
+    {
+      "id": "sol-osmose-q1", "temaId": "sol-osmose", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O que acontece com uma hemácia colocada em água pura?",
+      "alternativas": [{ "id": "a", "texto": "Incha e pode se romper, porque a água entra na célula por osmose." }, { "id": "b", "texto": "Murcha, porque perde água." }, { "id": "c", "texto": "Nada acontece." }, { "id": "d", "texto": "Absorve sal da água." }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O interior da hemácia é mais concentrado que a água pura.", "Na osmose, a água passa do meio menos concentrado para o mais concentrado.", "A água entra, a célula incha e pode se romper (hemólise)."],
+      "dica": "Para onde a água se move na osmose?",
+      "errosComuns": [{ "descricao": "A célula murcharia num meio mais concentrado que ela, não em água pura.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-osmose-q2", "temaId": "sol-osmose", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que o soro aplicado na veia precisa ser isotônico em relação ao sangue?",
+      "alternativas": [{ "id": "a", "texto": "Para evitar entrada ou saída excessiva de água das células do sangue" }, { "id": "b", "texto": "Para deixar o sangue mais ácido" }, { "id": "c", "texto": "Para aumentar a temperatura do corpo" }, { "id": "d", "texto": "Porque assim o soro não tem sal" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Isotônico: mesma pressão osmótica que o meio interno das células.", "Assim, não há fluxo líquido de água, e as células não incham nem murcham."],
+      "dica": "Iso = igual.",
+      "errosComuns": [{ "descricao": "O soro fisiológico tem sal (cerca de 0,9%), justamente para ser isotônico.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "sol-osmose-q3", "temaId": "sol-osmose", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "A pressão osmótica é π = M × R × T. Qual é a pressão osmótica de uma solução de glicose 0,1 mol/L a 27 °C? Use R = 0,082 atm·L/(mol·K).",
+      "gabarito": { "valor": 2.46, "unidade": "atm" },
+      "verificacao": "0.1 * 0.082 * (27 + 273)",
+      "resolucaoPassoAPasso": ["T = 27 + 273 = 300 K.", "π = 0,1 × 0,082 × 300 = 2,46 atm."],
+      "dica": "Use a temperatura em kelvin.",
+      "errosComuns": [{ "descricao": "Usou a temperatura em °C.", "resposta": { "valor": 0.2214, "unidade": "atm" } }],
+      "revisado": false
+    }
+  ]
+}

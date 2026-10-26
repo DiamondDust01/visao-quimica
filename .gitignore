@@ -1,0 +1,22 @@
+node_modules
+dist
+.vite
+.DS_Store
+npm-debug.log*
+firebase-debug.log*
+firestore-debug.log*
+.env
+.env.*
+!.env.example
+release
+android/.gradle
+android/.idea
+android/build
+android/captures
+android/local.properties
+android/app/build
+android/app/release
+android/*.iml
+
+# Roteiro pessoal para os slides (fora do git)
+APRESENTACAO_SLIDES.md

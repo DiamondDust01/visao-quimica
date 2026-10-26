@@ -1,0 +1,276 @@
+{
+  "area": "eletroquimica",
+  "questoes": [
+    {
+      "id": "eletro-nox-q1", "temaId": "eletro-nox", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Qual é o número de oxidação do enxofre no ácido sulfúrico, \\ce{H2SO4}?",
+      "gabarito": { "valor": 6, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "0 - 2*1 - 4*(-2)",
+      "resolucaoPassoAPasso": ["H tem Nox +1 e O tem Nox −2 na maioria dos compostos.", "A soma dos Nox numa molécula neutra é zero: 2(+1) + x + 4(−2) = 0.", "x = +6."],
+      "dica": "A soma de todos os Nox na molécula neutra dá zero.",
+      "errosComuns": [{ "descricao": "Usou o Nox do enxofre nos sulfetos (−2), que não vale aqui.", "resposta": { "valor": -2 } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-nox-q2", "temaId": "eletro-nox", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Qual é o número de oxidação do manganês no permanganato de potássio, \\ce{KMnO4}?",
+      "gabarito": { "valor": 7, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "0 - 1 - 4*(-2)",
+      "resolucaoPassoAPasso": ["K (metal alcalino) tem Nox +1; O tem −2.", "+1 + x + 4(−2) = 0, então x = +7."],
+      "dica": "Metais alcalinos têm sempre Nox +1 nos compostos.",
+      "errosComuns": [{ "descricao": "Esqueceu de contar o potássio.", "resposta": { "valor": 8 } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-nox-q3", "temaId": "eletro-nox", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Qual é o número de oxidação do cromo no íon dicromato, \\ce{Cr2O7^{2-}}?",
+      "gabarito": { "valor": 6, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "(-2 + 7*2) / 2",
+      "resolucaoPassoAPasso": ["Num íon, a soma dos Nox é igual à carga do íon: −2.", "2x + 7(−2) = −2, então 2x = 12 e x = +6."],
+      "dica": "No íon, a soma dos Nox é a carga, não zero.",
+      "errosComuns": [{ "descricao": "Igualou a soma a zero, ignorando a carga do íon.", "resposta": { "valor": 7 } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-oxidacao-reducao-q1", "temaId": "eletro-oxidacao-reducao", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na reação \\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu}, qual espécie sofre oxidação?",
+      "alternativas": [{ "id": "a", "texto": "Zn" }, { "id": "b", "texto": "\\ce{Cu^{2+}}" }, { "id": "c", "texto": "\\ce{Zn^{2+}}" }, { "id": "d", "texto": "Cu" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Oxidação é perda de elétrons, com aumento do Nox.", "O zinco passa de 0 para +2: perde 2 elétrons e se oxida."],
+      "dica": "Quem teve o Nox aumentado?",
+      "errosComuns": [{ "descricao": "O \\ce{Cu^{2+}} ganha elétrons: ele se reduz.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-oxidacao-reducao-q2", "temaId": "eletro-oxidacao-reducao", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na reação \\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu}, qual é o agente oxidante?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{Cu^{2+}}" }, { "id": "b", "texto": "Zn" }, { "id": "c", "texto": "\\ce{Zn^{2+}}" }, { "id": "d", "texto": "Cu" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O agente oxidante é a espécie que provoca a oxidação da outra.", "Ele faz isso recebendo elétrons, ou seja, sofrendo redução.", "O \\ce{Cu^{2+}} recebe os elétrons do zinco: é o agente oxidante."],
+      "dica": "O agente oxidante é quem se reduz.",
+      "errosComuns": [{ "descricao": "O zinco se oxida; ele é o agente redutor.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-oxidacao-reducao-q3", "temaId": "eletro-oxidacao-reducao", "etapa": "em-2", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Na queima do magnésio, \\ce{2Mg + O2 -> 2MgO}, associe cada reagente ao seu papel.",
+      "itens": [{ "id": "mg", "texto": "Mg" }, { "id": "o2", "texto": "\\ce{O2}" }],
+      "opcoes": [{ "id": "red", "texto": "Sofre oxidação; é o agente redutor" }, { "id": "oxi", "texto": "Sofre redução; é o agente oxidante" }, { "id": "nada", "texto": "Não muda de Nox" }],
+      "gabarito": { "mg": "red", "o2": "oxi" },
+      "resolucaoPassoAPasso": ["Mg: Nox de 0 para +2, perde elétrons: oxida-se e é o agente redutor.", "O: Nox de 0 para −2, ganha elétrons: reduz-se e é o agente oxidante."],
+      "dica": "Compare o Nox de cada elemento antes e depois.",
+      "errosComuns": [{ "descricao": "Inverter os papéis: quem se oxida é o agente redutor." }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-balanceamento-redox-q1", "temaId": "eletro-balanceamento-redox", "etapa": "em-2", "dificuldade": 2, "tipo": "balanceamento",
+      "enunciado": "Balanceie a equação iônica da reação do cobre com íons prata.",
+      "equacao": { "reagentes": ["Cu", "Ag^+"], "produtos": ["Cu^{2+}", "Ag"] },
+      "gabarito": [1, 2, 1, 2],
+      "resolucaoPassoAPasso": ["Cada Cu perde 2 elétrons; cada \\ce{Ag+} ganha 1.", "Para igualar os elétrons, são precisos 2 \\ce{Ag+} para cada Cu.", "Confira a carga: +2 de cada lado."],
+      "dica": "Numa equação iônica, a carga total também precisa se conservar.",
+      "errosComuns": [{ "descricao": "Os átomos estão certos com tudo igual a 1, mas a carga não: +1 à esquerda e +2 à direita.", "resposta": [1, 1, 1, 1] }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-balanceamento-redox-q2", "temaId": "eletro-balanceamento-redox", "etapa": "em-2", "dificuldade": 4, "tipo": "balanceamento",
+      "enunciado": "Balanceie a reação, em meio ácido, entre permanganato e íons ferro(II).",
+      "equacao": { "reagentes": ["MnO4^-", "Fe^{2+}", "H^+"], "produtos": ["Mn^{2+}", "Fe^{3+}", "H2O"] },
+      "gabarito": [1, 5, 8, 1, 5, 4],
+      "resolucaoPassoAPasso": ["Mn: de +7 para +2, ganha 5 elétrons. Fe: de +2 para +3, perde 1 elétron.", "Para igualar os elétrons: 1 \\ce{MnO4-} para 5 \\ce{Fe^{2+}}.", "Os 4 oxigênios do permanganato formam 4 \\ce{H2O}, que precisam de 8 \\ce{H+}.", "Carga: −1 + 10 + 8 = +17 à esquerda; +2 + 15 = +17 à direita."],
+      "dica": "Comece igualando os elétrons perdidos e recebidos.",
+      "errosComuns": [{ "descricao": "Ajustou O e H, mas não igualou os elétrons: a carga não se conserva.", "resposta": [1, 1, 8, 1, 1, 4] }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-balanceamento-redox-q3", "temaId": "eletro-balanceamento-redox", "etapa": "em-2", "dificuldade": 4, "tipo": "balanceamento",
+      "enunciado": "Balanceie a reação do cobre com ácido nítrico diluído, que forma nitrato de cobre(II), monóxido de nitrogênio e água.",
+      "equacao": { "reagentes": ["Cu", "HNO3"], "produtos": ["Cu(NO3)2", "NO", "H2O"] },
+      "gabarito": [3, 8, 3, 2, 4],
+      "resolucaoPassoAPasso": ["Cu: de 0 para +2, perde 2 elétrons. N: de +5 para +2 (no NO), ganha 3 elétrons.", "Igualando: 3 Cu para 2 NO (6 elétrons).", "Cu: 3 \\ce{Cu(NO3)2}, que usam 6 nitratos, mais 2 N do NO: 8 \\ce{HNO3}.", "8 H formam 4 \\ce{H2O}. Confira o oxigênio: 24 = 18 + 2 + 4."],
+      "dica": "Nem todo \\ce{HNO3} se reduz: parte vira nitrato.",
+      "errosComuns": [{ "descricao": "Esqueceu que parte do ácido só fornece nitrato e não muda de Nox.", "resposta": [3, 2, 3, 2, 1] }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-pilhas-funcionamento-q1", "temaId": "eletro-pilhas-funcionamento", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na pilha de Daniell (zinco e cobre), os elétrons fluem:",
+      "alternativas": [{ "id": "a", "texto": "Do zinco (ânodo) para o cobre (cátodo), pelo fio externo" }, { "id": "b", "texto": "Do cobre para o zinco, pelo fio externo" }, { "id": "c", "texto": "Pela ponte salina, do zinco para o cobre" }, { "id": "d", "texto": "Em nenhum sentido" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O zinco se oxida (ânodo) e libera elétrons.", "Os elétrons passam pelo fio até o cobre (cátodo), onde o \\ce{Cu^{2+}} se reduz.", "Pela ponte salina passam íons, não elétrons."],
+      "dica": "Os elétrons saem de onde ocorre a oxidação.",
+      "errosComuns": [{ "descricao": "Pela ponte salina circulam íons, não elétrons.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-pilhas-funcionamento-q2", "temaId": "eletro-pilhas-funcionamento", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a função da ponte salina numa pilha?",
+      "alternativas": [{ "id": "a", "texto": "Manter a neutralidade elétrica das soluções, permitindo a passagem de íons" }, { "id": "b", "texto": "Conduzir os elétrons de um eletrodo ao outro" }, { "id": "c", "texto": "Aumentar a ddp da pilha" }, { "id": "d", "texto": "Servir de reagente principal" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Com o funcionamento, uma solução acumularia carga positiva e a outra negativa.", "Os íons da ponte salina migram e compensam essas cargas, e a pilha continua funcionando."],
+      "dica": "Sem ela, a pilha para rapidamente.",
+      "errosComuns": [{ "descricao": "Os elétrons passam pelo fio externo, não pela ponte.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-pilhas-funcionamento-q3", "temaId": "eletro-pilhas-funcionamento", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Com o funcionamento da pilha de Daniell, o que acontece com a placa de zinco?",
+      "alternativas": [{ "id": "a", "texto": "Sofre corrosão e perde massa" }, { "id": "b", "texto": "Ganha massa" }, { "id": "c", "texto": "Não se altera" }, { "id": "d", "texto": "Transforma-se em cobre" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No ânodo, \\ce{Zn -> Zn^{2+} + 2e-}.", "Os íons \\ce{Zn^{2+}} vão para a solução, e a placa se desgasta.", "Quem ganha massa é a placa de cobre, onde o cobre se deposita."],
+      "dica": "O zinco se oxida e vira íon dissolvido.",
+      "errosComuns": [{ "descricao": "Quem ganha massa é o cátodo de cobre.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-potenciais-q1", "temaId": "eletro-potenciais", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Potenciais-padrão de redução: \\ce{Cu^{2+}/Cu} = +0,34 V e \\ce{Zn^{2+}/Zn} = −0,76 V. Qual é a ddp da pilha formada por eles?",
+      "gabarito": { "valor": 1.1, "unidade": "V" },
+      "verificacao": "0.34 - (-0.76)",
+      "resolucaoPassoAPasso": ["ddp = E°(cátodo) − E°(ânodo).", "O cobre, de maior potencial de redução, é o cátodo.", "ddp = 0,34 − (−0,76) = 1,10 V."],
+      "dica": "Maior potencial de redução menos o menor.",
+      "errosComuns": [{ "descricao": "Somou os potenciais em vez de subtrair.", "resposta": { "valor": -0.42, "unidade": "V" } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-potenciais-q2", "temaId": "eletro-potenciais", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Potenciais-padrão de redução: \\ce{Ag+/Ag} = +0,80 V e \\ce{Cu^{2+}/Cu} = +0,34 V. Numa pilha de cobre e prata, qual eletrodo é o cátodo?",
+      "alternativas": [{ "id": "a", "texto": "O de prata" }, { "id": "b", "texto": "O de cobre" }, { "id": "c", "texto": "Os dois" }, { "id": "d", "texto": "Nenhum" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O cátodo é onde ocorre a redução.", "Reduz-se a espécie de maior potencial de redução: \\ce{Ag+} (+0,80 V)."],
+      "dica": "Quem tem mais tendência a receber elétrons?",
+      "errosComuns": [{ "descricao": "O cobre, de menor potencial, se oxida: é o ânodo.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-potenciais-q3", "temaId": "eletro-potenciais", "etapa": "em-2", "dificuldade": 3, "tipo": "numerica",
+      "enunciado": "Potenciais-padrão de redução: \\ce{Ag+/Ag} = +0,80 V e \\ce{Zn^{2+}/Zn} = −0,76 V. Qual é a ddp da pilha formada por eles?",
+      "gabarito": { "valor": 1.56, "unidade": "V" },
+      "verificacao": "0.80 - (-0.76)",
+      "resolucaoPassoAPasso": ["Cátodo: prata (+0,80 V). Ânodo: zinco (−0,76 V).", "ddp = 0,80 − (−0,76) = 1,56 V.", "O coeficiente 2 da prata na equação não muda o potencial."],
+      "dica": "Potenciais não se multiplicam pelos coeficientes.",
+      "errosComuns": [{ "descricao": "Somou os potenciais sem trocar o sinal do ânodo.", "resposta": { "valor": 0.04, "unidade": "V" } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-baterias-q1", "temaId": "eletro-baterias", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Por que pilhas e baterias usadas não devem ir para o lixo comum?",
+      "alternativas": [{ "id": "a", "texto": "Contêm metais e substâncias que podem contaminar solo e água; devem ir para pontos de coleta" }, { "id": "b", "texto": "Porque ainda podem ser usadas" }, { "id": "c", "texto": "Porque são feitas só de papel" }, { "id": "d", "texto": "Não há problema em jogá-las no lixo comum" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Pilhas e baterias podem conter metais como níquel, cádmio, chumbo e lítio.", "No lixo comum, esses materiais podem vazar e contaminar o ambiente.", "O descarte correto é em pontos de coleta, que encaminham para reciclagem."],
+      "dica": "Pense no que há dentro delas.",
+      "errosComuns": [{ "descricao": "O descarte inadequado pode contaminar solo e água.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-baterias-q2", "temaId": "eletro-baterias", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O que acontece quando se recarrega a bateria de um celular?",
+      "alternativas": [{ "id": "a", "texto": "Uma corrente externa força a reação inversa, que não é espontânea" }, { "id": "b", "texto": "A bateria produz energia elétrica sozinha" }, { "id": "c", "texto": "A bateria recebe novos reagentes" }, { "id": "d", "texto": "Nenhuma reação química ocorre" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ao descarregar, a bateria funciona como pilha (reação espontânea).", "Na recarga, a energia do carregador força a reação no sentido contrário, regenerando os reagentes."],
+      "dica": "Recarregar é o caminho de volta da descarga.",
+      "errosComuns": [{ "descricao": "A recarga envolve reação química, forçada pela corrente externa.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-baterias-q3", "temaId": "eletro-baterias", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Numa pilha em funcionamento, a energia é convertida de:",
+      "alternativas": [{ "id": "a", "texto": "Química em elétrica" }, { "id": "b", "texto": "Elétrica em química" }, { "id": "c", "texto": "Térmica em elétrica" }, { "id": "d", "texto": "Luminosa em química" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na pilha, uma reação espontânea de oxirredução gera corrente elétrica.", "Converter energia elétrica em química é o que acontece na eletrólise e na recarga."],
+      "dica": "Quem fornece a energia: a reação ou a tomada?",
+      "errosComuns": [{ "descricao": "Essa conversão é a da eletrólise ou da recarga.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-corrosao-q1", "temaId": "eletro-corrosao", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "A ferrugem se forma quando o ferro reage com:",
+      "alternativas": [{ "id": "a", "texto": "Oxigênio e água" }, { "id": "b", "texto": "Apenas nitrogênio" }, { "id": "c", "texto": "Apenas gás carbônico" }, { "id": "d", "texto": "Apenas luz" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A corrosão do ferro é uma oxirredução: o ferro se oxida e o oxigênio se reduz.", "A água (e sais dissolvidos nela) participa e acelera o processo."],
+      "dica": "Por que o ferro enferruja mais perto do mar e em lugares úmidos?",
+      "errosComuns": [{ "descricao": "O nitrogênio do ar praticamente não reage com o ferro.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-corrosao-q2", "temaId": "eletro-corrosao", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Placas de magnésio são presas aos cascos de aço de navios como 'metal de sacrifício'. Como elas protegem o casco?",
+      "alternativas": [{ "id": "a", "texto": "O magnésio tem menor potencial de redução e se oxida no lugar do ferro" }, { "id": "b", "texto": "O magnésio forma uma tinta sobre o casco" }, { "id": "c", "texto": "O magnésio reduz o ferro já enferrujado" }, { "id": "d", "texto": "O magnésio impede a passagem de luz" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Em contato com o ferro, o metal de menor potencial de redução se oxida primeiro.", "O magnésio funciona como ânodo e é corroído; o ferro fica protegido.", "As placas precisam ser trocadas de tempos em tempos."],
+      "dica": "Quem se oxida com mais facilidade: o magnésio ou o ferro?",
+      "errosComuns": [{ "descricao": "A proteção é eletroquímica, não uma camada de tinta.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-corrosao-q3", "temaId": "eletro-corrosao", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "A galvanização, usada em telhas e pregos, consiste em:",
+      "alternativas": [{ "id": "a", "texto": "Revestir o ferro com uma camada de zinco" }, { "id": "b", "texto": "Pintar o ferro com tinta comum" }, { "id": "c", "texto": "Aquecer o ferro até ficar vermelho" }, { "id": "d", "texto": "Mergulhar o ferro em água salgada" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O zinco recobre o ferro e o isola do ambiente.", "Mesmo se a camada riscar, o zinco, que se oxida mais facilmente, continua protegendo o ferro."],
+      "dica": "Ferro galvanizado tem um metal mais reativo por cima.",
+      "errosComuns": [{ "descricao": "Água salgada acelera a corrosão; não protege.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-eletrolise-tipos-q1", "temaId": "eletro-eletrolise-tipos", "etapa": "em-2", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na eletrólise ígnea (com o sal fundido) do cloreto de sódio, o que se forma no cátodo?",
+      "alternativas": [{ "id": "a", "texto": "Sódio metálico" }, { "id": "b", "texto": "Gás cloro" }, { "id": "c", "texto": "Gás hidrogênio" }, { "id": "d", "texto": "Gás oxigênio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["No sal fundido só há \\ce{Na+} e \\ce{Cl-}.", "No cátodo ocorre redução: \\ce{Na+ + e- -> Na}.", "No ânodo, o \\ce{Cl-} se oxida a \\ce{Cl2}."],
+      "dica": "No cátodo ocorre redução.",
+      "errosComuns": [{ "descricao": "O cloro se forma no ânodo, por oxidação.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-eletrolise-tipos-q2", "temaId": "eletro-eletrolise-tipos", "etapa": "em-2", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na eletrólise de uma solução aquosa de cloreto de sódio, o que se forma no cátodo?",
+      "alternativas": [{ "id": "a", "texto": "Gás hidrogênio" }, { "id": "b", "texto": "Sódio metálico" }, { "id": "c", "texto": "Gás cloro" }, { "id": "d", "texto": "Gás oxigênio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Em solução aquosa, a água compete com o \\ce{Na+} no cátodo.", "A água se reduz com mais facilidade que o \\ce{Na+}: forma-se \\ce{H2} (e \\ce{OH-}).", "No ânodo, forma-se \\ce{Cl2}."],
+      "dica": "Na água, o \\ce{Na+} tem baixa prioridade de descarga.",
+      "errosComuns": [{ "descricao": "Em solução aquosa, quem se reduz é a água, não o \\ce{Na+}.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-eletrolise-tipos-q3", "temaId": "eletro-eletrolise-tipos", "etapa": "em-2", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "A eletrólise é um processo:",
+      "alternativas": [{ "id": "a", "texto": "Não espontâneo, que consome energia elétrica para provocar uma reação" }, { "id": "b", "texto": "Espontâneo, que produz energia elétrica" }, { "id": "c", "texto": "Físico, sem reação química" }, { "id": "d", "texto": "Que só ocorre em pilhas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A corrente elétrica força uma reação de oxirredução que não aconteceria sozinha.", "É o processo inverso ao de uma pilha."],
+      "dica": "É o contrário de uma pilha.",
+      "errosComuns": [{ "descricao": "Produzir energia elétrica de forma espontânea é o que faz uma pilha.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-faraday-q1", "temaId": "eletro-faraday", "etapa": "em-2", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Uma corrente de 2 A passa por um circuito durante 965 s. Qual é a carga elétrica que circulou?",
+      "gabarito": { "valor": 1930, "unidade": "C" },
+      "verificacao": "2 * 965",
+      "resolucaoPassoAPasso": ["Q = i × t.", "Q = 2 A × 965 s = 1930 C."],
+      "dica": "Carga = corrente × tempo.",
+      "errosComuns": [{ "descricao": "Dividiu o tempo pela corrente.", "resposta": { "valor": 482.5, "unidade": "C" } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-faraday-q2", "temaId": "eletro-faraday", "etapa": "em-2", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Qual massa de cobre se deposita numa eletrólise com carga de 9650 C? Semirreação: \\ce{Cu^{2+} + 2e- -> Cu}. Cu = 63,5 g/mol; 1 mol de elétrons = 96 500 C.",
+      "gabarito": { "valor": 3.175, "unidade": "g", "tolerancia": { "relativa": 0.01 } },
+      "verificacao": "9650 / 96500 / 2 * 63.5",
+      "resolucaoPassoAPasso": ["Mols de elétrons: 9650 ÷ 96 500 = 0,1 mol.", "Cada Cu precisa de 2 elétrons: 0,1 ÷ 2 = 0,05 mol de Cu.", "Massa: 0,05 × 63,5 ≈ 3,18 g."],
+      "dica": "Carga → mol de elétrons → mol de cobre → massa.",
+      "errosComuns": [{ "descricao": "Esqueceu que cada íon de cobre precisa de 2 elétrons.", "resposta": { "valor": 6.35, "unidade": "g" } }],
+      "revisado": false
+    },
+    {
+      "id": "eletro-faraday-q3", "temaId": "eletro-faraday", "etapa": "em-2", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Quanto tempo leva para depositar 10,8 g de prata com uma corrente de 5 A? Semirreação: \\ce{Ag+ + e- -> Ag}. Ag = 108 g/mol; 1 mol de elétrons = 96 500 C.",
+      "gabarito": { "valor": 1930, "unidade": "s" },
+      "verificacao": "10.8 / 108 * 96500 / 5",
+      "resolucaoPassoAPasso": ["10,8 g ÷ 108 g/mol = 0,1 mol de Ag, que exige 0,1 mol de elétrons.", "Carga: 0,1 × 96 500 = 9650 C.", "t = Q ÷ i = 9650 ÷ 5 = 1930 s (cerca de 32 minutos)."],
+      "dica": "Calcule a carga necessária e divida pela corrente.",
+      "errosComuns": [{ "descricao": "Deu a carga em coulombs como se fosse o tempo.", "resposta": { "valor": 9650, "unidade": "s" } }],
+      "revisado": false
+    }
+  ]
+}

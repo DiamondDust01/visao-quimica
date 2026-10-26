@@ -1,0 +1,617 @@
+{
+  "area": "organica",
+  "questoes": [
+    {
+      "id": "org-carbono-propriedades-q1", "temaId": "org-carbono-propriedades", "etapa": "em-3", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Quantas ligações covalentes o carbono costuma fazer nos compostos orgânicos?",
+      "alternativas": [{ "id": "a", "texto": "4" }, { "id": "b", "texto": "2" }, { "id": "c", "texto": "3" }, { "id": "d", "texto": "6" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O carbono tem 4 elétrons de valência.", "Para completar o octeto, compartilha 4 pares: é tetravalente."],
+      "dica": "Quantos elétrons de valência tem o carbono?",
+      "errosComuns": [{ "descricao": "O carbono é tetravalente; 2 ligações seriam típicas do oxigênio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-carbono-propriedades-q2", "temaId": "org-carbono-propriedades", "etapa": "em-3", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Na cadeia CH₃–CH(CH₃)–CH₂–CH₃, quantos carbonos são secundários (ligados a exatamente dois outros carbonos)?",
+      "estrutura": { "smiles": "CC(C)CC", "formula": "C5H12" },
+      "gabarito": { "valor": 1, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "1",
+      "resolucaoPassoAPasso": ["Os três grupos CH₃ estão ligados a um carbono só: primários.", "O CH está ligado a três carbonos: terciário.", "O CH₂ está ligado a dois carbonos: é o único secundário."],
+      "dica": "Conte, para cada carbono, quantos carbonos estão ligados a ele.",
+      "errosComuns": [{ "descricao": "Contou o carbono do CH como secundário, mas ele se liga a três carbonos (terciário).", "resposta": { "valor": 2 } }],
+      "revisado": false
+    },
+    {
+      "id": "org-carbono-propriedades-q3", "temaId": "org-carbono-propriedades", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que o carbono forma milhões de compostos diferentes?",
+      "alternativas": [{ "id": "a", "texto": "Porque é tetravalente e forma cadeias estáveis ligando-se a outros carbonos" }, { "id": "b", "texto": "Porque é o elemento mais abundante do universo" }, { "id": "c", "texto": "Porque só forma ligações iônicas" }, { "id": "d", "texto": "Porque é um metal muito reativo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O carbono faz 4 ligações e se liga fortemente a outros carbonos.", "Isso permite cadeias longas, ramificadas e em anel, com muitas combinações possíveis."],
+      "dica": "Pense em encadeamento.",
+      "errosComuns": [{ "descricao": "O elemento mais abundante do universo é o hidrogênio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-cadeias-q1", "temaId": "org-cadeias", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Como se classifica a cadeia CH₃–CH=CH–CH₃?",
+      "estrutura": { "smiles": "CC=CC", "formula": "C4H8" },
+      "alternativas": [{ "id": "a", "texto": "Aberta, normal, insaturada e homogênea" }, { "id": "b", "texto": "Fechada, normal, saturada e homogênea" }, { "id": "c", "texto": "Aberta, ramificada, insaturada e heterogênea" }, { "id": "d", "texto": "Aberta, normal, saturada e heterogênea" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Aberta: não forma anel. Normal: só tem duas extremidades.", "Insaturada: há uma ligação dupla entre carbonos.", "Homogênea: só carbonos na cadeia."],
+      "dica": "A ligação dupla entre carbonos define a insaturação.",
+      "errosComuns": [{ "descricao": "Há uma ligação dupla entre carbonos: a cadeia é insaturada.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "org-cadeias-q2", "temaId": "org-cadeias", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Por que a cadeia do metoximetano, CH₃–O–CH₃, é classificada como heterogênea?",
+      "alternativas": [{ "id": "a", "texto": "Porque há um heteroátomo (oxigênio) entre dois carbonos" }, { "id": "b", "texto": "Porque tem hidrogênios" }, { "id": "c", "texto": "Porque tem ligação dupla" }, { "id": "d", "texto": "Porque é ramificada" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Heteroátomo é um átomo diferente de carbono que fica entre dois carbonos da cadeia.", "O oxigênio entre os dois CH₃ torna a cadeia heterogênea."],
+      "dica": "O que está entre os carbonos?",
+      "errosComuns": [{ "descricao": "Hidrogênios não fazem parte da cadeia e não a tornam heterogênea.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-cadeias-q3", "temaId": "org-cadeias", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O benzeno, \\ce{C6H6}, tem uma cadeia:",
+      "estrutura": { "smiles": "c1ccccc1", "formula": "C6H6" },
+      "alternativas": [{ "id": "a", "texto": "Fechada e aromática" }, { "id": "b", "texto": "Aberta e saturada" }, { "id": "c", "texto": "Aberta e ramificada" }, { "id": "d", "texto": "Fechada e saturada" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os 6 carbonos formam um anel: cadeia fechada.", "O anel tem ligações duplas alternadas, com elétrons distribuídos por todo ele: é aromático."],
+      "dica": "É o anel aromático mais conhecido.",
+      "errosComuns": [{ "descricao": "O anel do benzeno tem ligações duplas: não é saturado.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "org-representacao-q1", "temaId": "org-representacao", "etapa": "em-3", "dificuldade": 1, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "O propano tem fórmula estrutural condensada CH₃–CH₂–CH₃. Escreva sua fórmula molecular.",
+      "gabarito": { "formula": "C3H8", "nomes": ["propano"] },
+      "resolucaoPassoAPasso": ["Conte os carbonos: 3.", "Conte os hidrogênios: 3 + 2 + 3 = 8.", "Fórmula molecular: \\ce{C3H8}."],
+      "dica": "Some os carbonos e os hidrogênios de cada grupo.",
+      "errosComuns": [{ "descricao": "Contou só os hidrogênios das pontas.", "resposta": "C3H6" }],
+      "revisado": false
+    },
+    {
+      "id": "org-representacao-q2", "temaId": "org-representacao", "etapa": "em-3", "dificuldade": 2, "tipo": "numerica",
+      "enunciado": "Quantos átomos de carbono há no composto de fórmula condensada CH₃(CH₂)₄CH₃?",
+      "gabarito": { "valor": 6, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "1 + 4 + 1",
+      "resolucaoPassoAPasso": ["(CH₂)₄ significa quatro grupos CH₂ seguidos.", "Total: 1 + 4 + 1 = 6 carbonos (é o hexano)."],
+      "dica": "O índice fora do parêntese repete o grupo.",
+      "errosComuns": [{ "descricao": "Contou o grupo entre parênteses uma vez só.", "resposta": { "valor": 3 } }],
+      "revisado": false
+    },
+    {
+      "id": "org-representacao-q3", "temaId": "org-representacao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Na fórmula de linha (bastão), como são representados os hidrogênios ligados a carbonos?",
+      "estrutura": { "smiles": "CCCCO", "formula": "C4H10O" },
+      "alternativas": [{ "id": "a", "texto": "Não são desenhados: cada vértice é um carbono com os hidrogênios que completam 4 ligações" }, { "id": "b", "texto": "Cada hidrogênio é um traço separado" }, { "id": "c", "texto": "São escritos em cada vértice" }, { "id": "d", "texto": "A fórmula de linha não considera hidrogênios" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na fórmula de linha, cada vértice e cada extremidade é um carbono.", "Os hidrogênios ligados a carbono ficam implícitos: são os que faltam para completar 4 ligações.", "Heteroátomos e os H ligados a eles (como em –OH) são escritos."],
+      "dica": "Cada carbono sempre tem 4 ligações no total.",
+      "errosComuns": [{ "descricao": "Os hidrogênios existem; só ficam subentendidos no desenho.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "org-hidrocarbonetos-q1", "temaId": "org-hidrocarbonetos", "etapa": "em-3", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Classifique cada hidrocarboneto.",
+      "itens": [{ "id": "ch4", "texto": "\\ce{CH4}" }, { "id": "c2h4", "texto": "\\ce{C2H4}" }, { "id": "c2h2", "texto": "\\ce{C2H2}" }, { "id": "c6h6", "texto": "\\ce{C6H6} (benzeno)" }],
+      "opcoes": [{ "id": "alcano", "texto": "Alcano" }, { "id": "alceno", "texto": "Alceno" }, { "id": "alcino", "texto": "Alcino" }, { "id": "aromatico", "texto": "Aromático" }],
+      "gabarito": { "ch4": "alcano", "c2h4": "alceno", "c2h2": "alcino", "c6h6": "aromatico" },
+      "resolucaoPassoAPasso": ["Alcanos: \\ce{C_nH_{2n+2}}, só ligações simples (\\ce{CH4}).", "Alcenos: \\ce{C_nH_{2n}}, uma dupla (\\ce{C2H4}).", "Alcinos: \\ce{C_nH_{2n-2}}, uma tripla (\\ce{C2H2}).", "Benzeno: anel aromático."],
+      "dica": "Use as fórmulas gerais.",
+      "errosComuns": [{ "descricao": "Confundir alceno (dupla) com alcino (tripla)." }],
+      "revisado": false
+    },
+    {
+      "id": "org-hidrocarbonetos-q2", "temaId": "org-hidrocarbonetos", "etapa": "em-3", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual é a fórmula geral dos alcanos?",
+      "alternativas": [{ "id": "a", "texto": "CₙH₂ₙ₊₂" }, { "id": "b", "texto": "CₙH₂ₙ" }, { "id": "c", "texto": "CₙH₂ₙ₋₂" }, { "id": "d", "texto": "CₙHₙ" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Nos alcanos, todas as ligações são simples e o número de hidrogênios é o máximo possível.", "Ex.: metano \\ce{CH4} (n = 1, 2 × 1 + 2 = 4)."],
+      "dica": "Teste com o metano.",
+      "errosComuns": [{ "descricao": "CₙH₂ₙ é a fórmula dos alcenos e dos ciclanos.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-hidrocarbonetos-q3", "temaId": "org-hidrocarbonetos", "etapa": "em-3", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "nome-para-formula",
+      "enunciado": "Escreva a fórmula molecular do pentano, alcano de cadeia normal com 5 carbonos.",
+      "gabarito": { "formula": "C5H12", "nomes": ["pentano"] },
+      "resolucaoPassoAPasso": ["Alcano: CₙH₂ₙ₊₂.", "n = 5: H = 2 × 5 + 2 = 12.", "Fórmula: \\ce{C5H12}."],
+      "dica": "Use a fórmula geral dos alcanos.",
+      "errosComuns": [{ "descricao": "\\ce{C5H10} é a fórmula de um alceno (ou ciclano) com 5 carbonos.", "resposta": "C5H10" }],
+      "revisado": false
+    },
+    {
+      "id": "org-oxigenadas-q1", "temaId": "org-oxigenadas", "etapa": "em-3", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Associe cada composto à sua função orgânica.",
+      "itens": [{ "id": "i1", "texto": "CH₃–OH" }, { "id": "i2", "texto": "CH₃–CHO" }, { "id": "i3", "texto": "CH₃–CO–CH₃" }, { "id": "i4", "texto": "CH₃–COOH" }, { "id": "i5", "texto": "CH₃–COO–CH₃" }],
+      "opcoes": [{ "id": "alcool", "texto": "Álcool" }, { "id": "aldeido", "texto": "Aldeído" }, { "id": "cetona", "texto": "Cetona" }, { "id": "acido", "texto": "Ácido carboxílico" }, { "id": "ester", "texto": "Éster" }, { "id": "eter", "texto": "Éter" }],
+      "gabarito": { "i1": "alcool", "i2": "aldeido", "i3": "cetona", "i4": "acido", "i5": "ester" },
+      "resolucaoPassoAPasso": ["–OH em carbono saturado: álcool.", "–CHO (carbonila na ponta da cadeia): aldeído.", "C=O entre dois carbonos: cetona.", "–COOH: ácido carboxílico. –COO– entre carbonos: éster."],
+      "dica": "Olhe onde está o oxigênio e o que está ligado a ele.",
+      "errosComuns": [{ "descricao": "Confundir aldeído (carbonila na ponta) com cetona (carbonila no meio)." }],
+      "revisado": false
+    },
+    {
+      "id": "org-oxigenadas-q2", "temaId": "org-oxigenadas", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O que diferencia um fenol de um álcool?",
+      "alternativas": [{ "id": "a", "texto": "No fenol, o –OH está ligado diretamente a um carbono de anel aromático" }, { "id": "b", "texto": "O fenol não tem –OH" }, { "id": "c", "texto": "O fenol tem uma carbonila" }, { "id": "d", "texto": "O fenol é sempre gasoso" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Álcool: –OH ligado a carbono saturado.", "Fenol: –OH ligado a carbono do anel aromático.", "Essa diferença torna os fenóis mais ácidos que os álcoois."],
+      "dica": "Onde o –OH está ligado?",
+      "errosComuns": [{ "descricao": "O fenol tem –OH; o que muda é o carbono ao qual ele está ligado.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-oxigenadas-q3", "temaId": "org-oxigenadas", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A acetona (CH₃–CO–CH₃), usada em removedores de esmalte, pertence a qual função?",
+      "estrutura": { "smiles": "CC(C)=O", "formula": "C3H6O" },
+      "alternativas": [{ "id": "a", "texto": "Cetona" }, { "id": "b", "texto": "Aldeído" }, { "id": "c", "texto": "Ácido carboxílico" }, { "id": "d", "texto": "Álcool" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A carbonila (C=O) está entre dois carbonos.", "Carbonila no meio da cadeia caracteriza cetona."],
+      "dica": "A carbonila está na ponta ou no meio?",
+      "errosComuns": [{ "descricao": "Nos aldeídos a carbonila fica na ponta da cadeia, ligada a um H.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nitrogenadas-halogenadas-q1", "temaId": "org-nitrogenadas-halogenadas", "etapa": "em-3", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Associe cada composto à sua função.",
+      "itens": [{ "id": "i1", "texto": "CH₃–NH₂" }, { "id": "i2", "texto": "CH₃–CO–NH₂" }, { "id": "i3", "texto": "CH₃–C≡N" }, { "id": "i4", "texto": "CH₃–Cl" }],
+      "opcoes": [{ "id": "amina", "texto": "Amina" }, { "id": "amida", "texto": "Amida" }, { "id": "nitrila", "texto": "Nitrila" }, { "id": "haleto", "texto": "Haleto orgânico" }],
+      "gabarito": { "i1": "amina", "i2": "amida", "i3": "nitrila", "i4": "haleto" },
+      "resolucaoPassoAPasso": ["Amina: nitrogênio ligado a carbono, sem carbonila.", "Amida: nitrogênio ligado a carbonila (–CO–NH₂).", "Nitrila: –C≡N. Haleto: halogênio ligado a carbono."],
+      "dica": "Amida = amina + carbonila.",
+      "errosComuns": [{ "descricao": "Confundir amina e amida: a amida tem carbonila ligada ao nitrogênio." }],
+      "revisado": false
+    },
+    {
+      "id": "org-nitrogenadas-halogenadas-q2", "temaId": "org-nitrogenadas-halogenadas", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A ureia, CO(NH₂)₂, eliminada na urina, pertence a qual função?",
+      "estrutura": { "smiles": "NC(N)=O", "formula": "CH4N2O" },
+      "alternativas": [{ "id": "a", "texto": "Amida" }, { "id": "b", "texto": "Amina" }, { "id": "c", "texto": "Nitrila" }, { "id": "d", "texto": "Cetona" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A ureia tem uma carbonila ligada a dois grupos –NH₂.", "Nitrogênio ligado a carbonila caracteriza amida."],
+      "dica": "Há carbonila ligada ao nitrogênio?",
+      "errosComuns": [{ "descricao": "Nas aminas não há carbonila ligada ao nitrogênio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nitrogenadas-halogenadas-q3", "temaId": "org-nitrogenadas-halogenadas", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "A trimetilamina, (CH₃)₃N, responsável pelo cheiro de peixe, é uma amina:",
+      "estrutura": { "smiles": "CN(C)C", "formula": "C3H9N" },
+      "alternativas": [{ "id": "a", "texto": "Terciária" }, { "id": "b", "texto": "Primária" }, { "id": "c", "texto": "Secundária" }, { "id": "d", "texto": "Quaternária" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A classificação conta quantos carbonos estão ligados ao nitrogênio.", "Três grupos metil ligados ao N: amina terciária."],
+      "dica": "Conte os carbonos ligados ao nitrogênio.",
+      "errosComuns": [{ "descricao": "Amina primária tem só um carbono ligado ao nitrogênio.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-propriedades-fisicas-q1", "temaId": "org-propriedades-fisicas", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O etanol (46 g/mol) ferve a 78 °C e o propano (44 g/mol) ferve a −42 °C. O que explica essa diferença?",
+      "alternativas": [{ "id": "a", "texto": "As ligações de hidrogênio entre as moléculas de etanol" }, { "id": "b", "texto": "A massa molar maior do etanol, só ela" }, { "id": "c", "texto": "O propano ser iônico" }, { "id": "d", "texto": "O etanol ser apolar" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As massas são quase iguais, então a massa não explica 120 °C de diferença.", "O etanol tem –OH e forma ligações de hidrogênio; o propano, apolar, só tem forças de dispersão."],
+      "dica": "Compare os tipos de interação entre as moléculas.",
+      "errosComuns": [{ "descricao": "A diferença de massa é de só 2 g/mol; ela não explica a grande diferença de ebulição.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-propriedades-fisicas-q2", "temaId": "org-propriedades-fisicas", "etapa": "em-3", "dificuldade": 3, "tipo": "ordenacao",
+      "enunciado": "Ordene os compostos pela temperatura de ebulição. Todos têm massa molar entre 44 e 60 g/mol.",
+      "criterio": "Da menor para a maior temperatura de ebulição.",
+      "itens": [{ "id": "acido", "texto": "Ácido acético (CH₃–COOH)" }, { "id": "propano", "texto": "Propano (CH₃–CH₂–CH₃)" }, { "id": "etanol", "texto": "Etanol (CH₃–CH₂–OH)" }, { "id": "etanal", "texto": "Etanal (CH₃–CHO)" }],
+      "gabarito": ["propano", "etanal", "etanol", "acido"],
+      "resolucaoPassoAPasso": ["Propano: apolar, só dispersão (cerca de −42 °C).", "Etanal: polar, dipolo-dipolo (cerca de 20 °C).", "Etanol: ligação de hidrogênio (78 °C).", "Ácido acético: ligações de hidrogênio mais intensas, formando pares (118 °C)."],
+      "dica": "Classifique as interações de cada um.",
+      "errosComuns": [{ "descricao": "Pôr o etanal depois do etanol: aldeídos não fazem ligação de hidrogênio entre si." }],
+      "revisado": false
+    },
+    {
+      "id": "org-propriedades-fisicas-q3", "temaId": "org-propriedades-fisicas", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes álcoois é o menos solúvel em água?",
+      "alternativas": [{ "id": "a", "texto": "Octan-1-ol (8 carbonos)" }, { "id": "b", "texto": "Metanol (1 carbono)" }, { "id": "c", "texto": "Etanol (2 carbonos)" }, { "id": "d", "texto": "Propan-1-ol (3 carbonos)" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O –OH é a parte polar, que interage com a água.", "A cadeia carbônica é apolar.", "Quanto maior a cadeia, maior a parte apolar e menor a solubilidade em água."],
+      "dica": "Compare o tamanho da parte apolar.",
+      "errosComuns": [{ "descricao": "O metanol é o mais solúvel: tem a menor parte apolar.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nomenclatura-hidrocarbonetos-q1", "temaId": "org-nomenclatura-hidrocarbonetos", "etapa": "em-3", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Dê o nome IUPAC do hidrocarboneto CH₃–CH₂–CH₂–CH₃ (cadeia normal).",
+      "gabarito": { "formula": "C4H10", "nomes": ["butano", "n-butano"] },
+      "resolucaoPassoAPasso": ["4 carbonos: prefixo but-.", "Só ligações simples: infixo -an-.", "Hidrocarboneto: sufixo -o. Nome: butano."],
+      "dica": "Prefixo (nº de C) + infixo (tipo de ligação) + sufixo (função).",
+      "errosComuns": [{ "descricao": "Prop- é o prefixo para 3 carbonos.", "resposta": "propano" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nomenclatura-hidrocarbonetos-q2", "temaId": "org-nomenclatura-hidrocarbonetos", "etapa": "em-3", "dificuldade": 3, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Dê o nome IUPAC de CH₃–CH(CH₃)–CH₂–CH₃.",
+      "estrutura": { "smiles": "CC(C)CC", "formula": "C5H12" },
+      "gabarito": { "formula": "C5H12", "nomes": ["2-metilbutano", "metilbutano"] },
+      "resolucaoPassoAPasso": ["Cadeia principal: a maior sequência de carbonos, com 4 C (butano).", "Numere pela ponta mais próxima da ramificação: o metil fica no carbono 2.", "Nome: 2-metilbutano."],
+      "dica": "Numere a partir da ponta mais próxima da ramificação.",
+      "errosComuns": [{ "descricao": "Numerou pela ponta errada: a ramificação deve ter o menor número possível.", "resposta": "3-metilbutano" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nomenclatura-hidrocarbonetos-q3", "temaId": "org-nomenclatura-hidrocarbonetos", "etapa": "em-3", "dificuldade": 3, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Dê o nome IUPAC de CH₂=CH–CH₂–CH₃.",
+      "estrutura": { "smiles": "C=CCC", "formula": "C4H8" },
+      "gabarito": { "formula": "C4H8", "nomes": ["but-1-eno", "1-buteno", "buteno-1"] },
+      "resolucaoPassoAPasso": ["4 carbonos: but-. Uma ligação dupla: -en-.", "Numere pela ponta mais próxima da dupla: ela começa no carbono 1.", "Nome: but-1-eno."],
+      "dica": "A ligação dupla deve receber o menor número possível.",
+      "errosComuns": [{ "descricao": "Numerou pela ponta errada: a dupla deve ter o menor número.", "resposta": "but-3-eno" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nomenclatura-funcoes-q1", "temaId": "org-nomenclatura-funcoes", "etapa": "em-3", "dificuldade": 2, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Dê o nome IUPAC de CH₃–CH₂–OH.",
+      "estrutura": { "smiles": "CCO", "formula": "C2H6O" },
+      "gabarito": { "formula": "C2H6O", "nomes": ["etanol", "álcool etílico"] },
+      "resolucaoPassoAPasso": ["2 carbonos: et-. Só ligações simples: -an-.", "Álcool: sufixo -ol. Nome: etanol."],
+      "dica": "Álcoois terminam em -ol.",
+      "errosComuns": [{ "descricao": "Etanal é o aldeído (sufixo -al), não o álcool.", "resposta": "etanal" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nomenclatura-funcoes-q2", "temaId": "org-nomenclatura-funcoes", "etapa": "em-3", "dificuldade": 3, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Dê o nome IUPAC de CH₃–CO–CH₃.",
+      "estrutura": { "smiles": "CC(C)=O", "formula": "C3H6O" },
+      "gabarito": { "formula": "C3H6O", "nomes": ["propanona", "propan-2-ona", "acetona"] },
+      "resolucaoPassoAPasso": ["3 carbonos: prop-. Ligações simples: -an-.", "Cetona: sufixo -ona. Nome: propanona (ou propan-2-ona)."],
+      "dica": "Cetonas terminam em -ona.",
+      "errosComuns": [{ "descricao": "Propanal é o aldeído (carbonila na ponta).", "resposta": "propanal" }],
+      "revisado": false
+    },
+    {
+      "id": "org-nomenclatura-funcoes-q3", "temaId": "org-nomenclatura-funcoes", "etapa": "em-3", "dificuldade": 3, "tipo": "nomenclatura", "direcao": "formula-para-nome",
+      "enunciado": "Dê o nome do éster CH₃–COO–CH₂–CH₃, usado como solvente.",
+      "estrutura": { "smiles": "CC(=O)OCC", "formula": "C4H8O2" },
+      "gabarito": { "formula": "C4H8O2", "nomes": ["etanoato de etila", "acetato de etila"] },
+      "resolucaoPassoAPasso": ["A parte que vem do ácido é CH₃–COO–: ácido etanoico → etanoato.", "A parte que vem do álcool é –CH₂–CH₃: etila.", "Nome: etanoato de etila."],
+      "dica": "Nome do éster: [ácido com -ato] de [grupo do álcool com -ila].",
+      "errosComuns": [{ "descricao": "Trocou as partes do ácido e do álcool: propanoato de metila é um isômero.", "resposta": "propanoato de metila" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-plana-q1", "temaId": "org-isomeria-plana", "etapa": "em-3", "dificuldade": 3, "tipo": "associacao",
+      "enunciado": "Associe cada par de isômeros ao tipo de isomeria plana.",
+      "itens": [{ "id": "i1", "texto": "Butano e metilpropano" }, { "id": "i2", "texto": "Propan-1-ol e propan-2-ol" }, { "id": "i3", "texto": "Etanol e metoximetano" }, { "id": "i4", "texto": "Metoxipropano e etoxietano" }],
+      "opcoes": [{ "id": "cadeia", "texto": "De cadeia" }, { "id": "posicao", "texto": "De posição" }, { "id": "funcao", "texto": "De função" }, { "id": "comp", "texto": "De compensação (metameria)" }],
+      "gabarito": { "i1": "cadeia", "i2": "posicao", "i3": "funcao", "i4": "comp" },
+      "resolucaoPassoAPasso": ["Butano e metilpropano: cadeia normal × ramificada.", "Propan-1-ol e propan-2-ol: mesmo grupo –OH em posições diferentes.", "Etanol (álcool) e metoximetano (éter): funções diferentes.", "Os dois éteres diferem na posição do heteroátomo: compensação."],
+      "dica": "O que muda entre os dois compostos de cada par?",
+      "errosComuns": [{ "descricao": "Confundir isomeria de posição com a de compensação, que é a posição do heteroátomo." }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-plana-q2", "temaId": "org-isomeria-plana", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O propanal e a propanona, ambos \\ce{C3H6O}, são isômeros de:",
+      "alternativas": [{ "id": "a", "texto": "Função" }, { "id": "b", "texto": "Cadeia" }, { "id": "c", "texto": "Posição" }, { "id": "d", "texto": "Geometria (cis-trans)" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os dois têm a mesma fórmula molecular.", "Um é aldeído e o outro é cetona: funções diferentes."],
+      "dica": "Eles pertencem à mesma função orgânica?",
+      "errosComuns": [{ "descricao": "Mudar a carbonila de lugar aqui muda a função (aldeído × cetona), não só a posição.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-plana-q3", "temaId": "org-isomeria-plana", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Tautomeria é:",
+      "alternativas": [{ "id": "a", "texto": "Uma isomeria de função em que os dois isômeros se convertem um no outro, em equilíbrio dinâmico (como aldeído e enol)" }, { "id": "b", "texto": "Uma isomeria que depende da luz polarizada" }, { "id": "c", "texto": "Isomeria entre alcanos de cadeias diferentes" }, { "id": "d", "texto": "A mudança de estado físico de um composto" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na tautomeria, um hidrogênio migra e a ligação dupla muda de lugar.", "Os dois tautômeros coexistem em equilíbrio, como o etanal e seu enol."],
+      "dica": "Os dois isômeros se interconvertem.",
+      "errosComuns": [{ "descricao": "Atividade óptica é característica da isomeria óptica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-geometrica-q1", "temaId": "org-isomeria-geometrica", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Qual destes compostos apresenta isomeria geométrica (cis-trans)?",
+      "alternativas": [{ "id": "a", "texto": "But-2-eno (CH₃–CH=CH–CH₃)" }, { "id": "b", "texto": "But-1-eno (CH₂=CH–CH₂–CH₃)" }, { "id": "c", "texto": "Propeno (CH₂=CH–CH₃)" }, { "id": "d", "texto": "Eteno (CH₂=CH₂)" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada carbono da dupla precisa ter dois ligantes diferentes entre si.", "No but-2-eno, cada carbono da dupla tem H e CH₃: há isômeros cis e trans.", "Nos outros, um carbono da dupla tem dois H."],
+      "dica": "Algum carbono da dupla tem dois ligantes iguais?",
+      "errosComuns": [{ "descricao": "No but-1-eno, o carbono 1 tem dois hidrogênios: não há cis-trans.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-geometrica-q2", "temaId": "org-isomeria-geometrica", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Para um alceno ter isomeria cis-trans, é preciso que:",
+      "alternativas": [{ "id": "a", "texto": "Cada carbono da ligação dupla tenha dois ligantes diferentes entre si" }, { "id": "b", "texto": "A molécula tenha um carbono quiral" }, { "id": "c", "texto": "A cadeia seja ramificada" }, { "id": "d", "texto": "Haja um anel aromático" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A ligação dupla impede a rotação.", "Se cada carbono da dupla tiver ligantes diferentes, há dois arranjos espaciais distintos: cis e trans."],
+      "dica": "A dupla trava a rotação; o que mais é necessário?",
+      "errosComuns": [{ "descricao": "Carbono quiral é condição da isomeria óptica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-geometrica-q3", "temaId": "org-isomeria-geometrica", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "No cis-but-2-eno, os grupos metil (CH₃) estão:",
+      "alternativas": [{ "id": "a", "texto": "Do mesmo lado da ligação dupla" }, { "id": "b", "texto": "Em lados opostos da ligação dupla" }, { "id": "c", "texto": "No mesmo carbono" }, { "id": "d", "texto": "Fora da molécula" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cis: ligantes iguais do mesmo lado da dupla.", "Trans: em lados opostos."],
+      "dica": "Cis = mesmo lado; trans = lados opostos.",
+      "errosComuns": [{ "descricao": "Lados opostos caracterizam o isômero trans.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-optica-q1", "temaId": "org-isomeria-optica", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Um carbono quiral (assimétrico) é aquele que:",
+      "alternativas": [{ "id": "a", "texto": "Está ligado a quatro grupos diferentes" }, { "id": "b", "texto": "Faz uma ligação dupla" }, { "id": "c", "texto": "Faz parte de um anel aromático" }, { "id": "d", "texto": "Está ligado a dois átomos de hidrogênio" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Com quatro ligantes diferentes, o carbono tem duas formas espaciais que são imagens no espelho uma da outra.", "Essas formas não se sobrepõem, como as mãos direita e esquerda."],
+      "dica": "Pense nas suas mãos.",
+      "errosComuns": [{ "descricao": "Um carbono com dois hidrogênios tem dois ligantes iguais: não é quiral.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-optica-q2", "temaId": "org-isomeria-optica", "etapa": "em-3", "dificuldade": 4, "tipo": "numerica",
+      "enunciado": "Quantos carbonos quirais há no ácido lático, CH₃–CH(OH)–COOH?",
+      "estrutura": { "smiles": "CC(O)C(=O)O", "formula": "C3H6O3" },
+      "gabarito": { "valor": 1, "unidade": null, "tolerancia": { "absoluta": 0 } },
+      "verificacao": "1",
+      "resolucaoPassoAPasso": ["CH₃: três H iguais, não é quiral. COOH: tem ligação dupla, não é quiral.", "O carbono central está ligado a H, OH, CH₃ e COOH: quatro grupos diferentes.", "Há 1 carbono quiral."],
+      "dica": "Verifique os ligantes de cada carbono.",
+      "errosComuns": [{ "descricao": "O carbono do –COOH tem ligação dupla e não pode ser quiral.", "resposta": { "valor": 2 } }],
+      "revisado": false
+    },
+    {
+      "id": "org-isomeria-optica-q3", "temaId": "org-isomeria-optica", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Uma mistura racêmica é:",
+      "alternativas": [{ "id": "a", "texto": "Uma mistura com quantidades iguais de dois enantiômeros, sem atividade óptica" }, { "id": "b", "texto": "Um isômero que desvia a luz para a direita" }, { "id": "c", "texto": "Uma mistura de isômeros cis e trans" }, { "id": "d", "texto": "Um composto sem carbono quiral" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Cada enantiômero desvia a luz polarizada num sentido, com o mesmo ângulo.", "Em quantidades iguais, os desvios se anulam: a mistura é opticamente inativa."],
+      "dica": "Os desvios dos dois enantiômeros se cancelam.",
+      "errosComuns": [{ "descricao": "Isso descreve um enantiômero isolado, não a mistura racêmica.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-substituicao-q1", "temaId": "org-substituicao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A reação \\ce{CH4 + Cl2 -> CH3Cl + HCl}, que ocorre na presença de luz, é uma reação de:",
+      "alternativas": [{ "id": "a", "texto": "Substituição" }, { "id": "b", "texto": "Adição" }, { "id": "c", "texto": "Eliminação" }, { "id": "d", "texto": "Neutralização" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Um hidrogênio do metano é trocado por um cloro.", "Troca de um átomo por outro: substituição (halogenação)."],
+      "dica": "Algum átomo foi trocado?",
+      "errosComuns": [{ "descricao": "O metano não tem ligação dupla para sofrer adição.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-substituicao-q2", "temaId": "org-substituicao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na nitração do benzeno, com \\ce{HNO3} e \\ce{H2SO4}, forma-se:",
+      "alternativas": [{ "id": "a", "texto": "Nitrobenzeno, por substituição de um H do anel" }, { "id": "b", "texto": "Um produto de adição que destrói o anel aromático" }, { "id": "c", "texto": "Ciclo-hexano" }, { "id": "d", "texto": "Fenol" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O anel aromático é muito estável e tende a manter suas duplas.", "Por isso o benzeno faz substituição: um H é trocado pelo grupo \\ce{-NO2}."],
+      "dica": "O benzeno prefere preservar o anel aromático.",
+      "errosComuns": [{ "descricao": "Aromáticos preferem substituição a adição, para manter a estabilidade do anel.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-substituicao-q3", "temaId": "org-substituicao", "etapa": "em-3", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "No fenol, o grupo –OH ligado ao anel orienta novas substituições para as posições:",
+      "alternativas": [{ "id": "a", "texto": "Orto e para" }, { "id": "b", "texto": "Meta" }, { "id": "c", "texto": "Só para" }, { "id": "d", "texto": "Nenhuma: o –OH impede substituições" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O –OH doa densidade eletrônica ao anel, principalmente nas posições orto e para.", "Grupos assim (ativantes) são orientadores orto/para.", "Grupos como \\ce{-NO2}, que retiram elétrons, orientam para meta."],
+      "dica": "Grupos que doam elétrons ao anel orientam para orto e para.",
+      "errosComuns": [{ "descricao": "A orientação meta é típica de grupos que retiram elétrons, como o \\ce{-NO2}.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-adicao-q1", "temaId": "org-adicao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "A reação \\ce{CH2=CH2 + H2 -> CH3-CH3}, com catalisador metálico, é uma:",
+      "alternativas": [{ "id": "a", "texto": "Adição (hidrogenação)" }, { "id": "b", "texto": "Substituição" }, { "id": "c", "texto": "Eliminação" }, { "id": "d", "texto": "Combustão" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A ligação dupla se rompe e cada carbono recebe um hidrogênio.", "Duas moléculas se juntam numa só: adição."],
+      "dica": "O que aconteceu com a ligação dupla?",
+      "errosComuns": [{ "descricao": "Na substituição um átomo é trocado; aqui átomos foram acrescentados.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-adicao-q2", "temaId": "org-adicao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na adição de HBr ao propeno (CH₂=CH–CH₃), qual é o produto principal, segundo a regra de Markovnikov?",
+      "estrutura": { "smiles": "C=CC", "formula": "C3H6" },
+      "alternativas": [{ "id": "a", "texto": "2-bromopropano" }, { "id": "b", "texto": "1-bromopropano" }, { "id": "c", "texto": "1,2-dibromopropano" }, { "id": "d", "texto": "Propano" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Markovnikov: o H entra no carbono da dupla que já tem mais hidrogênios.", "O H vai para o carbono 1 (CH₂) e o Br para o carbono 2.", "Produto principal: 2-bromopropano."],
+      "dica": "O hidrogênio vai para o carbono mais hidrogenado.",
+      "errosComuns": [{ "descricao": "Esse é o produto minoritário (anti-Markovnikov).", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-adicao-q3", "temaId": "org-adicao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na fabricação de margarina, óleos vegetais são parcialmente hidrogenados. O que acontece?",
+      "alternativas": [{ "id": "a", "texto": "Hidrogênio é adicionado às ligações duplas, e a gordura fica mais saturada e mais sólida" }, { "id": "b", "texto": "O óleo perde hidrogênio" }, { "id": "c", "texto": "Formam-se mais ligações duplas" }, { "id": "d", "texto": "O óleo vira sabão" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Óleos vegetais têm muitas ligações duplas (insaturados) e são líquidos.", "A hidrogenação adiciona H a parte dessas duplas.", "Com menos duplas, as cadeias se empacotam melhor, e a gordura fica sólida à temperatura ambiente."],
+      "dica": "Hidrogenar é adicionar hidrogênio.",
+      "errosComuns": [{ "descricao": "Transformar gordura em sabão é a saponificação, com base forte.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "org-eliminacao-q1", "temaId": "org-eliminacao", "etapa": "em-3", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Na desidratação intramolecular do etanol, com ácido sulfúrico concentrado e cerca de 170 °C, forma-se:",
+      "alternativas": [{ "id": "a", "texto": "Eteno" }, { "id": "b", "texto": "Etoxietano (éter dietílico)" }, { "id": "c", "texto": "Etanal" }, { "id": "d", "texto": "Ácido acético" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Intramolecular: a mesma molécula perde um H e um OH de carbonos vizinhos.", "Sai água e forma-se uma ligação dupla: eteno.", "O éter se forma na desidratação intermolecular, a temperaturas menores."],
+      "dica": "Uma molécula só perdendo água forma uma ligação dupla.",
+      "errosComuns": [{ "descricao": "O éter vem da desidratação intermolecular (entre duas moléculas), a temperatura mais baixa.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-eliminacao-q2", "temaId": "org-eliminacao", "etapa": "superior", "dificuldade": 4, "tipo": "multipla-escolha",
+      "enunciado": "Segundo a regra de Zaitsev, numa reação de eliminação forma-se preferencialmente:",
+      "alternativas": [{ "id": "a", "texto": "O alceno mais substituído (mais estável)" }, { "id": "b", "texto": "O alceno menos substituído" }, { "id": "c", "texto": "Sempre o eteno" }, { "id": "d", "texto": "Um alcano" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O H é retirado do carbono vizinho que tem menos hidrogênios.", "Isso gera a dupla com mais grupos alquila ligados: o alceno mais substituído, que é mais estável."],
+      "dica": "O produto mais estável é o favorecido.",
+      "errosComuns": [{ "descricao": "O alceno menos substituído é o produto minoritário na eliminação comum.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-eliminacao-q3", "temaId": "org-eliminacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Como se chama a reação em que uma molécula perde átomos de carbonos vizinhos, formando uma ligação dupla?",
+      "alternativas": [{ "id": "a", "texto": "Eliminação" }, { "id": "b", "texto": "Adição" }, { "id": "c", "texto": "Substituição" }, { "id": "d", "texto": "Polimerização" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Na eliminação, saem átomos ou grupos de carbonos vizinhos (como H e OH, ou H e Br).", "A ligação dupla aparece entre esses carbonos. É o inverso da adição."],
+      "dica": "É o caminho inverso da adição.",
+      "errosComuns": [{ "descricao": "Na adição a dupla é consumida, não formada.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-oxidacao-q1", "temaId": "org-oxidacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na oxidação branda de um álcool primário, como o etanol, o primeiro produto formado é:",
+      "alternativas": [{ "id": "a", "texto": "Um aldeído (etanal)" }, { "id": "b", "texto": "Uma cetona" }, { "id": "c", "texto": "Um éter" }, { "id": "d", "texto": "Um alcano" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O carbono do –OH num álcool primário fica na ponta da cadeia.", "A oxidação forma uma carbonila nessa ponta: aldeído.", "Continuando a oxidação, o aldeído vira ácido carboxílico (é o que acontece quando o vinho vira vinagre)."],
+      "dica": "Onde fica o carbono com –OH num álcool primário?",
+      "errosComuns": [{ "descricao": "Cetonas vêm da oxidação de álcoois secundários.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-oxidacao-q2", "temaId": "org-oxidacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O que acontece com um álcool terciário diante de um oxidante brando?",
+      "alternativas": [{ "id": "a", "texto": "Praticamente não se oxida" }, { "id": "b", "texto": "Forma uma cetona" }, { "id": "c", "texto": "Forma um aldeído" }, { "id": "d", "texto": "Forma um ácido carboxílico" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Para oxidar, o carbono do –OH precisa ter pelo menos um hidrogênio.", "No álcool terciário, esse carbono não tem hidrogênio: não há oxidação branda."],
+      "dica": "O carbono do –OH tem algum hidrogênio?",
+      "errosComuns": [{ "descricao": "Cetona é o produto dos álcoois secundários.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-oxidacao-q3", "temaId": "org-oxidacao", "etapa": "em-3", "dificuldade": 3, "tipo": "balanceamento",
+      "enunciado": "Balanceie a combustão completa do etanol.",
+      "equacao": { "reagentes": ["C2H6O", "O2"], "produtos": ["CO2", "H2O"] },
+      "gabarito": [1, 3, 2, 3],
+      "resolucaoPassoAPasso": ["C: 2, então 2 \\ce{CO2}. H: 6, então 3 \\ce{H2O}.", "O nos produtos: 4 + 3 = 7. O etanol já tem 1, então faltam 6 átomos: 3 \\ce{O2}.", "Equação: \\ce{C2H6O + 3O2 -> 2CO2 + 3H2O}."],
+      "dica": "Não esqueça o oxigênio que já está no etanol.",
+      "errosComuns": [{ "descricao": "Esqueceu o átomo de oxigênio do próprio etanol.", "resposta": [2, 7, 4, 6] }],
+      "revisado": false
+    },
+    {
+      "id": "org-esterificacao-saponificacao-q1", "temaId": "org-esterificacao-saponificacao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Ácido acético reage com etanol, com ácido como catalisador, formando água e:",
+      "alternativas": [{ "id": "a", "texto": "Acetato de etila (um éster)" }, { "id": "b", "texto": "Éter dietílico" }, { "id": "c", "texto": "Acetona" }, { "id": "d", "texto": "Sabão" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Ácido carboxílico + álcool → éster + água (esterificação).", "Ácido acético (etanoico) + etanol → etanoato de etila (acetato de etila)."],
+      "dica": "Ácido + álcool forma qual função?",
+      "errosComuns": [{ "descricao": "Éteres não se formam a partir de ácido e álcool.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-esterificacao-saponificacao-q2", "temaId": "org-esterificacao-saponificacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Na saponificação, uma gordura (triglicerídeo) reage com hidróxido de sódio formando:",
+      "alternativas": [{ "id": "a", "texto": "Sabão (sais de ácidos graxos) e glicerol" }, { "id": "b", "texto": "Margarina" }, { "id": "c", "texto": "Gasolina" }, { "id": "d", "texto": "Proteínas" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O triglicerídeo é um éster de glicerol com ácidos graxos.", "A base hidrolisa o éster, liberando glicerol e os sais de sódio dos ácidos graxos: o sabão.", "Na produção artesanal, a soda cáustica exige luvas e óculos, porque é muito corrosiva."],
+      "dica": "É a hidrólise de um éster em meio básico.",
+      "errosComuns": [{ "descricao": "Margarina vem da hidrogenação de óleos, não da saponificação.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-esterificacao-saponificacao-q3", "temaId": "org-esterificacao-saponificacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "Por que o sabão consegue remover gordura?",
+      "alternativas": [{ "id": "a", "texto": "Suas moléculas têm uma ponta apolar, que interage com a gordura, e uma ponta polar, que interage com a água, formando micelas" }, { "id": "b", "texto": "Porque o sabão dissolve a gordura como a água dissolve o sal" }, { "id": "c", "texto": "Porque o sabão reage com a gordura e forma água" }, { "id": "d", "texto": "Porque a espuma arrasta a gordura sozinha" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A cadeia longa (apolar) se mistura à gordura.", "A ponta iônica (polar) fica voltada para a água.", "Formam-se micelas com a gordura no centro, que a água leva embora."],
+      "dica": "A molécula de sabão tem duas partes com afinidades diferentes.",
+      "errosComuns": [{ "descricao": "A gordura é apolar e não se dissolve em água sozinha; o sabão faz a ponte.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-adicao-q1", "temaId": "org-polimeros-adicao", "etapa": "em-3", "dificuldade": 2, "tipo": "associacao",
+      "enunciado": "Associe cada monômero ao polímero que ele forma.",
+      "itens": [{ "id": "eteno", "texto": "Eteno" }, { "id": "vinila", "texto": "Cloreto de vinila" }, { "id": "estireno", "texto": "Estireno" }, { "id": "propeno", "texto": "Propeno" }],
+      "opcoes": [{ "id": "pe", "texto": "Polietileno" }, { "id": "pvc", "texto": "PVC" }, { "id": "ps", "texto": "Poliestireno" }, { "id": "pp", "texto": "Polipropileno" }],
+      "gabarito": { "eteno": "pe", "vinila": "pvc", "estireno": "ps", "propeno": "pp" },
+      "resolucaoPassoAPasso": ["O nome do polímero costuma ser 'poli' + nome do monômero.", "Eteno → polietileno; propeno → polipropileno; estireno → poliestireno.", "Cloreto de vinila → policloreto de vinila (PVC)."],
+      "dica": "Poli + nome do monômero.",
+      "errosComuns": [{ "descricao": "Confundir polietileno e polipropileno: o propeno tem um carbono a mais." }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-adicao-q2", "temaId": "org-polimeros-adicao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um polímero de adição se forma:",
+      "alternativas": [{ "id": "a", "texto": "Pela união de monômeros com ligação dupla, sem perda de átomos" }, { "id": "b", "texto": "Com eliminação de água a cada ligação" }, { "id": "c", "texto": "Pela quebra de um polímero maior" }, { "id": "d", "texto": "Apenas a partir de aminoácidos" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["As duplas se abrem e os monômeros se ligam em sequência.", "Todos os átomos dos monômeros ficam no polímero."],
+      "dica": "Adição: nada sai.",
+      "errosComuns": [{ "descricao": "A eliminação de moléculas pequenas caracteriza os polímeros de condensação.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-adicao-q3", "temaId": "org-polimeros-adicao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O teflon (PTFE), usado em panelas antiaderentes, é um polímero de adição. Qual é o seu monômero?",
+      "alternativas": [{ "id": "a", "texto": "\\ce{CF2=CF2}" }, { "id": "b", "texto": "\\ce{CH2=CHCl}" }, { "id": "c", "texto": "\\ce{CH2=CH2}" }, { "id": "d", "texto": "\\ce{CF3-CF3}" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["PTFE significa politetrafluoretileno.", "O monômero é o tetrafluoreteno, \\ce{CF2=CF2}, com a dupla necessária para a adição."],
+      "dica": "Tetra-flúor-eteno.",
+      "errosComuns": [{ "descricao": "Sem ligação dupla, a molécula não faz polimerização por adição.", "resposta": "d" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-condensacao-q1", "temaId": "org-polimeros-condensacao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Um polímero de condensação se forma:",
+      "alternativas": [{ "id": "a", "texto": "Com a eliminação de moléculas pequenas, como água, a cada ligação entre monômeros" }, { "id": "b", "texto": "Sem perda de nenhum átomo" }, { "id": "c", "texto": "Apenas a partir de alcenos" }, { "id": "d", "texto": "Por fusão de metais" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Os monômeros têm dois grupos funcionais que reagem entre si.", "A cada ligação formada sai uma molécula pequena, como água."],
+      "dica": "Condensação: algo sai.",
+      "errosComuns": [{ "descricao": "Sem perda de átomos é característica da polimerização por adição.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-condensacao-q2", "temaId": "org-polimeros-condensacao", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "O PET, usado em garrafas de refrigerante, é um:",
+      "alternativas": [{ "id": "a", "texto": "Poliéster" }, { "id": "b", "texto": "Poliamida" }, { "id": "c", "texto": "Polietileno" }, { "id": "d", "texto": "Polissacarídeo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["PET significa poli(tereftalato de etileno).", "Ele se forma pela reação entre um diácido e um diálcool, com ligações éster: é um poliéster de condensação."],
+      "dica": "O nome tem 'tereftalato', um sal ou éster de ácido.",
+      "errosComuns": [{ "descricao": "Apesar do 'etileno' no nome, o PET não é polietileno: é um poliéster.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-condensacao-q3", "temaId": "org-polimeros-condensacao", "etapa": "em-3", "dificuldade": 3, "tipo": "multipla-escolha",
+      "enunciado": "O náilon é uma poliamida. Ele é formado pela reação entre:",
+      "alternativas": [{ "id": "a", "texto": "Um diácido carboxílico (ou derivado) e uma diamina" }, { "id": "b", "texto": "Dois alcenos" }, { "id": "c", "texto": "Um álcool e um aldeído" }, { "id": "d", "texto": "Glicose e frutose" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["A ligação amida se forma entre um grupo ácido e um grupo amina, com saída de água.", "Com dois grupos em cada monômero, a cadeia cresce nos dois sentidos."],
+      "dica": "Ligação amida = ácido + amina.",
+      "errosComuns": [{ "descricao": "Alcenos formam polímeros de adição, não poliamidas.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-reciclagem-q1", "temaId": "org-polimeros-reciclagem", "etapa": "em-3", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Qual tipo de plástico pode ser amolecido pelo calor e remoldado várias vezes?",
+      "alternativas": [{ "id": "a", "texto": "Termoplástico" }, { "id": "b", "texto": "Termofixo" }, { "id": "c", "texto": "Nenhum plástico pode ser remoldado" }, { "id": "d", "texto": "Somente os plásticos biodegradáveis" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Nos termoplásticos, as cadeias não estão ligadas entre si por ligações fortes.", "Com calor elas deslizam e o material pode ser remoldado, o que facilita a reciclagem.", "Termofixos têm cadeias interligadas e não amolecem."],
+      "dica": "Termo = calor; plástico = moldável.",
+      "errosComuns": [{ "descricao": "Termofixos têm cadeias interligadas e não amolecem com o calor.", "resposta": "b" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-reciclagem-q2", "temaId": "org-polimeros-reciclagem", "etapa": "em-3", "dificuldade": 2, "tipo": "multipla-escolha",
+      "enunciado": "Microplásticos são:",
+      "alternativas": [{ "id": "a", "texto": "Fragmentos de plástico menores que 5 mm, que se acumulam no ambiente e nos seres vivos" }, { "id": "b", "texto": "Plásticos feitos para uso em microscópios" }, { "id": "c", "texto": "Plásticos que se decompõem em poucos dias" }, { "id": "d", "texto": "Um tipo de fertilizante" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["Plásticos se fragmentam com o sol e o atrito, mas demoram muito para se degradar.", "Os pedaços pequenos chegam a rios, oceanos e cadeias alimentares."],
+      "dica": "Micro = pequeno.",
+      "errosComuns": [{ "descricao": "Os microplásticos persistem por muito tempo no ambiente.", "resposta": "c" }],
+      "revisado": false
+    },
+    {
+      "id": "org-polimeros-reciclagem-q3", "temaId": "org-polimeros-reciclagem", "etapa": "em-3", "dificuldade": 1, "tipo": "multipla-escolha",
+      "enunciado": "Em embalagens, o símbolo de reciclagem com o número 1 (PET) dentro informa:",
+      "alternativas": [{ "id": "a", "texto": "O tipo de plástico, para facilitar a separação na reciclagem" }, { "id": "b", "texto": "Que a embalagem é biodegradável" }, { "id": "c", "texto": "Quantas vezes a embalagem já foi reciclada" }, { "id": "d", "texto": "Que a embalagem pode ir ao fogo" }],
+      "gabarito": "a",
+      "resolucaoPassoAPasso": ["O número identifica a resina: 1 é PET, 2 é PEAD, 3 é PVC e assim por diante.", "Plásticos diferentes precisam ser separados, porque misturados perdem qualidade."],
+      "dica": "Cada número corresponde a um tipo de resina.",
+      "errosComuns": [{ "descricao": "O símbolo não garante biodegradação; só identifica o tipo de plástico.", "resposta": "b" }],
+      "revisado": false
+    }
+  ]
+}

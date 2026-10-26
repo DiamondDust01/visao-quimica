@@ -1,0 +1,62 @@
+{
+  "name": "visao-quimica",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Plataforma de estudo e treino de Química, com trilhas por etapa escolar",
+  "author": "Visão Química",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "node --test \"src/**/*.test.js\" \"scripts/**/*.test.mjs\"",
+    "test:rules": "firebase emulators:exec --only firestore --project demo-visao-quimica \"node --test tests/rules/*.test.mjs\"",
+    "test:e2e": "npm run build && electron tests/e2e/fumaca.cjs",
+    "preview": "vite preview",
+    "icons": "node scripts/generate-icons.mjs",
+    "check:residue": "node scripts/check-residue.mjs",
+    "validate:content": "node scripts/validate-content.mjs",
+    "sync:taxonomia": "node scripts/sync-taxonomia.mjs",
+    "atualizar:elementos": "node scripts/atualizar-elementos.mjs",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android",
+    "android:apk": "npm run android:sync && cd android && .\\gradlew.bat assembleDebug",
+    "app:windows": "npm run build && electron .",
+    "app:windows:package": "npm run build && node scripts/package-windows.cjs",
+    "app:windows:installer": "npm run app:windows:package && node scripts/package-windows-installer.cjs"
+  },
+  "dependencies": {
+    "firebase": "^12.19.0",
+    "katex": "0.18.11",
+    "lucide-react": "^0.525.0",
+    "qrcode-generator": "2.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "smiles-drawer": "2.4.1"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.4.3",
+    "@capacitor/cli": "^8.4.3",
+    "@capacitor/core": "^8.4.3",
+    "@electron/asar": "^4.3.1",
+    "@firebase/rules-unit-testing": "^5.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^44.5.1",
+    "firebase-tools": "^14.27.0",
+    "rcedit": "5.0.2",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.3.3",
+    "vite": "^6.4.3"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.14.5"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "@firebase/util@1.15.3": true,
+    "protobufjs@7.6.6": true,
+    "sharp@0.34.5": true,
+    "re2": false
+  }
+}

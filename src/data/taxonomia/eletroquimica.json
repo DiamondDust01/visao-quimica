@@ -1,0 +1,138 @@
+{
+  "id": "eletroquimica",
+  "nome": "Eletroquímica",
+  "descricao": "Reações de transferência de elétrons, produção de corrente elétrica e eletrólise.",
+  "area": "eletroquimica",
+  "prerequisitos": ["tab-eletronegatividade", "lig-ionica", "lig-covalente", "inorg-dissociacao-ionizacao", "reac-balanceamento", "reac-calculo-estequiometrico"],
+  "etapasRecomendadas": ["em-2", "enem"],
+  "dificuldade": 2,
+  "palavrasChave": ["oxirredução", "pilhas", "eletrólise", "Faraday"],
+  "temas": [
+    {
+      "id": "eletro-oxirreducao",
+      "nome": "Oxirredução",
+      "descricao": "Quem perde e quem ganha elétrons numa reação.",
+      "area": "eletroquimica",
+      "prerequisitos": ["tab-eletronegatividade", "lig-ionica", "lig-covalente", "reac-balanceamento"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["Nox", "oxidação", "redução"],
+      "subtemas": [
+        {
+          "id": "eletro-nox",
+          "nome": "Número de oxidação",
+          "descricao": "Regras para atribuir o Nox a cada elemento em substâncias e íons.",
+          "area": "eletroquimica",
+          "prerequisitos": ["tab-eletronegatividade", "lig-ionica", "lig-covalente"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["Nox", "número de oxidação", "carga aparente"]
+        },
+        {
+          "id": "eletro-oxidacao-reducao",
+          "nome": "Oxidação, redução e agentes",
+          "descricao": "Identificar espécie oxidada, reduzida, agente oxidante e agente redutor.",
+          "area": "eletroquimica",
+          "prerequisitos": ["eletro-nox"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["oxidação", "redução", "agente oxidante", "agente redutor"]
+        },
+        {
+          "id": "eletro-balanceamento-redox",
+          "nome": "Balanceamento por oxirredução",
+          "descricao": "Igualar elétrons perdidos e recebidos para balancear equações de oxirredução, inclusive iônicas.",
+          "area": "eletroquimica",
+          "prerequisitos": ["reac-balanceamento", "eletro-oxidacao-reducao"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["balanceamento redox", "variação de Nox", "elétrons transferidos", "conservação de carga"]
+        }
+      ]
+    },
+    {
+      "id": "eletro-pilhas",
+      "nome": "Pilhas",
+      "descricao": "Reações espontâneas gerando corrente elétrica.",
+      "area": "eletroquimica",
+      "prerequisitos": ["eletro-oxidacao-reducao"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["pilha", "potencial", "corrosão"],
+      "subtemas": [
+        {
+          "id": "eletro-pilhas-funcionamento",
+          "nome": "Funcionamento das pilhas",
+          "descricao": "Ânodo, cátodo, ponte salina, sentido dos elétrons e representação da pilha (pilha de Daniell).",
+          "area": "eletroquimica",
+          "prerequisitos": ["eletro-oxidacao-reducao"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["ânodo", "cátodo", "ponte salina", "Daniell"]
+        },
+        {
+          "id": "eletro-potenciais",
+          "nome": "Potenciais-padrão e ddp",
+          "descricao": "Usar potenciais de redução para prever a reação da pilha e calcular a diferença de potencial.",
+          "area": "eletroquimica",
+          "prerequisitos": ["eletro-pilhas-funcionamento"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["potencial de redução", "ddp", "E°", "eletrodo padrão de hidrogênio"]
+        },
+        {
+          "id": "eletro-baterias",
+          "nome": "Pilhas e baterias do cotidiano",
+          "descricao": "Pilhas alcalinas, baterias de chumbo e de lítio: funcionamento geral e descarte correto.",
+          "area": "eletroquimica",
+          "prerequisitos": ["eletro-pilhas-funcionamento"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["bateria", "pilha alcalina", "íon-lítio", "descarte"]
+        },
+        {
+          "id": "eletro-corrosao",
+          "nome": "Corrosão e proteção",
+          "descricao": "Ferrugem como processo eletroquímico e formas de proteção: galvanização, metal de sacrifício e pintura.",
+          "area": "eletroquimica",
+          "prerequisitos": ["eletro-potenciais"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["corrosão", "ferrugem", "galvanização", "metal de sacrifício"]
+        }
+      ]
+    },
+    {
+      "id": "eletro-eletrolise",
+      "nome": "Eletrólise",
+      "descricao": "Reações não espontâneas provocadas por corrente elétrica.",
+      "area": "eletroquimica",
+      "prerequisitos": ["inorg-dissociacao-ionizacao", "reac-calculo-estequiometrico", "eletro-pilhas-funcionamento"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 3,
+      "palavrasChave": ["eletrólise", "Faraday", "galvanoplastia"],
+      "subtemas": [
+        {
+          "id": "eletro-eletrolise-tipos",
+          "nome": "Eletrólise ígnea e aquosa",
+          "descricao": "O que acontece em cada eletrodo e a ordem de descarga dos íons em solução aquosa.",
+          "area": "eletroquimica",
+          "prerequisitos": ["inorg-dissociacao-ionizacao", "eletro-pilhas-funcionamento"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 3,
+          "palavrasChave": ["eletrólise ígnea", "eletrólise aquosa", "ordem de descarga", "galvanoplastia"]
+        },
+        {
+          "id": "eletro-faraday",
+          "nome": "Leis de Faraday",
+          "descricao": "Relação entre carga elétrica, tempo de eletrólise e massa depositada.",
+          "area": "eletroquimica",
+          "prerequisitos": ["reac-calculo-estequiometrico", "eletro-eletrolise-tipos"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 4,
+          "palavrasChave": ["Faraday", "carga elétrica", "coulomb", "massa depositada"]
+        }
+      ]
+    }
+  ]
+}

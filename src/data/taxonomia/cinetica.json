@@ -1,0 +1,108 @@
+{
+  "id": "cinetica",
+  "nome": "Cinética química",
+  "descricao": "A rapidez das reações e o que a altera.",
+  "area": "cinetica",
+  "prerequisitos": ["reac-calculo-estequiometrico", "termo-entalpia-diagramas"],
+  "etapasRecomendadas": ["em-2", "enem", "olimpiadas-quimica", "superior"],
+  "dificuldade": 2,
+  "palavrasChave": ["velocidade", "energia de ativação", "catalisador"],
+  "temas": [
+    {
+      "id": "cin-velocidade",
+      "nome": "Velocidade e colisões",
+      "descricao": "Como medir a rapidez de uma reação e por que ela acontece.",
+      "area": "cinetica",
+      "prerequisitos": ["reac-calculo-estequiometrico", "termo-entalpia-diagramas"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["velocidade média", "teoria das colisões"],
+      "subtemas": [
+        {
+          "id": "cin-velocidade-media",
+          "nome": "Velocidade média de reação",
+          "descricao": "Variação da quantidade de reagente ou produto por tempo, e a relação com os coeficientes da equação.",
+          "area": "cinetica",
+          "prerequisitos": ["reac-calculo-estequiometrico"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["velocidade média", "consumo", "formação", "mol/L·s"]
+        },
+        {
+          "id": "cin-teoria-colisoes",
+          "nome": "Teoria das colisões e energia de ativação",
+          "descricao": "Colisões efetivas, complexo ativado e o papel da energia de ativação.",
+          "area": "cinetica",
+          "prerequisitos": ["termo-entalpia-diagramas", "cin-velocidade-media"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["colisão efetiva", "energia de ativação", "complexo ativado"]
+        }
+      ]
+    },
+    {
+      "id": "cin-fatores",
+      "nome": "Fatores e catálise",
+      "descricao": "O que acelera ou retarda uma reação.",
+      "area": "cinetica",
+      "prerequisitos": ["cin-teoria-colisoes"],
+      "etapasRecomendadas": ["em-2", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["temperatura", "superfície de contato", "catalisador"],
+      "subtemas": [
+        {
+          "id": "cin-fatores-velocidade",
+          "nome": "Fatores que alteram a velocidade",
+          "descricao": "Efeito da temperatura, da concentração, da pressão e da superfície de contato, com exemplos da cozinha e da indústria.",
+          "area": "cinetica",
+          "prerequisitos": ["cin-teoria-colisoes"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["temperatura", "concentração", "superfície de contato", "pressão"]
+        },
+        {
+          "id": "cin-catalise",
+          "nome": "Catalisadores",
+          "descricao": "Como um catalisador diminui a energia de ativação sem ser consumido; catálise homogênea, heterogênea e enzimática.",
+          "area": "cinetica",
+          "prerequisitos": ["cin-teoria-colisoes"],
+          "etapasRecomendadas": ["em-2", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["catalisador", "inibidor", "catálise", "conversor catalítico"]
+        }
+      ]
+    },
+    {
+      "id": "cin-leis",
+      "nome": "Lei de velocidade",
+      "descricao": "A relação matemática entre velocidade e concentrações.",
+      "area": "cinetica",
+      "prerequisitos": ["cin-fatores-velocidade"],
+      "etapasRecomendadas": ["em-2", "enem", "olimpiadas-quimica", "superior"],
+      "dificuldade": 3,
+      "palavrasChave": ["lei de velocidade", "ordem de reação", "mecanismo"],
+      "subtemas": [
+        {
+          "id": "cin-lei-velocidade",
+          "nome": "Lei de velocidade e ordem de reação",
+          "descricao": "Determinar a ordem de cada reagente a partir de dados experimentais e escrever a lei de velocidade.",
+          "area": "cinetica",
+          "prerequisitos": ["cin-fatores-velocidade"],
+          "etapasRecomendadas": ["em-2", "enem", "superior"],
+          "dificuldade": 3,
+          "palavrasChave": ["lei de velocidade", "ordem", "constante de velocidade", "dados experimentais"]
+        },
+        {
+          "id": "cin-mecanismos",
+          "nome": "Mecanismos e etapa lenta",
+          "descricao": "Reações em várias etapas e por que a etapa lenta determina a velocidade.",
+          "area": "cinetica",
+          "prerequisitos": ["cin-lei-velocidade"],
+          "etapasRecomendadas": ["em-2", "olimpiadas-quimica", "superior"],
+          "dificuldade": 4,
+          "palavrasChave": ["mecanismo", "etapa lenta", "intermediário", "etapa determinante"]
+        }
+      ]
+    }
+  ]
+}

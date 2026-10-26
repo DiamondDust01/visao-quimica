@@ -1,0 +1,150 @@
+{
+  "id": "ambiental",
+  "nome": "Química ambiental e do cotidiano",
+  "descricao": "A Química dos ciclos naturais, da poluição, da água que bebemos e dos combustíveis.",
+  "area": "ambiental",
+  "prerequisitos": ["fund-misturas-tipos", "fund-separacao-heterogeneas", "inorg-oxidos", "reac-evidencias", "reac-rendimento-pureza", "sol-titulo-ppm"],
+  "etapasRecomendadas": ["ef-6", "ef-7", "ef-8", "em-1", "em-3", "enem", "tecnico"],
+  "dificuldade": 1,
+  "palavrasChave": ["meio ambiente", "poluição", "água", "combustíveis", "química verde"],
+  "temas": [
+    {
+      "id": "amb-ciclos",
+      "nome": "Ciclos e atmosfera",
+      "descricao": "Como elementos circulam no planeta e o que compõe o ar.",
+      "area": "ambiental",
+      "prerequisitos": ["fund-misturas-tipos", "reac-evidencias"],
+      "etapasRecomendadas": ["ef-7", "em-3", "enem"],
+      "dificuldade": 1,
+      "palavrasChave": ["ciclo do carbono", "ciclo do nitrogênio", "atmosfera"],
+      "subtemas": [
+        {
+          "id": "amb-atmosfera",
+          "nome": "Composição do ar e camada de ozônio",
+          "descricao": "Gases do ar, a função da camada de ozônio e as substâncias que a destroem.",
+          "area": "ambiental",
+          "prerequisitos": ["fund-misturas-tipos"],
+          "etapasRecomendadas": ["ef-7", "em-3", "enem"],
+          "dificuldade": 1,
+          "palavrasChave": ["ar atmosférico", "ozônio", "CFC", "radiação ultravioleta"]
+        },
+        {
+          "id": "amb-ciclo-carbono",
+          "nome": "Ciclo do carbono e efeito estufa",
+          "descricao": "Fotossíntese, respiração e combustão no ciclo do carbono e a intensificação do efeito estufa.",
+          "area": "ambiental",
+          "prerequisitos": ["reac-evidencias"],
+          "etapasRecomendadas": ["ef-7", "em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ciclo do carbono", "efeito estufa", "CO2", "aquecimento global"]
+        },
+        {
+          "id": "amb-ciclo-nitrogenio",
+          "nome": "Ciclo do nitrogênio e fertilizantes",
+          "descricao": "Fixação, nitrificação e desnitrificação e o uso de fertilizantes nitrogenados.",
+          "area": "ambiental",
+          "prerequisitos": ["reac-evidencias"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ciclo do nitrogênio", "fixação", "fertilizante", "amônia"]
+        }
+      ]
+    },
+    {
+      "id": "amb-poluicao",
+      "nome": "Poluição",
+      "descricao": "Substâncias que alteram o ar, a água e o solo.",
+      "area": "ambiental",
+      "prerequisitos": ["inorg-oxidos", "sol-titulo-ppm"],
+      "etapasRecomendadas": ["em-1", "em-3", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["chuva ácida", "metais pesados", "eutrofização"],
+      "subtemas": [
+        {
+          "id": "amb-chuva-acida",
+          "nome": "Chuva ácida",
+          "descricao": "Óxidos de enxofre e de nitrogênio formando ácidos na atmosfera e seus efeitos.",
+          "area": "ambiental",
+          "prerequisitos": ["inorg-oxidos"],
+          "etapasRecomendadas": ["em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["chuva ácida", "SO2", "NOx", "óxidos ácidos"]
+        },
+        {
+          "id": "amb-poluicao-agua-solo",
+          "nome": "Poluição da água e do solo",
+          "descricao": "Metais pesados, eutrofização, derramamento de petróleo e limites expressos em ppm.",
+          "area": "ambiental",
+          "prerequisitos": ["sol-titulo-ppm"],
+          "etapasRecomendadas": ["em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["metais pesados", "eutrofização", "bioacumulação", "ppm"]
+        }
+      ]
+    },
+    {
+      "id": "amb-agua",
+      "nome": "Água",
+      "descricao": "Da captação à torneira e o tratamento do esgoto.",
+      "area": "ambiental",
+      "prerequisitos": ["fund-separacao-heterogeneas"],
+      "etapasRecomendadas": ["ef-6", "em-1", "enem"],
+      "dificuldade": 2,
+      "palavrasChave": ["tratamento de água", "esgoto"],
+      "subtemas": [
+        {
+          "id": "amb-tratamento-agua",
+          "nome": "Tratamento de água e esgoto",
+          "descricao": "Etapas de uma estação de tratamento (coagulação, floculação, decantação, filtração, desinfecção) e do tratamento de esgoto.",
+          "area": "ambiental",
+          "prerequisitos": ["fund-separacao-heterogeneas"],
+          "etapasRecomendadas": ["ef-6", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["ETA", "floculação", "cloração", "esgoto", "água potável"]
+        }
+      ]
+    },
+    {
+      "id": "amb-energia",
+      "nome": "Combustíveis e sustentabilidade",
+      "descricao": "Fontes de energia química e formas de produzir com menos impacto.",
+      "area": "ambiental",
+      "prerequisitos": ["reac-evidencias", "reac-rendimento-pureza"],
+      "etapasRecomendadas": ["ef-7", "ef-8", "em-1", "em-3", "enem", "tecnico"],
+      "dificuldade": 2,
+      "palavrasChave": ["combustíveis", "combustão", "química verde"],
+      "subtemas": [
+        {
+          "id": "amb-combustao",
+          "nome": "Combustão",
+          "descricao": "Combustível, comburente e energia de ativação; combustão completa e incompleta e o monóxido de carbono.",
+          "area": "ambiental",
+          "prerequisitos": ["reac-evidencias"],
+          "etapasRecomendadas": ["ef-7", "em-1", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["combustão", "comburente", "triângulo do fogo", "monóxido de carbono"]
+        },
+        {
+          "id": "amb-combustiveis",
+          "nome": "Combustíveis fósseis e biocombustíveis",
+          "descricao": "Petróleo, gás natural, carvão, etanol e biodiesel: origem, uso e impacto ambiental.",
+          "area": "ambiental",
+          "prerequisitos": ["reac-evidencias"],
+          "etapasRecomendadas": ["ef-7", "ef-8", "em-3", "enem"],
+          "dificuldade": 2,
+          "palavrasChave": ["petróleo", "etanol", "biodiesel", "fonte renovável"]
+        },
+        {
+          "id": "amb-quimica-verde",
+          "nome": "Química verde",
+          "descricao": "Princípios da química verde: prevenir resíduos, aproveitar átomos, usar fontes renováveis e processos mais seguros.",
+          "area": "ambiental",
+          "prerequisitos": ["reac-rendimento-pureza"],
+          "etapasRecomendadas": ["em-3", "enem", "tecnico"],
+          "dificuldade": 2,
+          "palavrasChave": ["química verde", "economia atômica", "sustentabilidade", "resíduos"]
+        }
+      ]
+    }
+  ]
+}
