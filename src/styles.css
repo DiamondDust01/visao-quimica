@@ -77,6 +77,11 @@ html.android-app .backdrop-symbols {
    sempre as sobrescrevem. Fora de uma camada, `div { min-width: 0 }` anulava, por exemplo,
    `min-w-[44rem]` da tabela periódica. */
 @layer base {
+  /* A barra superior é fixa: o que recebe foco ou é alvo de âncora não fica escondido sob ela. */
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   textarea {
     font: inherit;
   }

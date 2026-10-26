@@ -49,6 +49,13 @@ app.whenReady().then(async () => {
     check(text > 200, `aba ${tab} mostra conteúdo (${await heading()})`);
   }
 
+  await clickText('Fundamentos');
+  await wait(300);
+  await js('window.scrollTo(0, 1500)');
+  await wait(200);
+  const header = await js(`(() => { const box = document.querySelector('header').getBoundingClientRect(); return { top: Math.round(box.top), rolagem: Math.round(window.scrollY) }; })()`);
+  check(header.rolagem > 0 && header.top === 0, `barra superior fixa ao rolar (rolagem ${header.rolagem}px, topo da barra ${header.top}px)`);
+
   await clickText('Prática');
   await wait(300);
   await js(`document.querySelector('#selecao-org-nomenclatura-funcoes').click()`);
@@ -74,6 +81,27 @@ app.whenReady().then(async () => {
   await clickText('Cafeína');
   await wait(1000);
   check(/194,19/.test(await js('document.querySelector("main").innerText')), 'estrutura da cafeína com massa molar');
+
+  // Backup em arquivo: exporta (download de verdade) e importa um arquivo com outro progresso.
+  await js(`document.querySelector('button[aria-label="Perfil"]').click()`);
+  await wait(300);
+  const backupPath = path.join(require('node:os').tmpdir(), `visao-quimica-backup-${Date.now()}.json`);
+  const downloaded = new Promise((resolve) => {
+    win.webContents.session.once('will-download', (event, item) => {
+      item.setSavePath(backupPath);
+      item.once('done', (doneEvent, state) => resolve(state));
+    });
+  });
+  await clickText('Exportar progresso');
+  const state = await Promise.race([downloaded, wait(5000).then(() => 'tempo esgotado')]);
+  const exported = state === 'completed' ? JSON.parse(require('node:fs').readFileSync(backupPath, 'utf8')) : null;
+  check(Boolean(exported) && exported.versao === 1 && Boolean(exported.progresso['org-nomenclatura-funcoes']), 'backup exportado em arquivo com o progresso da questão respondida');
+  const incoming = JSON.stringify({ ...exported, progresso: { ...exported.progresso, 'fund-densidade': { respondidas: 2, acertos: 2, atualizadoEm: '2026-10-01T00:00:00.000Z' } } });
+  await js(`(() => { const input = document.querySelector('main input[type=file]'); const data = new DataTransfer(); data.items.add(new File([${JSON.stringify(incoming)}], 'backup.json', { type: 'application/json' })); input.files = data.files; input.dispatchEvent(new Event('change', { bubbles: true })); })()`);
+  await wait(500);
+  const merged = await js(`JSON.parse(localStorage.getItem('visao-quimica:progresso') || '{}')`);
+  check(Boolean(merged['fund-densidade']) && Boolean(merged['org-nomenclatura-funcoes']), 'backup importado e juntado ao progresso do aparelho');
+  require('node:fs').rmSync(backupPath, { force: true });
 
   check(consoleProblems.length === 0, `console sem erros nem avisos${consoleProblems.length ? `: ${consoleProblems.join(' | ')}` : ''}`);
   console.log(failures.length ? `\n${failures.length} falha(s).` : '\nTudo certo.');

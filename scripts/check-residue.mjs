@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 // Pastas geradas ou de terceiros não entram na busca.
-const IGNORED_DIRS = new Set(['node_modules', 'dist', '.git', 'build', '.gradle', '.idea', 'release', '.vite']);
+const IGNORED_DIRS = new Set(['node_modules', 'dist', '.git', 'build', '.gradle', '.idea', 'release', '.vite', '.cache']);
 // O detector e o teste dele contêm os próprios termos buscados.
 const IGNORED_FILES = new Set(['package-lock.json', 'check-residue.mjs', 'check-residue.test.mjs']);
 const TEXT_EXTENSIONS = new Set(['.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.json', '.md', '.html', '.css', '.svg', '.xml', '.gradle', '.properties', '.java', '.kt', '.rules', '.txt', '.pro', '.yml', '.yaml', '']);

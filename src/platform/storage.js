@@ -13,7 +13,8 @@ export const STORAGE_KEYS = {
   sala: 'sala',
   pontos: 'pontos',
   mentor: 'mentor',
-  dispositivo: 'dispositivo'
+  dispositivo: 'dispositivo',
+  conta: 'conta'
 };
 
 const defaultStorage = (kind = 'localStorage') => {
@@ -38,6 +39,15 @@ export const readValue = (key, fallback = null, storage = defaultStorage()) => {
 export const writeValue = (key, value, storage = defaultStorage()) => {
   try {
     storage?.setItem(storageKey(key), String(value));
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+export const removeValue = (key, storage = defaultStorage()) => {
+  try {
+    storage?.removeItem(storageKey(key));
     return true;
   } catch {
     return false;
