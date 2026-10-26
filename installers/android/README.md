@@ -1,16 +1,16 @@
 # Visão Química para Android
 
-APK de teste da versão 0.1.0:
-[`Visao-Quimica-0.1.0-android.apk`](Visao-Quimica-0.1.0-android.apk).
+APK de teste da versão 0.2.0:
+[`Visao-Quimica-0.2.0-android.apk`](Visao-Quimica-0.2.0-android.apk).
 
 | | |
 |---|---|
 | `applicationId` | `com.exemplo.quimicaquest` (provisório) |
-| `versionName` / `versionCode` | 0.1.0 / 1 |
+| `versionName` / `versionCode` | 0.2.0 / 2 |
 | Android mínimo | 7.0 (API 24) |
-| Tamanho | 6.034.262 bytes |
-| SHA-256 | `DB235AE1C0F602B47EA4AAAAAC21CAAEBC1BC5A6FDE7BC9EDE488459F85E7E76` |
-| Gerado em | 2026-10-26, a partir do commit `71ebab8` de `main` |
+| Tamanho | 5.965.268 bytes |
+| SHA-256 | `9B32B8CF49537BAC615C936684DA285FBAAE44C87847FC93C06281DF08A2E749` |
+| Gerado em | 2026-10-26, com o código do commit `a63adc5` de `main` |
 
 ## Instalação
 
@@ -26,9 +26,12 @@ O Android pode avisar que a origem é desconhecida. Instale só se confiar na or
   um publicador.
 - O `applicationId` é provisório e precisa ser trocado antes da primeira publicação na loja.
 - Não inclui configuração do Firebase: estudo, prática, Mentor e ferramentas funcionam offline;
-  as salas de Desafios em sala ficam no modo de demonstração.
-- Foi conferido o conteúdo do pacote (identificador, versão, build web com a política de
-  segurança), mas o APK **ainda não foi aberto num aparelho ou emulador**.
+  as salas de Desafios em sala ficam no modo de demonstração, e a conta na nuvem fica
+  indisponível. O backup em arquivo (Perfil → Conta e backup) funciona.
+- Conferido: identificador e versão (`aapt2 dump badging`) e os arquivos web do APK num Chromium
+  em modo celular Android (`npm run test:android`: toque, tela de Pixel 7, 16 verificações sem
+  erros). O APK **ainda não foi aberto num aparelho nem num emulador**: na máquina de build a
+  virtualização está desligada no BIOS, e o emulador Android precisa dela.
 
 ## Como gerar de novo
 
