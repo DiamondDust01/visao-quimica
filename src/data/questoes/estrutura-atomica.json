@@ -7,7 +7,7 @@
       "itens": [{ "id": "dalton", "texto": "Dalton" }, { "id": "thomson", "texto": "Thomson" }, { "id": "rutherford", "texto": "Rutherford" }],
       "opcoes": [{ "id": "o1", "texto": "Esfera maciça e indivisível" }, { "id": "o2", "texto": "Esfera de carga positiva com elétrons espalhados nela" }, { "id": "o3", "texto": "Núcleo pequeno e denso, com elétrons girando ao redor" }, { "id": "o4", "texto": "Elétrons em níveis de energia fixos" }],
       "gabarito": { "dalton": "o1", "thomson": "o2", "rutherford": "o3" },
-      "resolucaoPassoAPasso": ["Dalton (início do século XIX): o átomo é uma esfera maciça e indivisível.", "Thomson (1897): descobriu o elétron e propôs uma esfera positiva com elétrons incrustados.", "Rutherford (1911): o átomo tem um núcleo pequeno e denso; os elétrons ficam ao redor.", "Níveis de energia fixos são a contribuição de Bohr."],
+      "resolucaoPassoAPasso": ["Dalton (início do século XIX): o átomo é uma esfera maciça e indivisível.", "Thomson: descobriu o elétron em 1897 e, em 1904, propôs uma esfera positiva com elétrons incrustados.", "Rutherford (1911): o átomo tem um núcleo pequeno e denso; os elétrons ficam ao redor.", "Níveis de energia fixos são a contribuição de Bohr."],
       "dica": "Uma das opções pertence a um quarto cientista.",
       "errosComuns": [{ "descricao": "Atribuir a Rutherford os níveis de energia, que foram propostos por Bohr." }],
       "revisado": false
@@ -28,7 +28,7 @@
       "criterio": "Do mais antigo para o mais recente.",
       "itens": [{ "id": "bohr", "texto": "Bohr" }, { "id": "thomson", "texto": "Thomson" }, { "id": "dalton", "texto": "Dalton" }, { "id": "rutherford", "texto": "Rutherford" }],
       "gabarito": ["dalton", "thomson", "rutherford", "bohr"],
-      "resolucaoPassoAPasso": ["Dalton: início do século XIX.", "Thomson: 1897, após a descoberta do elétron.", "Rutherford: 1911, com o experimento da lâmina de ouro.", "Bohr: 1913, aperfeiçoando o modelo de Rutherford com níveis de energia."],
+      "resolucaoPassoAPasso": ["Dalton: início do século XIX.", "Thomson: 1904, depois de descobrir o elétron em 1897.", "Rutherford: 1911, com o experimento da lâmina de ouro.", "Bohr: 1913, aperfeiçoando o modelo de Rutherford com níveis de energia."],
       "dica": "Cada modelo corrige um problema do anterior.",
       "errosComuns": [{ "descricao": "Colocar Bohr antes de Rutherford: Bohr partiu do núcleo descoberto por Rutherford." }],
       "revisado": false
