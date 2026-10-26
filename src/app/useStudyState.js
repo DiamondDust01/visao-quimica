@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { STORAGE_KEYS, clearAppStorage, readJson, writeJson } from '../platform/storage.js';
-import { createProfile, readValidProfile } from '../domain/perfil.js';
+import { createProfile, isValidProfile, readValidProfile } from '../domain/perfil.js';
 import { registerAnswer } from '../domain/progresso.js';
 import { appendLog } from '../domain/mentor/revisao.js';
 
@@ -59,6 +59,21 @@ export default function useStudyState(etapaIds) {
     }
   }, [updateProgress]);
 
+  // Substitui o estado pelo de um instantâneo (conta na nuvem ou arquivo de backup, já mesclado
+  // com o deste aparelho). Perfil com etapa que não existe mais é ignorado.
+  const applySnapshot = useCallback((snapshot) => {
+    if (isValidProfile(snapshot.perfil, etapaIds)) {
+      writeJson(STORAGE_KEYS.perfil, snapshot.perfil);
+      setProfile(snapshot.perfil);
+    }
+    writeJson(STORAGE_KEYS.progresso, snapshot.progresso);
+    setProgress(snapshot.progresso);
+    writeJson(STORAGE_KEYS.pontos, snapshot.pontos);
+    setPoints(snapshot.pontos);
+    writeJson(STORAGE_KEYS.mentor, snapshot.mentor);
+    setMentorLog(snapshot.mentor);
+  }, [etapaIds]);
+
   // Apaga tudo o que o app guardou neste aparelho; o onboarding aparece de novo.
   const clearDevice = useCallback(() => {
     const removed = clearAppStorage();
@@ -69,5 +84,5 @@ export default function useStudyState(etapaIds) {
     return removed;
   }, []);
 
-  return { profile, progress, points, mentorLog, chooseEtapa, updateProgress, recordAnswer, clearDevice };
+  return { profile, progress, points, mentorLog, chooseEtapa, updateProgress, recordAnswer, applySnapshot, clearDevice };
 }
