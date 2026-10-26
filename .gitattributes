@@ -1,0 +1,4 @@
+# Fins de linha normalizados no repositório. O gradlew precisa de LF para rodar no Linux/macOS.
+* text=auto
+android/gradlew text eol=lf
+*.bat text eol=crlf
