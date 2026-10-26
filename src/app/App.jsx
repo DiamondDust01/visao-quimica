@@ -5,6 +5,7 @@ import { parseRoomParam } from '../platform/roomSession.js';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
 import { TABS, getTab, initialTabFor } from './navigation.js';
 import useStudyState from './useStudyState.js';
+import useConta from './useConta.js';
 import ThemeToggle from './ThemeToggle.jsx';
 import HexBackdrop from '../components/HexBackdrop.jsx';
 import { AppVersion, LocalConnectionIndicator } from '../components/StatusIndicators.jsx';
@@ -48,7 +49,10 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(() => initialTabFor(initialRoomCode));
   const { user, loading: authLoading, error: authError } = useAnonymousAuth();
   const deviceId = useDeviceId(user);
-  const { profile, progress, points, mentorLog, chooseEtapa, recordAnswer, clearDevice } = useStudyState(ETAPA_IDS);
+  const study = useStudyState(ETAPA_IDS);
+  const { profile, progress, points, mentorLog, chooseEtapa, recordAnswer, clearDevice } = study;
+  // Conta por código de acesso: sincroniza o estudo (cifrado) quando há servidor configurado.
+  const conta = useConta(study, user);
   // Pedido de "praticar este tema" vindo de outra tela: { subtemaIds, autoStart }.
   const [practiceRequest, setPracticeRequest] = useState(null);
   const practice = (subtemaIds) => {
@@ -73,7 +77,7 @@ export default function App() {
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} onClearDevice={() => { clearDevice(); setActiveTab('inicio'); }} />;
+    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} conta={conta} study={study} conectando={authLoading} servidorPronto={Boolean(user)} onClearDevice={() => { conta.sair(); clearDevice(); setActiveTab('inicio'); }} />;
   } else if (tab.id === 'inicio') {
     screen = <Inicio firebaseEnabled={firebaseEnabled} authError={authError} onOpenTab={setActiveTab} onPractice={practice} index={TAXONOMIA} profile={profile} progress={progress} points={points} />;
   } else if (tab.id === 'fundamentos') {
@@ -110,7 +114,8 @@ export default function App() {
         Pular para o conteúdo
       </a>
 
-      <header className="relative z-10 border-b border-slate-800/80 bg-slate-950/70 pt-[env(safe-area-inset-top)] backdrop-blur-md">
+      {/* Fixa no topo ao rolar a página. */}
+      <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/85 pt-[env(safe-area-inset-top)] backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
           <button type="button" onClick={() => setActiveTab('inicio')} className="flex items-center gap-2 rounded-lg font-black tracking-tight text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
             <FlaskConical className="h-6 w-6 text-teal-300" aria-hidden="true" />

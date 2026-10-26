@@ -292,7 +292,7 @@
       "enunciado": "Para separar uma mistura de água (ebulição a 100 °C) e etanol (ebulição a 78 °C), o método mais indicado é a:",
       "alternativas": [{ "id": "a", "texto": "Destilação simples" }, { "id": "b", "texto": "Destilação fracionada" }, { "id": "c", "texto": "Filtração" }, { "id": "d", "texto": "Decantação" }],
       "gabarito": "b",
-      "resolucaoPassoAPasso": ["São dois líquidos miscíveis: mistura homogênea.", "Como os pontos de ebulição são próximos, usa-se a coluna de fracionamento, que separa melhor os vapores.", "A destilação simples é usada para separar um sólido dissolvido de um líquido."],
+      "resolucaoPassoAPasso": ["São dois líquidos miscíveis: mistura homogênea.", "Como os pontos de ebulição são próximos, usa-se a coluna de fracionamento, que separa melhor os vapores.", "A destilação simples é usada para separar um sólido dissolvido de um líquido.", "Observação: água e etanol formam uma mistura azeotrópica, que ferve sem mudar de composição; por isso a destilação fracionada chega a cerca de 96% de etanol, e não a etanol puro."],
       "dica": "Dois líquidos com temperaturas de ebulição próximas.",
       "errosComuns": [{ "descricao": "A destilação simples não separa bem dois líquidos com pontos de ebulição próximos.", "resposta": "a" }, { "descricao": "Água e etanol se misturam totalmente: não há camadas para decantar.", "resposta": "d" }],
       "revisado": false

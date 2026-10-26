@@ -4,29 +4,31 @@ Plataforma de estudo e treino de Química, com trilhas recomendadas por etapa es
 seleção livre de temas. Roda na web, no Android (Capacitor) e no Windows (Electron) a
 partir do mesmo build, e funciona offline.
 
-> Estado atual (2026-10-26): todos os módulos funcionando e builds web, Android e Windows
-> conferidos: Fundamentos (trilha por etapa),
-> Prática (477 questões originais, ainda sem revisão de professor), Laboratório do Mentor
-> (regras fixas, sem IA generativa), Desafios em sala (Firestore ou demonstração local),
-> Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir de SMILES)
-> e Como funciona.
+> Estado atual (2026-10-26, versão 0.2.0): todos os módulos funcionando e builds web, Android e
+> Windows conferidos: Fundamentos (trilha por etapa), Prática (477 questões originais, revisadas
+> por IA e ainda sem revisão de professor), Laboratório do Mentor (regras fixas, sem IA
+> generativa), Desafios em sala (Firestore ou demonstração local, com pareamento direto entre
+> aparelhos), Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir
+> de SMILES), conta por código de acesso sem dados pessoais e Como funciona.
 > Histórico com datas em [CHANGELOG.md](CHANGELOG.md).
 
-## Downloads (versão 0.1.0)
+## Downloads (versão 0.2.0)
 
 - **Windows:** branch [`app-pc`](https://github.com/DiamondDust01/visao-quimica/tree/app-pc/installers/windows): instalador
-  `Visao-Quimica-Setup-0.1.0.exe` ou versão portátil `.7z` (Git LFS).
+  `Visao-Quimica-Setup-0.2.0.exe` ou versão portátil `.7z` (Git LFS).
 - **Android:** branch [`app-mobile`](https://github.com/DiamondDust01/visao-quimica/tree/app-mobile/installers/android): APK de teste.
 - Como as branches se organizam: [BRANCHES.md](BRANCHES.md).
 
 Nenhum pacote tem assinatura digital; o APK usa a chave de depuração. As questões ainda não
-passaram por revisão de um professor de Química (`"revisado": false`).
+passaram por revisão de um professor de Química (`"revisado": false`); a revisão feita por IA está
+em [REVISAO_QUESTOES.md](REVISAO_QUESTOES.md).
 
 ## Requisitos
 
 - Node.js 24 e npm 11
 - Para o Android: Android SDK e **JDK 21** (o Capacitor 8 não compila com o JDK 17)
-- Para testar as regras do Firestore: Java 11 ou mais novo (o emulador roda em Java)
+- Para os testes com o Firebase emulado (`test:rules`, `test:nuvem`): Java 21 ou mais novo (o
+  emulador do Firestore roda em Java). Os emuladores ficam em `.cache/emuladores`, só deste projeto.
 
 ## Comandos
 
@@ -37,7 +39,10 @@ passaram por revisão de um professor de Química (`"revisado": false`).
 | `npm run build` | Gera o build web em `dist/` |
 | `npm test` | Testes de unidade (`node --test`) |
 | `npm run test:rules` | Sobe o emulador do Firestore e testa `firestore.rules` |
-| `npm run test:e2e` | Build e teste de fumaça no Electron: todas as abas, uma questão, ferramentas, console sem erros |
+| `npm run test:nuvem` | Firebase emulado: conta entre aparelhos, login após falha de rede e pareamento P2P entre três alunos |
+| `npm run verificar` | Roda todas as checagens com o tempo de cada uma (veja [CHECKLIST.md](CHECKLIST.md)); `-- --completo` inclui `test:nuvem` |
+| `npm run test:e2e` | Build e teste de fumaça no Electron: todas as abas, barra fixa, uma questão, ferramentas, backup em arquivo, console sem erros |
+| `npm run test:android` | Copia o build para o Android e abre os arquivos do APK num Chromium em modo celular (toque, tela de Pixel 7, user agent do WebView); não substitui um aparelho |
 | `npm run check:residue` | Procura resquícios do projeto de origem; sai com erro se achar algo |
 | `npm run validate:content` | Valida etapas, taxonomia, questões, elementos, fórmulas (mhchem) e estruturas (SMILES) |
 | `npm run sync:taxonomia` | Recalcula os campos derivados de temas e áreas depois de editar subtemas |
@@ -47,6 +52,7 @@ passaram por revisão de um professor de Química (`"revisado": false`).
 | `npm run android:apk` | APK de debug em `android/app/build/outputs/apk/debug/` |
 | `npm run app:windows` | Abre o app no Electron |
 | `npm run app:windows:package` | Gera o app portátil em `%LOCALAPPDATA%\Visao-Quimica\portable` |
+| `npm run app:windows:installer` | Gera o instalador (Setup) e o portátil em `.7z` em `release/windows/` |
 
 Se o `JAVA_HOME` da máquina apontar para outro JDK, defina-o só para o build do Android:
 
@@ -70,7 +76,34 @@ $env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-21...'; npm run android:
 
 Os instaladores prontos ficam nas branches `app-pc` (Windows, com Git LFS) e `app-mobile`
 (Android); veja [BRANCHES.md](BRANCHES.md). Nenhum pacote tem assinatura digital: o Windows e o
-Android podem mostrar avisos. Não desative proteções do sistema para contorná-los.
+Android podem mostrar avisos ou bloquear. Na máquina de build, o Controle Inteligente de
+Aplicativos do Windows bloqueou o instalador 0.2.0 (o portátil abriu normalmente). Não desative
+proteções do sistema para contorná-los; a solução definitiva é assinar os executáveis com um
+certificado de assinatura de código.
+
+## Conta sem dados pessoais
+
+Em Perfil, a pessoa pode criar uma conta para guardar o progresso e abri-lo em outro aparelho. A
+conta foi desenhada para que o projeto não guarde nenhum dado pessoal:
+
+- não há e-mail, senha nem nome: a conta é um **código de acesso** de 20 caracteres, gerado no
+  aparelho (95 bits aleatórios e um caractere de verificação contra erro de digitação);
+- do código saem, no próprio aparelho, o endereço do documento na nuvem (hash SHA-256) e a chave
+  que cifra o progresso (PBKDF2 com 150 000 iterações, AES-GCM de 256 bits);
+- o servidor guarda só `{ versao, iv, dados, atualizadoEm }`: dados cifrados num endereço que não
+  revela o código. As regras proíbem listar contas, então só quem tem o código acha o documento;
+- o login no Firebase é anônimo; o código nunca sai do aparelho.
+
+Num vazamento do banco, apareceriam só blocos cifrados, sem ligação com pessoas. Quem perde o
+código perde o acesso: não há recuperação, de propósito. O progresso é mesclado sem contar nada
+duas vezes (por subtema fica o registro com mais respostas; pontos, o maior valor) e enviado
+sozinho, 2,5 s depois da última mudança. Sem servidor configurado, o mesmo painel oferece backup
+em arquivo (exportar e importar). Código em `src/domain/conta.js`, `src/platform/contaNuvem.js`
+e `src/app/useConta.js`.
+
+> Isto é uma decisão técnica, não um parecer jurídico. O Firebase (Google) ainda processa dados
+> técnicos de acesso, como o endereço IP. Antes de publicar, confira as obrigações da LGPD com
+> quem cuida disso na sua instituição.
 
 ## Firebase (opcional)
 
@@ -83,6 +116,7 @@ Dados no Firestore, sob `artifacts/{VITE_APP_ID}/`:
 | Caminho | Quem escreve |
 |---|---|
 | `users/{uid}` | o próprio usuário |
+| `contas/{hash do código}` | quem tem o código; só campos cifrados, sem listagem |
 | `salas/{código}` | só o host da sala |
 | `salas/{código}/participantes/{uid}` | só o próprio participante, com campos fixos |
 | `salas/{código}/sinais/{uidA__uidB}` | só os dois aparelhos do par (conexão WebRTC) |
@@ -170,6 +204,22 @@ com o símbolo escrito.
   informada tenha a mesma composição da fórmula calculada a partir do SMILES.
 - A orientação espacial (estereoquímica) não é desenhada nos exemplos.
 
+## Dependências e vulnerabilidades
+
+`npm audit` deve ficar em zero, inclusive nas ferramentas de desenvolvimento (`npm run verificar`
+confere). Quando uma dependência indireta corrigida ainda não chegou ao pacote que a usa, ela é
+fixada em `overrides` no `package.json`, depois de conferir que a parte usada é compatível:
+
+| Pacote | Versão forçada | Usado por | O que é usado |
+|---|---|---|---|
+| `basic-ftp` | 6.2.3 | `get-uri` (proxy do firebase-tools) | `Client` |
+| `@opentelemetry/core` | 2.12.0 | `@google-cloud/pubsub` (firebase-tools) | `W3CTraceContextPropagator` |
+| `uuid` | 11.1.1 | `gaxios` e `xcode` (firebase-tools e Capacitor CLI) | `v4` |
+| `@grpc/grpc-js` | 1.14.6 | `@firebase/firestore` (só na versão Node, usada nos testes) | cliente gRPC |
+
+Ao atualizar o `firebase`, o `firebase-tools` ou o `@capacitor/cli`, veja se o override ainda é
+necessário (`npm ls <pacote>`) e retire-o quando o pacote de origem já trouxer a versão corrigida.
+
 ## Estrutura
 
 ```
@@ -184,7 +234,7 @@ assets/         SVGs do ícone e da tela de abertura
 electron/       janela do Windows
 scripts/        tema claro, ícones, empacotamento e instalador Windows, validação, busca de resquícios
 tests/rules/    testes das regras do Firestore (emulador)
-tests/e2e/      teste de fumaça do build no Electron
+tests/e2e/      fumaça do build, celular Android (arquivos do APK) e Firebase emulado (conta e pareamento)
 ```
 
 Todas as chaves do `localStorage` usam o prefixo `visao-quimica:` (`src/platform/storage.js`).

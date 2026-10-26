@@ -6,6 +6,57 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 
 ## [Não lançado]
 
+## [0.2.0] - 2026-10-26
+
+### Adicionado
+- Conta sem dados pessoais (Perfil → Conta e backup): código de acesso de 20 caracteres no lugar
+  de e-mail e senha; progresso cifrado no aparelho (AES-GCM, chave por PBKDF2) e guardado num
+  endereço que é o hash do código. Sincroniza sozinho, mescla sem contar nada duas vezes e permite
+  sair, apagar a conta da nuvem e salvar o código em arquivo.
+- Backup do progresso em arquivo (exportar e importar), que funciona sem servidor.
+- Regras do Firestore para `contas/{id}`: endereço de 64 caracteres hexadecimais, só os campos
+  cifrados, tamanho limitado, data do servidor e listagem proibida (3 testes novos; 15 no total).
+- `npm run test:nuvem`: com o Firebase emulado, testa a conta entre aparelhos, o login que volta
+  depois de falha de rede e o pareamento P2P entre três alunos numa sala (22 verificações).
+- `npm run verificar` e `CHECKLIST.md`: todas as checagens com o tempo de cada uma, etapas
+  independentes em paralelo, build reaproveitado quando a entrada não muda e orçamento de tamanho
+  por arquivo JavaScript.
+- `REVISAO_QUESTOES.md`: revisão das 477 questões por IA (ver "Corrigido").
+- `npm run test:android`: abre os arquivos que vão no APK num Chromium em modo celular Android
+  (toque real, tela de Pixel 7, user agent do WebView, ponte do Capacitor simulada): 16
+  verificações, entre elas navegação pela barra inferior, uma questão respondida por toque,
+  estrutura molecular e o painel de conta.
+- Teste de fumaça: barra fixa ao rolar e backup em arquivo (download real e importação), com 18
+  verificações no total.
+
+### Alterado
+- A barra superior (Início, Fundamentos, Prática...) fica fixa no topo ao rolar a página.
+- O login anônimo tenta de novo sozinho depois de uma falha de rede (3, 10, 30 e 60 s, e assim
+  que a rede volta). Antes, só reabrindo o app.
+- Atualizados `firebase-tools` 14 → 15.33.0 e `sharp` 0.34 → 0.35.5; `overrides` para
+  `basic-ftp`, `@opentelemetry/core`, `uuid` e `@grpc/grpc-js`. `npm audit`: de 16
+  vulnerabilidades (1 crítica, 7 altas) para zero, inclusive nas ferramentas de desenvolvimento.
+- Emuladores do Firebase num cache só deste projeto (`.cache/emuladores`), para não disputar
+  arquivos com emuladores de outros projetos.
+- O servidor de desenvolvimento não vigia mais `.cache`, `release`, `android` e `dist`.
+- "Como funciona" e Perfil explicam a conta e o backup.
+
+### Corrigido
+- Oito textos de questões, sem mudança de gabarito: data do modelo de Thomson (1904), mistura
+  azeotrópica água-etanol, gases nobres no tempo de Mendeleev, raio do argônio, pressão padrão da
+  IUPAC (1 bar), definição do zero absoluto e "ambientação" de vidrarias.
+- O servidor de desenvolvimento caía quando o emulador do Firestore travava um arquivo em `.cache`.
+
+### Conferido
+- Pareamento entre aparelhos: três alunos em sessões separadas se conectam diretamente (WebRTC),
+  cada um vê os outros dois, com ping de 4 a 6 ms; três canais de sinalização no Firestore.
+- Android: os arquivos do APK testados num Chromium em modo celular Android (`test:android`). O
+  emulador Android não roda nesta máquina: a virtualização está desligada no firmware (BIOS), e o
+  emulador x86 exige aceleração por hardware.
+- Windows: o app portátil 0.2.0 abre normalmente. O instalador 0.2.0, gerado pelo mesmo script
+  que passou no teste completo na 0.1.0, não pôde ser executado aqui: o Controle Inteligente de
+  Aplicativos do Windows bloqueou o arquivo sem assinatura (evento 3077 do Code Integrity).
+
 ## [0.1.0] - 2026-10-26
 
 Primeira versão, construída em sete fases a partir da estrutura técnica de outro projeto (só a
