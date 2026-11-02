@@ -1,7 +1,7 @@
 {
   "name": "visao-quimica",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Plataforma de estudo e treino de Química, com trilhas por etapa escolar",
   "author": "Visão Química",
   "type": "module",
