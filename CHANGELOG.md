@@ -6,6 +6,16 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 
 ## [Não lançado]
 
+## [0.2.1] - 2026-11-02
+
+### Adicionado
+- Acesso à tela "Como funciona" pelo ícone de informação ao lado do seletor de tema.
+- Créditos e atalhos para desenvolvedores, IFPI, conteúdos de Química e desafios para professores.
+
+### Alterado
+- Atualizados os metadados para a versão 0.2.1 e o código da versão Android para 3.
+- O servidor de desenvolvimento ignora os instaladores das branches de distribuição.
+
 ## [0.2.0] - 2026-10-26
 
 ### Adicionado
