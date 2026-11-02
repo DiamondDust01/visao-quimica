@@ -61,7 +61,7 @@ export default function App() {
   };
   const mainRef = useRef(null);
   // Quem chega por um link de sala entra direto, sem passar pela escolha de etapa.
-  const needsOnboarding = !profile && !initialRoomCode;
+  const needsOnboarding = !profile && !initialRoomCode && activeTab !== 'como-funciona';
 
   // Ao trocar de aba, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
   useEffect(() => {
@@ -104,7 +104,7 @@ export default function App() {
       ? <Notice tone="info">Conectando ao servidor…</Notice>
       : <Desafios index={TAXONOMIA} questions={QUESTIONS} etapas={ETAPAS} progress={progress} uid={deviceId} firebaseEnabled={firebaseEnabled && Boolean(user)} initialRoomCode={initialRoomCode} recordAnswer={recordAnswer} />;
   } else {
-    screen = <ComoFunciona firebaseEnabled={firebaseEnabled} />;
+    screen = <ComoFunciona firebaseEnabled={firebaseEnabled} onOpenTab={setActiveTab} studyAvailable={Boolean(profile || initialRoomCode)} />;
   }
 
   return (
@@ -153,6 +153,16 @@ export default function App() {
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </button>
             ))}
+            <button
+              type="button"
+              onClick={() => setActiveTab('como-funciona')}
+              aria-label="Sobre o projeto e créditos"
+              aria-current={currentId === 'como-funciona' ? 'page' : undefined}
+              title="Sobre o projeto e créditos"
+              className={`flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${currentId === 'como-funciona' ? 'text-teal-200' : 'text-slate-400'}`}
+            >
+              <Info className="h-5 w-5" aria-hidden="true" />
+            </button>
             <ThemeToggle />
           </div>
         </div>
