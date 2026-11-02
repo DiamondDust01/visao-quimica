@@ -7,7 +7,7 @@ import { MAX_ROOM_PLAYERS } from '../platform/competitionRooms.js';
 
 const pct = (value) => `${Math.round(value * 100)}%`;
 
-export default function ComoFunciona({ firebaseEnabled }) {
+export default function ComoFunciona({ firebaseEnabled, onOpenTab, studyAvailable }) {
   return (
     <div className="space-y-4">
       <Card>
@@ -67,6 +67,34 @@ export default function ComoFunciona({ firebaseEnabled }) {
             : 'Para levar o progresso a outro aparelho, use o backup em arquivo, em Perfil.'}</li>
           <li>Massas atômicas da IUPAC (CIAAW). Todo o conteúdo funciona offline, inclusive no Android e no Windows.</li>
           <li>As questões são originais e ainda passam por revisão de professores de Química.</li>
+        </ul>
+      </Card>
+
+      <Card>
+        <h2 className="text-lg font-bold text-white">Projeto e créditos</h2>
+        <p className="mt-2 text-sm text-slate-300">Informações sobre o desenvolvimento, a instituição, a matéria e o uso por professores.</p>
+        {!studyAvailable && <p className="mt-2 text-sm text-slate-400">Escolha sua etapa escolar para acessar os conteúdos de Química e os desafios em sala.</p>}
+        <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <li>
+            <a href="https://github.com/DiamondDust01/visao-quimica" target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-300 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
+              Desenvolvedores (GitHub)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ifpi.edu.br/" target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-300 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
+              IFPI
+            </a>
+          </li>
+          <li>
+            <button type="button" onClick={() => onOpenTab('fundamentos')} disabled={!studyAvailable} className={`font-semibold underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${studyAvailable ? 'text-teal-300 hover:underline' : 'cursor-not-allowed text-slate-600'}`}>
+              Matéria: Química
+            </button>
+          </li>
+          <li>
+            <button type="button" onClick={() => onOpenTab('desafios')} disabled={!studyAvailable} className={`font-semibold underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${studyAvailable ? 'text-teal-300 hover:underline' : 'cursor-not-allowed text-slate-600'}`}>
+              Para professores: desafios em sala
+            </button>
+          </li>
         </ul>
       </Card>
     </div>
