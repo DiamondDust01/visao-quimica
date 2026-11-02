@@ -14,6 +14,7 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 
 ### Alterado
 - Atualizados os metadados para a versão 0.2.1 e o código da versão Android para 3.
+- O servidor de desenvolvimento ignora os instaladores das branches de distribuição.
 
 ## [0.2.0] - 2026-10-26
 
