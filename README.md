@@ -4,7 +4,7 @@ Plataforma de estudo e treino de Química, com trilhas recomendadas por etapa es
 seleção livre de temas. Roda na web, no Android (Capacitor) e no Windows (Electron) a
 partir do mesmo build, e funciona offline.
 
-> Estado atual (2026-10-26, versão 0.2.0): todos os módulos funcionando e builds web, Android e
+> Estado atual (2026-11-02, versão 0.2.1): todos os módulos funcionando e builds web, Android e
 > Windows conferidos: Fundamentos (trilha por etapa), Prática (477 questões originais, revisadas
 > por IA e ainda sem revisão de professor), Laboratório do Mentor (regras fixas, sem IA
 > generativa), Desafios em sala (Firestore ou demonstração local, com pareamento direto entre
@@ -12,10 +12,10 @@ partir do mesmo build, e funciona offline.
 > de SMILES), conta por código de acesso sem dados pessoais e Como funciona.
 > Histórico com datas em [CHANGELOG.md](CHANGELOG.md).
 
-## Downloads (versão 0.2.0)
+## Downloads (versão 0.2.1)
 
 - **Windows:** branch [`app-pc`](https://github.com/DiamondDust01/visao-quimica/tree/app-pc/installers/windows): instalador
-  `Visao-Quimica-Setup-0.2.0.exe` ou versão portátil `.7z` (Git LFS).
+  `Visao-Quimica-Setup-0.2.1.exe` ou versão portátil `.7z` (Git LFS).
 - **Android:** branch [`app-mobile`](https://github.com/DiamondDust01/visao-quimica/tree/app-mobile/installers/android): APK de teste.
 - Como as branches se organizam: [BRANCHES.md](BRANCHES.md).
 
