@@ -66,6 +66,7 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
   const all = [...result.trilha, ...result.concluidos];
   const summary = summarizeProgress(all, progress);
   const next = result.proximo ? index.get(result.proximo) : null;
+  const recomendados = result.recomendados.filter((id) => id !== result.proximo);
   const etapaLabel = etapa.grupo === etapa.nome ? etapa.nome : `${etapa.grupo} · ${etapa.nome}`;
 
   return (
@@ -89,10 +90,10 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
 
       {next && (
         <Card className="border-teal-500/40">
-          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Próximo passo</p>
+          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Passo 2 · Tema recomendado</p>
           <h2 className="mt-1 text-xl font-black text-white">{next.nome}</h2>
           <p className="mt-1 text-sm text-slate-400">{next.descricao}</p>
-          <button type="button" onClick={() => onPractice([next.id])} className={`${buttonPrimary} mt-4`}>Praticar este tema <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
+          <button type="button" onClick={() => onPractice([next.id])} className={`${buttonPrimary} mt-4`}>Passo 3 · Praticar este tema <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
         </Card>
       )}
 
@@ -110,9 +111,9 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
         emptyText="Nada para revisar por enquanto."
       />
       <SubtemaList
-        title="Recomendados para você"
-        description="Na ordem sugerida: cada tema vem depois dos que ele usa como base."
-        ids={result.recomendados}
+        title={next ? 'Outros recomendados para você' : 'Recomendados para você'}
+        description={next ? 'Depois do tema destacado, na ordem sugerida e respeitando os pré-requisitos.' : 'Na ordem sugerida: cada tema vem depois dos que ele usa como base.'}
+        ids={recomendados}
         onPractice={onPractice}
         index={index}
         progress={progress}
