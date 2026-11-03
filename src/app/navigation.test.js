@@ -4,8 +4,9 @@ import { TABS, TAB_IDS, DEFAULT_TAB, isTabId, getTab } from './navigation.js';
 
 test('abas têm IDs únicos e incluem os módulos de estudo', () => {
   assert.equal(new Set(TAB_IDS).size, TABS.length);
-  ['fundamentos', 'pratica', 'laboratorio', 'como-funciona'].forEach((id) => assert.ok(isTabId(id), id));
-  assert.equal(TABS.length, 5);
+  ['fundamentos', 'pratica', 'laboratorio'].forEach((id) => assert.ok(isTabId(id), id));
+  assert.equal(TABS.length, 4);
+  assert.ok(!isTabId('como-funciona'));
   assert.ok(!isTabId('desafios'));
   assert.ok(isTabId(DEFAULT_TAB));
 });

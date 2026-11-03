@@ -20,7 +20,7 @@ export default function Onboarding({ etapas, observacao, onChoose }) {
           <h1 className="text-2xl font-black text-white sm:text-3xl">Boas-vindas ao Visão Química</h1>
         </div>
         <p className="mt-3 max-w-2xl text-slate-300">
-          Em que etapa você está? Com isso, sugerimos uma trilha de temas na ordem certa. Você pode ignorar a sugestão quando quiser e mudar a etapa depois, em Perfil.
+          Escolha sua etapa para receber uma trilha sugerida, ou selecione Estudo livre para escolher os temas por conta própria. Você pode mudar essa opção depois, em Perfil.
         </p>
       </Card>
       <Card>
