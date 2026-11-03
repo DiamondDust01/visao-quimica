@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { buttonPrimary, buttonSecondary, Card, Notice } from '../components/ui.jsx';
+import { buttonPrimary, buttonSecondary, Card } from '../components/ui.jsx';
 import { TABS } from '../app/navigation.js';
 import { recommend } from '../domain/recomendador.js';
 import NivelCard from '../components/NivelCard.jsx';
 
-export default function Inicio({ firebaseEnabled, authError, onOpenTab, onPractice, index, profile, progress, points = 0 }) {
+export default function Inicio({ onOpenTab, onPractice, index, profile, progress, points = 0 }) {
   const result = useMemo(() => recommend({ index, etapaId: profile?.etapaId, progress }), [index, profile?.etapaId, progress]);
   const etapa = result.etapa;
   const next = result.proximo ? index.get(result.proximo) : null;
@@ -38,13 +38,6 @@ export default function Inicio({ firebaseEnabled, authError, onOpenTab, onPracti
           </div>
         </Card>
       )}
-
-      {!firebaseEnabled && (
-        <Notice tone="info">
-          Este app está funcionando offline. Seu progresso fica salvo neste aparelho, e as salas funcionam como demonstração local.
-        </Notice>
-      )}
-      {authError && <Notice tone="warn">{authError}</Notice>}
 
       <div className="grid gap-3 sm:grid-cols-2">
         {TABS.filter((tab) => tab.id !== 'inicio').map((tab) => (

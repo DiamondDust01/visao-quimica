@@ -1,6 +1,5 @@
 // Verificação de entrega: roda as checagens do projeto, mede o tempo de cada uma e falha se
-// alguma falhar. Uso: npm run verificar [-- --sem-regras] [-- --sem-e2e] [-- --completo]
-// --completo inclui o teste com o Firebase emulado (conta e pareamento, cerca de 1 minuto).
+// alguma falhar. Uso: npm run verificar [-- --sem-e2e]
 // - etapas independentes rodam em paralelo;
 // - o build só é refeito se algum arquivo de entrada mudou;
 // - cada arquivo JavaScript do build tem orçamento de tamanho.
@@ -101,20 +100,10 @@ const biggest = jsSizes.sort((a, b) => b.size - a.size)[0];
 record('Orçamento de tamanho', { ok: build.ok && jsSizes.length > 0 && overBudget.length === 0, segundos: 0 },
   overBudget.length ? `acima de ${JS_BUDGET / 1024} kB: ${overBudget.map((item) => item.name).join(', ')}` : `maior arquivo: ${biggest ? `${biggest.name} (${Math.round(biggest.size / 1024)} kB)` : 'nenhum'}`);
 
-// 4. Teste de fumaça e regras do Firestore (usam portas e o Electron: em sequência).
+// 4. Teste de fumaça no Electron.
 if (!args.has('--sem-e2e') && build.ok) {
   const e2e = await run('npx', ['electron', 'tests/e2e/fumaca.cjs'], { remove: ['ELECTRON_RUN_AS_NODE'] });
   record('Teste de fumaça (Electron)', e2e, lastLine(e2e.output, /Tudo certo|falha/));
-}
-if (!args.has('--sem-regras')) {
-  const rules = await run(npm, ['run', 'test:rules']);
-  record('Regras do Firestore (emulador)', rules, testCount(rules.output));
-}
-
-if (args.has('--completo')) {
-  const cloud = await run(npm, ['run', 'test:nuvem'], { remove: ['ELECTRON_RUN_AS_NODE'] });
-  const checks = (cloud.output.match(/^✔ /gm) || []).length;
-  record('Conta e pareamento (Firebase emulado)', cloud, cloud.ok ? `${checks} verificações` : lastLine(cloud.output, /✖|falha/));
 }
 
 // Relatório.
