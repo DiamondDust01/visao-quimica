@@ -114,7 +114,7 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
     <div className="space-y-4 pb-40">
       <Card>
         <h1 className="text-2xl font-black text-white">Prática</h1>
-        <p className="mt-2 text-slate-300">Escolha um ou mais temas e monte sua sessão de questões. A resolução passo a passo aparece depois de cada resposta.</p>
+        <p className="mt-2 text-slate-300">Passo 2: escolha um ou mais temas. Passo 3: defina a quantidade e comece a sessão; a resolução passo a passo aparece depois de cada resposta.</p>
       </Card>
       {notice && <Notice tone="warn">{notice}</Notice>}
 
@@ -155,7 +155,7 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
               </select>
             </label>
             {selected.size > 0 && <button type="button" onClick={() => setSelected(new Set())} className={buttonSecondary}>Limpar</button>}
-            <button type="button" disabled={!available} onClick={() => start(selected)} className={buttonPrimary}>Começar sessão</button>
+            <button type="button" disabled={!available} onClick={() => start(selected)} className={buttonPrimary}>Passo 3 · Começar sessão</button>
           </div>
         </div>
       </div>
