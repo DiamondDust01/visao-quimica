@@ -4,18 +4,17 @@ Plataforma de estudo e treino de Química, com trilhas recomendadas por etapa es
 seleção livre de temas. Roda na web, no Android (Capacitor) e no Windows (Electron) a
 partir do mesmo build, e funciona offline.
 
-> Estado atual (2026-11-02, versão 0.2.1): todos os módulos funcionando e builds web, Android e
+> Estado atual (2026-11-02, versão 0.3.0): todos os módulos funcionando e builds web, Android e
 > Windows conferidos: Fundamentos (trilha por etapa), Prática (477 questões originais, revisadas
 > por IA e ainda sem revisão de professor), Laboratório do Mentor (regras fixas, sem IA
-> generativa), Desafios em sala (Firestore ou demonstração local, com pareamento direto entre
-> aparelhos), Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir
-> de SMILES), conta por código de acesso sem dados pessoais e Como funciona.
+> generativa), Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir
+> de SMILES), backup local do progresso e créditos do projeto.
 > Histórico com datas em [CHANGELOG.md](CHANGELOG.md).
 
-## Downloads (versão 0.2.1)
+## Downloads (versão 0.3.0)
 
 - **Windows:** branch [`app-pc`](https://github.com/DiamondDust01/visao-quimica/tree/app-pc/installers/windows): instalador
-  `Visao-Quimica-Setup-0.2.1.exe` ou versão portátil `.7z` (Git LFS).
+  `Visao-Quimica-Setup-0.3.0.exe` ou versão portátil `.7z` (Git LFS).
 - **Android:** branch [`app-mobile`](https://github.com/DiamondDust01/visao-quimica/tree/app-mobile/installers/android): APK de teste.
 - Como as branches se organizam: [BRANCHES.md](BRANCHES.md).
 
@@ -27,8 +26,6 @@ em [REVISAO_QUESTOES.md](REVISAO_QUESTOES.md).
 
 - Node.js 24 e npm 11
 - Para o Android: Android SDK e **JDK 21** (o Capacitor 8 não compila com o JDK 17)
-- Para os testes com o Firebase emulado (`test:rules`, `test:nuvem`): Java 21 ou mais novo (o
-  emulador do Firestore roda em Java). Os emuladores ficam em `.cache/emuladores`, só deste projeto.
 
 ## Comandos
 
@@ -38,9 +35,7 @@ em [REVISAO_QUESTOES.md](REVISAO_QUESTOES.md).
 | `npm run dev` | Servidor de desenvolvimento em http://localhost:3000 |
 | `npm run build` | Gera o build web em `dist/` |
 | `npm test` | Testes de unidade (`node --test`) |
-| `npm run test:rules` | Sobe o emulador do Firestore e testa `firestore.rules` |
-| `npm run test:nuvem` | Firebase emulado: conta entre aparelhos, login após falha de rede e pareamento P2P entre três alunos |
-| `npm run verificar` | Roda todas as checagens com o tempo de cada uma (veja [CHECKLIST.md](CHECKLIST.md)); `-- --completo` inclui `test:nuvem` |
+| `npm run verificar` | Roda testes, validação de conteúdo, auditoria, build e teste de fumaça (veja [CHECKLIST.md](CHECKLIST.md)) |
 | `npm run test:e2e` | Build e teste de fumaça no Electron: todas as abas, barra fixa, uma questão, ferramentas, backup em arquivo, console sem erros |
 | `npm run test:android` | Copia o build para o Android e abre os arquivos do APK num Chromium em modo celular (toque, tela de Pixel 7, user agent do WebView); não substitui um aparelho |
 | `npm run check:residue` | Procura resquícios do projeto de origem; sai com erro se achar algo |
@@ -63,9 +58,9 @@ $env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-21...'; npm run android:
 ## Builds e instaladores
 
 - **Web:** `npm run build` gera `dist/` (abre de qualquer pasta, `base: './'`). Bibliotecas e
-  conteúdo saem em arquivos separados (`react`, `katex`, `firebase`, `conteudo`). O build tem uma
-  política de segurança de conteúdo (CSP) no `index.html`: scripts só do próprio app e rede só para
-  o Firebase (`vite.config.js`). Em `npm run dev` ela fica desligada.
+  conteúdo saem em arquivos separados (`react`, `katex`, `conteudo`). O build tem uma política de
+  segurança de conteúdo (CSP) no `index.html`: scripts e conexões só do próprio app
+  (`vite.config.js`). Em `npm run dev` ela fica desligada.
 - **Android:** `npm run android:apk` gera um APK de debug, assinado com a chave de depuração
   (serve para teste, não para a Play Store).
 - **Windows:** `npm run app:windows:package` monta o app portátil com ícone e versão no
@@ -81,48 +76,24 @@ Aplicativos do Windows bloqueou o instalador 0.2.0 (o portátil abriu normalment
 proteções do sistema para contorná-los; a solução definitiva é assinar os executáveis com um
 certificado de assinatura de código.
 
-## Conta sem dados pessoais
+## Dados locais e backup
 
-Em Perfil, a pessoa pode criar uma conta para guardar o progresso e abri-lo em outro aparelho. A
-conta foi desenhada para que o projeto não guarde nenhum dado pessoal:
+Perfil, progresso por tema, pontos e histórico do Mentor são salvos no armazenamento local do
+aparelho. Não há criação de conta nem envio automático desses dados. Para transferi-los, use
+Perfil → Backup local: exporte um arquivo JSON, compartilhe-o manualmente ou importe-o em outro
+aparelho. A mesclagem preserva o progresso existente sem duplicar respostas e mantém o formato de
+backup versão 1, para compatibilidade com arquivos exportados anteriormente.
 
-- não há e-mail, senha nem nome: a conta é um **código de acesso** de 20 caracteres, gerado no
-  aparelho (95 bits aleatórios e um caractere de verificação contra erro de digitação);
-- do código saem, no próprio aparelho, o endereço do documento na nuvem (hash SHA-256) e a chave
-  que cifra o progresso (PBKDF2 com 150 000 iterações, AES-GCM de 256 bits);
-- o servidor guarda só `{ versao, iv, dados, atualizadoEm }`: dados cifrados num endereço que não
-  revela o código. As regras proíbem listar contas, então só quem tem o código acha o documento;
-- o login no Firebase é anônimo; o código nunca sai do aparelho.
+O lembrete semanal ou mensal é local e só aparece no Perfil quando o app está aberto; não agenda
+notificações nem envia e-mail. O arquivo pode conter etapa escolar, desempenho e histórico do
+Mentor. Se escolher e-mail na janela de compartilhamento, o provedor recebe o anexo e pode
+armazená-lo.
 
-Num vazamento do banco, apareceriam só blocos cifrados, sem ligação com pessoas. Quem perde o
-código perde o acesso: não há recuperação, de propósito. O progresso é mesclado sem contar nada
-duas vezes (por subtema fica o registro com mais respostas; pontos, o maior valor) e enviado
-sozinho, 2,5 s depois da última mudança. Sem servidor configurado, o mesmo painel oferece backup
-em arquivo (exportar e importar). Código em `src/domain/conta.js`, `src/platform/contaNuvem.js`
-e `src/app/useConta.js`.
-
-> Isto é uma decisão técnica, não um parecer jurídico. O Firebase (Google) ainda processa dados
-> técnicos de acesso, como o endereço IP. Antes de publicar, confira as obrigações da LGPD com
-> quem cuida disso na sua instituição.
-
-## Firebase (opcional)
-
-Sem configuração, o app funciona offline: o progresso fica no aparelho e as salas
-funcionam como demonstração local (entre abas do mesmo navegador). Para salas reais,
-copie `.env.example` para `.env` e preencha `VITE_FIREBASE_CONFIG`. O login é anônimo.
-
-Dados no Firestore, sob `artifacts/{VITE_APP_ID}/`:
-
-| Caminho | Quem escreve |
-|---|---|
-| `users/{uid}` | o próprio usuário |
-| `contas/{hash do código}` | quem tem o código; só campos cifrados, sem listagem |
-| `salas/{código}` | só o host da sala |
-| `salas/{código}/participantes/{uid}` | só o próprio participante, com campos fixos |
-| `salas/{código}/sinais/{uidA__uidB}` | só os dois aparelhos do par (conexão WebRTC) |
-
-Os emuladores usam as portas 8180 (Firestore) e 9199 (Auth), definidas em `firebase.json`.
-Para usá-los no app em desenvolvimento, defina `VITE_FIREBASE_EMULATORS=1`.
+Versões anteriores chegaram a incluir sincronização de conta e recursos conectados, removidos na
+0.3.0. Esta versão não contém integração nem credenciais Firebase e não envia dados de estudo a
+servidores. Dados que uma instalação antiga eventualmente tenha enviado a um serviço externo não
+são apagados por esta atualização; não há configuração de serviço remoto neste repositório para
+consultá-los ou removê-los.
 
 ## Identificador do app
 
@@ -212,13 +183,11 @@ fixada em `overrides` no `package.json`, depois de conferir que a parte usada é
 
 | Pacote | Versão forçada | Usado por | O que é usado |
 |---|---|---|---|
-| `basic-ftp` | 6.2.3 | `get-uri` (proxy do firebase-tools) | `Client` |
-| `@opentelemetry/core` | 2.12.0 | `@google-cloud/pubsub` (firebase-tools) | `W3CTraceContextPropagator` |
-| `uuid` | 11.1.1 | `gaxios` e `xcode` (firebase-tools e Capacitor CLI) | `v4` |
-| `@grpc/grpc-js` | 1.14.6 | `@firebase/firestore` (só na versão Node, usada nos testes) | cliente gRPC |
+| `glob` | 14.0.2 | dependências indiretas | CLI de build |
+| `minimatch` | 11.0.1 | dependências indiretas | correspondência de caminhos |
 
-Ao atualizar o `firebase`, o `firebase-tools` ou o `@capacitor/cli`, veja se o override ainda é
-necessário (`npm ls <pacote>`) e retire-o quando o pacote de origem já trouxer a versão corrigida.
+Os overrides podem ser retirados quando as dependências de origem trouxerem versões corrigidas
+(`npm ls <pacote>` e `npm audit`).
 
 ## Estrutura
 
@@ -229,12 +198,11 @@ src/
   screens/      telas dos módulos
   data/         etapas e taxonomia (JSON versionado)
   domain/       taxonomia, recomendador, progresso, perfil, validação
-  platform/     Firebase, armazenamento local, salas, pareamento P2P, rede
+  platform/     armazenamento local e integrações do aparelho
 assets/         SVGs do ícone e da tela de abertura
 electron/       janela do Windows
 scripts/        tema claro, ícones, empacotamento e instalador Windows, validação, busca de resquícios
-tests/rules/    testes das regras do Firestore (emulador)
-tests/e2e/      fumaça do build, celular Android (arquivos do APK) e Firebase emulado (conta e pareamento)
+tests/e2e/      fumaça do build e teste Android em modo celular
 ```
 
 Todas as chaves do `localStorage` usam o prefixo `visao-quimica:` (`src/platform/storage.js`).

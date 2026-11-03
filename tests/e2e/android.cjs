@@ -63,13 +63,23 @@ app.whenReady().then(async () => {
   await tap(`document.querySelector('label[for="onboarding-etapa-em-1"]')`);
   await tap(byText('Continuar'));
   const bottomNav = await js(`(() => { const nav = [...document.querySelectorAll('nav')].find((n) => n.className.includes('bottom-0') && getComputedStyle(n).display !== 'none'); return nav ? nav.querySelectorAll('button').length : 0; })()`);
-  check(bottomNav === 6, `barra inferior do celular com 6 botões (${bottomNav})`);
+  check(bottomNav === 5, `barra inferior do celular com 5 botões (${bottomNav})`);
   await shot('android-inicio');
-  for (const label of ['Trilhas', 'Prática', 'Salas', 'Mentor', 'Ajuda']) {
+  for (const label of ['Trilhas', 'Prática', 'Mentor', 'Ajuda']) {
     await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === ${JSON.stringify(label)})`);
     const h1 = await js(`document.querySelector('main h1')?.innerText || ''`);
     check(Boolean(h1), `toque em ${label} abre ${h1}`);
   }
+  await tap(`document.querySelector('button[aria-label="Sobre o projeto e créditos"]')`);
+  check(await js(`(() => {
+    const main = document.querySelector('main');
+    const links = [...main.querySelectorAll('a')].map((link) => link.href);
+    return links.includes('https://github.com/DiamondDust01/visao-quimica') &&
+      links.includes('https://www.ifpi.edu.br/') &&
+      [...main.querySelectorAll('button')].some((button) => button.innerText.includes('Para professores'));
+  })()`), 'ícone do cabeçalho abre créditos e links para desenvolvedores, IFPI e professores');
+  await tap(byText('Para professores: trilhas de apoio às aulas'));
+  check(await js(`document.querySelector('main h1')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
   await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === 'Trilhas')`);
   await js('window.scrollTo(0, 2000)'); await wait(300);
   const header = await js(`(() => ({ topo: Math.round(document.querySelector('header').getBoundingClientRect().top), rolagem: Math.round(scrollY) }))()`);
@@ -89,7 +99,7 @@ app.whenReady().then(async () => {
   await shot('android-questao');
   await tap(byText('Encerrar sessão'));
 
-  // Ferramentas, estrutura e conta.
+  // Ferramentas, estrutura e backup local.
   await tap(`document.querySelector('button[aria-label^="Ferramentas"]')`);
   await tap(byText('Estruturas'));
   await tap(byText('Cafeína'));
@@ -97,11 +107,10 @@ app.whenReady().then(async () => {
   check(await js(`Boolean(document.querySelector('main figure svg:not(.hidden)')) && document.querySelector('main').innerText.includes('194,19')`), 'estrutura da cafeína desenhada, com massa molar');
   await shot('android-estrutura');
   await tap(`document.querySelector('button[aria-label="Perfil"]')`);
-  const conta = await js(`document.querySelector('main').innerText`);
-  check(conta.includes('Backup em arquivo') && conta.includes('servidor do app, que não está configurado'), 'Perfil: sem servidor, oferece o backup em arquivo');
-  await tap(`document.querySelector('main h2 + p')`);
-  await js(`[...document.querySelectorAll('h2')].find((h) => h.innerText.includes('Conta e backup')).scrollIntoView()`);
-  await shot('android-conta');
+  const perfil = await js(`document.querySelector('main').innerText`);
+  check(perfil.includes('Backup local') && perfil.toLowerCase().includes('não há conta nem envio automático'), 'Perfil: progresso local e sem sincronização de conta');
+  check(perfil.includes('Lembrete de backup') && perfil.includes('Não envia e-mail'), 'Perfil: lembrete manual sem envio em segundo plano');
+  await shot('android-backup');
 
   console.log('erros/avisos no console:', errors.length ? errors : 'nenhum');
   check(errors.length === 0, 'console sem erros nem avisos');

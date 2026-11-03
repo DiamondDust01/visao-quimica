@@ -1,7 +1,7 @@
 {
   "name": "visao-quimica",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Plataforma de estudo e treino de Química, com trilhas por etapa escolar",
   "author": "Visão Química",
   "type": "module",
@@ -10,10 +10,8 @@
     "dev": "vite",
     "build": "vite build",
     "test": "node --test \"src/**/*.test.js\" \"scripts/**/*.test.mjs\"",
-    "test:rules": "node scripts/test-rules.mjs",
     "test:e2e": "npm run build && electron tests/e2e/fumaca.cjs",
     "test:android": "npm run android:sync && electron tests/e2e/android.cjs",
-    "test:nuvem": "node scripts/test-nuvem.mjs",
     "verificar": "node scripts/verificar.mjs",
     "preview": "vite preview",
     "icons": "node scripts/generate-icons.mjs",
@@ -29,10 +27,8 @@
     "app:windows:installer": "npm run app:windows:package && node scripts/package-windows-installer.cjs"
   },
   "dependencies": {
-    "firebase": "^12.19.0",
     "katex": "0.18.11",
     "lucide-react": "^0.525.0",
-    "qrcode-generator": "2.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "smiles-drawer": "2.4.1"
@@ -42,36 +38,20 @@
     "@capacitor/cli": "^8.4.3",
     "@capacitor/core": "^8.4.3",
     "@electron/asar": "^4.3.1",
-    "@firebase/rules-unit-testing": "^5.0.2",
     "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-react": "^4.3.1",
     "electron": "^44.5.1",
-    "firebase-tools": "15.33.0",
     "rcedit": "5.0.2",
     "sharp": "0.35.5",
     "tailwindcss": "^4.3.3",
     "vite": "^6.4.3"
   },
   "overrides": {
-    "basic-ftp": "6.2.3",
-    "@google-cloud/pubsub": {
-      "@opentelemetry/core": "2.12.0"
-    },
-    "gaxios": {
-      "uuid": "11.1.1"
-    },
-    "xcode": {
-      "uuid": "11.1.1"
-    },
-    "@firebase/firestore": {
-      "@grpc/grpc-js": "1.14.6"
-    }
+    "glob": "14.0.2",
+    "minimatch": "11.0.1"
   },
   "allowScripts": {
     "esbuild@0.25.12": true,
-    "@firebase/util@1.15.3": true,
-    "protobufjs@7.6.6": true,
-    "sharp@0.34.5": true,
-    "re2": false
+    "sharp@0.35.5": true
   }
 }

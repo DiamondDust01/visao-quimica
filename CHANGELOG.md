@@ -4,13 +4,26 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [0.3.0] - 2026-11-02
+
+### Removido
+- Multiplayer, salas locais/online, pareamento entre aparelhos e os serviços, telas, testes e
+  configurações Firebase associados. O app não cria conta nem conecta a um backend.
+
+### Alterado
+- Perfil e progresso permanecem no aparelho; o backup local mantém compatibilidade com arquivos
+  versão 1, permite compartilhamento manual e oferece lembretes semanais ou mensais sem envio ou
+  notificação em segundo plano.
+- Removido o plugin Google Services do build Android e restringidas as conexões do app ao próprio
+  aplicativo pela CSP.
+- Atualizada a versão do app e do Android para 0.3.0 (versionCode 4).
+- README e checklist descrevem o produto sem multiplayer/Firebase.
 
 ## [0.2.1] - 2026-11-02
 
 ### Adicionado
 - Acesso à tela "Como funciona" pelo ícone de informação ao lado do seletor de tema.
-- Créditos e atalhos para desenvolvedores, IFPI, conteúdos de Química e desafios para professores.
+- Créditos e atalhos para desenvolvedores, IFPI, conteúdos de Química e apoio a professores.
 
 ### Alterado
 - Atualizados os metadados para a versão 0.2.1 e o código da versão Android para 3.
