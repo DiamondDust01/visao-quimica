@@ -6,8 +6,7 @@ export const TABS = [
   { id: 'inicio', label: 'Início', short: 'Início', description: 'Visão geral do seu estudo.' },
   { id: 'fundamentos', label: 'Fundamentos', short: 'Trilhas', description: 'Trilhas guiadas pela sua etapa escolar.' },
   { id: 'pratica', label: 'Prática', short: 'Prática', description: 'Sessões com os temas que você escolher, com resolução passo a passo.' },
-  { id: 'laboratorio', label: 'Laboratório do Mentor', short: 'Mentor', description: 'Padrões nos seus erros e o que revisar, por regras fixas e sem IA generativa.' },
-  { id: 'como-funciona', label: 'Como funciona', short: 'Ajuda', description: 'Pontuação, níveis e informações do projeto.' }
+  { id: 'laboratorio', label: 'Laboratório do Mentor', short: 'Mentor', description: 'Padrões nos seus erros e o que revisar, por regras fixas e sem IA generativa.' }
 ];
 
 export const TAB_IDS = TABS.map((tab) => tab.id);
