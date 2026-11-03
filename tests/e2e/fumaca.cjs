@@ -41,13 +41,26 @@ app.whenReady().then(async () => {
   await wait(400);
 
   const tabs = await js(`[...document.querySelectorAll('nav button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
-  check(tabs.length === 6, `seis abas na barra (${tabs.join(', ')})`);
+  check(tabs.length === 5, `cinco abas na barra (${tabs.join(', ')})`);
   for (const tab of tabs) {
     await clickText(tab);
     await wait(400);
     const text = await js('document.querySelector("main")?.innerText.length || 0');
     check(text > 200, `aba ${tab} mostra conteúdo (${await heading()})`);
   }
+
+  await js(`document.querySelector('button[aria-label="Sobre o projeto e créditos"]').click()`);
+  const credits = await js(`(() => {
+    const main = document.querySelector('main');
+    const links = [...main.querySelectorAll('a')].map((link) => link.href);
+    return links.includes('https://github.com/DiamondDust01/visao-quimica') &&
+      links.includes('https://www.ifpi.edu.br/') &&
+      [...main.querySelectorAll('button')].some((button) => button.innerText.includes('Para professores'));
+  })()`);
+  check(credits, 'ícone do cabeçalho abre os créditos e os links para desenvolvedores, IFPI e professores');
+  await clickText('Para professores: trilhas de apoio às aulas');
+  await wait(300);
+  check(await js(`document.querySelector('nav[aria-label="Módulos"] button[aria-current="page"]')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
 
   await clickText('Fundamentos');
   await wait(300);
@@ -85,6 +98,11 @@ app.whenReady().then(async () => {
   // Backup em arquivo: exporta (download de verdade) e importa um arquivo com outro progresso.
   await js(`document.querySelector('button[aria-label="Perfil"]').click()`);
   await wait(300);
+  const profileText = await js(`document.querySelector('main').innerText`);
+  check(profileText.toLowerCase().includes('não há conta nem envio automático') && profileText.includes('Lembrete de backup'), 'Perfil: backup local e lembrete configurável');
+  await js(`(() => { const select = document.querySelector('select[aria-label="Frequência do lembrete de backup"]'); select.value = 'semanal'; select.dispatchEvent(new Event('change', { bubbles: true })); })()`);
+  await wait(100);
+  check((await js(`JSON.parse(localStorage.getItem('visao-quimica:lembrete-backup') || '{}').frequencia`)) === 'semanal', 'lembrete semanal persistido no aparelho');
   const backupPath = path.join(require('node:os').tmpdir(), `visao-quimica-backup-${Date.now()}.json`);
   const downloaded = new Promise((resolve) => {
     win.webContents.session.once('will-download', (event, item) => {
@@ -102,6 +120,24 @@ app.whenReady().then(async () => {
   const merged = await js(`JSON.parse(localStorage.getItem('visao-quimica:progresso') || '{}')`);
   check(Boolean(merged['fund-densidade']) && Boolean(merged['org-nomenclatura-funcoes']), 'backup importado e juntado ao progresso do aparelho');
   require('node:fs').rmSync(backupPath, { force: true });
+
+  const sharedPath = path.join(require('node:os').tmpdir(), `visao-quimica-share-${Date.now()}.json`);
+  const sharedDownload = new Promise((resolve) => {
+    win.webContents.session.once('will-download', (event, item) => {
+      item.setSavePath(sharedPath);
+      item.once('done', (doneEvent, downloadState) => resolve(downloadState));
+    });
+  });
+  await clickText('Compartilhar backup');
+  const shareDownloadState = await Promise.race([sharedDownload, wait(5000).then(() => 'tempo esgotado')]);
+  const sharedFile = shareDownloadState === 'completed' ? JSON.parse(require('node:fs').readFileSync(sharedPath, 'utf8')) : null;
+  check(Boolean(sharedFile) && Boolean(sharedFile.progresso['org-nomenclatura-funcoes']), 'sem Web Share, compartilhar baixa um arquivo JSON para anexar manualmente');
+  require('node:fs').rmSync(sharedPath, { force: true });
+
+  await js(`Object.defineProperty(navigator, 'share', { configurable: true, value: async (data) => { window.__sharedFileName = data.files[0].name; } }); Object.defineProperty(navigator, 'canShare', { configurable: true, value: (data) => data.files?.length === 1 });`);
+  await clickText('Compartilhar backup');
+  await wait(100);
+  check(await js(`Boolean(window.__sharedFileName) && document.querySelector('main').innerText.includes('Compartilhamento concluído')`), 'com Web Share, compartilha o arquivo e confirma a conclusão');
 
   check(consoleProblems.length === 0, `console sem erros nem avisos${consoleProblems.length ? `: ${consoleProblems.join(' | ')}` : ''}`);
   console.log(failures.length ? `\n${failures.length} falha(s).` : '\nTudo certo.');
