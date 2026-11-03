@@ -1,5 +1,4 @@
-import React, { useMemo } from 'react';
-import qrcode from 'qrcode-generator';
+import React from 'react';
 
 export const buttonPrimary = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-teal-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300 disabled:cursor-not-allowed disabled:opacity-40';
 export const buttonSecondary = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-teal-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300 disabled:cursor-not-allowed disabled:opacity-40';
@@ -37,35 +36,6 @@ export const Bar = ({ label, value, max = 100, color = 'bg-teal-400', suffix = '
         <div className={`h-full rounded-full ${color}`} style={{ width: `${width}%` }} />
       </div>
     </div>
-  );
-};
-
-// QR code gerado localmente (sem serviço externo).
-export const QrCode = ({ value, size = 220, label = 'QR code para entrar na sala' }) => {
-  const cells = useMemo(() => {
-    if (!value) return null;
-    try {
-      const qr = qrcode(0, 'M');
-      qr.addData(value);
-      qr.make();
-      const count = qr.getModuleCount();
-      const rects = [];
-      for (let row = 0; row < count; row += 1) {
-        for (let col = 0; col < count; col += 1) {
-          if (qr.isDark(row, col)) rects.push(`M${col + 4},${row + 4}h1v1h-1z`);
-        }
-      }
-      return { count: count + 8, path: rects.join('') };
-    } catch {
-      return null;
-    }
-  }, [value]);
-  if (!cells) return null;
-  return (
-    <svg role="img" aria-label={label} viewBox={`0 0 ${cells.count} ${cells.count}`} width={size} height={size} className="h-auto max-w-full rounded-lg bg-[#ffffff]" shapeRendering="crispEdges">
-      <rect width={cells.count} height={cells.count} fill="#ffffff" />
-      <path d={cells.path} fill="#000000" />
-    </svg>
   );
 };
 
