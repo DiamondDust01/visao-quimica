@@ -14,7 +14,7 @@ import { pointsFor, DESCONTO_POR_AJUDA } from '../../domain/pontuacao.js';
 // padrões de erro detectados e resolução.
 // É montada de novo a cada questão (key = id), então resposta, ajuda e retorno sempre
 // começam vazios e no formato do tipo (a ordenação já começa embaralhada).
-function QuestionStep({ question, index, last, allowHelp, onAnswered, onNext }) {
+function QuestionStep({ question, index, last, onAnswered, onNext }) {
   const [answer, setAnswer] = useState(() => (question.tipo === 'ordenacao' ? initialOrder(question) : undefined));
   const [helpShown, setHelpShown] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -23,7 +23,7 @@ function QuestionStep({ question, index, last, allowHelp, onAnswered, onNext }) 
   const feedbackRef = useRef(null);
   const subtema = index.get(question.temaId);
   const answered = feedback && feedback.status !== 'invalida';
-  const levels = allowHelp ? helpLevels(question) : [];
+  const levels = helpLevels(question);
 
   useEffect(() => { headingRef.current?.focus(); }, []);
   useEffect(() => { if (answered) feedbackRef.current?.focus(); }, [answered]);
@@ -132,9 +132,7 @@ function QuestionStep({ question, index, last, allowHelp, onAnswered, onNext }) 
 }
 
 // Uma sessão de questões: uma por vez, até o fim ou até o estudante encerrar.
-// Na Prática, a ajuda do Mentor fica disponível; nos Desafios em sala, não (allowHelp=false),
-// e a sala pode mostrar o relógio no cabeçalho (headerExtra).
-export default function SessionPlayer({ questions, index, onAnswer, onFinish, allowHelp = true, headerExtra = null, endLabel = 'Encerrar sessão' }) {
+export default function SessionPlayer({ questions, index, onAnswer, onFinish, endLabel = 'Encerrar sessão' }) {
   const [position, setPosition] = useState(0);
   const [answers, setAnswers] = useState([]);
   const question = questions[position];
@@ -155,12 +153,11 @@ export default function SessionPlayer({ questions, index, onAnswer, onFinish, al
       <div className="space-y-2">
         <div className="flex items-center justify-between gap-3 text-sm text-slate-400">
           <span>Questão {position + 1} de {questions.length}</span>
-          {headerExtra}
           <button type="button" onClick={() => onFinish(answers)} className="font-semibold text-slate-400 underline-offset-2 hover:text-white hover:underline">{endLabel}</button>
         </div>
         <Bar label="Progresso da sessão" value={Math.round((position / questions.length) * 100)} />
       </div>
-      <QuestionStep key={question.id} question={question} index={index} last={last} allowHelp={allowHelp} onAnswered={handleAnswered} onNext={next} />
+      <QuestionStep key={question.id} question={question} index={index} last={last} onAnswered={handleAnswered} onNext={next} />
     </div>
   );
 }
