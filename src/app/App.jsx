@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Atom, BookOpen, FlaskConical, House, Info, TestTubes, UserRound } from 'lucide-react';
+import { Atom, BookOpen, Brain, FlaskConical, House, Info, TestTubes, UserRound } from 'lucide-react';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
 import { TABS, getTab } from './navigation.js';
 import useStudyState from './useStudyState.js';
@@ -17,7 +17,7 @@ import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
 
 // Telas fora das abas, abertas por botões do cabeçalho.
-const HEADER_SCREENS = ['perfil', 'ferramentas'];
+const HEADER_SCREENS = ['perfil', 'ferramentas', 'como-funciona'];
 
 const ETAPA_IDS = ETAPAS.map((etapa) => etapa.id);
 
@@ -25,8 +25,7 @@ const TAB_ICONS = {
   inicio: House,
   fundamentos: BookOpen,
   pratica: TestTubes,
-  laboratorio: FlaskConical,
-  'como-funciona': Info
+  laboratorio: Brain
 };
 
 export default function App() {
@@ -57,8 +56,10 @@ export default function App() {
     screen = <Ferramentas elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
     screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setActiveTab('inicio'); }} />;
+  } else if (currentId === 'como-funciona') {
+    screen = <ComoFunciona onOpenTab={setActiveTab} studyAvailable={Boolean(profile)} />;
   } else if (tab.id === 'inicio') {
-    screen = <Inicio onOpenTab={setActiveTab} onPractice={practice} index={TAXONOMIA} profile={profile} progress={progress} points={points} />;
+    screen = <Inicio onOpenTab={setActiveTab} index={TAXONOMIA} profile={profile} progress={progress} points={points} />;
   } else if (tab.id === 'fundamentos') {
     screen = <Fundamentos index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={setActiveTab} onPractice={practice} />;
   } else if (tab.id === 'pratica') {
@@ -130,9 +131,9 @@ export default function App() {
             <button
               type="button"
               onClick={() => setActiveTab('como-funciona')}
-              aria-label="Sobre o projeto e créditos"
+              aria-label="Ajuda e informações"
               aria-current={currentId === 'como-funciona' ? 'page' : undefined}
-              title="Sobre o projeto e créditos"
+              title="Ajuda e informações"
               className={`flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${currentId === 'como-funciona' ? 'text-teal-200' : 'text-slate-400'}`}
             >
               <Info className="h-5 w-5" aria-hidden="true" />
@@ -148,7 +149,7 @@ export default function App() {
 
       {/* Barra inferior no celular. */}
       {!needsOnboarding && <nav aria-label="Módulos" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="grid grid-cols-5">
+        <ul className="grid grid-cols-4">
           {TABS.map((item) => {
             const Icon = TAB_ICONS[item.id];
             const active = item.id === currentId;

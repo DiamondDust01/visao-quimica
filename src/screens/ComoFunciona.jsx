@@ -10,8 +10,8 @@ export default function ComoFunciona({ onOpenTab, studyAvailable }) {
   return (
     <div className="space-y-4">
       <Card>
-        <h1 className="text-2xl font-black text-white">Como funciona</h1>
-        <p className="mt-2 text-slate-300">Regras de pontuação, níveis e progresso.</p>
+        <h1 className="text-2xl font-black text-white">Ajuda e informações</h1>
+        <p className="mt-2 text-slate-300">Regras de pontuação, níveis, progresso e detalhes do projeto.</p>
       </Card>
 
       <Card>
@@ -55,7 +55,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable }) {
 
       <Card>
         <h2 className="text-lg font-bold text-white">Projeto e créditos</h2>
-        <p className="mt-2 text-sm text-slate-300">Informações sobre o desenvolvimento, a instituição, a matéria e o uso por professores.</p>
+        <p className="mt-2 text-sm text-slate-300">Informações sobre o desenvolvimento, a instituição e as trilhas de Química.</p>
         {!studyAvailable && <p className="mt-2 text-sm text-slate-400">Escolha sua etapa escolar para acessar os conteúdos de Química.</p>}
         <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
           <li>
@@ -70,12 +70,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable }) {
           </li>
           <li>
             <button type="button" onClick={() => onOpenTab('fundamentos')} disabled={!studyAvailable} className={`font-semibold underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${studyAvailable ? 'text-teal-300 hover:underline' : 'cursor-not-allowed text-slate-600'}`}>
-              Matéria: Química
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={() => onOpenTab('fundamentos')} disabled={!studyAvailable} className={`font-semibold underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${studyAvailable ? 'text-teal-300 hover:underline' : 'cursor-not-allowed text-slate-600'}`}>
-              Para professores: trilhas de apoio às aulas
+              Trilhas de Química para estudantes e professores
             </button>
           </li>
         </ul>
