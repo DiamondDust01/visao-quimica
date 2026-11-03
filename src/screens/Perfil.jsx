@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { buttonDanger, buttonPrimary, buttonSecondary, Card, Notice } from '../components/ui.jsx';
 import EtapaPicker from '../components/EtapaPicker.jsx';
 import NivelCard from '../components/NivelCard.jsx';
-import ContaPainel from '../components/ContaPainel.jsx';
+import BackupPainel from '../components/BackupPainel.jsx';
 
-export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onClearDevice, conta, study, conectando, servidorPronto }) {
+export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onClearDevice, study }) {
   const [etapaId, setEtapaId] = useState(profile?.etapaId || '');
   const [saved, setSaved] = useState(false);
   const [confirmingClear, setConfirmingClear] = useState(false);
@@ -22,7 +22,7 @@ export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onC
     <div className="space-y-4">
       <Card>
         <h1 className="text-2xl font-black text-white">Perfil</h1>
-        <p className="mt-2 text-slate-300">Este app não pede nome nem e-mail. Seu perfil é a etapa escolar e os seus pontos, guardados neste aparelho e, se você criar uma conta, também na nuvem (cifrados).</p>
+        <p className="mt-2 text-slate-300">Seu perfil é a etapa escolar e os seus pontos. O perfil e o progresso são guardados neste aparelho; use um backup para levá-los a outro.</p>
         <div className="mt-4 max-w-md"><NivelCard points={points} /></div>
       </Card>
 
@@ -37,11 +37,11 @@ export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onC
         </form>
       </Card>
 
-      <ContaPainel conta={conta} study={study} conectando={conectando} servidorPronto={servidorPronto} />
+      <BackupPainel study={study} />
 
       <Card>
         <h2 className="text-lg font-bold text-white">Dados deste aparelho</h2>
-        <p className="mt-2 text-sm text-slate-300">Apaga a etapa, o progresso, os pontos, o registro do Mentor e as preferências guardados aqui, e sai da conta neste aparelho (o que está na nuvem continua). Não dá para desfazer.</p>
+        <p className="mt-2 text-sm text-slate-300">Apaga a etapa, o progresso, os pontos, o registro do Mentor, o lembrete e as preferências guardados aqui. Não dá para desfazer.</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {!confirmingClear && <button type="button" onClick={() => setConfirmingClear(true)} className={buttonDanger}>Apagar dados deste aparelho</button>}
           {confirmingClear && (

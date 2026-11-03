@@ -9,12 +9,9 @@ export const STORAGE_KEYS = {
   tema: 'tema',
   perfil: 'perfil',
   progresso: 'progresso',
-  apelido: 'apelido',
-  sala: 'sala',
   pontos: 'pontos',
   mentor: 'mentor',
-  dispositivo: 'dispositivo',
-  conta: 'conta'
+  lembreteBackup: 'lembrete-backup'
 };
 
 const defaultStorage = (kind = 'localStorage') => {

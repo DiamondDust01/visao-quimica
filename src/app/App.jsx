@@ -1,14 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Atom, BookOpen, FlaskConical, House, Info, TestTubes, UserRound, Users } from 'lucide-react';
-import { firebaseEnabled, useAnonymousAuth } from '../platform/firebase.js';
-import { parseRoomParam } from '../platform/roomSession.js';
+import { Atom, BookOpen, FlaskConical, House, Info, TestTubes, UserRound } from 'lucide-react';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
-import { TABS, getTab, initialTabFor } from './navigation.js';
+import { TABS, getTab } from './navigation.js';
 import useStudyState from './useStudyState.js';
-import useConta from './useConta.js';
 import ThemeToggle from './ThemeToggle.jsx';
 import HexBackdrop from '../components/HexBackdrop.jsx';
-import { AppVersion, LocalConnectionIndicator } from '../components/StatusIndicators.jsx';
+import { AppVersion } from '../components/StatusIndicators.jsx';
 import Inicio from '../screens/Inicio.jsx';
 import Onboarding from '../screens/Onboarding.jsx';
 import Perfil from '../screens/Perfil.jsx';
@@ -18,9 +15,6 @@ import { QUESTIONS } from '../data/questoes/index.js';
 import ComoFunciona from '../screens/ComoFunciona.jsx';
 import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
-import Desafios from '../screens/desafios/Desafios.jsx';
-import { Notice } from '../components/ui.jsx';
-import { useDeviceId } from './useRoom.js';
 
 // Telas fora das abas, abertas por botões do cabeçalho.
 const HEADER_SCREENS = ['perfil', 'ferramentas'];
@@ -31,28 +25,14 @@ const TAB_ICONS = {
   inicio: House,
   fundamentos: BookOpen,
   pratica: TestTubes,
-  desafios: Users,
   laboratorio: FlaskConical,
   'como-funciona': Info
 };
 
-const readInitialRoomCode = () => {
-  try {
-    return parseRoomParam(window.location.search);
-  } catch {
-    return null;
-  }
-};
-
 export default function App() {
-  const [initialRoomCode] = useState(readInitialRoomCode);
-  const [activeTab, setActiveTab] = useState(() => initialTabFor(initialRoomCode));
-  const { user, loading: authLoading, error: authError } = useAnonymousAuth();
-  const deviceId = useDeviceId(user);
+  const [activeTab, setActiveTab] = useState('inicio');
   const study = useStudyState(ETAPA_IDS);
   const { profile, progress, points, mentorLog, chooseEtapa, recordAnswer, clearDevice } = study;
-  // Conta por código de acesso: sincroniza o estudo (cifrado) quando há servidor configurado.
-  const conta = useConta(study, user);
   // Pedido de "praticar este tema" vindo de outra tela: { subtemaIds, autoStart }.
   const [practiceRequest, setPracticeRequest] = useState(null);
   const practice = (subtemaIds) => {
@@ -60,8 +40,7 @@ export default function App() {
     setActiveTab('pratica');
   };
   const mainRef = useRef(null);
-  // Quem chega por um link de sala entra direto, sem passar pela escolha de etapa.
-  const needsOnboarding = !profile && !initialRoomCode && activeTab !== 'como-funciona';
+  const needsOnboarding = !profile && activeTab !== 'como-funciona';
 
   // Ao trocar de aba, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
   useEffect(() => {
@@ -77,9 +56,9 @@ export default function App() {
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} conta={conta} study={study} conectando={authLoading} servidorPronto={Boolean(user)} onClearDevice={() => { conta.sair(); clearDevice(); setActiveTab('inicio'); }} />;
+    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setActiveTab('inicio'); }} />;
   } else if (tab.id === 'inicio') {
-    screen = <Inicio firebaseEnabled={firebaseEnabled} authError={authError} onOpenTab={setActiveTab} onPractice={practice} index={TAXONOMIA} profile={profile} progress={progress} points={points} />;
+    screen = <Inicio onOpenTab={setActiveTab} onPractice={practice} index={TAXONOMIA} profile={profile} progress={progress} points={points} />;
   } else if (tab.id === 'fundamentos') {
     screen = <Fundamentos index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={setActiveTab} onPractice={practice} />;
   } else if (tab.id === 'pratica') {
@@ -98,13 +77,8 @@ export default function App() {
     );
   } else if (tab.id === 'laboratorio') {
     screen = <Laboratorio index={TAXONOMIA} progress={progress} mentorLog={mentorLog} onPractice={practice} />;
-  } else if (tab.id === 'desafios') {
-    // Com Firebase, a sala espera o login anônimo para usar o uid definitivo.
-    screen = firebaseEnabled && authLoading
-      ? <Notice tone="info">Conectando ao servidor…</Notice>
-      : <Desafios index={TAXONOMIA} questions={QUESTIONS} etapas={ETAPAS} progress={progress} uid={deviceId} firebaseEnabled={firebaseEnabled && Boolean(user)} initialRoomCode={initialRoomCode} recordAnswer={recordAnswer} />;
   } else {
-    screen = <ComoFunciona firebaseEnabled={firebaseEnabled} onOpenTab={setActiveTab} studyAvailable={Boolean(profile || initialRoomCode)} />;
+    screen = <ComoFunciona onOpenTab={setActiveTab} studyAvailable={Boolean(profile)} />;
   }
 
   return (
@@ -174,7 +148,7 @@ export default function App() {
 
       {/* Barra inferior no celular. */}
       {!needsOnboarding && <nav aria-label="Módulos" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="grid grid-cols-6">
+        <ul className="grid grid-cols-5">
           {TABS.map((item) => {
             const Icon = TAB_ICONS[item.id];
             const active = item.id === currentId;
@@ -197,7 +171,6 @@ export default function App() {
       </nav>}
 
       {/* Na Prática, a barra fixa da seleção ocupa o rodapé; os indicadores sairiam por cima dela. */}
-      {currentId !== 'pratica' && <LocalConnectionIndicator />}
       {currentId !== 'pratica' && <AppVersion />}
     </div>
   );

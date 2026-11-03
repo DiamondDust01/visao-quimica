@@ -1,6 +1,6 @@
 // Procura resquícios do projeto de origem em todos os arquivos versionáveis: código,
-// comentários, testes, chaves de armazenamento, coleções do Firestore, strings do
-// Android e do Electron, documentação e configurações.
+// comentários, testes, chaves de armazenamento, strings do Android e do Electron,
+// documentação e configurações.
 // Uso: npm run check:residue   (sai com código 1 se encontrar algo)
 import fs from 'node:fs';
 import path from 'node:path';

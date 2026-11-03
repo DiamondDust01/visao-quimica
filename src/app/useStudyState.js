@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { STORAGE_KEYS, clearAppStorage, readJson, writeJson } from '../platform/storage.js';
+import { STORAGE_KEYS, clearAppStorage, readJson, removeValue, sessionStore, writeJson } from '../platform/storage.js';
 import { createProfile, isValidProfile, readValidProfile } from '../domain/perfil.js';
 import { registerAnswer } from '../domain/progresso.js';
 import { appendLog } from '../domain/mentor/revisao.js';
@@ -17,7 +17,13 @@ const readList = (key) => {
 // Estado de estudo guardado neste aparelho: perfil (etapa), progresso por subtema,
 // pontos acumulados e registro de erros do Mentor.
 export default function useStudyState(etapaIds) {
-  const [profile, setProfile] = useState(() => readValidProfile(readJson(STORAGE_KEYS.perfil), etapaIds));
+  const [profile, setProfile] = useState(() => {
+    removeValue('conta');
+    removeValue('apelido');
+    removeValue('sala', sessionStore());
+    removeValue('dispositivo', sessionStore());
+    return readValidProfile(readJson(STORAGE_KEYS.perfil), etapaIds);
+  });
   const [progress, setProgress] = useState(() => readObject(STORAGE_KEYS.progresso));
   const [points, setPoints] = useState(() => {
     const stored = Number(readJson(STORAGE_KEYS.pontos, 0));
@@ -59,8 +65,8 @@ export default function useStudyState(etapaIds) {
     }
   }, [updateProgress]);
 
-  // Substitui o estado pelo de um instantâneo (conta na nuvem ou arquivo de backup, já mesclado
-  // com o deste aparelho). Perfil com etapa que não existe mais é ignorado.
+  // Substitui o estado pelo de um arquivo de backup já mesclado com este aparelho.
+  // Perfil com etapa que não existe mais é ignorado.
   const applySnapshot = useCallback((snapshot) => {
     if (isValidProfile(snapshot.perfil, etapaIds)) {
       writeJson(STORAGE_KEYS.perfil, snapshot.perfil);
