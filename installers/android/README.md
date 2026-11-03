@@ -1,16 +1,16 @@
 # Visão Química para Android
 
-APK de teste da versão 0.2.1:
-[`Visao-Quimica-0.2.1-android.apk`](Visao-Quimica-0.2.1-android.apk).
+APK de teste da versão 0.3.0, gerado em 2026-11-02 com o código do commit `f1a9957` de `main`:
+[`Visao-Quimica-0.3.0-android.apk`](Visao-Quimica-0.3.0-android.apk).
 
 | | |
 |---|---|
 | `applicationId` | `com.exemplo.quimicaquest` (provisório) |
-| `versionName` / `versionCode` | 0.2.1 / 3 |
+| `versionName` / `versionCode` | 0.3.0 / 4 |
 | Android mínimo | 7.0 (API 24) |
-| Tamanho | 6.044.161 bytes |
-| SHA-256 | `7546337C0DC62A61C6D07967832E521F53D9DBD42D0C4DA70AC0A12AEAFA8890` |
-| Gerado em | 2026-11-02, com o código do commit `a5c6ae5` de `main` |
+| Tamanho | 5.736.417 bytes |
+| SHA-256 | `5B529BE69B2105DA58D5631CEAF19CFBAA9F0D7F0E683C6B7502C13867F7A3FA` |
+| Assinatura | chave de depuração; não serve para a Play Store |
 
 ## Instalação
 
@@ -18,20 +18,18 @@ APK de teste da versão 0.2.1:
 2. Abra o arquivo pelo gerenciador de arquivos.
 3. Se o Android pedir, autorize a instalação a partir dessa origem e confirme.
 
-O Android pode avisar que a origem é desconhecida. Instale só se confiar na origem do download.
+Instale somente se confiar na origem do download. O `applicationId` ainda é provisório e deve ser
+definido antes de uma publicação em loja.
 
 ## O que saber antes
 
-- O APK usa a **chave de depuração**: serve para teste, não para a Play Store, e não identifica
-  um publicador.
-- O `applicationId` é provisório e precisa ser trocado antes da primeira publicação na loja.
-- Não inclui configuração do Firebase: estudo, prática, Mentor e ferramentas funcionam offline;
-  as salas de Desafios em sala ficam no modo de demonstração, e a conta na nuvem fica
-  indisponível. O backup em arquivo (Perfil → Conta e backup) funciona.
-- Conferido: identificador e versão (`aapt dump badging`) e os arquivos web do APK num Chromium
-  em modo celular Android (`npm run test:android`: toque, tela de Pixel 7, 16 verificações sem
-  erros). O APK **ainda não foi aberto num aparelho nem num emulador**: na máquina de build a
-  virtualização está desligada no BIOS, e o emulador Android precisa dela.
+- Perfil e progresso ficam no aparelho. Não há conta, sincronização, backend ou multiplayer; o
+  backup é exportado e compartilhado manualmente pelo usuário.
+- Conferido com `aapt2 dump badging` (identificador e versão) e
+  `npm run test:android` (17 verificações de navegação, toque, créditos, conteúdo e console).
+- O APK não foi aberto em aparelho físico ou emulador nesta rodada.
+
+Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
 
 ## Como gerar de novo
 
