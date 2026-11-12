@@ -41,7 +41,7 @@ app.whenReady().then(async () => {
   await wait(400);
 
   const tabs = await js(`[...document.querySelectorAll('nav button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
-  check(tabs.length === 5, `cinco abas na barra (${tabs.join(', ')})`);
+  check(tabs.length === 4, `quatro abas na barra (${tabs.join(', ')})`);
   for (const tab of tabs) {
     await clickText(tab);
     await wait(400);
@@ -49,16 +49,16 @@ app.whenReady().then(async () => {
     check(text > 200, `aba ${tab} mostra conteúdo (${await heading()})`);
   }
 
-  await js(`document.querySelector('button[aria-label="Sobre o projeto e créditos"]').click()`);
+  await js(`document.querySelector('button[aria-label="Ajuda e informações"]').click()`);
   const credits = await js(`(() => {
     const main = document.querySelector('main');
     const links = [...main.querySelectorAll('a')].map((link) => link.href);
     return links.includes('https://github.com/DiamondDust01/visao-quimica') &&
       links.includes('https://www.ifpi.edu.br/') &&
-      [...main.querySelectorAll('button')].some((button) => button.innerText.includes('Para professores'));
+      [...main.querySelectorAll('button')].some((button) => button.innerText.includes('estudantes e professores'));
   })()`);
-  check(credits, 'ícone do cabeçalho abre os créditos e os links para desenvolvedores, IFPI e professores');
-  await clickText('Para professores: trilhas de apoio às aulas');
+  check(credits, 'ícone do cabeçalho abre a ajuda, os créditos e os links para desenvolvedores, IFPI e professores');
+  await clickText('Trilhas de Química para estudantes e professores');
   await wait(300);
   check(await js(`document.querySelector('nav[aria-label="Módulos"] button[aria-current="page"]')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
 
@@ -72,7 +72,7 @@ app.whenReady().then(async () => {
   await clickText('Prática');
   await wait(300);
   await js(`document.querySelector('#selecao-org-nomenclatura-funcoes').click()`);
-  await clickText('Começar sessão');
+  await clickText('Passo 3 · Começar sessão');
   await wait(1200);
   check(await js(`Boolean(document.querySelector('main figure svg:not(.hidden)'))`), 'questão de Orgânica mostra a estrutura (SMILES)');
   await setInput('main form input[type=text]', 'resposta de teste');
