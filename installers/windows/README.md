@@ -5,15 +5,15 @@ Pacotes da versão 0.3.0 para Windows 10 e 11 (x64), gerados em 2026-11-02 com o
 
 | Arquivo | Tamanho | SHA-256 |
 |---|---:|---|
-| [`Visao-Quimica-Setup-0.3.0.exe`](Visao-Quimica-Setup-0.3.0.exe) (instalador) | 112.380.917 bytes | `BE7FCBCE3B3EE76601E2777DE3CC6877296BB2D0AE1E0B7E668E25E53935FFE6` |
-| [`Visao-Quimica-0.3.0-Windows-x64.7z`](Visao-Quimica-0.3.0-Windows-x64.7z) (portátil) | 101.019.949 bytes | `F9A735A7EE607565D50143C38ED87D33CEEB7787213C2B4C71796EF823EF0378` |
+| [`Visao-Quimica-Setup-0.3.1.exe`](Visao-Quimica-Setup-0.3.1.exe) (instalador) | 112.417.509 bytes | `AEB41435AE0EC798540D8201747423A72FD353C05FC8D702424507EA5A8B55AB` |
+| [`Visao-Quimica-0.3.1-Windows-x64.7z`](Visao-Quimica-0.3.1-Windows-x64.7z) (portátil) | 101.019.497 bytes | `1BFE65B89755F1AC81C9435490B388E7EAA2EF19E47E42B2A286C9263C40C7F0` |
 
 O arquivo portátil passou no teste de integridade do 7-Zip (75 arquivos, sem erros). O instalador
 foi gerado, mas não testado por instalação nesta máquina.
 
 ## Instalação
 
-Abra `Visao-Quimica-Setup-0.3.0.exe` e siga o assistente. A instalação é só para o usuário atual
+Abra `Visao-Quimica-Setup-0.3.1.exe` e siga o assistente. A instalação é só para o usuário atual
 (não pede administrador), cria atalhos e aparece em "Aplicativos instalados" para desinstalar.
 O desinstalador apaga somente os arquivos que instalou.
 
@@ -26,7 +26,7 @@ O desinstalador apaga somente os arquivos que instalou.
 ## Avisos
 
 Os pacotes não têm assinatura digital. O Windows ou uma política da escola pode avisar ou bloquear;
-não desative proteções do sistema para contornar isso. A versão 0.3.0 não tem contas, sincronização,
+não desative proteções do sistema para contornar isso. A versão 0.3.1 não tem contas, sincronização,
 backend ou multiplayer; o progresso fica no aparelho e o backup é manual.
 
 Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
