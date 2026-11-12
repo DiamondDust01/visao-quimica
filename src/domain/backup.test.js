@@ -68,3 +68,15 @@ test('salvar um backup reinicia o prazo e dados de lembrete inválidos usam valo
     ultimoBackupEm: null
   });
 });
+
+test('ignora registros e entradas malformados de um backup editado à mão', () => {
+  const local = montarInstantaneo({ profile: null, progress: {}, points: 0, mentorLog: [] }, '2026-10-26T10:00:00Z');
+  const importado = {
+    versao: 1, salvoEm: '2026-10-27T10:00:00Z', perfil: null, pontos: 5,
+    progresso: { a: null, b: 'x', c: { respondidas: 1, acertos: 1 } },
+    mentor: [null, 3, 'texto', { em: '2026-10-27T00:00:00Z', questaoId: 'q1', padroes: ['x'] }]
+  };
+  const mesclado = mesclarInstantaneos(local, importado);
+  assert.deepEqual(Object.keys(mesclado.progresso), ['c']);
+  assert.equal(mesclado.mentor.length, 1);
+});
