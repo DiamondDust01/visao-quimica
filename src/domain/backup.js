@@ -17,6 +17,7 @@ export const mesclarInstantaneos = (local, importado, limiteMentor = 200) => {
   const b = importado || {};
   const progresso = { ...(a.progresso || {}) };
   Object.entries(b.progresso || {}).forEach(([id, entry]) => {
+    if (!entry || typeof entry !== 'object') return;
     const current = progresso[id];
     const more = !current || (entry?.respondidas || 0) > (current.respondidas || 0)
       || ((entry?.respondidas || 0) === (current.respondidas || 0) && !newer(current.atualizadoEm, entry?.atualizadoEm));
@@ -25,6 +26,7 @@ export const mesclarInstantaneos = (local, importado, limiteMentor = 200) => {
   const seen = new Set();
   const mentor = [...(a.mentor || []), ...(b.mentor || [])]
     .filter((item) => {
+      if (!item || typeof item !== 'object') return false;
       const key = `${item?.em}|${item?.questaoId}`;
       if (seen.has(key)) return false;
       seen.add(key);
