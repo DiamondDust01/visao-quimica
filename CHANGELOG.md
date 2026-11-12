@@ -4,6 +4,16 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.3.1] - 2026-11-11
+
+### Corrigido
+- Backup editado à mão ou registro do Mentor com itens malformados (nulos, fora do formato) não
+  derruba mais o Laboratório nem a importação; esses itens são ignorados.
+- Teste de fumaça do Electron atualizado para a navegação simplificada (4 abas, botão de ajuda).
+
+### Alterado
+- Versão do app e do Android atualizada para 0.3.1 (versionCode 5). Pacotes Windows 0.3.1 gerados.
+
 ## [0.3.0] - 2026-11-02
 
 ### Removido
