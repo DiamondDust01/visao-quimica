@@ -11,7 +11,7 @@ const readObject = (key) => {
 
 const readList = (key) => {
   const stored = readJson(key, []);
-  return Array.isArray(stored) ? stored : [];
+  return Array.isArray(stored) ? stored.filter((item) => item && typeof item === 'object') : [];
 };
 
 // Estado de estudo guardado neste aparelho: perfil (etapa), progresso por subtema,
