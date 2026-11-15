@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Atom, BookOpen, Brain, FlaskConical, House, Info, TestTubes, UserRound } from 'lucide-react';
+import { Atom, BookOpen, Brain, CircleHelp, FlaskConical, House, Info, TestTubes, UserRound } from 'lucide-react';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
 import { TABS, getTab } from './navigation.js';
 import useStudyState from './useStudyState.js';
 import ThemeToggle from './ThemeToggle.jsx';
 import HexBackdrop from '../components/HexBackdrop.jsx';
+import GuiaDeUso from '../components/GuiaDeUso.jsx';
+import { STORAGE_KEYS, readValue, writeValue } from '../platform/storage.js';
 import { AppVersion } from '../components/StatusIndicators.jsx';
 import Inicio from '../screens/Inicio.jsx';
 import Onboarding from '../screens/Onboarding.jsx';
@@ -39,6 +41,41 @@ export default function App() {
     setActiveTab('pratica');
   };
   const mainRef = useRef(null);
+
+  // Guia de uso: abre sobre as telas e leva o estudante até a tela de cada passo.
+  const [guideOpen, setGuideOpen] = useState(false);
+  const [guideOffer, setGuideOffer] = useState(() => readValue(STORAGE_KEYS.guiaVisto) !== '1');
+  const [praticaKey, setPraticaKey] = useState(0);
+  const guideTela = useRef(null);
+  // Subtema da sessão de exemplo do guia: o primeiro que tem questões.
+  const demoSubtema = QUESTIONS[0]?.temaId;
+  const dismissGuideOffer = () => {
+    writeValue(STORAGE_KEYS.guiaVisto, '1');
+    setGuideOffer(false);
+  };
+  const startGuide = () => {
+    dismissGuideOffer();
+    guideTela.current = null;
+    setGuideOpen(true);
+  };
+  const closeGuide = () => {
+    // Sai da sessão de exemplo, para o estudante não ficar numa sessão que não pediu.
+    if (guideTela.current === 'pratica-sessao') setPraticaKey((key) => key + 1);
+    guideTela.current = null;
+    setGuideOpen(false);
+  };
+  const goToGuideStep = (step) => {
+    const previous = guideTela.current;
+    guideTela.current = step.tela;
+    if (step.tela === 'pratica-sessao') {
+      if (previous !== 'pratica-sessao') practice([demoSubtema]);
+    } else if (step.tela === 'pratica-lista') {
+      if (previous === 'pratica-sessao') setPraticaKey((key) => key + 1);
+      setActiveTab('pratica');
+    } else {
+      setActiveTab(step.tela);
+    }
+  };
   const needsOnboarding = !profile && activeTab !== 'como-funciona';
 
   // Ao trocar de aba, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
@@ -55,16 +92,17 @@ export default function App() {
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setActiveTab('inicio'); }} />;
+    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); setActiveTab('inicio'); }} />;
   } else if (currentId === 'como-funciona') {
-    screen = <ComoFunciona onOpenTab={setActiveTab} studyAvailable={Boolean(profile)} />;
+    screen = <ComoFunciona onOpenTab={setActiveTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
   } else if (tab.id === 'inicio') {
-    screen = <Inicio onOpenTab={setActiveTab} index={TAXONOMIA} profile={profile} progress={progress} points={points} />;
+    screen = <Inicio onOpenTab={setActiveTab} index={TAXONOMIA} profile={profile} progress={progress} points={points} guideOffer={guideOffer} onStartGuide={startGuide} onDismissGuide={dismissGuideOffer} />;
   } else if (tab.id === 'fundamentos') {
     screen = <Fundamentos index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={setActiveTab} onPractice={practice} />;
   } else if (tab.id === 'pratica') {
     screen = (
       <Pratica
+        key={praticaKey}
         index={TAXONOMIA}
         questions={QUESTIONS}
         etapas={ETAPAS}
@@ -97,7 +135,7 @@ export default function App() {
             <span>Visão Química</span>
           </button>
           {!needsOnboarding && (
-            <nav aria-label="Módulos" className="hidden md:block">
+            <nav aria-label="Módulos" data-guia="abas" className="hidden md:block">
               <ul className="flex gap-1">
                 {TABS.map((item) => (
                   <li key={item.id}>
@@ -119,6 +157,7 @@ export default function App() {
               <button
                 key={id}
                 type="button"
+                data-guia={`btn-${id}`}
                 onClick={() => setActiveTab(id)}
                 aria-label={label}
                 aria-current={currentId === id ? 'page' : undefined}
@@ -128,8 +167,21 @@ export default function App() {
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </button>
             ))}
+            {!needsOnboarding && (
+              <button
+                type="button"
+                data-guia="btn-guia"
+                onClick={startGuide}
+                aria-label="Guia de uso"
+                title="Guia de uso"
+                className="flex h-10 w-10 items-center justify-center rounded-full text-slate-400 transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300"
+              >
+                <CircleHelp className="h-5 w-5" aria-hidden="true" />
+              </button>
+            )}
             <button
               type="button"
+              data-guia="btn-ajuda"
               onClick={() => setActiveTab('como-funciona')}
               aria-label="Ajuda e informações"
               aria-current={currentId === 'como-funciona' ? 'page' : undefined}
@@ -138,7 +190,7 @@ export default function App() {
             >
               <Info className="h-5 w-5" aria-hidden="true" />
             </button>
-            <ThemeToggle />
+            <span data-guia="btn-tema" className="flex"><ThemeToggle /></span>
           </div>
         </div>
       </header>
@@ -148,7 +200,7 @@ export default function App() {
       </main>
 
       {/* Barra inferior no celular. */}
-      {!needsOnboarding && <nav aria-label="Módulos" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
+      {!needsOnboarding && <nav aria-label="Módulos" data-guia="abas" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="grid grid-cols-4">
           {TABS.map((item) => {
             const Icon = TAB_ICONS[item.id];
@@ -173,6 +225,8 @@ export default function App() {
 
       {/* Na Prática, a barra fixa da seleção ocupa o rodapé; os indicadores sairiam por cima dela. */}
       {currentId !== 'pratica' && <AppVersion />}
+
+      {guideOpen && !needsOnboarding && <GuiaDeUso onStep={goToGuideStep} onClose={closeGuide} />}
     </div>
   );
 }
