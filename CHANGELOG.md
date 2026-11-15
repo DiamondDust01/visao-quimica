@@ -4,6 +4,14 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
+## [Não lançado]
+
+### Adicionado
+- Guia de uso: contorna cada elemento da tela e explica, num pop-up, para que serve (29 passos por
+  Início, Fundamentos, Prática com sessão de exemplo, Laboratório, Ferramentas e Perfil). Abre pelo
+  botão de ajuda do cabeçalho, pela tela de Ajuda ou pelo convite na primeira visita ao Início;
+  navega por botões, setas do teclado e Esc, e funciona nos temas claro e escuro e no celular.
+
 ## [0.3.1] - 2026-11-11
 
 ### Corrigido

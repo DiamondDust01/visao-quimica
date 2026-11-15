@@ -49,6 +49,20 @@ app.whenReady().then(async () => {
     check(text > 200, `aba ${tab} mostra conteúdo (${await heading()})`);
   }
 
+  // Guia de uso: abre pelo cabeçalho, destaca o primeiro alvo, avança e fecha com Esc.
+  await clickText('Início');
+  await wait(300);
+  check(await js(`[...document.querySelectorAll('button')].some((b) => b.innerText.trim() === 'Começar o guia')`), 'Início oferece o guia de uso na primeira vez');
+  await js(`document.querySelector('button[aria-label="Guia de uso"]').click()`);
+  await wait(500);
+  check(await js(`document.querySelector('[role=dialog] h2')?.innerText === 'Bem-vindo ao guia de uso'`), 'guia de uso abre com o pop-up de boas-vindas');
+  await clickText('Próximo');
+  await wait(900);
+  check(await js(`Boolean(document.querySelector('[data-guia-overlay] .border-teal-300')) && document.querySelector('[role=dialog] h2')?.innerText === 'Os quatro módulos'`), 'guia contorna o elemento do passo e explica no pop-up');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(300);
+  check(await js(`!document.querySelector('[role=dialog]')`), 'Esc fecha o guia de uso');
+
   await js(`document.querySelector('button[aria-label="Ajuda e informações"]').click()`);
   const credits = await js(`(() => {
     const main = document.querySelector('main');

@@ -94,7 +94,7 @@ export default function BackupPainel({ study }) {
   };
 
   return (
-    <Card>
+    <Card data-guia="perfil-backup">
       <h2 className="text-lg font-bold text-white">Backup local</h2>
       <p className="mt-2 text-sm text-slate-300">
         Seu perfil, progresso, pontos e histórico do Mentor ficam neste aparelho. Não há conta nem envio automático
