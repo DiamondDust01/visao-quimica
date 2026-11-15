@@ -26,7 +26,7 @@ export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onC
         <div className="mt-4 max-w-md"><NivelCard points={points} /></div>
       </Card>
 
-      <Card>
+      <Card data-guia="perfil-etapa">
         <form onSubmit={save} className="space-y-4">
           <h2 className="text-lg font-bold text-white">Etapa escolar</h2>
           <EtapaPicker etapas={etapas} value={etapaId} onChange={(id) => { setEtapaId(id); setSaved(false); }} name="perfil-etapa" />
@@ -39,7 +39,7 @@ export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onC
 
       <BackupPainel study={study} />
 
-      <Card>
+      <Card data-guia="perfil-dados">
         <h2 className="text-lg font-bold text-white">Dados deste aparelho</h2>
         <p className="mt-2 text-sm text-slate-300">Apaga a etapa, o progresso, os pontos, o registro do Mentor, o lembrete e as preferências guardados aqui. Não dá para desfazer.</p>
         <div className="mt-4 flex flex-wrap gap-2">

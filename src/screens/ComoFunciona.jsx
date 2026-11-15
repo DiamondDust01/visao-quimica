@@ -1,17 +1,20 @@
 import React from 'react';
-import { Card } from '../components/ui.jsx';
+import { buttonPrimary, Card } from '../components/ui.jsx';
 import packageJson from '../../package.json';
 import { NIVEIS, PONTOS_POR_DIFICULDADE, DESCONTO_POR_AJUDA, FATOR_MINIMO } from '../domain/pontuacao.js';
 import { LIMITE_DOMINADO, LIMITE_REVISAR, MIN_RESPOSTAS } from '../domain/progresso.js';
 
 const pct = (value) => `${Math.round(value * 100)}%`;
 
-export default function ComoFunciona({ onOpenTab, studyAvailable }) {
+export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide }) {
   return (
     <div className="space-y-4">
       <Card>
         <h1 className="text-2xl font-black text-white">Ajuda e informações</h1>
         <p className="mt-2 text-slate-300">Regras de pontuação, níveis, progresso e detalhes do projeto.</p>
+        {studyAvailable && onStartGuide && (
+          <button type="button" onClick={onStartGuide} className={`${buttonPrimary} mt-4`}>Abrir o guia de uso</button>
+        )}
       </Card>
 
       <Card>
