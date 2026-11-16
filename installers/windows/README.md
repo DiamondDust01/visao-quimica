@@ -1,19 +1,19 @@
 # Visão Química para Windows
 
-Pacotes da versão 0.3.0 para Windows 10 e 11 (x64), gerados em 2026-11-02 com o código do commit
-`f1a9957` de `main`. Os executáveis ficam no **Git LFS**.
+Pacotes da versão 0.4.0 para Windows 10 e 11 (x64), gerados em 2026-11-16 com o código do commit
+`299e82c` de `app-pc`. Os executáveis ficam no **Git LFS**.
 
 | Arquivo | Tamanho | SHA-256 |
 |---|---:|---|
-| [`Visao-Quimica-Setup-0.3.1.exe`](Visao-Quimica-Setup-0.3.1.exe) (instalador) | 112.417.509 bytes | `AEB41435AE0EC798540D8201747423A72FD353C05FC8D702424507EA5A8B55AB` |
-| [`Visao-Quimica-0.3.1-Windows-x64.7z`](Visao-Quimica-0.3.1-Windows-x64.7z) (portátil) | 101.019.497 bytes | `1BFE65B89755F1AC81C9435490B388E7EAA2EF19E47E42B2A286C9263C40C7F0` |
+| [`Visao-Quimica-Setup-0.4.0.exe`](Visao-Quimica-Setup-0.4.0.exe) (instalador) | 112.411.599 bytes | `38D25282353A0E240F0E09ED9426B24A82B7DCA2B45166D8F5C002BA50226DFA` |
+| [`Visao-Quimica-0.4.0-Windows-x64.7z`](Visao-Quimica-0.4.0-Windows-x64.7z) (portátil) | 101.027.351 bytes | `0659CA8AAD89A51AFAF7A386AB6F098AB3E231D5D7ECB39706B781BFD38E752D` |
 
 O arquivo portátil passou no teste de integridade do 7-Zip (75 arquivos, sem erros). O instalador
 foi gerado, mas não testado por instalação nesta máquina.
 
 ## Instalação
 
-Abra `Visao-Quimica-Setup-0.3.1.exe` e siga o assistente. A instalação é só para o usuário atual
+Abra `Visao-Quimica-Setup-0.4.0.exe` e siga o assistente. A instalação é só para o usuário atual
 (não pede administrador), cria atalhos e aparece em "Aplicativos instalados" para desinstalar.
 O desinstalador apaga somente os arquivos que instalou.
 
@@ -26,7 +26,7 @@ O desinstalador apaga somente os arquivos que instalou.
 ## Avisos
 
 Os pacotes não têm assinatura digital. O Windows ou uma política da escola pode avisar ou bloquear;
-não desative proteções do sistema para contornar isso. A versão 0.3.1 não tem contas, sincronização,
+não desative proteções do sistema para contornar isso. A versão 0.4.0 não tem contas, sincronização,
 backend ou multiplayer; o progresso fica no aparelho e o backup é manual.
 
 Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
