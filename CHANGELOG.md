@@ -4,7 +4,7 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [0.4.0] - 2026-11-16
 
 ### Alterado
 - Menu simplificado sem remover nada: o cabeçalho mostra só as quatro abas e um botão "Mais"
@@ -15,6 +15,7 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 - Início ganhou atalhos para as ferramentas e o backup. Antes da escolha da etapa, ajuda e tema
   continuam no cabeçalho.
 - Guia de uso atualizado: apresenta os atalhos, o botão "Mais" e abre o menu para explicá-lo.
+- Versão do app e do Android atualizada para 0.4.0 (versionCode 6). Pacotes Windows 0.4.0 gerados.
 
 ### Adicionado
 - Guia de uso: contorna cada elemento da tela e explica, num pop-up, para que serve (29 passos por
