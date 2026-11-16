@@ -25,8 +25,7 @@ test('os passos do guia têm id único, texto, tela válida e seção', () => {
 test('todo alvo do guia existe no código das telas', () => {
   const code = sourceFiles('src').map((file) => readFileSync(file, 'utf8')).join('\n');
   GUIA_PASSOS.filter((passo) => passo.alvo).forEach((passo) => {
-    const found = code.includes(`data-guia="${passo.alvo}"`) || code.includes(`guia="${passo.alvo}"`)
-      || (passo.alvo.startsWith('btn-') && code.includes('data-guia={`btn-${id}`}'));
+    const found = [`data-guia="${passo.alvo}"`, `guia="${passo.alvo}"`, `'data-guia': '${passo.alvo}'`].some((marca) => code.includes(marca));
     assert.ok(found, `alvo "${passo.alvo}" (passo ${passo.id}) não está em nenhuma tela`);
   });
 });

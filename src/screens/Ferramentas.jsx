@@ -10,8 +10,9 @@ const SECTIONS = [
   { id: 'estruturas', label: 'Estruturas' }
 ];
 
-export default function Ferramentas({ elementos, meta, estruturas }) {
-  const [section, setSection] = useState('tabela');
+// initialSection: seção aberta ao chegar pelo menu "Mais" ou pelos atalhos do Início.
+export default function Ferramentas({ elementos, meta, estruturas, initialSection }) {
+  const [section, setSection] = useState(() => (SECTIONS.some((item) => item.id === initialSection) ? initialSection : 'tabela'));
   return (
     <div className="space-y-4">
       <Card>

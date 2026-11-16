@@ -6,10 +6,20 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 
 ## [Não lançado]
 
+### Alterado
+- Menu simplificado sem remover nada: o cabeçalho mostra só as quatro abas e um botão "Mais"
+  (no celular, o quinto botão da barra de baixo). O "Mais" agrupa Ferramentas (tabela periódica,
+  massa molar, estruturas), Meus dados (etapa e pontos, backup, apagar dados), Ajuda (guia de uso,
+  regras e níveis, créditos) e Aparência (tema). Cada item abre direto na seção certa, e nenhum
+  destino fica a mais de três toques.
+- Início ganhou atalhos para as ferramentas e o backup. Antes da escolha da etapa, ajuda e tema
+  continuam no cabeçalho.
+- Guia de uso atualizado: apresenta os atalhos, o botão "Mais" e abre o menu para explicá-lo.
+
 ### Adicionado
 - Guia de uso: contorna cada elemento da tela e explica, num pop-up, para que serve (29 passos por
   Início, Fundamentos, Prática com sessão de exemplo, Laboratório, Ferramentas e Perfil). Abre pelo
-  botão de ajuda do cabeçalho, pela tela de Ajuda ou pelo convite na primeira visita ao Início;
+  menu "Mais", pela tela de Ajuda ou pelo convite na primeira visita ao Início;
   navega por botões, setas do teclado e Esc, e funciona nos temas claro e escuro e no celular.
 
 ## [0.3.1] - 2026-11-11
