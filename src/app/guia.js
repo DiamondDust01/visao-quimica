@@ -2,17 +2,19 @@
 //
 // Cada passo tem:
 // - tela: onde o passo acontece. Uma aba ('inicio', 'fundamentos', 'laboratorio'),
-//   uma tela do cabeçalho ('ferramentas', 'perfil') ou uma das telas internas da Prática
-//   ('pratica-lista' e 'pratica-sessao', esta com uma sessão de exemplo aberta);
+//   uma tela do menu "Mais" ('ferramentas', 'perfil') ou uma das telas internas da Prática
+//   ('pratica-lista' e 'pratica-sessao', esta com uma sessão de exemplo aberta) ou o menu
+//   'menu-mais' aberto;
 // - alvo: valor do atributo data-guia do elemento a destacar; null mostra o pop-up no centro;
 // - opcional: se o alvo não existir (por exemplo, sem trilha na etapa "livre"), o passo é pulado.
 // Ao mudar de tela, o App leva o estudante até ela (veja App.jsx).
 
-export const GUIA_TELAS = ['inicio', 'fundamentos', 'pratica-lista', 'pratica-sessao', 'laboratorio', 'ferramentas', 'perfil'];
+export const GUIA_TELAS = ['menu-mais', 'inicio', 'fundamentos', 'pratica-lista', 'pratica-sessao', 'laboratorio', 'ferramentas', 'perfil'];
 
 // Seção do guia mostrada acima do título do passo.
 export const GUIA_SECOES = {
   inicio: 'Início',
+  'menu-mais': 'Menu "Mais"',
   fundamentos: 'Fundamentos',
   'pratica-lista': 'Prática',
   'pratica-sessao': 'Prática · sessão de questões',
@@ -30,7 +32,7 @@ export const GUIA_PASSOS = [
   {
     id: 'abas', tela: 'inicio', alvo: 'abas',
     titulo: 'Os quatro módulos',
-    texto: 'Início: resumo do seu estudo. Fundamentos: a trilha sugerida para a sua etapa escolar. Prática: sessões de questões com os temas que você escolher. Laboratório do Mentor: padrões nos seus erros e o que revisar. No celular, estes botões ficam na barra de baixo.'
+    texto: 'Início: resumo do seu estudo. Fundamentos: a trilha sugerida para a sua etapa escolar. Prática: sessões de questões com os temas que você escolher. Laboratório do Mentor: padrões nos seus erros e o que revisar. No celular, estes botões ficam na barra de baixo, junto com o "Mais".'
   },
   {
     id: 'inicio-nivel', tela: 'inicio', alvo: 'nivel',
@@ -43,29 +45,19 @@ export const GUIA_PASSOS = [
     texto: 'O app funciona em três passos: 1) escolher a etapa escolar, 2) escolher um tema, 3) fazer uma sessão de questões. Este cartão mostra o próximo tema sugerido para você e leva direto à trilha.'
   },
   {
-    id: 'cab-ferramentas', tela: 'inicio', alvo: 'btn-ferramentas',
-    titulo: 'Ferramentas',
-    texto: 'Abre a tabela periódica interativa, a calculadora de massa molar e o visualizador de estruturas moleculares. Tudo funciona sem internet.'
+    id: 'inicio-atalhos', tela: 'inicio', alvo: 'atalhos',
+    titulo: 'Atalhos',
+    texto: 'Tabela periódica, massa molar, estruturas e backup a um toque, direto do Início.'
   },
   {
-    id: 'cab-perfil', tela: 'inicio', alvo: 'btn-perfil',
-    titulo: 'Perfil',
-    texto: 'Aqui você troca a etapa escolar, vê seus pontos, salva ou restaura um backup do progresso e apaga os dados deste aparelho.'
+    id: 'mais', tela: 'inicio', alvo: 'btn-mais',
+    titulo: 'Menu "Mais"',
+    texto: 'Tudo o que não é aba fica aqui: ferramentas, seus dados, ajuda e o tema claro ou escuro. No computador ele fica no canto do cabeçalho; no celular, é o último botão da barra de baixo.'
   },
   {
-    id: 'cab-ajuda', tela: 'inicio', alvo: 'btn-ajuda',
-    titulo: 'Ajuda e informações',
-    texto: 'Reúne as regras de pontuação, os níveis, como o progresso é calculado e os créditos do projeto. Você também pode refazer este guia por lá ou pelo botão de guia ao lado.'
-  },
-  {
-    id: 'cab-guia', tela: 'inicio', alvo: 'btn-guia',
-    titulo: 'Guia de uso',
-    texto: 'Este botão abre o guia de novo, a qualquer momento.'
-  },
-  {
-    id: 'cab-tema', tela: 'inicio', alvo: 'btn-tema',
-    titulo: 'Tema claro ou escuro',
-    texto: 'Alterna entre o tema escuro e o claro. A escolha fica guardada neste aparelho.'
+    id: 'mais-menu', tela: 'menu-mais', alvo: 'menu-mais',
+    titulo: 'O que tem no "Mais"',
+    texto: 'Ferramentas: tabela periódica, massa molar e estruturas. Meus dados: etapa escolar e pontos, backup do progresso e apagar dados. Ajuda: este guia, as regras de pontuação e níveis e os créditos. Aparência: tema claro ou escuro. Cada item abre direto no lugar certo.'
   },
 
   {
@@ -172,6 +164,6 @@ export const GUIA_PASSOS = [
   {
     id: 'fim', tela: 'inicio', alvo: null,
     titulo: 'Pronto para estudar!',
-    texto: 'Esse é o app inteiro. Um bom começo: abra Fundamentos, escolha o tema recomendado e faça uma sessão de 10 questões. Para rever este guia, use o botão de guia no cabeçalho.'
+    texto: 'Esse é o app inteiro. Um bom começo: abra Fundamentos, escolha o tema recomendado e faça uma sessão de 10 questões. Para rever este guia, abra "Mais" e escolha "Guia de uso".'
   }
 ];
