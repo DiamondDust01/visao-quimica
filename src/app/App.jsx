@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Atom, BookOpen, Brain, CircleHelp, FlaskConical, House, Info, TestTubes, UserRound } from 'lucide-react';
+import { BookOpen, Brain, FlaskConical, House, Info, Menu, TestTubes } from 'lucide-react';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
-import { TABS, getTab } from './navigation.js';
+import { SCREEN_IDS, TABS, getTab } from './navigation.js';
 import useStudyState from './useStudyState.js';
 import ThemeToggle from './ThemeToggle.jsx';
 import HexBackdrop from '../components/HexBackdrop.jsx';
 import GuiaDeUso from '../components/GuiaDeUso.jsx';
+import MenuMais from '../components/MenuMais.jsx';
 import { STORAGE_KEYS, readValue, writeValue } from '../platform/storage.js';
 import { AppVersion } from '../components/StatusIndicators.jsx';
 import Inicio from '../screens/Inicio.jsx';
@@ -18,9 +19,6 @@ import ComoFunciona from '../screens/ComoFunciona.jsx';
 import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
 
-// Telas fora das abas, abertas por botões do cabeçalho.
-const HEADER_SCREENS = ['perfil', 'ferramentas', 'como-funciona'];
-
 const ETAPA_IDS = ETAPAS.map((etapa) => etapa.id);
 
 const TAB_ICONS = {
@@ -32,13 +30,25 @@ const TAB_ICONS = {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('inicio');
+  // Seção pedida dentro de Ferramentas, Perfil ou Ajuda (ex.: 'backup'). `visit` muda a cada
+  // navegação, para a tela abrir de novo na seção certa mesmo se já estiver aberta.
+  const [target, setTarget] = useState({ secao: null, visit: 0 });
+  const [menuOpen, setMenuOpen] = useState(false);
   const study = useStudyState(ETAPA_IDS);
   const { profile, progress, points, mentorLog, chooseEtapa, recordAnswer, clearDevice } = study;
+
+  const openScreen = (tela, secao = null) => {
+    setMenuOpen(false);
+    setTarget((current) => ({ secao, visit: current.visit + 1 }));
+    setActiveTab(tela);
+  };
+  const openTab = (tela) => openScreen(tela);
+
   // Pedido de "praticar este tema" vindo de outra tela: { subtemaIds, autoStart }.
   const [practiceRequest, setPracticeRequest] = useState(null);
   const practice = (subtemaIds) => {
     setPracticeRequest({ subtemaIds, autoStart: true });
-    setActiveTab('pratica');
+    openScreen('pratica');
   };
   const mainRef = useRef(null);
 
@@ -55,6 +65,7 @@ export default function App() {
   };
   const startGuide = () => {
     dismissGuideOffer();
+    setMenuOpen(false);
     guideTela.current = null;
     setGuideOpen(true);
   };
@@ -62,6 +73,7 @@ export default function App() {
     // Sai da sessão de exemplo, para o estudante não ficar numa sessão que não pediu.
     if (guideTela.current === 'pratica-sessao') setPraticaKey((key) => key + 1);
     guideTela.current = null;
+    setMenuOpen(false);
     setGuideOpen(false);
   };
   const goToGuideStep = (step) => {
@@ -69,36 +81,54 @@ export default function App() {
     guideTela.current = step.tela;
     if (step.tela === 'pratica-sessao') {
       if (previous !== 'pratica-sessao') practice([demoSubtema]);
-    } else if (step.tela === 'pratica-lista') {
-      if (previous === 'pratica-sessao') setPraticaKey((key) => key + 1);
-      setActiveTab('pratica');
-    } else {
-      setActiveTab(step.tela);
+      return;
     }
+    if (step.tela === 'menu-mais') {
+      setActiveTab('inicio');
+      setMenuOpen(true);
+      return;
+    }
+    if (step.tela === 'pratica-lista') {
+      if (previous === 'pratica-sessao') setPraticaKey((key) => key + 1);
+      openScreen('pratica');
+      return;
+    }
+    openScreen(step.tela);
   };
-  const needsOnboarding = !profile && activeTab !== 'como-funciona';
 
-  // Ao trocar de aba, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
+  const selectMenuItem = (item) => {
+    if (item.acao === 'guia') startGuide();
+    else openScreen(item.tela, item.secao);
+  };
+
+  const needsOnboarding = !profile && activeTab !== 'como-funciona';
+  // O menu "Mais" e a barra de baixo só existem depois da escolha da etapa.
+  const showMenus = Boolean(profile) && !needsOnboarding;
+
+  // Ao trocar de tela, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
+  // Com uma seção pedida, quem rola até ela é a própria tela.
   useEffect(() => {
     mainRef.current?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0 });
-  }, [activeTab, needsOnboarding]);
+    if (!target.secao) window.scrollTo({ top: 0 });
+  }, [activeTab, needsOnboarding, target.visit]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const tab = getTab(activeTab);
-  const currentId = HEADER_SCREENS.includes(activeTab) ? activeTab : tab.id;
+  const onScreen = SCREEN_IDS.includes(activeTab);
+  const currentId = onScreen ? activeTab : tab.id;
+  const secao = target.secao;
   let screen;
   if (needsOnboarding) {
-    screen = <Onboarding etapas={ETAPAS} observacao={ETAPAS_OBSERVACAO} onChoose={(etapaId) => { chooseEtapa(etapaId); setActiveTab('fundamentos'); }} />;
+    screen = <Onboarding etapas={ETAPAS} observacao={ETAPAS_OBSERVACAO} onChoose={(etapaId) => { chooseEtapa(etapaId); openScreen('fundamentos'); }} />;
   } else if (currentId === 'ferramentas') {
-    screen = <Ferramentas elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
+    screen = <Ferramentas key={target.visit} initialSection={secao} elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); setActiveTab('inicio'); }} />;
+    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); openScreen('inicio'); }} />;
   } else if (currentId === 'como-funciona') {
-    screen = <ComoFunciona onOpenTab={setActiveTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
+    screen = <ComoFunciona key={target.visit} focusSection={secao} onOpenTab={openTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
   } else if (tab.id === 'inicio') {
-    screen = <Inicio onOpenTab={setActiveTab} index={TAXONOMIA} profile={profile} progress={progress} points={points} guideOffer={guideOffer} onStartGuide={startGuide} onDismissGuide={dismissGuideOffer} />;
+    screen = <Inicio onOpenTab={openTab} onOpenScreen={openScreen} index={TAXONOMIA} profile={profile} progress={progress} points={points} guideOffer={guideOffer} onStartGuide={startGuide} onDismissGuide={dismissGuideOffer} />;
   } else if (tab.id === 'fundamentos') {
-    screen = <Fundamentos index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={setActiveTab} onPractice={practice} />;
+    screen = <Fundamentos index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={openTab} onPractice={practice} />;
   } else if (tab.id === 'pratica') {
     screen = (
       <Pratica
@@ -111,14 +141,25 @@ export default function App() {
         recordAnswer={recordAnswer}
         request={practiceRequest}
         onRequestHandled={() => setPracticeRequest(null)}
-        onOpenTab={setActiveTab}
+        onOpenTab={openTab}
       />
     );
-  } else if (tab.id === 'laboratorio') {
-    screen = <Laboratorio index={TAXONOMIA} progress={progress} mentorLog={mentorLog} onPractice={practice} />;
   } else {
-    screen = <ComoFunciona onOpenTab={setActiveTab} studyAvailable={Boolean(profile)} />;
+    screen = <Laboratorio index={TAXONOMIA} progress={progress} mentorLog={mentorLog} onPractice={practice} />;
   }
+
+  // "Mais" aparece ativo quando a tela aberta é uma das que ele guarda.
+  const moreActive = menuOpen || onScreen;
+  const moreButton = (extra) => ({
+    type: 'button',
+    'data-guia': 'btn-mais',
+    onClick: () => setMenuOpen((value) => !value),
+    'aria-expanded': menuOpen,
+    'aria-controls': 'menu-mais',
+    'aria-haspopup': 'dialog',
+    'aria-current': onScreen ? 'page' : undefined,
+    ...extra
+  });
 
   return (
     <div className="relative min-h-screen text-slate-100">
@@ -130,7 +171,7 @@ export default function App() {
       {/* Fixa no topo ao rolar a página. */}
       <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/85 pt-[env(safe-area-inset-top)] backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
-          <button type="button" onClick={() => setActiveTab('inicio')} className="flex items-center gap-2 rounded-lg font-black tracking-tight text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
+          <button type="button" onClick={() => openScreen('inicio')} className="flex items-center gap-2 rounded-lg font-black tracking-tight text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
             <FlaskConical className="h-6 w-6 text-teal-300" aria-hidden="true" />
             <span>Visão Química</span>
           </button>
@@ -141,7 +182,7 @@ export default function App() {
                   <li key={item.id}>
                     <button
                       type="button"
-                      onClick={() => setActiveTab(item.id)}
+                      onClick={() => openScreen(item.id)}
                       aria-current={item.id === currentId ? 'page' : undefined}
                       className={`rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${item.id === currentId ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`}
                     >
@@ -152,46 +193,31 @@ export default function App() {
               </ul>
             </nav>
           )}
-          <div className="flex items-center gap-1">
-            {!needsOnboarding && [['ferramentas', 'Ferramentas: tabela periódica e massa molar', Atom], ['perfil', 'Perfil', UserRound]].map(([id, label, Icon]) => (
-              <button
-                key={id}
-                type="button"
-                data-guia={`btn-${id}`}
-                onClick={() => setActiveTab(id)}
-                aria-label={label}
-                aria-current={currentId === id ? 'page' : undefined}
-                title={label}
-                className={`flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${currentId === id ? 'text-teal-200' : 'text-slate-400'}`}
-              >
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </button>
-            ))}
-            {!needsOnboarding && (
-              <button
-                type="button"
-                data-guia="btn-guia"
-                onClick={startGuide}
-                aria-label="Guia de uso"
-                title="Guia de uso"
-                className="flex h-10 w-10 items-center justify-center rounded-full text-slate-400 transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300"
-              >
-                <CircleHelp className="h-5 w-5" aria-hidden="true" />
-              </button>
-            )}
+          {showMenus ? (
             <button
-              type="button"
-              data-guia="btn-ajuda"
-              onClick={() => setActiveTab('como-funciona')}
-              aria-label="Ajuda e informações"
-              aria-current={currentId === 'como-funciona' ? 'page' : undefined}
-              title="Ajuda e informações"
-              className={`flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${currentId === 'como-funciona' ? 'text-teal-200' : 'text-slate-400'}`}
+              {...moreButton({
+                className: `hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 md:flex ${moreActive ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`
+              })}
             >
-              <Info className="h-5 w-5" aria-hidden="true" />
+              <Menu className="h-5 w-5" aria-hidden="true" />
+              Mais
             </button>
-            <span data-guia="btn-tema" className="flex"><ThemeToggle /></span>
-          </div>
+          ) : (
+            // Primeiro uso: ajuda e tema continuam a um toque, como antes.
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => openScreen('como-funciona')}
+                aria-label="Ajuda e informações"
+                aria-current={currentId === 'como-funciona' ? 'page' : undefined}
+                title="Ajuda e informações"
+                className={`flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${currentId === 'como-funciona' ? 'text-teal-200' : 'text-slate-400'}`}
+              >
+                <Info className="h-5 w-5" aria-hidden="true" />
+              </button>
+              <ThemeToggle />
+            </div>
+          )}
         </div>
       </header>
 
@@ -199,18 +225,18 @@ export default function App() {
         {screen}
       </main>
 
-      {/* Barra inferior no celular. */}
-      {!needsOnboarding && <nav aria-label="Módulos" data-guia="abas" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="grid grid-cols-4">
+      {/* Barra inferior no celular: as quatro abas e o "Mais". */}
+      {showMenus && <nav aria-label="Módulos" data-guia="abas" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
+        <ul className="grid grid-cols-5">
           {TABS.map((item) => {
             const Icon = TAB_ICONS[item.id];
-            const active = item.id === currentId;
+            const active = item.id === currentId && !menuOpen;
             return (
               <li key={item.id}>
                 <button
                   type="button"
-                  onClick={() => setActiveTab(item.id)}
-                  aria-current={active ? 'page' : undefined}
+                  onClick={() => openScreen(item.id)}
+                  aria-current={item.id === currentId ? 'page' : undefined}
                   aria-label={item.label}
                   className={`flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${active ? 'text-teal-200' : 'text-slate-500'}`}
                 >
@@ -220,12 +246,24 @@ export default function App() {
               </li>
             );
           })}
+          <li>
+            <button
+              {...moreButton({
+                'aria-label': 'Mais opções',
+                className: `flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${moreActive ? 'text-teal-200' : 'text-slate-500'}`
+              })}
+            >
+              <Menu className="h-5 w-5" aria-hidden="true" />
+              <span className="max-w-full truncate px-1">Mais</span>
+            </button>
+          </li>
         </ul>
       </nav>}
 
       {/* Na Prática, a barra fixa da seleção ocupa o rodapé; os indicadores sairiam por cima dela. */}
       {currentId !== 'pratica' && <AppVersion />}
 
+      {showMenus && <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} />}
       {guideOpen && !needsOnboarding && <GuiaDeUso onStep={goToGuideStep} onClose={closeGuide} />}
     </div>
   );

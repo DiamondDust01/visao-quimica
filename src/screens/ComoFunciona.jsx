@@ -3,10 +3,13 @@ import { buttonPrimary, Card } from '../components/ui.jsx';
 import packageJson from '../../package.json';
 import { NIVEIS, PONTOS_POR_DIFICULDADE, DESCONTO_POR_AJUDA, FATOR_MINIMO } from '../domain/pontuacao.js';
 import { LIMITE_DOMINADO, LIMITE_REVISAR, MIN_RESPOSTAS } from '../domain/progresso.js';
+import useSectionFocus from '../app/useSectionFocus.js';
 
 const pct = (value) => `${Math.round(value * 100)}%`;
 
-export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide }) {
+// focusSection: 'regras' ou 'creditos', quando o estudante chega pelo menu "Mais".
+export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, focusSection }) {
+  useSectionFocus('ajuda', focusSection);
   return (
     <div className="space-y-4">
       <Card>
@@ -17,7 +20,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide }
         )}
       </Card>
 
-      <Card>
+      <Card id="ajuda-regras" tabIndex={-1} className="scroll-mt-24 outline-none">
         <h2 className="text-lg font-bold text-white">Pontuação</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-300">
           <li>Cada acerto vale {PONTOS_POR_DIFICULDADE} pontos multiplicados pela dificuldade da questão (de 1 a 5).</li>
@@ -56,7 +59,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide }
         </ul>
       </Card>
 
-      <Card>
+      <Card id="ajuda-creditos" tabIndex={-1} className="scroll-mt-24 outline-none">
         <h2 className="text-lg font-bold text-white">Projeto e créditos</h2>
         <p className="mt-2 text-sm text-slate-300">Informações sobre o desenvolvimento, a instituição e as trilhas de Química.</p>
         {!studyAvailable && <p className="mt-2 text-sm text-slate-400">Escolha sua etapa escolar para acessar os conteúdos de Química.</p>}

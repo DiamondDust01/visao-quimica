@@ -28,6 +28,14 @@ app.whenReady().then(async () => {
   const clickText = (text) => js(`(() => { const b = [...document.querySelectorAll('button')].find((x) => x.innerText.trim() === ${JSON.stringify(text)} && x.offsetParent); if (!b) return false; b.click(); return true; })()`);
   const setInput = (selector, value) => js(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(el, ${JSON.stringify(value)}); el.dispatchEvent(new Event('input', { bubbles: true })); })()`);
   const heading = () => js('document.querySelector("main h1")?.innerText || ""');
+  // Abre o menu "Mais" (o botão visível) e escolhe um item.
+  const openMore = () => js(`[...document.querySelectorAll('[data-guia="btn-mais"]')].find((b) => b.offsetParent).click()`);
+  const menu = async (item) => {
+    await openMore();
+    await wait(200);
+    await js(`document.querySelector('[data-menu-item="${item}"]').click()`);
+    await wait(400);
+  };
 
   await win.loadFile(path.join(projectRoot, 'dist', 'index.html'));
   await js('localStorage.clear()');
@@ -49,12 +57,21 @@ app.whenReady().then(async () => {
     check(text > 200, `aba ${tab} mostra conteúdo (${await heading()})`);
   }
 
-  // Guia de uso: abre pelo cabeçalho, destaca o primeiro alvo, avança e fecha com Esc.
+  // Menu "Mais": quatro grupos, fecha com Esc; o Início tem os atalhos.
   await clickText('Início');
   await wait(300);
+  check(await js(`document.querySelectorAll('[data-atalho]').length`) === 4, 'Início mostra os quatro atalhos');
+  await openMore();
+  await wait(200);
+  check(await js(`document.querySelectorAll('#menu-mais section').length === 4 && document.querySelectorAll('[data-menu-item]').length === 10`), 'menu "Mais" reúne ferramentas, dados, ajuda e aparência');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(200);
+  check(await js(`!document.querySelector('#menu-mais')`), 'Esc fecha o menu "Mais"');
+
+  // Guia de uso: abre pelo menu "Mais", destaca o primeiro alvo, avança e fecha com Esc.
   check(await js(`[...document.querySelectorAll('button')].some((b) => b.innerText.trim() === 'Começar o guia')`), 'Início oferece o guia de uso na primeira vez');
-  await js(`document.querySelector('button[aria-label="Guia de uso"]').click()`);
-  await wait(500);
+  await menu('guia');
+  await wait(200);
   check(await js(`document.querySelector('[role=dialog] h2')?.innerText === 'Bem-vindo ao guia de uso'`), 'guia de uso abre com o pop-up de boas-vindas');
   await clickText('Próximo');
   await wait(900);
@@ -63,7 +80,7 @@ app.whenReady().then(async () => {
   await wait(300);
   check(await js(`!document.querySelector('[role=dialog]')`), 'Esc fecha o guia de uso');
 
-  await js(`document.querySelector('button[aria-label="Ajuda e informações"]').click()`);
+  await menu('creditos');
   const credits = await js(`(() => {
     const main = document.querySelector('main');
     const links = [...main.querySelectorAll('a')].map((link) => link.href);
@@ -71,7 +88,7 @@ app.whenReady().then(async () => {
       links.includes('https://www.ifpi.edu.br/') &&
       [...main.querySelectorAll('button')].some((button) => button.innerText.includes('estudantes e professores'));
   })()`);
-  check(credits, 'ícone do cabeçalho abre a ajuda, os créditos e os links para desenvolvedores, IFPI e professores');
+  check(credits && await js(`document.activeElement?.id === 'ajuda-creditos'`), '"Mais" → Sobre e créditos abre a seção com os links para desenvolvedores, IFPI e professores');
   await clickText('Trilhas de Química para estudantes e professores');
   await wait(300);
   check(await js(`document.querySelector('nav[aria-label="Módulos"] button[aria-current="page"]')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
@@ -96,8 +113,7 @@ app.whenReady().then(async () => {
   await clickText('Encerrar sessão');
   await wait(300);
 
-  await js(`document.querySelector('button[aria-label^="Ferramentas"]').click()`);
-  await wait(300);
+  await menu('tabela');
   check(await js(`document.querySelectorAll('[role=gridcell]').length`) === 118, 'tabela periódica com 118 elementos');
   await clickText('Massa molar');
   await wait(200);
@@ -110,8 +126,8 @@ app.whenReady().then(async () => {
   check(/194,19/.test(await js('document.querySelector("main").innerText')), 'estrutura da cafeína com massa molar');
 
   // Backup em arquivo: exporta (download de verdade) e importa um arquivo com outro progresso.
-  await js(`document.querySelector('button[aria-label="Perfil"]').click()`);
-  await wait(300);
+  await menu('backup');
+  check(await js(`document.activeElement?.id === 'perfil-backup'`), '"Mais" → Backup leva direto à seção de backup do Perfil');
   const profileText = await js(`document.querySelector('main').innerText`);
   check(profileText.toLowerCase().includes('não há conta nem envio automático') && profileText.includes('Lembrete de backup'), 'Perfil: backup local e lembrete configurável');
   await js(`(() => { const select = document.querySelector('select[aria-label="Frequência do lembrete de backup"]'); select.value = 'semanal'; select.dispatchEvent(new Event('change', { bubbles: true })); })()`);
