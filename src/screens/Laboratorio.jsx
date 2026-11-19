@@ -30,7 +30,7 @@ export default function Laboratorio({ index, progress, mentorLog, onPractice }) 
         <Notice tone="info">Responda algumas questões na Prática para o Mentor ter o que analisar.</Notice>
       )}
 
-      <Card>
+      <Card data-guia="lab-revisar">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h2 className="text-lg font-bold text-white">O que revisar agora</h2>
@@ -65,7 +65,7 @@ export default function Laboratorio({ index, progress, mentorLog, onPractice }) 
         </ul>
       </Card>
 
-      <Card>
+      <Card data-guia="lab-padroes">
         <h2 className="text-lg font-bold text-white">Padrões nos seus erros</h2>
         <p className="text-sm text-slate-400">
           {mentorLog.length

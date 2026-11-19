@@ -10,14 +10,15 @@ const SECTIONS = [
   { id: 'estruturas', label: 'Estruturas' }
 ];
 
-export default function Ferramentas({ elementos, meta, estruturas }) {
-  const [section, setSection] = useState('tabela');
+// initialSection: seção aberta ao chegar pelo menu "Mais" ou pelos atalhos do Início.
+export default function Ferramentas({ elementos, meta, estruturas, initialSection }) {
+  const [section, setSection] = useState(() => (SECTIONS.some((item) => item.id === initialSection) ? initialSection : 'tabela'));
   return (
     <div className="space-y-4">
       <Card>
         <h1 className="text-2xl font-black text-white">Ferramentas</h1>
         <p className="mt-2 text-slate-300">Tabela periódica interativa, calculadora de massa molar e visualizador de estruturas, funcionando sem internet.</p>
-        <div role="tablist" aria-label="Ferramentas" className="mt-4 flex flex-wrap gap-2">
+        <div role="tablist" aria-label="Ferramentas" data-guia="ferr-abas" className="mt-4 flex flex-wrap gap-2">
           {SECTIONS.map((item) => (
             <button
               key={item.id}
@@ -33,7 +34,7 @@ export default function Ferramentas({ elementos, meta, estruturas }) {
         </div>
       </Card>
 
-      <Card>
+      <Card data-guia="ferr-conteudo">
         {section === 'tabela' && (
           <div className="space-y-3">
             <p className="text-sm text-slate-400">Clique num elemento (ou use as setas do teclado) para ver os detalhes. Clique numa categoria para destacá-la.</p>

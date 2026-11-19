@@ -1,6 +1,6 @@
 # Checklist de entrega
 
-## Versão 0.3.0
+## Versão 0.4.0
 
 - [ ] `npm run verificar` sem falhas (testes, conteúdo, resquícios, auditoria, build e fumaça).
 - [ ] Versão consistente em `package.json`, `android/app/build.gradle` e `CHANGELOG.md`.
@@ -27,7 +27,8 @@ ou emulador Android.
 - O progresso fica no aparelho. O backup é manual, compatível com JSON versão 1 e pode ser
   compartilhado pelo usuário; o lembrete semanal/mensal só aparece ao abrir Perfil.
 - Não há contas, sincronização automática, backend, multiplayer ou salas.
-- A tela de créditos, aberta pelo ícone junto ao seletor de tema, reúne links de apoio do projeto.
+- A tela de créditos, aberta por "Mais" → "Sobre e créditos", reúne links de apoio do projeto.
+- O menu "Mais" leva a Ferramentas, Meus dados, Ajuda e Aparência; nenhum destino fica a mais de três toques.
 - O código da versão Android deve aumentar a cada nova versão distribuída.
 
 ## Distribuição

@@ -11,7 +11,8 @@ export const STORAGE_KEYS = {
   progresso: 'progresso',
   pontos: 'pontos',
   mentor: 'mentor',
-  lembreteBackup: 'lembrete-backup'
+  lembreteBackup: 'lembrete-backup',
+  guiaVisto: 'guia-visto'
 };
 
 const defaultStorage = (kind = 'localStorage') => {

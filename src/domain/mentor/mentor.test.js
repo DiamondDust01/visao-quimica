@@ -78,3 +78,10 @@ test('registro limitado e sugestões de revisão por acerto baixo, base e padrõ
   const summary = summarizePatterns([{ padroes: ['conversao-unidade', 'erro-previsto'] }, { padroes: ['conversao-unidade'] }]);
   assert.deepEqual(summary.map((item) => [item.padrao, item.vezes]), [['conversao-unidade', 2]]);
 });
+
+test('registro do Mentor com itens malformados não quebra o resumo nem as sugestões', () => {
+  const log = [null, 7, { temaId: 'x', padroes: 'texto' }, { padroes: null }, { temaId: 'fund-unidades', padroes: ['conversao-unidade'] }];
+  assert.deepEqual(summarizePatterns(log).map((item) => item.padrao), ['conversao-unidade']);
+  const index = createTaxonomyIndex(aggregateTaxonomy(AREAS_TESTE_BRUTAS, ETAPAS_TESTE), ETAPAS_TESTE);
+  assert.doesNotThrow(() => suggestReview({ index, progress: {}, log }));
+});

@@ -65,7 +65,7 @@ export default function TemaSelector({ index, progress, questionCount, etapas, s
 
   return (
     <div className="space-y-4">
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div data-guia="filtros" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <label className="flex flex-col gap-1 text-sm text-slate-300 sm:col-span-2 lg:col-span-1">
           Buscar
           <span className="relative">
@@ -102,7 +102,7 @@ export default function TemaSelector({ index, progress, questionCount, etapas, s
 
       {visible.size === 0 && <p className="text-sm text-slate-400">Nenhum tema encontrado com esses filtros.</p>}
 
-      <ul className="space-y-2">
+      <ul data-guia="lista-temas" className="space-y-2">
         {index.areas.map((area) => {
           const areaSubtemas = index.subtemasOf(area.id);
           if (!areaSubtemas.some((id) => visible.has(id))) return null;

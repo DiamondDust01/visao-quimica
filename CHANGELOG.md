@@ -4,6 +4,35 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.4.0] - 2026-11-16
+
+### Alterado
+- Menu simplificado sem remover nada: o cabeçalho mostra só as quatro abas e um botão "Mais"
+  (no celular, o quinto botão da barra de baixo). O "Mais" agrupa Ferramentas (tabela periódica,
+  massa molar, estruturas), Meus dados (etapa e pontos, backup, apagar dados), Ajuda (guia de uso,
+  regras e níveis, créditos) e Aparência (tema). Cada item abre direto na seção certa, e nenhum
+  destino fica a mais de três toques.
+- Início ganhou atalhos para as ferramentas e o backup. Antes da escolha da etapa, ajuda e tema
+  continuam no cabeçalho.
+- Guia de uso atualizado: apresenta os atalhos, o botão "Mais" e abre o menu para explicá-lo.
+- Versão do app e do Android atualizada para 0.4.0 (versionCode 6). Pacotes Windows 0.4.0 gerados.
+
+### Adicionado
+- Guia de uso: contorna cada elemento da tela e explica, num pop-up, para que serve (29 passos por
+  Início, Fundamentos, Prática com sessão de exemplo, Laboratório, Ferramentas e Perfil). Abre pelo
+  menu "Mais", pela tela de Ajuda ou pelo convite na primeira visita ao Início;
+  navega por botões, setas do teclado e Esc, e funciona nos temas claro e escuro e no celular.
+
+## [0.3.1] - 2026-11-11
+
+### Corrigido
+- Backup editado à mão ou registro do Mentor com itens malformados (nulos, fora do formato) não
+  derruba mais o Laboratório nem a importação; esses itens são ignorados.
+- Teste de fumaça do Electron atualizado para a navegação simplificada (4 abas, botão de ajuda).
+
+### Alterado
+- Versão do app e do Android atualizada para 0.3.1 (versionCode 5). Pacotes Windows 0.3.1 gerados.
+
 ## [0.3.0] - 2026-11-02
 
 ### Removido
