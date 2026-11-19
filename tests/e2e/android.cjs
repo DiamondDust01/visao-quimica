@@ -51,6 +51,9 @@ app.whenReady().then(async () => {
     await wait(350);
     return true;
   };
+  // Toca no "Mais" da barra de baixo e escolhe um item do menu.
+  const tapMore = () => tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === 'Mais')`);
+  const menu = async (item) => { await tapMore(); await tap(`document.querySelector('[data-menu-item="${item}"]')`); };
   const byText = (text, scope = 'document') => `[...${scope}.querySelectorAll('button')].find((b) => b.innerText.trim() === ${JSON.stringify(text)} && b.offsetParent)`;
   const shot = async (name) => { if (!out) return; await wait(400); const image = await new Promise((resolve) => { win.webContents.once('paint', async () => resolve(await win.webContents.capturePage())); win.webContents.invalidate(); }); fs.writeFileSync(path.join(out, `${name}.png`), image.toPNG()); };
 
@@ -65,20 +68,24 @@ app.whenReady().then(async () => {
   const bottomNav = await js(`(() => { const nav = [...document.querySelectorAll('nav')].find((n) => n.className.includes('bottom-0') && getComputedStyle(n).display !== 'none'); return nav ? nav.querySelectorAll('button').length : 0; })()`);
   check(bottomNav === 5, `barra inferior do celular com 5 botões (${bottomNav})`);
   await shot('android-inicio');
-  for (const label of ['Trilhas', 'Prática', 'Mentor', 'Ajuda']) {
+  for (const label of ['Trilhas', 'Prática', 'Mentor']) {
     await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === ${JSON.stringify(label)})`);
     const h1 = await js(`document.querySelector('main h1')?.innerText || ''`);
     check(Boolean(h1), `toque em ${label} abre ${h1}`);
   }
-  await tap(`document.querySelector('button[aria-label="Sobre o projeto e créditos"]')`);
+  // Menu "Mais": folha que sobe da base com os quatro grupos.
+  await tapMore();
+  check(await js(`document.querySelectorAll('#menu-mais section').length === 4 && document.querySelector('#menu-mais').getBoundingClientRect().bottom <= window.innerHeight + 1`), 'toque em Mais abre a folha com ferramentas, dados, ajuda e aparência');
+  await shot('android-menu-mais');
+  await tap(`document.querySelector('[data-menu-item="creditos"]')`);
   check(await js(`(() => {
     const main = document.querySelector('main');
     const links = [...main.querySelectorAll('a')].map((link) => link.href);
     return links.includes('https://github.com/DiamondDust01/visao-quimica') &&
       links.includes('https://www.ifpi.edu.br/') &&
-      [...main.querySelectorAll('button')].some((button) => button.innerText.includes('Para professores'));
-  })()`), 'ícone do cabeçalho abre créditos e links para desenvolvedores, IFPI e professores');
-  await tap(byText('Para professores: trilhas de apoio às aulas'));
+      [...main.querySelectorAll('button')].some((button) => button.innerText.includes('estudantes e professores'));
+  })()`), 'Mais → Sobre e créditos abre os links para desenvolvedores, IFPI e professores');
+  await tap(byText('Trilhas de Química para estudantes e professores'));
   check(await js(`document.querySelector('main h1')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
   await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === 'Trilhas')`);
   await js('window.scrollTo(0, 2000)'); await wait(300);
@@ -91,7 +98,7 @@ app.whenReady().then(async () => {
   // O tema fica dentro da área recolhida: abre a área antes, como faria quem usa o app.
   await tap(`document.querySelector('#selecao-fund-densidade').closest('details').querySelector('summary')`);
   await tap(`document.querySelector('label[for="selecao-fund-densidade"]') || document.querySelector('#selecao-fund-densidade')`);
-  await tap(byText('Começar sessão'));
+  await tap(byText('Passo 3 · Começar sessão'));
   await tap(`document.querySelector('main form label:has(input[type=radio])') || document.querySelector('main form input[type=text], main form input[inputmode=decimal]')`);
   await js(`(() => { const i = document.querySelector('main form input[inputmode=decimal]'); if (i && !i.value) { Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(i, '2,7'); i.dispatchEvent(new Event('input', { bubbles: true })); } const u = document.querySelector('main form input[list]'); if (u && !u.value) { Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(u, 'g'); u.dispatchEvent(new Event('input', { bubbles: true })); } })()`);
   await tap(byText('Responder'));
@@ -100,17 +107,24 @@ app.whenReady().then(async () => {
   await tap(byText('Encerrar sessão'));
 
   // Ferramentas, estrutura e backup local.
-  await tap(`document.querySelector('button[aria-label^="Ferramentas"]')`);
-  await tap(byText('Estruturas'));
+  await menu('estruturas');
   await tap(byText('Cafeína'));
   await wait(800);
   check(await js(`Boolean(document.querySelector('main figure svg:not(.hidden)')) && document.querySelector('main').innerText.includes('194,19')`), 'estrutura da cafeína desenhada, com massa molar');
   await shot('android-estrutura');
-  await tap(`document.querySelector('button[aria-label="Perfil"]')`);
+  await menu('backup');
+  check(await js(`document.activeElement?.id === 'perfil-backup'`), 'Mais → Backup leva direto à seção de backup');
   const perfil = await js(`document.querySelector('main').innerText`);
   check(perfil.includes('Backup local') && perfil.toLowerCase().includes('não há conta nem envio automático'), 'Perfil: progresso local e sem sincronização de conta');
   check(perfil.includes('Lembrete de backup') && perfil.includes('Não envia e-mail'), 'Perfil: lembrete manual sem envio em segundo plano');
   await shot('android-backup');
+
+  // Guia de uso pelo menu, fechado pelo X do pop-up.
+  await menu('guia');
+  await wait(700);
+  check(await js(`document.querySelector('#guia-titulo')?.innerText === 'Bem-vindo ao guia de uso'`), 'Mais → Guia de uso abre o pop-up do guia');
+  await tap(`document.querySelector('button[aria-label="Fechar o guia"]')`);
+  check(await js(`!document.querySelector('[data-guia-overlay]')`), 'o guia fecha pelo X');
 
   console.log('erros/avisos no console:', errors.length ? errors : 'nenhum');
   check(errors.length === 0, 'console sem erros nem avisos');
