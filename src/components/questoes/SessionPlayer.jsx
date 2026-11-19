@@ -54,6 +54,7 @@ function QuestionStep({ question, index, last, onAnswered, onNext }) {
     <>
       <Card>
         <form onSubmit={submit} className="space-y-4">
+          <div data-guia="enunciado" className="space-y-4">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
             <span className="font-semibold uppercase tracking-wide text-teal-300">{subtema?.nome}</span>
             <span className="text-slate-400">{TYPE_LABELS[question.tipo]}</span>
@@ -62,9 +63,10 @@ function QuestionStep({ question, index, last, onAnswered, onNext }) {
           <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold leading-relaxed text-white outline-none">
             <ChemText text={question.enunciado} />
           </h2>
+          </div>
           {question.estrutura && <EstruturaMolecular smiles={question.estrutura.smiles} descricao={`Estrutura da molécula do enunciado, fórmula molecular ${question.estrutura.formula}`} width={300} height={200} />}
 
-          <AnswerInput question={question} value={answer} onChange={setAnswer} disabled={answered} />
+          <div data-guia="resposta"><AnswerInput question={question} value={answer} onChange={setAnswer} disabled={answered} /></div>
 
           {levels.slice(0, helpShown).map((level) => (
             <Notice key={level.nivel} tone="info">
@@ -74,7 +76,7 @@ function QuestionStep({ question, index, last, onAnswered, onNext }) {
           {feedback?.status === 'invalida' && <Notice tone="warn">{feedback.mensagem}</Notice>}
 
           {!answered && (
-            <div className="flex flex-wrap items-center gap-2">
+            <div data-guia="acoes" className="flex flex-wrap items-center gap-2">
               <button type="submit" className={buttonPrimary}>Responder</button>
               {helpShown < levels.length && (
                 <button type="button" onClick={() => setHelpShown((value) => value + 1)} className={buttonSecondary}>
@@ -150,7 +152,7 @@ export default function SessionPlayer({ questions, index, onAnswer, onFinish, en
 
   return (
     <div className="space-y-4">
-      <div className="space-y-2">
+      <div data-guia="sessao-topo" className="space-y-2">
         <div className="flex items-center justify-between gap-3 text-sm text-slate-400">
           <span>Questão {position + 1} de {questions.length}</span>
           <button type="button" onClick={() => onFinish(answers)} className="font-semibold text-slate-400 underline-offset-2 hover:text-white hover:underline">{endLabel}</button>

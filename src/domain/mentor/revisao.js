@@ -12,7 +12,7 @@ export const appendLog = (log, entry) => [...(Array.isArray(log) ? log : []), en
 // Padrões genéricos (sem o "erro previsto"), do mais frequente ao menos.
 export const summarizePatterns = (log) => {
   const counts = new Map();
-  (log || []).forEach((entry) => (entry.padroes || []).forEach((padrao) => {
+  (log || []).forEach((entry) => (Array.isArray(entry?.padroes) ? entry.padroes : []).forEach((padrao) => {
     if (padrao !== 'erro-previsto' && PADROES[padrao]) counts.set(padrao, (counts.get(padrao) || 0) + 1);
   }));
   return [...counts.entries()]
@@ -43,7 +43,9 @@ export const suggestReview = ({ index, progress = {}, log = [] }) => {
 
   // 3. Temas com vários erros recentes.
   const recent = new Map();
-  (log || []).slice(-JANELA_RECENTE).forEach((entry) => recent.set(entry.temaId, (recent.get(entry.temaId) || 0) + 1));
+  (log || []).slice(-JANELA_RECENTE).forEach((entry) => {
+    if (entry?.temaId) recent.set(entry.temaId, (recent.get(entry.temaId) || 0) + 1);
+  });
   [...recent.entries()].filter(([, vezes]) => vezes >= 2).sort((a, b) => b[1] - a[1])
     .forEach(([id, vezes]) => add(id, `${vezes} erros nas respostas recentes.`));
 

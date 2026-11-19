@@ -121,7 +121,7 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
       <TemaSelector index={index} progress={progress} questionCount={questionCount} etapas={etapas} selected={selected} onChange={setSelected} />
 
       {/* Barra fixa com o resumo da seleção. */}
-      <div className="fixed inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+4rem)] z-20 border-t border-slate-800 bg-slate-950/95 backdrop-blur-md md:bottom-0">
+      <div data-guia="barra-sessao" className="fixed inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+4rem)] z-20 border-t border-slate-800 bg-slate-950/95 backdrop-blur-md md:bottom-0">
         <div className="mx-auto max-w-6xl space-y-2 px-4 py-3">
           {warnings.length > 0 && (
             <Notice tone="warn">

@@ -7,12 +7,12 @@ import { statusFor, summarizeProgress } from '../domain/progresso.js';
 
 const PREVIEW = 8;
 
-function SubtemaList({ title, description, ids, index, progress, numbered = false, emptyText, onPractice }) {
+function SubtemaList({ guia, title, description, ids, index, progress, numbered = false, emptyText, onPractice }) {
   const [expanded, setExpanded] = useState(false);
   const visible = expanded ? ids : ids.slice(0, PREVIEW);
   const headingId = `lista-${title.toLowerCase().replace(/[^a-z]+/g, '-')}`;
   return (
-    <section aria-labelledby={headingId} className="space-y-3">
+    <section aria-labelledby={headingId} data-guia={guia} className="space-y-3">
       <div>
         <h2 id={headingId} className="text-lg font-bold text-white">{title} <span className="font-mono text-sm text-slate-500">({ids.length})</span></h2>
         <p className="text-sm text-slate-400">{description}</p>
@@ -71,7 +71,7 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
 
   return (
     <div className="space-y-6">
-      <Card>
+      <Card data-guia="trilha-progresso">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h1 className="text-2xl font-black text-white">Fundamentos</h1>
@@ -89,7 +89,7 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
       </Card>
 
       {next && (
-        <Card className="border-teal-500/40">
+        <Card data-guia="tema-recomendado" className="border-teal-500/40">
           <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Passo 2 · Tema recomendado</p>
           <h2 className="mt-1 text-xl font-black text-white">{next.nome}</h2>
           <p className="mt-1 text-sm text-slate-400">{next.descricao}</p>
@@ -102,6 +102,7 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
       </Notice>
 
       <SubtemaList
+        guia="lista-revisao"
         title="Revisão"
         description="Base de etapas anteriores que esta trilha usa, e temas em que seu acerto ficou baixo."
         ids={result.revisao}
@@ -111,6 +112,7 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
         emptyText="Nada para revisar por enquanto."
       />
       <SubtemaList
+        guia="lista-recomendados"
         title={next ? 'Outros recomendados para você' : 'Recomendados para você'}
         description={next ? 'Depois do tema destacado, na ordem sugerida e respeitando os pré-requisitos.' : 'Na ordem sugerida: cada tema vem depois dos que ele usa como base.'}
         ids={recomendados}
@@ -121,6 +123,7 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
         emptyText="Você concluiu todos os temas recomendados para a sua etapa."
       />
       <SubtemaList
+        guia="lista-desafio"
         title="Desafio"
         description="Temas da próxima etapa que você já tem base para encarar."
         ids={result.desafio}
