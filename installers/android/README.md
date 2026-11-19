@@ -1,15 +1,15 @@
 # Visão Química para Android
 
-APK de teste da versão 0.3.0, gerado em 2026-11-02 com o código do commit `f1a9957` de `main`:
-[`Visao-Quimica-0.3.0-android.apk`](Visao-Quimica-0.3.0-android.apk).
+APK de teste da versão 0.4.0, gerado em 2026-11-19 com o código do commit `5c87424` de `main`:
+[`Visao-Quimica-0.4.0-android.apk`](Visao-Quimica-0.4.0-android.apk).
 
 | | |
 |---|---|
 | `applicationId` | `com.exemplo.quimicaquest` (provisório) |
-| `versionName` / `versionCode` | 0.3.0 / 4 |
+| `versionName` / `versionCode` | 0.4.0 / 6 |
 | Android mínimo | 7.0 (API 24) |
-| Tamanho | 5.736.417 bytes |
-| SHA-256 | `5B529BE69B2105DA58D5631CEAF19CFBAA9F0D7F0E683C6B7502C13867F7A3FA` |
+| Tamanho | 5.747.129 bytes |
+| SHA-256 | `CC4BF1E1661768A97FF8F74AA8744871762A22A2CFCE8A5591A6FA575C46FD45` |
 | Assinatura | chave de depuração; não serve para a Play Store |
 
 ## Instalação
@@ -26,7 +26,8 @@ definido antes de uma publicação em loja.
 - Perfil e progresso ficam no aparelho. Não há conta, sincronização, backend ou multiplayer; o
   backup é exportado e compartilhado manualmente pelo usuário.
 - Conferido com `aapt2 dump badging` (identificador e versão) e
-  `npm run test:android` (17 verificações de navegação, toque, créditos, conteúdo e console).
+  `npm run test:android` (20 verificações: navegação e toque, menu "Mais", créditos, questão,
+  estrutura, backup, guia de uso e console).
 - O APK não foi aberto em aparelho físico ou emulador nesta rodada.
 
 Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
