@@ -1,15 +1,15 @@
 # Visão Química para Android
 
-APK de teste da versão 0.4.0, gerado em 2026-11-19 com o código do commit `5c87424` de `main`:
-[`Visao-Quimica-0.4.0-android.apk`](Visao-Quimica-0.4.0-android.apk).
+APK de teste da versão 0.4.1, gerado em 2026-11-20 com o código do commit `acac0d5` de `main`:
+[`Visao-Quimica-0.4.1-android.apk`](Visao-Quimica-0.4.1-android.apk).
 
 | | |
 |---|---|
 | `applicationId` | `com.exemplo.quimicaquest` (provisório) |
-| `versionName` / `versionCode` | 0.4.0 / 6 |
+| `versionName` / `versionCode` | 0.4.1 / 7 |
 | Android mínimo | 7.0 (API 24) |
-| Tamanho | 5.747.129 bytes |
-| SHA-256 | `CC4BF1E1661768A97FF8F74AA8744871762A22A2CFCE8A5591A6FA575C46FD45` |
+| Tamanho | 5.747.025 bytes |
+| SHA-256 | `5E5119FB7A5A308391867A7DDDE22731536CD1B9BA5C3FDEC221DAC7D2A05638` |
 | Assinatura | chave de depuração; não serve para a Play Store |
 
 ## Instalação
