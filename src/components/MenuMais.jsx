@@ -22,7 +22,10 @@ const ICONS = {
 
 const itemClass = 'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition hover:bg-slate-800/80 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300';
 
-export default function MenuMais({ open, onClose, onSelect, current }) {
+// O guia de uso passa pelas telas de estudo, que só existem depois da escolha da etapa.
+const PEDE_ETAPA = new Set(['guia']);
+
+export default function MenuMais({ open, onClose, onSelect, current, semEtapa = false }) {
   const panelRef = useRef(null);
   const returnFocus = useRef(null);
   const theme = useTheme();
@@ -92,19 +95,23 @@ export default function MenuMais({ open, onClose, onSelect, current }) {
                   }
                   const Icon = ICONS[item.id];
                   const active = isCurrent(item);
+                  const bloqueado = semEtapa && PEDE_ETAPA.has(item.id);
                   return (
                     <li key={item.id}>
                       <button
                         type="button"
                         data-menu-item={item.id}
                         aria-current={active ? 'page' : undefined}
+                        disabled={bloqueado}
                         onClick={() => onSelect(item)}
-                        className={`${itemClass} ${active ? 'bg-teal-500/10' : ''}`}
+                        className={`${itemClass} ${active ? 'bg-teal-500/10' : ''} ${bloqueado ? 'cursor-not-allowed opacity-50 hover:bg-transparent' : ''}`}
                       >
                         <Icon className={`h-5 w-5 shrink-0 ${active ? 'text-teal-200' : 'text-slate-400'}`} aria-hidden="true" />
                         <span className="min-w-0 flex-1">
                           <span className={`block text-sm font-semibold ${active ? 'text-teal-200' : 'text-slate-100'}`}>{item.label}</span>
-                          {item.descricao && <span className="block text-xs text-slate-500">{item.descricao}</span>}
+                          {bloqueado
+                            ? <span className="block text-xs text-slate-500">Escolha sua etapa para liberar</span>
+                            : item.descricao && <span className="block text-xs text-slate-500">{item.descricao}</span>}
                         </span>
                       </button>
                     </li>
