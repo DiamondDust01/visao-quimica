@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BookOpen, Brain, FlaskConical, House, Info, Menu, TestTubes } from 'lucide-react';
+import { BookOpen, Brain, FlaskConical, House, Menu, TestTubes } from 'lucide-react';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
 import { SCREEN_IDS, TABS, getTab } from './navigation.js';
 import useStudyState from './useStudyState.js';
-import ThemeToggle from './ThemeToggle.jsx';
 import HexBackdrop from '../components/HexBackdrop.jsx';
 import GuiaDeUso from '../components/GuiaDeUso.jsx';
 import MenuMais from '../components/MenuMais.jsx';
@@ -101,9 +100,9 @@ export default function App() {
     else openScreen(item.tela, item.secao);
   };
 
-  const needsOnboarding = !profile && activeTab !== 'como-funciona';
-  // O menu "Mais" e a barra de baixo só existem depois da escolha da etapa.
-  const showMenus = Boolean(profile) && !needsOnboarding;
+  // As telas de estudo pedem a etapa primeiro; as do menu "Mais" (ferramentas, perfil e
+  // ajuda) funcionam sem ela. A barra de cima, a de baixo e o "Mais" ficam sempre visíveis.
+  const needsOnboarding = !profile && !SCREEN_IDS.includes(activeTab);
 
   // Ao trocar de tela, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
   // Com uma seção pedida, quem rola até ela é a própria tela.
@@ -115,6 +114,8 @@ export default function App() {
   const tab = getTab(activeTab);
   const onScreen = SCREEN_IDS.includes(activeTab);
   const currentId = onScreen ? activeTab : tab.id;
+  // Na escolha de etapa nenhuma aba fica marcada: a tela ainda não é a da aba.
+  const activeTabId = needsOnboarding ? null : currentId;
   const secao = target.secao;
   let screen;
   if (needsOnboarding) {
@@ -175,49 +176,30 @@ export default function App() {
             <FlaskConical className="h-6 w-6 text-teal-300" aria-hidden="true" />
             <span>Visão Química</span>
           </button>
-          {!needsOnboarding && (
-            <nav aria-label="Módulos" data-guia="abas" className="hidden md:block">
-              <ul className="flex gap-1">
-                {TABS.map((item) => (
-                  <li key={item.id}>
-                    <button
-                      type="button"
-                      onClick={() => openScreen(item.id)}
-                      aria-current={item.id === currentId ? 'page' : undefined}
-                      className={`rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${item.id === currentId ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`}
-                    >
-                      {item.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          )}
-          {showMenus ? (
-            <button
-              {...moreButton({
-                className: `hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 md:flex ${moreActive ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`
-              })}
-            >
-              <Menu className="h-5 w-5" aria-hidden="true" />
-              Mais
-            </button>
-          ) : (
-            // Primeiro uso: ajuda e tema continuam a um toque, como antes.
-            <div className="flex items-center gap-1">
-              <button
-                type="button"
-                onClick={() => openScreen('como-funciona')}
-                aria-label="Ajuda e informações"
-                aria-current={currentId === 'como-funciona' ? 'page' : undefined}
-                title="Ajuda e informações"
-                className={`flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${currentId === 'como-funciona' ? 'text-teal-200' : 'text-slate-400'}`}
-              >
-                <Info className="h-5 w-5" aria-hidden="true" />
-              </button>
-              <ThemeToggle />
-            </div>
-          )}
+          <nav aria-label="Módulos" data-guia="abas" className="hidden md:block">
+            <ul className="flex gap-1">
+              {TABS.map((item) => (
+                <li key={item.id}>
+                  <button
+                    type="button"
+                    onClick={() => openScreen(item.id)}
+                    aria-current={item.id === activeTabId ? 'page' : undefined}
+                    className={`rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${item.id === activeTabId ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <button
+            {...moreButton({
+              className: `hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 md:flex ${moreActive ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`
+            })}
+          >
+            <Menu className="h-5 w-5" aria-hidden="true" />
+            Mais
+          </button>
         </div>
       </header>
 
@@ -226,17 +208,17 @@ export default function App() {
       </main>
 
       {/* Barra inferior no celular: as quatro abas e o "Mais". */}
-      {showMenus && <nav aria-label="Módulos" data-guia="abas" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
+      <nav aria-label="Módulos" data-guia="abas" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="grid grid-cols-5">
           {TABS.map((item) => {
             const Icon = TAB_ICONS[item.id];
-            const active = item.id === currentId && !menuOpen;
+            const active = item.id === activeTabId && !menuOpen;
             return (
               <li key={item.id}>
                 <button
                   type="button"
                   onClick={() => openScreen(item.id)}
-                  aria-current={item.id === currentId ? 'page' : undefined}
+                  aria-current={item.id === activeTabId ? 'page' : undefined}
                   aria-label={item.label}
                   className={`flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${active ? 'text-teal-200' : 'text-slate-500'}`}
                 >
@@ -258,12 +240,12 @@ export default function App() {
             </button>
           </li>
         </ul>
-      </nav>}
+      </nav>
 
       {/* Na Prática, a barra fixa da seleção ocupa o rodapé; os indicadores sairiam por cima dela. */}
       {currentId !== 'pratica' && <AppVersion />}
 
-      {showMenus && <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} />}
+      <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} semEtapa={!profile} />
       {guideOpen && !needsOnboarding && <GuiaDeUso onStep={goToGuideStep} onClose={closeGuide} />}
     </div>
   );
