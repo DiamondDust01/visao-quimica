@@ -4,6 +4,14 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
+## [Não lançado]
+
+### Corrigido
+- No primeiro uso, antes de escolher a etapa, a barra superior não some mais: as quatro abas e o
+  "Mais" (e, no celular, a barra de baixo) ficam visíveis desde a abertura. As abas de estudo
+  levam à escolha da etapa; Ferramentas, Perfil (incluindo importar backup) e Ajuda abrem
+  direto pelo "Mais". Só o guia de uso fica bloqueado até a etapa ser escolhida.
+
 ## [0.4.0] - 2026-11-16
 
 ### Alterado
