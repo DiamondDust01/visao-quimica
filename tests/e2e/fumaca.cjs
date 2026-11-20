@@ -44,6 +44,17 @@ app.whenReady().then(async () => {
 
   check(await js('Boolean(document.querySelector(\'meta[http-equiv="Content-Security-Policy"]\'))'), 'build com política de segurança de conteúdo');
   check(/Boas-vindas/.test(await heading()) && await js(`Boolean(document.querySelector('label[for="onboarding-etapa-em-3"]'))`), 'primeiro uso abre a escolha de etapa');
+  const firstUseBar = await js(`[...document.querySelectorAll('header button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
+  check(['Início', 'Fundamentos', 'Prática', 'Laboratório do Mentor', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
+  await openMore();
+  await wait(300);
+  check(await js(`document.querySelector('[data-menu-item="guia"]')?.disabled === true && document.querySelector('[data-menu-item="tabela"]')?.disabled === false`), 'sem etapa, o "Mais" abre as ferramentas e bloqueia só o guia');
+  await js(`document.querySelector('[data-menu-item="tabela"]').click()`);
+  await wait(400);
+  check(/Ferramentas/.test(await heading()), 'sem etapa, a tabela periódica abre pelo "Mais"');
+  await clickText('Início');
+  await wait(400);
+  check(/Boas-vindas/.test(await heading()), 'sem etapa, as abas de estudo levam à escolha de etapa');
   await js(`document.querySelector('label[for="onboarding-etapa-em-3"]').click()`);
   await clickText('Continuar');
   await wait(400);
