@@ -15,6 +15,14 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 - Para não entregar o gabarito, o termo que é o próprio assunto cobrado na questão (como
   "destilação" em Separação de misturas) só ganha explicação depois da resposta. O guia de uso e
   a tela Ajuda explicam o glossário.
+- Confirmação antes de estudar: escolher um tema em qualquer lugar (Início, Trilha, Prática,
+  Mentor, temas rápidos e "repetir") abre um pop-up com o tema, a área, a dificuldade, quantas
+  questões vêm e, se houver, a base que ainda não foi praticada. A sessão só começa em
+  "Sim, começar"; "Cancelar", Esc ou um toque fora desistem.
+- Aviso quando falta escolher: "Começar sessão" sem tema marcado, na Prática, e "Ver minha
+  trilha" sem etapa marcada, na tela de boas-vindas, deixaram de ser botões que não respondem.
+  O toque agora mostra o que é preciso escolher primeiro, e a barra da Prática diz "Nenhum tema
+  escolhido" enquanto não houver seleção.
 
 ### Alterado
 - Cada aba agora tem uma função própria, dita no topo da tela como uma pergunta: Início ("o que

@@ -16,6 +16,8 @@ export default function Pratica({ index, questions, etapas, progress, request, o
   const [selected, setSelected] = useState(() => new Set());
   const [quantidade, setQuantidade] = useState(10);
   const [notice, setNotice] = useState('');
+  // Toque em "Começar sessão" sem tema marcado: em vez de um botão que não responde, um aviso.
+  const [avisoVazio, setAvisoVazio] = useState(false);
 
   const countBySubtema = useMemo(() => {
     const counts = new Map();
@@ -36,6 +38,11 @@ export default function Pratica({ index, questions, etapas, progress, request, o
   const warnings = useMemo(() => unstudiedPrerequisites(index, [...selected], progress), [index, selected, progress]);
   const missingIds = [...new Set(warnings.flatMap((warning) => warning.faltando))].filter((id) => questionCount(id) > 0);
   const available = [...selected].reduce((sum, id) => sum + questionCount(id), 0);
+  useEffect(() => { if (available) setAvisoVazio(false); }, [available]);
+  const comecar = () => {
+    if (available) onStart([...selected], quantidade);
+    else setAvisoVazio(true);
+  };
 
   return (
     <div className="space-y-4 pb-40">
@@ -49,6 +56,13 @@ export default function Pratica({ index, questions, etapas, progress, request, o
       {/* Barra fixa com o resumo da seleção. */}
       <div data-guia="barra-sessao" className="fixed inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+4rem)] z-20 border-t border-slate-800 bg-slate-950/95 backdrop-blur-md md:bottom-0">
         <div className="mx-auto max-w-6xl space-y-2 px-4 py-3">
+          {avisoVazio && (
+            <div data-aviso-vazio="">
+              <Notice tone="warn">
+                <strong>Escolha um tema primeiro.</strong> Marque pelo menos um tema na lista acima (um subtema, um tema inteiro ou uma área) e toque em "Começar sessão" de novo.
+              </Notice>
+            </div>
+          )}
           {warnings.length > 0 && (
             <Notice tone="warn">
               <span className="flex items-start gap-2">
@@ -72,7 +86,9 @@ export default function Pratica({ index, questions, etapas, progress, request, o
           )}
           <div className="flex flex-wrap items-center gap-3">
             <p className="min-w-0 flex-1 text-sm text-slate-300" aria-live="polite">
-              <strong className="text-white">{selected.size}</strong> tema(s) · {available} questões disponíveis
+              {selected.size > 0
+                ? <><strong className="text-white">{selected.size}</strong> tema(s) · {available} questões disponíveis</>
+                : <span className="text-slate-400">Nenhum tema escolhido: marque um ou mais temas na lista.</span>}
             </p>
             <label className="flex items-center gap-2 text-sm text-slate-300">
               Questões
@@ -81,7 +97,7 @@ export default function Pratica({ index, questions, etapas, progress, request, o
               </select>
             </label>
             {selected.size > 0 && <button type="button" onClick={() => setSelected(new Set())} className={buttonSecondary}>Limpar</button>}
-            <button type="button" disabled={!available} onClick={() => onStart([...selected], quantidade)} className={buttonPrimary}>Começar sessão</button>
+            <button type="button" aria-disabled={!available} onClick={comecar} className={`${buttonPrimary} ${available ? '' : 'opacity-50'}`}>Começar sessão</button>
           </div>
         </div>
       </div>

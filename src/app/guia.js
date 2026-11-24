@@ -46,7 +46,7 @@ export const GUIA_PASSOS = [
   {
     id: 'inicio-continuar', tela: 'inicio', alvo: 'continuar',
     titulo: 'Continuar',
-    texto: '"Praticar agora" começa na hora uma sessão com o próximo tema da sua trilha, sem passar por outra tela. Em Estudo livre, este cartão leva à Prática. Abaixo dele aparecem, quando houver, a sua última sessão (para repetir os temas) e as sugestões do Mentor.'
+    texto: '"Praticar agora" mostra o próximo tema da sua trilha e pede a sua confirmação; em "Sim, começar", a sessão abre sem passar por outra tela. Em Estudo livre, este cartão leva à Prática. Abaixo dele aparecem, quando houver, a sua última sessão (para repetir os temas) e as sugestões do Mentor.'
   },
   {
     id: 'mais', tela: 'inicio', alvo: 'btn-mais',
@@ -67,7 +67,7 @@ export const GUIA_PASSOS = [
   {
     id: 'fund-recomendado', tela: 'fundamentos', alvo: 'tema-recomendado', opcional: true,
     titulo: 'O próximo tema',
-    texto: 'O selo "Próximo" marca o tema por onde continuar, o mesmo do botão do Início. Pré-requisitos vêm sempre antes, e temas que precisam de revisão passam à frente. "Praticar" abre uma sessão de questões do tema na hora.'
+    texto: 'O selo "Próximo" marca o tema por onde continuar, o mesmo do botão do Início. Pré-requisitos vêm sempre antes, e temas que precisam de revisão passam à frente. "Praticar" mostra o tema e o número de questões e só começa depois de você confirmar.'
   },
   {
     id: 'fund-revisao', tela: 'fundamentos', alvo: 'lista-revisao', opcional: true,
@@ -98,7 +98,7 @@ export const GUIA_PASSOS = [
   {
     id: 'prat-barra', tela: 'pratica-lista', alvo: 'barra-sessao',
     titulo: 'Barra da sessão',
-    texto: 'Mostra quantos temas e questões você escolheu e avisa quando algum tema usa conteúdos que você ainda não estudou (sem bloquear nada). Defina de 5 a 20 questões e toque em "Começar sessão". Em seguida vou abrir uma sessão de exemplo para mostrar como ela funciona.'
+    texto: 'Mostra quantos temas e questões você escolheu e avisa quando algum tema usa conteúdos que você ainda não estudou (sem bloquear nada). Defina de 5 a 20 questões e toque em "Começar sessão": o app mostra o que vai ser estudado e pede confirmação. Sem nenhum tema marcado, ele avisa que é preciso escolher um primeiro. Em seguida vou abrir uma sessão de exemplo para mostrar como ela funciona.'
   },
 
   {
@@ -125,7 +125,7 @@ export const GUIA_PASSOS = [
   {
     id: 'lab-revisar', tela: 'laboratorio', alvo: 'lab-revisar',
     titulo: 'O que revisar agora',
-    texto: 'O Mentor junta os temas com acerto baixo, a base deles e os temas ligados aos seus erros mais repetidos. "Praticar a revisão" abre uma sessão com todos eles.'
+    texto: 'O Mentor junta os temas com acerto baixo, a base deles e os temas ligados aos seus erros mais repetidos. "Praticar a revisão" junta todos eles numa sessão, depois da sua confirmação.'
   },
   {
     id: 'lab-padroes', tela: 'laboratorio', alvo: 'lab-padroes',

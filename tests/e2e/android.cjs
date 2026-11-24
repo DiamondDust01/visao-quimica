@@ -101,6 +101,7 @@ app.whenReady().then(async () => {
   await tap(`document.querySelector('#selecao-fund-densidade').closest('details').querySelector('summary')`);
   await tap(`document.querySelector('label[for="selecao-fund-densidade"]') || document.querySelector('#selecao-fund-densidade')`);
   await tap(byText('Começar sessão'));
+  await tap(byText('Sim, começar'));
   await tap(`document.querySelector('main form label:has(input[type=radio])') || document.querySelector('main form input[type=text], main form input[inputmode=decimal]')`);
   await js(`(() => { const i = document.querySelector('main form input[inputmode=decimal]'); if (i && !i.value) { Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(i, '2,7'); i.dispatchEvent(new Event('input', { bubbles: true })); } const u = document.querySelector('main form input[list]'); if (u && !u.value) { Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(u, 'g'); u.dispatchEvent(new Event('input', { bubbles: true })); } })()`);
   await tap(byText('Responder'));
