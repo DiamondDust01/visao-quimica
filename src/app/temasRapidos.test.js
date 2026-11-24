@@ -4,6 +4,14 @@ import { TEMAS_RAPIDOS } from './temasRapidos.js';
 import { ETAPAS, TAXONOMIA } from '../data/index.js';
 import { QUESTIONS } from '../data/questoes/index.js';
 
+test('há um único tema sugerido, o de reações endotérmicas e exotérmicas, com resumo', () => {
+  const sugeridos = TEMAS_RAPIDOS.filter((tema) => tema.sugerido);
+  assert.equal(sugeridos.length, 1);
+  assert.equal(sugeridos[0].id, 'endo-exo');
+  assert.equal(sugeridos[0].etapaId, 'em-2');
+  assert.ok(sugeridos[0].resumo?.length > 30);
+});
+
 test('temas rápidos apontam para subtemas com questões e etapas reais', () => {
   const ids = TEMAS_RAPIDOS.map((tema) => tema.id);
   assert.equal(new Set(ids).size, ids.length, 'ids repetidos');
