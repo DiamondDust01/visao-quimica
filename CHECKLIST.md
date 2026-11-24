@@ -1,6 +1,6 @@
 # Checklist de entrega
 
-## Versão 0.4.1
+## Versão 0.5.0
 
 - [ ] `npm run verificar` sem falhas (testes, conteúdo, resquícios, auditoria, build e fumaça).
 - [ ] Versão consistente em `package.json`, `android/app/build.gradle` e `CHANGELOG.md`.

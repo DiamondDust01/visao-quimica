@@ -4,7 +4,7 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [0.5.0] - 2026-11-23
 
 ### Adicionado
 - Painel "Temas rápidos" na tela de boas-vindas: quem não quer escolher a etapa começa direto uma
@@ -32,6 +32,8 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 - Em Fundamentos, cada lista tem sua cor na marca do título e na borda dos temas: Revisão em
   âmbar, Recomendados em anil, Desafio em violeta e Concluídos em verde.
 - Os atalhos do Início usam a cor da área de destino.
+- Versão do app e do Android atualizada para 0.5.0 (versionCode 8). Pacotes Windows e APK 0.5.0
+  gerados.
 
 ### Corrigido
 - Abrir Tabela periódica, Massa molar ou Estruturas pelo "Mais" vindo de uma tela rolada deixava
