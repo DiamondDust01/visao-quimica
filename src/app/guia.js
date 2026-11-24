@@ -115,7 +115,7 @@ export const GUIA_PASSOS = [
   {
     id: 'sessao-enunciado', tela: 'pratica-sessao', alvo: 'enunciado',
     titulo: 'A questão',
-    texto: 'No topo estão o subtema, o tipo da questão (múltipla escolha, numérica, balanceamento, nomenclatura, associação, ordenação ou tabela periódica) e a dificuldade. Abaixo vem o enunciado, às vezes com a estrutura da molécula desenhada.'
+    texto: 'No topo estão o subtema, o tipo da questão (múltipla escolha, numérica, balanceamento, nomenclatura, associação, ordenação ou tabela periódica) e a dificuldade. Abaixo vem o enunciado, às vezes com a estrutura da molécula desenhada. Palavras com sublinhado pontilhado têm explicação: toque nelas e confirme no balão. Consultar essas explicações não desconta pontos.'
   },
   {
     id: 'sessao-resposta', tela: 'pratica-sessao', alvo: 'resposta',

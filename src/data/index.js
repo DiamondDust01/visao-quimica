@@ -1,6 +1,7 @@
 import etapasData from './etapas.json' with { type: 'json' };
 import elementosData from './elementos.json' with { type: 'json' };
 import estruturasData from './estruturas.json' with { type: 'json' };
+import glossarioData from './glossario.json' with { type: 'json' };
 import { TAXONOMY_AREAS, TAXONOMY_META } from './taxonomia/index.js';
 import { createTaxonomyIndex } from '../domain/taxonomia.js';
 
@@ -17,3 +18,6 @@ export const ESTRUTURAS = estruturasData.estruturas;
 
 // Índice único usado pelas telas e pelo recomendador.
 export const TAXONOMIA = createTaxonomyIndex(TAXONOMY_AREAS, ETAPAS);
+
+// Glossário das palavras menos comuns das questões (src/domain/glossario.js).
+export const GLOSSARIO = glossarioData.termos;

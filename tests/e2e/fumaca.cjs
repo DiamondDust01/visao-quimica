@@ -152,6 +152,26 @@ app.whenReady().then(async () => {
   await wait(300);
   check(await js(`!document.querySelector('[role=dialog]') && localStorage.getItem('visao-quimica:mentor-tour') === 'visto'`), 'tutorial do Mentor fecha e não volta a abrir');
 
+  // Glossário: a palavra sublinhada abre um balão que pergunta antes de explicar. Antes da
+  // resposta, o termo que é o assunto cobrado (destilação, neste subtema) não é marcado.
+  await clickText('Prática');
+  await wait(300);
+  await js(`document.querySelector('#selecao-fund-separacao-homogeneas').click()`);
+  await clickText('Passo 3 · Começar sessão');
+  await wait(1000);
+  check(await js(`document.querySelectorAll('main [data-termo]').length > 0 && !document.querySelector('main [data-termo="destilacao"]')`), 'glossário marca palavras da questão, menos o assunto cobrado antes da resposta');
+  await js(`document.querySelector('main [data-termo]').click()`);
+  await wait(200);
+  check(await js(`/Quer uma explicação/.test(document.querySelector('[data-glossario-balao]')?.innerText || '')`), 'tocar na palavra pergunta se o estudante quer a explicação');
+  await js(`document.querySelector('[data-glossario-balao] button').click()`);
+  await wait(200);
+  check(await js(`/não desconta pontos/.test(document.querySelector('[data-glossario-balao]')?.innerText || '')`), '"Sim, explicar" mostra a explicação do termo');
+  await js(`document.querySelector('[data-glossario-balao]').dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(200);
+  check(await js(`!document.querySelector('[data-glossario-balao]') && Boolean(document.activeElement?.dataset.termo)`), 'Esc fecha o balão e devolve o foco à palavra');
+  await clickText('Encerrar sessão');
+  await wait(300);
+
   await js('window.scrollTo(0, document.documentElement.scrollHeight)');
   await wait(100);
   await menu('tabela');
