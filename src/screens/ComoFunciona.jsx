@@ -4,6 +4,10 @@ import packageJson from '../../package.json';
 import { NIVEIS, PONTOS_POR_DIFICULDADE, DESCONTO_POR_AJUDA, FATOR_MINIMO } from '../domain/pontuacao.js';
 import { LIMITE_DOMINADO, LIMITE_REVISAR, MIN_RESPOSTAS } from '../domain/progresso.js';
 import useSectionFocus from '../app/useSectionFocus.js';
+import { corDe } from '../app/cores.js';
+
+// Filete com a cor da área no topo do cartão de título.
+const HERO = `border-t-4 ${corDe('como-funciona').borda}`;
 
 const pct = (value) => `${Math.round(value * 100)}%`;
 
@@ -12,7 +16,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
   useSectionFocus('ajuda', focusSection);
   return (
     <div className="space-y-4">
-      <Card>
+      <Card className={HERO}>
         <h1 className="text-2xl font-black text-white">Ajuda e informações</h1>
         <p className="mt-2 text-slate-300">Regras de pontuação, níveis, progresso e detalhes do projeto.</p>
         {studyAvailable && onStartGuide && (

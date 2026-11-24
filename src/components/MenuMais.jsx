@@ -4,6 +4,7 @@ import { ArchiveRestore, Atom, BookOpenText, Calculator, CircleHelp, Hexagon, In
 import { MENU_MAIS } from '../app/navigation.js';
 import { useTheme } from '../app/ThemeToggle.jsx';
 import { toggleTheme } from '../app/theme.js';
+import { COR_DO_GRUPO, corDe } from '../app/cores.js';
 
 // Menu "Mais": painel sob o botão no computador e folha que sobe da base no celular.
 // Reúne Ferramentas, Meus dados, Ajuda e Aparência; cada item abre o destino direto.
@@ -24,6 +25,9 @@ const itemClass = 'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-le
 
 // O guia de uso passa pelas telas de estudo, que só existem depois da escolha da etapa.
 const PEDE_ETAPA = new Set(['guia']);
+
+// Itens que pedem cuidado ganham ícone de alerta, além do texto.
+const ICONE_ALERTA = { apagar: 'text-rose-300' };
 
 export default function MenuMais({ open, onClose, onSelect, current, semEtapa = false }) {
   const panelRef = useRef(null);
@@ -77,9 +81,11 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
           </button>
         </div>
         <nav aria-label="Mais opções" className="space-y-3">
-          {MENU_MAIS.map((grupo) => (
+          {MENU_MAIS.map((grupo) => {
+            const cor = corDe(COR_DO_GRUPO[grupo.id]);
+            return (
             <section key={grupo.id} aria-labelledby={`menu-grupo-${grupo.id}`}>
-              <h3 id={`menu-grupo-${grupo.id}`} className="px-3 pb-1 text-[11px] font-bold uppercase tracking-wider text-teal-300/90">{grupo.titulo}</h3>
+              <h3 id={`menu-grupo-${grupo.id}`} className={`px-3 pb-1 text-[11px] font-bold uppercase tracking-wider ${cor.titulo}`}>{grupo.titulo}</h3>
               <ul>
                 {grupo.itens.map((item) => {
                   if (item.acao === 'tema') {
@@ -87,7 +93,7 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
                     return (
                       <li key={item.id}>
                         <button type="button" data-menu-item={item.id} onClick={toggleTheme} className={itemClass}>
-                          <Icon className="h-5 w-5 shrink-0 text-slate-400" aria-hidden="true" />
+                          <Icon className={`h-5 w-5 shrink-0 ${cor.icone}`} aria-hidden="true" />
                           <span className="min-w-0 flex-1 text-sm font-semibold text-slate-100">{theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}</span>
                         </button>
                       </li>
@@ -104,11 +110,11 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
                         aria-current={active ? 'page' : undefined}
                         disabled={bloqueado}
                         onClick={() => onSelect(item)}
-                        className={`${itemClass} ${active ? 'bg-teal-500/10' : ''} ${bloqueado ? 'cursor-not-allowed opacity-50 hover:bg-transparent' : ''}`}
+                        className={`${itemClass} ${active ? cor.ativo : ''} ${bloqueado ? 'cursor-not-allowed opacity-50 hover:bg-transparent' : ''}`}
                       >
-                        <Icon className={`h-5 w-5 shrink-0 ${active ? 'text-teal-200' : 'text-slate-400'}`} aria-hidden="true" />
+                        <Icon className={`h-5 w-5 shrink-0 ${ICONE_ALERTA[item.id] || cor.icone}`} aria-hidden="true" />
                         <span className="min-w-0 flex-1">
-                          <span className={`block text-sm font-semibold ${active ? 'text-teal-200' : 'text-slate-100'}`}>{item.label}</span>
+                          <span className={`block text-sm font-semibold ${active ? cor.texto : 'text-slate-100'}`}>{item.label}</span>
                           {bloqueado
                             ? <span className="block text-xs text-slate-500">Escolha sua etapa para liberar</span>
                             : item.descricao && <span className="block text-xs text-slate-500">{item.descricao}</span>}
@@ -119,7 +125,8 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
                 })}
               </ul>
             </section>
-          ))}
+            );
+          })}
         </nav>
       </div>
     </div>,

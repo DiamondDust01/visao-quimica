@@ -132,7 +132,10 @@ app.whenReady().then(async () => {
   await clickText('Encerrar sessão');
   await wait(300);
 
+  await js('window.scrollTo(0, document.documentElement.scrollHeight)');
+  await wait(100);
   await menu('tabela');
+  check(await js('window.scrollY') === 0, 'Ferramentas pelo "Mais" abre no topo, mesmo vindo de uma tela rolada');
   check(await js(`document.querySelectorAll('[role=gridcell]').length`) === 118, 'tabela periódica com 118 elementos');
   await clickText('Massa molar');
   await wait(200);
