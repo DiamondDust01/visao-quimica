@@ -52,7 +52,8 @@ const measure = (element) => {
   return { top, left, width: Math.max(0, right - left), height: Math.max(0, bottom - top) };
 };
 
-export default function GuiaDeUso({ onStep, onClose }) {
+// passos: a lista mostrada (o guia completo ou o tutorial do Mentor). Padrão: o guia inteiro.
+export default function GuiaDeUso({ onStep, onClose, passos = GUIA_PASSOS }) {
   const [position, setPosition] = useState(0);
   const [rect, setRect] = useState(null);
   const [popup, setPopup] = useState({ top: 0, left: 0, width: MAX_WIDTH, ready: false });
@@ -64,12 +65,12 @@ export default function GuiaDeUso({ onStep, onClose }) {
   const onStepRef = useRef(onStep);
   onStepRef.current = onStep;
 
-  const step = GUIA_PASSOS[position];
-  const last = position === GUIA_PASSOS.length - 1;
+  const step = passos[position];
+  const last = position === passos.length - 1;
 
   const go = useCallback((delta) => {
     direction.current = delta;
-    setPosition((current) => clamp(current + delta, 0, GUIA_PASSOS.length - 1));
+    setPosition((current) => clamp(current + delta, 0, passos.length - 1));
   }, []);
 
   // Leva o app até a tela do passo e espera o elemento aparecer.
@@ -111,7 +112,7 @@ export default function GuiaDeUso({ onStep, onClose }) {
       // Não achou: pula passos opcionais; os demais aparecem no centro.
       if (step.opcional) {
         const next = position + direction.current;
-        if (next >= 0 && next < GUIA_PASSOS.length) setPosition(next);
+        if (next >= 0 && next < passos.length) setPosition(next);
         else onClose();
         return;
       }
@@ -175,7 +176,7 @@ export default function GuiaDeUso({ onStep, onClose }) {
         onClose();
       } else if (event.key === 'ArrowRight') {
         event.preventDefault();
-        if (position < GUIA_PASSOS.length - 1) go(1);
+        if (position < passos.length - 1) go(1);
       } else if (event.key === 'ArrowLeft') {
         event.preventDefault();
         if (position > 0) go(-1);
@@ -200,7 +201,7 @@ export default function GuiaDeUso({ onStep, onClose }) {
     return () => document.removeEventListener('keydown', onKey);
   }, [position, go, onClose]);
 
-  const section = GUIA_SECOES[step.tela];
+  const section = step.secao || GUIA_SECOES[step.tela];
   return createPortal(
     <div className="fixed inset-0 z-[100]" data-guia-overlay="">
       {/* Bloqueia cliques na tela por baixo enquanto o guia está aberto. */}
@@ -225,7 +226,7 @@ export default function GuiaDeUso({ onStep, onClose }) {
         style={{ top: popup.top, left: popup.left, width: popup.width, visibility: popup.ready ? 'visible' : 'hidden' }}
       >
         <div className="flex items-start justify-between gap-3">
-          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">{section} · passo {position + 1} de {GUIA_PASSOS.length}</p>
+          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">{section} · passo {position + 1} de {passos.length}</p>
           <button type="button" onClick={onClose} aria-label="Fechar o guia" title="Fechar o guia (Esc)" className="-mr-1 -mt-1 rounded-lg p-1 text-slate-400 hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -234,7 +235,7 @@ export default function GuiaDeUso({ onStep, onClose }) {
         <p id="guia-texto" className="mt-2 text-sm leading-relaxed text-slate-300">{step.texto}</p>
         {missing && <p className="mt-2 text-xs text-amber-200">Este item não aparece na tela agora, mas a explicação continua valendo.</p>}
         <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-700/70" aria-hidden="true">
-          <div className="h-full rounded-full bg-teal-400" style={{ width: `${Math.round(((position + 1) / GUIA_PASSOS.length) * 100)}%` }} />
+          <div className="h-full rounded-full bg-teal-400" style={{ width: `${Math.round(((position + 1) / passos.length) * 100)}%` }} />
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
           <button type="button" onClick={onClose} className="text-sm font-semibold text-slate-400 underline-offset-2 hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">

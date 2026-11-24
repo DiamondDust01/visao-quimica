@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BookOpen, Brain, FlaskConical, House, Menu, TestTubes } from 'lucide-react';
 import { ELEMENTOS, ELEMENTOS_META, ESTRUTURAS, ETAPAS, ETAPAS_OBSERVACAO, TAXONOMIA } from '../data/index.js';
 import { SCREEN_IDS, TABS, getTab } from './navigation.js';
@@ -19,8 +19,13 @@ import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
 import { TEMAS_RAPIDOS } from './temasRapidos.js';
 import { corDe } from './cores.js';
+import { GUIA_MENTOR, montarGuia } from './guia.js';
+import { mentorTemConteudo } from '../domain/mentor/liberacao.js';
 
 const ETAPA_IDS = ETAPAS.map((etapa) => etapa.id);
+
+// Telas que pedem a etapa escolar antes: as outras funcionam sem ela.
+const STAGE_SCREENS = ['inicio', 'fundamentos'];
 
 // Telas que rolam sozinhas até a seção pedida pelo menu "Mais" (com useSectionFocus).
 const SECTION_SCROLL_SCREENS = ['perfil', 'como-funciona'];
@@ -63,8 +68,30 @@ export default function App() {
   };
   const mainRef = useRef(null);
 
+  // Sessão de questões em andamento na Prática (o tutorial do Mentor espera ela acabar).
+  const [inSession, setInSession] = useState(false);
+
+  // Laboratório do Mentor: a aba fica oculta até o Mentor ter o que sugerir (veja
+  // domain/mentor/liberacao.js). Liberado uma vez, continua liberado neste aparelho, e o
+  // tutorial dele abre uma vez, fora de uma sessão de questões.
+  const mentorPronto = useMemo(() => mentorTemConteudo({ index: TAXONOMIA, progress, log: mentorLog }), [progress, mentorLog]);
+  const [mentorLiberado, setMentorLiberado] = useState(() => readValue(STORAGE_KEYS.mentorLiberado) === '1');
+  const [mentorTour, setMentorTour] = useState(() => readValue(STORAGE_KEYS.mentorTour) || '');
+  useEffect(() => {
+    if (!mentorPronto || mentorLiberado) return;
+    writeValue(STORAGE_KEYS.mentorLiberado, '1');
+    setMentorLiberado(true);
+    if (readValue(STORAGE_KEYS.mentorTour) !== 'visto') {
+      writeValue(STORAGE_KEYS.mentorTour, 'pendente');
+      setMentorTour('pendente');
+    }
+  }, [mentorPronto, mentorLiberado]);
+  const visibleTabs = mentorLiberado ? TABS : TABS.filter((item) => item.id !== 'laboratorio');
+
   // Guia de uso: abre sobre as telas e leva o estudante até a tela de cada passo.
+  // guidePassos guarda a lista do guia aberto: o guia completo ou o tutorial do Mentor.
   const [guideOpen, setGuideOpen] = useState(false);
+  const [guidePassos, setGuidePassos] = useState(null);
   const [guideOffer, setGuideOffer] = useState(() => readValue(STORAGE_KEYS.guiaVisto) !== '1');
   const [praticaKey, setPraticaKey] = useState(0);
   const guideTela = useRef(null);
@@ -78,8 +105,23 @@ export default function App() {
     dismissGuideOffer();
     setMenuOpen(false);
     guideTela.current = null;
+    setGuidePassos(montarGuia({ mentorLiberado }));
     setGuideOpen(true);
   };
+  const startMentorTour = () => {
+    writeValue(STORAGE_KEYS.mentorTour, 'visto');
+    setMentorTour('visto');
+    setMenuOpen(false);
+    guideTela.current = null;
+    setGuidePassos(GUIA_MENTOR);
+    setGuideOpen(true);
+  };
+  useEffect(() => {
+    if (mentorTour !== 'pendente' || !mentorLiberado || inSession || guideOpen) return undefined;
+    // Uma pausa curta, para a tela de resultado da sessão aparecer antes do tutorial.
+    const timer = setTimeout(startMentorTour, 600);
+    return () => clearTimeout(timer);
+  }, [mentorTour, mentorLiberado, inSession, guideOpen]); // eslint-disable-line react-hooks/exhaustive-deps
   const closeGuide = () => {
     // Sai da sessão de exemplo, para o estudante não ficar numa sessão que não pediu.
     if (guideTela.current === 'pratica-sessao') setPraticaKey((key) => key + 1);
@@ -88,6 +130,8 @@ export default function App() {
     setGuideOpen(false);
   };
   const goToGuideStep = (step) => {
+    // Passo sem tela (o primeiro do tutorial do Mentor): fica onde o estudante está.
+    if (!step.tela) return;
     const previous = guideTela.current;
     guideTela.current = step.tela;
     if (step.tela === 'pratica-sessao') {
@@ -112,10 +156,13 @@ export default function App() {
     else openScreen(item.tela, item.secao);
   };
 
-  // As telas guiadas pela etapa (Início, Fundamentos e Mentor) pedem a etapa primeiro. A Prática
-  // (como Estudo livre, inclusive pelos temas rápidos) e as telas do menu "Mais" (ferramentas,
-  // perfil e ajuda) funcionam sem ela. A barra de cima, a de baixo e o "Mais" ficam sempre visíveis.
-  const needsOnboarding = !profile && !SCREEN_IDS.includes(activeTab) && activeTab !== 'pratica';
+  // O Laboratório oculto nunca abre: quem chegar nele (por um estado antigo) vê o Início.
+  const shownTab = activeTab === 'laboratorio' && !mentorLiberado ? 'inicio' : activeTab;
+
+  // As telas guiadas pela etapa (Início e Fundamentos) pedem a etapa primeiro. A Prática (como
+  // Estudo livre, inclusive pelos temas rápidos), o Mentor e as telas do menu "Mais"
+  // (ferramentas, perfil e ajuda) funcionam sem ela. As barras e o "Mais" ficam sempre visíveis.
+  const needsOnboarding = !profile && STAGE_SCREENS.includes(shownTab);
 
   // Ao trocar de tela, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
   // Com uma seção pedida em Perfil ou Ajuda, quem rola até ela é a própria tela. Ferramentas
@@ -125,7 +172,7 @@ export default function App() {
     if (!target.secao || !SECTION_SCROLL_SCREENS.includes(activeTab)) window.scrollTo({ top: 0 });
   }, [activeTab, needsOnboarding, target.visit]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const tab = getTab(activeTab);
+  const tab = getTab(shownTab);
   const onScreen = SCREEN_IDS.includes(activeTab);
   const currentId = onScreen ? activeTab : tab.id;
   // Na escolha de etapa nenhuma aba fica marcada: a tela ainda não é a da aba.
@@ -137,7 +184,7 @@ export default function App() {
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas key={target.visit} initialSection={secao} elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); openScreen('inicio'); }} />;
+    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); setMentorLiberado(false); setMentorTour(''); openScreen('inicio'); }} />;
   } else if (currentId === 'como-funciona') {
     screen = <ComoFunciona key={target.visit} focusSection={secao} onOpenTab={openTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
   } else if (tab.id === 'inicio') {
@@ -157,6 +204,7 @@ export default function App() {
         request={practiceRequest}
         onRequestHandled={() => setPracticeRequest(null)}
         onOpenTab={openTab}
+        onSessionActive={setInSession}
       />
     );
   } else {
@@ -194,7 +242,7 @@ export default function App() {
           </button>
           <nav aria-label="Módulos" data-guia="abas" className="hidden md:block">
             <ul className="flex gap-1">
-              {TABS.map((item) => {
+              {visibleTabs.map((item) => {
                 const Icon = TAB_ICONS[item.id];
                 const cor = corDe(item.id);
                 return (
@@ -203,6 +251,7 @@ export default function App() {
                       type="button"
                       onClick={() => openScreen(item.id)}
                       aria-current={item.id === activeTabId ? 'page' : undefined}
+                      data-guia={`aba-${item.id}`}
                       className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${item.id === activeTabId ? cor.ativo : 'text-slate-400 hover:text-white'}`}
                     >
                       <Icon className={`hidden h-4 w-4 lg:block ${cor.icone}`} aria-hidden="true" />
@@ -230,8 +279,8 @@ export default function App() {
 
       {/* Barra inferior no celular: as quatro abas e o "Mais". */}
       <nav aria-label="Módulos" data-guia="abas" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-800 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="grid grid-cols-5">
-          {TABS.map((item) => {
+        <ul className={`grid ${visibleTabs.length === 4 ? 'grid-cols-5' : 'grid-cols-4'}`}>
+          {visibleTabs.map((item) => {
             const Icon = TAB_ICONS[item.id];
             const cor = corDe(item.id);
             const active = item.id === activeTabId && !menuOpen;
@@ -242,6 +291,7 @@ export default function App() {
                   onClick={() => openScreen(item.id)}
                   aria-current={item.id === activeTabId ? 'page' : undefined}
                   aria-label={item.label}
+                  data-guia={`aba-${item.id}`}
                   className={`flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${active ? cor.texto : 'text-slate-500'}`}
                 >
                   <Icon className={`h-5 w-5 ${cor.icone} ${active ? '' : 'opacity-60'}`} aria-hidden="true" />
@@ -268,7 +318,7 @@ export default function App() {
       {currentId !== 'pratica' && <AppVersion />}
 
       <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} semEtapa={!profile} />
-      {guideOpen && !needsOnboarding && <GuiaDeUso onStep={goToGuideStep} onClose={closeGuide} />}
+      {guideOpen && guidePassos && (!needsOnboarding || guidePassos === GUIA_MENTOR) && <GuiaDeUso passos={guidePassos} onStep={goToGuideStep} onClose={closeGuide} />}
     </div>
   );
 }

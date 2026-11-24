@@ -4,17 +4,26 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [0.5.0] - 2026-11-23
 
 ### Adicionado
 - Painel "Temas rápidos" na tela de boas-vindas: quem não quer escolher a etapa começa direto uma
   sessão curta (9 questões) em um de seis temas, com a série de referência indicada, como
   "2ª série · Reações endotérmicas e exotérmicas". Nada é salvo no perfil; o progresso das
   respostas fica registrado normalmente.
+- Tutorial do Laboratório do Mentor, com 4 passos, que abre uma vez quando o Mentor é liberado.
+  Ele espera a sessão de questões terminar, aparece sobre o resultado destacando a aba nova e,
+  em "Próximo", mostra o Laboratório.
 
 ### Alterado
-- A Prática funciona sem etapa escolhida, como Estudo livre. Início, Fundamentos e Laboratório do
-  Mentor continuam pedindo a etapa primeiro.
+- O Laboratório do Mentor fica oculto até ter o que sugerir: um tema com acerto abaixo de 60%
+  (depois de 3 respostas), um padrão de erro repetido ou 2 erros recentes no mesmo tema. A aba
+  aparece na hora em que isso acontece e continua liberada depois. Apagar os dados do aparelho
+  esconde a aba de novo.
+- O guia de uso acompanha a liberação: antes dela, pula os passos do Laboratório e explica
+  quando o Mentor aparece; depois, mostra os quatro módulos. A tela Ajuda também explica isso.
+- A Prática e o Laboratório do Mentor funcionam sem etapa escolhida (a Prática como Estudo
+  livre). Só Início e Fundamentos pedem a etapa primeiro.
 - Cada área do app ganhou uma cor própria, repetida na aba (e no ícone da barra do celular), no
   filete do título da tela e no grupo do menu "Mais": Início verde-azulado, Fundamentos anil,
   Prática laranja, Laboratório do Mentor magenta, Ferramentas verde-lima, Meus dados amarelo e
@@ -23,6 +32,8 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 - Em Fundamentos, cada lista tem sua cor na marca do título e na borda dos temas: Revisão em
   âmbar, Recomendados em anil, Desafio em violeta e Concluídos em verde.
 - Os atalhos do Início usam a cor da área de destino.
+- Versão do app e do Android atualizada para 0.5.0 (versionCode 8). Pacotes Windows e APK 0.5.0
+  gerados.
 
 ### Corrigido
 - Abrir Tabela periódica, Massa molar ou Estruturas pelo "Mais" vindo de uma tela rolada deixava

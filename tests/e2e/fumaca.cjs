@@ -45,7 +45,8 @@ app.whenReady().then(async () => {
   check(await js('Boolean(document.querySelector(\'meta[http-equiv="Content-Security-Policy"]\'))'), 'build com política de segurança de conteúdo');
   check(/Boas-vindas/.test(await heading()) && await js(`Boolean(document.querySelector('label[for="onboarding-etapa-em-3"]'))`), 'primeiro uso abre a escolha de etapa');
   const firstUseBar = await js(`[...document.querySelectorAll('header button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
-  check(['Início', 'Fundamentos', 'Prática', 'Laboratório do Mentor', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
+  check(['Início', 'Fundamentos', 'Prática', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
+  check(!firstUseBar.includes('Laboratório do Mentor'), 'Laboratório do Mentor oculto antes de haver o que revisar');
   await openMore();
   await wait(300);
   check(await js(`document.querySelector('[data-menu-item="guia"]')?.disabled === true && document.querySelector('[data-menu-item="tabela"]')?.disabled === false`), 'sem etapa, o "Mais" abre as ferramentas e bloqueia só o guia');
@@ -68,7 +69,7 @@ app.whenReady().then(async () => {
   await wait(400);
 
   const tabs = await js(`[...document.querySelectorAll('nav button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
-  check(tabs.length === 4, `quatro abas na barra (${tabs.join(', ')})`);
+  check(tabs.length === 3 && !tabs.includes('Laboratório do Mentor'), `três abas na barra, sem o Mentor ainda (${tabs.join(', ')})`);
   for (const tab of tabs) {
     await clickText(tab);
     await wait(400);
@@ -94,7 +95,7 @@ app.whenReady().then(async () => {
   check(await js(`document.querySelector('[role=dialog] h2')?.innerText === 'Bem-vindo ao guia de uso'`), 'guia de uso abre com o pop-up de boas-vindas');
   await clickText('Próximo');
   await wait(900);
-  check(await js(`Boolean(document.querySelector('[data-guia-overlay] .border-teal-300')) && document.querySelector('[role=dialog] h2')?.innerText === 'Os quatro módulos'`), 'guia contorna o elemento do passo e explica no pop-up');
+  check(await js(`Boolean(document.querySelector('[data-guia-overlay] .border-teal-300')) && document.querySelector('[role=dialog] h2')?.innerText === 'Os módulos' && /aparece sozinho/.test(document.querySelector('[role=dialog]').innerText)`), 'guia contorna o elemento do passo e, sem o Mentor liberado, explica quando ele aparece');
   await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
   await wait(300);
   check(await js(`!document.querySelector('[role=dialog]')`), 'Esc fecha o guia de uso');
@@ -131,6 +132,25 @@ app.whenReady().then(async () => {
   check(/Incorreto|Correto/.test(await js('document.querySelector("main").innerText')), 'questão corrigida com retorno');
   await clickText('Encerrar sessão');
   await wait(300);
+
+  // Um segundo erro no mesmo tema dá ao Mentor o que sugerir: a aba aparece na hora, mas o
+  // tutorial só abre quando a sessão termina.
+  check(!(await js(`[...document.querySelectorAll('header nav button')].some((b) => b.innerText.trim() === 'Laboratório do Mentor')`)), 'um erro só ainda não libera o Mentor');
+  await clickText('Nova sessão com os mesmos temas');
+  await wait(1000);
+  await setInput('main form input[type=text]', 'outra resposta de teste');
+  await clickText('Responder');
+  await wait(1000);
+  check(await js(`[...document.querySelectorAll('header nav button')].some((b) => b.innerText.trim() === 'Laboratório do Mentor') && !document.querySelector('[data-guia-overlay]')`), 'segundo erro libera a aba do Mentor sem interromper a sessão');
+  await clickText('Encerrar sessão');
+  await wait(1200);
+  check(await js(`document.querySelector('[role=dialog] h2')?.innerText === 'Laboratório do Mentor liberado' && Boolean(document.querySelector('[data-guia-overlay] .border-teal-300'))`), 'ao fim da sessão, o tutorial do Mentor destaca a aba nova');
+  await clickText('Próximo');
+  await wait(900);
+  check(/Laboratório do Mentor/.test(await heading()) && await js(`document.querySelector('[role=dialog] h2')?.innerText === 'O que revisar agora'`), 'tutorial leva ao Laboratório, já com sugestões');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(300);
+  check(await js(`!document.querySelector('[role=dialog]') && localStorage.getItem('visao-quimica:mentor-tour') === 'visto'`), 'tutorial do Mentor fecha e não volta a abrir');
 
   await js('window.scrollTo(0, document.documentElement.scrollHeight)');
   await wait(100);

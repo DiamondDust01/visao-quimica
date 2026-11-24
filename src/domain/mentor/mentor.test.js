@@ -85,3 +85,13 @@ test('registro do Mentor com itens malformados não quebra o resumo nem as suges
   const index = createTaxonomyIndex(aggregateTaxonomy(AREAS_TESTE_BRUTAS, ETAPAS_TESTE), ETAPAS_TESTE);
   assert.doesNotThrow(() => suggestReview({ index, progress: {}, log }));
 });
+
+test('o Mentor só é liberado quando já tem o que sugerir', async () => {
+  const { mentorTemConteudo } = await import('./liberacao.js');
+  const index = createTaxonomyIndex(aggregateTaxonomy(AREAS_TESTE_BRUTAS, ETAPAS_TESTE), ETAPAS_TESTE);
+  assert.equal(mentorTemConteudo({ index }), false, 'sem respostas');
+  assert.equal(mentorTemConteudo({ index, progress: { s6: { respondidas: 1, acertos: 0 } }, log: [{ temaId: 's6', padroes: [] }] }), false, 'um erro só');
+  assert.equal(mentorTemConteudo({ index, progress: { s6: { respondidas: 2, acertos: 0 } }, log: [{ temaId: 's6', padroes: [] }, { temaId: 's6', padroes: [] }] }), true, 'dois erros no mesmo tema');
+  assert.equal(mentorTemConteudo({ index, progress: { s3: { respondidas: 5, acertos: 1 } } }), true, 'acerto baixo');
+  assert.equal(mentorTemConteudo({ index, progress: { s1: { respondidas: 3, acertos: 3 } } }), false, 'só acertos');
+});
