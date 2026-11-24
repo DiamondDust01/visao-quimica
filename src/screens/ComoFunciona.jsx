@@ -87,11 +87,6 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
         {!studyAvailable && <p className="mt-2 text-sm text-slate-400">Escolha sua etapa escolar para acessar os conteúdos de Química.</p>}
         <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
           <li>
-            <a href="https://github.com/DiamondDust01/visao-quimica" target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-300 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
-              Desenvolvedores (GitHub)
-            </a>
-          </li>
-          <li>
             <a href="https://www.ifpi.edu.br/" target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-300 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
               IFPI
             </a>
