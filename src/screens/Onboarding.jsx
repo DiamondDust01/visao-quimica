@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, BookOpen, Brain, FlaskConical, TestTubes, Zap } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, FlaskConical, Play, Sparkles, TestTubes, Zap } from 'lucide-react';
 import { buttonPrimary, Card } from '../components/ui.jsx';
 import EtapaPicker from '../components/EtapaPicker.jsx';
 import { getTab } from '../app/navigation.js';
@@ -40,6 +40,9 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
   const [avisoEtapa, setAvisoEtapa] = useState(false);
   const detalheRef = useRef(null);
   const showQuick = temasRapidos.length > 0 && Boolean(onQuickStart);
+  // Tema sugerido em destaque (o de reações endotérmicas e exotérmicas). É só uma sugestão:
+  // tocar nele abre a confirmação da sessão, e nada é salvo no perfil.
+  const sugerido = showQuick ? temasRapidos.find((tema) => tema.sugerido) : null;
   const etapasDaTrilha = etapas.filter((etapa) => !etapa.semRecomendacao);
 
   // Ao abrir a escolha de etapa ou os temas rápidos, rola até eles.
@@ -65,6 +68,25 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
           <strong className="text-white">Como você quer estudar?</strong> Cada caminho leva a uma parte diferente do app. Dá para usar todas depois, e mudar de ideia quando quiser.
         </p>
       </Card>
+
+      {sugerido && (
+        <Card data-tema-sugerido={sugerido.id} className="border-amber-400/50">
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="min-w-0 flex-1">
+              <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-amber-300">
+                <Sparkles className="h-4 w-4" aria-hidden="true" /> Tema sugerido para começar
+              </p>
+              <h2 className="mt-1 text-xl font-black text-white">{sugerido.titulo}</h2>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{sugerido.etapaNome} · {sugerido.total} questões</p>
+              {sugerido.resumo && <p className="mt-1 max-w-2xl text-sm text-slate-300">{sugerido.resumo}</p>}
+            </div>
+            <button type="button" onClick={() => onQuickStart(sugerido.subtemaIds)} className={buttonPrimary}>
+              <Play className="h-4 w-4" aria-hidden="true" /> Estudar este tema
+            </button>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">É só uma sugestão: antes de começar, o app mostra o que vem e pede a sua confirmação. Nada é salvo no perfil.</p>
+        </Card>
+      )}
 
       <ul className="grid gap-3 md:grid-cols-3" aria-label="Caminhos para começar">
         <li>
@@ -135,7 +157,10 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
                     className="group flex h-full w-full items-center gap-3 rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-3 text-left transition hover:border-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
                   >
                     <span className="min-w-0 flex-1">
-                      <span className="block text-xs font-semibold uppercase tracking-wide text-teal-300">{tema.etapaNome}</span>
+                      <span className="block text-xs font-semibold uppercase tracking-wide text-teal-300">
+                        {tema.etapaNome}
+                        {tema.sugerido && <span className="ml-2 rounded-full bg-amber-500/15 px-2 py-0.5 text-[10px] text-amber-200">Sugerido</span>}
+                      </span>
                       <span className="block font-semibold text-slate-100">{tema.titulo}</span>
                       <span className="block text-xs text-slate-500">{tema.total} questões</span>
                     </span>

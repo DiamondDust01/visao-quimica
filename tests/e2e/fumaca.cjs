@@ -45,6 +45,7 @@ app.whenReady().then(async () => {
   check(await js('Boolean(document.querySelector(\'meta[http-equiv="Content-Security-Policy"]\'))'), 'build com política de segurança de conteúdo');
   const caminhos = await js(`[...document.querySelectorAll('[data-caminho]')].map((b) => b.dataset.caminho)`);
   check(/Boas-vindas/.test(await heading()) && caminhos.join(',') === 'trilha,livre,rapido', `primeiro uso pergunta como estudar, com três caminhos (${caminhos.join(', ')})`);
+  check(await js(`/Reações endotérmicas e exotérmicas/.test(document.querySelector('[data-tema-sugerido="endo-exo"]')?.innerText || '') && /2ª série/i.test(document.querySelector('[data-tema-sugerido]').innerText)`), 'tela de boas-vindas mostra o tema sugerido (2ª série, reações endotérmicas e exotérmicas)');
   const firstUseBar = await js(`[...document.querySelectorAll('header button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
   check(['Início', 'Trilha', 'Prática', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
   check(!firstUseBar.includes('Laboratório do Mentor'), 'Laboratório do Mentor oculto antes de haver o que revisar');

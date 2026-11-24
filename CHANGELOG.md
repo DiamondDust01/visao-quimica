@@ -6,6 +6,8 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 
 ## [Não lançado]
 
+## [0.6.0] - 2026-11-24
+
 ### Adicionado
 - Glossário embutido nas questões: 180 palavras menos comuns (vidrarias, processos, nomes de
   cientistas, termos de cada área) ficam com sublinhado pontilhado. Ao tocar numa delas, um balão
@@ -33,6 +35,11 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
   renderizadas. Há um texto para cada um dos 171 subtemas, das 20 áreas (textos originais,
   ainda sem revisão de professor). Ler não desconta pontos.
 
+- Tema sugerido em destaque na tela de boas-vindas: "Reações endotérmicas e exotérmicas"
+  (2ª série, 9 questões), com um resumo do assunto e o botão "Estudar este tema". É só uma
+  sugestão: o app mostra o que vem e pede confirmação antes de começar, e nada é salvo no perfil.
+  Na lista de temas rápidos, ele aparece com o selo "Sugerido".
+
 ### Alterado
 - Cada aba agora tem uma função própria, dita no topo da tela como uma pergunta: Início ("o que
   eu faço agora?"), Trilha ("qual é o plano da minha série?"), Prática ("quero escolher qualquer
@@ -52,6 +59,10 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
   aba aonde cada um leva: seguir a trilha da série, escolher temas livremente ou começar já por
   um tema rápido. Ela também avisa que o Laboratório do Mentor aparece depois dos primeiros erros.
 - O guia de uso e a tela Ajuda explicam para que serve cada módulo.
+
+### Distribuição
+- Versão do app e do Android atualizada para 0.6.0 (versionCode 9). Pacotes Windows e APK
+  gerados para esta versão; o APK e o arquivo portátil passaram pela verificação de integridade.
 
 ## [0.5.0] - 2026-11-23
 
