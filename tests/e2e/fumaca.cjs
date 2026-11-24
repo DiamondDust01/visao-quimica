@@ -62,6 +62,14 @@ app.whenReady().then(async () => {
   const quickTopics = await js(`[...document.querySelectorAll('[data-tema-rapido]')].map((b) => b.dataset.temaRapido)`);
   check(quickTopics.length === 6 && quickTopics.includes('endo-exo'), `temas rápidos na tela de boas-vindas (${quickTopics.join(', ')})`);
   await js(`document.querySelector('[data-tema-rapido="endo-exo"]').click()`);
+  await wait(300);
+  check(await js(`Boolean(document.querySelector('[data-confirmar-sessao]')) && /Estudar estes \\d+ temas agora\\?/.test(document.querySelector('[data-confirmar-sessao]').innerText) && !/Questão 1 de/.test(document.querySelector('main').innerText)`), 'escolher um tema pede confirmação antes de começar a sessão');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(200);
+  check(await js(`!document.querySelector('[data-confirmar-sessao]') && /Boas-vindas/.test(document.querySelector('main h1').innerText)`), 'Esc cancela a confirmação e nada começa');
+  await js(`document.querySelector('[data-tema-rapido="endo-exo"]').click()`);
+  await wait(300);
+  await clickText('Sim, começar');
   await wait(500);
   check(await js(`/Questão 1 de 9/.test(document.querySelector('main').innerText) && !localStorage.getItem('visao-quimica:perfil')`), 'tema rápido abre uma sessão de 9 questões sem salvar etapa');
   check(await js(`document.querySelector('header nav button[aria-current="page"]')?.innerText.trim() === 'Início'`), 'a sessão abre por cima da aba de onde começou (Início)');
@@ -70,6 +78,9 @@ app.whenReady().then(async () => {
   check(/Boas-vindas/.test(await heading()), 'depois do tema rápido, o Início volta à escolha de etapa');
   await js(`document.querySelector('[data-caminho="trilha"]').click()`);
   await wait(300);
+  await clickText('Ver minha trilha');
+  await wait(200);
+  check(await js(`/Escolha uma etapa acima primeiro/.test(document.querySelector('[data-aviso-etapa]')?.innerText || '') && /Boas-vindas/.test(document.querySelector('main h1').innerText)`), 'sem etapa marcada, "Ver minha trilha" avisa que é preciso escolher uma');
   await js(`document.querySelector('label[for="onboarding-etapa-em-3"]').click()`);
   await clickText('Ver minha trilha');
   await wait(400);
@@ -129,8 +140,13 @@ app.whenReady().then(async () => {
 
   await clickText('Prática');
   await wait(300);
+  await clickText('Começar sessão');
+  await wait(200);
+  check(await js(`Boolean(document.querySelector('[data-aviso-vazio]')) && !document.querySelector('[data-confirmar-sessao]')`), 'sem tema marcado, "Começar sessão" avisa que é preciso escolher um tema');
   await js(`document.querySelector('#selecao-org-nomenclatura-funcoes').click()`);
   await clickText('Começar sessão');
+  await wait(300);
+  await clickText('Sim, começar');
   await wait(1200);
   check(await js(`Boolean(document.querySelector('main figure svg:not(.hidden)'))`), 'questão de Orgânica mostra a estrutura (SMILES)');
   await setInput('main form input[type=text]', 'resposta de teste');
@@ -144,6 +160,8 @@ app.whenReady().then(async () => {
   // tutorial só abre quando a sessão termina.
   check(!(await js(`[...document.querySelectorAll('header nav button')].some((b) => b.innerText.trim() === 'Laboratório do Mentor')`)), 'um erro só ainda não libera o Mentor');
   await clickText('Nova sessão com os mesmos temas');
+  await wait(300);
+  await clickText('Sim, começar');
   await wait(1000);
   await setInput('main form input[type=text]', 'outra resposta de teste');
   await clickText('Responder');
@@ -165,6 +183,8 @@ app.whenReady().then(async () => {
   await wait(300);
   await js(`document.querySelector('#selecao-fund-separacao-homogeneas').click()`);
   await clickText('Começar sessão');
+  await wait(300);
+  await clickText('Sim, começar');
   await wait(1000);
   check(await js(`document.querySelectorAll('main [data-termo]').length > 0 && !document.querySelector('main [data-termo="destilacao"]')`), 'glossário marca palavras da questão, menos o assunto cobrado antes da resposta');
   await js(`document.querySelector('main [data-termo]').click()`);
@@ -184,6 +204,8 @@ app.whenReady().then(async () => {
   await clickText('Trilha');
   await wait(300);
   await js(`document.querySelector('[data-guia="tema-recomendado"] button[aria-label^="Praticar"]').click()`);
+  await wait(300);
+  await clickText('Sim, começar');
   await wait(600);
   check(await js(`document.querySelector('header nav button[aria-current="page"]')?.innerText.trim() === 'Trilha' && /Questão 1 de/.test(document.querySelector('main').innerText)`), '"Praticar" na Trilha abre a sessão sem trocar de aba');
   await clickText('Encerrar sessão');

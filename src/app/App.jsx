@@ -14,6 +14,7 @@ import Perfil from '../screens/Perfil.jsx';
 import Trilha from '../screens/Trilha.jsx';
 import Pratica from '../screens/Pratica.jsx';
 import Sessao from '../screens/Sessao.jsx';
+import ConfirmarSessao from '../components/ConfirmarSessao.jsx';
 import { buildSession, summarizeSession } from '../domain/questoes/sessao.js';
 import { QUESTIONS } from '../data/questoes/index.js';
 import ComoFunciona from '../screens/ComoFunciona.jsx';
@@ -58,6 +59,7 @@ export default function App() {
   const openScreen = (tela, secao = null) => {
     setMenuOpen(false);
     setSessao(null);
+    setPedidoSessao(null);
     setTarget((current) => ({ secao, visit: current.visit + 1 }));
     setActiveTab(tela);
   };
@@ -76,7 +78,17 @@ export default function App() {
     return salva && Array.isArray(salva.subtemaIds) && salva.subtemaIds.length ? salva : null;
   });
   const inSession = Boolean(sessao && !sessao.summary);
-  const startSession = (subtemaIds, { origem = 'pratica', quantidade = 10 } = {}) => {
+  // Pedido de sessão aguardando a confirmação do estudante (ConfirmarSessao):
+  // { subtemaIds, questions, origem, origemNome }.
+  const [pedidoSessao, setPedidoSessao] = useState(null);
+  const openSession = ({ subtemaIds, questions, origem }) => {
+    setPedidoSessao(null);
+    setMenuOpen(false);
+    setActiveTab(origem);
+    setSessao({ id: Date.now(), questions, subtemaIds: [...subtemaIds], origem, summary: null });
+  };
+  // Toda sessão pede confirmação antes de começar; só a sessão de exemplo do guia de uso não.
+  const startSession = (subtemaIds, { origem = 'pratica', quantidade = 10, confirmar = true } = {}) => {
     const questions = buildSession({
       questoes: QUESTIONS,
       subtemaIds,
@@ -90,9 +102,9 @@ export default function App() {
       setPracticeRequest({ subtemaIds });
       return;
     }
-    setMenuOpen(false);
-    setActiveTab(origem);
-    setSessao({ id: Date.now(), questions, subtemaIds: [...subtemaIds], origem, summary: null });
+    const pedido = { subtemaIds: [...subtemaIds], questions, origem, origemNome: getTab(origem).label };
+    if (confirmar) setPedidoSessao(pedido);
+    else openSession(pedido);
   };
   const finishSession = (answers) => {
     const summary = summarizeSession(answers);
@@ -175,7 +187,7 @@ export default function App() {
     const previous = guideTela.current;
     guideTela.current = step.tela;
     if (step.tela === 'pratica-sessao') {
-      if (previous !== 'pratica-sessao') startSession([demoSubtema], { origem: 'pratica' });
+      if (previous !== 'pratica-sessao') startSession([demoSubtema], { origem: 'pratica', confirmar: false });
       return;
     }
     if (step.tela === 'menu-mais') {
@@ -389,6 +401,15 @@ export default function App() {
       {/* Na Prática, a barra fixa da seleção ocupa o rodapé; os indicadores sairiam por cima dela. */}
       {(currentId !== 'pratica' || sessao) && <AppVersion />}
 
+      {pedidoSessao && (
+        <ConfirmarSessao
+          pedido={pedidoSessao}
+          index={TAXONOMIA}
+          progress={progress}
+          onConfirm={() => openSession(pedidoSessao)}
+          onCancel={() => setPedidoSessao(null)}
+        />
+      )}
       <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} semEtapa={!profile} />
       {guideOpen && guidePassos && (!needsOnboarding || guidePassos === GUIA_MENTOR) && <GuiaDeUso passos={guidePassos} onStep={goToGuideStep} onClose={closeGuide} />}
     </div>

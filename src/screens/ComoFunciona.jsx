@@ -36,7 +36,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
             </li>
           ))}
         </ul>
-        <p className="mt-3 text-sm text-slate-400">As sessões de questões abrem numa tela própria, por cima do módulo de onde você começou, e voltam para ele no fim.</p>
+        <p className="mt-3 text-sm text-slate-400">Antes de toda sessão de questões, o app mostra o tema escolhido e quantas questões vêm, e só começa quando você confirma. A sessão abre numa tela própria, por cima do módulo de onde você começou, e volta para ele no fim.</p>
       </Card>
 
       <Card id="ajuda-regras" tabIndex={-1} className="scroll-mt-24 outline-none">
