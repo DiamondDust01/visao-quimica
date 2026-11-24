@@ -43,9 +43,10 @@ app.whenReady().then(async () => {
   await wait(800);
 
   check(await js('Boolean(document.querySelector(\'meta[http-equiv="Content-Security-Policy"]\'))'), 'build com política de segurança de conteúdo');
-  check(/Boas-vindas/.test(await heading()) && await js(`Boolean(document.querySelector('label[for="onboarding-etapa-em-3"]'))`), 'primeiro uso abre a escolha de etapa');
+  const caminhos = await js(`[...document.querySelectorAll('[data-caminho]')].map((b) => b.dataset.caminho)`);
+  check(/Boas-vindas/.test(await heading()) && caminhos.join(',') === 'trilha,livre,rapido', `primeiro uso pergunta como estudar, com três caminhos (${caminhos.join(', ')})`);
   const firstUseBar = await js(`[...document.querySelectorAll('header button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
-  check(['Início', 'Fundamentos', 'Prática', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
+  check(['Início', 'Trilha', 'Prática', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
   check(!firstUseBar.includes('Laboratório do Mentor'), 'Laboratório do Mentor oculto antes de haver o que revisar');
   await openMore();
   await wait(300);
@@ -56,17 +57,23 @@ app.whenReady().then(async () => {
   await clickText('Início');
   await wait(400);
   check(/Boas-vindas/.test(await heading()), 'sem etapa, as abas de estudo levam à escolha de etapa');
+  await js(`document.querySelector('[data-caminho="rapido"]').click()`);
+  await wait(300);
   const quickTopics = await js(`[...document.querySelectorAll('[data-tema-rapido]')].map((b) => b.dataset.temaRapido)`);
   check(quickTopics.length === 6 && quickTopics.includes('endo-exo'), `temas rápidos na tela de boas-vindas (${quickTopics.join(', ')})`);
   await js(`document.querySelector('[data-tema-rapido="endo-exo"]').click()`);
   await wait(500);
   check(await js(`/Questão 1 de 9/.test(document.querySelector('main').innerText) && !localStorage.getItem('visao-quimica:perfil')`), 'tema rápido abre uma sessão de 9 questões sem salvar etapa');
+  check(await js(`document.querySelector('header nav button[aria-current="page"]')?.innerText.trim() === 'Início'`), 'a sessão abre por cima da aba de onde começou (Início)');
   await clickText('Início');
   await wait(400);
   check(/Boas-vindas/.test(await heading()), 'depois do tema rápido, o Início volta à escolha de etapa');
+  await js(`document.querySelector('[data-caminho="trilha"]').click()`);
+  await wait(300);
   await js(`document.querySelector('label[for="onboarding-etapa-em-3"]').click()`);
-  await clickText('Continuar');
+  await clickText('Ver minha trilha');
   await wait(400);
+  check(/Trilha/.test(await heading()) && await js(`Boolean(document.querySelector('[data-guia="tema-recomendado"]'))`), 'escolher a etapa abre a Trilha, com o próximo tema marcado na lista');
 
   const tabs = await js(`[...document.querySelectorAll('nav button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
   check(tabs.length === 3 && !tabs.includes('Laboratório do Mentor'), `três abas na barra, sem o Mentor ainda (${tabs.join(', ')})`);
@@ -80,7 +87,7 @@ app.whenReady().then(async () => {
   // Menu "Mais": quatro grupos, fecha com Esc; o Início tem os atalhos.
   await clickText('Início');
   await wait(300);
-  check(await js(`document.querySelectorAll('[data-atalho]').length`) === 4, 'Início mostra os quatro atalhos');
+  check(await js(`Boolean(document.querySelector('[data-guia="continuar"]')) && !document.querySelector('[data-atalho]') && !/Passo \\d/.test(document.querySelector('main').innerText)`), 'Início mostra o cartão "Continuar", sem atalhos repetidos nem "Passo"');
   await openMore();
   await wait(200);
   check(await js(`document.querySelectorAll('#menu-mais section').length === 4 && document.querySelectorAll('[data-menu-item]').length === 10`), 'menu "Mais" reúne ferramentas, dados, ajuda e aparência');
@@ -111,9 +118,9 @@ app.whenReady().then(async () => {
   check(credits && await js(`document.activeElement?.id === 'ajuda-creditos'`), '"Mais" → Sobre e créditos abre a seção com os links para desenvolvedores, IFPI e professores');
   await clickText('Trilhas de Química para estudantes e professores');
   await wait(300);
-  check(await js(`document.querySelector('nav[aria-label="Módulos"] button[aria-current="page"]')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
+  check(await js(`document.querySelector('nav[aria-label="Módulos"] button[aria-current="page"]')?.innerText === 'Trilha'`), 'atalho para professores abre a Trilha');
 
-  await clickText('Fundamentos');
+  await clickText('Trilha');
   await wait(300);
   await js('window.scrollTo(0, 1500)');
   await wait(200);
@@ -123,7 +130,7 @@ app.whenReady().then(async () => {
   await clickText('Prática');
   await wait(300);
   await js(`document.querySelector('#selecao-org-nomenclatura-funcoes').click()`);
-  await clickText('Passo 3 · Começar sessão');
+  await clickText('Começar sessão');
   await wait(1200);
   check(await js(`Boolean(document.querySelector('main figure svg:not(.hidden)'))`), 'questão de Orgânica mostra a estrutura (SMILES)');
   await setInput('main form input[type=text]', 'resposta de teste');
@@ -157,7 +164,7 @@ app.whenReady().then(async () => {
   await clickText('Prática');
   await wait(300);
   await js(`document.querySelector('#selecao-fund-separacao-homogeneas').click()`);
-  await clickText('Passo 3 · Começar sessão');
+  await clickText('Começar sessão');
   await wait(1000);
   check(await js(`document.querySelectorAll('main [data-termo]').length > 0 && !document.querySelector('main [data-termo="destilacao"]')`), 'glossário marca palavras da questão, menos o assunto cobrado antes da resposta');
   await js(`document.querySelector('main [data-termo]').click()`);
@@ -171,6 +178,19 @@ app.whenReady().then(async () => {
   check(await js(`!document.querySelector('[data-glossario-balao]') && Boolean(document.activeElement?.dataset.termo)`), 'Esc fecha o balão e devolve o foco à palavra');
   await clickText('Encerrar sessão');
   await wait(300);
+  check(await js(`[...document.querySelectorAll('main button')].some((b) => b.innerText.includes('Voltar para Prática'))`), 'o resultado da sessão volta para a aba de onde ela começou');
+
+  // A sessão abre por cima da aba de origem: "Praticar" na Trilha não leva para a Prática.
+  await clickText('Trilha');
+  await wait(300);
+  await js(`document.querySelector('[data-guia="tema-recomendado"] button[aria-label^="Praticar"]').click()`);
+  await wait(600);
+  check(await js(`document.querySelector('header nav button[aria-current="page"]')?.innerText.trim() === 'Trilha' && /Questão 1 de/.test(document.querySelector('main').innerText)`), '"Praticar" na Trilha abre a sessão sem trocar de aba');
+  await clickText('Encerrar sessão');
+  await wait(300);
+  await clickText('Início');
+  await wait(300);
+  check(await js(`Boolean(document.querySelector('[data-guia="ultima-sessao"]')) && Boolean(document.querySelector('[data-guia="aviso-mentor"]'))`), 'Início mostra a última sessão e o aviso do Mentor');
 
   await js('window.scrollTo(0, document.documentElement.scrollHeight)');
   await wait(100);

@@ -1,18 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { buttonPrimary, buttonSecondary, Card, Notice, Bar } from '../components/ui.jsx';
+import { buttonPrimary, buttonSecondary, Notice, Bar } from '../components/ui.jsx';
 import SubtemaItem from '../components/SubtemaItem.jsx';
+import TopoDaTela from '../components/TopoDaTela.jsx';
 import { recommend } from '../domain/recomendador.js';
 import { statusFor, summarizeProgress } from '../domain/progresso.js';
-import { corDe } from '../app/cores.js';
 
-// Filete com a cor da área no topo do cartão de título.
-const HERO = `border-t-4 ${corDe('fundamentos').borda}`;
+// Trilha (aba de id 'fundamentos'): o plano da etapa escolar inteira, em ordem. O próximo
+// tema sugerido aparece marcado dentro da própria lista, com o selo "Próximo".
 
 const PREVIEW = 8;
 
 // Cor de cada lista da trilha, na marca do título e na borda dos temas. Revisão e Concluídos
-// seguem as cores de status (revisar e dominado); Recomendados usa a cor de Fundamentos.
+// seguem as cores de status (revisar e dominado); Recomendados usa a cor da Trilha.
 const LIST_TONES = {
   revisao: { marca: 'bg-amber-400', borda: 'border-l-amber-400/70' },
   recomendados: { marca: 'bg-indigo-400', borda: 'border-l-indigo-400/70' },
@@ -20,7 +20,7 @@ const LIST_TONES = {
   concluidos: { marca: 'bg-emerald-400', borda: 'border-l-emerald-400/70' }
 };
 
-function SubtemaList({ guia, tone, title, description, ids, index, progress, numbered = false, emptyText, onPractice }) {
+function SubtemaList({ guia, tone, title, description, ids, index, progress, numbered = false, emptyText, onPractice, proximoId }) {
   const tom = LIST_TONES[tone];
   const [expanded, setExpanded] = useState(false);
   const visible = expanded ? ids : ids.slice(0, PREVIEW);
@@ -39,7 +39,7 @@ function SubtemaList({ guia, tone, title, description, ids, index, progress, num
         {visible.map((id, order) => {
           const node = index.get(id);
           return (
-            <li key={id}>
+            <li key={id} {...(id === proximoId ? { 'data-guia': 'tema-recomendado' } : {})}>
               <SubtemaItem
                 node={node}
                 areaNome={index.areaOf(id)?.nome}
@@ -47,6 +47,7 @@ function SubtemaList({ guia, tone, title, description, ids, index, progress, num
                 prerequisitos={node.prerequisitos.map((prereq) => index.get(prereq)?.nome)}
                 position={numbered ? order + 1 : undefined}
                 accent={tom ? `border-l-4 ${tom.borda}` : ''}
+                proximo={id === proximoId}
                 onPractice={onPractice ? () => onPractice([id]) : undefined}
               />
             </li>
@@ -62,61 +63,48 @@ function SubtemaList({ guia, tone, title, description, ids, index, progress, num
   );
 }
 
-export default function Fundamentos({ index, profile, progress, observacao, onOpenTab, onPractice }) {
+export default function Trilha({ index, profile, progress, observacao, onOpenTab, onOpenScreen, onPractice }) {
   const result = useMemo(() => recommend({ index, etapaId: profile?.etapaId, progress }), [index, profile?.etapaId, progress]);
   const etapa = result.etapa;
+  const mudarEtapa = <button type="button" onClick={() => onOpenScreen('perfil', 'etapa')} className={buttonSecondary}>Mudar etapa</button>;
 
   if (result.semRecomendacao) {
     return (
       <div className="space-y-4">
-        <Card className={HERO}>
-          <h1 className="text-2xl font-black text-white">Fundamentos</h1>
-          <p className="mt-2 text-slate-300">Você está em estudo livre, então não há trilha sugerida.</p>
+        <TopoDaTela tela="fundamentos" data-guia="trilha-progresso">
+          <p className="mt-3 text-slate-300">Você está em <strong className="text-white">Estudo livre</strong>, então não há uma trilha em ordem. Escolha uma etapa escolar para ver o plano dela aqui, ou escolha os temas por conta própria na Prática.</p>
           <div className="mt-4 flex flex-wrap gap-2">
-            <button type="button" onClick={() => onOpenTab('pratica')} className={buttonPrimary}>Escolher temas na Prática <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
-            <button type="button" onClick={() => onOpenTab('perfil')} className={buttonSecondary}>Informar minha etapa</button>
+            <button type="button" onClick={() => onOpenScreen('perfil', 'etapa')} className={buttonPrimary}>Escolher minha etapa</button>
+            <button type="button" onClick={() => onOpenTab('pratica')} className={buttonSecondary}>Ir para a Prática <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
           </div>
-        </Card>
+        </TopoDaTela>
       </div>
     );
   }
 
   const all = [...result.trilha, ...result.concluidos];
   const summary = summarizeProgress(all, progress);
-  const next = result.proximo ? index.get(result.proximo) : null;
-  const recomendados = result.recomendados.filter((id) => id !== result.proximo);
+  const proximoId = result.proximo;
   const etapaLabel = etapa.grupo === etapa.nome ? etapa.nome : `${etapa.grupo} · ${etapa.nome}`;
 
   return (
     <div className="space-y-6">
-      <Card data-guia="trilha-progresso" className={HERO}>
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
-            <h1 className="text-2xl font-black text-white">Fundamentos</h1>
-            <p className="mt-1 text-slate-300">Trilha sugerida para <strong className="text-white">{etapaLabel}</strong>.</p>
-          </div>
-          <button type="button" onClick={() => onOpenTab('perfil')} className={buttonSecondary}>Mudar etapa</button>
-        </div>
-        <div className="mt-4">
+      <TopoDaTela tela="fundamentos" data-guia="trilha-progresso" acoes={mudarEtapa}>
+        <p className="mt-3 text-sm text-slate-400">Sua etapa: <strong className="text-slate-200">{etapaLabel}</strong></p>
+        <div className="mt-3">
           <Bar label="Concluído na trilha" value={summary.percentConcluido} />
           <p className="mt-2 text-xs text-slate-500">
             {summary.dominado} de {summary.total} subtemas concluídos · {summary.revisar} para revisar · {summary['em-andamento']} em andamento
           </p>
         </div>
         {etapa.grupo === 'Ensino Médio' && <p className="mt-3 text-xs text-slate-500">{observacao}</p>}
-      </Card>
-
-      {next && (
-        <Card data-guia="tema-recomendado" className="border-teal-500/40">
-          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Passo 2 · Tema recomendado</p>
-          <h2 className="mt-1 text-xl font-black text-white">{next.nome}</h2>
-          <p className="mt-1 text-sm text-slate-400">{next.descricao}</p>
-          <button type="button" onClick={() => onPractice([next.id])} className={`${buttonPrimary} mt-4`}>Passo 3 · Praticar este tema <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
-        </Card>
-      )}
+      </TopoDaTela>
 
       <Notice tone="info">
-        A sugestão é só um ponto de partida. Você pode estudar qualquer tema, em qualquer ordem, na Prática.
+        <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span className="min-w-0 flex-1">A ordem é uma sugestão. Para escolher qualquer tema, de qualquer série, use a Prática.</span>
+          <button type="button" onClick={() => onOpenTab('pratica')} className="font-semibold underline underline-offset-2">Ir para a Prática</button>
+        </span>
       </Notice>
 
       <SubtemaList
@@ -125,16 +113,18 @@ export default function Fundamentos({ index, profile, progress, observacao, onOp
         description="Base de etapas anteriores que esta trilha usa, e temas em que seu acerto ficou baixo."
         ids={result.revisao}
         onPractice={onPractice}
+        proximoId={proximoId}
         index={index}
         progress={progress}
         emptyText="Nada para revisar por enquanto."
       />
       <SubtemaList
         guia="lista-recomendados" tone="recomendados"
-        title={next ? 'Outros recomendados para você' : 'Recomendados para você'}
-        description={next ? 'Depois do tema destacado, na ordem sugerida e respeitando os pré-requisitos.' : 'Na ordem sugerida: cada tema vem depois dos que ele usa como base.'}
-        ids={recomendados}
+        title="Recomendados para você"
+        description="Na ordem sugerida: cada tema vem depois dos que ele usa como base. O próximo aparece em destaque."
+        ids={result.recomendados}
         onPractice={onPractice}
+        proximoId={proximoId}
         index={index}
         progress={progress}
         numbered

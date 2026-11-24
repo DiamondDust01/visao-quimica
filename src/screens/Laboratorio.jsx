@@ -4,10 +4,7 @@ import { buttonPrimary, Card, Notice } from '../components/ui.jsx';
 import { StatusBadge } from '../components/SubtemaItem.jsx';
 import { suggestReview, summarizePatterns, JANELA_RECENTE } from '../domain/mentor/revisao.js';
 import { statusFor } from '../domain/progresso.js';
-import { corDe } from '../app/cores.js';
-
-// Filete com a cor da área no topo do cartão de título.
-const HERO = `border-t-4 ${corDe('laboratorio').borda}`;
+import TopoDaTela from '../components/TopoDaTela.jsx';
 
 // Laboratório do Mentor: diagnóstico local, por regras fixas, a partir do progresso e do
 // registro de erros deste aparelho. Não usa IA generativa e não envia nada para fora.
@@ -19,19 +16,18 @@ export default function Laboratorio({ index, progress, mentorLog, onPractice }) 
 
   return (
     <div className="space-y-4">
-      <Card className={HERO}>
-        <h1 className="text-2xl font-black text-white">Laboratório do Mentor</h1>
-        <p className="mt-2 text-slate-300">
-          O Mentor olha suas respostas, reconhece padrões de erro e sugere o que revisar. Na Prática, ele também oferece ajuda em três níveis: uma estratégia geral, a dica da questão e o primeiro passo da resolução.
+      <TopoDaTela tela="laboratorio">
+        <p className="mt-3 text-sm text-slate-400">
+          Durante as questões, o Mentor também ajuda em três níveis: uma estratégia geral, a dica da questão e o primeiro passo da resolução.
         </p>
         <p className="mt-3 flex items-start gap-2 text-sm text-slate-400">
           <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-teal-300" aria-hidden="true" />
           O Mentor segue regras fixas, escritas para este app. Ele não é uma IA generativa, e nada do que você responde sai deste aparelho.
         </p>
-      </Card>
+      </TopoDaTela>
 
       {answered === 0 && (
-        <Notice tone="info">Responda algumas questões na Prática para o Mentor ter o que analisar.</Notice>
+        <Notice tone="info">Responda algumas questões para o Mentor ter o que analisar.</Notice>
       )}
 
       <Card data-guia="lab-revisar">

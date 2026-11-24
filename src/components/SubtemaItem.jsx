@@ -35,9 +35,10 @@ export function Difficulty({ value }) {
 
 // Uma linha da trilha: nome, área, dificuldade, status e de quais subtemas ele depende.
 // accent: classes extras da borda (ex.: a cor da lista da trilha onde o tema aparece).
-export default function SubtemaItem({ node, areaNome, status, prerequisitos = [], position, onPractice, accent = '' }) {
+// proximo: marca o próximo tema sugerido da trilha, com o selo "Próximo" e o botão em destaque.
+export default function SubtemaItem({ node, areaNome, status, prerequisitos = [], position, onPractice, accent = '', proximo = false }) {
   return (
-    <div className={`flex gap-3 rounded-xl border border-slate-800 bg-slate-900/85 p-3 backdrop-blur-sm ${accent}`}>
+    <div className={`flex gap-3 rounded-xl border bg-slate-900/85 p-3 backdrop-blur-sm ${proximo ? 'border-indigo-400/70 ring-1 ring-indigo-400/40' : 'border-slate-800'} ${accent}`}>
       {position !== undefined && (
         <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-800 font-mono text-xs font-bold text-slate-300" aria-hidden="true">
           {position}
@@ -45,7 +46,10 @@ export default function SubtemaItem({ node, areaNome, status, prerequisitos = []
       )}
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-          <h3 className="font-bold text-white">{node.nome}</h3>
+          <h3 className="font-bold text-white">
+            {proximo && <span className="mr-2 rounded-full bg-indigo-500/20 px-2 py-0.5 align-middle text-[11px] font-bold uppercase tracking-wide text-indigo-200">Próximo</span>}
+            {node.nome}
+          </h3>
           <StatusBadge status={status} />
         </div>
         <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-teal-300/80">{areaNome}</p>
@@ -54,7 +58,7 @@ export default function SubtemaItem({ node, areaNome, status, prerequisitos = []
           <Difficulty value={node.dificuldade} />
           {prerequisitos.length > 0 && <span className="text-xs text-slate-500">Depende de: {prerequisitos.join(', ')}</span>}
           {onPractice && (
-            <button type="button" onClick={onPractice} aria-label={`Praticar ${node.nome}`} className="ml-auto rounded-lg border border-teal-500/50 px-3 py-1 text-xs font-bold text-teal-200 transition hover:bg-teal-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
+            <button type="button" onClick={onPractice} aria-label={`Praticar ${node.nome}`} className={`ml-auto rounded-lg px-3 py-1 text-xs font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${proximo ? 'bg-teal-700 text-white hover:bg-teal-600' : 'border border-teal-500/50 text-teal-200 hover:bg-teal-500/10'}`}>
               Praticar
             </button>
           )}

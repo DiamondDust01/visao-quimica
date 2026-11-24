@@ -1,32 +1,82 @@
 import React, { useMemo } from 'react';
-import { ArchiveRestore, ArrowRight, Atom, Calculator, Hexagon } from 'lucide-react';
+import { ArrowRight, Brain, History, Play } from 'lucide-react';
 import { buttonPrimary, buttonSecondary, Card, Notice } from '../components/ui.jsx';
-import { recommend } from '../domain/recomendador.js';
+import TopoDaTela from '../components/TopoDaTela.jsx';
 import NivelCard from '../components/NivelCard.jsx';
-import { corDe } from '../app/cores.js';
+import { recommend } from '../domain/recomendador.js';
+import { suggestReview } from '../domain/mentor/revisao.js';
 
-// Filete com a cor da área no topo do cartão de título.
-const HERO = `border-t-4 ${corDe('inicio').borda}`;
+// Início: "o que eu faço agora?". Um botão principal começa direto a próxima sessão (sem
+// passar por outra aba); abaixo, a última sessão e o aviso do Mentor, quando houver.
+// O plano completo fica na Trilha e a escolha livre de temas, na Prática.
+// ultimaSessao: { em, corretas, total, subtemaIds } | null
 
-// Atalhos do Início: o que os estudantes mais usam fora das abas, a um toque.
-const ATALHOS = [
-  { id: 'tabela', label: 'Tabela periódica', tela: 'ferramentas', secao: 'tabela', Icon: Atom },
-  { id: 'massa-molar', label: 'Massa molar', tela: 'ferramentas', secao: 'massa-molar', Icon: Calculator },
-  { id: 'estruturas', label: 'Estruturas', tela: 'ferramentas', secao: 'estruturas', Icon: Hexagon },
-  { id: 'backup', label: 'Backup do progresso', tela: 'perfil', secao: 'backup', Icon: ArchiveRestore }
-];
+const MAX_NOMES = 3;
 
-export default function Inicio({ onOpenTab, onOpenScreen, index, profile, progress, points = 0, guideOffer = false, onStartGuide, onDismissGuide }) {
-  const result = useMemo(() => recommend({ index, etapaId: profile?.etapaId, progress }), [index, profile?.etapaId, progress]);
-  const etapa = result.etapa;
+const nomesDe = (index, ids) => {
+  const nomes = ids.map((id) => index.get(id)?.nome).filter(Boolean);
+  return nomes.length > MAX_NOMES ? `${nomes.slice(0, MAX_NOMES).join(', ')} e mais ${nomes.length - MAX_NOMES}` : nomes.join(', ');
+};
+
+const dataCurta = (iso) => {
+  const data = new Date(iso);
+  return Number.isNaN(data.getTime()) ? '' : data.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long' });
+};
+
+function Continuar({ result, index, ultimaSessao, onStart, onOpenTab }) {
   const next = result.proximo ? index.get(result.proximo) : null;
+  if (next) {
+    return (
+      <Card data-guia="continuar" className="border-teal-500/50">
+        <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Continuar a trilha</p>
+        <h2 className="mt-1 text-xl font-black text-white">{next.nome}</h2>
+        <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-slate-500">{index.areaOf(next.id)?.nome}</p>
+        <p className="mt-1 text-sm text-slate-400">{next.descricao}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button type="button" onClick={() => onStart([next.id])} className={buttonPrimary}><Play className="h-4 w-4" aria-hidden="true" /> Praticar agora</button>
+          <button type="button" onClick={() => onOpenTab('fundamentos')} className={buttonSecondary}>Ver a trilha completa</button>
+        </div>
+      </Card>
+    );
+  }
+  if (!result.semRecomendacao) {
+    return (
+      <Card data-guia="continuar" className="border-teal-500/50">
+        <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Trilha concluída</p>
+        <h2 className="mt-1 text-xl font-black text-white">Você concluiu os temas da sua etapa</h2>
+        <p className="mt-1 text-sm text-slate-400">Encare os desafios da próxima etapa na Trilha, ou escolha qualquer tema na Prática.</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button type="button" onClick={() => onOpenTab('fundamentos')} className={buttonPrimary}>Ver os desafios <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
+          <button type="button" onClick={() => onOpenTab('pratica')} className={buttonSecondary}>Escolher na Prática</button>
+        </div>
+      </Card>
+    );
+  }
+  return (
+    <Card data-guia="continuar" className="border-teal-500/50">
+      <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Estudo livre</p>
+      <h2 className="mt-1 text-xl font-black text-white">Escolha o que estudar</h2>
+      <p className="mt-1 text-sm text-slate-400">Sem etapa escolhida não há trilha em ordem: você monta as sessões com os temas que quiser.</p>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <button type="button" onClick={() => onOpenTab('pratica')} className={buttonPrimary}>Escolher temas na Prática <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
+        {ultimaSessao && <button type="button" onClick={() => onStart(ultimaSessao.subtemaIds)} className={buttonSecondary}>Repetir a última sessão</button>}
+      </div>
+    </Card>
+  );
+}
+
+export default function Inicio({ index, profile, progress, points = 0, mentorLog = [], mentorLiberado = false, ultimaSessao, guideOffer = false, onStartGuide, onDismissGuide, onOpenTab, onOpenScreen, onStart }) {
+  const result = useMemo(() => recommend({ index, etapaId: profile?.etapaId, progress }), [index, profile?.etapaId, progress]);
+  const sugestoes = useMemo(() => (mentorLiberado ? suggestReview({ index, progress, log: mentorLog }) : []), [mentorLiberado, index, progress, mentorLog]);
+  const etapa = result.etapa;
+  const data = ultimaSessao ? dataCurta(ultimaSessao.em) : '';
 
   return (
     <div className="space-y-4">
       {guideOffer && (
         <Notice tone="info">
           <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span className="min-w-0 flex-1"><strong>Primeira vez por aqui?</strong> O guia de uso destaca cada parte do app e explica para que ela serve.</span>
+            <span className="min-w-0 flex-1"><strong>Primeira vez por aqui?</strong> O guia de uso mostra para que serve cada parte do app.</span>
             <span className="flex gap-2">
               <button type="button" onClick={onStartGuide} className={buttonPrimary}>Começar o guia</button>
               <button type="button" onClick={onDismissGuide} className={buttonSecondary}>Agora não</button>
@@ -35,11 +85,7 @@ export default function Inicio({ onOpenTab, onOpenScreen, index, profile, progre
         </Notice>
       )}
 
-      <Card className={HERO}>
-        <h1 className="text-2xl font-black text-white sm:text-3xl">Visão Química</h1>
-        <p className="mt-2 max-w-2xl text-slate-300">
-          Seu fluxo tem três passos: etapa escolar, escolha de tema e sessão de questões. Siga a trilha recomendada ou escolha temas livremente em Prática.
-        </p>
+      <TopoDaTela tela="inicio">
         {etapa && (
           <p className="mt-3 text-sm text-slate-400">
             Sua etapa: <strong className="text-slate-200">{etapa.grupo === etapa.nome ? etapa.nome : `${etapa.grupo} · ${etapa.nome}`}</strong>{' '}
@@ -47,42 +93,33 @@ export default function Inicio({ onOpenTab, onOpenScreen, index, profile, progre
           </p>
         )}
         <div data-guia="nivel" className="mt-4 max-w-md"><NivelCard points={points} /></div>
-      </Card>
+      </TopoDaTela>
 
-      {next && (
-        <Card data-guia="proximo-passo" className="border-teal-500/40">
-          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Passo 2 · Escolha um tema da trilha</p>
-          <h2 className="mt-1 text-xl font-black text-white">{next.nome}</h2>
-          <p className="mt-1 text-sm text-slate-400">{next.descricao}</p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <button type="button" onClick={() => onOpenTab('fundamentos')} className={buttonPrimary}>Ver trilha e escolher tema <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
-          </div>
-        </Card>
+      <Continuar result={result} index={index} ultimaSessao={ultimaSessao} onStart={onStart} onOpenTab={onOpenTab} />
+
+      {(ultimaSessao || sugestoes.length > 0) && (
+        <div className="grid gap-4 md:grid-cols-2">
+          {ultimaSessao && (
+            <Card data-guia="ultima-sessao">
+              <h2 className="flex items-center gap-2 text-lg font-bold text-white"><History className="h-5 w-5 text-slate-400" aria-hidden="true" /> Última sessão</h2>
+              <p className="mt-1 text-sm text-slate-300">
+                {data ? `Em ${data}, você acertou ` : 'Você acertou '}
+                <strong className="text-white">{ultimaSessao.corretas} de {ultimaSessao.total}</strong> em {nomesDe(index, ultimaSessao.subtemaIds)}.
+              </p>
+              <button type="button" onClick={() => onStart(ultimaSessao.subtemaIds)} className={`${buttonSecondary} mt-3`}>Repetir esses temas</button>
+            </Card>
+          )}
+          {sugestoes.length > 0 && (
+            <Card data-guia="aviso-mentor">
+              <h2 className="flex items-center gap-2 text-lg font-bold text-white"><Brain className="h-5 w-5 text-fuchsia-300" aria-hidden="true" /> O Mentor tem sugestões</h2>
+              <p className="mt-1 text-sm text-slate-300">
+                {sugestoes.length === 1 ? 'Um tema' : `${sugestoes.length} temas`} para revisar, a começar por <strong className="text-white">{index.get(sugestoes[0].subtemaId)?.nome}</strong>.
+              </p>
+              <button type="button" onClick={() => onOpenTab('laboratorio')} className={`${buttonSecondary} mt-3`}>Abrir o Mentor</button>
+            </Card>
+          )}
+        </div>
       )}
-
-      {!next && (
-        <Card data-guia="proximo-passo" className="border-teal-500/40">
-          <p className="text-xs font-bold uppercase tracking-wide text-teal-300">Passo 2 · Escolha um tema</p>
-          <h2 className="mt-1 text-xl font-black text-white">Pronto para estudar?</h2>
-          <p className="mt-1 text-sm text-slate-400">Escolha temas e monte sua sessão de prática.</p>
-          <button type="button" onClick={() => onOpenTab('pratica')} className={`${buttonPrimary} mt-4`}>Escolher tema na Prática <ArrowRight className="h-4 w-4" aria-hidden="true" /></button>
-        </Card>
-      )}
-
-      <Card data-guia="atalhos">
-        <h2 className="text-lg font-bold text-white">Atalhos</h2>
-        <p className="mt-1 text-sm text-slate-400">Ferramentas e backup a um toque. Tudo o mais fica no menu "Mais".</p>
-        <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {ATALHOS.map(({ id, label, tela, secao, Icon }) => (
-            <li key={id}>
-              <button type="button" data-atalho={id} onClick={() => onOpenScreen(tela, secao)} className="flex h-full w-full flex-col items-start gap-2 rounded-xl border border-slate-700 bg-slate-950/50 p-3 text-left text-sm font-semibold text-slate-100 transition hover:border-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
-                <Icon className={`h-5 w-5 ${corDe(tela).icone}`} aria-hidden="true" />
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </Card>
     </div>
   );
 }

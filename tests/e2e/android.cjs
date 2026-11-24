@@ -63,13 +63,14 @@ app.whenReady().then(async () => {
   check(await js(`document.documentElement.classList.contains('android-app')`), 'o app se identifica como Android (classe android-app)');
   check(await js(`Boolean(document.querySelector('meta[http-equiv="Content-Security-Policy"]'))`), 'CSP presente nos arquivos do APK');
   check(await js(`window.matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0`), 'tela de toque emulada');
+  await tap(`document.querySelector('[data-caminho="trilha"]')`);
   await tap(`document.querySelector('label[for="onboarding-etapa-em-1"]')`);
-  await tap(byText('Continuar'));
+  await tap(byText('Ver minha trilha'));
   const bottomNav = await js(`(() => { const nav = [...document.querySelectorAll('nav')].find((n) => n.className.includes('bottom-0') && getComputedStyle(n).display !== 'none'); return nav ? nav.querySelectorAll('button').length : 0; })()`);
   check(bottomNav === 4, `barra inferior do celular com 4 botões, sem o Mentor antes dos primeiros erros (${bottomNav})`);
   check(await js(`![...document.querySelectorAll('nav.fixed button')].some((b) => b.innerText.trim() === 'Mentor')`), 'Mentor oculto na barra de baixo até ter o que revisar');
   await shot('android-inicio');
-  for (const label of ['Trilhas', 'Prática']) {
+  for (const label of ['Trilha', 'Prática']) {
     await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === ${JSON.stringify(label)})`);
     const h1 = await js(`document.querySelector('main h1')?.innerText || ''`);
     check(Boolean(h1), `toque em ${label} abre ${h1}`);
@@ -87,8 +88,8 @@ app.whenReady().then(async () => {
       [...main.querySelectorAll('button')].some((button) => button.innerText.includes('estudantes e professores'));
   })()`), 'Mais → Sobre e créditos abre os links para desenvolvedores, IFPI e professores');
   await tap(byText('Trilhas de Química para estudantes e professores'));
-  check(await js(`document.querySelector('main h1')?.innerText === 'Fundamentos'`), 'atalho para professores abre Fundamentos');
-  await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === 'Trilhas')`);
+  check(await js(`document.querySelector('main h1')?.innerText === 'Trilha'`), 'atalho para professores abre a Trilha');
+  await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === 'Trilha')`);
   await js('window.scrollTo(0, 2000)'); await wait(300);
   const header = await js(`(() => ({ topo: Math.round(document.querySelector('header').getBoundingClientRect().top), rolagem: Math.round(scrollY) }))()`);
   check(header.rolagem > 0 && header.topo === 0, `barra superior fixa ao rolar no celular (rolagem ${header.rolagem}px)`);
@@ -99,7 +100,7 @@ app.whenReady().then(async () => {
   // O tema fica dentro da área recolhida: abre a área antes, como faria quem usa o app.
   await tap(`document.querySelector('#selecao-fund-densidade').closest('details').querySelector('summary')`);
   await tap(`document.querySelector('label[for="selecao-fund-densidade"]') || document.querySelector('#selecao-fund-densidade')`);
-  await tap(byText('Passo 3 · Começar sessão'));
+  await tap(byText('Começar sessão'));
   await tap(`document.querySelector('main form label:has(input[type=radio])') || document.querySelector('main form input[type=text], main form input[inputmode=decimal]')`);
   await js(`(() => { const i = document.querySelector('main form input[inputmode=decimal]'); if (i && !i.value) { Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(i, '2,7'); i.dispatchEvent(new Event('input', { bubbles: true })); } const u = document.querySelector('main form input[list]'); if (u && !u.value) { Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(u, 'g'); u.dispatchEvent(new Event('input', { bubbles: true })); } })()`);
   await tap(byText('Responder'));
