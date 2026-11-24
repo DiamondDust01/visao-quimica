@@ -104,7 +104,7 @@ export const GUIA_PASSOS = [
   {
     id: 'sessao-topo', tela: 'pratica-sessao', alvo: 'sessao-topo',
     titulo: 'Andamento da sessão',
-    texto: 'A sessão abre numa tela própria, por cima do módulo de onde você começou, e no fim volta para ele. Aqui aparece em qual questão você está e o progresso da sessão. "Encerrar sessão" termina antes do fim: o que você já respondeu fica salvo.'
+    texto: 'A sessão abre numa tela própria, por cima do módulo de onde você começou, e no fim volta para ele. Aqui aparecem em qual questão você está, o tempo de estudo (o relógio pausa quando o app fica em segundo plano) e o progresso da sessão. "Encerrar sessão" termina antes do fim: o que você já respondeu fica salvo.'
   },
   {
     id: 'sessao-enunciado', tela: 'pratica-sessao', alvo: 'enunciado',
@@ -119,7 +119,7 @@ export const GUIA_PASSOS = [
   {
     id: 'sessao-acoes', tela: 'pratica-sessao', alvo: 'acoes',
     titulo: 'Responder e pedir ajuda',
-    texto: '"Responder" corrige na hora. "Pedir ajuda ao Mentor" mostra até três níveis, do mais geral ao mais específico: estratégia, dica e primeiro passo. Cada ajuda usada desconta 25% dos pontos da questão. Depois de responder aparecem o resultado, o erro comum previsto (se houver), o que o Mentor notou, a resposta esperada, os pontos ganhos e a resolução passo a passo.'
+    texto: '"Responder" corrige na hora. "Pedir ajuda ao Mentor" mostra até três níveis, do mais geral ao mais específico: estratégia, dica e primeiro passo. Cada ajuda usada desconta 25% dos pontos da questão. Se você não conhece o assunto, "Não sei este conteúdo" abre um texto curto que explica o tema, sem descontar pontos. Depois de responder aparecem o resultado, o erro comum previsto (se houver), o que o Mentor notou, a resposta esperada, os pontos ganhos e a resolução passo a passo.'
   },
 
   {
