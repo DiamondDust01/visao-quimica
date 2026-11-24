@@ -55,6 +55,14 @@ app.whenReady().then(async () => {
   await clickText('Início');
   await wait(400);
   check(/Boas-vindas/.test(await heading()), 'sem etapa, as abas de estudo levam à escolha de etapa');
+  const quickTopics = await js(`[...document.querySelectorAll('[data-tema-rapido]')].map((b) => b.dataset.temaRapido)`);
+  check(quickTopics.length === 6 && quickTopics.includes('endo-exo'), `temas rápidos na tela de boas-vindas (${quickTopics.join(', ')})`);
+  await js(`document.querySelector('[data-tema-rapido="endo-exo"]').click()`);
+  await wait(500);
+  check(await js(`/Questão 1 de 9/.test(document.querySelector('main').innerText) && !localStorage.getItem('visao-quimica:perfil')`), 'tema rápido abre uma sessão de 9 questões sem salvar etapa');
+  await clickText('Início');
+  await wait(400);
+  check(/Boas-vindas/.test(await heading()), 'depois do tema rápido, o Início volta à escolha de etapa');
   await js(`document.querySelector('label[for="onboarding-etapa-em-3"]').click()`);
   await clickText('Continuar');
   await wait(400);

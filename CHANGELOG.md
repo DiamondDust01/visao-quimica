@@ -4,6 +4,18 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
+## [Não lançado]
+
+### Adicionado
+- Painel "Temas rápidos" na tela de boas-vindas: quem não quer escolher a etapa começa direto uma
+  sessão curta (9 questões) em um de seis temas, com a série de referência indicada, como
+  "2ª série · Reações endotérmicas e exotérmicas". Nada é salvo no perfil; o progresso das
+  respostas fica registrado normalmente.
+
+### Alterado
+- A Prática funciona sem etapa escolhida, como Estudo livre. Início, Fundamentos e Laboratório do
+  Mentor continuam pedindo a etapa primeiro.
+
 ## [0.4.1] - 2026-11-20
 
 ### Corrigido
