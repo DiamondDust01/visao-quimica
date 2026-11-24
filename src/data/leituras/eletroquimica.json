@@ -1,0 +1,141 @@
+{
+  "area": "eletroquimica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "eletro-nox",
+      "introducao": "Número de oxidação (Nox) é a carga que um átomo teria se todos os elétrons de suas ligações ficassem com o átomo mais eletronegativo. Ele ajuda a acompanhar quem perde e quem ganha elétrons.",
+      "secoes": [
+        { "titulo": "Regras fixas", "texto": "Substância simples: Nox 0 (\\ce{O2}, \\ce{Fe}, \\ce{Cl2}). Íon de um átomo só: Nox = carga (\\ce{Na+} = +1). Metais alcalinos: +1; alcalinoterrosos: +2; alumínio: +3. Hidrogênio: +1 (−1 nos hidretos metálicos, como NaH). Oxigênio: −2 (−1 nos peróxidos, como \\ce{H2O2}). Flúor: sempre −1." },
+        { "titulo": "Calculando o desconhecido", "texto": "Numa substância neutra, a soma dos Nox de todos os átomos é zero. Num íon, a soma é igual à carga. Multiplique o Nox de cada elemento pelo número de átomos e resolva para o que falta." }
+      ],
+      "exemplo": "Enxofre no \\ce{H2SO4}: 2 × (+1) + x + 4 × (−2) = 0, então x = +6. Manganês no \\ce{MnO4-}: x + 4 × (−2) = −1, então x = +7.",
+      "pontosChave": [
+        "Substância simples: Nox 0.",
+        "H: +1; O: −2 (com exceções).",
+        "Soma dos Nox = 0 na substância; = carga no íon.",
+        "Flúor é sempre −1."
+      ]
+    },
+    {
+      "subtemaId": "eletro-oxidacao-reducao",
+      "introducao": "Reações de oxirredução envolvem transferência de elétrons. Uma espécie perde elétrons (oxida) e outra ganha (reduz), sempre ao mesmo tempo.",
+      "secoes": [
+        { "titulo": "Oxidação e redução", "texto": "Oxidação: perda de elétrons; o Nox aumenta. Redução: ganho de elétrons; o Nox diminui. Para identificar, calcule o Nox de cada elemento antes e depois da reação e veja quem subiu e quem desceu." },
+        { "titulo": "Agentes", "texto": "Agente redutor: a substância que contém o elemento que oxidou; ele causa a redução do outro. Agente oxidante: a substância que contém o elemento que reduziu; ele causa a oxidação do outro. Os agentes são indicados pela substância inteira, não só pelo elemento." }
+      ],
+      "exemplo": "\\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu}. O zinco vai de 0 a +2: oxidou, é o agente redutor. O cobre vai de +2 a 0: reduziu; o \\ce{Cu^{2+}} é o agente oxidante.",
+      "pontosChave": [
+        "Oxidação: perde elétrons, Nox sobe.",
+        "Redução: ganha elétrons, Nox desce.",
+        "Agente redutor sofre oxidação.",
+        "Agente oxidante sofre redução."
+      ]
+    },
+    {
+      "subtemaId": "eletro-balanceamento-redox",
+      "introducao": "Numa oxirredução, o número de elétrons perdidos tem que ser igual ao de elétrons ganhos. Esse é o ponto de partida para balancear equações redox complicadas.",
+      "secoes": [
+        { "titulo": "Método do Nox", "texto": "1) Calcule os Nox e ache quem oxida e quem reduz. 2) Calcule a variação (Δ) de cada um, multiplicada pelo número de átomos do elemento na fórmula. 3) Cruze: o Δ de quem oxida vira coeficiente de quem reduz, e vice-versa. 4) Termine o balanceamento por tentativa." },
+        { "titulo": "Equações iônicas", "texto": "Além dos átomos, a soma das cargas tem que ser igual dos dois lados. Em meio ácido, use \\ce{H+} e \\ce{H2O} para acertar hidrogênios e oxigênios; em meio básico, \\ce{OH-} e \\ce{H2O}. Confira no fim os átomos e as cargas." }
+      ],
+      "exemplo": "\\ce{MnO4- + Fe^{2+} + H+ -> Mn^{2+} + Fe^{3+} + H2O}. Mn: +7 → +2 (ganha 5); Fe: +2 → +3 (perde 1). Então 1 \\ce{MnO4-} para 5 \\ce{Fe^{2+}}, e depois 8 \\ce{H+} e 4 \\ce{H2O}.",
+      "pontosChave": [
+        "Elétrons perdidos = elétrons ganhos.",
+        "Δ × número de átomos de cada elemento.",
+        "Cruze os Δ como coeficientes.",
+        "Na iônica, as cargas também se igualam."
+      ]
+    },
+    {
+      "subtemaId": "eletro-pilhas-funcionamento",
+      "introducao": "Pilha é um dispositivo que transforma a energia de uma reação de oxirredução espontânea em energia elétrica, fazendo os elétrons passarem por um fio.",
+      "secoes": [
+        { "titulo": "Ânodo, cátodo e ponte salina", "texto": "Ânodo: eletrodo onde ocorre a oxidação; é o polo negativo; a placa se desgasta. Cátodo: onde ocorre a redução; polo positivo; metal pode se depositar. Os elétrons vão do ânodo para o cátodo pelo fio externo. A ponte salina deixa os íons circularem entre as soluções e mantém as duas eletricamente neutras." },
+        { "titulo": "Pilha de Daniell e notação", "texto": "Zinco em solução de \\ce{ZnSO4} e cobre em \\ce{CuSO4}. O zinco oxida (ânodo) e os íons \\ce{Cu^{2+}} reduzem, depositando cobre (cátodo). Representação: \\ce{Zn | Zn^{2+} || Cu^{2+} | Cu}, com o ânodo à esquerda e a ponte salina no meio (||)." }
+      ],
+      "exemplo": "Com o tempo, na pilha de Daniell, a placa de zinco fica mais fina, a de cobre mais grossa, e a solução azul de \\ce{CuSO4} vai clareando.",
+      "pontosChave": [
+        "Ânodo: oxidação, polo negativo, desgasta.",
+        "Cátodo: redução, polo positivo.",
+        "Elétrons: do ânodo para o cátodo pelo fio.",
+        "Ponte salina mantém as soluções neutras."
+      ]
+    },
+    {
+      "subtemaId": "eletro-potenciais",
+      "introducao": "Cada semirreação de redução tem um potencial-padrão (E°), medido em volts em relação ao eletrodo de hidrogênio (E° = 0). Quanto maior E°, maior a tendência de a espécie se reduzir.",
+      "secoes": [
+        { "titulo": "Prevendo a reação", "texto": "Na pilha, quem tem o maior potencial de redução se reduz (cátodo) e quem tem o menor se oxida (ânodo). Para escrever a reação global, inverta a semirreação de menor E° e iguale os elétrons. Multiplicar a semirreação não muda o valor de E°." },
+        { "titulo": "Diferença de potencial", "texto": "ddp (ΔE°) = E°(maior) − E°(menor) = E°(cátodo) − E°(ânodo). ΔE° positivo indica reação espontânea, como numa pilha. Se o cálculo der negativo, a reação no sentido escrito não é espontânea e só ocorre forçada, como na eletrólise." }
+      ],
+      "exemplo": "E°(\\ce{Cu^{2+}}/Cu) = +0,34 V e E°(\\ce{Zn^{2+}}/Zn) = −0,76 V. O cobre se reduz e o zinco se oxida: ΔE° = 0,34 − (−0,76) = 1,10 V.",
+      "pontosChave": [
+        "Maior E° de redução: se reduz (cátodo).",
+        "ddp = E°(maior) − E°(menor).",
+        "Multiplicar a semirreação não muda E°.",
+        "ΔE° > 0: espontânea."
+      ]
+    },
+    {
+      "subtemaId": "eletro-baterias",
+      "introducao": "As pilhas e baterias do dia a dia usam o mesmo princípio da pilha de Daniell, com materiais escolhidos para dar mais energia, menos peso e mais segurança. Bateria é, em geral, um conjunto de pilhas.",
+      "secoes": [
+        { "titulo": "Tipos comuns", "texto": "Pilha alcalina: zinco (ânodo) e dióxido de manganês (cátodo) em meio de KOH; não é recarregável. Bateria de chumbo (carro): chumbo e dióxido de chumbo em ácido sulfúrico; é recarregável. Bateria de íons lítio (celular): íons lítio vão e voltam entre os eletrodos na carga e na descarga; é leve e recarregável." },
+        { "titulo": "Recarga e descarte", "texto": "Recarregar é forçar a reação inversa com corrente elétrica, o que é uma eletrólise. Pilhas e baterias têm metais tóxicos e substâncias corrosivas: não podem ir para o lixo comum. Devem ser levadas a pontos de coleta, que encaminham para reciclagem." }
+      ],
+      "exemplo": "A bateria do carro descarrega ao dar a partida e é recarregada pelo alternador enquanto o motor funciona.",
+      "pontosChave": [
+        "Alcalina: Zn e \\ce{MnO2}, não recarregável.",
+        "Chumbo-ácido: recarregável, usada em carros.",
+        "Íons lítio: leve, em celulares e notebooks.",
+        "Descarte em pontos de coleta, nunca no lixo comum."
+      ]
+    },
+    {
+      "subtemaId": "eletro-corrosao",
+      "introducao": "Corrosão é a oxidação de um metal pelo ambiente. A ferrugem é a corrosão do ferro: um processo eletroquímico que precisa de água e de oxigênio.",
+      "secoes": [
+        { "titulo": "Como o ferro enferruja", "texto": "Numa região do ferro, ele se oxida (\\ce{Fe -> Fe^{2+} + 2e-}); noutra, o oxigênio se reduz com a água. Os produtos formam o óxido de ferro(III) hidratado, a ferrugem, que é porosa e se solta, expondo mais ferro. Sal (maresia) acelera a corrosão porque deixa a água mais condutora." },
+        { "titulo": "Formas de proteção", "texto": "Barreira: pintura, verniz, óleo ou camada de plástico isolam o metal da água e do ar. Galvanização: revestir o ferro com zinco, que se oxida antes e protege mesmo se riscado. Metal de sacrifício: ligar ao ferro um metal mais reativo (magnésio, zinco), que se oxida no lugar dele, como em cascos de navios e tubulações." }
+      ],
+      "exemplo": "Um prego dentro de água fervida (sem oxigênio) e tampada quase não enferruja; em água salgada e aberta, enferruja rápido.",
+      "pontosChave": [
+        "Ferrugem precisa de água e oxigênio.",
+        "Sal acelera a corrosão.",
+        "Galvanização: camada de zinco.",
+        "Metal de sacrifício: mais reativo, oxida no lugar."
+      ]
+    },
+    {
+      "subtemaId": "eletro-eletrolise-tipos",
+      "introducao": "Eletrólise é uma reação de oxirredução não espontânea provocada por corrente elétrica. É o caminho inverso da pilha: gasta energia elétrica para produzir substâncias.",
+      "secoes": [
+        { "titulo": "Eletrodos e eletrólise ígnea", "texto": "Na eletrólise, o cátodo é o polo negativo, onde ocorre a redução (cátions recebem elétrons); o ânodo é o polo positivo, onde ocorre a oxidação. Na eletrólise ígnea, o composto iônico está fundido, sem água: só os seus íons participam. Fundindo NaCl, forma-se sódio metálico no cátodo e gás cloro no ânodo." },
+        { "titulo": "Eletrólise aquosa e ordem de descarga", "texto": "Em solução, a água também pode reagir. No cátodo: metais pouco reativos (Cu, Ag, Au) se depositam; íons de alcalinos, alcalinoterrosos e alumínio não, e no lugar deles a água forma \\ce{H2}. No ânodo: ânions sem oxigênio (\\ce{Cl-}, \\ce{Br-}, \\ce{I-}) descarregam; ânions oxigenados (\\ce{SO4^{2-}}, \\ce{NO3-}) e \\ce{F-} não, e a água forma \\ce{O2}." }
+      ],
+      "exemplo": "Eletrólise aquosa de NaCl: no cátodo forma-se \\ce{H2}, no ânodo \\ce{Cl2}, e a solução fica com NaOH. É assim que a indústria produz soda cáustica e cloro.",
+      "pontosChave": [
+        "Eletrólise: não espontânea, precisa de corrente.",
+        "Cátodo (−): redução; ânodo (+): oxidação.",
+        "Ígnea: composto fundido, sem água.",
+        "Aquosa: alcalinos dão lugar ao \\ce{H2}; ânions oxigenados dão lugar ao \\ce{O2}."
+      ]
+    },
+    {
+      "subtemaId": "eletro-faraday",
+      "introducao": "As leis de Faraday relacionam a quantidade de eletricidade que passa numa eletrólise com a quantidade de substância formada nos eletrodos.",
+      "secoes": [
+        { "titulo": "Carga elétrica", "texto": "Carga = corrente × tempo: Q = i × t, com i em ampères, t em segundos e Q em coulombs (C). Um mol de elétrons carrega cerca de 96 500 C, a constante de Faraday (F)." },
+        { "titulo": "Do mol de elétrons à massa", "texto": "Escreva a semirreação para saber quantos mols de elétrons formam um mol da substância: \\ce{Cu^{2+} + 2e- -> Cu} pede 2 mol de elétrons (2 × 96 500 C) para depositar 1 mol (63,5 g) de cobre. Faça a regra de três com a carga que passou." }
+      ],
+      "exemplo": "Corrente de 5 A por 1 930 s: Q = 9 650 C = 0,1 mol de elétrons. Para o cobre: 0,05 mol, ou 0,05 × 63,5 ≈ 3,2 g.",
+      "pontosChave": [
+        "Q = i × t (em segundos).",
+        "1 mol de elétrons ≈ 96 500 C.",
+        "Use a semirreação para os mols de elétrons.",
+        "Massa = mols de substância × massa molar."
+      ]
+    }
+  ]
+}

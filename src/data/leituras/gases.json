@@ -1,0 +1,111 @@
+{
+  "area": "gases",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "gas-variaveis-estado",
+      "introducao": "O estado de um gás é descrito por três variáveis: pressão (P), volume (V) e temperatura (T). A teoria cinética explica essas variáveis pelo movimento das partículas.",
+      "secoes": [
+        { "titulo": "As variáveis", "texto": "Pressão: força das colisões das partículas nas paredes do recipiente, medida em atm, mmHg ou Pa (1 atm = 760 mmHg ≈ 101 325 Pa). Volume: o espaço do recipiente, em L ou m³. Temperatura: sempre em kelvin nos cálculos (K = °C + 273), porque ela é proporcional à energia de movimento das partículas." },
+        { "titulo": "Teoria cinética", "texto": "Num gás ideal, as partículas estão muito afastadas, se movem em linha reta e ao acaso, e só interagem nas colisões, que não perdem energia. Aquecer faz as partículas se moverem mais rápido e baterem com mais força e frequência. Diminuir o volume faz elas baterem mais vezes nas paredes, aumentando a pressão." }
+      ],
+      "exemplo": "Um pneu calibrado de manhã fica com pressão maior depois de rodar ao sol: o ar dentro esquenta, as partículas se movem mais rápido e batem com mais força.",
+      "pontosChave": [
+        "Estado do gás: P, V e T.",
+        "Temperatura sempre em kelvin nos cálculos.",
+        "Pressão vem das colisões nas paredes.",
+        "Mais temperatura: partículas mais rápidas."
+      ]
+    },
+    {
+      "subtemaId": "gas-transformacoes",
+      "introducao": "Numa transformação gasosa, uma quantidade fixa de gás muda de estado. Mantendo uma variável constante, as outras duas se relacionam de forma simples.",
+      "secoes": [
+        { "titulo": "Isotérmica, isobárica e isocórica", "texto": "Isotérmica (T constante, lei de Boyle): P × V é constante; se a pressão dobra, o volume cai pela metade. Isobárica (P constante, lei de Charles e Gay-Lussac): V ÷ T é constante; aquecer expande o gás. Isocórica ou isovolumétrica (V constante): P ÷ T é constante; aquecer aumenta a pressão." },
+        { "titulo": "Equação geral", "texto": "Para os casos em que tudo muda: (P₁ × V₁) ÷ T₁ = (P₂ × V₂) ÷ T₂. Use T em kelvin e as mesmas unidades de P e de V nos dois lados. As três leis anteriores são casos particulares dessa equação." }
+      ],
+      "exemplo": "Um gás a 2 atm ocupa 10 L. Sem mudar a temperatura, a pressão passa a 4 atm: 2 × 10 = 4 × V₂, V₂ = 5 L.",
+      "pontosChave": [
+        "Isotérmica: P × V constante.",
+        "Isobárica: V ÷ T constante.",
+        "Isocórica: P ÷ T constante.",
+        "P₁V₁/T₁ = P₂V₂/T₂, com T em kelvin."
+      ]
+    },
+    {
+      "subtemaId": "gas-clapeyron",
+      "introducao": "A equação de Clapeyron relaciona as variáveis de estado com a quantidade de gás: PV = nRT, em que n é o número de mols e R é a constante dos gases.",
+      "secoes": [
+        { "titulo": "Escolhendo o R", "texto": "O valor de R depende das unidades: com P em atm e V em L, R = 0,082 atm·L/(mol·K); com P em mmHg e V em L, R = 62,3 mmHg·L/(mol·K); no SI (Pa e m³), R = 8,31 J/(mol·K). A temperatura é sempre em kelvin." },
+        { "titulo": "Usando a equação", "texto": "Isole a variável pedida: n = PV ÷ RT, V = nRT ÷ P, e assim por diante. Se o problema der a massa, transforme em mols com n = m ÷ M. A equação vale para gás ideal; gases reais se aproximam dele em pressões baixas e temperaturas altas." }
+      ],
+      "exemplo": "Volume de 2 mol de gás a 27 °C (300 K) e 1 atm: V = 2 × 0,082 × 300 ÷ 1 = 49,2 L.",
+      "pontosChave": [
+        "PV = nRT.",
+        "R = 0,082 com atm e L.",
+        "T em kelvin.",
+        "n = m ÷ M quando o problema der a massa."
+      ]
+    },
+    {
+      "subtemaId": "gas-volume-molar",
+      "introducao": "Pela hipótese de Avogadro, volumes iguais de gases diferentes, na mesma temperatura e pressão, têm o mesmo número de moléculas. Por isso 1 mol de qualquer gás ideal ocupa o mesmo volume nas mesmas condições.",
+      "secoes": [
+        { "titulo": "Volume molar", "texto": "Nas CNTP (0 °C e 1 atm), o volume molar é 22,4 L/mol. Nas CATP (25 °C e 1 bar), cerca de 24,8 L/mol; a 25 °C e 1 atm, cerca de 24,5 L/mol. Sempre confira qual condição o problema usa." },
+        { "titulo": "Usando o volume molar", "texto": "Mols de gás = volume ÷ volume molar. Volume = mols × volume molar. Numa reação entre gases nas mesmas condições, os volumes seguem a mesma proporção dos coeficientes: \\ce{N2 + 3H2 -> 2NH3} quer dizer 1 L de \\ce{N2} para 3 L de \\ce{H2}, formando 2 L de \\ce{NH3}." }
+      ],
+      "exemplo": "Nas CNTP, 11,2 L de oxigênio são 11,2 ÷ 22,4 = 0,5 mol, ou seja, 0,5 × 32 = 16 g de \\ce{O2}.",
+      "pontosChave": [
+        "Mesmo P e T: volumes iguais, mesmo número de moléculas.",
+        "CNTP: 22,4 L/mol.",
+        "CATP: cerca de 24,8 L/mol.",
+        "Entre gases, volumes seguem os coeficientes."
+      ]
+    },
+    {
+      "subtemaId": "gas-pressoes-parciais",
+      "introducao": "Numa mistura de gases, cada gás contribui para a pressão total como se estivesse sozinho no recipiente. Essa contribuição é a pressão parcial.",
+      "secoes": [
+        { "titulo": "Lei de Dalton", "texto": "A pressão total é a soma das pressões parciais: P(total) = P(A) + P(B) + P(C)... Cada pressão parcial depende só de quantos mols daquele gás existem, porque no gás ideal as partículas não interagem." },
+        { "titulo": "Fração molar", "texto": "Fração molar de um gás: X = mols do gás ÷ mols totais. A soma das frações é 1. A pressão parcial é P(gás) = X × P(total). A fração molar também é igual à fração em volume da mistura: o ar tem cerca de 21% de \\ce{O2} em volume, então X(\\ce{O2}) ≈ 0,21." }
+      ],
+      "exemplo": "Ao nível do mar (1 atm), a pressão parcial do oxigênio é 0,21 × 1 = 0,21 atm. No alto de uma montanha, a pressão total cai e o \\ce{O2} disponível também.",
+      "pontosChave": [
+        "P(total) = soma das pressões parciais.",
+        "X = mols do gás ÷ mols totais.",
+        "P(gás) = X × P(total).",
+        "Fração molar = fração em volume."
+      ]
+    },
+    {
+      "subtemaId": "gas-densidade-difusao",
+      "introducao": "Gases com massa molar maior são mais densos e se espalham mais devagar. Essas duas propriedades dependem da massa molar.",
+      "secoes": [
+        { "titulo": "Densidade de um gás", "texto": "d = (P × M) ÷ (R × T). Nas CNTP, d = M ÷ 22,4 (em g/L). Comparando com o ar (M média ≈ 29 g/mol): gases com M menor que 29 sobem (hélio, hidrogênio, metano); maiores descem (gás carbônico, butano). Por isso o detector de gás de cozinha (butano e propano) fica perto do chão." },
+        { "titulo": "Difusão e efusão (lei de Graham)", "texto": "Difusão é o espalhamento de um gás em outro; efusão é a passagem por um furo minúsculo. A velocidade é inversamente proporcional à raiz quadrada da massa molar: v(A) ÷ v(B) = √(M(B) ÷ M(A)). Gases leves se espalham mais rápido." }
+      ],
+      "exemplo": "Hidrogênio (M = 2) e oxigênio (M = 32): v(\\ce{H2}) ÷ v(\\ce{O2}) = √(32 ÷ 2) = 4. O hidrogênio se difunde 4 vezes mais rápido.",
+      "pontosChave": [
+        "d = PM ÷ RT.",
+        "M menor que 29 g/mol: mais leve que o ar.",
+        "Graham: v é proporcional a 1 ÷ √M.",
+        "Gás leve se difunde mais rápido."
+      ]
+    },
+    {
+      "subtemaId": "gas-estequiometria",
+      "introducao": "Quando um reagente ou produto é gás, a estequiometria pode envolver volumes. O caminho é o mesmo de sempre, passando por mols, mas com o volume molar ou com PV = nRT.",
+      "secoes": [
+        { "titulo": "Nas condições padrão", "texto": "Se o gás está nas CNTP, use 22,4 L/mol; nas CATP, cerca de 24,8 L/mol. Converta o dado para mol, aplique a proporção dos coeficientes e converta o resultado: mols × volume molar dá o volume do gás." },
+        { "titulo": "Em outras condições", "texto": "Se a temperatura e a pressão forem outras, calcule os mols pela estequiometria e depois o volume com V = nRT ÷ P. Se reagentes e produtos gasosos estão nas mesmas condições, pode-se usar direto a proporção entre volumes dada pelos coeficientes." }
+      ],
+      "exemplo": "\\ce{CaCO3 -> CaO + CO2}: 50 g de \\ce{CaCO3} (M = 100) são 0,5 mol e liberam 0,5 mol de \\ce{CO2}, que ocupa 0,5 × 22,4 = 11,2 L nas CNTP.",
+      "pontosChave": [
+        "Passe sempre por mols.",
+        "CNTP: 22,4 L/mol.",
+        "Outras condições: V = nRT ÷ P.",
+        "Entre gases nas mesmas condições, volumes seguem os coeficientes."
+      ]
+    }
+  ]
+}

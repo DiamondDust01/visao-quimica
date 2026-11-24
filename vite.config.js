@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 function manualChunks(id) {
   if (id.includes('node_modules/katex')) return 'katex';
   if (id.includes('node_modules/react') || id.includes('node_modules/scheduler')) return 'react';
+  // Os textos de leitura ficam num arquivo próprio, para o de conteúdo não passar do orçamento.
+  if (id.includes('/src/data/leituras/')) return 'leituras';
   if (id.includes('/src/data/')) return 'conteudo';
   return undefined;
 }

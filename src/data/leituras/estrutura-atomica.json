@@ -1,0 +1,156 @@
+{
+  "area": "estrutura-atomica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "atom-modelos-classicos",
+      "introducao": "Ninguém viu um átomo diretamente quando os primeiros modelos foram criados. Cada modelo explicava os experimentos da sua época e foi trocado quando surgiram fatos que ele não explicava.",
+      "secoes": [
+        { "titulo": "Dalton e Thomson", "texto": "Dalton (1808): o átomo é uma esfera maciça e indivisível; átomos do mesmo elemento são iguais, e as reações apenas rearranjam átomos. Thomson (1897) descobriu o elétron com raios catódicos e propôs uma esfera positiva com elétrons espalhados, o \"pudim de passas\". Com isso, o átomo deixou de ser indivisível." },
+        { "titulo": "Rutherford", "texto": "Em 1911, partículas alfa lançadas contra uma folha fina de ouro quase todas atravessaram, mas algumas desviaram muito ou voltaram. Conclusão: o átomo é quase todo vazio, com um núcleo minúsculo, denso e positivo, e os elétrons giram ao redor (modelo planetário). O que ele não explicava: por que o elétron, girando, não perde energia e cai no núcleo." }
+      ],
+      "exemplo": "Se a folha de ouro fosse um \"pudim\" uniforme, as partículas alfa passariam quase sem desvio. Os rebotes mostraram que há algo pequeno e muito denso: o núcleo.",
+      "pontosChave": [
+        "Dalton: esfera maciça e indivisível.",
+        "Thomson: descobriu o elétron; \"pudim de passas\".",
+        "Rutherford: núcleo pequeno, denso e positivo; eletrosfera quase vazia.",
+        "Cada modelo foi substituído por não explicar novos experimentos."
+      ]
+    },
+    {
+      "subtemaId": "atom-modelo-bohr",
+      "introducao": "Bohr (1913) melhorou o modelo de Rutherford dizendo que o elétron só pode ocupar certas órbitas, cada uma com uma energia definida, chamadas níveis ou camadas (K, L, M, N...).",
+      "secoes": [
+        { "titulo": "Saltos eletrônicos", "texto": "Enquanto está numa órbita permitida, o elétron não perde energia. Ao absorver uma quantidade exata de energia, ele salta para um nível mais alto (estado excitado). Ao voltar para um nível mais baixo, devolve essa energia em forma de luz, com uma cor (comprimento de onda) que depende da diferença entre os níveis." },
+        { "titulo": "Espectros de linhas", "texto": "Como os níveis são fixos, cada elemento emite só algumas cores específicas: um espectro de linhas, que funciona como impressão digital do elemento. É o que se vê no teste de chama, nos fogos de artifício e nas lâmpadas de sódio (amarelas) e de neônio (vermelhas)." }
+      ],
+      "exemplo": "No teste de chama, o sódio deixa a chama amarela e o cobre, verde-azulada: o calor excita os elétrons, que emitem luz de cores próprias ao voltar.",
+      "pontosChave": [
+        "Elétron em níveis de energia definidos.",
+        "Absorve energia: sobe de nível; volta: emite luz.",
+        "Cada elemento tem um espectro de linhas próprio.",
+        "O modelo funciona bem para o hidrogênio, mas falha em átomos maiores."
+      ]
+    },
+    {
+      "subtemaId": "atom-modelo-quantico",
+      "introducao": "No modelo atual, o elétron não segue uma órbita como um planeta. Ele se comporta também como onda, e só dá para falar da probabilidade de encontrá-lo numa região.",
+      "secoes": [
+        { "titulo": "Orbital", "texto": "Orbital é a região ao redor do núcleo onde a probabilidade de encontrar o elétron é maior. Cada orbital comporta no máximo dois elétrons. Os orbitais s são esféricos; os p têm forma de halteres, apontando em três direções; d e f têm formas mais complexas." },
+        { "titulo": "Por que as órbitas não servem", "texto": "Pelo princípio da incerteza de Heisenberg, não é possível conhecer ao mesmo tempo a posição exata e a velocidade de um elétron. Experimentos de difração mostram que elétrons formam padrões de onda. Por isso, o caminho exato do elétron não pode ser desenhado: só a nuvem de probabilidade." }
+      ],
+      "exemplo": "Em vez de dizer \"o elétron está nesta órbita\", o modelo quântico diz \"há 90% de chance de achar o elétron dentro desta região\", que é o orbital.",
+      "pontosChave": [
+        "Orbital: região de maior probabilidade, não trajetória.",
+        "Cada orbital tem no máximo 2 elétrons.",
+        "Elétron tem comportamento de partícula e de onda.",
+        "Incerteza: posição e velocidade não são conhecidas juntas com precisão."
+      ]
+    },
+    {
+      "subtemaId": "atom-particulas-subatomicas",
+      "introducao": "O átomo tem um núcleo com prótons (carga positiva) e nêutrons (sem carga), e uma eletrosfera com elétrons (carga negativa). O elétron tem massa cerca de 1 836 vezes menor que a do próton.",
+      "secoes": [
+        { "titulo": "Número atômico e número de massa", "texto": "Número atômico (Z) é o número de prótons e define o elemento: todo átomo com 6 prótons é carbono. Número de massa (A) é a soma de prótons e nêutrons: A = Z + n. Num átomo neutro, o número de elétrons é igual ao de prótons." },
+        { "titulo": "Como ler a notação", "texto": "O símbolo vem com A em cima e Z embaixo, à esquerda, como \\ce{^{23}_{11}Na}. Daí: prótons = 11, elétrons = 11 (átomo neutro) e nêutrons = 23 − 11 = 12." }
+      ],
+      "exemplo": "\\ce{^{56}_{26}Fe}: 26 prótons, 26 elétrons e 56 − 26 = 30 nêutrons.",
+      "pontosChave": [
+        "Próton (+) e nêutron (0) no núcleo; elétron (−) na eletrosfera.",
+        "Z = prótons e identifica o elemento.",
+        "A = prótons + nêutrons.",
+        "Átomo neutro: elétrons = prótons."
+      ]
+    },
+    {
+      "subtemaId": "atom-isotopos",
+      "introducao": "Comparando átomos pelo número de prótons (Z), de massa (A) e de nêutrons (n), surgem três relações com nomes próprios: isótopos, isóbaros e isótonos.",
+      "secoes": [
+        { "titulo": "As três relações", "texto": "Isótopos: mesmo Z, ou seja, mesmo elemento, com A diferente (prótons iguais). Isóbaros: mesmo A, elementos diferentes. Isótonos: mesmo número de nêutrons, elementos diferentes. Dica: isóTOPos têm mesmo número de PrÓTons; isóbAros, mesmo A; isóNtonos, mesmo número de Nêutrons." },
+        { "titulo": "Isótopos no dia a dia", "texto": "Hidrogênio tem prótio (sem nêutron), deutério (1 nêutron) e trítio (2 nêutrons). O carbono-14 serve para datar fósseis; o iodo-131 e o tecnécio-99m, para exames e tratamentos; o cobalto-60, para radioterapia. Isótopos têm as mesmas propriedades químicas, porque têm os mesmos elétrons." }
+      ],
+      "exemplo": "\\ce{^{40}_{19}K} e \\ce{^{40}_{20}Ca} têm o mesmo A (40): são isóbaros. O potássio tem 21 nêutrons e o cálcio 20, então não são isótonos.",
+      "pontosChave": [
+        "Isótopos: mesmo Z.",
+        "Isóbaros: mesmo A.",
+        "Isótonos: mesmo número de nêutrons.",
+        "Nêutrons = A − Z."
+      ]
+    },
+    {
+      "subtemaId": "atom-ions",
+      "introducao": "Íon é um átomo (ou grupo de átomos) com carga elétrica, porque perdeu ou ganhou elétrons. O número de prótons não muda: só o de elétrons.",
+      "secoes": [
+        { "titulo": "Cátions e ânions", "texto": "Cátion é íon positivo: perdeu elétrons (\\ce{Na+} perdeu 1, \\ce{Ca^{2+}} perdeu 2). Metais costumam formar cátions. Ânion é íon negativo: ganhou elétrons (\\ce{Cl-} ganhou 1, \\ce{O^{2-}} ganhou 2). Ametais costumam formar ânions. Elétrons do íon = Z − carga." },
+        { "titulo": "Espécies isoeletrônicas", "texto": "Átomos e íons com o mesmo número de elétrons são isoeletrônicos. \\ce{O^{2-}}, \\ce{F-}, \\ce{Ne}, \\ce{Na+} e \\ce{Mg^{2+}} têm todos 10 elétrons. Entre eles, quem tem mais prótons atrai mais os elétrons e é menor." }
+      ],
+      "exemplo": "\\ce{Al^{3+}} (Z = 13): 13 prótons e 13 − 3 = 10 elétrons. \\ce{S^{2-}} (Z = 16): 16 prótons e 16 + 2 = 18 elétrons.",
+      "pontosChave": [
+        "Cátion: perdeu elétrons; carga positiva.",
+        "Ânion: ganhou elétrons; carga negativa.",
+        "O número de prótons nunca muda na formação do íon.",
+        "Isoeletrônicos: mesmo número de elétrons."
+      ]
+    },
+    {
+      "subtemaId": "atom-massa-atomica",
+      "introducao": "A massa de um átomo é medida em unidades de massa atômica (u): 1 u é 1/12 da massa de um átomo de carbono-12. A massa atômica de um elemento na tabela é uma média dos seus isótopos.",
+      "secoes": [
+        { "titulo": "Média ponderada", "texto": "Multiplique a massa de cada isótopo pela sua abundância na natureza, some e divida por 100 (se as abundâncias estiverem em porcentagem). É uma média ponderada: o isótopo mais abundante pesa mais no resultado. Por isso a massa atômica quase nunca é um número inteiro." },
+        { "titulo": "Massa atômica e massa molar", "texto": "O número que vale em u para um átomo vale em g/mol para um mol de átomos. Carbono: 12,01 u por átomo e 12,01 g por mol. Essa ligação é o que permite passar de átomos para gramas nos cálculos." }
+      ],
+      "exemplo": "Cloro: 75% de cloro-35 e 25% de cloro-37. Massa = (35 × 75 + 37 × 25) ÷ 100 = 35,5 u.",
+      "pontosChave": [
+        "1 u = 1/12 da massa do carbono-12.",
+        "Massa atômica = média ponderada dos isótopos.",
+        "O isótopo mais abundante puxa a média para perto dele.",
+        "Mesmo número em u (átomo) e em g/mol (mol)."
+      ]
+    },
+    {
+      "subtemaId": "atom-distribuicao-eletronica",
+      "introducao": "Os elétrons ocupam os subníveis s, p, d e f em ordem crescente de energia, seguindo o diagrama de Linus Pauling (as diagonais).",
+      "secoes": [
+        { "titulo": "A ordem e as capacidades", "texto": "Ordem: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p 7s 5f 6d 7p. Capacidades: s cabe 2, p cabe 6, d cabe 10 e f cabe 14. Vá preenchendo até somar o número de elétrons. Note que 4s vem antes de 3d." },
+        { "titulo": "Distribuição de íons", "texto": "Faça primeiro a do átomo neutro. Para cátions, retire elétrons da camada mais externa (maior número), e não do último subnível preenchido: no ferro, os elétrons saem do 4s antes do 3d. Para ânions, acrescente os elétrons no próximo lugar livre." }
+      ],
+      "exemplo": "Ferro (Z = 26): 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶. \\ce{Fe^{2+}}: retira os dois do 4s, ficando 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶.",
+      "pontosChave": [
+        "Siga as diagonais de Linus Pauling.",
+        "s: 2, p: 6, d: 10, f: 14.",
+        "4s é preenchido antes de 3d.",
+        "Cátion: os elétrons saem da camada mais externa."
+      ]
+    },
+    {
+      "subtemaId": "atom-camada-valencia",
+      "introducao": "Camada de valência é a camada mais externa ocupada, a de maior número na distribuição eletrônica. Os elétrons dela participam das ligações químicas.",
+      "secoes": [
+        { "titulo": "Como achar", "texto": "Faça a distribuição, procure o maior número de camada que aparece e some todos os elétrons dessa camada (s e p juntos). Cuidado: no 4s² 3d⁶ do ferro, a camada de valência é a 4, com 2 elétrons, mesmo que o 3d tenha sido preenchido depois." },
+        { "titulo": "Por que importa", "texto": "Elementos com o mesmo número de elétrons de valência ficam no mesmo grupo e reagem de forma parecida. Para os elementos representativos, os elétrons de valência indicam a família: 1 no grupo 1, 2 no grupo 2 e de 3 a 8 nos grupos 13 a 18." }
+      ],
+      "exemplo": "Cloro (Z = 17): 1s² 2s² 2p⁶ 3s² 3p⁵. Camada de valência: 3, com 2 + 5 = 7 elétrons. Grupo 17.",
+      "pontosChave": [
+        "Valência: camada de maior número.",
+        "Some s e p dessa camada.",
+        "Mesmos elétrons de valência: mesmo grupo e química parecida.",
+        "Gases nobres têm 8 na valência (o hélio, 2)."
+      ]
+    },
+    {
+      "subtemaId": "atom-numeros-quanticos",
+      "introducao": "Quatro números quânticos descrevem cada elétron de um átomo, como um endereço: camada, subnível, orbital e sentido de rotação (spin).",
+      "secoes": [
+        { "titulo": "Os quatro números", "texto": "Principal (n = 1, 2, 3...): a camada. Secundário ou azimutal (ℓ): o subnível, com s = 0, p = 1, d = 2, f = 3. Magnético (m): o orbital dentro do subnível, de −ℓ a +ℓ. Spin (s = −½ ou +½): o sentido de rotação; por convenção, muitos livros usam −½ para a primeira seta, mas isso varia." },
+        { "titulo": "Pauli e Hund", "texto": "Princípio de exclusão de Pauli: dois elétrons do mesmo átomo não têm os quatro números iguais; por isso cada orbital tem no máximo 2 elétrons, com spins opostos. Regra de Hund: num subnível, primeiro cada orbital recebe um elétron, todos com o mesmo spin; só depois começam os pares." }
+      ],
+      "exemplo": "3p⁴: os orbitais p (m = −1, 0, +1) recebem ↑ ↑ ↑ e depois ↓ no primeiro. O último elétron tem n = 3, ℓ = 1, m = −1 e o spin do par.",
+      "pontosChave": [
+        "n: camada; ℓ: subnível; m: orbital; s: spin.",
+        "s = 0, p = 1, d = 2, f = 3.",
+        "Pauli: no máximo 2 elétrons por orbital, spins opostos.",
+        "Hund: preencha um em cada orbital antes de formar pares."
+      ]
+    }
+  ]
+}

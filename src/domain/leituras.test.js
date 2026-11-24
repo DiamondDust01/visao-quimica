@@ -26,6 +26,11 @@ test('leituras: um texto por subtema existente, completo e ainda marcado como n�
   assert.equal(leituraDe('nao-existe'), null);
 });
 
+test('leituras: todo subtema com questões tem material de leitura', () => {
+  const faltando = [...subtemasComQuestoes].filter((id) => !LEITURAS.has(id));
+  assert.deepEqual(faltando, []);
+});
+
 test('leituras: todas as fórmulas \\ce{} são lidas pelo KaTeX', () => {
   LEITURAS.forEach((leitura) => {
     textosDe(leitura).forEach((texto) => {

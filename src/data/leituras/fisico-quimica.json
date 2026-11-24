@@ -1,0 +1,111 @@
+{
+  "area": "fisico-quimica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "fq-primeira-lei",
+      "introducao": "A primeira lei da termodinâmica é a conservação da energia: a variação da energia interna de um sistema é igual ao calor recebido mais o trabalho feito sobre ele, ΔU = q + w.",
+      "secoes": [
+        { "titulo": "Calor, trabalho e sinais", "texto": "Convenção usada na Química: q > 0 quando o sistema recebe calor; w > 0 quando o sistema recebe trabalho (é comprimido). Num gás que se expande contra pressão constante, o sistema realiza trabalho: w = −P × ΔV. Energia interna é uma função de estado: só depende do estado inicial e do final." },
+        { "titulo": "ΔU, ΔH e capacidade calorífica", "texto": "A volume constante, o calor trocado é ΔU. A pressão constante, é ΔH = ΔU + PΔV; para reações com gases, ΔH ≈ ΔU + Δn(gás) × R × T. Capacidade calorífica é o calor necessário para elevar a temperatura em 1 K: q = m × c × ΔT, com c o calor específico (água: 4,18 J/(g·K))." }
+      ],
+      "exemplo": "Aquecer 100 g de água de 20 °C a 30 °C: q = 100 × 4,18 × 10 = 4 180 J.",
+      "pontosChave": [
+        "ΔU = q + w.",
+        "w = −PΔV na expansão a pressão constante.",
+        "ΔH = calor a pressão constante.",
+        "q = m c ΔT."
+      ]
+    },
+    {
+      "subtemaId": "fq-segunda-terceira-lei",
+      "introducao": "A segunda lei diz que, num processo espontâneo, a entropia do universo aumenta. A terceira lei dá um ponto de partida: a entropia de um cristal perfeito no zero absoluto é zero.",
+      "secoes": [
+        { "titulo": "Reversível e irreversível", "texto": "Num processo reversível (ideal, infinitamente lento), ΔS = q(rev) ÷ T, e a entropia do universo não muda. Processos reais são irreversíveis e sempre aumentam a entropia do universo. O calor flui espontaneamente do quente para o frio, nunca o contrário sem trabalho externo." },
+        { "titulo": "Entropia absoluta e estatística", "texto": "Pela terceira lei, dá para calcular a entropia absoluta (S°) de cada substância, e ΔS° = ΣS°(produtos) − ΣS°(reagentes). Boltzmann ligou a entropia ao número de arranjos microscópicos possíveis (W): S = k ln W. Mais maneiras de distribuir partículas e energia, maior a entropia." }
+      ],
+      "exemplo": "Fusão do gelo a 0 °C: ΔS = 6 010 J/mol ÷ 273 K ≈ 22 J/(mol·K).",
+      "pontosChave": [
+        "Processo espontâneo: entropia do universo aumenta.",
+        "Reversível: ΔS = q(rev) ÷ T.",
+        "Terceira lei: S = 0 no cristal perfeito a 0 K.",
+        "S = k ln W."
+      ]
+    },
+    {
+      "subtemaId": "fq-equilibrio-termodinamico",
+      "introducao": "A energia livre padrão de uma reação está ligada à sua constante de equilíbrio: ΔG° = −R × T × ln K. Assim, dados termodinâmicos permitem prever até onde a reação vai.",
+      "secoes": [
+        { "titulo": "Lendo a relação", "texto": "ΔG° < 0: K > 1, os produtos predominam no equilíbrio. ΔG° > 0: K < 1, predominam os reagentes. ΔG° = 0: K = 1. Fora do padrão, ΔG = ΔG° + RT ln Q, em que Q é o quociente de reação; no equilíbrio, ΔG = 0 e Q = K." },
+        { "titulo": "K e a temperatura (van 't Hoff)", "texto": "ln(K₂ ÷ K₁) = −(ΔH° ÷ R) × (1/T₂ − 1/T₁). Para reações endotérmicas, K aumenta com a temperatura; para exotérmicas, diminui. É a versão quantitativa do que o princípio de Le Chatelier prevê para a temperatura." }
+      ],
+      "exemplo": "ΔG° = −5,7 kJ/mol a 298 K: ln K = 5 700 ÷ (8,31 × 298) ≈ 2,3, então K ≈ 10.",
+      "pontosChave": [
+        "ΔG° = −RT ln K.",
+        "ΔG° negativo: K > 1.",
+        "ΔG = ΔG° + RT ln Q; no equilíbrio, ΔG = 0.",
+        "Endotérmica: K aumenta com a temperatura."
+      ]
+    },
+    {
+      "subtemaId": "fq-nernst",
+      "introducao": "O potencial de uma pilha depende das concentrações. A equação de Nernst calcula esse potencial fora das condições-padrão.",
+      "secoes": [
+        { "titulo": "A equação", "texto": "E = E° − (R × T ÷ (n × F)) × ln Q. A 25 °C, fica E = E° − (0,0592 ÷ n) × log Q, em que n é o número de elétrons transferidos e Q é o quociente de reação (produtos ÷ reagentes, só com as espécies em solução ou gás). Conforme a pilha funciona, Q aumenta e E diminui." },
+        { "titulo": "Potencial e energia livre", "texto": "ΔG = −n × F × E. Potencial positivo significa ΔG negativo: reação espontânea. Quando a pilha \"acaba\", ela chegou ao equilíbrio: E = 0, ΔG = 0 e Q = K. Daí sai E° = (0,0592 ÷ n) × log K a 25 °C." }
+      ],
+      "exemplo": "Pilha de Daniell (E° = 1,10 V, n = 2) com [\\ce{Zn^{2+}}] = 1 e [\\ce{Cu^{2+}}] = 0,01: E = 1,10 − (0,0592 ÷ 2) × log 100 ≈ 1,04 V.",
+      "pontosChave": [
+        "E = E° − (0,0592 ÷ n) log Q, a 25 °C.",
+        "Q aumenta durante o uso; E diminui.",
+        "ΔG = −nFE.",
+        "Pilha descarregada: E = 0, equilíbrio."
+      ]
+    },
+    {
+      "subtemaId": "fq-cinetica-integrada",
+      "introducao": "As leis integradas de velocidade mostram como a concentração de um reagente muda com o tempo, para cada ordem de reação.",
+      "secoes": [
+        { "titulo": "Ordens zero, um e dois", "texto": "Ordem zero: [A] = [A]₀ − kt (gráfico de [A] × t é uma reta). Ordem um: ln[A] = ln[A]₀ − kt (ln[A] × t é reta), e a meia-vida, t½ = 0,693 ÷ k, não depende da concentração, como no decaimento radioativo. Ordem dois: 1/[A] = 1/[A]₀ + kt (1/[A] × t é reta), e t½ = 1 ÷ (k[A]₀). O gráfico que dá reta revela a ordem." },
+        { "titulo": "Equação de Arrhenius", "texto": "k = A × e^(−Ea ÷ RT). A constante de velocidade cresce exponencialmente com a temperatura e é menor quanto maior a energia de ativação. Medindo k em duas temperaturas: ln(k₂ ÷ k₁) = (Ea ÷ R) × (1/T₁ − 1/T₂), o que permite calcular Ea." }
+      ],
+      "exemplo": "Reação de primeira ordem com k = 0,0693 min⁻¹: t½ = 0,693 ÷ 0,0693 = 10 min. Em 30 min resta 1/8 do reagente.",
+      "pontosChave": [
+        "Ordem 1: ln[A] × t é reta; t½ = 0,693 ÷ k.",
+        "Ordem 2: 1/[A] × t é reta.",
+        "Ordem zero: [A] × t é reta.",
+        "Arrhenius: k = A e^(−Ea/RT)."
+      ]
+    },
+    {
+      "subtemaId": "fq-gases-reais",
+      "introducao": "O modelo de gás ideal supõe partículas sem volume e sem atração entre si. Gases reais se afastam desse comportamento, principalmente em pressões altas e temperaturas baixas.",
+      "secoes": [
+        { "titulo": "Fator de compressibilidade", "texto": "Z = PV ÷ nRT. Para o gás ideal, Z = 1. Z < 1 indica que as atrações entre as partículas predominam (o gás ocupa menos volume que o previsto). Z > 1 indica que o volume próprio das partículas predomina, em pressões muito altas." },
+        { "titulo": "Equação de van der Waals", "texto": "(P + a n² ÷ V²) × (V − n b) = nRT. O termo a corrige as atrações entre as moléculas (maior para gases polares ou grandes); o termo b corrige o volume ocupado pelas próprias moléculas. Os gases se aproximam do ideal em pressão baixa e temperatura alta, quando as partículas estão afastadas e rápidas." }
+      ],
+      "exemplo": "O \\ce{CO2} a alta pressão e perto da temperatura ambiente tem Z bem menor que 1: as atrações entre as moléculas são importantes, e ele pode até liquefazer.",
+      "pontosChave": [
+        "Z = PV ÷ nRT; ideal: Z = 1.",
+        "Z < 1: atrações predominam.",
+        "van der Waals: a (atrações) e b (volume).",
+        "Ideal funciona melhor com P baixa e T alta."
+      ]
+    },
+    {
+      "subtemaId": "fq-quantica-nocoes",
+      "introducao": "Na escala dos átomos, a energia não varia de forma contínua: só alguns valores são permitidos. A mecânica quântica explica isso tratando o elétron como uma onda.",
+      "secoes": [
+        { "titulo": "Partícula na caixa", "texto": "Uma partícula presa numa caixa de comprimento L só pode ter energias E = n² h² ÷ (8 m L²), com n = 1, 2, 3... A energia é quantizada e nunca é zero (energia de ponto zero). Quanto menor a caixa, mais afastados os níveis: por isso a quantização é importante para elétrons em átomos e moléculas." },
+        { "titulo": "Funções de onda e orbitais", "texto": "A equação de Schrödinger dá as funções de onda (ψ) do elétron. O quadrado de ψ indica a probabilidade de encontrar o elétron em cada região. No átomo de hidrogênio, as soluções são os orbitais s, p, d e f, identificados pelos números quânticos n, ℓ e m." }
+      ],
+      "exemplo": "Corantes com cadeias de duplas alternadas mais longas absorvem luz de comprimento de onda maior: a \"caixa\" dos elétrons é maior e os níveis ficam mais próximos.",
+      "pontosChave": [
+        "Energia quantizada em níveis discretos.",
+        "Partícula na caixa: E proporcional a n².",
+        "ψ² dá a probabilidade de achar o elétron.",
+        "Orbitais vêm das soluções da equação de Schrödinger."
+      ]
+    }
+  ]
+}

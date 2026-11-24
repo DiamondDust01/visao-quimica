@@ -1,0 +1,141 @@
+{
+  "area": "ambiental",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "amb-atmosfera",
+      "introducao": "O ar seco é uma mistura de gases: cerca de 78% de nitrogênio (\\ce{N2}), 21% de oxigênio (\\ce{O2}), quase 1% de argônio e pequenas quantidades de gás carbônico e outros gases, além do vapor de água, que varia.",
+      "secoes": [
+        { "titulo": "A camada de ozônio", "texto": "Na estratosfera, entre 15 e 35 km de altura, o ozônio (\\ce{O3}) absorve grande parte da radiação ultravioleta do Sol, que causa queimaduras, câncer de pele e catarata. Perto do solo, ao contrário, o ozônio é um poluente que irrita as vias respiratórias." },
+        { "titulo": "O que destrói o ozônio", "texto": "Os clorofluorcarbonos (CFCs), usados em geladeiras e sprays, sobem até a estratosfera, onde a radiação UV libera átomos de cloro. Cada átomo de cloro destrói milhares de moléculas de ozônio, porque é regenerado no ciclo. O Protocolo de Montreal (1987) baniu os CFCs, e a camada está se recuperando lentamente." }
+      ],
+      "exemplo": "\\ce{Cl + O3 -> ClO + O2} e depois \\ce{ClO + O -> Cl + O2}: o cloro volta no fim e pode destruir outra molécula de ozônio.",
+      "pontosChave": [
+        "Ar: 78% \\ce{N2}, 21% \\ce{O2}, ~1% Ar.",
+        "Ozônio da estratosfera filtra o UV.",
+        "CFCs liberam cloro, que destrói o ozônio.",
+        "Protocolo de Montreal baniu os CFCs."
+      ]
+    },
+    {
+      "subtemaId": "amb-ciclo-carbono",
+      "introducao": "O carbono circula entre a atmosfera, os seres vivos, os oceanos e as rochas. O gás carbônico (\\ce{CO2}) é a principal forma de carbono no ar.",
+      "secoes": [
+        { "titulo": "Entradas e saídas do ar", "texto": "A fotossíntese retira \\ce{CO2} do ar e o transforma em glicose: \\ce{6CO2 + 6H2O -> C6H12O6 + 6O2}. A respiração dos seres vivos e a decomposição devolvem \\ce{CO2}. A queima de combustíveis fósseis (petróleo, carvão, gás) libera carbono que estava guardado havia milhões de anos, aumentando o \\ce{CO2} do ar." },
+        { "titulo": "Efeito estufa", "texto": "Gases como \\ce{CO2}, metano (\\ce{CH4}) e vapor de água deixam a luz do Sol passar, mas absorvem parte do calor que a Terra emite. Esse efeito estufa natural mantém o planeta habitável. O aumento desses gases por ação humana intensifica o efeito e causa o aquecimento global, com mudanças no clima." }
+      ],
+      "exemplo": "O desmatamento atua duas vezes: diminui a fotossíntese que retiraria \\ce{CO2} e, se a madeira é queimada, libera mais \\ce{CO2}.",
+      "pontosChave": [
+        "Fotossíntese retira \\ce{CO2}; respiração e combustão devolvem.",
+        "Combustíveis fósseis liberam carbono guardado.",
+        "Efeito estufa natural é necessário à vida.",
+        "Mais \\ce{CO2} e \\ce{CH4}: aquecimento global."
+      ]
+    },
+    {
+      "subtemaId": "amb-ciclo-nitrogenio",
+      "introducao": "O nitrogênio é essencial para formar proteínas e DNA, mas a maioria dos seres vivos não consegue usar o \\ce{N2} do ar, cuja tripla ligação é muito forte.",
+      "secoes": [
+        { "titulo": "As etapas", "texto": "Fixação: bactérias (muitas vivendo nas raízes das leguminosas, como o feijão e a soja) e os raios transformam \\ce{N2} em amônia ou nitratos. Nitrificação: bactérias do solo convertem amônia em nitrito e depois em nitrato, a forma absorvida pelas plantas. Desnitrificação: outras bactérias transformam nitratos de volta em \\ce{N2}, que volta ao ar." },
+        { "titulo": "Fertilizantes", "texto": "A agricultura repõe nitrogênio com fertilizantes, como ureia e nitrato de amônio, produzidos a partir da amônia industrial (processo Haber-Bosch). O excesso escorre para rios e lagos e causa eutrofização. A rotação de culturas com leguminosas diminui a necessidade de fertilizantes." }
+      ],
+      "exemplo": "Plantar soja e depois milho na mesma área aproveita o nitrogênio fixado pelas bactérias das raízes da soja.",
+      "pontosChave": [
+        "\\ce{N2} do ar não é usado direto pela maioria dos seres.",
+        "Fixação: \\ce{N2} → amônia (bactérias, raios).",
+        "Nitrificação: amônia → nitrato.",
+        "Desnitrificação: nitrato → \\ce{N2}."
+      ]
+    },
+    {
+      "subtemaId": "amb-chuva-acida",
+      "introducao": "Toda chuva é levemente ácida (pH perto de 5,6), por causa do \\ce{CO2} dissolvido. A chuva ácida é a que tem pH abaixo disso, por causa de óxidos de enxofre e de nitrogênio lançados no ar.",
+      "secoes": [
+        { "titulo": "Como se forma", "texto": "A queima de carvão e de derivados do petróleo com enxofre libera \\ce{SO2}, que no ar vira \\ce{SO3} e, com água, ácido sulfúrico (\\ce{H2SO4}). Motores e fornos, em alta temperatura, fazem o \\ce{N2} reagir com o \\ce{O2} e formam óxidos de nitrogênio, que viram ácido nítrico (\\ce{HNO3})." },
+        { "titulo": "Efeitos", "texto": "Acidifica lagos e solos, prejudicando peixes e plantas; corrói metais; desgasta monumentos de mármore e calcário: \\ce{CaCO3 + H2SO4 -> CaSO4 + H2O + CO2}. Para diminuir: combustíveis com menos enxofre, filtros nas chaminés e conversores catalíticos nos carros." }
+      ],
+      "exemplo": "Estátuas de mármore em cidades poluídas perdem detalhes com o tempo: o ácido da chuva reage com o carbonato de cálcio.",
+      "pontosChave": [
+        "Chuva normal: pH ≈ 5,6; ácida: abaixo disso.",
+        "\\ce{SO2} e \\ce{SO3} → ácido sulfúrico.",
+        "Óxidos de nitrogênio → ácido nítrico.",
+        "Ataca mármore, metais, lagos e florestas."
+      ]
+    },
+    {
+      "subtemaId": "amb-poluicao-agua-solo",
+      "introducao": "Água e solo recebem resíduos de indústrias, cidades e lavouras. Alguns poluentes agem mesmo em quantidades muito pequenas, medidas em ppm ou ppb.",
+      "secoes": [
+        { "titulo": "Metais pesados e petróleo", "texto": "Mercúrio, chumbo e cádmio vêm de garimpo, baterias e indústrias. Não são degradados e se acumulam nos seres vivos ao longo da cadeia alimentar (bioacumulação): os peixes grandes têm mais mercúrio que os pequenos. O petróleo derramado forma uma camada que impede a passagem de luz e de oxigênio e cobre aves e animais." },
+        { "titulo": "Eutrofização", "texto": "Esgoto e fertilizantes levam nitratos e fosfatos para rios e lagos. As algas se multiplicam, a água fica verde, e quando as algas morrem as bactérias que as decompõem consomem o oxigênio da água. Os peixes morrem por falta de oxigênio." }
+      ],
+      "exemplo": "Um limite de 0,001 mg/L (1 ppb) de mercúrio na água potável mostra como quantidades mínimas desse metal já são perigosas.",
+      "pontosChave": [
+        "Metais pesados se acumulam na cadeia alimentar.",
+        "Petróleo impede luz e oxigênio na água.",
+        "Eutrofização: excesso de nutrientes, algas e falta de oxigênio.",
+        "Limites de poluentes em ppm ou ppb."
+      ]
+    },
+    {
+      "subtemaId": "amb-tratamento-agua",
+      "introducao": "A água dos rios precisa ser tratada para virar água potável, e o esgoto precisa ser tratado antes de voltar aos rios. As estações usam processos físicos e químicos de separação.",
+      "secoes": [
+        { "titulo": "Estação de tratamento de água", "texto": "Coagulação: adiciona-se sulfato de alumínio (e cal), que forma um hidróxido gelatinoso. Floculação: a água é agitada devagar e as partículas de sujeira grudam em flocos. Decantação: os flocos pesados vão para o fundo. Filtração: camadas de areia e carvão retêm o que sobrou. Desinfecção: cloro mata micro-organismos. Fluoretação: flúor para prevenir cáries. Correção do pH." },
+        { "titulo": "Tratamento de esgoto", "texto": "Grades e caixas de areia retiram objetos e sólidos grandes. Decantadores separam o lodo. Bactérias, num tanque com ar, decompõem a matéria orgânica (tratamento biológico). A água tratada volta ao rio com muito menos carga poluente, e o lodo pode virar adubo ou biogás." }
+      ],
+      "exemplo": "Ordem na estação de água: coagulação → floculação → decantação → filtração → desinfecção → fluoretação.",
+      "pontosChave": [
+        "Coagulação e floculação juntam a sujeira em flocos.",
+        "Decantação e filtração separam os flocos.",
+        "Cloro desinfeta; flúor previne cáries.",
+        "Esgoto: tratamento físico e biológico."
+      ]
+    },
+    {
+      "subtemaId": "amb-combustao",
+      "introducao": "Combustão é a reação de um combustível com um comburente, normalmente o oxigênio, liberando calor e luz. Para começar, precisa de uma fonte de energia de ativação, como uma faísca.",
+      "secoes": [
+        { "titulo": "O triângulo do fogo", "texto": "Combustível (madeira, gás, gasolina), comburente (oxigênio) e calor. Tirando um dos três, o fogo apaga: abafar tira o oxigênio; jogar água tira o calor; fechar o gás tira o combustível. Por isso cada tipo de incêndio tem o extintor adequado." },
+        { "titulo": "Completa e incompleta", "texto": "Combustão completa (oxigênio suficiente): forma \\ce{CO2} e água, chama azulada. Incompleta (pouco oxigênio): forma monóxido de carbono (CO) e fuligem (C), chama amarelada. O CO é muito perigoso: se liga à hemoglobina do sangue no lugar do oxigênio. Nunca se deve usar fogareiro ou aquecedor a gás em ambientes fechados." }
+      ],
+      "exemplo": "Completa: \\ce{CH4 + 2O2 -> CO2 + 2H2O}. Incompleta: \\ce{2CH4 + 3O2 -> 2CO + 4H2O}.",
+      "pontosChave": [
+        "Triângulo: combustível, comburente e calor.",
+        "Completa: \\ce{CO2} e água.",
+        "Incompleta: CO e fuligem.",
+        "CO se liga à hemoglobina: é tóxico."
+      ]
+    },
+    {
+      "subtemaId": "amb-combustiveis",
+      "introducao": "Combustíveis fósseis vêm de restos de seres vivos transformados ao longo de milhões de anos; biocombustíveis vêm de plantas e resíduos atuais e são renováveis.",
+      "secoes": [
+        { "titulo": "Fósseis", "texto": "Petróleo: mistura de hidrocarbonetos separada por destilação fracionada em gás, gasolina, querosene, diesel e asfalto. Gás natural: principalmente metano, queima mais limpa. Carvão mineral: muito usado em termelétricas, é o mais poluente. Todos liberam \\ce{CO2} que estava guardado no subsolo e não são renováveis." },
+        { "titulo": "Biocombustíveis", "texto": "Etanol: produzido pela fermentação do caldo de cana ou do milho. Biodiesel: feito de óleos vegetais ou gordura por transesterificação. O \\ce{CO2} liberado na queima é, em parte, o que a planta retirou do ar ao crescer, então o balanço de carbono é menor. Mas o cultivo usa terras, água e fertilizantes." }
+      ],
+      "exemplo": "Fermentação do açúcar: \\ce{C6H12O6 -> 2C2H5OH + 2CO2}, produzindo etanol.",
+      "pontosChave": [
+        "Fósseis: petróleo, gás natural e carvão; não renováveis.",
+        "Petróleo é separado por destilação fracionada.",
+        "Etanol: fermentação; biodiesel: transesterificação.",
+        "Biocombustíveis são renováveis, mas têm impactos no cultivo."
+      ]
+    },
+    {
+      "subtemaId": "amb-quimica-verde",
+      "introducao": "A química verde busca planejar produtos e processos químicos que reduzam ou eliminem o uso e a geração de substâncias perigosas. Ela tem doze princípios.",
+      "secoes": [
+        { "titulo": "Alguns princípios", "texto": "Prevenir resíduos é melhor do que tratá-los depois. Economia de átomos: aproveitar no produto o máximo dos átomos dos reagentes. Usar matérias-primas renováveis. Preferir solventes e reagentes menos tóxicos (como água). Usar catalisadores em vez de reagentes em grande quantidade. Economizar energia, trabalhando perto da temperatura e pressão ambiente." },
+        { "titulo": "Produtos mais seguros", "texto": "Planejar substâncias que cumpram sua função com menos toxicidade e que se degradem depois do uso, sem persistir no ambiente. Monitorar os processos em tempo real para evitar a formação de poluentes e reduzir o risco de acidentes, explosões e vazamentos." }
+      ],
+      "exemplo": "Trocar um solvente orgânico tóxico por água ou por \\ce{CO2} supercrítico na extração da cafeína do café é uma aplicação da química verde.",
+      "pontosChave": [
+        "Prevenir é melhor que tratar resíduos.",
+        "Economia de átomos.",
+        "Fontes renováveis e solventes seguros.",
+        "Catalisadores e menos energia."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "area": "inorganica-avancada",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "inav-complexos",
+      "introducao": "Um composto de coordenação (complexo) tem um átomo ou íon metálico central ligado a moléculas ou íons chamados ligantes, que doam pares de elétrons a ele.",
+      "secoes": [
+        { "titulo": "Ligantes e número de coordenação", "texto": "Número de coordenação é o número de átomos doadores ligados ao metal, em geral 4 ou 6. Ligantes monodentados doam por um átomo (\\ce{H2O}, \\ce{NH3}, \\ce{Cl-}, \\ce{CN-}). Polidentados doam por dois ou mais (etilenodiamina, bidentado; EDTA, hexadentado) e formam anéis com o metal, os quelatos, muito estáveis." },
+        { "titulo": "Nomenclatura", "texto": "Nomeiam-se os ligantes em ordem alfabética, com prefixos de quantidade (di, tri, tetra, hexa), depois o metal, com o Nox em algarismo romano. Ligantes aniônicos terminam em -o (cloro, ciano); \\ce{NH3} é amin, \\ce{H2O} é aqua. Se o complexo é um ânion, o metal termina em -ato: [\\ce{Fe(CN)6}]⁴⁻ é hexacianoferrato(II)." }
+      ],
+      "exemplo": "[\\ce{Cu(NH3)4}]²⁺: íon tetraamincobre(II), com número de coordenação 4. É o responsável pela cor azul-escura da solução de cobre com amônia.",
+      "pontosChave": [
+        "Metal central + ligantes doadores de pares.",
+        "Número de coordenação: em geral 4 ou 6.",
+        "Polidentados formam quelatos.",
+        "Complexo aniônico: metal com terminação -ato."
+      ]
+    },
+    {
+      "subtemaId": "inav-isomeria-complexos",
+      "introducao": "Complexos com a mesma fórmula podem ter os ligantes arrumados de modos diferentes no espaço ou ligados por átomos diferentes, formando isômeros com propriedades distintas.",
+      "secoes": [
+        { "titulo": "Geométrica e óptica", "texto": "Em complexos quadrados planos do tipo [\\ce{MA2B2}], há cis (ligantes iguais lado a lado) e trans (em lados opostos). Em octaédricos [\\ce{MA4B2}], também cis e trans; em [\\ce{MA3B3}], fac e mer. Complexos octaédricos com ligantes bidentados podem não ter plano de simetria e formar enantiômeros (isomeria óptica)." },
+        { "titulo": "Isomeria de ligação", "texto": "Alguns ligantes podem se ligar ao metal por átomos diferentes: o nitrito liga pelo N (nitro, –NO₂) ou pelo O (nitrito, –ONO); o tiocianato, pelo S ou pelo N. Os dois isômeros podem ter cores diferentes." }
+      ],
+      "exemplo": "A cisplatina, cis-[\\ce{Pt(NH3)2Cl2}], é um remédio contra o câncer; o isômero trans não tem o mesmo efeito.",
+      "pontosChave": [
+        "Quadrado plano \\ce{MA2B2}: cis e trans.",
+        "Octaédrico \\ce{MA4B2}: cis e trans; \\ce{MA3B3}: fac e mer.",
+        "Quelatos octaédricos podem ser quirais.",
+        "Isomeria de ligação: muda o átomo doador."
+      ]
+    },
+    {
+      "subtemaId": "inav-campo-cristalino",
+      "introducao": "A teoria do campo cristalino trata os ligantes como cargas negativas ao redor do metal. Elas repelem os elétrons dos orbitais d e fazem esses orbitais terem energias diferentes.",
+      "secoes": [
+        { "titulo": "Desdobramento octaédrico", "texto": "Num complexo octaédrico, os ligantes chegam pelos eixos x, y e z. Os orbitais d que apontam para eles (\\ce{d_{z^2}} e \\ce{d_{x^2-y^2}}, o conjunto eg) ficam com energia maior; os outros três (t2g) ficam com energia menor. A diferença de energia entre eles é o Δo." },
+        { "titulo": "Campo forte, fraco e série espectroquímica", "texto": "Ligantes ordenados pelo Δo que causam (série espectroquímica, resumida): \\ce{I-} < \\ce{Br-} < \\ce{Cl-} < \\ce{F-} < \\ce{OH-} < \\ce{H2O} < \\ce{NH3} < en < \\ce{CN-} < CO. Campo fraco (Δo pequeno): os elétrons ocupam todos os orbitais antes de emparelhar, alto spin. Campo forte (Δo grande): emparelham primeiro nos t2g, baixo spin." }
+      ],
+      "exemplo": "Fe²⁺ (d⁶): com \\ce{H2O} (campo fraco) fica alto spin, 4 elétrons desemparelhados. Com \\ce{CN-} (campo forte), baixo spin, todos emparelhados.",
+      "pontosChave": [
+        "Octaédrico: t2g (baixo) e eg (alto).",
+        "Δo depende do ligante e do metal.",
+        "Série: \\ce{I-} < ... < \\ce{H2O} < \\ce{NH3} < \\ce{CN-} < CO.",
+        "Campo fraco: alto spin; campo forte: baixo spin."
+      ]
+    },
+    {
+      "subtemaId": "inav-cor-magnetismo",
+      "introducao": "Muitos complexos de metais de transição são coloridos e alguns são atraídos por ímãs. As duas propriedades vêm dos elétrons d e do desdobramento dos orbitais.",
+      "secoes": [
+        { "titulo": "Por que têm cor", "texto": "Um elétron d absorve luz visível de energia igual ao Δo e salta de t2g para eg. A cor que vemos é a complementar da absorvida: absorvendo laranja, o complexo parece azul. Ligantes de campo mais forte aumentam o Δo e deslocam a absorção para cores de maior energia. Íons d⁰ e d¹⁰, como \\ce{Zn^{2+}}, são incolores." },
+        { "titulo": "Magnetismo", "texto": "Elétrons desemparelhados tornam o complexo paramagnético: ele é atraído por um campo magnético, tanto mais quanto mais elétrons desemparelhados. Com todos os elétrons emparelhados, o complexo é diamagnético (fracamente repelido). Medir o magnetismo revela se o complexo é de alto ou de baixo spin." }
+      ],
+      "exemplo": "[\\ce{Ti(H2O)6}]³⁺ (d¹) absorve luz verde-amarela e parece violeta; tem um elétron desemparelhado, então é paramagnético.",
+      "pontosChave": [
+        "Cor: elétron d absorve luz de energia Δo.",
+        "Vemos a cor complementar da absorvida.",
+        "d⁰ e d¹⁰: incolores.",
+        "Desemparelhados: paramagnético; todos emparelhados: diamagnético."
+      ]
+    },
+    {
+      "subtemaId": "inav-reticulos",
+      "introducao": "Nos sólidos cristalinos, as partículas se arrumam num padrão que se repete em três dimensões, o retículo cristalino. A menor parte que se repete é a célula unitária.",
+      "secoes": [
+        { "titulo": "Células unitárias e empacotamento", "texto": "Cúbica simples: átomos só nos vértices (1 átomo por célula). Cúbica de corpo centrado: vértices + centro (2 átomos). Cúbica de face centrada: vértices + centro das faces (4 átomos). Na contagem, cada vértice é dividido por 8 células e cada face por 2. Empacotamentos compactos (cúbico de face centrada e hexagonal) aproveitam 74% do espaço." },
+        { "titulo": "Sólidos iônicos e energia de rede", "texto": "No NaCl, cada íon é cercado por 6 de carga oposta (número de coordenação 6); no CsCl, por 8. Energia de rede é a energia liberada ao formar o cristal a partir dos íons gasosos. Ela é maior para íons de carga maior e de raio menor: por isso o MgO tem ponto de fusão muito mais alto que o NaCl." }
+      ],
+      "exemplo": "Cobre (cúbico de face centrada): 8 vértices × 1/8 + 6 faces × 1/2 = 4 átomos por célula unitária.",
+      "pontosChave": [
+        "Célula unitária: menor parte que se repete.",
+        "Vértice conta 1/8; face, 1/2; centro, 1.",
+        "CFC: 4 átomos; CCC: 2; cúbica simples: 1.",
+        "Energia de rede cresce com a carga e diminui com o raio."
+      ]
+    }
+  ]
+}

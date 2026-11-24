@@ -1,0 +1,81 @@
+{
+  "area": "bioquimica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "bio-carboidratos",
+      "introducao": "Carboidratos (açúcares e amido) são a principal fonte de energia rápida dos seres vivos. Quimicamente, são poli-hidroxialdeídos ou poli-hidroxicetonas: cadeias com vários grupos OH e um grupo aldeído ou cetona.",
+      "secoes": [
+        { "titulo": "Mono, di e polissacarídeos", "texto": "Monossacarídeos são as unidades simples, que não se quebram em açúcares menores: glicose, frutose, galactose (\\ce{C6H12O6}). Dissacarídeos são dois monossacarídeos ligados: sacarose (glicose + frutose), lactose (glicose + galactose), maltose (glicose + glicose). Polissacarídeos são longas cadeias: amido, glicogênio e celulose, todos feitos de glicose." },
+        { "titulo": "Ligação glicosídica e funções", "texto": "As unidades se unem pela ligação glicosídica, com saída de água; a digestão faz o caminho inverso, a hidrólise. Amido é a reserva das plantas, glicogênio a dos animais (no fígado e nos músculos) e celulose forma a parede das células vegetais. Os seres humanos não digerem a celulose, que funciona como fibra." }
+      ],
+      "exemplo": "O pão tem amido. Na boca e no intestino, enzimas quebram o amido em glicose, que vai para o sangue e é usada para produzir energia.",
+      "pontosChave": [
+        "Mono: glicose, frutose; di: sacarose, lactose; poli: amido, celulose.",
+        "Ligação glicosídica une as unidades com saída de água.",
+        "Amido (plantas) e glicogênio (animais) são reservas.",
+        "Celulose não é digerida por humanos."
+      ]
+    },
+    {
+      "subtemaId": "bio-lipidios",
+      "introducao": "Lipídios são biomoléculas insolúveis em água e solúveis em solventes apolares. Incluem óleos, gorduras, ceras, fosfolipídios e esteroides como o colesterol.",
+      "secoes": [
+        { "titulo": "Ácidos graxos e triglicerídeos", "texto": "Ácidos graxos são ácidos carboxílicos de cadeia longa. Três deles, ligados ao glicerol por ligações éster, formam um triglicerídeo. Saturados (só ligações simples) se empacotam bem e formam gorduras sólidas, como a banha. Insaturados (com duplas, que dobram a cadeia) formam óleos líquidos, como o de soja." },
+        { "titulo": "Funções e sabão", "texto": "Triglicerídeos são reserva de energia e isolantes térmicos. Fosfolipídios formam a bicamada das membranas celulares. A hidrólise de triglicerídeos com base forte (saponificação) produz sabão e glicerol. A hidrogenação de óleos produz gordura sólida, como na margarina, e pode formar gordura trans." }
+      ],
+      "exemplo": "Óleo de cozinha fica líquido à temperatura ambiente porque suas cadeias têm duplas; a manteiga, com mais cadeias saturadas, é sólida.",
+      "pontosChave": [
+        "Lipídios: insolúveis em água.",
+        "Triglicerídeo: glicerol + 3 ácidos graxos (éster).",
+        "Saturada: sólida; insaturada: líquida.",
+        "Fosfolipídios formam as membranas."
+      ]
+    },
+    {
+      "subtemaId": "bio-aminoacidos-proteinas",
+      "introducao": "Proteínas são polímeros de aminoácidos. Elas formam músculos, transportam substâncias, defendem o corpo e catalisam reações.",
+      "secoes": [
+        { "titulo": "Aminoácidos e ligação peptídica", "texto": "Todo aminoácido tem um carbono ligado a um grupo amino (–NH₂), um grupo carboxila (–COOH), um H e um grupo R, que muda de um aminoácido para outro. São 20 os aminoácidos que formam as proteínas. A carboxila de um reage com o amino do outro, liberando água e formando a ligação peptídica (uma ligação amida)." },
+        { "titulo": "Níveis de estrutura", "texto": "Primária: a sequência de aminoácidos. Secundária: dobras como hélices e folhas, mantidas por ligações de hidrogênio. Terciária: a forma tridimensional da cadeia inteira. Quaternária: a união de várias cadeias, como na hemoglobina. Calor, ácidos e sais de metais pesados desfazem a forma: é a desnaturação, que tira a função da proteína." }
+      ],
+      "exemplo": "A clara do ovo fica branca e firme ao cozinhar: o calor desnatura a albumina, mas a sequência de aminoácidos continua a mesma.",
+      "pontosChave": [
+        "Aminoácido: amino, carboxila, H e grupo R.",
+        "Ligação peptídica: entre COOH e \\ce{NH2}, com saída de água.",
+        "Estruturas primária, secundária, terciária e quaternária.",
+        "Desnaturação: perde a forma e a função."
+      ]
+    },
+    {
+      "subtemaId": "bio-enzimas",
+      "introducao": "Enzimas são proteínas que atuam como catalisadores nos seres vivos. Elas aceleram as reações do metabolismo sem serem consumidas.",
+      "secoes": [
+        { "titulo": "Especificidade", "texto": "Cada enzima tem um sítio ativo com forma e cargas que encaixam num substrato específico, como uma chave na fechadura (ou uma luva que se ajusta à mão). A enzima e o substrato formam um complexo, o substrato vira produto e a enzima fica livre para agir de novo." },
+        { "titulo": "Temperatura e pH", "texto": "Cada enzima tem uma temperatura ótima (no corpo humano, perto de 37 °C) e um pH ótimo: a pepsina do estômago trabalha em pH ácido (cerca de 2), e a tripsina do intestino, em pH levemente básico. Fora dessas faixas a atividade cai; calor demais desnatura a enzima de forma permanente." }
+      ],
+      "exemplo": "A amilase da saliva começa a quebrar o amido na boca. No estômago, muito ácido, ela para de agir.",
+      "pontosChave": [
+        "Enzimas são catalisadores biológicos (proteínas).",
+        "Cada uma age num substrato específico.",
+        "Têm temperatura e pH ótimos.",
+        "Calor excessivo desnatura a enzima."
+      ]
+    },
+    {
+      "subtemaId": "bio-acidos-nucleicos",
+      "introducao": "DNA e RNA são os ácidos nucleicos: polímeros de nucleotídeos que guardam e transmitem a informação genética.",
+      "secoes": [
+        { "titulo": "Nucleotídeos e pareamento", "texto": "Cada nucleotídeo tem um fosfato, uma pentose (açúcar de cinco carbonos) e uma base nitrogenada. Bases: adenina (A), guanina (G), citosina (C), timina (T, só no DNA) e uracila (U, só no RNA). No DNA, as duas fitas se unem por ligações de hidrogênio entre bases complementares: A com T (2 ligações) e G com C (3 ligações)." },
+        { "titulo": "DNA × RNA", "texto": "DNA: desoxirribose, timina, fita dupla em hélice, guarda a informação. RNA: ribose, uracila no lugar da timina, em geral fita simples, leva a informação do DNA para a produção de proteínas. Pela regra do pareamento, no DNA a quantidade de A é igual à de T, e a de G é igual à de C." }
+      ],
+      "exemplo": "Se uma fita de DNA tem a sequência A-T-G-C, a fita complementar é T-A-C-G.",
+      "pontosChave": [
+        "Nucleotídeo: fosfato + pentose + base.",
+        "DNA: A-T e G-C.",
+        "RNA tem uracila no lugar da timina e ribose.",
+        "Fitas unidas por ligações de hidrogênio."
+      ]
+    }
+  ]
+}
