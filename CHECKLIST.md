@@ -11,9 +11,9 @@
   teste de integridade e hashes foram conferidos.
 - [x] `npm run test:android` sem falhas (emulação de tela/toque; não substitui aparelho físico).
 - [ ] Instalador Windows testado por instalação em uma máquina ou pasta de teste.
-- [ ] READMEs de `installers/` nas branches `app-pc` e `app-mobile` com tamanho e SHA-256.
-- [ ] Branches `main`, `app-pc` e `app-mobile` atualizadas; objetos do Git LFS conferidos.
-- [ ] Release `v0.6.0` publicada com instaladores e APK anexados.
+- [x] READMEs de `installers/` nas branches `app-pc` e `app-mobile` com tamanho e SHA-256.
+- [x] Branches `main`, `app-pc` e `app-mobile` atualizadas; objetos do Git LFS conferidos.
+- [x] Release `v0.6.0` publicada com instaladores e APK anexados.
 
 ## Checklist funcional atual
 
