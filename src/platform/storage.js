@@ -16,7 +16,9 @@ export const STORAGE_KEYS = {
   // '1' depois que o Laboratório do Mentor foi liberado neste aparelho.
   mentorLiberado: 'mentor-liberado',
   // Tutorial do Mentor: 'pendente' ao liberar, 'visto' depois de aberto.
-  mentorTour: 'mentor-tour'
+  mentorTour: 'mentor-tour',
+  // Resumo da última sessão de questões, mostrado no Início: { em, corretas, total, subtemaIds }.
+  ultimaSessao: 'ultima-sessao'
 };
 
 const defaultStorage = (kind = 'localStorage') => {

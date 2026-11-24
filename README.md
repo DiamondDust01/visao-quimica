@@ -5,7 +5,7 @@ seleção livre de temas. Roda na web, no Android (Capacitor) e no Windows (Elec
 partir do mesmo build, e funciona offline.
 
 > Estado atual (2026-11-23, versão 0.5.0): todos os módulos funcionando e builds web, Android e
-> Windows conferidos: Fundamentos (trilha por etapa), Prática (477 questões originais, revisadas
+> Windows conferidos: Início (o que fazer agora), Trilha (plano por etapa), Prática (477 questões originais, revisadas
 > por IA e ainda sem revisão de professor), Laboratório do Mentor (regras fixas, sem IA
 > generativa), Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir
 > de SMILES), backup local do progresso e créditos do projeto.

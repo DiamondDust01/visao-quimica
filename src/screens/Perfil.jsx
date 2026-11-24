@@ -37,7 +37,7 @@ export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onC
         <form onSubmit={save} className="space-y-4">
           <h2 className="text-lg font-bold text-white">Etapa escolar</h2>
           <EtapaPicker etapas={etapas} value={etapaId} onChange={(id) => { setEtapaId(id); setSaved(false); }} name="perfil-etapa" />
-          {saved && <Notice tone="success">Etapa atualizada. A trilha em Fundamentos já foi recalculada.</Notice>}
+          {saved && <Notice tone="success">Etapa atualizada. A Trilha já foi recalculada.</Notice>}
           <div className="flex justify-end">
             <button type="submit" disabled={!etapaId || etapaId === profile?.etapaId} className={buttonPrimary}>Salvar etapa</button>
           </div>

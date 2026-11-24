@@ -6,13 +6,15 @@ import useStudyState from './useStudyState.js';
 import HexBackdrop from '../components/HexBackdrop.jsx';
 import GuiaDeUso from '../components/GuiaDeUso.jsx';
 import MenuMais from '../components/MenuMais.jsx';
-import { STORAGE_KEYS, readValue, writeValue } from '../platform/storage.js';
+import { STORAGE_KEYS, readJson, readValue, writeJson, writeValue } from '../platform/storage.js';
 import { AppVersion } from '../components/StatusIndicators.jsx';
 import Inicio from '../screens/Inicio.jsx';
 import Onboarding from '../screens/Onboarding.jsx';
 import Perfil from '../screens/Perfil.jsx';
-import Fundamentos from '../screens/Fundamentos.jsx';
+import Trilha from '../screens/Trilha.jsx';
 import Pratica from '../screens/Pratica.jsx';
+import Sessao from '../screens/Sessao.jsx';
+import { buildSession, summarizeSession } from '../domain/questoes/sessao.js';
 import { QUESTIONS } from '../data/questoes/index.js';
 import ComoFunciona from '../screens/ComoFunciona.jsx';
 import Ferramentas from '../screens/Ferramentas.jsx';
@@ -55,21 +57,60 @@ export default function App() {
 
   const openScreen = (tela, secao = null) => {
     setMenuOpen(false);
+    setSessao(null);
     setTarget((current) => ({ secao, visit: current.visit + 1 }));
     setActiveTab(tela);
   };
   const openTab = (tela) => openScreen(tela);
 
-  // Pedido de "praticar este tema" vindo de outra tela: { subtemaIds, autoStart }.
+  // Temas a deixar marcados na Prática: { subtemaIds }.
   const [practiceRequest, setPracticeRequest] = useState(null);
-  const practice = (subtemaIds) => {
-    setPracticeRequest({ subtemaIds, autoStart: true });
-    openScreen('pratica');
-  };
   const mainRef = useRef(null);
 
-  // Sessão de questões em andamento na Prática (o tutorial do Mentor espera ela acabar).
-  const [inSession, setInSession] = useState(false);
+  // Sessão de questões: uma tela própria, aberta por cima da aba de onde o estudante começou
+  // (origem). { id, questions, subtemaIds, origem, summary }. Trocar de aba encerra a sessão;
+  // as respostas já dadas ficam salvas. O tutorial do Mentor espera a sessão acabar.
+  const [sessao, setSessao] = useState(null);
+  const [ultimaSessao, setUltimaSessao] = useState(() => {
+    const salva = readJson(STORAGE_KEYS.ultimaSessao);
+    return salva && Array.isArray(salva.subtemaIds) && salva.subtemaIds.length ? salva : null;
+  });
+  const inSession = Boolean(sessao && !sessao.summary);
+  const startSession = (subtemaIds, { origem = 'pratica', quantidade = 10 } = {}) => {
+    const questions = buildSession({
+      questoes: QUESTIONS,
+      subtemaIds,
+      quantidade,
+      nivelDaEtapa: (etapaId) => TAXONOMIA.etapaById.get(etapaId)?.nivel ?? 0,
+      nivelEstudante: TAXONOMIA.etapaById.get(profile?.etapaId)?.nivel || null
+    });
+    // Tema sem questões: abre a Prática com ele marcado, que avisa e deixa escolher outro.
+    if (!questions.length) {
+      openScreen('pratica');
+      setPracticeRequest({ subtemaIds });
+      return;
+    }
+    setMenuOpen(false);
+    setActiveTab(origem);
+    setSessao({ id: Date.now(), questions, subtemaIds: [...subtemaIds], origem, summary: null });
+  };
+  const finishSession = (answers) => {
+    const summary = summarizeSession(answers);
+    setSessao((atual) => (atual ? { ...atual, summary } : atual));
+    if (summary.total > 0 && sessao) {
+      const registro = { em: new Date().toISOString(), corretas: summary.corretas, total: summary.total, subtemaIds: sessao.subtemaIds };
+      writeJson(STORAGE_KEYS.ultimaSessao, registro);
+      setUltimaSessao(registro);
+    }
+  };
+  const leaveSession = () => {
+    const atual = sessao;
+    setSessao(null);
+    // De volta à Prática, os temas da sessão continuam marcados.
+    if (atual?.origem === 'pratica') setPracticeRequest({ subtemaIds: atual.subtemaIds });
+  };
+  // "Praticar" vindo de cada aba: a sessão abre por cima dela.
+  const practiceFrom = (origem) => (subtemaIds) => startSession(subtemaIds, { origem });
 
   // Laboratório do Mentor: a aba fica oculta até o Mentor ter o que sugerir (veja
   // domain/mentor/liberacao.js). Liberado uma vez, continua liberado neste aparelho, e o
@@ -93,7 +134,6 @@ export default function App() {
   const [guideOpen, setGuideOpen] = useState(false);
   const [guidePassos, setGuidePassos] = useState(null);
   const [guideOffer, setGuideOffer] = useState(() => readValue(STORAGE_KEYS.guiaVisto) !== '1');
-  const [praticaKey, setPraticaKey] = useState(0);
   const guideTela = useRef(null);
   // Subtema da sessão de exemplo do guia: o primeiro que tem questões.
   const demoSubtema = QUESTIONS[0]?.temaId;
@@ -124,7 +164,7 @@ export default function App() {
   }, [mentorTour, mentorLiberado, inSession, guideOpen]); // eslint-disable-line react-hooks/exhaustive-deps
   const closeGuide = () => {
     // Sai da sessão de exemplo, para o estudante não ficar numa sessão que não pediu.
-    if (guideTela.current === 'pratica-sessao') setPraticaKey((key) => key + 1);
+    if (guideTela.current === 'pratica-sessao') setSessao(null);
     guideTela.current = null;
     setMenuOpen(false);
     setGuideOpen(false);
@@ -135,7 +175,7 @@ export default function App() {
     const previous = guideTela.current;
     guideTela.current = step.tela;
     if (step.tela === 'pratica-sessao') {
-      if (previous !== 'pratica-sessao') practice([demoSubtema]);
+      if (previous !== 'pratica-sessao') startSession([demoSubtema], { origem: 'pratica' });
       return;
     }
     if (step.tela === 'menu-mais') {
@@ -144,7 +184,6 @@ export default function App() {
       return;
     }
     if (step.tela === 'pratica-lista') {
-      if (previous === 'pratica-sessao') setPraticaKey((key) => key + 1);
       openScreen('pratica');
       return;
     }
@@ -159,10 +198,10 @@ export default function App() {
   // O Laboratório oculto nunca abre: quem chegar nele (por um estado antigo) vê o Início.
   const shownTab = activeTab === 'laboratorio' && !mentorLiberado ? 'inicio' : activeTab;
 
-  // As telas guiadas pela etapa (Início e Fundamentos) pedem a etapa primeiro. A Prática (como
+  // As telas guiadas pela etapa (Início e Trilha) pedem a etapa primeiro. A Prática (como
   // Estudo livre, inclusive pelos temas rápidos), o Mentor e as telas do menu "Mais"
   // (ferramentas, perfil e ajuda) funcionam sem ela. As barras e o "Mais" ficam sempre visíveis.
-  const needsOnboarding = !profile && STAGE_SCREENS.includes(shownTab);
+  const needsOnboarding = !sessao && !profile && STAGE_SCREENS.includes(shownTab);
 
   // Ao trocar de tela, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
   // Com uma seção pedida em Perfil ou Ajuda, quem rola até ela é a própria tela. Ferramentas
@@ -170,7 +209,7 @@ export default function App() {
   useEffect(() => {
     mainRef.current?.focus({ preventScroll: true });
     if (!target.secao || !SECTION_SCROLL_SCREENS.includes(activeTab)) window.scrollTo({ top: 0 });
-  }, [activeTab, needsOnboarding, target.visit]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [activeTab, needsOnboarding, target.visit, sessao?.id, Boolean(sessao), Boolean(sessao?.summary)]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const tab = getTab(shownTab);
   const onScreen = SCREEN_IDS.includes(activeTab);
@@ -179,36 +218,69 @@ export default function App() {
   const activeTabId = needsOnboarding ? null : currentId;
   const secao = target.secao;
   let screen;
-  if (needsOnboarding) {
-    screen = <Onboarding etapas={ETAPAS} observacao={ETAPAS_OBSERVACAO} onChoose={(etapaId) => { chooseEtapa(etapaId); openScreen('fundamentos'); }} temasRapidos={QUICK_TOPICS} onQuickStart={practice} />;
+  if (sessao) {
+    screen = (
+      <Sessao
+        sessao={sessao}
+        index={TAXONOMIA}
+        origemNome={getTab(sessao.origem).label}
+        onAnswer={recordAnswer}
+        onFinish={finishSession}
+        onRepeat={() => startSession(sessao.subtemaIds, { origem: sessao.origem })}
+        onBack={leaveSession}
+      />
+    );
+  } else if (needsOnboarding) {
+    screen = (
+      <Onboarding
+        etapas={ETAPAS}
+        observacao={ETAPAS_OBSERVACAO}
+        onChoose={(etapaId) => { chooseEtapa(etapaId); openScreen('fundamentos'); }}
+        onFreeStudy={() => { chooseEtapa('livre'); openScreen('pratica'); }}
+        temasRapidos={QUICK_TOPICS}
+        onQuickStart={practiceFrom('inicio')}
+      />
+    );
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas key={target.visit} initialSection={secao} elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); setMentorLiberado(false); setMentorTour(''); openScreen('inicio'); }} />;
+    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); setMentorLiberado(false); setMentorTour(''); setUltimaSessao(null); openScreen('inicio'); }} />;
   } else if (currentId === 'como-funciona') {
     screen = <ComoFunciona key={target.visit} focusSection={secao} onOpenTab={openTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
   } else if (tab.id === 'inicio') {
-    screen = <Inicio onOpenTab={openTab} onOpenScreen={openScreen} index={TAXONOMIA} profile={profile} progress={progress} points={points} guideOffer={guideOffer} onStartGuide={startGuide} onDismissGuide={dismissGuideOffer} />;
+    screen = (
+      <Inicio
+        index={TAXONOMIA}
+        profile={profile}
+        progress={progress}
+        points={points}
+        mentorLog={mentorLog}
+        mentorLiberado={mentorLiberado}
+        ultimaSessao={ultimaSessao}
+        guideOffer={guideOffer}
+        onStartGuide={startGuide}
+        onDismissGuide={dismissGuideOffer}
+        onOpenTab={openTab}
+        onOpenScreen={openScreen}
+        onStart={practiceFrom('inicio')}
+      />
+    );
   } else if (tab.id === 'fundamentos') {
-    screen = <Fundamentos index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={openTab} onPractice={practice} />;
+    screen = <Trilha index={TAXONOMIA} profile={profile} progress={progress} observacao={ETAPAS_OBSERVACAO} onOpenTab={openTab} onOpenScreen={openScreen} onPractice={practiceFrom('fundamentos')} />;
   } else if (tab.id === 'pratica') {
     screen = (
       <Pratica
-        key={praticaKey}
         index={TAXONOMIA}
         questions={QUESTIONS}
         etapas={ETAPAS}
-        profile={profile}
         progress={progress}
-        recordAnswer={recordAnswer}
         request={practiceRequest}
         onRequestHandled={() => setPracticeRequest(null)}
-        onOpenTab={openTab}
-        onSessionActive={setInSession}
+        onStart={(subtemaIds, quantidade) => startSession(subtemaIds, { origem: 'pratica', quantidade })}
       />
     );
   } else {
-    screen = <Laboratorio index={TAXONOMIA} progress={progress} mentorLog={mentorLog} onPractice={practice} />;
+    screen = <Laboratorio index={TAXONOMIA} progress={progress} mentorLog={mentorLog} onPractice={practiceFrom('laboratorio')} />;
   }
 
   // "Mais" aparece ativo quando a tela aberta é uma das que ele guarda.
@@ -315,7 +387,7 @@ export default function App() {
       </nav>
 
       {/* Na Prática, a barra fixa da seleção ocupa o rodapé; os indicadores sairiam por cima dela. */}
-      {currentId !== 'pratica' && <AppVersion />}
+      {(currentId !== 'pratica' || sessao) && <AppVersion />}
 
       <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} semEtapa={!profile} />
       {guideOpen && guidePassos && (!needsOnboarding || guidePassos === GUIA_MENTOR) && <GuiaDeUso passos={guidePassos} onStep={goToGuideStep} onClose={closeGuide} />}

@@ -1,12 +1,15 @@
 // Abas principais do app. A navegação é por estado (sem rotas de URL), o que funciona
 // igual na web, no Android (Capacitor) e no Windows (Electron, que abre por file://).
 
+// Cada aba responde a uma pergunta diferente do estudante (`pergunta`), mostrada no topo da
+// tela, no guia e na tela de boas-vindas. O id 'fundamentos' é o da Trilha (nome antigo da
+// aba), mantido para não mudar o que já está salvo nos aparelhos.
 export const TABS = [
   // `short` é o rótulo da barra inferior do celular; o nome completo fica no aria-label.
-  { id: 'inicio', label: 'Início', short: 'Início', description: 'Visão geral do seu estudo.' },
-  { id: 'fundamentos', label: 'Fundamentos', short: 'Trilhas', description: 'Trilhas guiadas pela sua etapa escolar.' },
-  { id: 'pratica', label: 'Prática', short: 'Prática', description: 'Sessões com os temas que você escolher, com resolução passo a passo.' },
-  { id: 'laboratorio', label: 'Laboratório do Mentor', short: 'Mentor', description: 'Padrões nos seus erros e o que revisar, por regras fixas e sem IA generativa.' }
+  { id: 'inicio', label: 'Início', short: 'Início', pergunta: 'O que eu faço agora?', description: 'Continue de onde parou e veja como está indo.' },
+  { id: 'fundamentos', label: 'Trilha', short: 'Trilha', pergunta: 'Qual é o plano da minha série?', description: 'Os temas da sua etapa escolar, em ordem, com o que já concluiu e o que revisar.' },
+  { id: 'pratica', label: 'Prática', short: 'Prática', pergunta: 'Quero escolher qualquer tema.', description: 'Monte uma sessão com os temas que quiser, de qualquer série e em qualquer ordem.' },
+  { id: 'laboratorio', label: 'Laboratório do Mentor', short: 'Mentor', pergunta: 'Onde eu estou errando?', description: 'Padrões nos seus erros e o que revisar, por regras fixas e sem IA generativa.' }
 ];
 
 export const TAB_IDS = TABS.map((tab) => tab.id);
