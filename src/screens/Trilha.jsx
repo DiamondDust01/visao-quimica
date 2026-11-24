@@ -5,6 +5,8 @@ import SubtemaItem from '../components/SubtemaItem.jsx';
 import TopoDaTela from '../components/TopoDaTela.jsx';
 import { recommend } from '../domain/recomendador.js';
 import { statusFor, summarizeProgress } from '../domain/progresso.js';
+import LeituraPainel from '../components/LeituraPainel.jsx';
+import { leituraDe } from '../data/leituras/index.js';
 
 // Trilha (aba de id 'fundamentos'): o plano da etapa escolar inteira, em ordem. O próximo
 // tema sugerido aparece marcado dentro da própria lista, com o selo "Próximo".
@@ -20,7 +22,7 @@ const LIST_TONES = {
   concluidos: { marca: 'bg-emerald-400', borda: 'border-l-emerald-400/70' }
 };
 
-function SubtemaList({ guia, tone, title, description, ids, index, progress, numbered = false, emptyText, onPractice, proximoId }) {
+function SubtemaList({ guia, tone, title, description, ids, index, progress, numbered = false, emptyText, onPractice, onLer, proximoId }) {
   const tom = LIST_TONES[tone];
   const [expanded, setExpanded] = useState(false);
   const visible = expanded ? ids : ids.slice(0, PREVIEW);
@@ -49,6 +51,7 @@ function SubtemaList({ guia, tone, title, description, ids, index, progress, num
                 accent={tom ? `border-l-4 ${tom.borda}` : ''}
                 proximo={id === proximoId}
                 onPractice={onPractice ? () => onPractice([id]) : undefined}
+                onLer={onLer && leituraDe(id) ? () => onLer(id) : undefined}
               />
             </li>
           );
@@ -66,6 +69,8 @@ function SubtemaList({ guia, tone, title, description, ids, index, progress, num
 export default function Trilha({ index, profile, progress, observacao, onOpenTab, onOpenScreen, onPractice }) {
   const result = useMemo(() => recommend({ index, etapaId: profile?.etapaId, progress }), [index, profile?.etapaId, progress]);
   const etapa = result.etapa;
+  // Subtema com o material de leitura aberto ("Ler" na lista).
+  const [lendoId, setLendoId] = useState(null);
   const mudarEtapa = <button type="button" onClick={() => onOpenScreen('perfil', 'etapa')} className={buttonSecondary}>Mudar etapa</button>;
 
   if (result.semRecomendacao) {
@@ -113,6 +118,7 @@ export default function Trilha({ index, profile, progress, observacao, onOpenTab
         description="Base de etapas anteriores que esta trilha usa, e temas em que seu acerto ficou baixo."
         ids={result.revisao}
         onPractice={onPractice}
+        onLer={setLendoId}
         proximoId={proximoId}
         index={index}
         progress={progress}
@@ -124,6 +130,7 @@ export default function Trilha({ index, profile, progress, observacao, onOpenTab
         description="Na ordem sugerida: cada tema vem depois dos que ele usa como base. O próximo aparece em destaque."
         ids={result.recomendados}
         onPractice={onPractice}
+        onLer={setLendoId}
         proximoId={proximoId}
         index={index}
         progress={progress}
@@ -136,12 +143,16 @@ export default function Trilha({ index, profile, progress, observacao, onOpenTab
         description="Temas da próxima etapa que você já tem base para encarar."
         ids={result.desafio}
         onPractice={onPractice}
+        onLer={setLendoId}
         index={index}
         progress={progress}
         emptyText="Não há desafios além desta etapa na taxonomia atual."
       />
       {result.concluidos.length > 0 && (
-        <SubtemaList tone="concluidos" title="Concluídos" description="Temas desta trilha em que seu acerto já está alto." ids={result.concluidos} index={index} progress={progress} onPractice={onPractice} />
+        <SubtemaList tone="concluidos" title="Concluídos" description="Temas desta trilha em que seu acerto já está alto." ids={result.concluidos} index={index} progress={progress} onPractice={onPractice} onLer={setLendoId} />
+      )}
+      {lendoId && leituraDe(lendoId) && (
+        <LeituraPainel leitura={leituraDe(lendoId)} node={index.get(lendoId)} areaNome={index.areaOf(lendoId)?.nome} onClose={() => setLendoId(null)} />
       )}
     </div>
   );

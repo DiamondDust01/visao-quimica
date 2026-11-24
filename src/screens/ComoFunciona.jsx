@@ -46,6 +46,8 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
           <li>Na Prática, cada nível de ajuda do Mentor usado desconta {pct(DESCONTO_POR_AJUDA)} dos pontos daquela questão; ela sempre vale pelo menos {pct(FATOR_MINIMO)}.</li>
           <li>As explicações do glossário (palavras com sublinhado pontilhado nas questões) não descontam pontos. Termos que são o próprio assunto da questão só ganham explicação depois da resposta.</li>
           <li>Erros não tiram pontos.</li>
+          <li>O material de leitura ("Não sei este conteúdo", na questão, ou "Ler", na Trilha) não desconta pontos. Por enquanto há textos para os temas de Fundamentos e de Termoquímica.</li>
+          <li>Durante a sessão, um relógio conta o tempo de estudo. Ele pausa quando o app fica em segundo plano, e o total aparece no resultado e no Início.</li>
           <li>Respostas que não puderam ser lidas (número, unidade ou fórmula mal escritos) não contam: é só corrigir e responder de novo.</li>
         </ul>
       </Card>

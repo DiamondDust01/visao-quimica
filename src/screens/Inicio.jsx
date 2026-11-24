@@ -5,6 +5,7 @@ import TopoDaTela from '../components/TopoDaTela.jsx';
 import NivelCard from '../components/NivelCard.jsx';
 import { recommend } from '../domain/recomendador.js';
 import { suggestReview } from '../domain/mentor/revisao.js';
+import { formatarDuracao } from '../domain/tempo.js';
 
 // Início: "o que eu faço agora?". Um botão principal começa direto a próxima sessão (sem
 // passar por outra aba); abaixo, a última sessão e o aviso do Mentor, quando houver.
@@ -104,7 +105,7 @@ export default function Inicio({ index, profile, progress, points = 0, mentorLog
               <h2 className="flex items-center gap-2 text-lg font-bold text-white"><History className="h-5 w-5 text-slate-400" aria-hidden="true" /> Última sessão</h2>
               <p className="mt-1 text-sm text-slate-300">
                 {data ? `Em ${data}, você acertou ` : 'Você acertou '}
-                <strong className="text-white">{ultimaSessao.corretas} de {ultimaSessao.total}</strong> em {nomesDe(index, ultimaSessao.subtemaIds)}.
+                <strong className="text-white">{ultimaSessao.corretas} de {ultimaSessao.total}</strong> em {nomesDe(index, ultimaSessao.subtemaIds)}{ultimaSessao.segundos > 0 ? `, estudando por ${formatarDuracao(ultimaSessao.segundos)}` : ''}.
               </p>
               <button type="button" onClick={() => onStart(ultimaSessao.subtemaIds)} className={`${buttonSecondary} mt-3`}>Repetir esses temas</button>
             </Card>

@@ -36,7 +36,8 @@ export function Difficulty({ value }) {
 // Uma linha da trilha: nome, área, dificuldade, status e de quais subtemas ele depende.
 // accent: classes extras da borda (ex.: a cor da lista da trilha onde o tema aparece).
 // proximo: marca o próximo tema sugerido da trilha, com o selo "Próximo" e o botão em destaque.
-export default function SubtemaItem({ node, areaNome, status, prerequisitos = [], position, onPractice, accent = '', proximo = false }) {
+// onLer: abre o material de leitura do tema, quando houver.
+export default function SubtemaItem({ node, areaNome, status, prerequisitos = [], position, onPractice, onLer, accent = '', proximo = false }) {
   return (
     <div className={`flex gap-3 rounded-xl border bg-slate-900/85 p-3 backdrop-blur-sm ${proximo ? 'border-indigo-400/70 ring-1 ring-indigo-400/40' : 'border-slate-800'} ${accent}`}>
       {position !== undefined && (
@@ -57,8 +58,13 @@ export default function SubtemaItem({ node, areaNome, status, prerequisitos = []
         <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
           <Difficulty value={node.dificuldade} />
           {prerequisitos.length > 0 && <span className="text-xs text-slate-500">Depende de: {prerequisitos.join(', ')}</span>}
+          {onLer && (
+            <button type="button" onClick={onLer} aria-label={`Ler sobre ${node.nome}`} className={`ml-auto rounded-lg border border-sky-500/50 px-3 py-1 text-xs font-bold text-sky-200 transition hover:bg-sky-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-300`}>
+              Ler
+            </button>
+          )}
           {onPractice && (
-            <button type="button" onClick={onPractice} aria-label={`Praticar ${node.nome}`} className={`ml-auto rounded-lg px-3 py-1 text-xs font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${proximo ? 'bg-teal-700 text-white hover:bg-teal-600' : 'border border-teal-500/50 text-teal-200 hover:bg-teal-500/10'}`}>
+            <button type="button" onClick={onPractice} aria-label={`Praticar ${node.nome}`} className={`${onLer ? '' : 'ml-auto '}rounded-lg px-3 py-1 text-xs font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${proximo ? 'bg-teal-700 text-white hover:bg-teal-600' : 'border border-teal-500/50 text-teal-200 hover:bg-teal-500/10'}`}>
               Praticar
             </button>
           )}

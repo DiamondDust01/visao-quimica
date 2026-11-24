@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Bar, buttonPrimary, buttonSecondary, Card } from '../components/ui.jsx';
 import SessionPlayer from '../components/questoes/SessionPlayer.jsx';
 import { corDe } from '../app/cores.js';
+import { formatarDuracao } from '../domain/tempo.js';
 
 // Sessão de questões: uma tela própria, aberta por cima da aba de onde o estudante começou
 // (Início, Trilha, Prática ou Mentor). No fim, "Voltar" leva de volta a essa aba.
@@ -16,6 +17,9 @@ function SessionResult({ summary, index, origemNome, onRepeat, onBack }) {
           Você acertou <strong className="text-white">{summary.corretas}</strong> de <strong className="text-white">{summary.total}</strong> questões
           {summary.dicasUsadas > 0 && `, com ajuda do Mentor em ${summary.dicasUsadas}`}, e somou <strong className="text-teal-200">{summary.pontos} pontos</strong>.
         </p>
+        {summary.segundos > 0 && (
+          <p data-tempo-sessao="" className="mt-2 text-sm text-slate-400">Tempo de estudo: <strong className="text-slate-200">{formatarDuracao(summary.segundos)}</strong>{summary.total > 0 && `, cerca de ${formatarDuracao(Math.round(summary.segundos / summary.total))} por questão`}.</p>
+        )}
         <div className="mt-4"><Bar label="Acertos" value={summary.percentual} large /></div>
       </Card>
 
