@@ -1,0 +1,156 @@
+{
+  "area": "solucoes",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "sol-solubilidade",
+      "introducao": "Solução é uma mistura homogênea de um soluto (o que se dissolve) num solvente (o que dissolve). Existe um limite de quanto soluto um solvente consegue dissolver: o coeficiente de solubilidade.",
+      "secoes": [
+        { "titulo": "Insaturada, saturada e supersaturada", "texto": "Coeficiente de solubilidade é a máxima quantidade de soluto que se dissolve numa quantidade de solvente, numa temperatura (por exemplo, 36 g de NaCl em 100 g de água a 20 °C). Abaixo do limite: insaturada. No limite: saturada; o que passar dele fica no fundo (corpo de fundo). Acima do limite, sem sólido no fundo: supersaturada, instável." },
+        { "titulo": "Curvas de solubilidade", "texto": "O gráfico mostra o coeficiente em cada temperatura. Pontos abaixo da curva são soluções insaturadas; sobre a curva, saturadas. Para a maioria dos sólidos, a solubilidade aumenta com a temperatura. Para gases, diminui: refrigerante quente perde gás mais rápido." }
+      ],
+      "exemplo": "A 20 °C, 100 g de água dissolvem 36 g de NaCl. Colocando 50 g, dissolvem 36 g e sobram 14 g no fundo: solução saturada com corpo de fundo.",
+      "pontosChave": [
+        "Coeficiente de solubilidade depende da temperatura.",
+        "Insaturada < saturada < supersaturada (instável).",
+        "Sólidos: em geral mais solúveis no quente.",
+        "Gases: menos solúveis no quente."
+      ]
+    },
+    {
+      "subtemaId": "sol-concentracao-comum",
+      "introducao": "Concentração comum (C) é a massa de soluto em cada litro de solução: C = massa do soluto ÷ volume da solução, em geral em g/L.",
+      "secoes": [
+        { "titulo": "Usando a fórmula", "texto": "Use o volume da solução (não só do solvente). Converta mL para L dividindo por 1 000. Para achar a massa de soluto: m = C × V. Uma concentração de 9 g/L quer dizer que, em cada litro, há 9 g de soluto, e em 100 mL há 0,9 g." },
+        { "titulo": "Concentração não é densidade", "texto": "As duas podem ter a mesma unidade (g/L), mas são diferentes. Concentração: massa de soluto ÷ volume da solução. Densidade da solução: massa da solução inteira (soluto + solvente) ÷ volume da solução. A densidade de uma solução aquosa costuma ficar perto de 1 000 g/L." }
+      ],
+      "exemplo": "Soro com 4,5 g de NaCl em 500 mL: C = 4,5 ÷ 0,5 = 9 g/L.",
+      "pontosChave": [
+        "C = m(soluto) ÷ V(solução).",
+        "Volume em litros.",
+        "Densidade usa a massa da solução inteira.",
+        "m = C × V."
+      ]
+    },
+    {
+      "subtemaId": "sol-concentracao-molar",
+      "introducao": "Concentração em quantidade de matéria, ou molaridade, é o número de mols de soluto por litro de solução: M = n ÷ V, em mol/L.",
+      "secoes": [
+        { "titulo": "Cálculos e conversões", "texto": "n = m ÷ M (massa molar). Assim, molaridade = m ÷ (M × V). Para passar de mol/L para g/L, multiplique pela massa molar: C (g/L) = molaridade × M. Uma solução 0,1 mol/L de NaOH (M = 40) tem 4 g/L." },
+        { "titulo": "Concentração dos íons", "texto": "Sais, ácidos e bases fortes se separam em íons. A concentração de cada íon é a do composto multiplicada pelo número daquele íon na fórmula. Em \\ce{CaCl2} 0,2 mol/L: \\ce{Ca^{2+}} = 0,2 mol/L e \\ce{Cl-} = 0,4 mol/L." }
+      ],
+      "exemplo": "11,7 g de NaCl (M = 58,5) em 500 mL: n = 0,2 mol; molaridade = 0,2 ÷ 0,5 = 0,4 mol/L.",
+      "pontosChave": [
+        "Molaridade = mols ÷ litros de solução.",
+        "g/L = mol/L × massa molar.",
+        "Íons: multiplique pelo índice na fórmula.",
+        "Use sempre o volume total da solução."
+      ]
+    },
+    {
+      "subtemaId": "sol-titulo-ppm",
+      "introducao": "Título é a fração da solução que corresponde ao soluto, sem unidade. Em porcentagem ou em partes por milhão (ppm), ele aparece em rótulos e em análises de água e de ar.",
+      "secoes": [
+        { "titulo": "Título em massa e em volume", "texto": "Título em massa: τ = massa do soluto ÷ massa da solução; vezes 100, dá a porcentagem em massa. Título em volume: volume do soluto ÷ volume da solução, comum para álcool: álcool 70% tem 70 mL de etanol em 100 mL de solução." },
+        { "titulo": "Partes por milhão", "texto": "Para quantidades muito pequenas: ppm é 1 parte em 1 000 000. Em água, 1 ppm corresponde a cerca de 1 mg de soluto por litro de solução (ou 1 mg por kg). Usa-se para flúor na água tratada, metais pesados e poluentes do ar." }
+      ],
+      "exemplo": "20 g de açúcar em 180 g de água: solução de 200 g; título = 20 ÷ 200 = 0,1, ou 10% em massa.",
+      "pontosChave": [
+        "Título = parte do soluto ÷ total da solução.",
+        "Porcentagem = título × 100.",
+        "1 ppm em água ≈ 1 mg/L.",
+        "Massa da solução = soluto + solvente."
+      ]
+    },
+    {
+      "subtemaId": "sol-diluicao",
+      "introducao": "Diluir é acrescentar solvente a uma solução. O volume aumenta e a concentração diminui, mas a quantidade de soluto continua a mesma.",
+      "secoes": [
+        { "titulo": "A relação C₁V₁ = C₂V₂", "texto": "Como o soluto não muda, concentração inicial × volume inicial = concentração final × volume final. Vale para g/L, mol/L ou porcentagem, desde que a mesma unidade seja usada dos dois lados. O volume final é o total depois de acrescentar o solvente." },
+        { "titulo": "Concentrar", "texto": "O caminho inverso, evaporar parte do solvente, aumenta a concentração com a mesma relação. Se a água evaporar até o volume cair pela metade, a concentração dobra." }
+      ],
+      "exemplo": "100 mL de solução 2 mol/L diluídos até 500 mL: 2 × 100 = C₂ × 500, C₂ = 0,4 mol/L.",
+      "pontosChave": [
+        "Diluir: mais solvente, mesma quantidade de soluto.",
+        "C₁V₁ = C₂V₂.",
+        "V₂ é o volume final, não o acrescentado.",
+        "Evaporar o solvente concentra."
+      ]
+    },
+    {
+      "subtemaId": "sol-mistura-solucoes",
+      "introducao": "Ao misturar duas soluções, o resultado depende de os solutos serem iguais, diferentes que não reagem, ou diferentes que reagem entre si.",
+      "secoes": [
+        { "titulo": "Mesmo soluto", "texto": "Os solutos se somam e os volumes também: C(final) = (C₁V₁ + C₂V₂) ÷ (V₁ + V₂). A concentração final fica entre as duas iniciais, mais perto da solução de maior volume." },
+        { "titulo": "Solutos que reagem", "texto": "Calcule os mols de cada reagente (n = M × V), veja pela equação qual reage por completo e qual sobra, como no reagente limitante. A concentração do que sobra (ou do produto) é dividida pelo volume total. Num ácido com uma base, a solução final é ácida, básica ou neutra conforme o que sobrar." }
+      ],
+      "exemplo": "200 mL de NaCl 1 mol/L + 300 mL de NaCl 0,5 mol/L: (0,2 + 0,15) mol ÷ 0,5 L = 0,7 mol/L.",
+      "pontosChave": [
+        "Mesmo soluto: some os mols e os volumes.",
+        "C(final) = (C₁V₁ + C₂V₂) ÷ V(total).",
+        "Solutos que reagem: use a estequiometria.",
+        "O que sobra define se fica ácido, básico ou neutro."
+      ]
+    },
+    {
+      "subtemaId": "sol-titulacao",
+      "introducao": "Titulação é uma técnica para descobrir a concentração de uma solução (o titulado) reagindo-a com outra de concentração conhecida (o titulante), adicionada aos poucos por uma bureta.",
+      "secoes": [
+        { "titulo": "Ponto de equivalência", "texto": "É o momento em que o titulante adicionado reagiu exatamente com todo o titulado, na proporção da equação. Um indicador, como a fenolftaleína, muda de cor perto desse ponto e avisa que é hora de parar. Lê-se na bureta o volume gasto." },
+        { "titulo": "O cálculo", "texto": "Mols de titulante = concentração × volume gasto. Pela equação, ache os mols do titulado e divida pelo volume dele. Para ácido e base com proporção 1 : 1, vale M(ácido) × V(ácido) = M(base) × V(base). Para \\ce{H2SO4} com NaOH, a proporção é 1 : 2." }
+      ],
+      "exemplo": "25 mL de HCl gastaram 20 mL de NaOH 0,1 mol/L: 0,002 mol de NaOH = 0,002 mol de HCl; concentração = 0,002 ÷ 0,025 = 0,08 mol/L.",
+      "pontosChave": [
+        "Titulante: concentração conhecida, na bureta.",
+        "Ponto de equivalência: proporção exata da equação.",
+        "Indicador avisa o fim da titulação.",
+        "Use a proporção da equação, não só 1 : 1."
+      ]
+    },
+    {
+      "subtemaId": "sol-pressao-vapor",
+      "introducao": "Pressão de vapor é a pressão exercida pelo vapor de um líquido em equilíbrio com ele, num recipiente fechado. Quanto mais volátil o líquido, maior a pressão de vapor.",
+      "secoes": [
+        { "titulo": "Líquidos puros", "texto": "A pressão de vapor aumenta com a temperatura. O líquido ferve quando a pressão de vapor fica igual à pressão externa: por isso a água ferve abaixo de 100 °C no alto das montanhas. Líquidos com forças intermoleculares fracas (éter, acetona) têm pressão de vapor alta e evaporam fácil." },
+        { "titulo": "Tonoscopia", "texto": "Um soluto não volátil, como sal ou açúcar, diminui a pressão de vapor do solvente: as partículas de soluto ocupam parte da superfície e atrapalham a saída das moléculas do solvente. Esse abaixamento depende do número de partículas dissolvidas, não do tipo delas: é uma propriedade coligativa." }
+      ],
+      "exemplo": "A 25 °C, a água tem pressão de vapor de cerca de 24 mmHg. Com açúcar dissolvido, esse valor fica menor.",
+      "pontosChave": [
+        "Pressão de vapor sobe com a temperatura.",
+        "Ebulição: pressão de vapor = pressão externa.",
+        "Soluto não volátil abaixa a pressão de vapor.",
+        "Propriedade coligativa: depende do número de partículas."
+      ]
+    },
+    {
+      "subtemaId": "sol-ebulioscopia-crioscopia",
+      "introducao": "Um soluto não volátil faz a solução ferver a uma temperatura mais alta (ebulioscopia) e congelar a uma temperatura mais baixa (crioscopia) que o solvente puro.",
+      "secoes": [
+        { "titulo": "Por que acontece", "texto": "O soluto abaixa a pressão de vapor, então é preciso mais calor para chegar à pressão externa e ferver. No congelamento, as partículas de soluto atrapalham a organização do solvente em cristal, e é preciso esfriar mais. Os efeitos dependem do número de partículas dissolvidas." },
+        { "titulo": "Contando partículas", "texto": "Compostos que se dissociam produzem mais partículas: 1 mol de NaCl dá 2 mol de íons; 1 mol de \\ce{CaCl2} dá 3; 1 mol de açúcar dá só 1. Fórmulas: ΔT = K × molalidade × i, em que i é o número de partículas por fórmula. Mais partículas, maior o efeito." }
+      ],
+      "exemplo": "Sal jogado em estradas com gelo faz a água congelar abaixo de 0 °C. Água com sal ferve um pouco acima de 100 °C.",
+      "pontosChave": [
+        "Soluto não volátil: ferve mais alto e congela mais baixo.",
+        "Efeito depende do número de partículas.",
+        "NaCl: 2 partículas; \\ce{CaCl2}: 3; açúcar: 1.",
+        "ΔT = K × molalidade × i."
+      ]
+    },
+    {
+      "subtemaId": "sol-osmose",
+      "introducao": "Osmose é a passagem de solvente por uma membrana semipermeável, que deixa o solvente passar mas não o soluto. O solvente vai do lado menos concentrado para o mais concentrado.",
+      "secoes": [
+        { "titulo": "Pressão osmótica", "texto": "Pressão osmótica (π) é a pressão que precisa ser aplicada sobre a solução mais concentrada para impedir a osmose. π = M × R × T × i (molaridade, constante dos gases, temperatura em kelvin e número de partículas). Aplicando uma pressão maior que essa, o solvente passa ao contrário: é a osmose reversa, usada para dessalinizar a água do mar." },
+        { "titulo": "Na biologia", "texto": "Solução isotônica tem a mesma pressão osmótica que a célula (como o soro fisiológico para as hemácias). Em solução hipertônica (mais concentrada), a célula perde água e murcha. Em hipotônica (menos concentrada), ganha água e pode estourar. Salgar carne ou fazer doce em calda conserva o alimento porque tira a água dos micro-organismos." }
+      ],
+      "exemplo": "Alface temperada com sal murcha depois de um tempo: a água das células sai para o tempero, mais concentrado.",
+      "pontosChave": [
+        "Solvente vai do menos para o mais concentrado.",
+        "π = M R T i.",
+        "Isotônica: mesma pressão osmótica.",
+        "Osmose reversa: pressão maior que π, solvente no sentido inverso."
+      ]
+    }
+  ]
+}

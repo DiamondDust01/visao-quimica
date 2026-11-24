@@ -1,0 +1,156 @@
+{
+  "area": "reacoes-estequiometria",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "reac-evidencias",
+      "introducao": "Numa reação química, substâncias novas são formadas. Como não vemos os átomos se rearrumando, reconhecemos a reação por sinais que aparecem durante ela.",
+      "secoes": [
+        { "titulo": "Os sinais mais comuns", "texto": "Mudança de cor (a maçã escurecendo, o ferro enferrujando). Liberação de gás, em bolhas que não vêm de fervura (comprimido efervescente na água). Formação de um sólido numa mistura de líquidos, o precipitado. Variação de temperatura sem aquecimento externo. Emissão de luz ou de cheiro novo (o leite azedando)." },
+        { "titulo": "Cuidado com as pegadinhas", "texto": "Nem toda mudança é reação. Água fervendo solta bolhas, mas é só vapor de água: transformação física. Sal dissolvendo some da vista, mas continua lá. Gelo derretendo muda de aspecto, mas é a mesma substância. O critério é: formou-se uma substância nova?" }
+      ],
+      "exemplo": "Vinagre com bicarbonato de sódio solta bolhas de gás carbônico, formado na reação: \\ce{NaHCO3 + CH3COOH -> CH3COONa + H2O + CO2}.",
+      "pontosChave": [
+        "Sinais: cor nova, gás, precipitado, calor, luz, cheiro.",
+        "Bolhas de fervura não indicam reação.",
+        "Dissolver não é reagir.",
+        "O critério final é a formação de substância nova."
+      ]
+    },
+    {
+      "subtemaId": "reac-leis-ponderais",
+      "introducao": "As leis ponderais tratam das massas numa reação. Elas foram descobertas no fim do século XVIII e ajudaram a criar a ideia de átomo.",
+      "secoes": [
+        { "titulo": "Lei de Lavoisier", "texto": "Em sistema fechado, a massa total dos reagentes é igual à massa total dos produtos: \"na natureza nada se cria, nada se perde, tudo se transforma\". Se o sistema for aberto e um gás sair ou entrar, a balança muda, mas a massa não sumiu: só foi para o ar ou veio dele." },
+        { "titulo": "Lei de Proust", "texto": "Uma substância tem sempre a mesma proporção entre as massas dos seus elementos. Na água, sempre 1 g de hidrogênio para 8 g de oxigênio. Se reagirem 2 g de hidrogênio, serão necessários 16 g de oxigênio. Se houver mais de um reagente do que a proporção pede, o excesso sobra sem reagir." }
+      ],
+      "exemplo": "12 g de carbono reagem com 32 g de oxigênio e formam 44 g de gás carbônico (12 + 32 = 44). Com 24 g de carbono, são 64 g de oxigênio e 88 g de produto: a proporção se mantém.",
+      "pontosChave": [
+        "Lavoisier: massa total se conserva em sistema fechado.",
+        "Proust: proporção fixa entre as massas.",
+        "Sistema aberto: um gás pode entrar ou sair.",
+        "O que passa da proporção sobra como excesso."
+      ]
+    },
+    {
+      "subtemaId": "reac-balanceamento",
+      "introducao": "Balancear uma equação é acertar os coeficientes (os números na frente das fórmulas) para que cada elemento apareça na mesma quantidade dos dois lados, como manda a conservação da massa.",
+      "secoes": [
+        { "titulo": "Método das tentativas", "texto": "Comece pelo elemento que aparece em uma só substância de cada lado e tem os maiores índices. Em seguida, acerte os outros. Deixe hidrogênio e oxigênio por último, porque costumam aparecer em várias substâncias. Nunca mude os índices das fórmulas: isso mudaria a substância." },
+        { "titulo": "Conferindo", "texto": "Conte cada elemento: coeficiente × índice, somando todas as substâncias de cada lado. Use os menores números inteiros possíveis. Se aparecer fração, multiplique a equação inteira para eliminá-la." }
+      ],
+      "exemplo": "\\ce{C3H8 + O2 -> CO2 + H2O}: 3 carbonos pedem 3 \\ce{CO2}; 8 hidrogênios pedem 4 \\ce{H2O}; agora há 6 + 4 = 10 oxigênios, então 5 \\ce{O2}. Resultado: \\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}.",
+      "pontosChave": [
+        "Mude só os coeficientes, nunca os índices.",
+        "Comece pelo elemento que aparece em uma substância de cada lado.",
+        "H e O costumam ficar por último.",
+        "Use os menores inteiros possíveis."
+      ]
+    },
+    {
+      "subtemaId": "reac-tipos",
+      "introducao": "As reações inorgânicas mais comuns se dividem em quatro tipos, pela forma como as substâncias se juntam ou se separam.",
+      "secoes": [
+        { "titulo": "Síntese e decomposição", "texto": "Síntese (ou adição): duas ou mais substâncias formam uma só, A + B → AB (\\ce{CaO + H2O -> Ca(OH)2}). Decomposição (ou análise): uma substância origina duas ou mais, AB → A + B. Pode ser por calor (pirólise), por luz (fotólise) ou por corrente elétrica (eletrólise)." },
+        { "titulo": "Simples troca e dupla troca", "texto": "Simples troca (deslocamento): uma substância simples troca de lugar com um elemento de uma composta, A + BC → AC + B. Só ocorre se A for mais reativo que B (o zinco desloca o cobre, mas o cobre não desloca o zinco). Dupla troca: dois compostos trocam íons, AB + CD → AD + CB. Ocorre se formar precipitado, gás ou substância menos ionizada (como água)." }
+      ],
+      "exemplo": "\\ce{Zn + CuSO4 -> ZnSO4 + Cu} é simples troca: o zinco, mais reativo, desloca o cobre, que se deposita como metal avermelhado.",
+      "pontosChave": [
+        "Síntese: A + B → AB.",
+        "Decomposição: AB → A + B.",
+        "Simples troca: só se o elemento for mais reativo.",
+        "Dupla troca: precisa formar precipitado, gás ou água."
+      ]
+    },
+    {
+      "subtemaId": "reac-mol-avogadro",
+      "introducao": "Átomos e moléculas são pequenos demais para serem contados um a um. Por isso a Química conta em mols: 1 mol é um pacote com 6,02 × 10²³ partículas, a constante de Avogadro.",
+      "secoes": [
+        { "titulo": "O que é o mol", "texto": "Mol é a unidade de quantidade de matéria, como a dúzia é uma unidade de contagem. 1 mol de átomos de carbono tem 6,02 × 10²³ átomos; 1 mol de moléculas de água tem 6,02 × 10²³ moléculas. Sempre diga do que é o mol: de átomos, de moléculas, de íons." },
+        { "titulo": "Convertendo", "texto": "Número de partículas = mols × 6,02 × 10²³. Mols = número de partículas ÷ 6,02 × 10²³. Para contar átomos dentro de moléculas, use os índices: 1 mol de \\ce{H2O} tem 2 mol de átomos de H e 1 mol de átomos de O." }
+      ],
+      "exemplo": "0,5 mol de \\ce{CO2} tem 0,5 × 6,02 × 10²³ = 3,01 × 10²³ moléculas e o dobro disso, 6,02 × 10²³, de átomos de oxigênio.",
+      "pontosChave": [
+        "1 mol = 6,02 × 10²³ partículas.",
+        "Partículas = mols × constante de Avogadro.",
+        "Diga sempre do que é o mol.",
+        "Os índices da fórmula dão os mols de cada átomo."
+      ]
+    },
+    {
+      "subtemaId": "reac-massa-molar",
+      "introducao": "Massa molar (M) é a massa de 1 mol de uma substância, em g/mol. Ela é calculada somando as massas atômicas de todos os átomos da fórmula.",
+      "secoes": [
+        { "titulo": "Calculando M", "texto": "Multiplique a massa atômica de cada elemento pelo número de átomos dele na fórmula e some tudo. Parênteses multiplicam o que está dentro: em \\ce{Ca(OH)2} há 1 Ca, 2 O e 2 H. A ferramenta Massa molar do app faz essa conta e mostra o passo a passo." },
+        { "titulo": "Massa e quantidade de matéria", "texto": "n = m ÷ M (mols = massa em gramas ÷ massa molar). Para achar a massa, m = n × M. Essa é a ponte entre o que se pesa na balança e o número de partículas." }
+      ],
+      "exemplo": "\\ce{H2SO4}: 2 × 1 + 32 + 4 × 16 = 98 g/mol. 49 g desse ácido são 49 ÷ 98 = 0,5 mol.",
+      "pontosChave": [
+        "M = soma das massas atômicas da fórmula.",
+        "Parênteses multiplicam o grupo inteiro.",
+        "n = m ÷ M.",
+        "Unidade: g/mol."
+      ]
+    },
+    {
+      "subtemaId": "reac-formulas",
+      "introducao": "A partir da análise de uma substância (as massas ou porcentagens dos elementos), é possível descobrir sua fórmula mínima e, sabendo a massa molar, a fórmula molecular.",
+      "secoes": [
+        { "titulo": "Composição e fórmula mínima", "texto": "Composição percentual: (massa do elemento na fórmula ÷ massa molar) × 100. Para achar a fórmula mínima: transforme as porcentagens em gramas (numa amostra de 100 g), divida cada uma pela massa atômica para ter os mols, divida todos pelo menor valor e, se preciso, multiplique para chegar a inteiros." },
+        { "titulo": "Fórmula molecular", "texto": "A fórmula molecular é um múltiplo da mínima. Divida a massa molar da substância pela massa da fórmula mínima: o resultado é o fator que multiplica os índices. A glicose tem fórmula mínima \\ce{CH2O} (30 g/mol) e massa molar 180 g/mol: 180 ÷ 30 = 6, então \\ce{C6H12O6}." }
+      ],
+      "exemplo": "40% C, 6,7% H e 53,3% O: 3,33 mol C, 6,7 mol H e 3,33 mol O. Dividindo por 3,33: 1 : 2 : 1, fórmula mínima \\ce{CH2O}.",
+      "pontosChave": [
+        "Porcentagem → gramas em 100 g → mols.",
+        "Divida pelo menor número de mols.",
+        "Fórmula molecular = fórmula mínima × fator.",
+        "Fator = massa molar ÷ massa da fórmula mínima."
+      ]
+    },
+    {
+      "subtemaId": "reac-calculo-estequiometrico",
+      "introducao": "Cálculo estequiométrico usa os coeficientes da equação balanceada para relacionar as quantidades de reagentes e produtos. Os coeficientes indicam a proporção em mols.",
+      "secoes": [
+        { "titulo": "Passo a passo", "texto": "1) Escreva e balanceie a equação. 2) Leia a proporção em mols entre a substância dada e a pedida. 3) Converta o dado para mol (dividindo pela massa molar, se for massa). 4) Aplique a proporção. 5) Converta o resultado para a unidade pedida: massa (× M), partículas (× 6,02 × 10²³) ou volume de gás." },
+        { "titulo": "Regra de três com unidades", "texto": "Monte a regra de três com a linha da equação (\"1 mol de A produz 2 mol de B\") e a linha do problema. Escreva sempre as unidades: elas mostram se a conta faz sentido. Conferir se a resposta é razoável evita erros de proporção invertida." }
+      ],
+      "exemplo": "\\ce{2H2 + O2 -> 2H2O}. Quantos gramas de água se formam com 4 g de \\ce{H2}? 4 g ÷ 2 g/mol = 2 mol de \\ce{H2} → 2 mol de \\ce{H2O} → 2 × 18 = 36 g.",
+      "pontosChave": [
+        "Balanceie a equação antes de tudo.",
+        "Coeficientes = proporção em mols.",
+        "Converta para mol, aplique a proporção, converta de volta.",
+        "Escreva as unidades em cada passo."
+      ]
+    },
+    {
+      "subtemaId": "reac-reagente-limitante",
+      "introducao": "Quando os reagentes não estão na proporção exata da equação, um deles acaba primeiro: o reagente limitante. Ele define quanto produto se forma; o outro sobra, em excesso.",
+      "secoes": [
+        { "titulo": "Como identificar", "texto": "Converta as quantidades dos reagentes para mol. Divida os mols de cada reagente pelo seu coeficiente na equação. O que der o menor valor é o limitante. Outra forma: calcule quanto do segundo reagente seria necessário para consumir todo o primeiro e compare com o que há." },
+        { "titulo": "Calculando o excesso", "texto": "Use o limitante para calcular quanto do outro reagente reage. Excesso = quantidade disponível − quantidade que reagiu. Todo cálculo de produto deve partir do limitante, nunca do reagente em excesso." }
+      ],
+      "exemplo": "\\ce{N2 + 3H2 -> 2NH3} com 2 mol de \\ce{N2} e 3 mol de \\ce{H2}: 2 ÷ 1 = 2 e 3 ÷ 3 = 1. O \\ce{H2} é o limitante. Reage 1 mol de \\ce{N2}; sobra 1 mol. Formam-se 2 mol de \\ce{NH3}.",
+      "pontosChave": [
+        "Limitante: acaba primeiro e define o produto.",
+        "Compare mols ÷ coeficiente de cada reagente.",
+        "Excesso = disponível − o que reagiu.",
+        "Calcule o produto sempre pelo limitante."
+      ]
+    },
+    {
+      "subtemaId": "reac-rendimento-pureza",
+      "introducao": "Na prática, os reagentes nem sempre são puros e as reações nem sempre produzem tudo o que a teoria prevê. Pureza e rendimento corrigem os cálculos para a realidade.",
+      "secoes": [
+        { "titulo": "Pureza", "texto": "Pureza é a porcentagem da amostra que é a substância que interessa. Antes do cálculo estequiométrico, multiplique a massa da amostra pela pureza: 200 g de calcário com 80% de \\ce{CaCO3} têm 160 g de \\ce{CaCO3}. As impurezas não participam da reação." },
+        { "titulo": "Rendimento", "texto": "Rendimento = (quantidade obtida ÷ quantidade teórica) × 100. A quantidade teórica é a calculada pela estequiometria. Para prever quanto se obtém, multiplique o teórico pelo rendimento: se o teórico é 50 g e o rendimento é 90%, obtêm-se 45 g." }
+      ],
+      "exemplo": "\\ce{CaCO3 -> CaO + CO2}: 100 g de \\ce{CaCO3} puro dão 56 g de CaO. Com 200 g de calcário a 80% e rendimento de 90%: 160 g de \\ce{CaCO3} → 89,6 g teóricos → 80,6 g obtidos.",
+      "pontosChave": [
+        "Pureza: aplique antes do cálculo.",
+        "Rendimento: aplique no produto, depois do cálculo.",
+        "Rendimento = obtido ÷ teórico × 100.",
+        "Impurezas não reagem."
+      ]
+    }
+  ]
+}

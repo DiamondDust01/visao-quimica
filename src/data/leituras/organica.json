@@ -1,0 +1,306 @@
+{
+  "area": "organica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "org-carbono-propriedades",
+      "introducao": "A Química Orgânica estuda os compostos do carbono. O carbono é especial porque faz quatro ligações e consegue se ligar a outros carbonos, formando cadeias longas e variadas.",
+      "secoes": [
+        { "titulo": "Tetravalência e cadeias", "texto": "O carbono tem 4 elétrons de valência e faz 4 ligações covalentes, que podem ser simples, duplas ou triplas (4 simples; 2 simples e 1 dupla; 1 simples e 1 tripla; ou 2 duplas). Ligando-se a outros carbonos e a H, O, N, S e halogênios, forma milhões de compostos diferentes." },
+        { "titulo": "Classificação dos carbonos", "texto": "Conte quantos outros carbonos estão ligados a ele. Primário: ligado a 1 carbono (ou a nenhum, como no metano). Secundário: a 2. Terciário: a 3. Quaternário: a 4. Ligações duplas contam como uma ligação a um carbono." }
+      ],
+      "exemplo": "No metilpropano, \\ce{CH3-CH(CH3)-CH3}, o carbono central está ligado a 3 carbonos: terciário. Os três \\ce{CH3} são primários.",
+      "pontosChave": [
+        "Carbono faz 4 ligações.",
+        "Forma cadeias com outros carbonos.",
+        "Primário, secundário, terciário e quaternário: 1, 2, 3 ou 4 carbonos vizinhos.",
+        "Liga-se também a H, O, N, S e halogênios."
+      ]
+    },
+    {
+      "subtemaId": "org-cadeias",
+      "introducao": "As cadeias carbônicas se classificam por quatro critérios: se são abertas ou fechadas, ramificadas ou não, saturadas ou não, e se têm átomos diferentes do carbono entre carbonos.",
+      "secoes": [
+        { "titulo": "Os critérios", "texto": "Aberta (acíclica) ou fechada (cíclica, em anel). Normal (uma só sequência, duas pontas) ou ramificada (três ou mais pontas). Saturada (só ligações simples entre carbonos) ou insaturada (com dupla ou tripla entre carbonos). Homogênea (só carbonos na cadeia) ou heterogênea (com heteroátomo, como O ou N, entre dois carbonos)." },
+        { "titulo": "Cadeias aromáticas", "texto": "Cadeias fechadas com o anel do benzeno (seis carbonos com ligações duplas alternadas, cujos elétrons se espalham pelo anel) são aromáticas. As cadeias fechadas sem esse anel são alicíclicas. Um oxigênio no fim da cadeia, como no álcool, não a torna heterogênea: só conta se estiver entre carbonos." }
+      ],
+      "exemplo": "\\ce{CH3-CH2-O-CH3}: aberta, normal, saturada e heterogênea (o oxigênio está entre dois carbonos).",
+      "pontosChave": [
+        "Aberta ou fechada.",
+        "Normal ou ramificada.",
+        "Saturada ou insaturada (entre carbonos).",
+        "Homogênea ou heterogênea (heteroátomo entre carbonos)."
+      ]
+    },
+    {
+      "subtemaId": "org-representacao",
+      "introducao": "Um mesmo composto orgânico pode ser escrito de várias formas, das mais detalhadas às mais resumidas. Saber passar de uma para a outra é essencial.",
+      "secoes": [
+        { "titulo": "Do detalhado ao resumido", "texto": "Fórmula estrutural plana: mostra todos os átomos e ligações. Condensada: agrupa os hidrogênios de cada carbono, como \\ce{CH3-CH2-OH}. Molecular: só conta os átomos, como \\ce{C2H6O}, e não diferencia isômeros." },
+        { "titulo": "Fórmula de linha (bastão)", "texto": "Cada ponta e cada vértice da linha é um carbono; os hidrogênios ligados aos carbonos não aparecem, e cada carbono tem tantos H quanto faltam para completar 4 ligações. Heteroátomos (O, N, Cl) e os H ligados a eles são escritos. Duplas e triplas aparecem como linhas duplas e triplas." }
+      ],
+      "exemplo": "Um zigue-zague de 4 pontos é o butano: os carbonos das pontas têm 3 H cada (1 ligação a carbono) e os do meio, 2 H cada. Fórmula molecular: \\ce{C4H10}.",
+      "pontosChave": [
+        "Estrutural: todos os átomos e ligações.",
+        "Condensada: H agrupados por carbono.",
+        "Linha: cada vértice e ponta é um carbono.",
+        "Complete cada carbono com H até 4 ligações."
+      ]
+    },
+    {
+      "subtemaId": "org-hidrocarbonetos",
+      "introducao": "Hidrocarbonetos são compostos formados só por carbono e hidrogênio. São a base do petróleo, do gás natural e de muitos combustíveis.",
+      "secoes": [
+        { "titulo": "Cadeias abertas", "texto": "Alcanos: só ligações simples, fórmula \\ce{C_nH_{2n+2}} (metano, propano). Alcenos: uma dupla, \\ce{C_nH_{2n}} (eteno). Alcinos: uma tripla, \\ce{C_nH_{2n-2}} (etino, o acetileno). Alcadienos: duas duplas, também \\ce{C_nH_{2n-2}}." },
+        { "titulo": "Cadeias fechadas", "texto": "Ciclanos: anel com ligações simples, \\ce{C_nH_{2n}} (ciclo-hexano). Ciclenos: anel com uma dupla, \\ce{C_nH_{2n-2}}. Aromáticos: com anel benzênico (benzeno, \\ce{C6H6}; tolueno; naftaleno). Ciclanos e alcenos com o mesmo n têm a mesma fórmula geral." }
+      ],
+      "exemplo": "\\ce{C3H6} pode ser o propeno (alceno) ou o ciclopropano (ciclano): os dois seguem \\ce{C_nH_{2n}}.",
+      "pontosChave": [
+        "Só C e H.",
+        "Alcano \\ce{C_nH_{2n+2}}; alceno \\ce{C_nH_{2n}}; alcino \\ce{C_nH_{2n-2}}.",
+        "Ciclano tem a mesma fórmula geral que o alceno.",
+        "Aromáticos têm o anel do benzeno."
+      ]
+    },
+    {
+      "subtemaId": "org-oxigenadas",
+      "introducao": "Funções oxigenadas têm oxigênio no grupo funcional, o grupo de átomos que dá as propriedades características do composto.",
+      "secoes": [
+        { "titulo": "Com o oxigênio em ligação simples", "texto": "Álcool: –OH ligado a carbono saturado (etanol, \\ce{CH3CH2OH}). Fenol: –OH ligado direto ao anel aromático. Éter: oxigênio entre dois carbonos, R–O–R' (éter dietílico)." },
+        { "titulo": "Com a carbonila (C=O)", "texto": "Aldeído: C=O na ponta da cadeia, com um H, –CHO (metanal, o formol). Cetona: C=O entre dois carbonos (propanona, a acetona). Ácido carboxílico: –COOH (ácido acético, do vinagre). Éster: –COO– entre dois carbonos, formado de ácido e álcool (aromas de frutas)." }
+      ],
+      "exemplo": "\\ce{CH3COOCH2CH3}: o grupo –COO– entre carbonos indica um éster, o acetato de etila (removedor de esmalte).",
+      "pontosChave": [
+        "Álcool: OH em carbono saturado; fenol: OH no anel.",
+        "Éter: C–O–C.",
+        "Aldeído: CHO na ponta; cetona: C=O no meio.",
+        "Ácido: COOH; éster: COO entre carbonos."
+      ]
+    },
+    {
+      "subtemaId": "org-nitrogenadas-halogenadas",
+      "introducao": "Funções nitrogenadas têm nitrogênio no grupo funcional; haletos orgânicos têm halogênio (F, Cl, Br, I) ligado a carbono.",
+      "secoes": [
+        { "titulo": "Nitrogenadas", "texto": "Amina: derivada da amônia, com carbonos no lugar dos H (metilamina, \\ce{CH3NH2}); primária, secundária ou terciária conforme o número de carbonos no N. Amida: N ligado a carbonila, –CONH₂ (ureia). Nitrila: –C≡N. Nitrocomposto: –NO₂ ligado a carbono (nitrobenzeno, TNT)." },
+        { "titulo": "Haletos orgânicos", "texto": "Têm halogênio no lugar de um hidrogênio: clorometano (\\ce{CH3Cl}), triclorometano (clorofórmio), os CFCs. São muito usados como solventes e matérias-primas; alguns são tóxicos ou prejudicam a camada de ozônio." }
+      ],
+      "exemplo": "Amina × amida: em \\ce{CH3CH2NH2} o N está ligado a carbono comum (amina); em \\ce{CH3CONH2} ele está ligado ao carbono da carbonila (amida).",
+      "pontosChave": [
+        "Amina: derivada da amônia.",
+        "Amida: N ligado a C=O.",
+        "Nitrila: C≡N; nitrocomposto: NO₂.",
+        "Haleto: halogênio ligado a carbono."
+      ]
+    },
+    {
+      "subtemaId": "org-propriedades-fisicas",
+      "introducao": "As propriedades físicas dos compostos orgânicos dependem do tamanho da molécula e do tipo de interação entre as moléculas, que vem do grupo funcional.",
+      "secoes": [
+        { "titulo": "Ebulição e solubilidade", "texto": "Hidrocarbonetos são apolares: interações fracas, pontos de ebulição baixos e insolúveis em água. Grupos que fazem ligação de hidrogênio (–OH, –COOH, –NH) aumentam o ponto de ebulição e a solubilidade em água. Mas, quanto maior a cadeia carbônica, menos solúvel em água a substância fica: metanol e etanol se misturam com a água; o octanol, quase não." },
+        { "titulo": "Acidez relativa", "texto": "Ácidos carboxílicos são os mais ácidos entre os orgânicos comuns, mas são ácidos fracos. Fenóis são menos ácidos que eles, e álcoois quase não têm caráter ácido em água. Ordem: ácido carboxílico > fenol > água > álcool. As aminas têm caráter básico." }
+      ],
+      "exemplo": "Ácido acético ferve a 118 °C e o butano, de massa parecida, a −1 °C: o ácido faz ligações de hidrogênio.",
+      "pontosChave": [
+        "Ligação de hidrogênio aumenta PE e solubilidade em água.",
+        "Cadeia maior: menos solúvel em água.",
+        "Acidez: carboxílico > fenol > água > álcool.",
+        "Aminas são básicas."
+      ]
+    },
+    {
+      "subtemaId": "org-nomenclatura-hidrocarbonetos",
+      "introducao": "Pela IUPAC, o nome de um hidrocarboneto tem três partes: prefixo (número de carbonos), infixo (tipo de ligação) e sufixo (a função; para hidrocarboneto, -o).",
+      "secoes": [
+        { "titulo": "Prefixo e infixo", "texto": "Prefixos: 1 met, 2 et, 3 prop, 4 but, 5 pent, 6 hex, 7 hept, 8 oct, 9 non, 10 dec. Infixos: -an- (só simples), -en- (uma dupla), -in- (uma tripla), -dien- (duas duplas). Assim: propano, propeno, propino." },
+        { "titulo": "Ramificações e numeração", "texto": "Escolha a cadeia principal: a mais longa que contenha as duplas ou triplas. Numere a partir da ponta mais perto da insaturação (ou, se não houver, das ramificações). Ramificações terminam em -il (metil, etil) e vêm antes do nome principal, em ordem alfabética, com a posição: 2-metilbutano; dimetil, trimetil quando se repetem." }
+      ],
+      "exemplo": "\\ce{CH2=CH-CH(CH3)-CH3}: cadeia de 4 carbonos com dupla no carbono 1 e metil no 3: 3-metilbut-1-eno.",
+      "pontosChave": [
+        "Prefixo: número de carbonos.",
+        "Infixo: an, en, in.",
+        "Sufixo -o para hidrocarbonetos.",
+        "Numere pela ponta mais perto da insaturação."
+      ]
+    },
+    {
+      "subtemaId": "org-nomenclatura-funcoes",
+      "introducao": "Os compostos das outras funções seguem a mesma lógica de prefixo e infixo, trocando o sufixo pelo da função e numerando a partir da ponta mais perto do grupo funcional.",
+      "secoes": [
+        { "titulo": "Sufixos", "texto": "Álcool: -ol (etanol, propan-2-ol). Aldeído: -al (etanal). Cetona: -ona (propanona, butan-2-ona). Ácido carboxílico: ácido ...-oico (ácido etanoico). Amina: ...-amina (metanamina, ou metilamina). Éster: ...-oato de ...-ila (etanoato de metila). Éter: ...-oxi...-ano (metoxietano)." },
+        { "titulo": "Numeração", "texto": "O grupo funcional deve ficar com o menor número possível. Em aldeídos e ácidos carboxílicos, o carbono do grupo é sempre o 1, então não precisa de número. Quando a posição muda o composto (propan-1-ol × propan-2-ol), o número é obrigatório." }
+      ],
+      "exemplo": "\\ce{CH3-CO-CH2-CH3}: 4 carbonos, cetona no carbono 2: butan-2-ona (ou butanona).",
+      "pontosChave": [
+        "-ol álcool; -al aldeído; -ona cetona.",
+        "Ácido ...-oico; éster ...-oato de ...-ila.",
+        "Grupo funcional com o menor número.",
+        "Em aldeído e ácido, o grupo é o carbono 1."
+      ]
+    },
+    {
+      "subtemaId": "org-isomeria-plana",
+      "introducao": "Isômeros são compostos diferentes com a mesma fórmula molecular. Na isomeria plana, a diferença aparece já na fórmula estrutural plana.",
+      "secoes": [
+        { "titulo": "Os tipos", "texto": "De cadeia: muda o tipo de cadeia (butano × metilpropano). De posição: mesma cadeia e função, muda a posição de um grupo ou insaturação (propan-1-ol × propan-2-ol). De função: funções diferentes (etanol × metoximetano). De compensação ou metameria: muda a posição do heteroátomo (metoxipropano × etoxietano)." },
+        { "titulo": "Tautomeria", "texto": "Caso especial de isomeria de função em que os dois isômeros se convertem um no outro continuamente, em equilíbrio. O mais comum é o equilíbrio entre um enol (OH num carbono de dupla) e um aldeído ou cetona: o H muda de lugar e a dupla também." }
+      ],
+      "exemplo": "\\ce{C3H6O}: propanal (aldeído) e propanona (cetona) são isômeros de função.",
+      "pontosChave": [
+        "Isômeros: mesma fórmula molecular.",
+        "Cadeia, posição, função e compensação.",
+        "Metameria: muda o lugar do heteroátomo.",
+        "Tautomeria: equilíbrio entre os isômeros."
+      ]
+    },
+    {
+      "subtemaId": "org-isomeria-geometrica",
+      "introducao": "Na isomeria geométrica (cis-trans), os isômeros têm a mesma ligação entre os átomos, mas diferem na posição dos grupos no espaço, porque a dupla ou o anel impede a rotação.",
+      "secoes": [
+        { "titulo": "Condições", "texto": "Em cadeias abertas: precisa haver uma ligação dupla entre carbonos, e cada carbono da dupla deve ter dois ligantes diferentes entre si. Se um dos carbonos tiver dois ligantes iguais (como \\ce{=CH2}), não há isomeria. Em anéis: dois carbonos do anel com ligantes diferentes cada um." },
+        { "titulo": "Cis, trans e E/Z", "texto": "Cis: os grupos iguais (ou maiores) do mesmo lado da dupla. Trans: em lados opostos. Quando os quatro ligantes são todos diferentes, usa-se E/Z: compara-se a prioridade (maior número atômico) dos grupos de cada carbono; Z quando os de maior prioridade estão do mesmo lado, E quando estão em lados opostos." }
+      ],
+      "exemplo": "But-2-eno, \\ce{CH3-CH=CH-CH3}: cada carbono da dupla tem H e \\ce{CH3}. Há cis-but-2-eno e trans-but-2-eno. O but-1-eno não tem isomeria geométrica.",
+      "pontosChave": [
+        "Precisa de dupla (ou anel) que impede a rotação.",
+        "Cada carbono da dupla com dois ligantes diferentes.",
+        "Cis: mesmo lado; trans: lados opostos.",
+        "E/Z quando os ligantes são todos diferentes."
+      ]
+    },
+    {
+      "subtemaId": "org-isomeria-optica",
+      "introducao": "Na isomeria óptica, os isômeros são imagens um do outro num espelho e não se sobrepõem, como as mãos direita e esquerda. Eles desviam a luz polarizada em sentidos opostos.",
+      "secoes": [
+        { "titulo": "Carbono assimétrico", "texto": "O caso mais comum é o carbono quiral (assimétrico), ligado a quatro grupos diferentes, marcado com asterisco (C*). Uma molécula com um carbono quiral tem dois isômeros ópticos: os enantiômeros. Com n carbonos quirais diferentes, há até 2ⁿ isômeros ópticos." },
+        { "titulo": "Dextrogiro, levogiro e racêmica", "texto": "O enantiômero que desvia a luz polarizada para a direita é dextrogiro (+ ou d); para a esquerda, levogiro (− ou l). Os desvios têm o mesmo valor. A mistura racêmica tem quantidades iguais dos dois e não desvia a luz, porque os efeitos se anulam. No corpo, os enantiômeros podem ter efeitos bem diferentes." }
+      ],
+      "exemplo": "Ácido lático, \\ce{CH3-CH(OH)-COOH}: o carbono do meio tem H, OH, \\ce{CH3} e COOH, quatro grupos diferentes. É quiral e tem dois enantiômeros.",
+      "pontosChave": [
+        "Carbono quiral: quatro ligantes diferentes.",
+        "Enantiômeros: imagens especulares não sobreponíveis.",
+        "Dextrogiro: direita; levogiro: esquerda.",
+        "Racêmica: 50% de cada, não desvia a luz."
+      ]
+    },
+    {
+      "subtemaId": "org-substituicao",
+      "introducao": "Numa reação de substituição, um átomo ou grupo da molécula, em geral um hidrogênio, é trocado por outro. É típica de alcanos e de compostos aromáticos.",
+      "secoes": [
+        { "titulo": "Em alcanos", "texto": "A halogenação ocorre com luz ou calor: \\ce{CH4 + Cl2 -> CH3Cl + HCl}. O halogênio entra preferencialmente no carbono terciário, depois no secundário e por último no primário, porque esses hidrogênios saem mais facilmente." },
+        { "titulo": "Em aromáticos e orientação", "texto": "O benzeno prefere substituição a adição, para manter o anel aromático estável. Exemplos: halogenação (com catalisador, como \\ce{FeBr3}), nitração (com \\ce{HNO3} e \\ce{H2SO4}, formando nitrobenzeno) e sulfonação. Um grupo já presente orienta o próximo: –OH, –NH₂, \\ce{-CH3} e halogênios dirigem para orto e para; –NO₂, –COOH e –CHO dirigem para meta." }
+      ],
+      "exemplo": "Benzeno + \\ce{HNO3} (com \\ce{H2SO4}) → nitrobenzeno + água: o grupo –NO₂ substitui um hidrogênio do anel.",
+      "pontosChave": [
+        "Substituição: troca de um H por outro grupo.",
+        "Alcanos: halogenação com luz ou calor.",
+        "Aromáticos: halogenação, nitração, sulfonação.",
+        "Orto-para: OH, \\ce{NH2}, \\ce{CH3}, halogênios; meta: \\ce{NO2}, COOH, CHO."
+      ]
+    },
+    {
+      "subtemaId": "org-adicao",
+      "introducao": "Numa reação de adição, uma molécula se junta à ligação dupla ou tripla, que se abre. É típica de alcenos e alcinos.",
+      "secoes": [
+        { "titulo": "Tipos de adição", "texto": "Hidrogenação: adição de \\ce{H2} com catalisador (Ni, Pt), transformando alceno em alcano (usada na margarina). Halogenação: adição de \\ce{Cl2} ou \\ce{Br2}; a água de bromo descora, o que identifica a insaturação. Hidratação: adição de água com ácido, formando álcool. Adição de HX (HCl, HBr), formando haleto." },
+        { "titulo": "Regra de Markovnikov", "texto": "Quando um HX ou água se adiciona a um alceno não simétrico, o H entra no carbono da dupla que já tem mais hidrogênios, e o X (ou o OH) vai para o carbono com menos hidrogênios. Em alcinos, a adição pode acontecer duas vezes, porque a tripla abre em duas etapas." }
+      ],
+      "exemplo": "Propeno + HBr → 2-bromopropano (e não 1-bromopropano): o H entra no \\ce{CH2} da dupla e o Br vai para o CH do meio.",
+      "pontosChave": [
+        "Adição abre a dupla ou a tripla.",
+        "Hidrogenação: alceno → alcano.",
+        "Água de bromo descora com insaturação.",
+        "Markovnikov: H no carbono mais hidrogenado."
+      ]
+    },
+    {
+      "subtemaId": "org-eliminacao",
+      "introducao": "Na eliminação, átomos ou grupos saem de carbonos vizinhos e forma-se uma ligação dupla. É o caminho inverso da adição.",
+      "secoes": [
+        { "titulo": "Desidratação de álcoois", "texto": "Com ácido sulfúrico concentrado e aquecimento, o álcool perde água. Desidratação intramolecular (temperatura mais alta, cerca de 170 °C no etanol): sai água de uma mesma molécula e forma-se um alceno. Intermolecular (temperatura mais baixa, cerca de 140 °C): sai água de duas moléculas e forma-se um éter." },
+        { "titulo": "Haletos e regra de Zaitsev", "texto": "Haletos orgânicos tratados com base forte (KOH em álcool) perdem HX e formam alceno. Quando há mais de uma possibilidade, forma-se preferencialmente o alceno mais substituído (regra de Zaitsev): o H sai do carbono vizinho com menos hidrogênios. Eliminação e substituição competem; temperatura alta e base forte favorecem a eliminação." }
+      ],
+      "exemplo": "Butan-2-ol desidratado forma principalmente but-2-eno (mais substituído), e menos but-1-eno.",
+      "pontosChave": [
+        "Eliminação forma ligação dupla.",
+        "Intramolecular: alceno; intermolecular: éter.",
+        "Zaitsev: forma o alceno mais substituído.",
+        "Calor e base forte favorecem eliminação."
+      ]
+    },
+    {
+      "subtemaId": "org-oxidacao",
+      "introducao": "Em Química Orgânica, oxidar costuma significar ganhar oxigênio ou perder hidrogênio no carbono. Os oxidantes mais comuns são o permanganato e o dicromato de potássio.",
+      "secoes": [
+        { "titulo": "Oxidação de álcoois", "texto": "Álcool primário oxida a aldeído e, continuando, a ácido carboxílico. Álcool secundário oxida a cetona. Álcool terciário não oxida nessas condições, porque o carbono do OH não tem hidrogênio. O bafômetro antigo usava essa reação: o dicromato laranja fica verde ao oxidar o etanol." },
+        { "titulo": "Ozonólise e combustão", "texto": "Na ozonólise, o ozônio quebra a ligação dupla de um alceno, formando aldeídos ou cetonas, o que revela a posição da dupla. Combustão completa: o composto queima com oxigênio suficiente e forma \\ce{CO2} e água. Combustão incompleta (pouco oxigênio): forma CO, que é tóxico, ou fuligem (carbono)." }
+      ],
+      "exemplo": "Etanol → etanal → ácido etanoico: é por isso que o vinho aberto por muito tempo vira vinagre.",
+      "pontosChave": [
+        "Primário → aldeído → ácido.",
+        "Secundário → cetona.",
+        "Terciário não oxida.",
+        "Combustão incompleta forma CO ou fuligem."
+      ]
+    },
+    {
+      "subtemaId": "org-esterificacao-saponificacao",
+      "introducao": "Ésteres são formados pela reação de um ácido carboxílico com um álcool. A reação inversa, com água ou com base, quebra o éster: é a hidrólise, e a feita com base é a saponificação.",
+      "secoes": [
+        { "titulo": "Esterificação", "texto": "Ácido carboxílico + álcool ⇌ éster + água, com ácido como catalisador e em equilíbrio. A água se forma com o OH do ácido e o H do álcool. Ésteres dão aroma a frutas e são usados em essências: acetato de isoamila (banana), butanoato de etila (abacaxi)." },
+        { "titulo": "Saponificação", "texto": "Óleos e gorduras são triésteres do glicerol (triglicerídeos). Com base forte (NaOH ou KOH) e calor, eles formam glicerol e sais de ácidos graxos: o sabão. O sabão tem uma ponta polar (que se liga à água) e uma cauda apolar (que se liga à gordura), e forma micelas que arrastam a sujeira." }
+      ],
+      "exemplo": "\\ce{CH3COOH + CH3CH2OH <=> CH3COOCH2CH3 + H2O}: ácido acético + etanol formam acetato de etila e água.",
+      "pontosChave": [
+        "Ácido + álcool ⇌ éster + água.",
+        "Hidrólise desfaz o éster.",
+        "Saponificação: gordura + base → sabão + glicerol.",
+        "Sabão: ponta polar e cauda apolar."
+      ]
+    },
+    {
+      "subtemaId": "org-polimeros-adicao",
+      "introducao": "Polímeros são moléculas gigantes formadas pela repetição de unidades menores, os monômeros. Nos polímeros de adição, monômeros com ligação dupla se juntam um a um, sem perder nenhum átomo.",
+      "secoes": [
+        { "titulo": "Como se formam", "texto": "A ligação dupla do monômero se abre e cada unidade se liga à seguinte, formando uma cadeia longa. O polímero tem a mesma fórmula mínima do monômero, porque nada sai. Para achar o monômero, olhe a unidade que se repete e coloque de volta a dupla entre os dois carbonos da cadeia principal." },
+        { "titulo": "Exemplos", "texto": "Polietileno (PE), do eteno: sacolas e garrafas. Polipropileno (PP), do propeno: potes e para-choques. PVC, do cloreto de vinila: canos. Poliestireno (PS), do estireno: copos descartáveis e isopor. Teflon (PTFE), do tetrafluoroeteno: panelas antiaderentes." }
+      ],
+      "exemplo": "n \\ce{CH2=CH2} → –(\\ce{CH2-CH2})n–: o eteno vira polietileno, sem perder átomos.",
+      "pontosChave": [
+        "Monômeros com dupla.",
+        "A dupla se abre e as unidades se ligam.",
+        "Nenhum átomo sai na reação.",
+        "PE, PP, PVC, PS e teflon são de adição."
+      ]
+    },
+    {
+      "subtemaId": "org-polimeros-condensacao",
+      "introducao": "Nos polímeros de condensação, dois grupos funcionais diferentes reagem entre si e, a cada ligação formada, sai uma molécula pequena, em geral água.",
+      "secoes": [
+        { "titulo": "Poliésteres e poliamidas", "texto": "Poliéster: diácido + diálcool, unidos por ligações éster, com saída de água. O PET das garrafas é um poliéster. Poliamida: diácido + diamina, unidos por ligações amida. O náilon é uma poliamida, assim como as fibras de aramida (Kevlar)." },
+        { "titulo": "Na natureza", "texto": "Os polímeros naturais também se formam por condensação: proteínas são poliamidas de aminoácidos (ligações peptídicas); amido e celulose são polímeros de glicose, unidos com saída de água. Para que a cadeia cresça, cada monômero precisa ter dois grupos reativos." }
+      ],
+      "exemplo": "Ácido tereftálico + etilenoglicol → PET + água. A cada ligação éster formada, sai uma molécula de água.",
+      "pontosChave": [
+        "Condensação: sai uma molécula pequena (água).",
+        "Poliéster: diácido + diálcool (PET).",
+        "Poliamida: diácido + diamina (náilon).",
+        "Proteínas, amido e celulose também são de condensação."
+      ]
+    },
+    {
+      "subtemaId": "org-polimeros-reciclagem",
+      "introducao": "Os plásticos são polímeros sintéticos. A forma de reciclá-los e o impacto que causam no ambiente dependem do tipo de polímero.",
+      "secoes": [
+        { "titulo": "Termoplásticos e termofixos", "texto": "Termoplásticos (PE, PP, PET, PVC, PS) amolecem com o calor e podem ser derretidos e moldados de novo: são recicláveis mecanicamente. Termofixos (baquelite, resinas de epóxi) endurecem de vez ao serem moldados; aquecidos, decompõem-se, o que dificulta a reciclagem." },
+        { "titulo": "Símbolos e impacto", "texto": "O triângulo de setas com um número identifica o plástico: 1 PET, 2 PEAD, 3 PVC, 4 PEBD, 5 PP, 6 PS, 7 outros. A maioria dos plásticos não é biodegradável e pode durar séculos no ambiente, fragmentando-se em microplásticos que chegam à água e aos seres vivos. Reduzir, reutilizar e separar para a reciclagem diminuem o problema." }
+      ],
+      "exemplo": "Uma garrafa com o símbolo 1 é de PET: pode virar fibra para tecido ou uma nova embalagem.",
+      "pontosChave": [
+        "Termoplástico: amolece e pode ser reciclado.",
+        "Termofixo: não amolece; difícil de reciclar.",
+        "Número no símbolo identifica o plástico.",
+        "Microplásticos são fragmentos que se acumulam no ambiente."
+      ]
+    }
+  ]
+}

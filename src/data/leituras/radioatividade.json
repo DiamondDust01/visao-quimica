@@ -1,0 +1,81 @@
+{
+  "area": "radioatividade",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "rad-emissoes",
+      "introducao": "Núcleos instáveis emitem radiação para ficar mais estáveis. As três emissões principais são alfa (α), beta (β) e gama (γ), com características bem diferentes.",
+      "secoes": [
+        { "titulo": "Natureza e carga", "texto": "Alfa: 2 prótons e 2 nêutrons (um núcleo de hélio), carga +2, massa 4. Beta: um elétron emitido pelo núcleo quando um nêutron vira próton; carga −1, massa praticamente zero. Gama: onda eletromagnética de alta energia, sem carga e sem massa; costuma acompanhar as outras emissões." },
+        { "titulo": "Poder de penetração", "texto": "Alfa é a menos penetrante: uma folha de papel ou a pele a barram, mas é perigosa se inalada ou ingerida. Beta atravessa o papel e é barrada por alumínio de alguns milímetros. Gama é a mais penetrante: só é atenuada por chumbo espesso ou concreto. Em campo elétrico, alfa desvia para o polo negativo, beta para o positivo e gama não desvia." }
+      ],
+      "exemplo": "Detectores de fumaça usam amerício-241, emissor alfa: a radiação, de pouco alcance, fica contida no aparelho.",
+      "pontosChave": [
+        "Alfa: \\ce{^4_2He}, +2, pouco penetrante.",
+        "Beta: elétron, −1, penetração média.",
+        "Gama: onda, sem carga, muito penetrante.",
+        "Papel barra alfa; alumínio barra beta; chumbo atenua gama."
+      ]
+    },
+    {
+      "subtemaId": "rad-equacoes-nucleares",
+      "introducao": "Numa equação nuclear, o núcleo muda: pode virar outro elemento. Mesmo assim, a soma dos números de massa (A) e a soma das cargas (Z) se conservam dos dois lados.",
+      "secoes": [
+        { "titulo": "Efeito de cada emissão", "texto": "Emissão alfa: A diminui 4 e Z diminui 2 (o elemento recua duas casas na tabela). Emissão beta: A não muda e Z aumenta 1 (avança uma casa). Emissão gama: não muda A nem Z. Escreva a partícula com A em cima e Z embaixo: alfa \\ce{^4_2He}, beta \\ce{^0_{-1}e}." },
+        { "titulo": "Séries de decaimento", "texto": "Alguns núcleos pesados decaem várias vezes até chegar a um núcleo estável, como o urânio-238, que termina em chumbo-206. Para descobrir quantas emissões houve: o número de alfas vem da variação de A ÷ 4; depois, o número de betas é o que falta para acertar Z." }
+      ],
+      "exemplo": "\\ce{^{238}_{92}U -> ^{234}_{90}Th + ^4_2He}. Confere: 238 = 234 + 4 e 92 = 90 + 2.",
+      "pontosChave": [
+        "A e Z se conservam na equação.",
+        "Alfa: A − 4, Z − 2.",
+        "Beta: A igual, Z + 1.",
+        "Número de alfas = ΔA ÷ 4."
+      ]
+    },
+    {
+      "subtemaId": "rad-meia-vida",
+      "introducao": "Meia-vida é o tempo para que metade dos núcleos radioativos de uma amostra decaia. Ela é característica de cada isótopo e não depende da quantidade, da temperatura ou da pressão.",
+      "secoes": [
+        { "titulo": "Calculando", "texto": "A cada meia-vida, a quantidade cai pela metade: 100% → 50% → 25% → 12,5%... Depois de n meias-vidas, resta (1/2)ⁿ da amostra inicial. Tempo total = n × meia-vida. A curva de decaimento nunca chega a zero, mas fica cada vez mais próxima." },
+        { "titulo": "Datação por carbono-14", "texto": "Seres vivos mantêm uma proporção constante de carbono-14 enquanto vivem. Depois da morte, o C-14 decai com meia-vida de cerca de 5 730 anos e não é reposto. Medindo quanto resta, estima-se há quanto tempo o organismo morreu. Funciona para materiais orgânicos de até cerca de 50 000 anos." }
+      ],
+      "exemplo": "Iodo-131 tem meia-vida de 8 dias. De 80 mg, após 24 dias (3 meias-vidas) restam 80 ÷ 2 ÷ 2 ÷ 2 = 10 mg.",
+      "pontosChave": [
+        "Cada meia-vida reduz a amostra à metade.",
+        "Resta (1/2)ⁿ depois de n meias-vidas.",
+        "Meia-vida não muda com temperatura ou pressão.",
+        "C-14: cerca de 5 730 anos, para datar material orgânico."
+      ]
+    },
+    {
+      "subtemaId": "rad-fissao-fusao",
+      "introducao": "Fissão e fusão nuclear liberam quantidades enormes de energia, porque uma pequena parte da massa dos núcleos se transforma em energia (E = mc²).",
+      "secoes": [
+        { "titulo": "Fissão e reação em cadeia", "texto": "Fissão é a divisão de um núcleo pesado, como o urânio-235, quando ele absorve um nêutron: formam-se dois núcleos menores e 2 ou 3 nêutrons. Esses nêutrons podem quebrar outros núcleos, numa reação em cadeia. Nas usinas, barras de controle absorvem nêutrons para manter a reação estável; o calor gera vapor, que move turbinas. Na bomba atômica, a cadeia é descontrolada." },
+        { "titulo": "Fusão", "texto": "Fusão é a união de núcleos leves, como os isótopos do hidrogênio, formando um núcleo mais pesado, como o hélio. Ela exige temperaturas de milhões de graus e é a fonte de energia do Sol e das estrelas. Libera mais energia por massa que a fissão e gera menos resíduo radioativo, mas ainda não é usada comercialmente em usinas." }
+      ],
+      "exemplo": "Angra 1 e Angra 2, no Rio de Janeiro, são usinas de fissão: usam urânio enriquecido para aquecer água e gerar eletricidade.",
+      "pontosChave": [
+        "Fissão: núcleo pesado se divide.",
+        "Reação em cadeia: nêutrons liberados quebram outros núcleos.",
+        "Fusão: núcleos leves se unem, como no Sol.",
+        "Energia vem da massa perdida (E = mc²)."
+      ]
+    },
+    {
+      "subtemaId": "rad-aplicacoes-riscos",
+      "introducao": "A radiação tem muitos usos benéficos, desde que manuseada com controle. Em excesso, pode danificar células e o DNA.",
+      "secoes": [
+        { "titulo": "Aplicações", "texto": "Medicina: exames com radiofármacos (tecnécio-99m), radioterapia contra tumores (cobalto-60) e iodo-131 no tratamento da tireoide. Indústria: radiografia de soldas e medidores de espessura. Alimentos: irradiação com gama mata micro-organismos e aumenta a validade, sem deixar o alimento radioativo. Esterilização de seringas e curativos. Datação de fósseis." },
+        { "titulo": "Proteção e acidentes", "texto": "Três regras de proteção: menos tempo de exposição, mais distância da fonte e blindagem adequada (chumbo, concreto). O símbolo do trifólio indica material radioativo. Em 1987, em Goiânia, uma cápsula de césio-137 de um aparelho de radioterapia abandonado foi aberta num ferro-velho e contaminou centenas de pessoas: o maior acidente radiológico do Brasil." }
+      ],
+      "exemplo": "No exame de cintilografia, o paciente recebe uma pequena dose de tecnécio-99m, que tem meia-vida de 6 horas e sai rápido do corpo.",
+      "pontosChave": [
+        "Usos: diagnóstico, radioterapia, esterilização, conservação de alimentos.",
+        "Alimento irradiado não fica radioativo.",
+        "Proteção: tempo, distância e blindagem.",
+        "Goiânia (1987): acidente com césio-137."
+      ]
+    }
+  ]
+}

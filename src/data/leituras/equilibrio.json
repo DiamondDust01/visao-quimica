@@ -1,0 +1,126 @@
+{
+  "area": "equilibrio",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "eq-equilibrio-dinamico",
+      "introducao": "Uma reação reversível acontece nos dois sentidos ao mesmo tempo: reagentes formam produtos e produtos voltam a formar reagentes. Em sistema fechado, ela chega a um equilíbrio.",
+      "secoes": [
+        { "titulo": "Igualdade de velocidades", "texto": "No começo, a reação direta é rápida e a inversa, lenta. Com o tempo, a direta desacelera (menos reagente) e a inversa acelera (mais produto), até as duas velocidades ficarem iguais. A partir daí, as concentrações param de mudar, mas as reações continuam: por isso o equilíbrio é dinâmico." },
+        { "titulo": "Concentrações iguais? Não", "texto": "No equilíbrio, as velocidades são iguais, não as concentrações. Pode haver muito mais produto que reagente, ou o contrário. O que caracteriza o equilíbrio é que as concentrações ficam constantes, enquanto as condições não mudam." }
+      ],
+      "exemplo": "Num refrigerante fechado, \\ce{CO2(g) <=> CO2(aq)}: o gás entra e sai do líquido o tempo todo, na mesma velocidade, e a pressão dentro da garrafa fica constante.",
+      "pontosChave": [
+        "Equilíbrio: velocidade direta = velocidade inversa.",
+        "As reações continuam: equilíbrio dinâmico.",
+        "Concentrações constantes, não necessariamente iguais.",
+        "Precisa de sistema fechado."
+      ]
+    },
+    {
+      "subtemaId": "eq-kc-kp",
+      "introducao": "A constante de equilíbrio relaciona as quantidades de produtos e de reagentes quando o equilíbrio é atingido. Ela tem um valor fixo para cada reação numa dada temperatura.",
+      "secoes": [
+        { "titulo": "Montando a expressão", "texto": "Para aA + bB ⇌ cC + dD: Kc = [C]ᶜ[D]ᵈ ÷ ([A]ᵃ[B]ᵇ), com concentrações em mol/L no equilíbrio. Sólidos e líquidos puros não entram na expressão. Kp usa as pressões parciais dos gases no lugar das concentrações. Os dois se ligam por Kp = Kc(RT)^Δn, em que Δn é a variação de mols de gás." },
+        { "titulo": "O que o valor indica", "texto": "K muito maior que 1: no equilíbrio há muito mais produto; a reação vai quase até o fim. K muito menor que 1: predominam os reagentes. K só muda com a temperatura; mudar concentrações ou usar catalisador não altera K." }
+      ],
+      "exemplo": "\\ce{N2(g) + 3H2(g) <=> 2NH3(g)}: Kc = [\\ce{NH3}]² ÷ ([\\ce{N2}][\\ce{H2}]³).",
+      "pontosChave": [
+        "K = produtos elevados aos coeficientes ÷ reagentes.",
+        "Sólidos e líquidos puros ficam fora.",
+        "K grande: favorece produtos.",
+        "K só muda com a temperatura."
+      ]
+    },
+    {
+      "subtemaId": "eq-le-chatelier",
+      "introducao": "Pelo princípio de Le Chatelier, quando um equilíbrio é perturbado, ele se desloca no sentido que diminui a perturbação, até atingir um novo equilíbrio.",
+      "secoes": [
+        { "titulo": "Concentração e pressão", "texto": "Acrescentar uma substância desloca o equilíbrio para o lado que a consome; retirar desloca para o lado que a produz. Aumentar a pressão (diminuindo o volume) desloca para o lado com menos mols de gás; diminuir, para o lado com mais. Se os dois lados têm o mesmo número de mols de gás, a pressão não desloca." },
+        { "titulo": "Temperatura e catalisador", "texto": "Aquecer favorece o sentido endotérmico (que absorve calor); esfriar favorece o exotérmico. A temperatura é o único fator que muda o valor de K. O catalisador não desloca o equilíbrio: só faz ele ser atingido mais rápido." }
+      ],
+      "exemplo": "\\ce{N2 + 3H2 <=> 2NH3}, ΔH < 0. Para obter mais amônia: aumentar a pressão (4 mols de gás viram 2), retirar a amônia formada e evitar temperatura muito alta.",
+      "pontosChave": [
+        "O equilíbrio se desloca para diminuir a perturbação.",
+        "Mais pressão: lado com menos mols de gás.",
+        "Aquecer: favorece o sentido endotérmico.",
+        "Catalisador não desloca; temperatura muda K."
+      ]
+    },
+    {
+      "subtemaId": "eq-ph-poh",
+      "introducao": "A água pura se ioniza um pouquinho: \\ce{H2O <=> H+ + OH-}. A 25 °C, [\\ce{H+}] × [\\ce{OH-}] = 1 × 10⁻¹⁴, o produto iônico da água (Kw). O pH mede a acidez a partir de [\\ce{H+}].",
+      "secoes": [
+        { "titulo": "pH e pOH", "texto": "pH = −log[\\ce{H+}] e pOH = −log[\\ce{OH-}]. A 25 °C, pH + pOH = 14. pH 7: neutro; menor que 7: ácido; maior que 7: básico. Cada unidade de pH é um fator de 10: pH 3 é dez vezes mais ácido que pH 4." },
+        { "titulo": "Ácidos e bases fortes", "texto": "Ácidos e bases fortes se ionizam por completo. Para HCl 0,01 mol/L, [\\ce{H+}] = 0,01 = 10⁻², pH = 2. Para NaOH 0,001 mol/L, [\\ce{OH-}] = 10⁻³, pOH = 3 e pH = 11. Se a fórmula tem mais de um H ou OH, multiplique: \\ce{Ba(OH)2} 0,005 mol/L dá [\\ce{OH-}] = 0,01." }
+      ],
+      "exemplo": "Suco de limão pH ≈ 2; água pura pH 7; água com sabão pH ≈ 10. O suco de limão tem [\\ce{H+}] cerca de 100 000 vezes maior que a água pura.",
+      "pontosChave": [
+        "Kw = [\\ce{H+}][\\ce{OH-}] = 10⁻¹⁴ a 25 °C.",
+        "pH = −log[\\ce{H+}]; pH + pOH = 14.",
+        "pH < 7 ácido; 7 neutro; > 7 básico.",
+        "Uma unidade de pH = fator 10."
+      ]
+    },
+    {
+      "subtemaId": "eq-ka-kb",
+      "introducao": "Ácidos e bases fracos se ionizam só em parte e chegam a um equilíbrio. A constante desse equilíbrio, Ka (ácido) ou Kb (base), mede a força deles.",
+      "secoes": [
+        { "titulo": "Ka, Kb e grau de ionização", "texto": "Para HA ⇌ \\ce{H+} + \\ce{A-}: Ka = [\\ce{H+}][\\ce{A-}] ÷ [HA]. Quanto maior Ka, mais forte o ácido. O grau de ionização (α) é a fração das moléculas que se ionizou: α = mols ionizados ÷ mols dissolvidos. Para um par conjugado, Ka × Kb = Kw." },
+        { "titulo": "Lei da diluição de Ostwald", "texto": "Para eletrólitos fracos, Ka ≈ α² × M (M é a concentração em mol/L), quando α é pequeno. Diluindo a solução, M diminui e α aumenta: o ácido fraco se ioniza mais, em proporção, quando está mais diluído. Daí também: [\\ce{H+}] ≈ √(Ka × M)." }
+      ],
+      "exemplo": "Ácido acético 0,1 mol/L, Ka = 1,8 × 10⁻⁵: [\\ce{H+}] ≈ √(1,8 × 10⁻⁶) ≈ 1,3 × 10⁻³ mol/L; pH ≈ 2,9; α ≈ 1,3%.",
+      "pontosChave": [
+        "Ka e Kb medem a força de ácidos e bases fracos.",
+        "α = fração ionizada.",
+        "Ostwald: Ka ≈ α² M; diluir aumenta α.",
+        "Ka × Kb = Kw para o par conjugado."
+      ]
+    },
+    {
+      "subtemaId": "eq-hidrolise",
+      "introducao": "Alguns sais deixam a água ácida ou básica. Isso acontece porque um de seus íons reage com a água (hidrólise), liberando \\ce{H+} ou \\ce{OH-}.",
+      "secoes": [
+        { "titulo": "Quem sofre hidrólise", "texto": "Íons que vêm de ácidos ou bases fracos reagem com a água. O ânion de ácido fraco (\\ce{CH3COO-}, \\ce{CO3^{2-}}) captura \\ce{H+} da água e libera \\ce{OH-}. O cátion de base fraca (\\ce{NH4+}) libera \\ce{H+}. Íons de ácidos e bases fortes (\\ce{Na+}, \\ce{K+}, \\ce{Cl-}, \\ce{NO3-}) não reagem." },
+        { "titulo": "Regra prática", "texto": "Olhe de que ácido e de que base o sal veio. Ácido forte + base forte: solução neutra (NaCl). Ácido fraco + base forte: básica (\\ce{NaHCO3}, \\ce{CH3COONa}). Ácido forte + base fraca: ácida (\\ce{NH4Cl}). \"Quem é mais forte manda\"." }
+      ],
+      "exemplo": "Bicarbonato de sódio vem do ácido carbônico (fraco) e do NaOH (forte): sua solução é básica, por isso neutraliza a acidez do estômago.",
+      "pontosChave": [
+        "Íons de ácidos ou bases fracos reagem com a água.",
+        "Ácido fraco + base forte: sal básico.",
+        "Ácido forte + base fraca: sal ácido.",
+        "Forte + forte: neutro."
+      ]
+    },
+    {
+      "subtemaId": "eq-tampao",
+      "introducao": "Solução-tampão é uma solução que resiste a variações de pH quando se adiciona um pouco de ácido ou de base. Ela é feita de um ácido fraco e sua base conjugada (ou uma base fraca e seu ácido conjugado).",
+      "secoes": [
+        { "titulo": "Como funciona", "texto": "Num tampão de ácido acético e acetato: se chega \\ce{H+}, o acetato (\\ce{CH3COO-}) o captura e vira ácido acético; se chega \\ce{OH-}, o ácido acético o neutraliza, formando água e acetato. Assim o pH quase não muda, até que um dos componentes acabe." },
+        { "titulo": "Calculando o pH", "texto": "Equação de Henderson-Hasselbalch: pH = pKa + log([base conjugada] ÷ [ácido]), com pKa = −log Ka. Quando ácido e base conjugada têm a mesma concentração, pH = pKa. O tampão funciona melhor perto desse valor." }
+      ],
+      "exemplo": "O sangue é tamponado principalmente pelo par \\ce{H2CO3}/\\ce{HCO3-}, que mantém o pH perto de 7,4. Pequenas fugas desse valor já causam acidose ou alcalose.",
+      "pontosChave": [
+        "Tampão: ácido fraco + base conjugada.",
+        "Resiste a pequenas adições de ácido ou base.",
+        "pH = pKa + log([base] ÷ [ácido]).",
+        "Sangue: tampão bicarbonato, pH ≈ 7,4."
+      ]
+    },
+    {
+      "subtemaId": "eq-kps",
+      "introducao": "Sais pouco solúveis formam um equilíbrio entre o sólido e seus íons dissolvidos. A constante desse equilíbrio é o produto de solubilidade, Kps.",
+      "secoes": [
+        { "titulo": "Kps e solubilidade", "texto": "Para \\ce{AgCl(s) <=> Ag+ + Cl-}: Kps = [\\ce{Ag+}][\\ce{Cl-}]. Para \\ce{CaF2 <=> Ca^{2+} + 2F-}: Kps = [\\ce{Ca^{2+}}][\\ce{F-}]². Chamando a solubilidade de s (mol/L): no AgCl, Kps = s²; no \\ce{CaF2}, Kps = s × (2s)² = 4s³." },
+        { "titulo": "Precipitação e íon comum", "texto": "Calcule o produto das concentrações dos íons na mistura (Q, com os mesmos expoentes). Se Q > Kps, forma-se precipitado; se Q < Kps, não. Efeito do íon comum: acrescentar um íon que já está no equilíbrio (como \\ce{Cl-} numa solução de AgCl) diminui a solubilidade do sal." }
+      ],
+      "exemplo": "AgCl, Kps = 1,8 × 10⁻¹⁰: s = √(1,8 × 10⁻¹⁰) ≈ 1,3 × 10⁻⁵ mol/L. Em solução que já tem \\ce{Cl-}, o AgCl dissolve ainda menos.",
+      "pontosChave": [
+        "Kps = produto das concentrações dos íons, com expoentes.",
+        "Sólido não entra na expressão.",
+        "Q > Kps: precipita.",
+        "Íon comum diminui a solubilidade."
+      ]
+    }
+  ]
+}

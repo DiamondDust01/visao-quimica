@@ -1,0 +1,111 @@
+{
+  "area": "analitica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "anal-identificacao-ions",
+      "introducao": "A análise qualitativa responde à pergunta \"o que tem na amostra?\". Para identificar íons, usam-se reações características que dão um sinal visível: cor, precipitado, gás ou cor de chama.",
+      "secoes": [
+        { "titulo": "Reações de identificação", "texto": "Cloreto: com nitrato de prata forma precipitado branco de AgCl. Sulfato: com cloreto de bário forma precipitado branco de \\ce{BaSO4}. Carbonato: com ácido libera bolhas de \\ce{CO2}. Ferro(III): com tiocianato forma cor vermelho-sangue. Amônio: com base forte libera amônia, de cheiro característico." },
+        { "titulo": "Teste de chama", "texto": "Um fio com a amostra é levado à chama; o calor excita os elétrons dos íons metálicos, que emitem luz de cor própria ao voltar. Sódio: amarelo intenso. Potássio: lilás. Cálcio: vermelho-alaranjado. Estrôncio: vermelho. Bário: verde-amarelado. Cobre: verde-azulado. Lítio: vermelho-carmim." }
+      ],
+      "exemplo": "Uma solução desconhecida forma precipitado branco com \\ce{AgNO3} e dá chama amarela: tem íons cloreto e sódio, provavelmente NaCl.",
+      "pontosChave": [
+        "Identificação por cor, precipitado, gás ou chama.",
+        "\\ce{Cl-} + \\ce{Ag+}: precipitado branco.",
+        "Chama: Na amarelo, K lilás, Cu verde-azulado.",
+        "A cor de chama vem dos saltos eletrônicos."
+      ]
+    },
+    {
+      "subtemaId": "anal-marcha-analitica",
+      "introducao": "Quando uma amostra tem vários cátions, eles são separados em grupos antes da identificação. A marcha analítica faz isso por precipitação seletiva: reagentes que precipitam só alguns cátions de cada vez.",
+      "secoes": [
+        { "titulo": "Os grupos clássicos", "texto": "Grupo I: precipitam com ácido clorídrico como cloretos (\\ce{Ag+}, \\ce{Pb^{2+}}, \\ce{Hg2^{2+}}). Grupo II: com \\ce{H2S} em meio ácido, como sulfetos (Cu, Cd, Bi...). Grupo III: com \\ce{H2S} ou sulfeto de amônio em meio básico (Fe, Al, Zn, Ni...). Grupo IV: com carbonato de amônio (Ca, Sr, Ba). Grupo V: os que sobram em solução (Na, K, Mg, \\ce{NH4+})." },
+        { "titulo": "Como funciona", "texto": "Adiciona-se o reagente do grupo, separa-se o precipitado por centrifugação ou filtração e passa-se a solução para o grupo seguinte. Depois, cada precipitado é dissolvido e os cátions são identificados por reações específicas. A ordem importa: um reagente fora de hora precipitaria cátions de outros grupos junto." }
+      ],
+      "exemplo": "Numa amostra com \\ce{Ag+} e \\ce{Cu^{2+}}, o HCl precipita só o AgCl. O cobre fica em solução e é separado depois, com \\ce{H2S} em meio ácido.",
+      "pontosChave": [
+        "Separação em grupos por precipitação seletiva.",
+        "Grupo I: cloretos insolúveis (Ag, Pb, Hg).",
+        "Separa o precipitado e passa a solução adiante.",
+        "A ordem dos reagentes é essencial."
+      ]
+    },
+    {
+      "subtemaId": "anal-erros",
+      "introducao": "Toda medida tem erro. Em análise química, é preciso saber o quanto o resultado é confiável: se está perto do valor verdadeiro (exatidão) e se as repetições concordam entre si (precisão).",
+      "secoes": [
+        { "titulo": "Tipos de erro", "texto": "Erro sistemático: sempre no mesmo sentido, por uma causa identificável (balança descalibrada, reagente impuro, método inadequado); afeta a exatidão e pode ser corrigido. Erro aleatório: varia para mais e para menos, sem causa definida (pequenas flutuações na leitura); afeta a precisão e diminui com mais repetições." },
+        { "titulo": "Média e desvio-padrão", "texto": "Repita a medida, calcule a média e o desvio-padrão, que mostra o quanto os valores se espalham em torno da média. Resultado: média ± desvio, com algarismos significativos coerentes. Precisão alta com exatidão baixa indica erro sistemático: todos os resultados próximos entre si, mas longe do valor verdadeiro." }
+      ],
+      "exemplo": "Medidas 10,1; 10,2; 10,1 g para um valor real de 12,0 g: precisas (próximas entre si), mas não exatas. Há um erro sistemático.",
+      "pontosChave": [
+        "Exatidão: perto do valor verdadeiro.",
+        "Precisão: repetições concordam entre si.",
+        "Sistemático afeta exatidão; aleatório afeta precisão.",
+        "Resultado: média ± desvio-padrão."
+      ]
+    },
+    {
+      "subtemaId": "anal-gravimetria",
+      "introducao": "Na gravimetria, a quantidade de uma substância é descoberta pesando um sólido formado a partir dela, de composição conhecida.",
+      "secoes": [
+        { "titulo": "Etapas", "texto": "Dissolver a amostra; precipitar o analito com um reagente adequado (em excesso, para precipitar tudo); filtrar e lavar o precipitado; secar ou calcinar até massa constante; pesar. O precipitado precisa ser pouco solúvel, puro e ter fórmula bem definida." },
+        { "titulo": "O cálculo", "texto": "Com a massa do precipitado e sua fórmula, calcule a massa do elemento ou íon de interesse pela proporção das massas molares (fator gravimétrico). Depois, divida pela massa da amostra para ter a porcentagem." }
+      ],
+      "exemplo": "Uma amostra de 1,00 g forma 0,466 g de \\ce{BaSO4} (233 g/mol). Mols de sulfato: 0,002; massa de \\ce{SO4^{2-}} (96 g/mol): 0,192 g, ou 19,2% da amostra.",
+      "pontosChave": [
+        "Pesar um precipitado de fórmula conhecida.",
+        "Precipitar, filtrar, lavar, secar e pesar.",
+        "Massa constante garante que secou.",
+        "Use a proporção das massas molares."
+      ]
+    },
+    {
+      "subtemaId": "anal-volumetria",
+      "introducao": "Na volumetria (titulação), a quantidade de uma substância é descoberta medindo o volume de uma solução de concentração conhecida que reage exatamente com ela.",
+      "secoes": [
+        { "titulo": "Tipos de titulação", "texto": "Neutralização: ácido com base, com indicador ácido-base. Precipitação: forma um sólido, como a titulação de cloreto com nitrato de prata. Complexação: forma um complexo, como a determinação da dureza da água com EDTA. Oxirredução: transfere elétrons, como com permanganato, que é roxo e serve de próprio indicador." },
+        { "titulo": "Padronização", "texto": "Algumas soluções mudam de concentração com o tempo (NaOH absorve \\ce{CO2} do ar). Por isso são padronizadas: tituladas contra um padrão primário, uma substância muito pura, estável e de massa molar conhecida, como o biftalato de potássio. O resultado é a concentração real, usada nos cálculos." }
+      ],
+      "exemplo": "Para descobrir a acidez de um vinagre, titula-se uma alíquota com NaOH padronizado, usando fenolftaleína até a cor rosa permanecer.",
+      "pontosChave": [
+        "Neutralização, precipitação, complexação e oxirredução.",
+        "Ponto final: indicado por cor ou outro sinal.",
+        "Padrão primário: puro, estável, massa conhecida.",
+        "Padronizar dá a concentração real do titulante."
+      ]
+    },
+    {
+      "subtemaId": "anal-espectrofotometria",
+      "introducao": "Uma solução colorida absorve parte da luz que passa por ela. Quanto mais concentrada, mais luz absorve. A espectrofotometria usa isso para medir concentrações.",
+      "secoes": [
+        { "titulo": "Absorbância e Lei de Beer", "texto": "O aparelho mede quanto de luz atravessa a amostra (transmitância) e calcula a absorbância (A). Pela Lei de Beer-Lambert, A = ε × b × c: ε é a absortividade da substância, b é o caminho da luz na cubeta e c é a concentração. Com ε e b fixos, a absorbância é diretamente proporcional à concentração." },
+        { "titulo": "Curva de calibração", "texto": "Prepare soluções-padrão de concentrações conhecidas, meça a absorbância de cada uma e faça o gráfico A × c, que deve ser uma reta. Meça a amostra e leia a concentração na reta. Use o comprimento de onda em que a substância mais absorve." }
+      ],
+      "exemplo": "Padrões de 1, 2 e 3 mg/L dão absorbâncias 0,10, 0,20 e 0,30. Uma amostra com A = 0,25 tem 2,5 mg/L.",
+      "pontosChave": [
+        "Absorbância cresce com a concentração.",
+        "A = ε b c (Lei de Beer-Lambert).",
+        "Curva de calibração com padrões conhecidos.",
+        "Medir no comprimento de onda de maior absorção."
+      ]
+    },
+    {
+      "subtemaId": "anal-espectroscopia",
+      "introducao": "Técnicas espectroscópicas mostram como é a estrutura de uma molécula orgânica, cada uma revelando um tipo de informação.",
+      "secoes": [
+        { "titulo": "Infravermelho e RMN", "texto": "Infravermelho (IV): as ligações vibram absorvendo comprimentos de onda específicos, o que revela os grupos funcionais: C=O dá uma banda forte perto de 1 700 cm⁻¹; O–H, uma banda larga perto de 3 300 cm⁻¹. Ressonância magnética nuclear (RMN): mostra os tipos de hidrogênio (ou carbono) da molécula, quantos de cada tipo e quais são vizinhos." },
+        { "titulo": "Espectrometria de massas", "texto": "A molécula é ionizada e se quebra em fragmentos, separados pela relação massa/carga. O pico do íon molecular dá a massa molar, e os fragmentos dão pistas sobre as partes da molécula. Juntando IV, RMN e massas, determina-se a estrutura completa." }
+      ],
+      "exemplo": "Uma substância com banda forte em 1 715 cm⁻¹ no IV e sem banda de O–H provavelmente é uma cetona, não um ácido carboxílico.",
+      "pontosChave": [
+        "IV: grupos funcionais pelas vibrações.",
+        "C=O ≈ 1 700 cm⁻¹; O–H ≈ 3 300 cm⁻¹ (larga).",
+        "RMN: tipos de H e vizinhanças.",
+        "Massas: massa molar e fragmentos."
+      ]
+    }
+  ]
+}

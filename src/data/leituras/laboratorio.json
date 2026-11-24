@@ -1,0 +1,81 @@
+{
+  "area": "laboratorio",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "lab-vidrarias",
+      "introducao": "Cada vidraria de laboratório foi feita para um uso. Escolher a certa garante segurança e resultados confiáveis.",
+      "secoes": [
+        { "titulo": "Para conter, misturar e aquecer", "texto": "Béquer: copo com bico, para misturar, aquecer e transferir; as marcas de volume são aproximadas. Erlenmeyer: fundo largo e gargalo estreito, permite agitar sem espirrar; muito usado em titulações. Tubo de ensaio: pequenas reações. Balão de fundo redondo: aquecimento uniforme, como na destilação. Funil: transferir líquidos ou filtrar com papel de filtro." },
+        { "titulo": "Para medir volumes", "texto": "Proveta: mede volumes com precisão média. Pipeta volumétrica: mede um volume fixo com alta precisão; a graduada, volumes variados. Bureta: libera volumes exatos gota a gota, nas titulações. Balão volumétrico: prepara soluções com volume exato (só uma marca no gargalo). Vidrarias volumétricas não devem ser aquecidas, porque o vidro pode deformar." }
+      ],
+      "exemplo": "Para preparar 250 mL de uma solução de concentração exata, usa-se o balão volumétrico de 250 mL, e não um béquer.",
+      "pontosChave": [
+        "Béquer e erlenmeyer: conter, misturar, aquecer.",
+        "Proveta: volume com precisão média.",
+        "Pipeta, bureta e balão volumétrico: alta precisão.",
+        "Não aqueça vidraria volumétrica."
+      ]
+    },
+    {
+      "subtemaId": "lab-medidas",
+      "introducao": "Medir corretamente massa e volume é a base de qualquer experimento. Pequenos descuidos na leitura ou na balança mudam o resultado.",
+      "secoes": [
+        { "titulo": "Balança", "texto": "Coloque a balança nivelada, longe de correntes de ar. Use um recipiente (vidro de relógio, béquer) e zere a balança com ele em cima (tara). Nunca coloque reagente direto no prato. Pese objetos em temperatura ambiente: quentes, criam correntes de ar e alteram a leitura." },
+        { "titulo": "Leitura do menisco", "texto": "Em tubos estreitos, a superfície do líquido forma uma curva, o menisco. Leia com os olhos na altura da marca, para evitar o erro de paralaxe. Para líquidos claros, como a água, leia pela parte de baixo da curva; para líquidos escuros ou opacos, pela parte de cima. Vidraria volumétrica tem uma só marca e é calibrada para um volume exato." }
+      ],
+      "exemplo": "Ler a proveta olhando de cima faz o volume parecer maior do que é; olhando de baixo, menor. Por isso os olhos ficam na altura do menisco.",
+      "pontosChave": [
+        "Tare a balança com o recipiente.",
+        "Nunca pese reagente direto no prato.",
+        "Olhos na altura do menisco.",
+        "Líquido claro: leia pela base da curva."
+      ]
+    },
+    {
+      "subtemaId": "lab-epis-normas",
+      "introducao": "Equipamentos de proteção individual (EPIs) e regras de conduta evitam a maioria dos acidentes no laboratório. Segurança vem antes do experimento.",
+      "secoes": [
+        { "titulo": "EPIs e equipamentos coletivos", "texto": "Jaleco de manga comprida e fechado, óculos de segurança e luvas adequadas ao reagente; calçado fechado e cabelo preso. Equipamentos coletivos: capela de exaustão (para vapores tóxicos), chuveiro de emergência, lava-olhos e extintor. Saiba onde ficam antes de começar." },
+        { "titulo": "Conduta e pequenos acidentes", "texto": "Não coma, não beba e não cheire reagentes diretamente (abane o vapor com a mão, se for preciso). Nunca pipete com a boca. Leia o rótulo antes de usar. Ao diluir ácido concentrado, coloque o ácido na água, devagar, nunca o contrário. Respingo na pele ou nos olhos: lave com muita água corrente (lava-olhos ou chuveiro) por pelo menos 15 minutos e avise o professor." }
+      ],
+      "exemplo": "Ácido respingou no olho: vá direto ao lava-olhos, mantenha as pálpebras abertas, lave por 15 minutos e avise o responsável. Não tente neutralizar com base.",
+      "pontosChave": [
+        "Jaleco, óculos, luvas, sapato fechado e cabelo preso.",
+        "Vapores tóxicos: capela.",
+        "Ácido na água, nunca água no ácido.",
+        "Respingo: água corrente por 15 minutos."
+      ]
+    },
+    {
+      "subtemaId": "lab-rotulagem-ghs",
+      "introducao": "O GHS (Sistema Globalmente Harmonizado) padroniza no mundo todo como os perigos dos produtos químicos aparecem nos rótulos, com pictogramas e palavras de advertência.",
+      "secoes": [
+        { "titulo": "Pictogramas", "texto": "Losangos com borda vermelha. Chama: inflamável. Chama sobre círculo: oxidante. Bomba explodindo: explosivo. Corrosão (líquido atacando mão e metal): corrosivo. Caveira: toxicidade aguda grave. Ponto de exclamação: irritante ou nocivo. Silhueta humana com estrela: perigo crônico à saúde (câncer, mutações). Cilindro de gás: gás sob pressão. Árvore e peixe mortos: perigo ao ambiente aquático." },
+        { "titulo": "Palavras de advertência e FDS", "texto": "\"Perigo\" indica os riscos mais graves; \"Atenção\", os menos graves. O rótulo traz também frases de perigo (H) e de precaução (P). A Ficha com Dados de Segurança (FDS) detalha riscos, primeiros socorros, combate a incêndio, armazenamento e descarte: deve ser lida antes de usar o produto." }
+      ],
+      "exemplo": "Um frasco de ácido sulfúrico concentrado traz o pictograma de corrosão e a palavra \"Perigo\".",
+      "pontosChave": [
+        "Pictogramas em losango com borda vermelha.",
+        "\"Perigo\" é mais grave que \"Atenção\".",
+        "Caveira: tóxico; corrosão: corrosivo; chama: inflamável.",
+        "Leia a Ficha com Dados de Segurança antes de usar."
+      ]
+    },
+    {
+      "subtemaId": "lab-residuos",
+      "introducao": "Resíduos químicos não podem ser simplesmente jogados fora. Eles precisam ser separados, guardados com segurança e enviados para tratamento ou descarte adequado.",
+      "secoes": [
+        { "titulo": "Separar e armazenar", "texto": "Separe os resíduos por tipo e compatibilidade: ácidos longe de bases, oxidantes longe de orgânicos, solventes halogenados separados dos não halogenados. Use frascos resistentes, bem fechados e rotulados com o conteúdo e a data. Misturar resíduos incompatíveis pode causar reações perigosas, gases tóxicos ou incêndio." },
+        { "titulo": "O que nunca vai para a pia", "texto": "Solventes orgânicos, metais pesados (mercúrio, chumbo, cromo, prata), substâncias tóxicas ou que reagem com a água. Soluções diluídas de ácidos e bases comuns só podem ir para a pia depois de neutralizadas e conforme as regras do laboratório. Resíduos perigosos vão para empresas especializadas. Melhor ainda: planejar o experimento para gerar menos resíduo." }
+      ],
+      "exemplo": "Uma solução com prata vai para um frasco de resíduo rotulado \"Resíduo de prata\", e não para a pia: a prata pode ser recuperada.",
+      "pontosChave": [
+        "Separe por compatibilidade.",
+        "Frascos fechados e rotulados.",
+        "Solventes e metais pesados nunca na pia.",
+        "Gerar menos resíduo é a melhor estratégia."
+      ]
+    }
+  ]
+}

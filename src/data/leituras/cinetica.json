@@ -1,0 +1,96 @@
+{
+  "area": "cinetica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "cin-velocidade-media",
+      "introducao": "A velocidade de uma reação diz quanto reagente é consumido, ou quanto produto é formado, por unidade de tempo. Ela é maior no começo e diminui conforme os reagentes acabam.",
+      "secoes": [
+        { "titulo": "Calculando a velocidade média", "texto": "v = |variação da quantidade| ÷ variação do tempo. A quantidade pode ser concentração (mol/L), massa, mols ou volume de gás. Usa-se o módulo para que a velocidade seja sempre positiva, porque a quantidade de reagente diminui." },
+        { "titulo": "Relação com os coeficientes", "texto": "Em \\ce{N2 + 3H2 -> 2NH3}, o \\ce{H2} é consumido três vezes mais rápido que o \\ce{N2}, e o \\ce{NH3} se forma duas vezes mais rápido que o \\ce{N2} é consumido. A velocidade da reação é a de cada substância dividida pelo seu coeficiente, e é a mesma para todas." }
+      ],
+      "exemplo": "A concentração de um reagente cai de 0,8 para 0,2 mol/L em 3 min: v = 0,6 ÷ 3 = 0,2 mol/(L·min).",
+      "pontosChave": [
+        "v = |Δquantidade| ÷ Δtempo.",
+        "A velocidade diminui com o tempo.",
+        "Velocidades de cada substância seguem os coeficientes.",
+        "Velocidade da reação = velocidade da substância ÷ coeficiente."
+      ]
+    },
+    {
+      "subtemaId": "cin-teoria-colisoes",
+      "introducao": "Pela teoria das colisões, as partículas dos reagentes precisam se chocar para reagir. Mas nem todo choque forma produto: só as colisões efetivas.",
+      "secoes": [
+        { "titulo": "Colisão efetiva", "texto": "Uma colisão é efetiva quando tem orientação favorável (as partes certas das moléculas se encontram) e energia suficiente, igual ou maior que a energia de ativação. Quanto mais colisões efetivas por segundo, mais rápida a reação." },
+        { "titulo": "Complexo ativado", "texto": "No momento da colisão efetiva forma-se o complexo ativado: uma estrutura instável, de energia máxima, em que ligações antigas estão se rompendo e novas estão se formando. No diagrama de energia, ele é o topo do \"morro\". A energia de ativação é a diferença entre esse topo e a energia dos reagentes." }
+      ],
+      "exemplo": "Um fósforo não acende sozinho no ar, mesmo com oxigênio em volta: falta energia de ativação, que o atrito fornece.",
+      "pontosChave": [
+        "Reação precisa de colisões.",
+        "Efetiva: orientação favorável e energia suficiente.",
+        "Complexo ativado: topo de energia, instável.",
+        "Menor energia de ativação: reação mais rápida."
+      ]
+    },
+    {
+      "subtemaId": "cin-fatores-velocidade",
+      "introducao": "A velocidade de uma reação muda com as condições. Os principais fatores são temperatura, concentração, pressão (para gases), superfície de contato e catalisador.",
+      "secoes": [
+        { "titulo": "Temperatura e concentração", "texto": "Aumentar a temperatura faz as partículas se moverem mais rápido: mais colisões e, principalmente, mais colisões com energia suficiente. Por isso a geladeira conserva os alimentos e a panela de pressão cozinha mais rápido. Aumentar a concentração dos reagentes (ou a pressão, nos gases) aumenta o número de colisões." },
+        { "titulo": "Superfície de contato", "texto": "Com sólidos, só a superfície reage. Dividir o sólido em pedaços menores aumenta a área exposta e acelera a reação: o comprimido efervescente triturado reage mais rápido que inteiro; a lenha fina pega fogo mais fácil que a tora; pó de farinha suspenso no ar pode até explodir." }
+      ],
+      "exemplo": "Um comprimido efervescente se dissolve mais rápido em água morna e moído do que inteiro em água gelada.",
+      "pontosChave": [
+        "Mais temperatura: reação mais rápida.",
+        "Mais concentração ou pressão: mais colisões.",
+        "Mais superfície de contato: mais rápida.",
+        "Catalisador acelera sem ser consumido."
+      ]
+    },
+    {
+      "subtemaId": "cin-catalise",
+      "introducao": "Catalisador é uma substância que aumenta a velocidade de uma reação oferecendo um caminho com menor energia de ativação. Ele participa das etapas, mas sai inteiro no final.",
+      "secoes": [
+        { "titulo": "O que o catalisador muda e o que não muda", "texto": "Muda: a energia de ativação (o morro fica mais baixo) e, por isso, a velocidade. Não muda: o ΔH da reação, a quantidade de produto que se forma no final e a posição do equilíbrio (ele só faz o equilíbrio ser atingido mais rápido). Uma pequena quantidade de catalisador serve para muito reagente." },
+        { "titulo": "Tipos de catálise", "texto": "Homogênea: catalisador e reagentes na mesma fase (ácido em solução). Heterogênea: fases diferentes, em geral um sólido com gases, como a platina e o paládio do conversor catalítico dos carros. Enzimática: as enzimas, proteínas que catalisam reações nos seres vivos, muito específicas para seus substratos." }
+      ],
+      "exemplo": "Água oxigenada se decompõe devagar no frasco, mas borbulha rápido num ferimento: a enzima catalase do sangue catalisa \\ce{2H2O2 -> 2H2O + O2}.",
+      "pontosChave": [
+        "Catalisador diminui a energia de ativação.",
+        "Não muda o ΔH nem o rendimento final.",
+        "Não é consumido.",
+        "Enzimas são catalisadores biológicos."
+      ]
+    },
+    {
+      "subtemaId": "cin-lei-velocidade",
+      "introducao": "A lei de velocidade mostra como a velocidade depende da concentração de cada reagente: v = k[A]ˣ[B]ʸ. Os expoentes x e y são as ordens de reação e são descobertos por experimentos.",
+      "secoes": [
+        { "titulo": "Achando a ordem pelos dados", "texto": "Compare dois experimentos em que só a concentração de um reagente muda. Se dobrar a concentração dobra a velocidade, a ordem é 1. Se quadruplica, é 2. Se não muda, é 0. A ordem total é a soma dos expoentes. A constante k depende da temperatura." },
+        { "titulo": "Cuidado com os coeficientes", "texto": "As ordens não precisam ser iguais aos coeficientes da equação global. Só nas reações elementares (que acontecem numa única etapa) os expoentes são os próprios coeficientes. Em reações com várias etapas, quem define a lei é a etapa lenta." }
+      ],
+      "exemplo": "Dobrando [A], a velocidade quadruplica; dobrando [B], ela dobra. Lei: v = k[A]²[B]; ordem total 3.",
+      "pontosChave": [
+        "v = k[A]ˣ[B]ʸ.",
+        "Dobrou a concentração e a velocidade: ordem 1; quadruplicou: ordem 2.",
+        "Ordem vem de experimentos, não da equação global.",
+        "k muda com a temperatura."
+      ]
+    },
+    {
+      "subtemaId": "cin-mecanismos",
+      "introducao": "Muitas reações não acontecem num único choque, e sim em várias etapas simples. O conjunto dessas etapas é o mecanismo da reação.",
+      "secoes": [
+        { "titulo": "Intermediários", "texto": "Substâncias formadas numa etapa e consumidas na seguinte são intermediários: não aparecem na equação global. Somando todas as etapas e cancelando o que aparece dos dois lados, obtém-se a equação global. Um catalisador, ao contrário, entra numa etapa e sai igual em outra." },
+        { "titulo": "A etapa lenta", "texto": "A velocidade da reação inteira é limitada pela etapa mais lenta, como uma fila que anda na velocidade do caixa mais demorado. Por isso a lei de velocidade é escrita a partir da etapa lenta, usando os coeficientes dela como expoentes." }
+      ],
+      "exemplo": "Etapa 1 (lenta): \\ce{NO2 + NO2 -> NO3 + NO}. Etapa 2 (rápida): \\ce{NO3 + CO -> NO2 + CO2}. Global: \\ce{NO2 + CO -> NO + CO2}. Lei: v = k[\\ce{NO2}]².",
+      "pontosChave": [
+        "Mecanismo: sequência de etapas simples.",
+        "Intermediário: formado e consumido no caminho.",
+        "Etapa lenta define a velocidade.",
+        "Lei de velocidade: coeficientes da etapa lenta."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "area": "funcoes-inorganicas",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "inorg-dissociacao-ionizacao",
+      "introducao": "Para uma solução conduzir corrente elétrica, ela precisa ter íons livres. Esses íons podem vir de dois processos diferentes: a dissociação e a ionização.",
+      "secoes": [
+        { "titulo": "Dissociação", "texto": "Acontece com compostos iônicos, como o sal de cozinha e as bases do tipo \\ce{NaOH}. Os íons já existem no sólido; a água só os separa: \\ce{NaCl -> Na+ + Cl-}. O composto iônico fundido também conduz, porque os íons ficam livres para se mover." },
+        { "titulo": "Ionização", "texto": "Acontece com substâncias moleculares, como os ácidos. Os íons não existiam: eles se formam quando a molécula reage com a água: \\ce{HCl + H2O -> H3O+ + Cl-}. O \\ce{HCl} puro (gás ou líquido) não conduz; em água, conduz. Substâncias moleculares que não ionizam, como o açúcar, formam soluções que não conduzem." }
+      ],
+      "exemplo": "Sal (iônico) em água: dissociação, conduz. Ácido acético (molecular) em água: ionização parcial, conduz pouco. Açúcar: não forma íons, não conduz.",
+      "pontosChave": [
+        "Dissociação: separa íons que já existiam (compostos iônicos).",
+        "Ionização: forma íons na reação com a água (ácidos).",
+        "Conduz quem tem íons livres.",
+        "Eletrólito forte: muitos íons; fraco: poucos."
+      ]
+    },
+    {
+      "subtemaId": "inorg-acidos",
+      "introducao": "Pela definição de Arrhenius, ácido é toda substância que, em água, ioniza e libera como único cátion o \\ce{H+} (que forma \\ce{H3O+} com a água). Ácidos têm sabor azedo e deixam o papel de tornassol vermelho.",
+      "secoes": [
+        { "titulo": "Nomes", "texto": "Hidrácidos (sem oxigênio) terminam em -ídrico: \\ce{HCl} é ácido clorídrico, \\ce{H2S} é ácido sulfídrico. Oxiácidos (com oxigênio) terminam em -ico ou -oso: o de mais oxigênio é -ico (\\ce{H2SO4}, sulfúrico; \\ce{HNO3}, nítrico) e o de menos, -oso (\\ce{H2SO3}, sulfuroso; \\ce{HNO2}, nitroso)." },
+        { "titulo": "Força", "texto": "Hidrácidos fortes: \\ce{HCl}, \\ce{HBr} e \\ce{HI}; o \\ce{HF} é moderado e os demais são fracos. Para oxiácidos, faça (número de O) − (número de H ionizáveis): 3 ou mais, muito forte (\\ce{HClO4}); 2, forte (\\ce{H2SO4}, \\ce{HNO3}); 1, moderado (\\ce{H3PO4}); 0, fraco (\\ce{HClO}). O \\ce{H2CO3} é exceção: é fraco." }
+      ],
+      "exemplo": "\\ce{HNO3}: 3 − 1 = 2, ácido forte. Ionização: \\ce{HNO3 + H2O -> H3O+ + NO3-}.",
+      "pontosChave": [
+        "Arrhenius: ácido libera \\ce{H+} (\\ce{H3O+}) em água.",
+        "Hidrácido: -ídrico; oxiácido: -ico (mais O) ou -oso (menos O).",
+        "Fortes: \\ce{HCl}, \\ce{HBr}, \\ce{HI}, \\ce{H2SO4}, \\ce{HNO3}, \\ce{HClO4}.",
+        "Oxiácido: força pela regra O − H."
+      ]
+    },
+    {
+      "subtemaId": "inorg-bases",
+      "introducao": "Pela definição de Arrhenius, base é toda substância que, em água, libera como único ânion o hidróxido, \\ce{OH-}. Bases têm sabor adstringente (\"amarram\" a boca) e deixam o papel de tornassol azul.",
+      "secoes": [
+        { "titulo": "Nomes", "texto": "Hidróxido de + nome do metal: \\ce{NaOH} é hidróxido de sódio, \\ce{Ca(OH)2} é hidróxido de cálcio. Quando o metal tem mais de uma carga, ela vai em algarismo romano: \\ce{Fe(OH)2} é hidróxido de ferro(II) e \\ce{Fe(OH)3}, de ferro(III). A amônia em água forma o hidróxido de amônio, \\ce{NH4OH}." },
+        { "titulo": "Solubilidade e força", "texto": "Hidróxidos dos metais alcalinos (grupo 1) e o de amônio são solúveis; os do grupo 2 são pouco solúveis (o de magnésio, praticamente insolúvel); os demais são insolúveis. Bases fortes: as dos grupos 1 e 2 (exceto Be e Mg). Fracas: as outras, inclusive a de amônio." }
+      ],
+      "exemplo": "Soda cáustica (\\ce{NaOH}): solúvel e forte. Leite de magnésia (\\ce{Mg(OH)2}): quase insolúvel e fraca, por isso pode ser usada como antiácido.",
+      "pontosChave": [
+        "Arrhenius: base libera \\ce{OH-} em água.",
+        "Nome: hidróxido de + metal (carga em romano se variar).",
+        "Grupo 1: solúveis e fortes.",
+        "\\ce{NH4OH} é solúvel, mas fraca."
+      ]
+    },
+    {
+      "subtemaId": "inorg-indicadores",
+      "introducao": "Indicadores ácido-base são substâncias que mudam de cor conforme a acidez do meio. Eles mostram se uma solução é ácida, neutra ou básica.",
+      "secoes": [
+        { "titulo": "Indicadores de laboratório", "texto": "Fenolftaleína: incolor em meio ácido ou neutro e rosa em meio básico. Tornassol: vermelho em meio ácido e azul em meio básico. Alaranjado de metila: vermelho em meio bem ácido e amarelo acima de pH perto de 4,4. O indicador universal tem uma cor para cada faixa de pH." },
+        { "titulo": "Indicadores naturais", "texto": "Muitos vegetais têm antocianinas, pigmentos que mudam de cor. O extrato de repolho roxo fica avermelhado em meio ácido (vinagre, limão), roxo perto do neutro e verde a amarelo em meio básico (bicarbonato, sabão). Pétalas de hortênsia mudam de cor conforme a acidez do solo." }
+      ],
+      "exemplo": "Gotas de fenolftaleína em água com sabão ficam rosa: a solução é básica. No vinagre, continuam incolores.",
+      "pontosChave": [
+        "Indicador muda de cor com o pH.",
+        "Fenolftaleína: incolor no ácido, rosa no básico.",
+        "Tornassol: vermelho no ácido, azul no básico.",
+        "Repolho roxo é um indicador natural."
+      ]
+    },
+    {
+      "subtemaId": "inorg-neutralizacao",
+      "introducao": "Neutralização é a reação entre um ácido e uma base. O \\ce{H+} do ácido e o \\ce{OH-} da base formam água, e os íons que sobram formam um sal.",
+      "secoes": [
+        { "titulo": "Neutralização total", "texto": "Todos os \\ce{H+} ionizáveis e todos os \\ce{OH-} reagem. Escreva a reação e acerte os coeficientes para que o número de \\ce{H+} seja igual ao de \\ce{OH-}. O cátion da base e o ânion do ácido formam o sal normal: \\ce{2NaOH + H2SO4 -> Na2SO4 + 2H2O}." },
+        { "titulo": "Neutralização parcial", "texto": "Quando sobra \\ce{H+} ou \\ce{OH-} sem reagir, forma-se um sal com H (hidrogenossal, ou sal ácido) ou com OH (hidroxissal, ou sal básico): \\ce{NaOH + H2SO4 -> NaHSO4 + H2O}. É isso que acontece quando a proporção entre ácido e base não é a da neutralização total." }
+      ],
+      "exemplo": "Antiácido no estômago: \\ce{Mg(OH)2 + 2HCl -> MgCl2 + 2H2O}. Dois \\ce{OH-} neutralizam dois \\ce{H+}.",
+      "pontosChave": [
+        "Ácido + base → sal + água.",
+        "\\ce{H+ + OH- -> H2O}.",
+        "Total: todos os \\ce{H+} e \\ce{OH-} reagem.",
+        "Parcial: sobra H ou OH no sal."
+      ]
+    },
+    {
+      "subtemaId": "inorg-sais",
+      "introducao": "Sal é um composto iônico formado por um cátion diferente de \\ce{H+} e um ânion diferente de \\ce{OH-}. Ele aparece, por exemplo, na neutralização de um ácido por uma base.",
+      "secoes": [
+        { "titulo": "Nomes", "texto": "Nome do ânion + de + nome do cátion. O ânion vem do ácido trocando a terminação: -ídrico vira -eto (clorídrico → cloreto), -ico vira -ato (sulfúrico → sulfato), -oso vira -ito (sulfuroso → sulfito). Exemplos: \\ce{NaCl}, cloreto de sódio; \\ce{CaCO3}, carbonato de cálcio; \\ce{KNO3}, nitrato de potássio." },
+        { "titulo": "Classificação e cotidiano", "texto": "Sal normal: sem H nem OH (\\ce{NaCl}). Hidrogenossal: tem H (\\ce{NaHCO3}, bicarbonato de sódio). Hidroxissal: tem OH (\\ce{Mg(OH)Cl}). Sais do dia a dia: cloreto de sódio (tempero), bicarbonato de sódio (fermento e antiácido), carbonato de cálcio (mármore, giz, casca de ovo), fluoreto de sódio (pasta de dente), sulfato de cálcio (gesso)." }
+      ],
+      "exemplo": "Ácido nítrico (\\ce{HNO3}) + hidróxido de potássio (KOH) → nitrato de potássio (\\ce{KNO3}) + água.",
+      "pontosChave": [
+        "-ídrico → -eto; -ico → -ato; -oso → -ito.",
+        "Nome: ânion + de + cátion.",
+        "Normal, hidrogenossal (com H) e hidroxissal (com OH).",
+        "Bicarbonato de sódio é um hidrogenossal."
+      ]
+    },
+    {
+      "subtemaId": "inorg-oxidos",
+      "introducao": "Óxidos são compostos de dois elementos em que o oxigênio é o mais eletronegativo, como \\ce{CO2}, \\ce{CaO} e \\ce{Fe2O3}. Eles se classificam pelo comportamento diante da água, de ácidos e de bases.",
+      "secoes": [
+        { "titulo": "Tipos de óxido", "texto": "Ácidos (de ametais): reagem com água formando ácido e com base formando sal e água (\\ce{CO2}, \\ce{SO3}, \\ce{NO2}); causam chuva ácida. Básicos (de metais alcalinos e alcalinoterrosos): reagem com água formando base e com ácido formando sal e água (\\ce{Na2O}, \\ce{CaO}). Neutros: não reagem com água, ácido nem base (\\ce{CO}, \\ce{NO}, \\ce{N2O}). Anfóteros: reagem com ácido e com base (\\ce{ZnO}, \\ce{Al2O3})." },
+        { "titulo": "Nomes", "texto": "Óxido de + elemento: \\ce{CaO}, óxido de cálcio. Com metal de carga variável, carga em romano: \\ce{FeO}, óxido de ferro(II). Para óxidos de ametais, usam-se prefixos: \\ce{CO}, monóxido de carbono; \\ce{CO2}, dióxido de carbono; \\ce{SO3}, trióxido de enxofre." }
+      ],
+      "exemplo": "Cal virgem na água: \\ce{CaO + H2O -> Ca(OH)2}, óxido básico formando base. Gás carbônico na água: \\ce{CO2 + H2O -> H2CO3}, óxido ácido formando ácido.",
+      "pontosChave": [
+        "Óxido ácido (ametal) + água → ácido.",
+        "Óxido básico (metal) + água → base.",
+        "Neutros: CO, NO e \\ce{N2O}.",
+        "Anfóteros: reagem com ácido e com base."
+      ]
+    },
+    {
+      "subtemaId": "inorg-bronsted-lowry",
+      "introducao": "A teoria de Brønsted-Lowry amplia a de Arrhenius: ácido é quem doa um próton (\\ce{H+}) e base é quem recebe. Ela vale mesmo fora da água.",
+      "secoes": [
+        { "titulo": "Pares conjugados", "texto": "Numa reação ácido-base, o ácido perde \\ce{H+} e vira sua base conjugada; a base ganha \\ce{H+} e vira seu ácido conjugado. Em \\ce{NH3 + H2O <=> NH4+ + OH-}: a água doa o próton (ácido) e o \\ce{OH-} é sua base conjugada; a amônia recebe (base) e o \\ce{NH4+} é seu ácido conjugado. Ácido forte tem base conjugada fraca, e vice-versa." },
+        { "titulo": "Anfipróticos", "texto": "Algumas espécies podem doar ou receber próton, conforme com quem reagem: são anfipróticas (ou anfóteras). A água é a mais conhecida: com o \\ce{HCl} ela recebe próton; com a amônia, doa. O íon \\ce{HCO3-} também é anfiprótico." }
+      ],
+      "exemplo": "\\ce{HCl + H2O -> H3O+ + Cl-}: pares conjugados \\ce{HCl}/\\ce{Cl-} e \\ce{H3O+}/\\ce{H2O}.",
+      "pontosChave": [
+        "Ácido doa \\ce{H+}; base recebe \\ce{H+}.",
+        "Par conjugado: diferem por um \\ce{H+}.",
+        "Ácido forte → base conjugada fraca.",
+        "Água é anfiprótica."
+      ]
+    },
+    {
+      "subtemaId": "inorg-lewis",
+      "introducao": "A teoria de Lewis é a mais ampla: ácido é quem recebe um par de elétrons e base é quem doa um par de elétrons. Ela explica reações ácido-base sem nenhum próton.",
+      "secoes": [
+        { "titulo": "Como reconhecer", "texto": "Base de Lewis tem par de elétrons livre para doar: \\ce{NH3}, \\ce{H2O}, \\ce{OH-}, \\ce{Cl-}. Ácido de Lewis tem espaço para receber um par: \\ce{H+}, cátions metálicos (\\ce{Fe^{3+}}, \\ce{Cu^{2+}}) e moléculas com octeto incompleto, como \\ce{BF3} e \\ce{AlCl3}. A ligação formada é covalente, com os dois elétrons vindos da base." },
+        { "titulo": "Relação com as outras teorias", "texto": "Toda base de Brønsted é base de Lewis, porque para receber um \\ce{H+} é preciso doar um par de elétrons a ele. Mas há ácidos de Lewis que não têm hidrogênio. Os complexos de metais de transição são exemplos: o metal é o ácido de Lewis e os ligantes são as bases." }
+      ],
+      "exemplo": "\\ce{BF3 + NH3 -> F3B-NH3}: o nitrogênio da amônia doa seu par (base de Lewis) ao boro, que tinha só 6 elétrons (ácido de Lewis).",
+      "pontosChave": [
+        "Ácido de Lewis: recebe par de elétrons.",
+        "Base de Lewis: doa par de elétrons.",
+        "Cátions metálicos e \\ce{BF3} são ácidos de Lewis.",
+        "Teoria mais ampla: inclui reações sem \\ce{H+}."
+      ]
+    }
+  ]
+}

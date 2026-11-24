@@ -1,0 +1,156 @@
+{
+  "area": "ligacoes",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "lig-regra-octeto",
+      "introducao": "Os gases nobres quase não reagem e têm 8 elétrons na camada de valência (o hélio, 2). A regra do octeto diz que os outros átomos fazem ligações para ficar com essa mesma configuração estável.",
+      "secoes": [
+        { "titulo": "Como os átomos completam o octeto", "texto": "Perdendo elétrons (metais, que viram cátions), ganhando elétrons (ametais, que viram ânions) ou compartilhando pares de elétrons (entre ametais, na ligação covalente). O número de ligações que um átomo costuma fazer vem do que falta para chegar a 8: o carbono faz 4, o nitrogênio 3, o oxigênio 2, o cloro 1." },
+        { "titulo": "Onde a regra falha", "texto": "Há átomos estáveis com menos de 8 elétrons, como o boro no \\ce{BF3} (6) e o berílio no \\ce{BeCl2} (4). Há os que ficam com mais de 8, como o enxofre no \\ce{SF6} (12) e o fósforo no \\ce{PCl5} (10), possíveis a partir do 3º período. E há moléculas com número ímpar de elétrons, como o \\ce{NO2}." }
+      ],
+      "exemplo": "Na molécula de água, o oxigênio (6 elétrons de valência) compartilha um par com cada hidrogênio e fica com 8; cada hidrogênio fica com 2, como o hélio.",
+      "pontosChave": [
+        "Octeto: 8 elétrons na valência, como os gases nobres.",
+        "Hidrogênio fica estável com 2.",
+        "C faz 4 ligações, N faz 3, O faz 2, halogênios 1.",
+        "Exceções: B e Be com menos; S e P (3º período) com mais."
+      ]
+    },
+    {
+      "subtemaId": "lig-ionica",
+      "introducao": "Na ligação iônica, um metal transfere elétrons para um ametal. Formam-se cátions e ânions que se atraem por forças elétricas e se organizam num retículo cristalino.",
+      "secoes": [
+        { "titulo": "Montando a fórmula", "texto": "Descubra a carga de cada íon pelos elétrons de valência: grupo 1 forma +1, grupo 2 forma +2, grupo 13 (Al) forma +3; grupo 17 forma −1, grupo 16 forma −2, grupo 15 forma −3. A fórmula precisa ter carga total zero: troque as cargas como índices e simplifique se der." },
+        { "titulo": "O que a fórmula significa", "texto": "A fórmula iônica não representa uma molécula, e sim a menor proporção entre os íons no cristal. \\ce{NaCl} quer dizer um íon sódio para cada íon cloreto, em um retículo com milhões deles." }
+      ],
+      "exemplo": "Alumínio (+3) e oxigênio (−2): cruzando as cargas, \\ce{Al2O3}. Confere: 2 × (+3) + 3 × (−2) = 0.",
+      "pontosChave": [
+        "Iônica: metal cede elétrons, ametal recebe.",
+        "Grupo 1: +1; 2: +2; Al: +3; 17: −1; 16: −2.",
+        "Carga total da fórmula = zero.",
+        "A fórmula mostra a proporção dos íons, não uma molécula."
+      ]
+    },
+    {
+      "subtemaId": "lig-covalente",
+      "introducao": "Na ligação covalente, dois ametais (ou hidrogênio) compartilham pares de elétrons. Cada par compartilhado é uma ligação, e o conjunto de átomos ligados forma uma molécula.",
+      "secoes": [
+        { "titulo": "Simples, dupla e tripla", "texto": "Um par compartilhado: ligação simples (H–H). Dois pares: dupla (O=O no \\ce{O2}). Três pares: tripla (N≡N no \\ce{N2}). Quanto mais pares, mais forte e mais curta é a ligação." },
+        { "titulo": "Fórmula de Lewis", "texto": "Mostra todos os elétrons de valência como pontos ou traços. Some os elétrons de valência, ligue os átomos ao átomo central (geralmente o menos eletronegativo, nunca o hidrogênio), complete os octetos dos átomos de fora e coloque o que sobrar no central. Se faltar octeto, transforme pares isolados em ligações duplas." }
+      ],
+      "exemplo": "\\ce{CO2}: 4 + 6 + 6 = 16 elétrons. Carbono no centro com duas ligações duplas, O=C=O, e dois pares isolados em cada oxigênio.",
+      "pontosChave": [
+        "Covalente: compartilhamento de pares entre ametais.",
+        "Simples: 1 par; dupla: 2; tripla: 3.",
+        "Na fórmula de Lewis, conte os elétrons de valência.",
+        "Hidrogênio faz só uma ligação."
+      ]
+    },
+    {
+      "subtemaId": "lig-metalica",
+      "introducao": "Nos metais, os átomos perdem os elétrons de valência para um \"mar de elétrons\" que se move livremente entre os cátions do metal e os mantém unidos.",
+      "secoes": [
+        { "titulo": "O que o modelo explica", "texto": "Condutividade elétrica e térmica: os elétrons livres se movem facilmente. Brilho: os elétrons livres refletem a luz. Maleabilidade (virar lâmina) e ductilidade (virar fio): as camadas de cátions deslizam sem romper a ligação, porque o mar de elétrons acompanha." },
+        { "titulo": "Ligas metálicas", "texto": "Liga é uma mistura de um metal com outros elementos, feita para melhorar propriedades. Aço: ferro com um pouco de carbono, mais duro. Bronze: cobre e estanho. Latão: cobre e zinco. Ouro 18 quilates: 75% de ouro com cobre e prata, mais resistente que o ouro puro." }
+      ],
+      "exemplo": "Um fio de cobre conduz corrente porque, ao ligar a pilha, os elétrons livres passam a se mover num mesmo sentido.",
+      "pontosChave": [
+        "Ligação metálica: cátions num mar de elétrons livres.",
+        "Explica condução, brilho, maleabilidade e ductilidade.",
+        "Ligas: misturas que melhoram propriedades do metal.",
+        "Aço = ferro + carbono."
+      ]
+    },
+    {
+      "subtemaId": "lig-propriedades-compostos",
+      "introducao": "O tipo de ligação explica as propriedades do material: se derrete fácil, se conduz eletricidade e em que se dissolve.",
+      "secoes": [
+        { "titulo": "Iônicos e metálicos", "texto": "Compostos iônicos: sólidos a 25 °C, pontos de fusão altos (\\ce{NaCl}, 801 °C), duros e quebradiços. Não conduzem sólidos, mas conduzem fundidos ou dissolvidos em água, porque os íons ficam livres. Metais: conduzem já no estado sólido, pelos elétrons livres, e têm pontos de fusão variados." },
+        { "titulo": "Moleculares e covalentes em rede", "texto": "Substâncias moleculares (água, açúcar, gás carbônico) têm pontos de fusão e ebulição mais baixos, porque só é preciso vencer as forças entre moléculas, e em geral não conduzem eletricidade. Já os sólidos covalentes em rede, como diamante e quartzo, têm todos os átomos ligados e pontos de fusão altíssimos." }
+      ],
+      "exemplo": "Água com sal conduz corrente (íons livres); água com açúcar não conduz (o açúcar se dissolve em moléculas, sem formar íons).",
+      "pontosChave": [
+        "Iônico: PF alto; conduz fundido ou em solução.",
+        "Metal: conduz no estado sólido.",
+        "Molecular: PF baixo; em geral não conduz.",
+        "Covalente em rede (diamante): PF muito alto."
+      ]
+    },
+    {
+      "subtemaId": "lig-vsepr",
+      "introducao": "Pela teoria VSEPR, os pares de elétrons ao redor do átomo central se repelem e ficam o mais longe possível uns dos outros. Isso define a forma da molécula.",
+      "secoes": [
+        { "titulo": "Como prever", "texto": "Conte as regiões de elétrons ao redor do átomo central: cada ligação (simples, dupla ou tripla conta uma) e cada par isolado. 2 regiões: linear (180°). 3: trigonal plana (120°). 4: tetraédrica (109,5°). A geometria final só considera a posição dos átomos." },
+        { "titulo": "O efeito dos pares isolados", "texto": "Com 4 regiões: sem pares isolados, tetraédrica (\\ce{CH4}); com 1 par, piramidal (\\ce{NH3}, cerca de 107°); com 2 pares, angular (\\ce{H2O}, cerca de 104,5°). Com 3 regiões e 1 par isolado, angular (\\ce{SO2}). Pares isolados empurram mais que pares ligantes e fecham o ângulo." }
+      ],
+      "exemplo": "\\ce{CO2}: duas regiões (duas duplas) e nenhum par isolado no carbono, então é linear. \\ce{H2O}: quatro regiões, duas com pares isolados, então é angular.",
+      "pontosChave": [
+        "Conte regiões de elétrons do átomo central.",
+        "2: linear; 3: trigonal plana; 4: tetraédrica.",
+        "Pares isolados mudam a forma: piramidal e angular.",
+        "Ligação dupla ou tripla conta como uma região."
+      ]
+    },
+    {
+      "subtemaId": "lig-polaridade",
+      "introducao": "Uma ligação é polar quando os dois átomos têm eletronegatividades diferentes: os elétrons ficam mais perto do mais eletronegativo, que ganha carga parcial negativa (δ−).",
+      "secoes": [
+        { "titulo": "Polaridade da ligação", "texto": "Átomos iguais (H–H, Cl–Cl): ligação apolar. Átomos diferentes (H–Cl, O–H): ligação polar. Quanto maior a diferença de eletronegatividade, mais polar; diferenças muito grandes, entre metal e ametal, levam à ligação iônica." },
+        { "titulo": "Polaridade da molécula", "texto": "Depende da geometria. Se as ligações polares se anulam por simetria, a molécula é apolar mesmo tendo ligações polares (\\ce{CO2} linear, \\ce{CH4} tetraédrico, \\ce{BF3} trigonal plano). Se não se anulam, ela é polar (\\ce{H2O} angular, \\ce{NH3} piramidal, \\ce{HCl})." }
+      ],
+      "exemplo": "\\ce{CO2} e \\ce{H2O} têm ligações polares. O \\ce{CO2} é linear e as duas se cancelam: apolar. A água é angular e não cancela: polar.",
+      "pontosChave": [
+        "Ligação polar: átomos com eletronegatividades diferentes.",
+        "Molécula polar: as polaridades não se cancelam.",
+        "Geometria simétrica costuma dar molécula apolar.",
+        "Água é polar; gás carbônico é apolar."
+      ]
+    },
+    {
+      "subtemaId": "lig-hibridizacao",
+      "introducao": "Hibridização é a mistura de orbitais de um mesmo átomo (s e p) para formar orbitais novos e iguais entre si, que explicam as ligações e a geometria observadas.",
+      "secoes": [
+        { "titulo": "sp³, sp² e sp", "texto": "Conte as regiões de elétrons ao redor do átomo (ligações e pares isolados). 4 regiões: sp³, tetraédrico, como o carbono só com ligações simples. 3 regiões: sp², trigonal plano, como o carbono com uma dupla. 2 regiões: sp, linear, como o carbono com uma tripla ou com duas duplas." },
+        { "titulo": "Ligações sigma e pi", "texto": "A primeira ligação entre dois átomos é sempre sigma (σ), feita de frente entre orbitais. As demais são pi (π), feitas lateralmente por orbitais p que não hibridizaram. Simples: 1 σ. Dupla: 1 σ + 1 π. Tripla: 1 σ + 2 π. A ligação π impede a rotação em torno da dupla." }
+      ],
+      "exemplo": "No eteno (\\ce{H2C=CH2}), cada carbono tem 3 regiões: sp². A dupla tem uma σ e uma π.",
+      "pontosChave": [
+        "4 regiões: sp³; 3: sp²; 2: sp.",
+        "Primeira ligação: sigma; as outras: pi.",
+        "Dupla = 1σ + 1π; tripla = 1σ + 2π.",
+        "Hibridização e geometria andam juntas."
+      ]
+    },
+    {
+      "subtemaId": "lig-forcas-intermoleculares",
+      "introducao": "Forças intermoleculares são atrações entre moléculas. Elas são bem mais fracas que as ligações dentro da molécula, mas decidem pontos de ebulição, estados físicos e solubilidade.",
+      "secoes": [
+        { "titulo": "Os três tipos", "texto": "Dipolo induzido (dispersão de London): existe entre todas as moléculas e é a única nas apolares (\\ce{CH4}, \\ce{CO2}, \\ce{I2}); cresce com o tamanho da molécula. Dipolo permanente (dipolo-dipolo): entre moléculas polares, como \\ce{HCl}. Ligação de hidrogênio: quando o H está ligado a F, O ou N e é atraído pelo F, O ou N de outra molécula (água, amônia, álcoois)." },
+        { "titulo": "Qual é mais intensa", "texto": "Para moléculas de tamanho parecido: ligação de hidrogênio > dipolo permanente > dipolo induzido. Quanto mais intensas as forças, mais energia é preciso para separar as moléculas, então maior o ponto de ebulição." }
+      ],
+      "exemplo": "Água (\\ce{H2O}, massa 18) ferve a 100 °C, e o \\ce{H2S}, mais pesado (34), ferve a −60 °C. A diferença vem das ligações de hidrogênio da água.",
+      "pontosChave": [
+        "Dipolo induzido: todas as moléculas; única nas apolares.",
+        "Dipolo permanente: moléculas polares.",
+        "Ligação de hidrogênio: H ligado a F, O ou N.",
+        "Forças mais intensas: ponto de ebulição maior."
+      ]
+    },
+    {
+      "subtemaId": "lig-solubilidade-ebulicao",
+      "introducao": "As forças intermoleculares permitem prever se uma substância se dissolve em outra e qual delas ferve a uma temperatura mais alta.",
+      "secoes": [
+        { "titulo": "Semelhante dissolve semelhante", "texto": "Substâncias polares se dissolvem bem em solventes polares (açúcar, sal e álcool na água). Apolares se dissolvem em apolares (gordura em gasolina ou óleo). Polar e apolar não se misturam: água e óleo. Moléculas com parte polar e parte apolar, como o sabão e o álcool comum, interagem com os dois." },
+        { "titulo": "Comparando pontos de ebulição", "texto": "Primeiro veja o tipo de força mais forte que a molécula faz: ligação de hidrogênio vence dipolo permanente, que vence dipolo induzido. Se forem do mesmo tipo, a molécula maior (maior massa e superfície) ferve mais alto. Cadeias ramificadas fervem mais baixo que as lineares de mesma massa, por terem menos contato." }
+      ],
+      "exemplo": "Etanol (\\ce{CH3CH2OH}) ferve a 78 °C e o éter dimetílico (\\ce{CH3OCH3}), de mesma fórmula \\ce{C2H6O}, a −24 °C: só o etanol faz ligação de hidrogênio.",
+      "pontosChave": [
+        "Polar dissolve polar; apolar dissolve apolar.",
+        "Ligação de hidrogênio eleva o ponto de ebulição.",
+        "Mesmo tipo de força: maior molécula ferve mais alto.",
+        "Ramificação diminui o ponto de ebulição."
+      ]
+    }
+  ]
+}
