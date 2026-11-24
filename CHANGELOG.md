@@ -4,6 +4,18 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
+## [Não lançado]
+
+### Adicionado
+- Glossário embutido nas questões: 180 palavras menos comuns (vidrarias, processos, nomes de
+  cientistas, termos de cada área) ficam com sublinhado pontilhado. Ao tocar numa delas, um balão
+  pergunta se o estudante quer a explicação e, em "Sim, explicar", mostra o significado e, quando
+  houver, outro nome para o termo. Funciona no enunciado, nas alternativas, nos itens, na ajuda do
+  Mentor e na resolução, e não desconta pontos.
+- Para não entregar o gabarito, o termo que é o próprio assunto cobrado na questão (como
+  "destilação" em Separação de misturas) só ganha explicação depois da resposta. O guia de uso e
+  a tela Ajuda explicam o glossário.
+
 ## [0.5.0] - 2026-11-23
 
 ### Adicionado
