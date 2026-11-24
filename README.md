@@ -13,10 +13,10 @@ partir do mesmo build, e funciona offline.
 
 ## Downloads (versão 0.6.0)
 
-- **Windows:** branch [`app-pc`](https://github.com/DiamondDust01/visao-quimica/tree/app-pc/installers/windows): instalador
+- **Windows:** branch `app-pc`, pasta `installers/windows/`: instalador
   `Visao-Quimica-Setup-0.6.0.exe` ou versão portátil `Visao-Quimica-0.6.0-Windows-x64.7z` (Git LFS).
-- **Android:** branch [`app-mobile`](https://github.com/DiamondDust01/visao-quimica/tree/app-mobile/installers/android): `Visao-Quimica-0.6.0-android.apk` (APK de teste).
-- **Release:** [Visão Química 0.6.0](https://github.com/DiamondDust01/visao-quimica/releases/tag/v0.6.0).
+- **Android:** branch `app-mobile`, pasta `installers/android/`: `Visao-Quimica-0.6.0-android.apk` (APK de teste).
+- **Release:** Visão Química 0.6.0, com os três pacotes de distribuição.
 - Como as branches se organizam: [BRANCHES.md](BRANCHES.md).
 
 Nenhum pacote tem assinatura digital; o APK usa a chave de depuração. As questões ainda não

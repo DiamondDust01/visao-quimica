@@ -123,11 +123,11 @@ app.whenReady().then(async () => {
   const credits = await js(`(() => {
     const main = document.querySelector('main');
     const links = [...main.querySelectorAll('a')].map((link) => link.href);
-    return links.includes('https://github.com/DiamondDust01/visao-quimica') &&
+    return !links.some((href) => href.includes('github.com')) &&
       links.includes('https://www.ifpi.edu.br/') &&
       [...main.querySelectorAll('button')].some((button) => button.innerText.includes('estudantes e professores'));
   })()`);
-  check(credits && await js(`document.activeElement?.id === 'ajuda-creditos'`), '"Mais" → Sobre e créditos abre a seção com os links para desenvolvedores, IFPI e professores');
+  check(credits && await js(`document.activeElement?.id === 'ajuda-creditos'`), '"Mais" → Sobre e créditos mostra IFPI e professores, sem atribuição de desenvolvedor');
   await clickText('Trilhas de Química para estudantes e professores');
   await wait(300);
   check(await js(`document.querySelector('nav[aria-label="Módulos"] button[aria-current="page"]')?.innerText === 'Trilha'`), 'atalho para professores abre a Trilha');
