@@ -34,9 +34,10 @@ export function Difficulty({ value }) {
 }
 
 // Uma linha da trilha: nome, área, dificuldade, status e de quais subtemas ele depende.
-export default function SubtemaItem({ node, areaNome, status, prerequisitos = [], position, onPractice }) {
+// accent: classes extras da borda (ex.: a cor da lista da trilha onde o tema aparece).
+export default function SubtemaItem({ node, areaNome, status, prerequisitos = [], position, onPractice, accent = '' }) {
   return (
-    <div className="flex gap-3 rounded-xl border border-slate-800 bg-slate-900/85 p-3 backdrop-blur-sm">
+    <div className={`flex gap-3 rounded-xl border border-slate-800 bg-slate-900/85 p-3 backdrop-blur-sm ${accent}`}>
       {position !== undefined && (
         <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-800 font-mono text-xs font-bold text-slate-300" aria-hidden="true">
           {position}

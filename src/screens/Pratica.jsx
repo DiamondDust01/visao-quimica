@@ -5,13 +5,17 @@ import TemaSelector from '../components/questoes/TemaSelector.jsx';
 import SessionPlayer from '../components/questoes/SessionPlayer.jsx';
 import { unstudiedPrerequisites } from '../domain/recomendador.js';
 import { buildSession, summarizeSession, SESSION_SIZES } from '../domain/questoes/sessao.js';
+import { corDe } from '../app/cores.js';
+
+// Filete com a cor da área no topo do cartão de título.
+const HERO = `border-t-4 ${corDe('pratica').borda}`;
 
 const MAX_WARNINGS = 5;
 
 function SessionResult({ summary, index, onRepeat, onChooseAgain, onOpenTab }) {
   return (
     <div className="space-y-4">
-      <Card>
+      <Card className={HERO}>
         <h1 className="text-2xl font-black text-white">Resultado da sessão</h1>
         <p className="mt-2 text-slate-300">
           Você acertou <strong className="text-white">{summary.corretas}</strong> de <strong className="text-white">{summary.total}</strong> questões
@@ -112,7 +116,7 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
 
   return (
     <div className="space-y-4 pb-40">
-      <Card>
+      <Card className={HERO}>
         <h1 className="text-2xl font-black text-white">Prática</h1>
         <p className="mt-2 text-slate-300">Passo 2: escolha um ou mais temas. Passo 3: defina a quantidade e comece a sessão; a resolução passo a passo aparece depois de cada resposta.</p>
       </Card>

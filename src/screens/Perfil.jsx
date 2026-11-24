@@ -4,6 +4,10 @@ import EtapaPicker from '../components/EtapaPicker.jsx';
 import NivelCard from '../components/NivelCard.jsx';
 import BackupPainel from '../components/BackupPainel.jsx';
 import useSectionFocus from '../app/useSectionFocus.js';
+import { corDe } from '../app/cores.js';
+
+// Filete com a cor da área no topo do cartão de título.
+const HERO = `border-t-4 ${corDe('perfil').borda}`;
 
 // focusSection: 'etapa', 'backup' ou 'dados', quando o estudante chega pelo menu "Mais".
 export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onClearDevice, study, focusSection }) {
@@ -23,7 +27,7 @@ export default function Perfil({ etapas, profile, points = 0, onChooseEtapa, onC
 
   return (
     <div className="space-y-4">
-      <Card>
+      <Card className={HERO}>
         <h1 className="text-2xl font-black text-white">Perfil</h1>
         <p className="mt-2 text-slate-300">Seu perfil é a etapa escolar e os seus pontos. O perfil e o progresso são guardados neste aparelho; use um backup para levá-los a outro.</p>
         <div className="mt-4 max-w-md"><NivelCard points={points} /></div>

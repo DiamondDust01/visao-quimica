@@ -3,6 +3,10 @@ import { Card } from '../components/ui.jsx';
 import TabelaPeriodica from '../components/TabelaPeriodica.jsx';
 import CalculadoraMassaMolar from '../components/CalculadoraMassaMolar.jsx';
 import VisualizadorEstruturas from '../components/VisualizadorEstruturas.jsx';
+import { corDe } from '../app/cores.js';
+
+// Filete com a cor da área no topo do cartão de título.
+const HERO = `border-t-4 ${corDe('ferramentas').borda}`;
 
 const SECTIONS = [
   { id: 'tabela', label: 'Tabela periódica' },
@@ -15,7 +19,7 @@ export default function Ferramentas({ elementos, meta, estruturas, initialSectio
   const [section, setSection] = useState(() => (SECTIONS.some((item) => item.id === initialSection) ? initialSection : 'tabela'));
   return (
     <div className="space-y-4">
-      <Card>
+      <Card className={HERO}>
         <h1 className="text-2xl font-black text-white">Ferramentas</h1>
         <p className="mt-2 text-slate-300">Tabela periódica interativa, calculadora de massa molar e visualizador de estruturas, funcionando sem internet.</p>
         <div role="tablist" aria-label="Ferramentas" data-guia="ferr-abas" className="mt-4 flex flex-wrap gap-2">
@@ -26,7 +30,7 @@ export default function Ferramentas({ elementos, meta, estruturas, initialSectio
               role="tab"
               aria-selected={section === item.id}
               onClick={() => setSection(item.id)}
-              className={`rounded-xl px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${section === item.id ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`}
+              className={`rounded-xl px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${section === item.id ? corDe('ferramentas').ativo : 'text-slate-400 hover:text-white'}`}
             >
               {item.label}
             </button>
