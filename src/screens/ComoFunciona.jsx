@@ -29,6 +29,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-300">
           <li>Cada acerto vale {PONTOS_POR_DIFICULDADE} pontos multiplicados pela dificuldade da questão (de 1 a 5).</li>
           <li>Na Prática, cada nível de ajuda do Mentor usado desconta {pct(DESCONTO_POR_AJUDA)} dos pontos daquela questão; ela sempre vale pelo menos {pct(FATOR_MINIMO)}.</li>
+          <li>As explicações do glossário (palavras com sublinhado pontilhado nas questões) não descontam pontos. Termos que são o próprio assunto da questão só ganham explicação depois da resposta.</li>
           <li>Erros não tiram pontos.</li>
           <li>Respostas que não puderam ser lidas (número, unidade ou fórmula mal escritos) não contam: é só corrigir e responder de novo.</li>
         </ul>

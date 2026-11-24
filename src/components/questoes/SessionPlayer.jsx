@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CircleCheck, CircleX, Lightbulb } from 'lucide-react';
 import ChemText from '../ChemText.jsx';
+import { GlossarioProvider } from '../Glossario.jsx';
 import EstruturaMolecular from '../EstruturaMolecular.jsx';
 import AnswerInput, { initialOrder } from './AnswerInput.jsx';
 import { Difficulty } from '../SubtemaItem.jsx';
@@ -51,7 +52,7 @@ function QuestionStep({ question, index, last, onAnswered, onNext }) {
   };
 
   return (
-    <>
+    <GlossarioProvider temaId={question.temaId} respondida={Boolean(answered)}>
       <Card>
         <form onSubmit={submit} className="space-y-4">
           <div data-guia="enunciado" className="space-y-4">
@@ -129,7 +130,7 @@ function QuestionStep({ question, index, last, onAnswered, onNext }) {
           </div>
         </Card>
       )}
-    </>
+    </GlossarioProvider>
   );
 }
 
