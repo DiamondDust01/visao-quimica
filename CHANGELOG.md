@@ -30,8 +30,8 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 - Material de leitura por subtema, para quem não conhece o conteúdo: "Não sei este conteúdo" na
   questão, "Ler o material antes" na confirmação da sessão e "Ler" na Trilha. Cada texto tem
   introdução, explicação em duas partes, um exemplo e os pontos para lembrar, com fórmulas
-  renderizadas. Começa com os 13 subtemas de Fundamentos e os 7 de Termoquímica (textos
-  originais, ainda sem revisão de professor). Ler não desconta pontos.
+  renderizadas. Há um texto para cada um dos 171 subtemas, das 20 áreas (textos originais,
+  ainda sem revisão de professor). Ler não desconta pontos.
 
 ### Alterado
 - Cada aba agora tem uma função própria, dita no topo da tela como uma pergunta: Início ("o que

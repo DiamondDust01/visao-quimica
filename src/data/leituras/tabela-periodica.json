@@ -1,0 +1,141 @@
+{
+  "area": "tabela-periodica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "tab-historia",
+      "introducao": "A tabela periódica nasceu da tentativa de organizar os elementos conhecidos e perceber padrões: propriedades que se repetem de tempos em tempos, ou seja, periodicamente.",
+      "secoes": [
+        { "titulo": "Mendeleev e a massa atômica", "texto": "Em 1869, Mendeleev ordenou os elementos pela massa atômica e colocou na mesma coluna os de propriedades parecidas. Ele deixou espaços vazios e previu as propriedades de elementos ainda não descobertos, como o gálio e o germânio, que depois foram encontrados quase como ele disse." },
+        { "titulo": "Moseley e o número atômico", "texto": "Algumas posições não batiam com a ordem de massa (o telúrio é mais pesado que o iodo, mas vem antes). Em 1913, Moseley mostrou que a ordem certa é pelo número atômico (Z). Lei periódica atual: as propriedades dos elementos se repetem periodicamente em função do número atômico." }
+      ],
+      "exemplo": "Mendeleev chamou de \"eka-silício\" um elemento que faltava abaixo do silício. O germânio, descoberto em 1886, tinha massa e densidade muito próximas das previstas.",
+      "pontosChave": [
+        "Mendeleev: ordem por massa e espaços para elementos desconhecidos.",
+        "Moseley: ordem correta é pelo número atômico.",
+        "Lei periódica: propriedades se repetem em função de Z.",
+        "Propriedades parecidas ficam na mesma coluna."
+      ]
+    },
+    {
+      "subtemaId": "tab-periodos-grupos",
+      "introducao": "A tabela tem 7 linhas horizontais, os períodos, e 18 colunas, os grupos ou famílias. Cada posição diz algo sobre a distribuição eletrônica do elemento.",
+      "secoes": [
+        { "titulo": "Períodos e grupos", "texto": "O número do período é o número de camadas eletrônicas do átomo: o sódio, no período 3, tem 3 camadas. Elementos do mesmo grupo têm a mesma configuração de valência e, por isso, propriedades químicas parecidas, como os metais alcalinos (grupo 1) e os gases nobres (grupo 18)." },
+        { "titulo": "Os blocos", "texto": "Pelo subnível que recebe o último elétron: bloco s (grupos 1 e 2, mais o hélio), bloco p (grupos 13 a 18), bloco d (grupos 3 a 12, metais de transição) e bloco f (lantanídeos e actinídeos, nas duas linhas separadas embaixo)." }
+      ],
+      "exemplo": "O cálcio está no período 4 e grupo 2: tem 4 camadas e 2 elétrons de valência, no subnível 4s.",
+      "pontosChave": [
+        "7 períodos (linhas) e 18 grupos (colunas).",
+        "Período = número de camadas.",
+        "Mesmo grupo: propriedades químicas parecidas.",
+        "Blocos s, p, d e f indicam o último subnível preenchido."
+      ]
+    },
+    {
+      "subtemaId": "tab-localizacao-configuracao",
+      "introducao": "A distribuição eletrônica de um elemento mostra onde ele fica na tabela, e a posição na tabela permite escrever a distribuição.",
+      "secoes": [
+        { "titulo": "Da configuração para a posição", "texto": "Período: o maior número de camada. Bloco: o subnível do último elétron. Grupo: se o último é s, grupo = elétrons em s (1 ou 2). Se é p, grupo = 12 + elétrons de valência (s + p). Se é d, grupo = elétrons do s externo + elétrons do d (de 3 a 12)." },
+        { "titulo": "Da posição para a configuração", "texto": "Um elemento do período 3 e grupo 15 tem 3 camadas e 5 elétrons de valência: termina em 3s² 3p³ (é o fósforo). Um elemento do período 4 e grupo 6 está no bloco d e termina em 4s² 3d⁴ pela regra comum (o cromo real, \\ce{Cr}, é uma exceção: 4s¹ 3d⁵)." }
+      ],
+      "exemplo": "…4s² 3d¹⁰ 4p⁵: período 4, bloco p, valência 2 + 5 = 7, grupo 12 + 5 = 17. É o bromo, um halogênio.",
+      "pontosChave": [
+        "Período: maior camada.",
+        "Bloco: subnível do último elétron.",
+        "Bloco p: grupo = 12 + elétrons de valência.",
+        "Bloco d: grupo = elétrons em s externo + d."
+      ]
+    },
+    {
+      "subtemaId": "tab-metais-ametais",
+      "introducao": "Os elementos se dividem em metais, ametais e gases nobres. Os metais ficam à esquerda e no centro da tabela; os ametais, à direita; os gases nobres, na última coluna.",
+      "secoes": [
+        { "titulo": "Características", "texto": "Metais: brilho, bons condutores de calor e eletricidade, maleáveis e dúcteis, sólidos à temperatura ambiente (exceto o mercúrio) e tendem a perder elétrons, formando cátions. Ametais: em geral não conduzem, são quebradiços quando sólidos e tendem a ganhar elétrons. Gases nobres: muito pouco reativos, com a camada de valência completa." },
+        { "titulo": "O caso do hidrogênio", "texto": "O hidrogênio aparece no grupo 1 por ter um elétron de valência, mas não é metal: é um gás formado por moléculas \\ce{H2}, com comportamento de ametal. Por isso costuma ser estudado à parte. Alguns livros também citam os semimetais (como boro e silício), com propriedades intermediárias, mas a IUPAC não usa mais essa classe." }
+      ],
+      "exemplo": "O cobre conduz eletricidade e é usado em fios: metal. O enxofre é amarelo, quebradiço e não conduz: ametal.",
+      "pontosChave": [
+        "Metais: brilho, condução, maleabilidade; formam cátions.",
+        "Ametais: não conduzem; formam ânions.",
+        "Gases nobres: pouco reativos.",
+        "Hidrogênio fica no grupo 1, mas não é metal."
+      ]
+    },
+    {
+      "subtemaId": "tab-familias-representativas",
+      "introducao": "As famílias dos blocos s e p são chamadas de representativas. Os elementos de cada uma têm o mesmo número de elétrons de valência e reagem de modo parecido.",
+      "secoes": [
+        { "titulo": "Nomes das famílias", "texto": "Grupo 1: metais alcalinos (Li, Na, K...), 1 elétron de valência. Grupo 2: alcalinoterrosos (Be, Mg, Ca...), 2. Grupo 13: família do boro, 3. Grupo 14: do carbono, 4. Grupo 15: do nitrogênio, 5. Grupo 16: calcogênios (O, S...), 6. Grupo 17: halogênios (F, Cl, Br, I), 7. Grupo 18: gases nobres, 8 (hélio, 2)." },
+        { "titulo": "Comportamento", "texto": "Alcalinos são muito reativos, reagem com água e formam íons +1. Alcalinoterrosos formam íons +2. Halogênios são ametais muito reativos que formam íons −1 e sais com metais. Calcogênios costumam formar íons −2. Gases nobres quase não reagem." }
+      ],
+      "exemplo": "O sódio (grupo 1) reage com o cloro (grupo 17): o sódio cede 1 elétron, o cloro recebe, e forma-se o sal de cozinha, \\ce{NaCl}.",
+      "pontosChave": [
+        "Grupo 1: alcalinos (+1); grupo 2: alcalinoterrosos (+2).",
+        "Grupo 16: calcogênios; grupo 17: halogênios (−1).",
+        "Grupo 18: gases nobres, pouco reativos.",
+        "Elétrons de valência = número do grupo (1 e 2) ou grupo − 10 (13 a 18)."
+      ]
+    },
+    {
+      "subtemaId": "tab-metais-transicao",
+      "introducao": "Os metais de transição ocupam o bloco d (grupos 3 a 12) e o bloco f (lantanídeos e actinídeos, a transição interna). Neles, os elétrons vão entrando em subníveis d ou f internos.",
+      "secoes": [
+        { "titulo": "Características e usos", "texto": "São metais em geral duros, com altos pontos de fusão e bons condutores. Muitos formam íons com cargas diferentes (ferro +2 e +3, cobre +1 e +2) e servem como catalisadores. Usos: ferro no aço, cobre em fios, titânio em próteses, platina em conversores catalíticos, lantanídeos em ímãs e telas." },
+        { "titulo": "Por que tantos compostos coloridos", "texto": "Quando o subnível d está parcialmente preenchido, os elétrons podem absorver parte da luz visível para saltar entre orbitais d de energias um pouco diferentes. A cor que vemos é a complementar da que foi absorvida. Íons com d vazio ou cheio, como \\ce{Zn^{2+}} (d¹⁰), costumam ser incolores." }
+      ],
+      "exemplo": "A solução de sulfato de cobre(II) é azul porque o \\ce{Cu^{2+}} (d⁹) absorve luz laranja-avermelhada.",
+      "pontosChave": [
+        "Bloco d: grupos 3 a 12; bloco f: lantanídeos e actinídeos.",
+        "Formam íons com cargas diferentes.",
+        "Compostos coloridos: subnível d parcialmente preenchido.",
+        "Muitos são catalisadores."
+      ]
+    },
+    {
+      "subtemaId": "tab-raio-atomico",
+      "introducao": "O raio atômico é o tamanho do átomo. Ele depende de duas coisas: quantas camadas o átomo tem e com que força o núcleo puxa os elétrons de fora.",
+      "secoes": [
+        { "titulo": "Variação na tabela", "texto": "Descendo num grupo, o raio aumenta, porque cada período acrescenta uma camada. Ao longo de um período, da esquerda para a direita, o raio diminui: o número de camadas é o mesmo, mas a carga do núcleo aumenta e puxa mais os elétrons. Os maiores átomos ficam embaixo e à esquerda (como o césio e o frâncio)." },
+        { "titulo": "Raio dos íons", "texto": "Cátion é menor que o átomo de origem: perdeu elétrons e, às vezes, uma camada inteira. Ânion é maior: ganhou elétrons, que se repelem e afastam a nuvem. Entre espécies isoeletrônicas, a de mais prótons é a menor." }
+      ],
+      "exemplo": "\\ce{Na} (raio 186 pm) e \\ce{Na+} (102 pm): o cátion perde a terceira camada. \\ce{Cl} (99 pm) e \\ce{Cl-} (181 pm): o ânion cresce.",
+      "pontosChave": [
+        "Raio cresce para baixo no grupo.",
+        "Raio diminui da esquerda para a direita no período.",
+        "Cátion < átomo neutro < ânion.",
+        "Isoeletrônicos: mais prótons, menor raio."
+      ]
+    },
+    {
+      "subtemaId": "tab-energia-ionizacao",
+      "introducao": "Energia de ionização é a energia mínima para arrancar um elétron de um átomo isolado no estado gasoso. Afinidade eletrônica é a energia envolvida quando o átomo recebe um elétron.",
+      "secoes": [
+        { "titulo": "Variação na tabela", "texto": "A energia de ionização varia ao contrário do raio: quanto menor o átomo, mais preso está o elétron e mais energia é preciso. Ela aumenta para cima nos grupos e para a direita nos períodos. Os gases nobres têm as maiores; os alcalinos, as menores. A afinidade eletrônica segue tendência parecida, com os halogênios liberando mais energia ao ganhar elétron." },
+        { "titulo": "Ionizações sucessivas", "texto": "Retirar o segundo elétron exige mais energia que o primeiro, e assim por diante (1ª < 2ª < 3ª), porque o íon fica cada vez mais positivo. Um salto muito grande indica que se começou a tirar elétrons de uma camada interna: isso revela quantos elétrons de valência o átomo tem." }
+      ],
+      "exemplo": "Magnésio: 1ª = 738, 2ª = 1 451 e 3ª = 7 733 kJ/mol. O salto na 3ª mostra que o magnésio tem 2 elétrons de valência.",
+      "pontosChave": [
+        "Energia de ionização: arrancar um elétron.",
+        "Aumenta para cima e para a direita.",
+        "1ª < 2ª < 3ª; um salto grande indica camada interna.",
+        "Afinidade eletrônica: energia ao ganhar elétron."
+      ]
+    },
+    {
+      "subtemaId": "tab-eletronegatividade",
+      "introducao": "Eletronegatividade é a tendência de um átomo atrair para si os elétrons de uma ligação. Ela só faz sentido quando o átomo está ligado a outro.",
+      "secoes": [
+        { "titulo": "Variação na tabela", "texto": "Aumenta para cima nos grupos e para a direita nos períodos, sem contar os gases nobres. O flúor é o mais eletronegativo (4,0 na escala de Pauling), seguido de oxigênio, nitrogênio e cloro. Os menos eletronegativos são os metais alcalinos pesados, como césio e frâncio. Uma frase para lembrar a ordem dos mais eletronegativos: F O N Cl Br I S C P H." },
+        { "titulo": "Caráter metálico", "texto": "Caráter metálico é a facilidade de perder elétrons e formar cátions. Ele varia ao contrário da eletronegatividade: aumenta para baixo e para a esquerda. Os elementos mais metálicos ficam no canto inferior esquerdo; os mais eletronegativos, no superior direito." }
+      ],
+      "exemplo": "Na ligação H–Cl, o cloro é mais eletronegativo e puxa os elétrons: o cloro fica com carga parcial negativa e o hidrogênio, positiva.",
+      "pontosChave": [
+        "Eletronegatividade: atrair elétrons numa ligação.",
+        "Aumenta para cima e para a direita; flúor é o maior.",
+        "Caráter metálico aumenta para baixo e para a esquerda.",
+        "Diferença de eletronegatividade define a polaridade da ligação."
+      ]
+    }
+  ]
+}
