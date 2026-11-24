@@ -36,6 +36,8 @@ function Caminho({ id, tela, rotulo, Icon, titulo, texto, acao, ativo, onClick }
 export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, temasRapidos = [], onQuickStart }) {
   const [modo, setModo] = useState(null);
   const [etapaId, setEtapaId] = useState('');
+  // Toque em "Ver minha trilha" sem etapa marcada: mostra um aviso em vez de não responder.
+  const [avisoEtapa, setAvisoEtapa] = useState(false);
   const detalheRef = useRef(null);
   const showQuick = temasRapidos.length > 0 && Boolean(onQuickStart);
   const etapasDaTrilha = etapas.filter((etapa) => !etapa.semRecomendacao);
@@ -48,6 +50,7 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
   const submit = (event) => {
     event.preventDefault();
     if (etapaId) onChoose(etapaId);
+    else setAvisoEtapa(true);
   };
   const alternar = (valor) => setModo((atual) => (atual === valor ? null : valor));
 
@@ -103,10 +106,13 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
             <Card>
               <h2 className="text-lg font-bold text-white">Qual é a sua etapa escolar?</h2>
               <p className="mt-1 mb-4 text-sm text-slate-400">A trilha é montada a partir dela. Você pode trocar depois, em "Mais" → Etapa escolar.</p>
-              <EtapaPicker etapas={etapasDaTrilha} value={etapaId} onChange={setEtapaId} name="onboarding-etapa" />
+              <EtapaPicker etapas={etapasDaTrilha} value={etapaId} onChange={(id) => { setEtapaId(id); setAvisoEtapa(false); }} name="onboarding-etapa" />
               <p className="mt-4 text-xs text-slate-500">{observacao}</p>
-              <div className="mt-4 flex justify-end">
-                <button type="submit" disabled={!etapaId} className={buttonPrimary}>Ver minha trilha</button>
+              <div className="mt-4 flex flex-wrap items-center justify-end gap-3">
+                <p className={`min-w-0 flex-1 text-sm ${avisoEtapa ? 'font-semibold text-amber-200' : 'text-slate-400'}`} role="status" data-aviso-etapa={avisoEtapa ? '' : undefined}>
+                  {etapaId ? '' : avisoEtapa ? 'Escolha uma etapa acima primeiro: é ela que define os temas da trilha.' : 'Marque a sua etapa para continuar.'}
+                </p>
+                <button type="submit" aria-disabled={!etapaId} className={`${buttonPrimary} ${etapaId ? '' : 'opacity-50'}`}>Ver minha trilha</button>
               </div>
             </Card>
           </form>
