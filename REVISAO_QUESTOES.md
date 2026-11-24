@@ -2,7 +2,7 @@
 
 ## Rodada de 2026-10-26
 
-Revisão das 477 questões, feita por um assistente de IA (Claude), sem professor de Química. Por
+Revisão das 477 questões, feita por um assistente de IA, sem professor de Química. Por
 isso todas continuam com `"revisado": false`. Esse campo fica reservado para a revisão de um
 professor, que esta rodada não substitui.
 
