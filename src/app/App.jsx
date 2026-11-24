@@ -106,11 +106,11 @@ export default function App() {
     if (confirmar) setPedidoSessao(pedido);
     else openSession(pedido);
   };
-  const finishSession = (answers) => {
-    const summary = summarizeSession(answers);
+  const finishSession = (answers, segundos = 0) => {
+    const summary = { ...summarizeSession(answers), segundos };
     setSessao((atual) => (atual ? { ...atual, summary } : atual));
     if (summary.total > 0 && sessao) {
-      const registro = { em: new Date().toISOString(), corretas: summary.corretas, total: summary.total, subtemaIds: sessao.subtemaIds };
+      const registro = { em: new Date().toISOString(), corretas: summary.corretas, total: summary.total, segundos, subtemaIds: sessao.subtemaIds };
       writeJson(STORAGE_KEYS.ultimaSessao, registro);
       setUltimaSessao(registro);
     }

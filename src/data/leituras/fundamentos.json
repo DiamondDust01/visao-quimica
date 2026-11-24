@@ -1,0 +1,201 @@
+{
+  "area": "fundamentos",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "fund-materia-conceitos",
+      "introducao": "Matéria é tudo o que tem massa e ocupa lugar no espaço. O ar, a água, uma pedra e o seu corpo são matéria; a luz, o som e o calor não são, porque são formas de energia.",
+      "secoes": [
+        { "titulo": "Matéria, corpo e objeto", "texto": "Uma porção limitada de matéria é chamada de corpo: um pedaço de madeira, uma barra de ferro, uma gota de água. Quando um corpo é moldado para ter uma função, ele vira um objeto: a madeira vira uma cadeira, o ferro vira um prego." },
+        { "titulo": "Como saber se algo é matéria", "texto": "Pergunte duas coisas: tem massa (pode ser pesado)? Ocupa espaço (tem volume)? Se as duas respostas forem sim, é matéria. Um balão cheio pesa um pouco mais que vazio e fica maior, porque o ar dentro dele é matéria." }
+      ],
+      "exemplo": "Madeira (matéria) → tábua (corpo) → mesa (objeto). Um raio de sol não tem massa nem ocupa espaço: é energia, não matéria.",
+      "pontosChave": [
+        "Matéria: tem massa e ocupa espaço.",
+        "Corpo: porção limitada de matéria.",
+        "Objeto: corpo com forma e uso definidos.",
+        "Luz, som e calor são energia, não matéria."
+      ]
+    },
+    {
+      "subtemaId": "fund-estados-fisicos",
+      "introducao": "A mesma substância pode estar sólida, líquida ou gasosa. O que muda entre os estados não são as partículas, mas o quanto elas estão juntas e o quanto se movimentam.",
+      "secoes": [
+        { "titulo": "Os três estados", "texto": "No sólido, as partículas ficam bem juntas e só vibram no lugar: forma e volume fixos. No líquido, continuam próximas, mas deslizam umas sobre as outras: volume fixo, forma do recipiente. No gás, ficam muito afastadas e se movem livremente: ocupam todo o recipiente." },
+        { "titulo": "As mudanças de estado", "texto": "Fusão: sólido → líquido. Solidificação: líquido → sólido. Vaporização: líquido → gás (evaporação, lenta, ou ebulição, com bolhas). Condensação ou liquefação: gás → líquido. Sublimação: sólido → gás direto (e o caminho inverso). Fusão, vaporização e sublimação absorvem calor; solidificação e condensação liberam." }
+      ],
+      "exemplo": "O gelo derretendo no copo é fusão. As gotas que aparecem do lado de fora do copo gelado são vapor do ar condensando. A naftalina que diminui no armário sem virar líquido está sublimando.",
+      "pontosChave": [
+        "Sólido: partículas presas; líquido: deslizam; gás: livres e afastadas.",
+        "Fusão, vaporização e sublimação absorvem energia.",
+        "Solidificação e condensação liberam energia.",
+        "Evaporação acontece na superfície; ebulição, no líquido todo."
+      ]
+    },
+    {
+      "subtemaId": "fund-energia-transformacoes",
+      "introducao": "Uma transformação física muda a forma ou o estado da matéria, mas a substância continua a mesma. Uma transformação química (reação) forma substâncias novas, com propriedades diferentes.",
+      "secoes": [
+        { "titulo": "Como diferenciar", "texto": "Pergunte: depois da mudança, ainda é a mesma substância? Gelo derretido continua sendo água (física). Papel queimado vira cinza, gás carbônico e vapor de água (química). Sinais de reação: mudança de cor, liberação de gás (bolhas), formação de sólido (precipitado), cheiro novo, emissão de luz ou calor." },
+        { "titulo": "A energia nas transformações", "texto": "Toda transformação troca energia com o ambiente. As que liberam calor são exotérmicas (queima, condensação); as que absorvem são endotérmicas (fusão do gelo, cozimento, fotossíntese). Aquecimento sozinho não prova que houve reação: a água fervendo continua sendo água." }
+      ],
+      "exemplo": "Amassar uma lata: física. Uma lata enferrujando: química, porque o ferro vira óxido de ferro, um material novo e avermelhado.",
+      "pontosChave": [
+        "Física: mesma substância, outra forma ou estado.",
+        "Química: substâncias novas são formadas.",
+        "Bolhas, cor nova, sólido formado e cheiro novo indicam reação.",
+        "Exotérmica libera calor; endotérmica absorve."
+      ]
+    },
+    {
+      "subtemaId": "fund-propriedades-gerais",
+      "introducao": "Propriedades são as características da matéria. Algumas valem para qualquer material (gerais); outras servem para identificar um material específico (específicas).",
+      "secoes": [
+        { "titulo": "Propriedades gerais", "texto": "Toda matéria tem massa (quantidade de matéria), volume (espaço que ocupa), inércia (resiste a mudar seu movimento), impenetrabilidade (dois corpos não ocupam o mesmo lugar ao mesmo tempo), compressibilidade e elasticidade. Por serem comuns a tudo, não ajudam a diferenciar materiais." },
+        { "titulo": "Propriedades específicas", "texto": "Servem como uma \"impressão digital\" do material. Podem ser organolépticas (percebidas pelos sentidos: cor, cheiro, sabor, brilho), físicas (densidade, pontos de fusão e de ebulição, dureza, solubilidade) ou químicas (como o material reage: se queima, se enferruja)." }
+      ],
+      "exemplo": "Água e álcool são líquidos incolores, mas a água ferve a 100 °C e o álcool comum perto de 78 °C. A temperatura de ebulição, uma propriedade específica, diferencia os dois.",
+      "pontosChave": [
+        "Gerais: massa, volume, inércia, impenetrabilidade.",
+        "Específicas: identificam o material.",
+        "Densidade e temperaturas de fusão e ebulição são as mais usadas para identificar.",
+        "Nunca prove um material de laboratório para identificá-lo."
+      ]
+    },
+    {
+      "subtemaId": "fund-densidade",
+      "introducao": "Densidade é a relação entre a massa de um material e o volume que ele ocupa: d = m ÷ V. Ela diz o quanto de matéria está \"apertada\" em cada pedaço de espaço.",
+      "secoes": [
+        { "titulo": "Como calcular", "texto": "Divida a massa pelo volume, mantendo as unidades: g/mL, g/cm³ ou kg/L. Para achar a massa, faça m = d × V; para o volume, V = m ÷ d. Lembre que 1 mL = 1 cm³ e que 1 g/cm³ = 1 kg/L." },
+        { "titulo": "Afunda ou flutua", "texto": "Um objeto maciço afunda num líquido mais denso que ele? Não: afunda num líquido menos denso e flutua num mais denso. A água tem densidade perto de 1 g/mL. Óleo (cerca de 0,9 g/mL) fica por cima; ferro (cerca de 7,9 g/cm³) afunda. A densidade depende do material, não do tamanho do pedaço." }
+      ],
+      "exemplo": "Um bloco de 54 g ocupa 20 cm³: d = 54 ÷ 20 = 2,7 g/cm³, a densidade do alumínio. Na água (1 g/cm³), ele afunda.",
+      "pontosChave": [
+        "d = m ÷ V.",
+        "Menos denso flutua; mais denso afunda.",
+        "Densidade da água ≈ 1 g/mL.",
+        "Um pedaço grande e um pequeno do mesmo material têm a mesma densidade."
+      ]
+    },
+    {
+      "subtemaId": "fund-pontos-fusao-ebulicao",
+      "introducao": "Ponto de fusão (PF) é a temperatura em que o sólido vira líquido; ponto de ebulição (PE) é a temperatura em que o líquido ferve. Numa substância pura, esses valores são fixos e ajudam a identificá-la.",
+      "secoes": [
+        { "titulo": "Curva de aquecimento", "texto": "No gráfico de temperatura por tempo, uma substância pura tem dois trechos retos (patamares): enquanto ela derrete, a temperatura fica parada no PF; enquanto ferve, fica parada no PE. Nesses trechos, a energia recebida é usada para mudar de estado, e não para esquentar." },
+        { "titulo": "Estado físico numa temperatura", "texto": "Abaixo do PF, a substância é sólida; entre o PF e o PE, líquida; acima do PE, gasosa. Misturas comuns não têm patamares: a temperatura continua subindo durante a mudança. Exceções: misturas eutéticas (fusão constante) e azeotrópicas (ebulição constante)." }
+      ],
+      "exemplo": "O etanol tem PF −114 °C e PE 78 °C. A 25 °C, está entre os dois: é líquido. A 100 °C, já passou do PE: é gás.",
+      "pontosChave": [
+        "Substância pura: dois patamares na curva de aquecimento.",
+        "Mistura: a temperatura varia durante a mudança de estado.",
+        "Abaixo do PF: sólido; entre PF e PE: líquido; acima do PE: gás.",
+        "O PE diminui quando a pressão do ar diminui (em lugares altos)."
+      ]
+    },
+    {
+      "subtemaId": "fund-substancias-puras",
+      "introducao": "Uma substância pura tem composição fixa e propriedades constantes. Ela pode ser simples, formada por um só elemento, ou composta, formada por dois ou mais elementos.",
+      "secoes": [
+        { "titulo": "Elemento, substância simples e composta", "texto": "Elemento químico é o tipo de átomo, definido pelo número de prótons (hidrogênio, oxigênio, carbono). Substância simples tem um só elemento: \\ce{O2}, \\ce{H2}, \\ce{Fe}. Substância composta tem dois ou mais: \\ce{H2O}, \\ce{CO2}, \\ce{NaCl}. Na fórmula, conte os símbolos diferentes." },
+        { "titulo": "Alotropia", "texto": "Um mesmo elemento pode formar substâncias simples diferentes, chamadas alótropos. O carbono forma o diamante e a grafite; o oxigênio forma o gás oxigênio \\ce{O2} e o ozônio \\ce{O3}. Eles têm propriedades diferentes porque os átomos se arrumam de outro jeito." }
+      ],
+      "exemplo": "\\ce{O3} tem um só elemento (O): substância simples. \\ce{C6H12O6} (glicose) tem três (C, H, O): substância composta.",
+      "pontosChave": [
+        "Simples: um elemento; composta: dois ou mais.",
+        "Substância pura tem PF e PE constantes.",
+        "Alótropos: substâncias simples diferentes do mesmo elemento.",
+        "Número de átomos não importa; importa o número de elementos diferentes."
+      ]
+    },
+    {
+      "subtemaId": "fund-misturas-tipos",
+      "introducao": "Uma mistura reúne duas ou mais substâncias que mantêm suas propriedades. Ela é classificada pelo número de fases, isto é, de partes com aspecto diferente que dá para ver.",
+      "secoes": [
+        { "titulo": "Homogênea e heterogênea", "texto": "Mistura homogênea tem uma só fase: aspecto uniforme, mesmo ao microscópio comum, como água com sal dissolvido, ar filtrado ou álcool com água. Mistura heterogênea tem duas ou mais fases: água com óleo, água com areia, granito." },
+        { "titulo": "Contando as fases", "texto": "Cada parte visivelmente diferente é uma fase. Água + óleo + gelo: três fases (gelo, água, óleo). Vários sólidos misturados formam uma fase para cada sólido. Gases sempre se misturam por completo, formando uma só fase." }
+      ],
+      "exemplo": "Água com açúcar dissolvido: uma fase, homogênea. Se colocar açúcar demais, o que não dissolve fica no fundo: duas fases, heterogênea.",
+      "pontosChave": [
+        "Homogênea: uma fase.",
+        "Heterogênea: duas ou mais fases.",
+        "Mistura de gases é sempre homogênea.",
+        "Solução é o nome da mistura homogênea."
+      ]
+    },
+    {
+      "subtemaId": "fund-separacao-heterogeneas",
+      "introducao": "Para separar uma mistura heterogênea, aproveita-se uma diferença entre os componentes: tamanho, densidade, estado físico ou propriedade magnética.",
+      "secoes": [
+        { "titulo": "Sólido com sólido", "texto": "Catação: separar à mão (pedras do feijão). Peneiração: grãos de tamanhos diferentes. Separação magnética: ímã atrai o ferro. Ventilação: o vento leva a parte mais leve (palha do arroz). Dissolução fracionada: um sólido dissolve num líquido e o outro não." },
+        { "titulo": "Sólido com líquido e líquido com líquido", "texto": "Filtração: o filtro retém o sólido (café no coador). Decantação: espera-se o mais denso ir para o fundo; para dois líquidos que não se misturam, usa-se o funil de decantação. Centrifugação: gira a mistura para acelerar a separação por densidade (exames de sangue)." }
+      ],
+      "exemplo": "Areia + limalha de ferro + sal: ímã retira o ferro; água dissolve o sal; filtração separa a areia; evaporação recupera o sal.",
+      "pontosChave": [
+        "Escolha o método pela diferença entre os componentes.",
+        "Filtração: sólido não dissolvido num líquido.",
+        "Decantação e centrifugação: diferença de densidade.",
+        "Separação magnética: só funciona com materiais atraídos por ímã."
+      ]
+    },
+    {
+      "subtemaId": "fund-separacao-homogeneas",
+      "introducao": "Numa mistura homogênea não dá para ver as fases, então os métodos usam a diferença entre as temperaturas de ebulição dos componentes.",
+      "secoes": [
+        { "titulo": "Evaporação e destilação simples", "texto": "Evaporação: deixa o líquido evaporar e fica com o sólido dissolvido (sal nas salinas), mas o líquido se perde. Destilação simples: aquece a solução, o líquido vira vapor, passa pelo condensador, volta a ser líquido e é recolhido em outro frasco; o sólido fica no balão. Serve para sólido dissolvido em líquido." },
+        { "titulo": "Destilação fracionada", "texto": "Separa líquidos misturados com temperaturas de ebulição diferentes. Uma coluna de fracionamento faz cada líquido sair numa altura e num momento: primeiro o de menor ponto de ebulição. É usada para separar água e álcool e as frações do petróleo (gás, gasolina, querosene, diesel)." }
+      ],
+      "exemplo": "Água (PE 100 °C) com etanol (PE 78 °C): na destilação fracionada, o etanol sai primeiro.",
+      "pontosChave": [
+        "Mistura homogênea: separação pela temperatura de ebulição.",
+        "Destilação simples: sólido dissolvido em líquido.",
+        "Destilação fracionada: líquidos com PE diferentes.",
+        "Sai primeiro quem tem menor ponto de ebulição."
+      ]
+    },
+    {
+      "subtemaId": "fund-unidades",
+      "introducao": "Medir é comparar uma grandeza com uma unidade padrão. O Sistema Internacional (SI) define as unidades básicas usadas em todo o mundo, e os prefixos ajustam o tamanho delas.",
+      "secoes": [
+        { "titulo": "Grandezas e unidades", "texto": "Massa: quilograma (kg) e grama (g). Volume: metro cúbico (m³), litro (L) e mililitro (mL). Temperatura: kelvin (K) no SI e graus Celsius (°C) no dia a dia; K = °C + 273. Quantidade de matéria: mol. Comprimento: metro (m)." },
+        { "titulo": "Prefixos e conversões", "texto": "quilo (k) = 1 000; centi (c) = 0,01; mili (m) = 0,001; micro (µ) = 0,000 001. Para converter, multiplique ou divida pelo fator: 2,5 kg = 2 500 g; 250 mL = 0,25 L. Volume: 1 L = 1 000 mL = 1 dm³ e 1 mL = 1 cm³." }
+      ],
+      "exemplo": "25 °C em kelvin: 25 + 273 = 298 K. 0,5 L em mL: 0,5 × 1 000 = 500 mL.",
+      "pontosChave": [
+        "kg, L e mol são as unidades mais usadas em Química.",
+        "mili = milésimo; quilo = mil vezes.",
+        "1 mL = 1 cm³.",
+        "K = °C + 273."
+      ]
+    },
+    {
+      "subtemaId": "fund-notacao-cientifica",
+      "introducao": "Notação científica escreve números muito grandes ou muito pequenos como um número entre 1 e 10 multiplicado por uma potência de 10: N × 10ⁿ.",
+      "secoes": [
+        { "titulo": "Como escrever", "texto": "Mova a vírgula até ficar um só algarismo diferente de zero antes dela. Cada casa para a esquerda soma 1 no expoente; para a direita, subtrai 1. 602 000 000 000 000 000 000 000 = 6,02 × 10²³. 0,000 15 = 1,5 × 10⁻⁴." },
+        { "titulo": "Contas com potências", "texto": "Na multiplicação, multiplique os números e some os expoentes: (2 × 10³) × (3 × 10⁴) = 6 × 10⁷. Na divisão, divida os números e subtraia os expoentes: (8 × 10⁵) ÷ (2 × 10²) = 4 × 10³. Se o número da frente sair do intervalo de 1 a 10, ajuste a vírgula e o expoente." }
+      ],
+      "exemplo": "(5 × 10³) × (4 × 10²) = 20 × 10⁵ = 2,0 × 10⁶.",
+      "pontosChave": [
+        "Formato: N × 10ⁿ, com 1 ≤ N < 10.",
+        "Números menores que 1 têm expoente negativo.",
+        "Multiplicar: soma os expoentes; dividir: subtrai.",
+        "Constante de Avogadro: 6,02 × 10²³."
+      ]
+    },
+    {
+      "subtemaId": "fund-algarismos-significativos",
+      "introducao": "Algarismos significativos são os dígitos de uma medida que têm significado: todos os certos mais o primeiro duvidoso. Eles mostram a precisão do instrumento usado.",
+      "secoes": [
+        { "titulo": "Como contar", "texto": "Contam todos os dígitos diferentes de zero e os zeros entre eles ou depois deles, quando à direita da vírgula. Zeros à esquerda não contam: 0,0052 tem dois (5 e 2). 2,050 tem quatro. Em notação científica, conte só o número da frente: 6,02 × 10²³ tem três." },
+        { "titulo": "Contas e arredondamento", "texto": "Multiplicação e divisão: o resultado fica com o mesmo número de significativos do dado que tem menos. Soma e subtração: o resultado fica com o mesmo número de casas decimais do dado que tem menos casas. Para arredondar, se o dígito cortado for 5 ou mais, sobe o anterior." }
+      ],
+      "exemplo": "2,5 cm × 3,42 cm = 8,55 cm², mas 2,5 tem dois significativos, então o resultado é 8,6 cm².",
+      "pontosChave": [
+        "Zeros à esquerda não são significativos.",
+        "Multiplicação e divisão: menor número de significativos.",
+        "Soma e subtração: menor número de casas decimais.",
+        "O último algarismo de uma medida é o duvidoso."
+      ]
+    }
+  ]
+}

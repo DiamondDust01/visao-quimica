@@ -1,9 +1,11 @@
-import React, { useEffect, useId, useRef } from 'react';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Play, TriangleAlert, X } from 'lucide-react';
+import { BookOpen, Play, TriangleAlert, X } from 'lucide-react';
 import { buttonPrimary, buttonSecondary } from './ui.jsx';
 import { Difficulty } from './SubtemaItem.jsx';
 import { unstudiedPrerequisites } from '../domain/recomendador.js';
+import LeituraPainel from './LeituraPainel.jsx';
+import { leituraDe } from '../data/leituras/index.js';
 
 // Confirmação antes de começar a estudar: toda sessão de questões (Início, Trilha, Prática,
 // Mentor, temas rápidos e "repetir") passa por aqui. Mostra o que vai ser estudado e quantas
@@ -18,6 +20,8 @@ export default function ConfirmarSessao({ pedido, index, progress, onConfirm, on
   const ids = pedido.subtemaIds;
   const nodes = ids.map((id) => index.get(id)).filter(Boolean);
   const unico = nodes.length === 1 ? nodes[0] : null;
+  const leitura = unico ? leituraDe(unico.id) : null;
+  const [lendo, setLendo] = useState(false);
   const faltando = unstudiedPrerequisites(index, ids, progress);
   const nomesFaltando = [...new Set(faltando.flatMap((item) => item.faltando))].map((id) => index.get(id)?.nome).filter(Boolean);
 
@@ -25,7 +29,7 @@ export default function ConfirmarSessao({ pedido, index, progress, onConfirm, on
     voltarFoco.current = document.activeElement;
     painelRef.current?.querySelector('[data-confirmar]')?.focus({ preventScroll: true });
     const teclas = (event) => {
-      if (event.key !== 'Escape' || document.querySelector('[data-guia-overlay]')) return;
+      if (event.key !== 'Escape' || document.querySelector('[data-guia-overlay]') || document.querySelector('[data-leitura]')) return;
       event.preventDefault();
       cancelar();
     };
@@ -67,6 +71,11 @@ export default function ConfirmarSessao({ pedido, index, progress, onConfirm, on
             <p className="text-xs font-semibold uppercase tracking-wide text-teal-300/80">{index.areaOf(unico.id)?.nome}</p>
             <p className="mt-1 text-sm text-slate-400">{unico.descricao}</p>
             <div className="mt-2"><Difficulty value={unico.dificuldade} /></div>
+            {leitura && (
+              <button type="button" data-ler-antes="" onClick={() => setLendo(true)} className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-300 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-300">
+                <BookOpen className="h-4 w-4" aria-hidden="true" /> Não conhece este conteúdo? Ler o material antes
+              </button>
+            )}
           </div>
         ) : (
           <ul className="mt-4 max-h-48 space-y-1 overflow-y-auto rounded-xl border border-slate-800 bg-slate-950/50 p-3 text-sm">
@@ -93,6 +102,9 @@ export default function ConfirmarSessao({ pedido, index, progress, onConfirm, on
           <button type="button" data-confirmar="" onClick={onConfirm} className={buttonPrimary}><Play className="h-4 w-4" aria-hidden="true" /> Sim, começar</button>
         </div>
       </div>
+      {lendo && leitura && (
+        <LeituraPainel leitura={leitura} node={unico} areaNome={index.areaOf(unico.id)?.nome} voltarLabel="Voltar" onClose={() => setLendo(false)} />
+      )}
     </div>,
     document.body
   );

@@ -196,6 +196,13 @@ app.whenReady().then(async () => {
   await js(`document.querySelector('[data-glossario-balao]').dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
   await wait(200);
   check(await js(`!document.querySelector('[data-glossario-balao]') && Boolean(document.activeElement?.dataset.termo)`), 'Esc fecha o balão e devolve o foco à palavra');
+  check(await js(`/^\\d\\d:\\d\\d/.test(document.querySelector('[data-cronometro]')?.innerText || '')`), 'a sessão mostra o relógio do tempo de estudo');
+  await js(`document.querySelector('[data-nao-sei]').click()`);
+  await wait(300);
+  check(await js(`/Material de leitura/i.test(document.querySelector('[data-leitura]')?.innerText || '') && document.querySelector('[data-leitura]').dataset.leitura === 'fund-separacao-homogeneas'`), '"Não sei este conteúdo" abre o material de leitura do tema da questão');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(200);
+  check(await js(`!document.querySelector('[data-leitura]') && Boolean(document.querySelector('[data-cronometro]'))`), 'Esc fecha a leitura e volta à questão');
   await clickText('Encerrar sessão');
   await wait(300);
   check(await js(`[...document.querySelectorAll('main button')].some((b) => b.innerText.includes('Voltar para Prática'))`), 'o resultado da sessão volta para a aba de onde ela começou');

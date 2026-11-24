@@ -1,0 +1,111 @@
+{
+  "area": "termoquimica",
+  "revisado": false,
+  "leituras": [
+    {
+      "subtemaId": "termo-processos",
+      "introducao": "Todo processo físico ou químico troca energia, quase sempre na forma de calor, com o ambiente. Quando libera calor, é exotérmico; quando absorve, é endotérmico.",
+      "secoes": [
+        { "titulo": "Exotérmicos: liberam calor", "texto": "O sistema perde energia e o ambiente esquenta. Exemplos: queima (combustão) de gás, madeira ou gasolina; respiração celular; condensação do vapor; solidificação da água; reação de cal virgem com água; dissolução da soda cáustica." },
+        { "titulo": "Endotérmicos: absorvem calor", "texto": "O sistema ganha energia e o ambiente esfria, ou é preciso fornecer energia o tempo todo. Exemplos: fotossíntese (energia da luz); derretimento do gelo; evaporação do suor, que refresca a pele; cozimento de alimentos; eletrólise; dissolução de alguns sais, como nas bolsas de gelo instantâneo." }
+      ],
+      "exemplo": "Se a mão encosta no frasco e ele está esquentando, o processo é exotérmico. Se o frasco esfria, o processo está tirando calor da sua mão: é endotérmico.",
+      "pontosChave": [
+        "Exotérmico: libera calor; o ambiente esquenta.",
+        "Endotérmico: absorve calor; o ambiente esfria.",
+        "Mudanças de estado também são exo ou endotérmicas.",
+        "Combustão é exotérmica; fotossíntese é endotérmica."
+      ]
+    },
+    {
+      "subtemaId": "termo-entalpia-diagramas",
+      "introducao": "Entalpia (H) é a energia térmica de um sistema a pressão constante. Não se mede a entalpia em si, mas a sua variação: ΔH = H(produtos) − H(reagentes).",
+      "secoes": [
+        { "titulo": "O sinal de ΔH", "texto": "Se os produtos têm menos energia que os reagentes, a diferença foi liberada: ΔH < 0, exotérmico. Se os produtos têm mais energia, ela foi absorvida: ΔH > 0, endotérmico. O sinal sempre é contado do ponto de vista do sistema, a reação." },
+        { "titulo": "Lendo o diagrama de energia", "texto": "O eixo vertical é a entalpia. Reagentes ficam à esquerda e produtos à direita. A diferença de altura entre eles é o ΔH. O \"morro\" no meio é a energia de ativação: a energia mínima para a reação começar. Um catalisador abaixa esse morro, mas não muda o ΔH." }
+      ],
+      "exemplo": "Reagentes a 200 kJ e produtos a 50 kJ: ΔH = 50 − 200 = −150 kJ. Os produtos estão mais baixos: a reação é exotérmica.",
+      "pontosChave": [
+        "ΔH = H(produtos) − H(reagentes).",
+        "ΔH negativo: exotérmico; positivo: endotérmico.",
+        "Energia de ativação: altura do \"morro\" acima dos reagentes.",
+        "Catalisador diminui a energia de ativação, não o ΔH."
+      ]
+    },
+    {
+      "subtemaId": "termo-equacoes-termoquimicas",
+      "introducao": "Uma equação termoquímica mostra a reação balanceada, os estados físicos e o ΔH. O valor de ΔH vale exatamente para as quantidades escritas na equação.",
+      "secoes": [
+        { "titulo": "Regras de leitura", "texto": "Os estados físicos importam: formar água líquida libera mais energia que formar vapor. Se a equação for multiplicada por 2, o ΔH também dobra. Se for invertida, o ΔH troca de sinal. Calor por mol: divida o ΔH pelo coeficiente da substância." },
+        { "titulo": "Entalpias padrão", "texto": "Entalpia padrão de formação (ΔH°f): calor envolvido para formar 1 mol da substância a partir de substâncias simples no estado padrão (25 °C, 1 bar); para substâncias simples na forma mais estável, como \\ce{O2} e grafite, vale zero. Entalpia de combustão: calor liberado na queima completa de 1 mol. Com ΔH°f: ΔH = Σ ΔH°f(produtos) − Σ ΔH°f(reagentes)." }
+      ],
+      "exemplo": "\\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}, ΔH = −890 kJ. Queimar 2 mol de metano libera 2 × 890 = 1 780 kJ.",
+      "pontosChave": [
+        "ΔH vale para as quantidades da equação.",
+        "Multiplicou a equação: multiplica o ΔH.",
+        "Inverteu a equação: troca o sinal do ΔH.",
+        "ΔH°f de substância simples estável é zero."
+      ]
+    },
+    {
+      "subtemaId": "termo-lei-hess",
+      "introducao": "Pela Lei de Hess, o ΔH de uma reação depende só do estado inicial e do final, não do caminho. Por isso dá para somar reações conhecidas e obter o ΔH de uma reação difícil de medir.",
+      "secoes": [
+        { "titulo": "Como montar a soma", "texto": "Arrume as equações dadas para que, somadas, resultem na equação pedida. Se uma substância está do lado errado, inverta a equação (e o sinal do ΔH). Se a quantidade não bate, multiplique a equação inteira (e o ΔH) pelo fator necessário. Substâncias que aparecem dos dois lados se cancelam." },
+        { "titulo": "Conferindo", "texto": "Depois de somar, a equação resultante tem que ser exatamente a pedida. O ΔH final é a soma dos ΔH já ajustados. Trabalhe substância por substância, começando pelas que aparecem em uma só equação dada." }
+      ],
+      "exemplo": "\\ce{C + O2 -> CO2}, ΔH = −394 kJ e \\ce{CO + 1/2O2 -> CO2}, ΔH = −283 kJ. Para \\ce{C + 1/2O2 -> CO}: mantenha a primeira e inverta a segunda (+283 kJ). Soma: −394 + 283 = −111 kJ.",
+      "pontosChave": [
+        "ΔH só depende dos estados inicial e final.",
+        "Inverter a equação troca o sinal do ΔH.",
+        "Multiplicar a equação multiplica o ΔH.",
+        "A soma ajustada tem que dar a equação pedida."
+      ]
+    },
+    {
+      "subtemaId": "termo-energia-ligacao",
+      "introducao": "Energia de ligação é a energia necessária para romper 1 mol de uma ligação, com as substâncias no estado gasoso. Romper ligações sempre absorve energia; formar ligações sempre libera.",
+      "secoes": [
+        { "titulo": "Estimando o ΔH", "texto": "Some a energia de todas as ligações rompidas nos reagentes (valor positivo, energia gasta) e a de todas as ligações formadas nos produtos (valor negativo, energia liberada). ΔH ≈ Σ(ligações rompidas) − Σ(ligações formadas)." },
+        { "titulo": "Interpretando", "texto": "Se os produtos formam ligações mais fortes do que as rompidas, sobra energia e a reação é exotérmica. Se gastar mais para romper do que se ganha ao formar, é endotérmica. O resultado é uma estimativa, porque usa valores médios de energia de ligação." }
+      ],
+      "exemplo": "\\ce{H2 + Cl2 -> 2HCl}. Rompe H–H (436) e Cl–Cl (243): +679 kJ. Forma 2 H–Cl (2 × 432): −864 kJ. ΔH ≈ 679 − 864 = −185 kJ, exotérmica.",
+      "pontosChave": [
+        "Romper ligação: absorve energia.",
+        "Formar ligação: libera energia.",
+        "ΔH ≈ rompidas − formadas.",
+        "Conte todas as ligações, inclusive as repetidas."
+      ]
+    },
+    {
+      "subtemaId": "termo-entropia",
+      "introducao": "Entropia (S) mede o quanto a energia e a matéria de um sistema estão espalhadas, ou seja, de quantas maneiras as partículas podem se arrumar. Em geral, quanto mais \"desorganizado\", maior a entropia.",
+      "secoes": [
+        { "titulo": "Prevendo o sinal de ΔS", "texto": "A entropia aumenta (ΔS > 0) quando: um sólido derrete ou um líquido evapora (S do gás > líquido > sólido); aumenta o número de mols de gás na reação; um sólido se dissolve; a temperatura sobe. Ela diminui (ΔS < 0) nos casos inversos, como na condensação ou quando gases se juntam em menos mols." },
+        { "titulo": "A segunda lei", "texto": "Num processo espontâneo, a entropia do universo (sistema mais vizinhança) sempre aumenta. A entropia do sistema pode diminuir, desde que a da vizinhança aumente mais, por exemplo quando o sistema libera calor para ela." }
+      ],
+      "exemplo": "\\ce{2H2(g) + O2(g) -> 2H2O(l)}: 3 mol de gás viram líquido. A entropia do sistema diminui: ΔS < 0.",
+      "pontosChave": [
+        "S(gás) > S(líquido) > S(sólido).",
+        "Mais mols de gás nos produtos: ΔS > 0.",
+        "Processo espontâneo aumenta a entropia do universo.",
+        "Entropia não é só \"bagunça\": é dispersão de energia e matéria."
+      ]
+    },
+    {
+      "subtemaId": "termo-gibbs",
+      "introducao": "A energia livre de Gibbs junta entalpia e entropia para dizer se um processo é espontâneo a temperatura e pressão constantes: ΔG = ΔH − TΔS, com T em kelvin.",
+      "secoes": [
+        { "titulo": "Lendo o sinal de ΔG", "texto": "ΔG < 0: espontâneo. ΔG > 0: não espontâneo (o inverso é que é espontâneo). ΔG = 0: equilíbrio. Espontâneo quer dizer que pode acontecer sem energia externa contínua, não que seja rápido." },
+        { "titulo": "O papel da temperatura", "texto": "ΔH < 0 e ΔS > 0: espontâneo em qualquer temperatura. ΔH > 0 e ΔS < 0: nunca espontâneo. ΔH < 0 e ΔS < 0: espontâneo em temperaturas baixas. ΔH > 0 e ΔS > 0: espontâneo em temperaturas altas. A temperatura em que muda é T = ΔH ÷ ΔS (cuidado com kJ e J)." }
+      ],
+      "exemplo": "Gelo derretendo: ΔH = +6,0 kJ/mol e ΔS = +22 J/(mol·K). T = 6 000 ÷ 22 ≈ 273 K (0 °C). Acima disso, ΔG < 0 e o gelo derrete sozinho.",
+      "pontosChave": [
+        "ΔG = ΔH − TΔS, com T em kelvin.",
+        "ΔG negativo: espontâneo.",
+        "Converta ΔS de J para kJ antes de usar com ΔH em kJ.",
+        "Espontâneo não quer dizer rápido."
+      ]
+    }
+  ]
+}
