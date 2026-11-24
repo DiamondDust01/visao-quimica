@@ -17,8 +17,16 @@ import { QUESTIONS } from '../data/questoes/index.js';
 import ComoFunciona from '../screens/ComoFunciona.jsx';
 import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
+import { TEMAS_RAPIDOS } from './temasRapidos.js';
 
 const ETAPA_IDS = ETAPAS.map((etapa) => etapa.id);
+
+// Temas rápidos da tela de boas-vindas, com o nome da etapa e o total de questões já resolvidos.
+const QUICK_TOPICS = TEMAS_RAPIDOS.map((tema) => ({
+  ...tema,
+  etapaNome: ETAPAS.find((etapa) => etapa.id === tema.etapaId)?.nome || '',
+  total: QUESTIONS.filter((questao) => tema.subtemaIds.includes(questao.temaId)).length
+})).filter((tema) => tema.total > 0);
 
 const TAB_ICONS = {
   inicio: House,
@@ -100,9 +108,10 @@ export default function App() {
     else openScreen(item.tela, item.secao);
   };
 
-  // As telas de estudo pedem a etapa primeiro; as do menu "Mais" (ferramentas, perfil e
-  // ajuda) funcionam sem ela. A barra de cima, a de baixo e o "Mais" ficam sempre visíveis.
-  const needsOnboarding = !profile && !SCREEN_IDS.includes(activeTab);
+  // As telas guiadas pela etapa (Início, Fundamentos e Mentor) pedem a etapa primeiro. A Prática
+  // (como Estudo livre, inclusive pelos temas rápidos) e as telas do menu "Mais" (ferramentas,
+  // perfil e ajuda) funcionam sem ela. A barra de cima, a de baixo e o "Mais" ficam sempre visíveis.
+  const needsOnboarding = !profile && !SCREEN_IDS.includes(activeTab) && activeTab !== 'pratica';
 
   // Ao trocar de tela, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
   // Com uma seção pedida, quem rola até ela é a própria tela.
@@ -119,7 +128,7 @@ export default function App() {
   const secao = target.secao;
   let screen;
   if (needsOnboarding) {
-    screen = <Onboarding etapas={ETAPAS} observacao={ETAPAS_OBSERVACAO} onChoose={(etapaId) => { chooseEtapa(etapaId); openScreen('fundamentos'); }} />;
+    screen = <Onboarding etapas={ETAPAS} observacao={ETAPAS_OBSERVACAO} onChoose={(etapaId) => { chooseEtapa(etapaId); openScreen('fundamentos'); }} temasRapidos={QUICK_TOPICS} onQuickStart={practice} />;
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas key={target.visit} initialSection={secao} elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
