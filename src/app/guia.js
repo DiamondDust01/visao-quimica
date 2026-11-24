@@ -32,7 +32,12 @@ export const GUIA_PASSOS = [
   {
     id: 'abas', tela: 'inicio', alvo: 'abas',
     titulo: 'Os quatro módulos',
-    texto: 'Início: resumo do seu estudo. Fundamentos: a trilha sugerida para a sua etapa escolar. Prática: sessões de questões com os temas que você escolher. Laboratório do Mentor: padrões nos seus erros e o que revisar. No celular, estes botões ficam na barra de baixo, junto com o "Mais".'
+    texto: 'Início: resumo do seu estudo. Fundamentos: a trilha sugerida para a sua etapa escolar. Prática: sessões de questões com os temas que você escolher. Laboratório do Mentor: padrões nos seus erros e o que revisar. No celular, estes botões ficam na barra de baixo, junto com o "Mais".',
+    // Antes de o Mentor ser liberado, a aba dele não aparece (veja montarGuia).
+    semMentor: {
+      titulo: 'Os módulos',
+      texto: 'Início: resumo do seu estudo. Fundamentos: a trilha sugerida para a sua etapa escolar. Prática: sessões de questões com os temas que você escolher. Um quarto módulo, o Laboratório do Mentor, aparece sozinho quando ele já tiver o que sugerir para você revisar, depois dos primeiros erros. No celular, estes botões ficam na barra de baixo, junto com o "Mais".'
+    }
   },
   {
     id: 'inicio-nivel', tela: 'inicio', alvo: 'nivel',
@@ -165,5 +170,28 @@ export const GUIA_PASSOS = [
     id: 'fim', tela: 'inicio', alvo: null,
     titulo: 'Pronto para estudar!',
     texto: 'Esse é o app inteiro. Um bom começo: abra Fundamentos, escolha o tema recomendado e faça uma sessão de 10 questões. Para rever este guia, abra "Mais" e escolha "Guia de uso".'
+  }
+];
+
+// O guia completo de acordo com o que o estudante já liberou: sem o Mentor, os passos do
+// Laboratório saem e o passo das abas explica quando ele aparece.
+export const montarGuia = ({ mentorLiberado }) => GUIA_PASSOS
+  .filter((passo) => mentorLiberado || passo.tela !== 'laboratorio')
+  .map(({ semMentor, ...passo }) => (mentorLiberado || !semMentor ? passo : { ...passo, ...semMentor }));
+
+// Tutorial curto que abre uma vez, quando o Mentor é liberado. O primeiro passo não troca de
+// tela (tela: null): ele aparece onde o estudante estiver, em geral no resultado da sessão,
+// e destaca a aba nova. Os seguintes mostram o Laboratório.
+export const GUIA_MENTOR = [
+  {
+    id: 'mentor-liberado', tela: null, secao: 'Novo módulo', alvo: 'aba-laboratorio',
+    titulo: 'Laboratório do Mentor liberado',
+    texto: 'Com as suas primeiras respostas erradas, o Mentor já tem o que sugerir. A aba dele apareceu aqui e fica disponível daqui em diante. Toque em "Próximo" para conhecê-la, ou em "Sair do guia" para ver depois.'
+  },
+  ...GUIA_PASSOS.filter((passo) => passo.tela === 'laboratorio'),
+  {
+    id: 'mentor-fim', tela: 'laboratorio', alvo: null,
+    titulo: 'Use o Mentor para revisar',
+    texto: 'Depois de cada sessão, passe por aqui: as sugestões mudam conforme você acerta e erra. Durante as questões, o Mentor também ajuda em três níveis (estratégia, dica e primeiro passo). Para rever este tutorial, abra "Mais" e escolha "Guia de uso".'
   }
 ];

@@ -66,9 +66,10 @@ app.whenReady().then(async () => {
   await tap(`document.querySelector('label[for="onboarding-etapa-em-1"]')`);
   await tap(byText('Continuar'));
   const bottomNav = await js(`(() => { const nav = [...document.querySelectorAll('nav')].find((n) => n.className.includes('bottom-0') && getComputedStyle(n).display !== 'none'); return nav ? nav.querySelectorAll('button').length : 0; })()`);
-  check(bottomNav === 5, `barra inferior do celular com 5 botões (${bottomNav})`);
+  check(bottomNav === 4, `barra inferior do celular com 4 botões, sem o Mentor antes dos primeiros erros (${bottomNav})`);
+  check(await js(`![...document.querySelectorAll('nav.fixed button')].some((b) => b.innerText.trim() === 'Mentor')`), 'Mentor oculto na barra de baixo até ter o que revisar');
   await shot('android-inicio');
-  for (const label of ['Trilhas', 'Prática', 'Mentor']) {
+  for (const label of ['Trilhas', 'Prática']) {
     await tap(`[...document.querySelectorAll('nav.fixed button')].find((b) => b.innerText.trim() === ${JSON.stringify(label)})`);
     const h1 = await js(`document.querySelector('main h1')?.innerText || ''`);
     check(Boolean(h1), `toque em ${label} abre ${h1}`);
