@@ -16,6 +16,26 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
   "destilação" em Separação de misturas) só ganha explicação depois da resposta. O guia de uso e
   a tela Ajuda explicam o glossário.
 
+### Alterado
+- Cada aba agora tem uma função própria, dita no topo da tela como uma pergunta: Início ("o que
+  eu faço agora?"), Trilha ("qual é o plano da minha série?"), Prática ("quero escolher qualquer
+  tema") e Laboratório do Mentor ("onde eu estou errando?"). Saíram os textos "Passo 2" e
+  "Passo 3", que se repetiam nas três primeiras abas.
+- A aba Fundamentos passou a se chamar Trilha, no computador e no celular, para não se confundir
+  com a área de conteúdo Fundamentos.
+- O Início virou um painel: "Praticar agora" começa direto a sessão do próximo tema da trilha, e
+  abaixo aparecem a última sessão (para repetir os temas) e as sugestões do Mentor. Os atalhos
+  de ferramentas, que repetiam o menu "Mais", saíram.
+- Na Trilha, o próximo tema deixou de ser um cartão separado, repetido do Início: ele aparece
+  marcado com o selo "Próximo" dentro da própria lista.
+- A sessão de questões abre numa tela própria, por cima da aba de onde o estudante começou
+  (Início, Trilha, Prática ou Mentor), e no fim volta para ela. Praticar a partir da Trilha não
+  leva mais para a aba Prática, que fica só para a escolha livre de temas.
+- A tela de boas-vindas pergunta "Como você quer estudar?" e mostra três caminhos, com a cor da
+  aba aonde cada um leva: seguir a trilha da série, escolher temas livremente ou começar já por
+  um tema rápido. Ela também avisa que o Laboratório do Mentor aparece depois dos primeiros erros.
+- O guia de uso e a tela Ajuda explicam para que serve cada módulo.
+
 ## [0.5.0] - 2026-11-23
 
 ### Adicionado

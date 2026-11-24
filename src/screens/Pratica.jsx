@@ -1,64 +1,21 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { TriangleAlert } from 'lucide-react';
-import { Bar, buttonPrimary, buttonSecondary, Card, Notice, inputClass } from '../components/ui.jsx';
+import { buttonPrimary, buttonSecondary, Notice, inputClass } from '../components/ui.jsx';
 import TemaSelector from '../components/questoes/TemaSelector.jsx';
-import SessionPlayer from '../components/questoes/SessionPlayer.jsx';
+import TopoDaTela from '../components/TopoDaTela.jsx';
 import { unstudiedPrerequisites } from '../domain/recomendador.js';
-import { buildSession, summarizeSession, SESSION_SIZES } from '../domain/questoes/sessao.js';
-import { corDe } from '../app/cores.js';
-
-// Filete com a cor da área no topo do cartão de título.
-const HERO = `border-t-4 ${corDe('pratica').borda}`;
+import { SESSION_SIZES } from '../domain/questoes/sessao.js';
 
 const MAX_WARNINGS = 5;
 
-function SessionResult({ summary, index, onRepeat, onChooseAgain, onOpenTab }) {
-  return (
-    <div className="space-y-4">
-      <Card className={HERO}>
-        <h1 className="text-2xl font-black text-white">Resultado da sessão</h1>
-        <p className="mt-2 text-slate-300">
-          Você acertou <strong className="text-white">{summary.corretas}</strong> de <strong className="text-white">{summary.total}</strong> questões
-          {summary.dicasUsadas > 0 && `, com ajuda do Mentor em ${summary.dicasUsadas}`}, e somou <strong className="text-teal-200">{summary.pontos} pontos</strong>.
-        </p>
-        <div className="mt-4"><Bar label="Acertos" value={summary.percentual} large /></div>
-      </Card>
-      {summary.total > 0 && (
-        <Card>
-          <h2 className="text-lg font-bold text-white">Por subtema</h2>
-          <ul className="mt-3 space-y-3">
-            {Object.entries(summary.porSubtema).map(([id, item]) => (
-              <li key={id}>
-                <Bar label={index.get(id)?.nome || id} value={item.corretas} max={item.total} suffix={` de ${item.total}`} />
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-xs text-slate-500">O progresso já foi salvo. Temas com acerto baixo voltam para a revisão em Fundamentos.</p>
-        </Card>
-      )}
-      <div className="flex flex-wrap gap-2">
-        <button type="button" onClick={onRepeat} className={buttonPrimary}>Nova sessão com os mesmos temas</button>
-        <button type="button" onClick={onChooseAgain} className={buttonSecondary}>Escolher outros temas</button>
-        <button type="button" onClick={() => onOpenTab('fundamentos')} className={buttonSecondary}>Ver minha trilha</button>
-      </div>
-    </div>
-  );
-}
-
-// onSessionActive(true/false): avisa o App quando uma sessão de questões começa e termina.
-export default function Pratica({ index, questions, etapas, profile, progress, recordAnswer, request, onRequestHandled, onOpenTab, onSessionActive }) {
+// Prática: o catálogo livre. O estudante escolhe qualquer tema, de qualquer etapa, e monta
+// uma sessão. A sessão em si abre numa tela própria (screens/Sessao.jsx), pelo App.
+// request: { subtemaIds } pré-seleciona temas (ao voltar de uma sessão, ou quando um tema
+// pedido em outra tela não tem questões).
+export default function Pratica({ index, questions, etapas, progress, request, onRequestHandled, onStart }) {
   const [selected, setSelected] = useState(() => new Set());
   const [quantidade, setQuantidade] = useState(10);
-  const [session, setSession] = useState(null);
-  const [summary, setSummary] = useState(null);
   const [notice, setNotice] = useState('');
-
-  const sessionActive = Boolean(session && !summary);
-  useEffect(() => {
-    onSessionActive?.(sessionActive);
-  }, [sessionActive]); // eslint-disable-line react-hooks/exhaustive-deps
-  // Ao sair da Prática, a sessão some junto com a tela.
-  useEffect(() => () => onSessionActive?.(false), []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const countBySubtema = useMemo(() => {
     const counts = new Map();
@@ -67,27 +24,11 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
   }, [questions]);
   const questionCount = (id) => countBySubtema.get(id) || 0;
 
-  const studentLevel = index.etapaById.get(profile?.etapaId)?.nivel || null;
-  const start = (ids, size = quantidade) => {
-    const built = buildSession({
-      questoes: questions,
-      subtemaIds: [...ids],
-      quantidade: size,
-      nivelDaEtapa: (etapaId) => index.etapaById.get(etapaId)?.nivel ?? 0,
-      nivelEstudante: studentLevel
-    });
-    if (!built.length) return;
-    setSummary(null);
-    setSession({ id: Date.now(), questions: built, subtemaIds: [...ids] });
-  };
-
-  // Pedido vindo de Fundamentos ou do Início: "praticar este tema".
   useEffect(() => {
     if (!request) return;
     const ids = request.subtemaIds.filter((id) => questionCount(id) > 0);
     setSelected(new Set(ids));
-    setNotice(ids.length ? '' : 'Esse tema ainda não tem questões. Escolha outro tema abaixo.');
-    if (request.autoStart && ids.length) start(ids);
+    setNotice(ids.length || !request.subtemaIds.length ? '' : 'Esse tema ainda não tem questões. Escolha outro tema abaixo.');
     onRequestHandled();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [request]);
@@ -96,38 +37,11 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
   const missingIds = [...new Set(warnings.flatMap((warning) => warning.faltando))].filter((id) => questionCount(id) > 0);
   const available = [...selected].reduce((sum, id) => sum + questionCount(id), 0);
 
-  const handleAnswer = (record) => recordAnswer(record);
-
-  if (session && !summary) {
-    return (
-      <SessionPlayer
-        key={session.id}
-        questions={session.questions}
-        index={index}
-        onAnswer={handleAnswer}
-        onFinish={(answers) => setSummary(summarizeSession(answers))}
-      />
-    );
-  }
-
-  if (summary) {
-    return (
-      <SessionResult
-        summary={summary}
-        index={index}
-        onRepeat={() => start(session.subtemaIds)}
-        onChooseAgain={() => { setSession(null); setSummary(null); }}
-        onOpenTab={onOpenTab}
-      />
-    );
-  }
-
   return (
     <div className="space-y-4 pb-40">
-      <Card className={HERO}>
-        <h1 className="text-2xl font-black text-white">Prática</h1>
-        <p className="mt-2 text-slate-300">Passo 2: escolha um ou mais temas. Passo 3: defina a quantidade e comece a sessão; a resolução passo a passo aparece depois de cada resposta.</p>
-      </Card>
+      <TopoDaTela tela="pratica">
+        <p className="mt-3 text-sm text-slate-400">Marque os temas, escolha quantas questões quer e comece. A resolução passo a passo aparece depois de cada resposta.</p>
+      </TopoDaTela>
       {notice && <Notice tone="warn">{notice}</Notice>}
 
       <TemaSelector index={index} progress={progress} questionCount={questionCount} etapas={etapas} selected={selected} onChange={setSelected} />
@@ -167,7 +81,7 @@ export default function Pratica({ index, questions, etapas, profile, progress, r
               </select>
             </label>
             {selected.size > 0 && <button type="button" onClick={() => setSelected(new Set())} className={buttonSecondary}>Limpar</button>}
-            <button type="button" disabled={!available} onClick={() => start(selected)} className={buttonPrimary}>Passo 3 · Começar sessão</button>
+            <button type="button" disabled={!available} onClick={() => onStart([...selected], quantidade)} className={buttonPrimary}>Começar sessão</button>
           </div>
         </div>
       </div>

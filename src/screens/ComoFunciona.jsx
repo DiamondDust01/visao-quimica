@@ -5,6 +5,7 @@ import { NIVEIS, PONTOS_POR_DIFICULDADE, DESCONTO_POR_AJUDA, FATOR_MINIMO } from
 import { LIMITE_DOMINADO, LIMITE_REVISAR, MIN_RESPOSTAS } from '../domain/progresso.js';
 import useSectionFocus from '../app/useSectionFocus.js';
 import { corDe } from '../app/cores.js';
+import { TABS } from '../app/navigation.js';
 
 // Filete com a cor da área no topo do cartão de título.
 const HERO = `border-t-4 ${corDe('como-funciona').borda}`;
@@ -22,6 +23,20 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
         {studyAvailable && onStartGuide && (
           <button type="button" onClick={onStartGuide} className={`${buttonPrimary} mt-4`}>Abrir o guia de uso</button>
         )}
+      </Card>
+
+      <Card>
+        <h2 className="text-lg font-bold text-white">Para que serve cada módulo</h2>
+        <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+          {TABS.map((aba) => (
+            <li key={aba.id} className={`rounded-xl border border-t-4 border-slate-800 bg-slate-950/40 p-3 ${corDe(aba.id).borda}`}>
+              <p className={`text-xs font-bold uppercase tracking-wide ${corDe(aba.id).titulo}`}>{aba.pergunta}</p>
+              <p className="font-bold text-white">{aba.label}</p>
+              <p className="text-sm text-slate-400">{aba.description}{aba.id === 'laboratorio' ? ' Aparece depois das primeiras respostas erradas.' : ''}</p>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm text-slate-400">As sessões de questões abrem numa tela própria, por cima do módulo de onde você começou, e voltam para ele no fim.</p>
       </Card>
 
       <Card id="ajuda-regras" tabIndex={-1} className="scroll-mt-24 outline-none">
@@ -47,7 +62,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-300">
           <li>Um tema só é avaliado depois de {MIN_RESPOSTAS} respostas.</li>
           <li>Com acerto de {pct(LIMITE_DOMINADO)} ou mais, o tema conta como concluído e sai da fila da trilha.</li>
-          <li>Com acerto abaixo de {pct(LIMITE_REVISAR)}, o tema volta para a Revisão em Fundamentos, e o caminho até ele passa à frente.</li>
+          <li>Com acerto abaixo de {pct(LIMITE_REVISAR)}, o tema volta para a Revisão na Trilha, e o caminho até ele passa à frente.</li>
         </ul>
       </Card>
 

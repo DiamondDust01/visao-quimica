@@ -11,6 +11,13 @@ test('abas têm IDs únicos e incluem os módulos de estudo', () => {
   assert.ok(isTabId(DEFAULT_TAB));
 });
 
+test('cada aba diz a pergunta que responde e para que serve, sem repetir as outras', () => {
+  TABS.forEach((tab) => assert.ok(tab.pergunta?.endsWith('?') || tab.pergunta?.endsWith('.'), `${tab.id}: pergunta`));
+  TABS.forEach((tab) => assert.ok(tab.description?.length > 20, `${tab.id}: descrição`));
+  assert.equal(new Set(TABS.map((tab) => tab.pergunta)).size, TABS.length);
+  assert.equal(getTab('fundamentos').label, 'Trilha');
+});
+
 test('rótulos curtos cabem na barra inferior do celular', () => {
   TABS.forEach((tab) => assert.ok(tab.short && tab.short.length <= 8, tab.id));
 });
