@@ -1,19 +1,19 @@
 # Visão Química para Windows
 
-Pacotes da versão 0.4.1 para Windows 10 e 11 (x64), gerados em 2026-11-20 com o código do commit
-`ebbaf6a` de `app-pc`. Os executáveis ficam no **Git LFS**.
+Pacotes da versão 0.5.0 para Windows 10 e 11 (x64), gerados em 2026-11-23 com o código do commit
+`c476c61` de `app-pc`. Os executáveis ficam no **Git LFS**.
 
 | Arquivo | Tamanho | SHA-256 |
 |---|---:|---|
-| [`Visao-Quimica-Setup-0.4.1.exe`](Visao-Quimica-Setup-0.4.1.exe) (instalador) | 112.390.767 bytes | `1106DDD6472862A965B9794E0C815DCAAB6F7FE8CB756E7F8A3A488A21CEEA15` |
-| [`Visao-Quimica-0.4.1-Windows-x64.7z`](Visao-Quimica-0.4.1-Windows-x64.7z) (portátil) | 101.025.264 bytes | `4BD1812DEB011D86EFFA7D74944171E9C0FEA73693DC93CFF707E9FA644F32DC` |
+| [`Visao-Quimica-Setup-0.5.0.exe`](Visao-Quimica-Setup-0.5.0.exe) (instalador) | 112.408.250 bytes | `6952D44680B58AA110B7106A2F0A793FCF01FE904A138C521E9A8531708BFE12` |
+| [`Visao-Quimica-0.5.0-Windows-x64.7z`](Visao-Quimica-0.5.0-Windows-x64.7z) (portátil) | 101.028.057 bytes | `66BED11509D05F9BB042CDE3721F5B902BFD554F8CC5977CD737DB1FD218E1B1` |
 
 O arquivo portátil passou no teste de integridade do 7-Zip (75 arquivos, sem erros). O instalador
 foi gerado, mas não testado por instalação nesta máquina.
 
 ## Instalação
 
-Abra `Visao-Quimica-Setup-0.4.1.exe` e siga o assistente. A instalação é só para o usuário atual
+Abra `Visao-Quimica-Setup-0.5.0.exe` e siga o assistente. A instalação é só para o usuário atual
 (não pede administrador), cria atalhos e aparece em "Aplicativos instalados" para desinstalar.
 O desinstalador apaga somente os arquivos que instalou.
 
@@ -26,7 +26,7 @@ O desinstalador apaga somente os arquivos que instalou.
 ## Avisos
 
 Os pacotes não têm assinatura digital. O Windows ou uma política da escola pode avisar ou bloquear;
-não desative proteções do sistema para contornar isso. A versão 0.4.1 não tem contas, sincronização,
+não desative proteções do sistema para contornar isso. A versão 0.5.0 não tem contas, sincronização,
 backend ou multiplayer; o progresso fica no aparelho e o backup é manual.
 
 Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
