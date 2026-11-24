@@ -12,7 +12,11 @@ export const STORAGE_KEYS = {
   pontos: 'pontos',
   mentor: 'mentor',
   lembreteBackup: 'lembrete-backup',
-  guiaVisto: 'guia-visto'
+  guiaVisto: 'guia-visto',
+  // '1' depois que o Laboratório do Mentor foi liberado neste aparelho.
+  mentorLiberado: 'mentor-liberado',
+  // Tutorial do Mentor: 'pendente' ao liberar, 'visto' depois de aberto.
+  mentorTour: 'mentor-tour'
 };
 
 const defaultStorage = (kind = 'localStorage') => {

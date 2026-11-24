@@ -54,7 +54,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
         <h2 className="text-lg font-bold text-white">Sobre</h2>
         <ul className="mt-2 space-y-2 text-sm text-slate-300">
           <li>Visão Química, versão {packageJson.version}.</li>
-          <li>O Laboratório do Mentor segue regras fixas escritas para o app e não usa IA generativa.</li>
+          <li>O Laboratório do Mentor segue regras fixas escritas para o app e não usa IA generativa. A aba dele aparece depois das primeiras respostas erradas, quando ele já tem o que sugerir para revisar.</li>
           <li>Perfil, progresso, pontos e histórico do Mentor ficam neste aparelho. Não há conta nem sincronização desses dados.</li>
           <li>Em Perfil, exporte ou compartilhe manualmente um arquivo JSON para levar o progresso a outro aparelho. O lembrete semanal ou mensal só aparece quando o app é aberto; não há envio nem notificação em segundo plano.</li>
           <li>O arquivo de backup pode incluir etapa escolar, desempenho e histórico do Mentor. Se escolher e-mail ao compartilhar, o provedor de e-mail recebe o anexo e pode armazená-lo.</li>

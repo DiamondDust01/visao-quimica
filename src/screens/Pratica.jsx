@@ -45,12 +45,20 @@ function SessionResult({ summary, index, onRepeat, onChooseAgain, onOpenTab }) {
   );
 }
 
-export default function Pratica({ index, questions, etapas, profile, progress, recordAnswer, request, onRequestHandled, onOpenTab }) {
+// onSessionActive(true/false): avisa o App quando uma sessão de questões começa e termina.
+export default function Pratica({ index, questions, etapas, profile, progress, recordAnswer, request, onRequestHandled, onOpenTab, onSessionActive }) {
   const [selected, setSelected] = useState(() => new Set());
   const [quantidade, setQuantidade] = useState(10);
   const [session, setSession] = useState(null);
   const [summary, setSummary] = useState(null);
   const [notice, setNotice] = useState('');
+
+  const sessionActive = Boolean(session && !summary);
+  useEffect(() => {
+    onSessionActive?.(sessionActive);
+  }, [sessionActive]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Ao sair da Prática, a sessão some junto com a tela.
+  useEffect(() => () => onSessionActive?.(false), []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const countBySubtema = useMemo(() => {
     const counts = new Map();
