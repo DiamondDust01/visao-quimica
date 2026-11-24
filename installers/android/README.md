@@ -1,15 +1,16 @@
 # Visão Química para Android
 
-APK de teste da versão 0.5.0, gerado em 2026-11-23 com o código do commit `82333ec` de `main`:
-[`Visao-Quimica-0.5.0-android.apk`](Visao-Quimica-0.5.0-android.apk).
+APK de teste da versão 0.6.0, gerado em 2026-11-24 com o código do commit `b4863da` de `main`,
+incorporado em `app-mobile` pelo commit `898b1db`:
+[`Visao-Quimica-0.6.0-android.apk`](Visao-Quimica-0.6.0-android.apk).
 
 | | |
 |---|---|
 | `applicationId` | `com.exemplo.quimicaquest` (provisório) |
-| `versionName` / `versionCode` | 0.5.0 / 8 |
+| `versionName` / `versionCode` | 0.6.0 / 9 |
 | Android mínimo | 7.0 (API 24) |
-| Tamanho | 5.750.557 bytes |
-| SHA-256 | `6E2FC2414BFD824FC56E6F0FEBA7001AA57BC15F9A8EB011491E4DECC826BED8` |
+| Tamanho | 5.860.536 bytes |
+| SHA-256 | `714C22A63598F04ACCF6EBDDBE9DFE03BB2EC04BC40EA3FF4788D836F121A4AD` |
 | Assinatura | chave de depuração; não serve para a Play Store |
 
 ## Instalação
@@ -25,10 +26,11 @@ definido antes de uma publicação em loja.
 
 - Perfil e progresso ficam no aparelho. Não há conta, sincronização, backend ou multiplayer; o
   backup é exportado e compartilhado manualmente pelo usuário.
-- Conferido com `aapt2 dump badging` (identificador e versão) e
-  `npm run test:android` (20 verificações: navegação e toque, Mentor oculto até os primeiros erros, menu "Mais", créditos, questão,
-  estrutura, backup, guia de uso e console).
-- O APK não foi aberto em aparelho físico ou emulador nesta rodada.
+- Conferido com `aapt2 dump badging` (identificador e versão), verificação da assinatura e
+  `npm run test:android` (20 verificações de navegação/toque, Mentor, menu, questão, estrutura,
+  backup, guia e console).
+- O teste Android usa um navegador com viewport e toque emulados; não substitui aparelho físico ou
+  emulador Android. Nenhum dispositivo estava conectado nesta rodada.
 
 Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
 
