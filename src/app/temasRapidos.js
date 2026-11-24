@@ -1,6 +1,7 @@
 // Temas rápidos da tela de boas-vindas: quem não quer escolher a etapa agora começa direto
 // uma sessão curta. Cada tema junta três subtemas próximos (três questões cada) e indica a
 // etapa em que o assunto costuma aparecer, só como referência; nada é salvo no perfil.
+// O tema com `sugerido: true` aparece em destaque logo no topo da tela de boas-vindas.
 export const TEMAS_RAPIDOS = [
   {
     id: 'misturas',
@@ -24,6 +25,8 @@ export const TEMAS_RAPIDOS = [
     id: 'endo-exo',
     etapaId: 'em-2',
     titulo: 'Reações endotérmicas e exotérmicas',
+    sugerido: true,
+    resumo: 'Quais processos liberam e quais absorvem calor, o que o sinal de ΔH quer dizer e como ler uma equação termoquímica.',
     subtemaIds: ['termo-processos', 'termo-entalpia-diagramas', 'termo-equacoes-termoquimicas']
   },
   {
