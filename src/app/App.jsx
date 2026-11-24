@@ -18,8 +18,12 @@ import ComoFunciona from '../screens/ComoFunciona.jsx';
 import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
 import { TEMAS_RAPIDOS } from './temasRapidos.js';
+import { corDe } from './cores.js';
 
 const ETAPA_IDS = ETAPAS.map((etapa) => etapa.id);
+
+// Telas que rolam sozinhas até a seção pedida pelo menu "Mais" (com useSectionFocus).
+const SECTION_SCROLL_SCREENS = ['perfil', 'como-funciona'];
 
 // Temas rápidos da tela de boas-vindas, com o nome da etapa e o total de questões já resolvidos.
 const QUICK_TOPICS = TEMAS_RAPIDOS.map((tema) => ({
@@ -114,10 +118,11 @@ export default function App() {
   const needsOnboarding = !profile && !SCREEN_IDS.includes(activeTab) && activeTab !== 'pratica';
 
   // Ao trocar de tela, o foco vai para o conteúdo (leitores de tela anunciam a nova tela).
-  // Com uma seção pedida, quem rola até ela é a própria tela.
+  // Com uma seção pedida em Perfil ou Ajuda, quem rola até ela é a própria tela. Ferramentas
+  // abre a seção como aba, então volta ao topo como as demais.
   useEffect(() => {
     mainRef.current?.focus({ preventScroll: true });
-    if (!target.secao) window.scrollTo({ top: 0 });
+    if (!target.secao || !SECTION_SCROLL_SCREENS.includes(activeTab)) window.scrollTo({ top: 0 });
   }, [activeTab, needsOnboarding, target.visit]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const tab = getTab(activeTab);
@@ -160,6 +165,8 @@ export default function App() {
 
   // "Mais" aparece ativo quando a tela aberta é uma das que ele guarda.
   const moreActive = menuOpen || onScreen;
+  // Com uma tela do "Mais" aberta, o botão ganha a cor dela; só com o menu aberto, fica neutro.
+  const moreColor = corDe(onScreen ? activeTab : 'aparencia');
   const moreButton = (extra) => ({
     type: 'button',
     'data-guia': 'btn-mais',
@@ -187,23 +194,28 @@ export default function App() {
           </button>
           <nav aria-label="Módulos" data-guia="abas" className="hidden md:block">
             <ul className="flex gap-1">
-              {TABS.map((item) => (
-                <li key={item.id}>
-                  <button
-                    type="button"
-                    onClick={() => openScreen(item.id)}
-                    aria-current={item.id === activeTabId ? 'page' : undefined}
-                    className={`rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${item.id === activeTabId ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
+              {TABS.map((item) => {
+                const Icon = TAB_ICONS[item.id];
+                const cor = corDe(item.id);
+                return (
+                  <li key={item.id}>
+                    <button
+                      type="button"
+                      onClick={() => openScreen(item.id)}
+                      aria-current={item.id === activeTabId ? 'page' : undefined}
+                      className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 ${item.id === activeTabId ? cor.ativo : 'text-slate-400 hover:text-white'}`}
+                    >
+                      <Icon className={`hidden h-4 w-4 lg:block ${cor.icone}`} aria-hidden="true" />
+                      {item.label}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
           <button
             {...moreButton({
-              className: `hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 md:flex ${moreActive ? 'bg-teal-500/15 text-teal-200' : 'text-slate-400 hover:text-white'}`
+              className: `hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 md:flex ${moreActive ? moreColor.ativo : 'text-slate-400 hover:text-white'}`
             })}
           >
             <Menu className="h-5 w-5" aria-hidden="true" />
@@ -221,6 +233,7 @@ export default function App() {
         <ul className="grid grid-cols-5">
           {TABS.map((item) => {
             const Icon = TAB_ICONS[item.id];
+            const cor = corDe(item.id);
             const active = item.id === activeTabId && !menuOpen;
             return (
               <li key={item.id}>
@@ -229,9 +242,9 @@ export default function App() {
                   onClick={() => openScreen(item.id)}
                   aria-current={item.id === activeTabId ? 'page' : undefined}
                   aria-label={item.label}
-                  className={`flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${active ? 'text-teal-200' : 'text-slate-500'}`}
+                  className={`flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${active ? cor.texto : 'text-slate-500'}`}
                 >
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                  <Icon className={`h-5 w-5 ${cor.icone} ${active ? '' : 'opacity-60'}`} aria-hidden="true" />
                   <span className="max-w-full truncate px-1">{item.short}</span>
                 </button>
               </li>
@@ -241,7 +254,7 @@ export default function App() {
             <button
               {...moreButton({
                 'aria-label': 'Mais opções',
-                className: `flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${moreActive ? 'text-teal-200' : 'text-slate-500'}`
+                className: `flex h-16 w-full flex-col items-center justify-center gap-1 text-[10px] font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300 ${moreActive ? moreColor.texto : 'text-slate-500'}`
               })}
             >
               <Menu className="h-5 w-5" aria-hidden="true" />

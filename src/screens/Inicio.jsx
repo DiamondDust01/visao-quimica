@@ -3,6 +3,10 @@ import { ArchiveRestore, ArrowRight, Atom, Calculator, Hexagon } from 'lucide-re
 import { buttonPrimary, buttonSecondary, Card, Notice } from '../components/ui.jsx';
 import { recommend } from '../domain/recomendador.js';
 import NivelCard from '../components/NivelCard.jsx';
+import { corDe } from '../app/cores.js';
+
+// Filete com a cor da área no topo do cartão de título.
+const HERO = `border-t-4 ${corDe('inicio').borda}`;
 
 // Atalhos do Início: o que os estudantes mais usam fora das abas, a um toque.
 const ATALHOS = [
@@ -31,7 +35,7 @@ export default function Inicio({ onOpenTab, onOpenScreen, index, profile, progre
         </Notice>
       )}
 
-      <Card>
+      <Card className={HERO}>
         <h1 className="text-2xl font-black text-white sm:text-3xl">Visão Química</h1>
         <p className="mt-2 max-w-2xl text-slate-300">
           Seu fluxo tem três passos: etapa escolar, escolha de tema e sessão de questões. Siga a trilha recomendada ou escolha temas livremente em Prática.
@@ -72,7 +76,7 @@ export default function Inicio({ onOpenTab, onOpenScreen, index, profile, progre
           {ATALHOS.map(({ id, label, tela, secao, Icon }) => (
             <li key={id}>
               <button type="button" data-atalho={id} onClick={() => onOpenScreen(tela, secao)} className="flex h-full w-full flex-col items-start gap-2 rounded-xl border border-slate-700 bg-slate-950/50 p-3 text-left text-sm font-semibold text-slate-100 transition hover:border-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300">
-                <Icon className="h-5 w-5 text-teal-300" aria-hidden="true" />
+                <Icon className={`h-5 w-5 ${corDe(tela).icone}`} aria-hidden="true" />
                 {label}
               </button>
             </li>

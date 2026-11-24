@@ -15,6 +15,18 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 ### Alterado
 - A Prática funciona sem etapa escolhida, como Estudo livre. Início, Fundamentos e Laboratório do
   Mentor continuam pedindo a etapa primeiro.
+- Cada área do app ganhou uma cor própria, repetida na aba (e no ícone da barra do celular), no
+  filete do título da tela e no grupo do menu "Mais": Início verde-azulado, Fundamentos anil,
+  Prática laranja, Laboratório do Mentor magenta, Ferramentas verde-lima, Meus dados amarelo e
+  Ajuda azul-céu. O botão "Mais" assume a cor da tela que ele abriu, e "Apagar dados" tem ícone
+  de alerta.
+- Em Fundamentos, cada lista tem sua cor na marca do título e na borda dos temas: Revisão em
+  âmbar, Recomendados em anil, Desafio em violeta e Concluídos em verde.
+- Os atalhos do Início usam a cor da área de destino.
+
+### Corrigido
+- Abrir Tabela periódica, Massa molar ou Estruturas pelo "Mais" vindo de uma tela rolada deixava
+  a página rolada para baixo; agora Ferramentas abre no topo.
 
 ## [0.4.1] - 2026-11-20
 
