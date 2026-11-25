@@ -1,15 +1,16 @@
 # Checklist de entrega
 
-## Versão 0.7.0 (Android)
+## Versão 0.7.0
 
 - [x] `npm run verificar` sem falhas e `npm run test:android` sem erros.
 - [x] Versão consistente em `package.json`, `package-lock.json`, `android/app/build.gradle` e
   `CHANGELOG.md` (0.7.0 / versionCode 10).
 - [x] APK gerado, metadados e assinatura verificados; SHA-256 registrado no README Android.
 - [x] APK copiado para Downloads.
-- [x] Branches `main` e `app-mobile` atualizadas; APK e README de distribuição publicados.
-- [x] Release `v0.7.0` publicada com o APK Android.
-- [x] Instalador Windows mantido em 0.6.0, sem pacote novo nesta versão.
+- [x] Windows: instalador e portátil 0.7.0 gerados; instalador instalado, aberto e desinstalado em
+  pasta temporária; portátil passou no teste de integridade e abriu corretamente.
+- [x] Branches `main`, `app-mobile` e `app-pc` atualizadas; Android/Windows e READMEs publicados.
+- [x] Release `v0.7.0` publicada com APK Android e pacotes Windows.
 
 ## Versão 0.6.0
 

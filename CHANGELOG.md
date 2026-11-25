@@ -24,8 +24,9 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
   ser fechada pelo botão, por "Agora não", por Esc ou tocando fora do diálogo.
 
 ### Distribuição
-- Android atualizado para 0.7.0 (versionCode 10), APK de teste gerado e publicado. O instalador
-  Windows continua na versão 0.6.0; não foi gerado novo pacote Windows nesta versão.
+- Android atualizado para 0.7.0 (versionCode 10) e Windows atualizado para 0.7.0. APK, instalador
+  NSIS e versão portátil gerados, validados e publicados; o instalador foi instalado e removido
+  em diretório temporário de teste, e o portátil foi extraído e executado com sucesso.
 
 ## [0.6.0] - 2026-11-24
 
