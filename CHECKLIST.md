@@ -7,8 +7,8 @@
   `CHANGELOG.md` (0.7.0 / versionCode 10).
 - [x] APK gerado, metadados e assinatura verificados; SHA-256 registrado no README Android.
 - [x] APK copiado para Downloads.
-- [ ] Branches `main` e `app-mobile` atualizadas; APK e README de distribuição publicados.
-- [ ] Release `v0.7.0` publicada com o APK Android.
+- [x] Branches `main` e `app-mobile` atualizadas; APK e README de distribuição publicados.
+- [x] Release `v0.7.0` publicada com o APK Android.
 - [x] Instalador Windows mantido em 0.6.0, sem pacote novo nesta versão.
 
 ## Versão 0.6.0
