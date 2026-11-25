@@ -6,6 +6,16 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 
 ## [Não lançado]
 
+### Adicionado
+- Controle de tamanho da fonte no fim do menu "Mais", com ajustes de 80% a 140% e preferência
+  salva neste aparelho. Sem preferência salva, o padrão é 90% em telas móveis e 100% em telas
+  maiores; apagar os dados do aparelho também restaura o padrão correspondente à tela.
+
+### Alterado
+- No celular, o cartão do tema sugerido na tela de boas-vindas apresenta o título e o resumo em
+  toda a largura disponível, com o botão abaixo do texto. Em telas maiores, texto e botão ficam
+  lado a lado.
+
 ## [0.6.0] - 2026-11-24
 
 ### Adicionado

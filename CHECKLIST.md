@@ -31,6 +31,8 @@ aparelhos físicos.
 - [x] Menu Mais reúne ferramentas, perfil/dados, guia e ajuda, créditos e aparência.
 - [x] Navegação adaptada a telas largas e celulares; sessões abrem em tela própria e retornam à
   área de origem.
+- [x] No celular, o cartão do tema sugerido usa a largura disponível para título e resumo, com a
+  ação abaixo; em telas maiores, ação e texto ficam lado a lado.
 
 ### Estudo e acompanhamento
 
@@ -52,6 +54,8 @@ aparelhos físicos.
 - [x] Lembrete de estudo semanal ou mensal é local e aparece no Perfil quando o app está aberto.
 - [x] Ferramentas incluem tabela periódica, calculadora de massa molar e desenho de estruturas moleculares por SMILES.
 - [x] Guia de uso, ajuda sobre módulos/regras/pontuação, tema claro/escuro e créditos do projeto.
+- [x] Menu "Mais" permite ajustar a fonte de 80% a 140%, salva a preferência no aparelho e usa
+  como padrão 90% no celular ou 100% em telas maiores quando não há ajuste salvo.
 - [x] App funciona offline na web, Android e Windows; não há contas nem sincronização automática.
 
 ## Verificação automática

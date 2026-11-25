@@ -102,7 +102,14 @@ app.whenReady().then(async () => {
   check(await js(`Boolean(document.querySelector('[data-guia="continuar"]')) && !document.querySelector('[data-atalho]') && !/Passo \\d/.test(document.querySelector('main').innerText)`), 'Início mostra o cartão "Continuar", sem atalhos repetidos nem "Passo"');
   await openMore();
   await wait(200);
-  check(await js(`document.querySelectorAll('#menu-mais section').length === 4 && document.querySelectorAll('[data-menu-item]').length === 10`), 'menu "Mais" reúne ferramentas, dados, ajuda e aparência');
+  check(await js(`document.querySelectorAll('#menu-mais nav[aria-label="Mais opções"] > section').length === 4 && document.querySelectorAll('[data-menu-item]').length === 10`), 'menu "Mais" reúne ferramentas, dados, ajuda e aparência');
+  await js(`document.querySelector('[aria-label="Aumentar tamanho da fonte"]').click()`);
+  await wait(100);
+  const fontIncrease = await js(`({ saved: localStorage.getItem('visao-quimica:tamanho-fonte'), size: getComputedStyle(document.documentElement).fontSize })`);
+  check(fontIncrease.saved === '1.1' && Math.round(parseFloat(fontIncrease.size)) === 18, 'ajuste de fonte aumenta o texto e salva a preferência');
+  await js(`document.querySelector('[aria-label="Diminuir tamanho da fonte"]').click()`);
+  await wait(100);
+  check(await js(`localStorage.getItem('visao-quimica:tamanho-fonte') === '1' && Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize)) === 16`), 'ajuste de fonte restaura o tamanho padrão');
   await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
   await wait(200);
   check(await js(`!document.querySelector('#menu-mais')`), 'Esc fecha o menu "Mais"');

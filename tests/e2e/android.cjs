@@ -61,6 +61,8 @@ app.whenReady().then(async () => {
   await wait(1500);
   errors.length = 0; // avisos da página vazia inicial não contam
   check(await js(`document.documentElement.classList.contains('android-app')`), 'o app se identifica como Android (classe android-app)');
+  check(await js(`localStorage.getItem('visao-quimica:tamanho-fonte') === null && Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize) * 10) / 10 === 12.6`), 'tamanho de fonte padrão no celular é 90%');
+  check(await js(`(() => { const card = document.querySelector('[data-tema-sugerido]'); const title = card?.querySelector('h2'); const action = card?.querySelector('button'); return Boolean(title && action && title.getBoundingClientRect().width > 250 && action.getBoundingClientRect().top > title.getBoundingClientRect().bottom); })()`), 'título do tema sugerido usa a largura do cartão antes do botão no celular');
   check(await js(`Boolean(document.querySelector('meta[http-equiv="Content-Security-Policy"]'))`), 'CSP presente nos arquivos do APK');
   check(await js(`window.matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0`), 'tela de toque emulada');
   await tap(`document.querySelector('[data-caminho="trilha"]')`);
@@ -77,7 +79,7 @@ app.whenReady().then(async () => {
   }
   // Menu "Mais": folha que sobe da base com os quatro grupos.
   await tapMore();
-  check(await js(`document.querySelectorAll('#menu-mais section').length === 4 && document.querySelector('#menu-mais').getBoundingClientRect().bottom <= window.innerHeight + 1`), 'toque em Mais abre a folha com ferramentas, dados, ajuda e aparência');
+  check(await js(`document.querySelectorAll('#menu-mais nav[aria-label="Mais opções"] > section').length === 4 && document.querySelector('#menu-mais').getBoundingClientRect().bottom <= window.innerHeight + 1 && document.querySelector('#menu-mais [aria-label="Ajustar tamanho da fonte"]')`), 'toque em Mais abre a folha com ajuste de fonte e ferramentas');
   await shot('android-menu-mais');
   await tap(`document.querySelector('[data-menu-item="creditos"]')`);
   check(await js(`(() => {

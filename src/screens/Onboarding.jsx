@@ -71,7 +71,7 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
 
       {sugerido && (
         <Card data-tema-sugerido={sugerido.id} className="border-amber-400/50">
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <div className="min-w-0 flex-1">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-amber-300">
                 <Sparkles className="h-4 w-4" aria-hidden="true" /> Tema sugerido para começar
@@ -80,7 +80,7 @@ export default function Onboarding({ etapas, observacao, onChoose, onFreeStudy, 
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{sugerido.etapaNome} · {sugerido.total} questões</p>
               {sugerido.resumo && <p className="mt-1 max-w-2xl text-sm text-slate-300">{sugerido.resumo}</p>}
             </div>
-            <button type="button" onClick={() => onQuickStart(sugerido.subtemaIds)} className={buttonPrimary}>
+            <button type="button" onClick={() => onQuickStart(sugerido.subtemaIds)} className={`${buttonPrimary} self-start`}>
               <Play className="h-4 w-4" aria-hidden="true" /> Estudar este tema
             </button>
           </div>

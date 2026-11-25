@@ -29,7 +29,7 @@ const PEDE_ETAPA = new Set(['guia']);
 // Itens que pedem cuidado ganham ícone de alerta, além do texto.
 const ICONE_ALERTA = { apagar: 'text-rose-300' };
 
-export default function MenuMais({ open, onClose, onSelect, current, semEtapa = false }) {
+export default function MenuMais({ open, onClose, onSelect, current, semEtapa = false, fontScale, onFontScaleChange }) {
   const panelRef = useRef(null);
   const returnFocus = useRef(null);
   const theme = useTheme();
@@ -128,6 +128,34 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
             );
           })}
         </nav>
+        <section aria-label="Tamanho da fonte" className="mt-3 border-t border-slate-800 pt-3">
+          <div className="flex items-center justify-between gap-3 px-2">
+            <span className="text-sm font-semibold text-slate-100">Tamanho da fonte</span>
+            <div role="group" aria-label="Ajustar tamanho da fonte" className="flex items-center gap-2">
+              <button
+                type="button"
+                aria-label="Diminuir tamanho da fonte"
+                disabled={fontScale <= 0.8}
+                onClick={() => onFontScaleChange(-0.1)}
+                className="rounded-lg px-2 py-1 text-sm font-bold text-slate-300 hover:bg-slate-800 disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300"
+              >
+                A−
+              </button>
+              <span aria-live="polite" className="min-w-10 text-center text-xs tabular-nums text-slate-400">
+                {Math.round(fontScale * 100)}%
+              </span>
+              <button
+                type="button"
+                aria-label="Aumentar tamanho da fonte"
+                disabled={fontScale >= 1.4}
+                onClick={() => onFontScaleChange(0.1)}
+                className="rounded-lg px-2 py-1 text-sm font-bold text-slate-300 hover:bg-slate-800 disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300"
+              >
+                A+
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>,
     document.body

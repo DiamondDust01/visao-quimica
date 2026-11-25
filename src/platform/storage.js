@@ -7,6 +7,7 @@ export const STORAGE_PREFIX = 'visao-quimica:';
 
 export const STORAGE_KEYS = {
   tema: 'tema',
+  tamanhoFonte: 'tamanho-fonte',
   perfil: 'perfil',
   progresso: 'progresso',
   pontos: 'pontos',

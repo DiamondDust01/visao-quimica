@@ -33,6 +33,10 @@ const STAGE_SCREENS = ['inicio', 'fundamentos'];
 // Telas que rolam sozinhas até a seção pedida pelo menu "Mais" (com useSectionFocus).
 const SECTION_SCROLL_SCREENS = ['perfil', 'como-funciona'];
 
+const defaultFontScale = () => (
+  typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches ? 0.9 : 1
+);
+
 // Temas rápidos da tela de boas-vindas, com o nome da etapa e o total de questões já resolvidos.
 const QUICK_TOPICS = TEMAS_RAPIDOS.map((tema) => ({
   ...tema,
@@ -53,8 +57,39 @@ export default function App() {
   // navegação, para a tela abrir de novo na seção certa mesmo se já estiver aberta.
   const [target, setTarget] = useState({ secao: null, visit: 0 });
   const [menuOpen, setMenuOpen] = useState(false);
+  const [fontScale, setFontScale] = useState(() => {
+    const stored = readValue(STORAGE_KEYS.tamanhoFonte);
+    const saved = Number(stored);
+    return stored !== null && Number.isFinite(saved) && saved >= 0.8 && saved <= 1.4
+      ? saved
+      : defaultFontScale();
+  });
+  const baseFontSize = useRef(null);
   const study = useStudyState(ETAPA_IDS);
   const { profile, progress, points, mentorLog, chooseEtapa, recordAnswer, clearDevice } = study;
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (baseFontSize.current === null) {
+      baseFontSize.current = Number.parseFloat(window.getComputedStyle(root).fontSize);
+    }
+    root.style.fontSize = `${baseFontSize.current * fontScale}px`;
+  }, [fontScale]);
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia('(max-width: 767px)');
+    const updateDefault = () => {
+      if (readValue(STORAGE_KEYS.tamanhoFonte) === null) setFontScale(defaultFontScale());
+    };
+    mobileQuery.addEventListener('change', updateDefault);
+    return () => mobileQuery.removeEventListener('change', updateDefault);
+  }, []);
+
+  const adjustFontScale = (change) => {
+    const next = Math.min(1.4, Math.max(0.8, Math.round((fontScale + change) * 10) / 10));
+    setFontScale(next);
+    writeValue(STORAGE_KEYS.tamanhoFonte, next);
+  };
 
   const openScreen = (tela, secao = null) => {
     setMenuOpen(false);
@@ -256,7 +291,7 @@ export default function App() {
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas key={target.visit} initialSection={secao} elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setGuideOffer(true); setMentorLiberado(false); setMentorTour(''); setUltimaSessao(null); openScreen('inicio'); }} />;
+    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setFontScale(defaultFontScale()); setGuideOffer(true); setMentorLiberado(false); setMentorTour(''); setUltimaSessao(null); openScreen('inicio'); }} />;
   } else if (currentId === 'como-funciona') {
     screen = <ComoFunciona key={target.visit} focusSection={secao} onOpenTab={openTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
   } else if (tab.id === 'inicio') {
@@ -410,7 +445,15 @@ export default function App() {
           onCancel={() => setPedidoSessao(null)}
         />
       )}
-      <MenuMais open={menuOpen} onClose={() => setMenuOpen(false)} onSelect={selectMenuItem} current={onScreen ? { tela: activeTab, secao } : null} semEtapa={!profile} />
+      <MenuMais
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        onSelect={selectMenuItem}
+        current={onScreen ? { tela: activeTab, secao } : null}
+        semEtapa={!profile}
+        fontScale={fontScale}
+        onFontScaleChange={adjustFontScale}
+      />
       {guideOpen && guidePassos && (!needsOnboarding || guidePassos === GUIA_MENTOR) && <GuiaDeUso passos={guidePassos} onStep={goToGuideStep} onClose={closeGuide} />}
     </div>
   );
