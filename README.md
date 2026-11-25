@@ -4,7 +4,7 @@ Plataforma de estudo e treino de Química, com trilhas recomendadas por etapa es
 seleção livre de temas. Roda na web, no Android (Capacitor) e no Windows (Electron) a
 partir do mesmo build, e funciona offline.
 
-> Estado atual (2026-11-25; Android 0.7.0 e Windows 0.6.0): Início (o que fazer agora), Trilha (plano por etapa), Prática (477 questões originais, revisadas
+> Estado atual (2026-11-25; versão 0.7.0): Início (o que fazer agora), Trilha (plano por etapa), Prática (477 questões originais, revisadas
 > por IA e ainda sem revisão de professor), Laboratório do Mentor (regras fixas, sem IA
 > generativa), Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir
 > de SMILES), backup local do progresso, créditos do projeto e controle de tamanho da fonte. A
@@ -16,12 +16,12 @@ partir do mesmo build, e funciona offline.
 
 ## Downloads
 
-- **Windows (0.6.0):** branch `app-pc`, pasta `installers/windows/`: instalador
-  `Visao-Quimica-Setup-0.6.0.exe` ou versão portátil `Visao-Quimica-0.6.0-Windows-x64.7z` (Git LFS).
+- **Windows (0.7.0):** branch `app-pc`, pasta `installers/windows/`: instalador
+  `Visao-Quimica-Setup-0.7.0.exe` ou versão portátil `Visao-Quimica-0.7.0-Windows-x64.7z` (Git LFS).
 - **Android (0.7.0):** branch `app-mobile`, pasta `installers/android/`:
   `Visao-Quimica-0.7.0-android.apk` (APK de teste).
-- **GitHub:** release `v0.7.0` contém o APK Android; a release `v0.6.0` mantém os pacotes
-  anteriores para Windows e Android.
+- **GitHub:** release `v0.7.0` contém o APK Android e os pacotes Windows; a release `v0.6.0`
+  mantém os pacotes anteriores.
 - Como as branches se organizam: [BRANCHES.md](BRANCHES.md).
 
 Nenhum pacote tem assinatura digital; o APK usa a chave de depuração. As questões ainda não
