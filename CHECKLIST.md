@@ -9,8 +9,8 @@
 - [x] APK copiado para Downloads.
 - [x] Windows: instalador e portátil 0.7.0 gerados; instalador instalado, aberto e desinstalado em
   pasta temporária; portátil passou no teste de integridade e abriu corretamente.
-- [ ] Branches `main`, `app-mobile` e `app-pc` atualizadas; Android/Windows e READMEs publicados.
-- [ ] Release `v0.7.0` publicada com APK Android e pacotes Windows.
+- [x] Branches `main`, `app-mobile` e `app-pc` atualizadas; Android/Windows e READMEs publicados.
+- [x] Release `v0.7.0` publicada com APK Android e pacotes Windows.
 
 ## Sincronização do código para Windows
 
