@@ -4,7 +4,28 @@ Todas as mudanças relevantes do Visão Química ficam registradas aqui, com a d
 Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); versões seguem
 [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [0.7.0] - 2026-11-25
+
+### Adicionado
+- Guia de uso opcional e progressivo: oferta de orientação breve em um pop-up antes da escolha de
+  etapa, dicas contextuais dispensáveis na primeira visita às áreas e índice de capítulos
+  acessível pelo menu "Mais" ou pela Ajuda. O guia não escolhe etapa nem inicia sessões; capítulos
+  que dependem de uma etapa ou da liberação do Mentor ficam indisponíveis até o requisito ser
+  atendido.
+- Controle de tamanho da fonte no fim do menu "Mais", com ajustes de 80% a 140% e preferência
+  salva neste aparelho. Sem preferência salva, o padrão é 90% em telas móveis e 100% em telas
+  maiores; apagar os dados do aparelho também restaura o padrão correspondente à tela.
+
+### Alterado
+- No celular, o cartão do tema sugerido na tela de boas-vindas apresenta o título e o resumo em
+  toda a largura disponível, com o botão abaixo do texto. Em telas maiores, texto e botão ficam
+  lado a lado.
+- A oferta de orientação inicial aparece em um pop-up separado da tela de boas-vindas. Ela pode
+  ser fechada pelo botão, por "Agora não", por Esc ou tocando fora do diálogo.
+
+### Distribuição
+- Android atualizado para 0.7.0 (versionCode 10), APK de teste gerado e publicado. O instalador
+  Windows continua na versão 0.6.0; não foi gerado novo pacote Windows nesta versão.
 
 ## [0.6.0] - 2026-11-24
 

@@ -23,13 +23,10 @@ const ICONS = {
 
 const itemClass = 'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition hover:bg-slate-800/80 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal-300';
 
-// O guia de uso passa pelas telas de estudo, que só existem depois da escolha da etapa.
-const PEDE_ETAPA = new Set(['guia']);
-
 // Itens que pedem cuidado ganham ícone de alerta, além do texto.
 const ICONE_ALERTA = { apagar: 'text-rose-300' };
 
-export default function MenuMais({ open, onClose, onSelect, current, semEtapa = false }) {
+export default function MenuMais({ open, onClose, onSelect, current, fontScale, onFontScaleChange }) {
   const panelRef = useRef(null);
   const returnFocus = useRef(null);
   const theme = useTheme();
@@ -101,23 +98,19 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
                   }
                   const Icon = ICONS[item.id];
                   const active = isCurrent(item);
-                  const bloqueado = semEtapa && PEDE_ETAPA.has(item.id);
                   return (
                     <li key={item.id}>
                       <button
                         type="button"
                         data-menu-item={item.id}
                         aria-current={active ? 'page' : undefined}
-                        disabled={bloqueado}
                         onClick={() => onSelect(item)}
-                        className={`${itemClass} ${active ? cor.ativo : ''} ${bloqueado ? 'cursor-not-allowed opacity-50 hover:bg-transparent' : ''}`}
+                        className={`${itemClass} ${active ? cor.ativo : ''}`}
                       >
                         <Icon className={`h-5 w-5 shrink-0 ${ICONE_ALERTA[item.id] || cor.icone}`} aria-hidden="true" />
                         <span className="min-w-0 flex-1">
                           <span className={`block text-sm font-semibold ${active ? cor.texto : 'text-slate-100'}`}>{item.label}</span>
-                          {bloqueado
-                            ? <span className="block text-xs text-slate-500">Escolha sua etapa para liberar</span>
-                            : item.descricao && <span className="block text-xs text-slate-500">{item.descricao}</span>}
+                          {item.descricao && <span className="block text-xs text-slate-500">{item.descricao}</span>}
                         </span>
                       </button>
                     </li>
@@ -128,6 +121,34 @@ export default function MenuMais({ open, onClose, onSelect, current, semEtapa = 
             );
           })}
         </nav>
+        <section aria-label="Tamanho da fonte" className="mt-3 border-t border-slate-800 pt-3">
+          <div className="flex items-center justify-between gap-3 px-2">
+            <span className="text-sm font-semibold text-slate-100">Tamanho da fonte</span>
+            <div role="group" aria-label="Ajustar tamanho da fonte" className="flex items-center gap-2">
+              <button
+                type="button"
+                aria-label="Diminuir tamanho da fonte"
+                disabled={fontScale <= 0.8}
+                onClick={() => onFontScaleChange(-0.1)}
+                className="rounded-lg px-2 py-1 text-sm font-bold text-slate-300 hover:bg-slate-800 disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300"
+              >
+                A−
+              </button>
+              <span aria-live="polite" className="min-w-10 text-center text-xs tabular-nums text-slate-400">
+                {Math.round(fontScale * 100)}%
+              </span>
+              <button
+                type="button"
+                aria-label="Aumentar tamanho da fonte"
+                disabled={fontScale >= 1.4}
+                onClick={() => onFontScaleChange(0.1)}
+                className="rounded-lg px-2 py-1 text-sm font-bold text-slate-300 hover:bg-slate-800 disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300"
+              >
+                A+
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>,
     document.body

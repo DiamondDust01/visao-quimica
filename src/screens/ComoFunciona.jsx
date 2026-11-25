@@ -20,7 +20,7 @@ export default function ComoFunciona({ onOpenTab, studyAvailable, onStartGuide, 
       <Card className={HERO}>
         <h1 className="text-2xl font-black text-white">Ajuda e informações</h1>
         <p className="mt-2 text-slate-300">Regras de pontuação, níveis, progresso e detalhes do projeto.</p>
-        {studyAvailable && onStartGuide && (
+        {onStartGuide && (
           <button type="button" onClick={onStartGuide} className={`${buttonPrimary} mt-4`}>Abrir o guia de uso</button>
         )}
       </Card>
