@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { ArrowRight, Brain, History, Play } from 'lucide-react';
-import { buttonPrimary, buttonSecondary, Card, Notice } from '../components/ui.jsx';
+import { buttonPrimary, buttonSecondary, Card } from '../components/ui.jsx';
 import TopoDaTela from '../components/TopoDaTela.jsx';
 import NivelCard from '../components/NivelCard.jsx';
 import { recommend } from '../domain/recomendador.js';
@@ -66,7 +66,7 @@ function Continuar({ result, index, ultimaSessao, onStart, onOpenTab }) {
   );
 }
 
-export default function Inicio({ index, profile, progress, points = 0, mentorLog = [], mentorLiberado = false, ultimaSessao, guideOffer = false, onStartGuide, onDismissGuide, onOpenTab, onOpenScreen, onStart }) {
+export default function Inicio({ index, profile, progress, points = 0, mentorLog = [], mentorLiberado = false, ultimaSessao, onOpenTab, onOpenScreen, onStart }) {
   const result = useMemo(() => recommend({ index, etapaId: profile?.etapaId, progress }), [index, profile?.etapaId, progress]);
   const sugestoes = useMemo(() => (mentorLiberado ? suggestReview({ index, progress, log: mentorLog }) : []), [mentorLiberado, index, progress, mentorLog]);
   const etapa = result.etapa;
@@ -74,18 +74,6 @@ export default function Inicio({ index, profile, progress, points = 0, mentorLog
 
   return (
     <div className="space-y-4">
-      {guideOffer && (
-        <Notice tone="info">
-          <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span className="min-w-0 flex-1"><strong>Primeira vez por aqui?</strong> O guia de uso mostra para que serve cada parte do app.</span>
-            <span className="flex gap-2">
-              <button type="button" onClick={onStartGuide} className={buttonPrimary}>Começar o guia</button>
-              <button type="button" onClick={onDismissGuide} className={buttonSecondary}>Agora não</button>
-            </span>
-          </span>
-        </Notice>
-      )}
-
       <TopoDaTela tela="inicio">
         {etapa && (
           <p className="mt-3 text-sm text-slate-400">

@@ -5,6 +5,9 @@ import { SCREEN_IDS, TABS, getTab } from './navigation.js';
 import useStudyState from './useStudyState.js';
 import HexBackdrop from '../components/HexBackdrop.jsx';
 import GuiaDeUso from '../components/GuiaDeUso.jsx';
+import GuiaIndice from '../components/GuiaIndice.jsx';
+import DicaGuia from '../components/DicaGuia.jsx';
+import OfertaGuia from '../components/OfertaGuia.jsx';
 import MenuMais from '../components/MenuMais.jsx';
 import { STORAGE_KEYS, readJson, readValue, writeJson, writeValue } from '../platform/storage.js';
 import { AppVersion } from '../components/StatusIndicators.jsx';
@@ -22,7 +25,7 @@ import Ferramentas from '../screens/Ferramentas.jsx';
 import Laboratorio from '../screens/Laboratorio.jsx';
 import { TEMAS_RAPIDOS } from './temasRapidos.js';
 import { corDe } from './cores.js';
-import { GUIA_MENTOR, montarGuia } from './guia.js';
+import { montarGuia } from './guia.js';
 import { mentorTemConteudo } from '../domain/mentor/liberacao.js';
 
 const ETAPA_IDS = ETAPAS.map((etapa) => etapa.id);
@@ -106,13 +109,12 @@ export default function App() {
 
   // Sessão de questões: uma tela própria, aberta por cima da aba de onde o estudante começou
   // (origem). { id, questions, subtemaIds, origem, summary }. Trocar de aba encerra a sessão;
-  // as respostas já dadas ficam salvas. O tutorial do Mentor espera a sessão acabar.
+  // as respostas já dadas ficam salvas.
   const [sessao, setSessao] = useState(null);
   const [ultimaSessao, setUltimaSessao] = useState(() => {
     const salva = readJson(STORAGE_KEYS.ultimaSessao);
     return salva && Array.isArray(salva.subtemaIds) && salva.subtemaIds.length ? salva : null;
   });
-  const inSession = Boolean(sessao && !sessao.summary);
   // Pedido de sessão aguardando a confirmação do estudante (ConfirmarSessao):
   // { subtemaIds, questions, origem, origemNome }.
   const [pedidoSessao, setPedidoSessao] = useState(null);
@@ -122,8 +124,8 @@ export default function App() {
     setActiveTab(origem);
     setSessao({ id: Date.now(), questions, subtemaIds: [...subtemaIds], origem, summary: null });
   };
-  // Toda sessão pede confirmação antes de começar; só a sessão de exemplo do guia de uso não.
-  const startSession = (subtemaIds, { origem = 'pratica', quantidade = 10, confirmar = true } = {}) => {
+  // Toda sessão pede confirmação antes de começar.
+  const startSession = (subtemaIds, { origem = 'pratica', quantidade = 10 } = {}) => {
     const questions = buildSession({
       questoes: QUESTIONS,
       subtemaIds,
@@ -138,8 +140,7 @@ export default function App() {
       return;
     }
     const pedido = { subtemaIds: [...subtemaIds], questions, origem, origemNome: getTab(origem).label };
-    if (confirmar) setPedidoSessao(pedido);
-    else openSession(pedido);
+    setPedidoSessao(pedido);
   };
   const finishSession = (answers, segundos = 0) => {
     const summary = { ...summarizeSession(answers), segundos };
@@ -160,71 +161,48 @@ export default function App() {
   const practiceFrom = (origem) => (subtemaIds) => startSession(subtemaIds, { origem });
 
   // Laboratório do Mentor: a aba fica oculta até o Mentor ter o que sugerir (veja
-  // domain/mentor/liberacao.js). Liberado uma vez, continua liberado neste aparelho, e o
-  // tutorial dele abre uma vez, fora de uma sessão de questões.
+  // domain/mentor/liberacao.js). Liberado uma vez, continua liberado neste aparelho.
   const mentorPronto = useMemo(() => mentorTemConteudo({ index: TAXONOMIA, progress, log: mentorLog }), [progress, mentorLog]);
   const [mentorLiberado, setMentorLiberado] = useState(() => readValue(STORAGE_KEYS.mentorLiberado) === '1');
-  const [mentorTour, setMentorTour] = useState(() => readValue(STORAGE_KEYS.mentorTour) || '');
   useEffect(() => {
     if (!mentorPronto || mentorLiberado) return;
     writeValue(STORAGE_KEYS.mentorLiberado, '1');
     setMentorLiberado(true);
-    if (readValue(STORAGE_KEYS.mentorTour) !== 'visto') {
-      writeValue(STORAGE_KEYS.mentorTour, 'pendente');
-      setMentorTour('pendente');
-    }
   }, [mentorPronto, mentorLiberado]);
   const visibleTabs = mentorLiberado ? TABS : TABS.filter((item) => item.id !== 'laboratorio');
 
   // Guia de uso: abre sobre as telas e leva o estudante até a tela de cada passo.
-  // guidePassos guarda a lista do guia aberto: o guia completo ou o tutorial do Mentor.
+  // guidePassos guarda a parte escolhida; null abre o índice do guia.
   const [guideOpen, setGuideOpen] = useState(false);
   const [guidePassos, setGuidePassos] = useState(null);
   const [guideOffer, setGuideOffer] = useState(() => readValue(STORAGE_KEYS.guiaVisto) !== '1');
-  const guideTela = useRef(null);
-  // Subtema da sessão de exemplo do guia: o primeiro que tem questões.
-  const demoSubtema = QUESTIONS[0]?.temaId;
   const dismissGuideOffer = () => {
     writeValue(STORAGE_KEYS.guiaVisto, '1');
     setGuideOffer(false);
   };
-  const startGuide = () => {
-    dismissGuideOffer();
+  const startGuide = (parte = 'completo') => {
+    if (parte === 'primeiros-passos') dismissGuideOffer();
     setMenuOpen(false);
-    guideTela.current = null;
-    setGuidePassos(montarGuia({ mentorLiberado }));
+    setGuidePassos(montarGuia({
+      mentorLiberado,
+      etapaEscolhida: Boolean(profile?.etapaId && profile.etapaId !== 'livre'),
+      parte
+    }));
     setGuideOpen(true);
   };
-  const startMentorTour = () => {
-    writeValue(STORAGE_KEYS.mentorTour, 'visto');
-    setMentorTour('visto');
+  const openGuideIndex = () => {
     setMenuOpen(false);
-    guideTela.current = null;
-    setGuidePassos(GUIA_MENTOR);
+    setGuidePassos(null);
     setGuideOpen(true);
   };
-  useEffect(() => {
-    if (mentorTour !== 'pendente' || !mentorLiberado || inSession || guideOpen) return undefined;
-    // Uma pausa curta, para a tela de resultado da sessão aparecer antes do tutorial.
-    const timer = setTimeout(startMentorTour, 600);
-    return () => clearTimeout(timer);
-  }, [mentorTour, mentorLiberado, inSession, guideOpen]); // eslint-disable-line react-hooks/exhaustive-deps
   const closeGuide = () => {
-    // Sai da sessão de exemplo, para o estudante não ficar numa sessão que não pediu.
-    if (guideTela.current === 'pratica-sessao') setSessao(null);
-    guideTela.current = null;
     setMenuOpen(false);
     setGuideOpen(false);
+    setGuidePassos(null);
   };
   const goToGuideStep = (step) => {
-    // Passo sem tela (o primeiro do tutorial do Mentor): fica onde o estudante está.
+    // Informational steps stay on the current screen.
     if (!step.tela) return;
-    const previous = guideTela.current;
-    guideTela.current = step.tela;
-    if (step.tela === 'pratica-sessao') {
-      if (previous !== 'pratica-sessao') startSession([demoSubtema], { origem: 'pratica', confirmar: false });
-      return;
-    }
     if (step.tela === 'menu-mais') {
       setActiveTab('inicio');
       setMenuOpen(true);
@@ -238,7 +216,7 @@ export default function App() {
   };
 
   const selectMenuItem = (item) => {
-    if (item.acao === 'guia') startGuide();
+    if (item.acao === 'guia') openGuideIndex();
     else openScreen(item.tela, item.secao);
   };
 
@@ -261,6 +239,15 @@ export default function App() {
   const tab = getTab(shownTab);
   const onScreen = SCREEN_IDS.includes(activeTab);
   const currentId = onScreen ? activeTab : tab.id;
+  const guideHintArea = needsOnboarding
+    ? null
+    : sessao
+      ? 'sessao'
+      : currentId === 'fundamentos'
+        ? 'fundamentos'
+        : currentId === 'como-funciona'
+          ? null
+          : currentId;
   // Na escolha de etapa nenhuma aba fica marcada: a tela ainda não é a da aba.
   const activeTabId = needsOnboarding ? null : currentId;
   const secao = target.secao;
@@ -291,9 +278,9 @@ export default function App() {
   } else if (currentId === 'ferramentas') {
     screen = <Ferramentas key={target.visit} initialSection={secao} elementos={ELEMENTOS} meta={ELEMENTOS_META} estruturas={ESTRUTURAS} />;
   } else if (currentId === 'perfil') {
-    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setFontScale(defaultFontScale()); setGuideOffer(true); setMentorLiberado(false); setMentorTour(''); setUltimaSessao(null); openScreen('inicio'); }} />;
+    screen = <Perfil key={target.visit} focusSection={secao} etapas={ETAPAS} profile={profile} points={points} onChooseEtapa={chooseEtapa} study={study} onClearDevice={() => { clearDevice(); setFontScale(defaultFontScale()); setGuideOffer(true); setMentorLiberado(false); setUltimaSessao(null); openScreen('inicio'); }} />;
   } else if (currentId === 'como-funciona') {
-    screen = <ComoFunciona key={target.visit} focusSection={secao} onOpenTab={openTab} studyAvailable={Boolean(profile)} onStartGuide={startGuide} />;
+    screen = <ComoFunciona key={target.visit} focusSection={secao} onOpenTab={openTab} studyAvailable={Boolean(profile)} onStartGuide={openGuideIndex} />;
   } else if (tab.id === 'inicio') {
     screen = (
       <Inicio
@@ -304,9 +291,6 @@ export default function App() {
         mentorLog={mentorLog}
         mentorLiberado={mentorLiberado}
         ultimaSessao={ultimaSessao}
-        guideOffer={guideOffer}
-        onStartGuide={startGuide}
-        onDismissGuide={dismissGuideOffer}
         onOpenTab={openTab}
         onOpenScreen={openScreen}
         onStart={practiceFrom('inicio')}
@@ -393,6 +377,17 @@ export default function App() {
       </header>
 
       <main id="conteudo" ref={mainRef} tabIndex={-1} className="relative z-10 mx-auto max-w-6xl px-4 pb-32 pt-6 outline-none md:pb-16">
+        {guideHintArea && (
+          <div className="mb-4">
+            <DicaGuia
+              key={guideHintArea}
+              area={guideHintArea}
+              onStart={(area) => startGuide(
+                area === 'fundamentos' ? 'trilha' : area === 'laboratorio' ? 'mentor' : area
+              )}
+            />
+          </div>
+        )}
         {screen}
       </main>
 
@@ -445,16 +440,25 @@ export default function App() {
           onCancel={() => setPedidoSessao(null)}
         />
       )}
+      {needsOnboarding && guideOffer && !guideOpen && (
+        <OfertaGuia onStart={() => startGuide('primeiros-passos')} onDismiss={dismissGuideOffer} />
+      )}
       <MenuMais
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
         onSelect={selectMenuItem}
         current={onScreen ? { tela: activeTab, secao } : null}
-        semEtapa={!profile}
         fontScale={fontScale}
         onFontScaleChange={adjustFontScale}
       />
-      {guideOpen && guidePassos && (!needsOnboarding || guidePassos === GUIA_MENTOR) && <GuiaDeUso passos={guidePassos} onStep={goToGuideStep} onClose={closeGuide} />}
+      {guideOpen && (guidePassos
+        ? <GuiaDeUso passos={guidePassos} onStep={goToGuideStep} onClose={closeGuide} />
+        : <GuiaIndice
+          mentorLiberado={mentorLiberado}
+          etapaEscolhida={Boolean(profile?.etapaId && profile.etapaId !== 'livre')}
+          onSelect={startGuide}
+          onClose={closeGuide}
+        />)}
     </div>
   );
 }

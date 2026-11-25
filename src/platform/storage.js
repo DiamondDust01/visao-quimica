@@ -14,6 +14,7 @@ export const STORAGE_KEYS = {
   mentor: 'mentor',
   lembreteBackup: 'lembrete-backup',
   guiaVisto: 'guia-visto',
+  guiaDicas: 'guia-dicas',
   // '1' depois que o Laboratório do Mentor foi liberado neste aparelho.
   mentorLiberado: 'mentor-liberado',
   // Tutorial do Mentor: 'pendente' ao liberar, 'visto' depois de aberto.

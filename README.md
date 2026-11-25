@@ -4,20 +4,24 @@ Plataforma de estudo e treino de Química, com trilhas recomendadas por etapa es
 seleção livre de temas. Roda na web, no Android (Capacitor) e no Windows (Electron) a
 partir do mesmo build, e funciona offline.
 
-> Estado atual (2026-11-25; versão distribuída 0.6.0): Início (o que fazer agora), Trilha (plano por etapa), Prática (477 questões originais, revisadas
+> Estado atual (2026-11-25; Android 0.7.0 e Windows 0.6.0): Início (o que fazer agora), Trilha (plano por etapa), Prática (477 questões originais, revisadas
 > por IA e ainda sem revisão de professor), Laboratório do Mentor (regras fixas, sem IA
 > generativa), Ferramentas (tabela periódica e massa molar com dados da IUPAC, estruturas a partir
 > de SMILES), backup local do progresso, créditos do projeto e controle de tamanho da fonte. A
-> versão em desenvolvimento usa 90% como padrão em telas móveis e 100% em telas maiores; a
-> preferência pode ser ajustada de 80% a 140% no menu "Mais". O histórico, incluindo alterações
-> ainda não lançadas, está em [CHANGELOG.md](CHANGELOG.md).
+> versão usa 90% como padrão em telas móveis e 100% em telas maiores; a preferência pode ser
+> ajustada de 80% a 140% no menu "Mais". O guia progressivo e opcional oferece uma orientação
+> inicial em pop-up, dicas dispensáveis na primeira visita às áreas e capítulos acessíveis pelo
+> menu "Mais". O guia não escolhe etapa nem inicia sessões. O histórico está em
+> [CHANGELOG.md](CHANGELOG.md).
 
-## Downloads (versão 0.6.0)
+## Downloads
 
-- **Windows:** branch `app-pc`, pasta `installers/windows/`: instalador
+- **Windows (0.6.0):** branch `app-pc`, pasta `installers/windows/`: instalador
   `Visao-Quimica-Setup-0.6.0.exe` ou versão portátil `Visao-Quimica-0.6.0-Windows-x64.7z` (Git LFS).
-- **Android:** branch `app-mobile`, pasta `installers/android/`: `Visao-Quimica-0.6.0-android.apk` (APK de teste).
-- **Release:** Visão Química 0.6.0, com os três pacotes de distribuição.
+- **Android (0.7.0):** branch `app-mobile`, pasta `installers/android/`:
+  `Visao-Quimica-0.7.0-android.apk` (APK de teste).
+- **GitHub:** release `v0.7.0` contém o APK Android; a release `v0.6.0` mantém os pacotes
+  anteriores para Windows e Android.
 - Como as branches se organizam: [BRANCHES.md](BRANCHES.md).
 
 Nenhum pacote tem assinatura digital; o APK usa a chave de depuração. As questões ainda não

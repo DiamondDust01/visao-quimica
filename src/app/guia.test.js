@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { GUIA_MENTOR, GUIA_PASSOS, GUIA_SECOES, GUIA_TELAS, montarGuia } from './guia.js';
+import { GUIA_INICIAL, GUIA_MENTOR, GUIA_PARTES, GUIA_PASSOS, GUIA_SECOES, GUIA_TELAS, montarGuia } from './guia.js';
 import { TABS } from './navigation.js';
 
 const sourceFiles = (dir) => readdirSync(dir).flatMap((name) => {
@@ -11,7 +11,7 @@ const sourceFiles = (dir) => readdirSync(dir).flatMap((name) => {
   return /\.jsx$/.test(name) ? [path] : [];
 });
 
-const checkSteps = (passos, nome) => {
+const checkSteps = (passos, nome, exigeResumo = true) => {
   const ids = passos.map((passo) => passo.id);
   assert.equal(new Set(ids).size, ids.length, `${nome}: ids repetidos`);
   passos.forEach((passo) => {
@@ -23,26 +23,43 @@ const checkSteps = (passos, nome) => {
       assert.ok(passo.secao || GUIA_SECOES[passo.tela], `${passo.id}: sem seção`);
     }
   });
-  assert.equal(passos.at(-1).alvo, null, `${nome}: o último passo é um resumo no centro`);
+  if (exigeResumo) assert.equal(passos.at(-1).alvo, null, `${nome}: o último passo é um resumo no centro`);
 };
 
 test('os passos do guia têm id único, texto, tela válida e seção', () => {
   checkSteps(GUIA_PASSOS, 'guia');
   assert.equal(GUIA_PASSOS[0].alvo, null);
+  checkSteps(GUIA_INICIAL, 'primeiros passos', false);
+  assert.ok(GUIA_INICIAL.every((passo) => passo.tela !== 'fundamentos' && passo.tela !== 'pratica-sessao'));
 });
 
 test('sem o Mentor liberado, o guia não passa pelo Laboratório e explica quando ele aparece', () => {
-  const semMentor = montarGuia({ mentorLiberado: false });
+  const semMentor = montarGuia({ mentorLiberado: false, etapaEscolhida: true });
   checkSteps(semMentor, 'guia sem Mentor');
   assert.ok(!semMentor.some((passo) => passo.tela === 'laboratorio'));
   const abas = semMentor.find((passo) => passo.id === 'abas');
   assert.match(abas.texto, /aparece sozinho/);
   assert.ok(!('semMentor' in abas));
 
-  const comMentor = montarGuia({ mentorLiberado: true });
+  const comMentor = montarGuia({ mentorLiberado: true, etapaEscolhida: true });
   assert.equal(comMentor.length, GUIA_PASSOS.length);
   assert.ok(comMentor.some((passo) => passo.tela === 'laboratorio'));
   assert.equal(comMentor.find((passo) => passo.id === 'abas').titulo, 'Os quatro módulos');
+});
+
+test('o índice separa capítulos e respeita os requisitos de etapa e Mentor', () => {
+  assert.equal(new Set(GUIA_PARTES.map((parte) => parte.id)).size, GUIA_PARTES.length);
+  const livre = montarGuia({ mentorLiberado: false, etapaEscolhida: false });
+  assert.ok(!livre.some((passo) => passo.tela === 'fundamentos'));
+  assert.ok(!livre.some((passo) => passo.tela === 'laboratorio'));
+  assert.ok(montarGuia({ mentorLiberado: false, etapaEscolhida: false, parte: 'pratica' }).length > 1);
+  const sessao = montarGuia({ mentorLiberado: false, etapaEscolhida: false, parte: 'sessao' });
+  assert.ok(sessao.every((passo) => passo.tela === null), 'explicação de sessão não abre uma sessão real');
+});
+
+test('o capítulo do Mentor pode ser consultado após sua liberação', () => {
+  assert.deepEqual(montarGuia({ mentorLiberado: false, parte: 'mentor' }), []);
+  checkSteps(montarGuia({ mentorLiberado: true, parte: 'mentor' }), 'capítulo do Mentor');
 });
 
 test('o tutorial do Mentor começa pela aba nova e termina no Laboratório', () => {
@@ -56,7 +73,7 @@ test('todo alvo do guia existe no código das telas', () => {
   const code = sourceFiles('src').map((file) => readFileSync(file, 'utf8')).join('\n');
   // As abas recebem data-guia={`aba-${item.id}`} na barra de cima e na de baixo.
   const abaAlvos = code.includes('data-guia={`aba-${item.id}`}') ? TABS.map((tab) => `aba-${tab.id}`) : [];
-  [...GUIA_PASSOS, ...GUIA_MENTOR].filter((passo) => passo.alvo).forEach((passo) => {
+  [...GUIA_INICIAL, ...GUIA_PASSOS, ...GUIA_MENTOR].filter((passo) => passo.alvo).forEach((passo) => {
     const found = abaAlvos.includes(passo.alvo)
       || [`data-guia="${passo.alvo}"`, `guia="${passo.alvo}"`, `'data-guia': '${passo.alvo}'`].some((marca) => code.includes(marca));
     assert.ok(found, `alvo "${passo.alvo}" (passo ${passo.id}) não está em nenhuma tela`);

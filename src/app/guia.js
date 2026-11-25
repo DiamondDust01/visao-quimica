@@ -8,7 +8,7 @@
 // - opcional: se o alvo não existir (por exemplo, sem trilha na etapa "livre"), o passo é pulado.
 // Ao mudar de tela, o App leva o estudante até ela (veja App.jsx).
 
-export const GUIA_TELAS = ['menu-mais', 'inicio', 'fundamentos', 'pratica-lista', 'pratica-sessao', 'laboratorio', 'ferramentas', 'perfil'];
+export const GUIA_TELAS = ['menu-mais', 'inicio', 'fundamentos', 'pratica-lista', 'laboratorio', 'ferramentas', 'perfil'];
 
 // Seção do guia mostrada acima do título do passo.
 export const GUIA_SECOES = {
@@ -16,7 +16,7 @@ export const GUIA_SECOES = {
   'menu-mais': 'Menu "Mais"',
   fundamentos: 'Trilha',
   'pratica-lista': 'Prática',
-  'pratica-sessao': 'Sessão de questões',
+  sessao: 'Sessão de questões',
   laboratorio: 'Laboratório do Mentor',
   ferramentas: 'Ferramentas',
   perfil: 'Perfil'
@@ -39,12 +39,12 @@ export const GUIA_PASSOS = [
     }
   },
   {
-    id: 'inicio-nivel', tela: 'inicio', alvo: 'nivel',
+    id: 'inicio-nivel', tela: 'inicio', alvo: 'nivel', opcional: true,
     titulo: 'Seu nível e seus pontos',
     texto: 'Cada acerto soma pontos (10 × a dificuldade da questão) e os pontos sobem seu nível, de Átomo até Laboratório. Pedir ajuda ao Mentor numa questão desconta uma parte dos pontos dela, e erros nunca tiram pontos.'
   },
   {
-    id: 'inicio-continuar', tela: 'inicio', alvo: 'continuar',
+    id: 'inicio-continuar', tela: 'inicio', alvo: 'continuar', opcional: true,
     titulo: 'Continuar',
     texto: '"Praticar agora" mostra o próximo tema da sua trilha e pede a sua confirmação; em "Sim, começar", a sessão abre sem passar por outra tela. Em Estudo livre, este cartão leva à Prática. Abaixo dele aparecem, quando houver, a sua última sessão (para repetir os temas) e as sugestões do Mentor.'
   },
@@ -98,26 +98,26 @@ export const GUIA_PASSOS = [
   {
     id: 'prat-barra', tela: 'pratica-lista', alvo: 'barra-sessao',
     titulo: 'Barra da sessão',
-    texto: 'Mostra quantos temas e questões você escolheu e avisa quando algum tema usa conteúdos que você ainda não estudou (sem bloquear nada). Defina de 5 a 20 questões e toque em "Começar sessão": o app mostra o que vai ser estudado e pede confirmação. Sem nenhum tema marcado, ele avisa que é preciso escolher um primeiro. Em seguida vou abrir uma sessão de exemplo para mostrar como ela funciona.'
+    texto: 'Mostra quantos temas e questões você escolheu e avisa quando algum tema usa conteúdos que você ainda não estudou (sem bloquear nada). Defina de 5 a 20 questões e toque em "Começar sessão": o app mostra o que vai ser estudado e pede confirmação. Sem nenhum tema marcado, ele avisa que é preciso escolher um primeiro. Você pode iniciar sua própria sessão quando quiser.'
   },
 
   {
-    id: 'sessao-topo', tela: 'pratica-sessao', alvo: 'sessao-topo',
+    id: 'sessao-topo', tela: null, secao: 'Sessão de questões', alvo: null,
     titulo: 'Andamento da sessão',
-    texto: 'A sessão abre numa tela própria, por cima do módulo de onde você começou, e no fim volta para ele. Aqui aparecem em qual questão você está, o tempo de estudo (o relógio pausa quando o app fica em segundo plano) e o progresso da sessão. "Encerrar sessão" termina antes do fim: o que você já respondeu fica salvo.'
+    texto: 'A sessão abre numa tela própria, por cima do módulo de onde você começou, e no fim volta para ele. No topo aparecem em qual questão você está, o tempo de estudo (o relógio pausa quando o app fica em segundo plano) e o progresso da sessão. "Encerrar sessão" termina antes do fim: o que você já respondeu fica salvo.'
   },
   {
-    id: 'sessao-enunciado', tela: 'pratica-sessao', alvo: 'enunciado',
+    id: 'sessao-enunciado', tela: null, secao: 'Sessão de questões', alvo: null,
     titulo: 'A questão',
-    texto: 'No topo estão o subtema, o tipo da questão (múltipla escolha, numérica, balanceamento, nomenclatura, associação, ordenação ou tabela periódica) e a dificuldade. Abaixo vem o enunciado, às vezes com a estrutura da molécula desenhada. Palavras com sublinhado pontilhado têm explicação: toque nelas e confirme no balão. Consultar essas explicações não desconta pontos.'
+    texto: 'Cada questão informa o subtema, o tipo (múltipla escolha, numérica, balanceamento, nomenclatura, associação, ordenação ou tabela periódica) e a dificuldade. O enunciado pode incluir o desenho de uma molécula. Palavras com sublinhado pontilhado têm explicação: toque nelas e confirme no balão. Consultar essas explicações não desconta pontos.'
   },
   {
-    id: 'sessao-resposta', tela: 'pratica-sessao', alvo: 'resposta',
+    id: 'sessao-resposta', tela: null, secao: 'Sessão de questões', alvo: null,
     titulo: 'Onde você responde',
     texto: 'O campo muda conforme o tipo: alternativas, número com unidade (aceita vírgula, ponto e "× 10^"), coeficientes de uma equação, nome ou fórmula, listas para associar ou ordenar, ou a tabela periódica. Respostas que não puderam ser lidas não contam como erro: é só corrigir e enviar de novo.'
   },
   {
-    id: 'sessao-acoes', tela: 'pratica-sessao', alvo: 'acoes',
+    id: 'sessao-acoes', tela: null, secao: 'Sessão de questões', alvo: null,
     titulo: 'Responder e pedir ajuda',
     texto: '"Responder" corrige na hora. "Pedir ajuda ao Mentor" mostra até três níveis, do mais geral ao mais específico: estratégia, dica e primeiro passo. Cada ajuda usada desconta 25% dos pontos da questão. Se você não conhece o assunto, "Não sei este conteúdo" abre um texto curto que explica o tema, sem descontar pontos. Depois de responder aparecem o resultado, o erro comum previsto (se houver), o que o Mentor notou, a resposta esperada, os pontos ganhos e a resolução passo a passo.'
   },
@@ -167,11 +167,87 @@ export const GUIA_PASSOS = [
   }
 ];
 
-// O guia completo de acordo com o que o estudante já liberou: sem o Mentor, os passos do
-// Laboratório saem e o passo das abas explica quando ele aparece.
-export const montarGuia = ({ mentorLiberado }) => GUIA_PASSOS
-  .filter((passo) => mentorLiberado || passo.tela !== 'laboratorio')
-  .map(({ semMentor, ...passo }) => (mentorLiberado || !semMentor ? passo : { ...passo, ...semMentor }));
+export const GUIA_INICIAL = [
+  {
+    id: 'inicio-bem-vindo', tela: 'inicio', alvo: null,
+    titulo: 'Uma orientação rápida, se quiser',
+    texto: 'Este passeio é opcional: você pode fechar a qualquer momento. Ele não escolhe uma etapa, não inicia uma sessão e não altera seus dados.'
+  },
+  {
+    id: 'inicio-caminhos', tela: 'inicio', alvo: 'onboarding-caminhos', opcional: true,
+    titulo: 'Escolha como começar',
+    texto: 'Você pode seguir a trilha da sua etapa, escolher temas livremente ou experimentar uma sessão rápida. Escolher um caminho não é obrigatório agora; pode explorar primeiro.'
+  },
+  {
+    id: 'inicio-sugerido', tela: 'inicio', alvo: 'tema-sugerido', opcional: true,
+    titulo: 'Um tema para experimentar',
+    texto: 'Este tema é apenas uma sugestão. Ao tocar nele, você verá os detalhes e poderá confirmar ou cancelar antes de começar.'
+  },
+  {
+    id: 'inicio-ajuda', tela: 'inicio', alvo: 'btn-mais',
+    titulo: 'Ajuda sempre disponível',
+    texto: 'Ferramentas, dados e ajuda ficam no menu "Mais". O guia completo também estará lá para você consultar quando quiser.'
+  },
+  {
+    id: 'inicio-ajuda-menu', tela: 'menu-mais', alvo: 'menu-mais',
+    titulo: 'Sem pressa para escolher',
+    texto: 'Você pode explorar as ferramentas ou abrir a ajuda sem escolher uma etapa. Quando quiser, volte às opções de início e escolha como estudar.'
+  }
+];
+
+export const GUIA_PARTES = [
+  { id: 'primeiros-passos', titulo: 'Primeiros passos', descricao: 'Orientação rápida para explorar antes de escolher uma etapa.' },
+  { id: 'completo', titulo: 'Guia completo', descricao: 'Um passeio por todas as áreas disponíveis.' },
+  { id: 'inicio', titulo: 'Início e navegação', descricao: 'O que cada módulo faz e onde encontrar ajuda.' },
+  { id: 'trilha', titulo: 'Trilha escolar', descricao: 'Progresso, recomendações, revisão e desafios.', precisaEtapa: true },
+  { id: 'pratica', titulo: 'Escolher temas', descricao: 'Filtros, seleção e montagem da sessão.' },
+  { id: 'sessao', titulo: 'Sessão de questões', descricao: 'Como responder, acompanhar e pedir ajuda.' },
+  { id: 'ferramentas', titulo: 'Ferramentas', descricao: 'Tabela periódica, massa molar e estruturas.' },
+  { id: 'perfil', titulo: 'Perfil e dados', descricao: 'Etapa escolar, progresso e backups.' },
+  { id: 'mentor', titulo: 'Laboratório do Mentor', descricao: 'Sugestões de revisão e padrões de erro.', precisaMentor: true }
+];
+
+const PASSOS_POR_PARTE = {
+  inicio: ['abas', 'inicio-nivel', 'inicio-continuar', 'mais', 'mais-menu'],
+  trilha: ['fund-progresso', 'fund-recomendado', 'fund-revisao', 'fund-recomendados', 'fund-desafio'],
+  pratica: ['prat-filtros', 'prat-temas', 'prat-barra'],
+  sessao: ['sessao-topo', 'sessao-enunciado', 'sessao-resposta', 'sessao-acoes'],
+  ferramentas: ['ferr-abas', 'ferr-conteudo'],
+  perfil: ['perfil-etapa', 'perfil-backup', 'perfil-dados']
+};
+
+const RESUMOS = {
+  completo: { id: 'fim', titulo: 'Pronto para explorar!', texto: 'Você pode voltar a qualquer parte pelo menu "Mais" → "Guia de uso". Escolha o que faz sentido agora e siga no seu ritmo.' },
+  inicio: { id: 'inicio-fim', titulo: 'Você escolhe o caminho', texto: 'Pronto. Explore o app na ordem que preferir e volte a este guia quando uma dúvida aparecer.' },
+  trilha: { id: 'trilha-fim', titulo: 'Sua trilha, no seu ritmo', texto: 'A trilha é uma sugestão de percurso. Você pode mudar de etapa ou escolher qualquer tema na Prática.' },
+  pratica: { id: 'pratica-fim', titulo: 'Escolha sem pressa', texto: 'Marque os temas que interessam e inicie quando estiver pronto. Você pode cancelar antes da sessão começar.' },
+  sessao: { id: 'sessao-fim', titulo: 'Você decide quando praticar', texto: 'Esta parte foi só uma explicação: nenhuma sessão foi iniciada. Quando quiser, escolha um tema e confirme para começar a praticar.' },
+  ferramentas: { id: 'ferramentas-fim', titulo: 'Ferramentas à mão', texto: 'Use qualquer ferramenta quando precisar; elas não alteram seu progresso de estudo.' },
+  perfil: { id: 'perfil-fim', titulo: 'Seus dados ficam sob seu controle', texto: 'Você pode voltar ao Perfil para gerenciar etapa, backup e dados locais.' }
+};
+
+const etapasDe = ({ mentorLiberado, etapaEscolhida, parte }) => {
+  if (parte === 'primeiros-passos') return GUIA_INICIAL;
+  if (parte === 'mentor') return mentorLiberado ? GUIA_MENTOR : [];
+  const ids = parte === 'completo' ? GUIA_PASSOS.map((passo) => passo.id) : PASSOS_POR_PARTE[parte] || [];
+  const resumo = RESUMOS[parte] || RESUMOS.completo;
+  const escolhidos = parte === 'completo'
+    ? GUIA_PASSOS
+    : GUIA_PASSOS.filter((passo) => ids.includes(passo.id));
+  const filtrados = escolhidos
+    .filter((passo) => {
+      if (!mentorLiberado && passo.tela === 'laboratorio') return false;
+      if (!etapaEscolhida && passo.tela === 'fundamentos') return false;
+      return true;
+    })
+    .map(({ semMentor, ...passo }) => (
+      mentorLiberado || !semMentor ? passo : { ...passo, ...semMentor }
+    ));
+  if (parte === 'completo') return filtrados;
+  return [...filtrados, { ...resumo, tela: null, secao: 'Resumo', alvo: null }];
+};
+
+export const montarGuia = (options = {}) => etapasDe({ ...options, parte: options.parte || 'completo' });
 
 // Tutorial curto que abre uma vez, quando o Mentor é liberado. O primeiro passo não troca de
 // tela (tela: null): ele aparece onde o estudante estiver, em geral no resultado da sessão,
