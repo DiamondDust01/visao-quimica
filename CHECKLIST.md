@@ -11,6 +11,13 @@
 - [x] Release `v0.7.0` publicada com o APK Android.
 - [x] Instalador Windows mantido em 0.6.0, sem pacote novo nesta versão.
 
+## Sincronização do código para Windows
+
+- [x] Ajuste do tamanho da fonte e guia progressivo integrados na branch `app-pc`.
+- [x] `npm run verificar` e `npm run test:android` passaram na branch sincronizada.
+- [x] README do Windows esclarece que os pacotes distribuídos continuam na versão 0.6.0.
+- [ ] Gerar/publicar novos pacotes Windows após instalar NSIS e 7-Zip; não foram encontrados nesta máquina.
+
 ## Versão 0.6.0
 
 - [x] `npm run verificar` sem falhas (testes, conteúdo, resquícios, auditoria, build e fumaça).

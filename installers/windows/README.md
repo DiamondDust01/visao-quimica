@@ -4,6 +4,12 @@ Pacotes da versão 0.6.0 para Windows 10 e 11 (x64), gerados em 2026-11-24 com o
 `b4863da` de `main`, incorporado em `app-pc` pelo commit `58da8d9`. Os executáveis ficam no
 **Git LFS**.
 
+O código atual da branch `app-pc` já inclui o ajuste de tamanho da fonte (padrão de 90% em telas
+móveis e 100% em telas maiores) e o guia progressivo e opcional, incluindo a oferta inicial em
+pop-up. Esses recursos ainda não estão nos pacotes abaixo: o instalador e o portátil continuam
+na versão 0.6.0. Para gerar os pacotes atualizados, esta máquina precisa do NSIS e do 7-Zip; eles
+não estão instalados, portanto não foram gerados nem publicados novos binários nesta atualização.
+
 | Arquivo | Tamanho | SHA-256 |
 |---|---:|---|
 | [`Visao-Quimica-Setup-0.6.0.exe`](Visao-Quimica-Setup-0.6.0.exe) (instalador) | 112.482.412 bytes | `F305DC6CD5868A9CA0124540F1FFED485FE50CF026F07144AFADF3D04ACEAA81` |
