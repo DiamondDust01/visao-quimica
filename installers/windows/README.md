@@ -16,7 +16,7 @@ atalhos de teste foram removidos.
 
 ## Instalação
 
-Abra `Visao-Quimica-Setup-0.6.0.exe` e siga o assistente. A instalação é só para o usuário atual
+Abra `Visao-Quimica-Setup-0.7.0.exe` e siga o assistente. A instalação é só para o usuário atual
 (não pede administrador), cria atalhos e aparece em "Aplicativos instalados" para desinstalar.
 O desinstalador apaga somente os arquivos que instalou.
 
