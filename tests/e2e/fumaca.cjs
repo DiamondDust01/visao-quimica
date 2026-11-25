@@ -49,12 +49,34 @@ app.whenReady().then(async () => {
   const firstUseBar = await js(`[...document.querySelectorAll('header button')].filter((b) => b.offsetParent).map((b) => b.innerText.trim())`);
   check(['Início', 'Trilha', 'Prática', 'Mais'].every((label) => firstUseBar.includes(label)), `barra superior completa já no primeiro uso (${firstUseBar.join(', ')})`);
   check(!firstUseBar.includes('Laboratório do Mentor'), 'Laboratório do Mentor oculto antes de haver o que revisar');
+  check(await js(`document.querySelector('[role="dialog"] #oferta-guia-titulo')?.innerText === 'Quer uma orientação rápida?' && !document.querySelector('main [role="status"]')`), 'boas-vindas oferece orientação opcional em um pop-up');
+  await clickText('Conhecer o app');
+  await wait(300);
+  check(await js(`document.querySelector('#guia-titulo')?.innerText === 'Uma orientação rápida, se quiser'`), 'orientação inicial explica que não escolhe etapa nem inicia sessão');
+  await clickText('Próximo');
+  await wait(400);
+  check(await js(`document.querySelector('#guia-titulo')?.innerText === 'Escolha como começar' && Boolean(document.querySelector('[data-guia-overlay] .border-teal-300'))`), 'orientação inicial destaca os caminhos sem avançar por conta própria');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(200);
+  check(await js(`!document.querySelector('[data-guia-overlay]') && !localStorage.getItem('visao-quimica:perfil') && !document.querySelector('[data-confirmar-sessao]')`), 'a orientação pode ser fechada sem escolher etapa nem iniciar sessão');
   await openMore();
   await wait(300);
-  check(await js(`document.querySelector('[data-menu-item="guia"]')?.disabled === true && document.querySelector('[data-menu-item="tabela"]')?.disabled === false`), 'sem etapa, o "Mais" abre as ferramentas e bloqueia só o guia');
+  check(await js(`document.querySelector('[data-menu-item="guia"]')?.disabled === false && document.querySelector('[data-menu-item="tabela"]')?.disabled === false`), 'sem etapa, ferramentas e guia ficam disponíveis no menu "Mais"');
+  await js(`document.querySelector('[data-menu-item="guia"]').click()`);
+  await wait(200);
+  check(await js(`document.querySelector('#guia-indice-titulo')?.innerText === 'Guia de uso'`), 'menu abre o índice do guia com partes selecionáveis');
+  await js(`document.querySelector('[data-guia-parte="primeiros-passos"]').click()`);
+  await wait(300);
+  check(await js(`document.querySelector('#guia-titulo')?.innerText === 'Uma orientação rápida, se quiser'`), 'primeiros passos também podem ser iniciados pelo menu');
+  await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
+  await wait(200);
+  check(await js(`!document.querySelector('[data-guia-overlay]') && !document.querySelector('#menu-mais')`), 'fechar a orientação também fecha o painel anterior');
+  await openMore();
+  await wait(200);
+  check(await js(`Boolean(document.querySelector('#menu-mais'))`), 'o menu "Mais" pode ser reaberto após sair da orientação');
   await js(`document.querySelector('[data-menu-item="tabela"]').click()`);
   await wait(400);
-  check(/Ferramentas/.test(await heading()), 'sem etapa, a tabela periódica abre pelo "Mais"');
+  check(/Ferramentas/.test(await heading()), `sem etapa, a tabela periódica abre pelo "Mais" (${await heading()})`);
   await clickText('Início');
   await wait(400);
   check(/Boas-vindas/.test(await heading()), 'sem etapa, as abas de estudo levam à escolha de etapa');
@@ -102,22 +124,28 @@ app.whenReady().then(async () => {
   check(await js(`Boolean(document.querySelector('[data-guia="continuar"]')) && !document.querySelector('[data-atalho]') && !/Passo \\d/.test(document.querySelector('main').innerText)`), 'Início mostra o cartão "Continuar", sem atalhos repetidos nem "Passo"');
   await openMore();
   await wait(200);
-  check(await js(`document.querySelectorAll('#menu-mais section').length === 4 && document.querySelectorAll('[data-menu-item]').length === 10`), 'menu "Mais" reúne ferramentas, dados, ajuda e aparência');
+  check(await js(`document.querySelectorAll('#menu-mais nav[aria-label="Mais opções"] > section').length === 4 && document.querySelectorAll('[data-menu-item]').length === 10`), 'menu "Mais" reúne ferramentas, dados, ajuda e aparência');
+  await js(`document.querySelector('[aria-label="Aumentar tamanho da fonte"]').click()`);
+  await wait(100);
+  const fontIncrease = await js(`({ saved: localStorage.getItem('visao-quimica:tamanho-fonte'), size: getComputedStyle(document.documentElement).fontSize })`);
+  check(fontIncrease.saved === '1.1' && Math.round(parseFloat(fontIncrease.size)) === 18, 'ajuste de fonte aumenta o texto e salva a preferência');
+  await js(`document.querySelector('[aria-label="Diminuir tamanho da fonte"]').click()`);
+  await wait(100);
+  check(await js(`localStorage.getItem('visao-quimica:tamanho-fonte') === '1' && Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize)) === 16`), 'ajuste de fonte restaura o tamanho padrão');
   await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
   await wait(200);
   check(await js(`!document.querySelector('#menu-mais')`), 'Esc fecha o menu "Mais"');
 
-  // Guia de uso: abre pelo menu "Mais", destaca o primeiro alvo, avança e fecha com Esc.
-  check(await js(`[...document.querySelectorAll('button')].some((b) => b.innerText.trim() === 'Começar o guia')`), 'Início oferece o guia de uso na primeira vez');
+  // Guia de uso: escolhe uma parte no índice, destaca o alvo e fecha com Esc sem iniciar sessão.
   await menu('guia');
   await wait(200);
-  check(await js(`document.querySelector('[role=dialog] h2')?.innerText === 'Bem-vindo ao guia de uso'`), 'guia de uso abre com o pop-up de boas-vindas');
-  await clickText('Próximo');
+  check(await js(`document.querySelector('#guia-indice-titulo')?.innerText === 'Guia de uso'`), 'guia abre no índice mesmo depois de escolher uma etapa');
+  await js(`document.querySelector('[data-guia-parte="pratica"]').click()`);
   await wait(900);
-  check(await js(`Boolean(document.querySelector('[data-guia-overlay] .border-teal-300')) && document.querySelector('[role=dialog] h2')?.innerText === 'Os módulos' && /aparece sozinho/.test(document.querySelector('[role=dialog]').innerText)`), 'guia contorna o elemento do passo e, sem o Mentor liberado, explica quando ele aparece');
+  check(await js(`Boolean(document.querySelector('[data-guia-overlay] .border-teal-300')) && document.querySelector('#guia-titulo')?.innerText === 'Escolha livre'`), 'parte da Prática navega até a área e destaca seus controles');
   await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
   await wait(300);
-  check(await js(`!document.querySelector('[role=dialog]')`), 'Esc fecha o guia de uso');
+  check(await js(`!document.querySelector('[role=dialog]') && !document.querySelector('[data-confirmar-sessao]')`), 'Esc fecha o guia sem abrir uma sessão de exemplo');
 
   await menu('creditos');
   const credits = await js(`(() => {
@@ -157,8 +185,7 @@ app.whenReady().then(async () => {
   await clickText('Encerrar sessão');
   await wait(300);
 
-  // Um segundo erro no mesmo tema dá ao Mentor o que sugerir: a aba aparece na hora, mas o
-  // tutorial só abre quando a sessão termina.
+  // Um segundo erro no mesmo tema dá ao Mentor o que sugerir, mas não abre um tour modal.
   check(!(await js(`[...document.querySelectorAll('header nav button')].some((b) => b.innerText.trim() === 'Laboratório do Mentor')`)), 'um erro só ainda não libera o Mentor');
   await clickText('Nova sessão com os mesmos temas');
   await wait(300);
@@ -170,13 +197,16 @@ app.whenReady().then(async () => {
   check(await js(`[...document.querySelectorAll('header nav button')].some((b) => b.innerText.trim() === 'Laboratório do Mentor') && !document.querySelector('[data-guia-overlay]')`), 'segundo erro libera a aba do Mentor sem interromper a sessão');
   await clickText('Encerrar sessão');
   await wait(1200);
-  check(await js(`document.querySelector('[role=dialog] h2')?.innerText === 'Laboratório do Mentor liberado' && Boolean(document.querySelector('[data-guia-overlay] .border-teal-300'))`), 'ao fim da sessão, o tutorial do Mentor destaca a aba nova');
-  await clickText('Próximo');
+  check(await js(`!document.querySelector('[data-guia-overlay]') && !document.querySelector('[role=dialog]')`), 'terminar a sessão não interrompe com um tutorial automático');
+  await clickText('Laboratório do Mentor');
+  await wait(500);
+  check(await js(`[...document.querySelectorAll('main button')].some((b) => b.innerText.trim() === 'Ver dica')`), 'primeira visita ao Mentor oferece uma dica opcional');
+  await clickText('Ver dica');
   await wait(900);
-  check(/Laboratório do Mentor/.test(await heading()) && await js(`document.querySelector('[role=dialog] h2')?.innerText === 'O que revisar agora'`), 'tutorial leva ao Laboratório, já com sugestões');
+  check(await js(`document.querySelector('#guia-titulo')?.innerText === 'Laboratório do Mentor liberado' && Boolean(document.querySelector('[data-guia-overlay] .border-teal-300'))`), 'dica escolhida abre o capítulo do Mentor');
   await js(`document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))`);
   await wait(300);
-  check(await js(`!document.querySelector('[role=dialog]') && localStorage.getItem('visao-quimica:mentor-tour') === 'visto'`), 'tutorial do Mentor fecha e não volta a abrir');
+  check(await js(`!document.querySelector('[role=dialog]') && Boolean(JSON.parse(localStorage.getItem('visao-quimica:guia-dicas') || '{}').laboratorio)`), 'dica do Mentor pode ser fechada e não volta a aparecer automaticamente');
 
   // Glossário: a palavra sublinhada abre um balão que pergunta antes de explicar. Antes da
   // resposta, o termo que é o assunto cobrado (destilação, neste subtema) não é marcado.

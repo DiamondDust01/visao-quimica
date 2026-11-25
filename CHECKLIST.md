@@ -1,5 +1,16 @@
 # Checklist de entrega
 
+## Versão 0.7.0 (Android)
+
+- [x] `npm run verificar` sem falhas e `npm run test:android` sem erros.
+- [x] Versão consistente em `package.json`, `package-lock.json`, `android/app/build.gradle` e
+  `CHANGELOG.md` (0.7.0 / versionCode 10).
+- [x] APK gerado, metadados e assinatura verificados; SHA-256 registrado no README Android.
+- [x] APK copiado para Downloads.
+- [ ] Branches `main` e `app-mobile` atualizadas; APK e README de distribuição publicados.
+- [ ] Release `v0.7.0` publicada com o APK Android.
+- [x] Instalador Windows mantido em 0.6.0, sem pacote novo nesta versão.
+
 ## Versão 0.6.0
 
 - [x] `npm run verificar` sem falhas (testes, conteúdo, resquícios, auditoria, build e fumaça).
@@ -29,8 +40,13 @@ aparelhos físicos.
 - [x] Quatro abas principais: Início, Trilha, Prática e Laboratório do Mentor (este aparece quando
   já pode sugerir revisão).
 - [x] Menu Mais reúne ferramentas, perfil/dados, guia e ajuda, créditos e aparência.
+- [x] Guia opcional e progressivo: oferta em pop-up antes de escolher etapa, dicas dispensáveis na
+  primeira visita às áreas e índice de capítulos no menu Mais/Ajuda; não altera etapa, inicia
+  sessões ou avança sem escolha do estudante.
 - [x] Navegação adaptada a telas largas e celulares; sessões abrem em tela própria e retornam à
   área de origem.
+- [x] No celular, o cartão do tema sugerido usa a largura disponível para título e resumo, com a
+  ação abaixo; em telas maiores, ação e texto ficam lado a lado.
 
 ### Estudo e acompanhamento
 
@@ -52,6 +68,8 @@ aparelhos físicos.
 - [x] Lembrete de estudo semanal ou mensal é local e aparece no Perfil quando o app está aberto.
 - [x] Ferramentas incluem tabela periódica, calculadora de massa molar e desenho de estruturas moleculares por SMILES.
 - [x] Guia de uso, ajuda sobre módulos/regras/pontuação, tema claro/escuro e créditos do projeto.
+- [x] Menu "Mais" permite ajustar a fonte de 80% a 140%, salva a preferência no aparelho e usa
+  como padrão 90% no celular ou 100% em telas maiores quando não há ajuste salvo.
 - [x] App funciona offline na web, Android e Windows; não há contas nem sincronização automática.
 
 ## Verificação automática

@@ -7,12 +7,14 @@ export const STORAGE_PREFIX = 'visao-quimica:';
 
 export const STORAGE_KEYS = {
   tema: 'tema',
+  tamanhoFonte: 'tamanho-fonte',
   perfil: 'perfil',
   progresso: 'progresso',
   pontos: 'pontos',
   mentor: 'mentor',
   lembreteBackup: 'lembrete-backup',
   guiaVisto: 'guia-visto',
+  guiaDicas: 'guia-dicas',
   // '1' depois que o Laboratório do Mentor foi liberado neste aparelho.
   mentorLiberado: 'mentor-liberado',
   // Tutorial do Mentor: 'pendente' ao liberar, 'visto' depois de aberto.
