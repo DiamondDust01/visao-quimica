@@ -1,22 +1,18 @@
 # Visão Química para Windows
 
-Pacotes da versão 0.6.0 para Windows 10 e 11 (x64), gerados em 2026-11-24 com o código do commit
-`b4863da` de `main`, incorporado em `app-pc` pelo commit `58da8d9`. Os executáveis ficam no
+Pacotes da versão 0.7.0 para Windows 10 e 11 (x64), gerados em 2026-11-25 com o código do commit
+`714ab35` de `main`, incorporado em `app-pc` pelo commit `7b9473a`. Os executáveis ficam no
 **Git LFS**.
-
-O código atual da branch `app-pc` já inclui o ajuste de tamanho da fonte (padrão de 90% em telas
-móveis e 100% em telas maiores) e o guia progressivo e opcional, incluindo a oferta inicial em
-pop-up. Esses recursos ainda não estão nos pacotes abaixo: o instalador e o portátil continuam
-na versão 0.6.0. Para gerar os pacotes atualizados, esta máquina precisa do NSIS e do 7-Zip; eles
-não estão instalados, portanto não foram gerados nem publicados novos binários nesta atualização.
 
 | Arquivo | Tamanho | SHA-256 |
 |---|---:|---|
-| [`Visao-Quimica-Setup-0.6.0.exe`](Visao-Quimica-Setup-0.6.0.exe) (instalador) | 112.482.412 bytes | `F305DC6CD5868A9CA0124540F1FFED485FE50CF026F07144AFADF3D04ACEAA81` |
-| [`Visao-Quimica-0.6.0-Windows-x64.7z`](Visao-Quimica-0.6.0-Windows-x64.7z) (portátil) | 101.098.923 bytes | `3C3B4D1F374DFA125215FADCFB47BA3C1089D7DA198E2D67C058D5FA45643D65` |
+| [`Visao-Quimica-Setup-0.7.0.exe`](Visao-Quimica-Setup-0.7.0.exe) (instalador) | 112.472.654 bytes | `F05C469A8A44FE058FF8AAF84ACE0C3BE1DA05ED6D8F5223D740381430335450` |
+| [`Visao-Quimica-0.7.0-Windows-x64.7z`](Visao-Quimica-0.7.0-Windows-x64.7z) (portátil) | 101.100.815 bytes | `02AFF8EE9E571E4BB696236983B8FB6F0C344D322033CFEC8EB3E8E2FE6CD81B` |
 
-O arquivo portátil passou no teste de integridade do 7-Zip (75 arquivos, sem erros). O instalador
-foi gerado, mas não testado por instalação nesta máquina.
+O arquivo portátil passou no teste de integridade do 7-Zip (75 arquivos, sem erros) e foi
+extraído e aberto com sucesso em pasta temporária. O instalador foi instalado silenciosamente em
+uma pasta temporária, aberto com sucesso e desinstalado; a pasta, as chaves de registro e os
+atalhos de teste foram removidos.
 
 ## Instalação
 
@@ -33,8 +29,9 @@ O desinstalador apaga somente os arquivos que instalou.
 ## Avisos
 
 Os pacotes não têm assinatura digital. O Windows ou uma política da escola pode avisar ou bloquear;
-não desative proteções do sistema para contornar isso. A versão 0.6.0 não tem contas, sincronização,
-backend ou multiplayer; o progresso fica no aparelho e o backup é manual.
+não desative proteções do sistema para contornar isso. A versão 0.7.0 não tem contas, sincronização,
+backend ou multiplayer; o progresso fica no aparelho e o backup é manual. Ela inclui o ajuste de
+tamanho da fonte e o guia progressivo e opcional, com oferta inicial em pop-up.
 
 Versões anteriores ainda podem ser baixadas nesta pasta, mas não recebem mais atualizações.
 
